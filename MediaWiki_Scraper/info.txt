@@ -1,1 +1,5 @@
-https://makevisual.com/brain/mediawiki/api.php?action=query&list=allpages&aplimit=500&format=json
+In Browser - Retrieve all pages
+	https://makevisual.com/brain/mediawiki/api.php?action=query&list=allpages&aplimit=5000&format=json
+
+In Browser - Retrieve content ( wikitext )
+	https://makevisual.com/brain/mediawiki/api.php?action=query&titles=Wrike_Tools_Calendars_and_Reports&prop=revisions&rvprop=content&format=json

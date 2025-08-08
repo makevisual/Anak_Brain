@@ -1,0 +1,3 @@
+py -m pip install requests
+py -m pip install requests python-dotenv
+pause
