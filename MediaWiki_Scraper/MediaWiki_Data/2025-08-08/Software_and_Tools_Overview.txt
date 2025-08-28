@@ -1,0 +1,4 @@
+Installation files for approved / required software titles are typically located in one of the following folders:
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Software_and_Tools_Overview

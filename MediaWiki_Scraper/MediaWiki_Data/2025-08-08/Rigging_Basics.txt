@@ -1,0 +1,130 @@
+= Bone Tools =
+[[File:Rig Basics Bone Tools window.png|none|thumb|516x516px|The Bone Tools Window is located in "Animation > Bone Tools..."]]
+Bones are created and edited in 3ds Max through the Bone Tools. To open Bone Tools, navigate to the Animation tab and select “Bone Tools…”. A pop-up window will open up for you to view.
+[[File:Rig Basics Bone Editing Tools.png|none|thumb]]
+Let’s visually go over what some of these tools are doing. [https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2021/ENU/3DSMax-Modeling/files/GUID-2AC1FCA3-04C2-418A-8AAC-4D7EAA173EDA-htm.html For official documentation for Bone Tools, see the 3ds Max documentation page.]
+
+==== Create Bones: ====
+[[File:Rig Basics Create Bones Viewport.png|none|thumb|261x261px|LMB to create bones, RMB to end bone creation.]]
+When enabled, it creates bones wherever you click. To stop creating bones, right click.
+
+==== Refine: ====
+[[File:Rig Basics Refine Bones BeforeAndAfter.png|none|thumb|261x261px]]
+When enabled, Clicking anywhere on a bone will subdivide it.
+
+==== Remove Bone/Delete Bone: ====
+[[File:Rig Basics Remove Delete Bones demo.png|none|thumb|258x258px]]
+Remove bone will remove the bone and stretch its parent to meet the next bone. Delete bone will break the hierarchy and add an end bone.
+
+==== Connect Bones: ====
+[[File:Rig Basics Connect Bones Demo.png|none|thumb|256x256px]]
+Select a bone and drag a connector to the other bone. A new bone will be created to bridge the gap.
+
+==== Create End: ====
+[[File:Rig Basics Create End Bone Demo.png|none|thumb|255x255px]]
+Creates an end bone for the selected bone. This can be used for repositioning bones or creating an IK setup.
+
+==== Reassign Root: ====
+[[File:Rig Basics Reassign root Demo.png|none|thumb|302x302px]]
+The selected bone becomes the root of the hierarchy. The bones in the hierarchy above it reverse to be below it.
+
+==== Mirror: ====
+[[File:Rig Basics mirror Bones Demo.png|none|thumb|255x255px]]
+Mirrors bones from the bone’s pivot. You can mirror across the world axis using the offset value. '''Please note that this tool is not recommended, please use the MAKE Toolbox mirror instead.'''
+
+==== Bone Edit Mode: ====
+[[File:Rig Basics Bone Edit Mode Demo.png|none|thumb|266x266px]]
+Freely transform bones without restriction of length or relative position. Always edit bones in Bone Edit Mode. '''NEVER scale bones or freeze their transforms.'''
+
+== Fin Adjustment Tools: ==
+[[File:Rig Basics Fin Adjustment Tools.png|none|thumb|334x334px]]
+The Fin Adjustment Tools are used to adjust the visual look of bones. These tools do not affect bone performance.
+
+==== Width/Height/Taper: ====
+[[File:Rig Basics Width Height Taper Demo.png|none|thumb]]
+Controls diameter and taper of the bones.
+
+==== Fins: ====
+[[File:Rig Basics Fins Demo.png|none|thumb]]
+Fins are visual details on bones, they can be used to show bone orientation (useful for showing flipping or gimbal locking in animation) or just an aesthetic choice.
+
+== Object Properties: ==
+[[File:Rig Basics Bone Tools Object Properties.png|none|thumb]]
+I won’t be able to explain these visually as well as the official documentation. [https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2021/ENU/3DSMax-Modeling/files/GUID-2AC1FCA3-04C2-418A-8AAC-4D7EAA173EDA-htm.html For these tools, please refer to the Bone Tools documentation.]
+
+= Point Helpers =
+[[File:Rig Basics Point Helper example.png|none|thumb]]
+In rigging, point helpers are often used as a parent for multiple components, or a pivot point for components. This is the helper we use the most frequently in rigs. The other helpers are used infrequently. '''If you want to adjust the size of a point helper, use the “Size” spinner in the Point Helper Parameters. Do not scale it in the viewport.'''
+
+= Ctrl Objects =
+Ctrls are the spline shapes that will be transformed and keyed for animation. Bones and helpers are parented to the ctrls.
+
+=== Creating Ctrls: ===
+[[File:Rig Basics Ctrl example.png|none|thumb|266x266px]]
+Create a circle spline shape for your bone shape. Snap it to the pivot of your bone. On the circle in its modifier tab, change the interpolation steps to 1. This will keep your ctrls light on the scene. You can also adjust the size of your circle in the parameters.
+[[File:Rig Basics Ctrl example 02.png|none|thumb|246x246px]]
+You can use an “Edit Spline” modifier to adjust the shape and size of your ctrl. You should always scale your ctrls in sub object level so that their global scale remains at 100.
+
+= Constraints =
+Constraints are used to automate the transformation of some animated objects. You can use it to drive the position and/or rotation of some controls. Constraining an object is not the same as parenting an object. [https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2021/ENU/3DSMax-Animation/files/GUID-10AC3D82-523D-4670-8240-D6E3AC79F0BF-htm.html#:~:text=An%20animation%20constraint%20is%20a,at%20least%20one%20target%20object. For more info on constraints, see the 3ds Max documentation page.]
+
+Constraints can be found in (Animation tab > Constraints).
+
+We will most commonly use two constraints in rigs:
+
+=== Position Constraint: ===
+<gallery>
+File:Rig Basics Position constraint With offset demo 01.png|none|thumb|
+File:Rig Basics Position constraint With offset demo 02.png|none|thumb|
+</gallery>
+
+An object with a position constraint will follow the position of the object(s) it is constrained to. In the example images, the green point helper is position constrained to the two red helpers, with “Keep Initial Offset” checked ON. When one of the red helpers is translated, the green helper’s position will automatically interpolate between them.
+
+By default, the object being constrained will snap to the exact position of the target object. If you want to maintain a position offset, check ON “Keep Initial Offset” in the motion panel.
+
+=== Orientation Constraint: ===
+[[File:Rig Basics orientation constraint demo.png|none|thumb]]
+An object with an orientation constraint will follow the orientation of the object(s) it is constrained to. In the example image, the green point helper is orientation constrained to the two red helpers. When one of the red helpers is rotated, the green helper’s rotation will automatically interpolate between them.
+
+By default, the object being constrained will snap to the exact rotation of the target object. If you want to maintain an orientation offset, check ON “Keep Initial Offset” in the motion panel.
+
+= MAKE Parent/MAKE Parent Constrain =
+
+== Assigning the Shortcuts: ==
+There are some shortcuts specific to MAKE you can use that will make parenting and parent constraining way easier, but they need to be manually assigned. Here is how to assign them.
+[[File:Rig Basics hotkey editor.png|none|thumb|333x333px]]
+Let’s go to “Customize > Hotkey Editor…” and take a look at the window that pops up.
+[[File:Rig Basics hotkey editor MAKE parent info.png|none|thumb]]
+Type “Make” into the search bar and scroll down to where it says “MAKE Parent” and “MAKE Parent Constrain.” In the screenshot above, mine have a hotkey assigned, but yours may be blank. Click on each action, and in the panel on the right assign them a hotkey. 
+
+“Ctrl + Spacebar” is the hotkey for the MAKE Parent.
+
+“Ctrl + Alt + Spacebar” is the hotkey for the MAKE Parent Constraint.
+
+=== MAKE Parent: ===
+[[File:Rig Basics MAKE Parent Demo.png|none|thumb]]
+MAKE parent is the most common way we will parent components into the rig. In the hierarchy above, bones are children of ctrls, and the ctrls are children of each other. If you selected the last bone and hit the up arrow key, you would see that the next step up would be the last ctrl instead of the previous bone.
+
+=== MAKE Parent Constrain: ===
+[[File:Rig Basics MAKE Parent Constrain Demo.png|none|thumb]]
+MAKE Parent Constraint is useful in situations where structures need to be parented into the rig, but also must maintain their original hierarchy. In the image above, the bones follow the ctrls as normal, but their hierarchy is preserved in the schematic view. If you selected the last bone and hit the up arrow key, you would see that the next step up would be the previous bone.
+
+=== Keying Constraints: ===
+[[File:Rig Basics Keying Constraints Weights.png|none|thumb]]
+Constraints can be animated to change the parent of an object. By default, each target has 50% weight. By changing the weight, we can make the green helper follow one parent or the other. These values can be keyed and animated with “Auto Key” turned on.
+
+= Basic Rig Hierarchy =
+[[File:Rig Basics Basic hierarchy demo.png|none|thumb]]
+In this really basic rig, ctrls are parented to each other in a hierarchy that starts with the root at the top of the hierarchy. The ctrl at the top of the hierarchy is parented to a point helper that is the Parent of the rig. The transforms are frozen on the ctrls. Each bone is parented to its respective ctrl.
+
+All of the bones and helper objects will live in the Rig layer in your scene explorer, and all the ctrls will live in the Ctrl layer.
+
+This simple setup can also be done using the MAKE Parent Constraint. It would function the same, but its bones and ctrls would exist in their own hierarchies.
+
+= Next Article: =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Next article: [[Preliminary Checks]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Rigging_Basics

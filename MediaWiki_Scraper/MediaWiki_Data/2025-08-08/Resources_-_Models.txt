@@ -1,0 +1,58 @@
+=Where to find models=
+You can find many modes in U drive to use
+
+ <nowiki>
+U:\resources\Models</nowiki>
+
+Most of good assets can be found inside Collections foler.
+
+
+Evermotion ChaosCosmos, and Kitbash assets are often used in our project since they are high quality.
+ <nowiki>
+U:\resources\Models\Collections\Evermotion</nowiki>
+
+ <nowiki>
+U:\resources\Models\Collections\Chaos Cosmos</nowiki>
+
+ <nowiki>
+U:\resources\Models\Collections\Kitbash3D</nowiki>
+
+
+For evermotion models, you can use pdf file insdie to find model you want to use
+
+for Kitbash3D, you can browse their website to find asset you want
+
+https://kitbash3d.com/
+
+If you need assets from Evermotion or Kitbash3D that we don't have, talke with producer/director to purchase as needed.
+
+=Where to save models=
+
+Always merge in models to scene you are working on. Do not open files in U Drive as starting point.
+
+Many assets in U Drive has different Unit setup than our default 3D scene so always merge in 3d assets to your working file.
+
+
+Bring textures to your asset's surfaces foler under Asset's maker (ex/ W:\Projects\BraveHurts\Assets\Characters\DAM_Damsel\Surfaces\Evermotion)
+
+This will help you organize your textures.
+
+
+=How to relink textures=
+
+When you merge U drive assets to your scene, texture links will be broken.
+
+In 3Ds max, Open "External Tools" panel then select "RelinkBitmaps"
+
+[[File:Creating Resources - Models Relink Textures 01.jpg|1000px]]
+
+
+You will see all the missing textures. click on "Browse" and go to folder where you copied your textures over to.
+
+[[File:Creating Resources - Models Relink Textures 02.jpg|1000px]]
+
+
+Click "Select Folder" Then Click on Relink button to relink textures to working project folder.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Resources_-_Models

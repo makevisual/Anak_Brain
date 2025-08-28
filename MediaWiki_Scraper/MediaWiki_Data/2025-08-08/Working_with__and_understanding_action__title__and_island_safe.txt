@@ -1,0 +1,44 @@
+[[Category:Process]]
+
+[[File:SafeFrames_PALexample.jpg|thumb|Simple Safe Frames]]
+In this article you'll learn about Safe Frames such as Action Safe, Title Safe, and Island Safe, and how to use them in your work. 
+
+=What's a Safe Frame?=
+
+==A Brief history==
+[[File:SafeFrames TVexample.jpg|thumb|Example of overscan]]
+This section will go over the history of Safe Frames and ''why'' we should still use them. If you just want to know ''how'' you should use them you can [[Working with, and understanding action, title, and island safe#Safe Frames and how to use them|skip this section]]
+
+Classically Safe Frames were used as guides for making sure things like titles and actors were visible on screens at a time when what you saw on a screen could be unpredictable. Older model televisions suffered from technological and design limitations and may have displayed your images larger or smaller than the actual screen size, causing overscan or underscan. Overscan meant the edges of your image would be cut off and never seen which is especially problematic if chunks of text were cut off. Safe Frames were used as a guide to make sure that the most important parts of the images would appear on any screen.
+
+In the top image to the right you can see a breakdown of safe frames on 4:3 screen. The OVERSCAN section could be cut off completely so you must keep actors, objects, and titles out of that area. The ACTION SAFE area is less likely to get cut off, so keeping actors or objects there is fine. The TITLE SAFE area is likely never going to be cut off, so keeping text or titles within those bounds is extremely important. In the bottom image you see the consequences of ignoring safe frames. 
+
+==Why to use them==
+You might say, "''yeah well now everything is 1:1, that doesn't happen any more''" and I would say, "''WRONG!''". Many screens now, especially modern televisions, ''are'' much more predictable and ''should'' show each pixel exactly where it needs to go, '''BUT''' modern televisions aren't the only thing you have to worry about. Some older televisions are still out there; plus Phones, Tablets, and other devices are not strict about screen aspect and can cut off the edges of images; so if you decided to put some text right up against the bottom of the screen there's a chance that important information will be cut off. 
+
+
+=Safe Frames and how to use them=
+You can locate our safeframe template at [[Safe Frames|this location]] or they should be in this folder in each project: Assets\Images\SafeFrames
+[[File:SafeFrames_SafeFrames.jpg|thumb|16:9 Safe, Featuring Batman]] [[File:SafeFrames_IslandSafe.jpg|thumb|Island Safe, Featuring Transformers]]  [[File:SafeFrames YoutubeExample.jpg|thumb|Youtube Safe, Featuring Brave Hurts]]
+Below is a breakdown of Safe Zones. All will reference the images to the right. 
+
+==Danger Zone==
+The RED highlighted section of the Batman image is the most likely area to be clipped. Keep important details like characters and focal points out of here (''they can obviously pass through'')
+
+==Action Safe==
+Inside the YELLOW line of the Batman image is the Action Safe zone. Keep any important characters, actions, objects within these bounds. 
+
+==Title Safe==
+Inside the GREEN line of the Batman Image is the Title Safe Zone. Any titles, graphics, supers, AKA anything you have to read should be within these bounds. This is the least likely section to get clipped when dealing with wacky screens. 
+
+==Island Safe==
+In the the highlighted section of the Transformers Image you'll see the Island Safe Zone. When creating an Island shot (''the final product shot of a commercial'') it's important to keep products outside and above the highlighted zone because that's where the Legal copy will go. 
+
+==4:3 Safe==
+Inside the BLUE line of the Batman Image is the 4:3 Safe Zone. This is the zone a 4:3 Television may cut in to. You'll see these lines in most Safe Frame Guides here at MAKE and it's not a bad idea to keep them in mind even though it's increasingly unlikely your content will be seen on a 4:3 screen. As you'll see in the Batman Toy Image, the super crosses the 4:3 line. 
+
+==Youtube Safe==
+On the Brave Hurts image you'll see examples of Youtube Safe. Youtube safe will have a link to the channel (''circle on the right'') and likely a link to more videos (''rectangle on the left''). For Youtube Safe nothing should exist outside of the outer rectangle.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Working_with,_and_understanding_action,_title,_and_island_safe

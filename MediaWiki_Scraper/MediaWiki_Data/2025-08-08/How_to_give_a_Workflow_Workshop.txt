@@ -1,0 +1,88 @@
+= Overview =
+
+You may have been assigned a workshop, or want to give one on your own. This article will have information on what to expect, as well as some guidelines to to follow to help you prepare and give a successful workshop.
+
+= Considerations =
+
+Before putting together your lesson plan, consider the following to focus your workshop to be as effective as possible.
+
+== Duration / Sections ==
+
+A workshop is typically 45 mins, and immediately follows the update portion of a workflow Wednesday meeting, and is typically broken up into 2 sections. The lecture and Questions and Answers. Nothing is set in stone for the exact durations, but try to stay close if possible. 
+
+=== lecture / workshop portion ===
+Cover the topic by going through your lesson plan, and help others if necessary. Try to aim for the first 34 - 40 min for this.
+
+=== Question and Answer ===
+Save the last 5 - 10 mins for questions and answers. Some of the most valuable information can come out during this portion, by covering something that was omitted from the workshop. It also encourages the attendees to take some ownership of their knowledge, and learning.
+
+== Detail Level ==
+Consider the amount of time that you have to give the lesson, and how fast people can realistically absorb the information. Planning accordingly will allow for people to retain the information. Having a good agenda and also recording the lesson will also help people retain the information by coming back later if needed.
+
+== Experience Level ==
+It can be easy to want to explain a whole arena of information, however workshops are better served if they are not overwhelming and instead more targeted to a specific experience level. 
+
+'''Beginner''' - Target these for people who have never done this process before, and need a bit of a reference point for getting started. These will usually be labeled " Something Workshop - 101 " following the academic 101, 102 etc... naming structure.
+
+'''Intermediate'''- For people who have done the process a bit, but could improve their technique.
+
+'''Advanced''' - Advanced conceptual techniques that require a fair amount of knowledge to be able to use or implement.
+
+Following this will help the workshops have useful information for whichever group of people are attending. 
+
+== Following Along vs Lecture ==
+
+If possible, having resources or assets that participants can follow along with is the preferred method, however this is not always possible given the topic and time. Even if not possible to completely follow along, finding some ways participation can occur would be desired. This could be asking for suggestions, or examples, to keep engagement high.
+
+== Recording / Posterity ==
+
+Workshops will be recorded, and accessible to everyone afterwards. So only say things you stand by!
+
+=Preparations=
+
+== Outline / Agenda ==
+Having a complete agenda and Assets stored in wrike. You should be assigned a workshop task, and that is where the agenda can live.
+You can find all of the existing and planned workshops at the following location.
+
+https://www.wrike.com/open.htm?id=986663694
+
+== Example Assets ==
+Prepare assets for people to follow along with, or reference, and store them on the network at the following location.
+ <nowiki>
+U:\resources\Workflow_Meetings\Breakouts</nowiki>
+
+== Workshop Pitch ==
+In the weeks preceding your workshop you will give a 'pitch' during the WFW Meeting, to gain interest and attendees to your workshop. 
+
+== Review Previous Workshops ==
+Take a quick review of the previous workshops, to see that if there are any with a similar topic, you do not need to cover the same points of information. You can find the location here:
+ <nowiki>
+U:\resources\Workflow_Meetings\Breakouts</nowiki>
+
+=The Workshop itself=
+
+== Recording ==
+Make sure the workshop is recorded, so it can be referred to in the future. Typically whoever is running the Workflow Wednesday meeting, will do the recording. 
+
+== Lesson Plan ==
+First 30 - 35 mins - Cover the lesson, stopping if necessary to cover more information, while working your way through the agenda.
+
+== Question and Answer ==
+Last 5 - 10 mins - open up to questions, including if people have a desire for follow-up workshops.
+
+=After the Workshop=
+
+== Save Recording ==
+Place the recording and any assets here:
+ <nowiki>
+U:\resources\Workflow_Meetings\Breakouts</nowiki>
+
+== Update Workshop Agenda ==
+If you made any updates on the fly, make sure they get added to the agenda, as well as any additional information you think may be necessary after having completed the workshop 
+
+== Consider Follow-up Workshops ==
+While fresh in your mind, suggest any follow-up workshops, by submitting a workshop request ticket
+https://www.wrike.com/workspace.htm?acc=212378#forms?formid=1370498
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_give_a_Workflow_Workshop

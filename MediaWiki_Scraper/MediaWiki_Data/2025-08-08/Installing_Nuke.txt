@@ -1,0 +1,50 @@
+=Installing Nuke=
+As of 2/28/2024 the default version of Nuke that users should install is Nuke 14. This is installed during Workstation and Render Node setup but in the event that a user needs to reinstall Nuke for some reason, instructions follow. If you need to utilize Nuke 13 and Nuke 14, see below for instructions to switch between versions. 
+
+== Nuke 13 & 14 Functionality ==
+If you need to use both Nuke 13 and Nuke 14 for any reason, be aware that only one version of Nuke is "active" at any given time on your machine due to the way that Nuke handles environment variables. If you need to switch back and forth between Nuke 13 and Nuke 14 you will need to run a batch file each time you need to switch from one version to the other. In both cases, the batch file you need to run is located within the <code>\\blue\DiskU\resources\apps\Foundry</code>folder. See below for the process to activate either version depending on which you need to use.
+
+=== Activating Nuke 13 on your workstation ===
+To make Nuke 13 active on your workstation if you also have Nuke 14 installed, you will need to run the file <code>SET_NukePath_13.bat</code> from the folder <code>\\blue\DiskU\resources\apps\Foundry</code> folder. Paste the folder path from this article into the address bar in File Explorer to quickly access the Nuke Installation Folder.
+
+[[File:InstallingNuke-SetNuke13Active.png|540x540px]]
+
+=== Activating Nuke 14 on your workstation ===
+To make Nuke 14 active on your workstation if you also have Nuke 13 installed, you will need to run the file <code>SET_NukePath_14.bat</code> from the folder <code>\\blue\DiskU\resources\apps\Foundry</code> folder. Paste the folder path from this article into the address bar in File Explorer to quickly access the Nuke Installation Folder.
+
+[[File:InstallingNuke-SetNuke14Active.png|534x534px]]
+
+== Installing Nuke 14 ==
+
+===Navigate to the Installation Folder===
+Open File Explorer from your Start Menu or Taskbar and navigate to <code>U:\resources\apps\Foundry</code>. You can copy this file path and paste into the address bar within file explorer for easy access.
+
+[[File:Install3DSMax2021-ClickAddressBar.png]]
+
+[[File:InstallNuke-PasteFilePath.png]]
+
+===Run the Nuke 14 Installation Batch File===
+From within the Foundry folder you navigated to in the previous step, double click the file <code>Nuke14.0v3_Silent_Install.bat</code> to run the Nuke 14 Installer.
+
+[[File:InstallNuke-RunNukeCurrentVersionBatch.png|519x519px]]
+
+Once the installation file has closed, you can run Nuke from the start menu on your computer.
+
+== Installing Nuke 13 ==
+To install Nuke 13 on your workstation, run the file <code>Nuke13.2v4_Silent_Install.bat</code> from <code>\\Blue\DiskU\resources\apps\Foundry</code>.
+===Navigate to the Installation Folder===
+Open File Explorer from your Start Menu or Taskbar and navigate to <code>U:\resources\apps\Foundry</code>. You can copy this file path and paste into the address bar within file explorer for easy access.
+
+[[File:Install3DSMax2021-ClickAddressBar.png]]
+
+[[File:InstallNuke-PasteFilePath.png]]
+
+=== Run the Nuke 13 Installation Batch File ===
+Double click the file to run <code>Nuke13.2v4_Silent_Install.bat</code> from within the Foundry folder.
+
+[[File:InstallingNuke-InstallingNuke13.png|501x501px]]
+[[Category:Nuke]]
+[[category:IT]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Installing_Nuke

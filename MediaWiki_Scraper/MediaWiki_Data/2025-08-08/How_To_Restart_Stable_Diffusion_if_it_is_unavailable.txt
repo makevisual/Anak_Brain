@@ -1,0 +1,11 @@
+[[Category: Stable Diffusion]]
+== Restarting Stable Diffusion ==
+If you attempt to access Stable Diffusion at the normal [http://r201/ web link] and the page never loads or returns an error message, the Stable Diffusion server software on Server R201 likely needs to be restarted. To restart the Stable Diffusion Software, you will connect to server R201 remotely via Remote Desktop Connection and relaunch the application. The steps are as follows:
+# Connect to the Stable Diffusion Server (R201) via Remote Desktop Connection from your workstation. You can access Remote Desktop Connection by clicking your start button, then starting to type the word "remote" once you see Remote Desktop Connection, click the icon to launch the program.<br> [[File:01-Launch Remote Desktop.png|frameless]]
+# Enter R201 in the box and click "Connect". <br> [[File:2-EnterR201.png|frameless|407x407px]]
+# By default the remote desktop connection program will attempt to use your workstation's login credentials which will not work. Click "More choices" to enter credentials. <br>[[File:3-Credentials1.png|frameless|543x543px]]
+# Enter username corp\MAKE and the current password for the MAKE account, then click Connect. <br>[[File:4-Credentials2.png|frameless|567x567px]]
+# Once on the desktop of R201, double click the icon "Stable Diffusion - Run" to start the service. Once you see the command prompt/console window loaded you may attempt to reconnect to Stable Diffusion at http://R201/. <br>[[File:5-RestartStableDiffusion.png|frameless|1164x1164px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_To_Restart_Stable_Diffusion_if_it_is_unavailable

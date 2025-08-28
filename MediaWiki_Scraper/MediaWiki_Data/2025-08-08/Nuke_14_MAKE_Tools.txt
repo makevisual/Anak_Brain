@@ -1,0 +1,75 @@
+=What are the MAKE Tools in Nuke?=
+
+In Nuke, there are a set of helpful scripts and tools added to make compositing easier and more convenient. These range from organizational scripts to individual gizmo nodes used for specific effects. This article will focus on the MAKE-specific tools that we have in Nuke 14. If you're looking for information about the rest of the Nuke plugins (the ones under the "Misc Gizmos" menu), see [[Nuke 14 Plugins]].
+
+=Where are the MAKE Tools located?=
+
+You can access the MAKE tools from a few different places. The first is the horizontal toolbar at the top of the Nuke UI, under the tabs "MAKE Tools" and "MAKE Gizmos." The second is the vertical toolbar on the left side by clicking on the buttons that feature the MAKE logo. A lot of these tools can also be found by hitting tab in the node graph and typing in the name.
+
+[[File:Nuke_Toolbar.JPG|800px]] [[File:Nuke_Sidebar.JPG|50px]]
+
+=MAKE Tools vs MAKE Gizmos=
+
+Under the MAKE Tools tab, you'll find Python scripts for your Nuke scene. In the MAKE Gizmos tab, you'll find gizmos for individual nodes you can add to your Nuke graph.
+
+=== MAKE Tools ===
+
+[[File:Nuke_MAKETools.jpg|200px]]
+
+
+'''Relink Orphan Bin Items:''' In NukeStudio, if a clip has been copied and pasted from the timeline of one project into another, this script adds that clip to the bin of the pasted project. This may not be necessary in Nuke 14, but was an issue in Nuke 13.
+
+'''Version Write Nodes on Save:''' Adds a Python script to your Nuke file that checks the version tag of your write nodes (v001,v002,etc.) and matches it to the version tag of your Nuke file name. It is best to keep these version numbers matching because it keeps things organized and makes it easy to find what version of a Nuke file a sequence was rendered from. Generally, you only want this to affect your final write nodes, and not prerender nodes. For example, if your Nuke file is named this:
+
+ <nowiki>
+S_HWRS_SP24_CG-010__Composite_v011</nowiki>
+
+Then with the script, your write node path would have a matching version tag, like this:
+
+ <nowiki>
+Y:/Projects/Hot Wheels - Racerverse - SP24 - Segment/SPOT_RaceverseSP24_30s/S_HWRS_SP24_CG-010/Renders/S_HWRS_SP24_CG-010_v011/S_HWRS_SP24_CG-010.%04d.exr</nowiki>
+
+=== MAKE Gizmos ===
+
+[[File:Nuke_MAKEGizmos.jpg|200px]]
+
+
+'''MAKE_ColorBlendMode:''' A node which mimics the color blend mode in photoshop, which is not native to Nuke.
+
+[[File:Nuke_MAKE_ColorBlendMode.jpg|300px]]
+
+
+'''MAKE_CompareFrames:''' A node that allows you to view two frames next to each other, horizontally or vertically.
+
+[[File:Nuke_MAKE_CompareFrames_01.jpg|575px]] [[File:Nuke_MAKE_CompareFrames_02.jpg|200px]]
+
+
+'''MAKE_CubemapToLatLong:''' Similar to a SphericalTransform node, a node that allows you to convert a cubemap to a latitude/longitude image. These are both two different ways of creating uvs to project onto a sphere. In VRay and Nuke we use lat/long maps, but you might need to use a cubemap in other programs such as Unreal. Below is a demonstration of the two types of maps using the Earth as an example.
+
+[[File:Nuke_MAKE_CubeMapToLatLong_01.jpg|350px]] [[File:Nuke_MAKE_CubeMapToLatLong_02.jpg|400px]]
+
+
+'''MAKE_MotionGenerate:''' Similar to a SmartVector node, a node that generates smart vectors. This node is specifically designed to work well with denoising footage and is used in conform comps.
+
+[[File:Nuke_MAKE_MotionGenerate_Conform_01.jpg|200px]] [[File:Nuke_MAKE_MotionGenerate_Conform_02.jpg|300px]]
+
+
+'''MAKE_RenderSwitch:''' A node that allows you to "switch" on nodes so they only process at render time, not in the Nuke viewer. Note that this will only work with local renders if the "Render using frame server" option is checked (see below). This can be helpful for nodes that are slow to work with and don't need to be turned on at all times. For example, we often use this with VRayDenoiser nodes because they slow down a comp.
+
+[[File:Nuke_MAKE_RenderSwitch.jpg|200px]] [[File:NUKE_RenderSwitch_FrameServer.png|300px]]
+
+
+'''MAKE_RenderVisibility:''' Similar to the MAKE_RenderSwitch, allows you to control the visibility of certain parts of the Nuke pipe by changing the way it behaves at render time vs in the Nuke viewer. This node also requires the "Render using frame server" option to be checked if rendering locally.
+
+[[File:Nuke_MAKE_RenderVisibility_01.jpg|200px]] [[File:Nuke_MAKE_RenderVisibility_02.jpg|600px]]
+
+
+'''MAKE_SafeFrames (currently broken):''' A node that displays safe frames and cuts your image down to 1920x1080. You can adjust the visibility of the safe frames, set whether they are renderable or not, and change the blend mode.
+
+[[File:Nuke_MAKE_SafeFrames.jpg|500px]]
+
+
+[[Category:Documentation]] [[Category:Nuke]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Nuke_14_MAKE_Tools

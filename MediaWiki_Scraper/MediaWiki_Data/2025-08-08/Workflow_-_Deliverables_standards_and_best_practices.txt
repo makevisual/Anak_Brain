@@ -1,0 +1,36 @@
+==Client Content==
+*[[Collect project basic information]]
+**[[Collect Legal, Logos, and Supers from client]]
+**[[Collect Formats an versions from client]]
+**[[Collect Deliverable specifications from client]]
+
+==Primary Content==
+*[[Broadcast TVC deliverable standards and best practices]]
+*[[Digital Distribution deliverable standards and best practices]]
+*[[Social Media Distribution deliverable standards and best practices]]
+
+==Picture==
+*[[Slating a project for broadcast TVC]]
+*[[Creating Masters, Super-less Masters, and Graphics Only Edits]]
+*[[Creating a graphics package]]
+
+==Audio==
+*[[Audio standards and best practices]]
+*[[Creating audio stems and mixdowns]]
+*[[Creating an audio package]]
+
+==Documentation==
+*[[Collecting talent and licensed content paperwork]]
+
+==Delivery==
+*[[Review an edit for QC]]
+*[[Creating an audio package]]
+*[[Creating a graphics package]]
+*[[Delivering files to client via FTP, Frame IO, Dropbox or Extreme Reach]]
+
+[[Category:Workflow]]
+
+[[Category:Workflow]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Workflow_-_Deliverables_standards_and_best_practices

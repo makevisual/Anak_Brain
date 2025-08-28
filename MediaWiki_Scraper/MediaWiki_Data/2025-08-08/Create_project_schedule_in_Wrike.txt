@@ -1,0 +1,54 @@
+In the Schedule folder of your project we will make a schedule that will then become a calendar which can be shared with both company and the client. In this article we move through the entire process.
+
+=== Create the Schedule ===
+To make a schedule in Wrike we open a the project folder update that was made during the project creation from the blueprint. (If you need help making a project from a blueprint, please refer to this article: [[Create Wrike project]]). The project's all come with a template of a general spot with its phases and steps/client touch points broken out. 
+[[File:CreateProjectScheduleInWrike-Schedule Snip 1.png|thumb|The schedule folder]]
+
+# You will start by right clicking on the folder in the left panel and clicking rename and follow this format: Schedule - [Project Name] Note: We do this so we can locate the schedule folder easily later for the calendar creation.
+# Then we click into the schedule and make a task parent with this naming convention: [Project Name]  - Schedule Parent
+# Under the parent we will need to break out the project into phases. If this is a standard project you can always look back at old projects to see their models but a for a typical phase group you can use the below.
+## [[File:CreateProjectScheduleInWrike-Schedule Snip 2.png|thumb|Calendar Filters in Red]]Animatic
+## Pre-Production
+## Edit (it is always good to put you last feedback as "Lock Edits" for the name)
+## VO
+## Sancio- Key Roto (This is for live action footage integration and is a vendor we use)
+## VFX/Animation
+## Finish/Deliver
+# In each phase you will make 2 key pieces. A send from Make and a receive of feedback, both of these have individual phases that will need to be selected to reflect which is happening
+# Additional things that need to be on calendars are the important client meetings, key events (i.e. fittings), shoot days, and delivery days. All of these status are important to list as they will be used in the filters when making the calendar. NOTE: The "Shoot" status will also automatically filter itself into the MAKE shoot calendar.
+# Set the Sancio task phases to "Send to Vendor" and "Receive from Vendor" as these will populate on the Sancio calendar automatically.
+# Please check all of the start and end times of each task.
+# Now updated the view to make sure the following fields are viewable. This is by clicking the gear in the top left and make sure that "Status", "Start Date", "End Date" are all selected. You can see the image to show this location.[[File:CreateProjectScheduleInWrike-Schedule Snip 3.png|thumb|The gear selection and columns for the gantt chart]]
+# Last, do a review with the director and inform the artists of the timeline that is proposed.
+
+=== Create the Calendar ===
+To create the Calendar for everyone in Make to review and to be able to make the public link for the clients to see. You will need to do the following steps.
+
+# In the left banner, click the calendars section.
+# Then click "+ New Calendar" and use this naming scheme: [Project Name] - Calendar
+# Hover over the new calendar name to reveal the 3 dot menu and click "Create Layer", name this Review/Feedback.
+# In the Task Source area, click the plus button and type Schedule - [Project Name] and then wait for a second to click the correct folder from the drop down menu.
+# Open the Status section up by clicking the drop down arrow.
+# Click "+ Workflow" and select "Scheduling", this will add all the schedule tasks to filter which ones you want to see.
+# Typical calendars need the following selections:
+## Send Client
+## Receive Client
+## Meeting
+## Event
+## Shoot
+## Delivery
+## Holiday
+# Verify all the tasks are there with by refreshing your browser window.
+ Note: The New calendar window has a drop down that let's you select the space it is saved in. All producers are saving their calendars in the "Calendar Schedules" space just so we can alleviate how many items fill up the tools section.
+[[File:Wirke-CreateProjectCalendar NewCalendarWindow.png|thumb|New Calendar Select image for where the calendars should be saved]]
+
+=== Share A Calendar with MAKE Employees ===
+You now have made a calendar and need to share it with your internal team. To Share a calendar at Make employees you simply need to hover over the desired calendar to share to reveal the three dots, click the "Share" button. This will let you share it with users on Wrike and to get all employees at Make you simple add the group named "MAKE". 
+
+=== Create the Public Link ===
+To create a Public Link you can share with the clients, you first set your view to ONLY HAVE THE PROJECTS THAT YOU WANT IN THE LINK TURN ON, as when you create the link it will snapshot everything on your calendar turned on in that moment for the link. Now that you have set your screen up correctly, you click the "Public Links" button which will open a side panel on the right side of the screen. Click "+Public Link" and start name the link using this naming convention: [Project Name] - Calendar
+
+There is a copy icon that will copy the link into your clipboard and let you paste it into an email, it is highly suggest to test and check the link before sending and to send the link as a hyperlink in an email as the link itself is quiet long and visually unappealing.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Create_project_schedule_in_Wrike

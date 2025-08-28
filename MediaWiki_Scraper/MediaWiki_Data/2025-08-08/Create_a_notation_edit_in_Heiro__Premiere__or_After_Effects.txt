@@ -1,0 +1,59 @@
+=Create a notation edit in Heiro=
+
+When you first create edit for project, start by opening BurnIn Preset
+
+"U:\resources\Presets\Foundry Hiero\Hiero_BurnInPresets_v001.hrox"
+
+Save edit to your project's edit folder right away, so you don't accidently overwrite preset.
+
+
+Preset file already has preset for exporting shots and sequences.
+
+
+To export shots, reference, 
+
+[[Building a shot structure in Heiro|Building a shot structure in Heiro]]
+
+
+To render sequences, reference, 
+
+[[Creating Masters, Super-less Masters, and Graphics Only Edits|Creating Masters, Super-less Masters, and Graphics Only Edits]]
+
+[[Export and share a daily|Export and share a daily]]
+
+
+Drag renders below BurnIn and Safechart to see overlay in action.
+
+[[File:Create a notation edit in Heiro, Premiere, or After Effects Hiero Layers 001.jpg|450px]]
+
+
+If you are working in resoultion other than HD, you can double click BurnIn to change text scale to better fit your resolution.
+
+[[File:Create a notation edit in Heiro, Premiere, or After Effects BurnIn Property 001.jpg|450px]]
+
+
+===Save BurnIn from Preset===
+
+You can save BurnIn setting from preset file by clicking wrench icon then "Save as Preset"
+
+[[File:Create a notation edit in Heiro, Premiere, or After Effects Create BurnIn 000.jpg|450px]]
+
+Now BurnIn preset is stored in your computer. 
+
+When you want to create BurnIn layer you can select empty layer, click on "Add effects" Icon then click on BurnIn
+
+[[File:Create a notation edit in Heiro, Premiere, or After Effects Create BurnIn 001.jpg|450px]]
+
+
+By default, it will bring Hiero default setting but by clicking wrench icon again, you will be able to bring Make preset we saved.
+
+[[File:Create a notation edit in Heiro, Premiere, or After Effects Create BurnIn 002.jpg|450px]]
+
+
+
+=Create a notation edit in Premiere=
+
+=Create a notation edit in After Effects=
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Create_a_notation_edit_in_Heiro,_Premiere,_or_After_Effects

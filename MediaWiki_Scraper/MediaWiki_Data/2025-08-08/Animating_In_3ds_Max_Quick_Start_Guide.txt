@@ -1,0 +1,282 @@
+In addition to being of use to those who are familiar with animating in 3ds Max, this article may be particularly useful if you’re making the transition from Maya. There are some similarities, but also some differences. Being familiar with each of these softwares can, in turn, reinforce your overall skills. Both are very powerful in their own ways. Hopefully this guide will help you get used to animating in 3ds Max as efficiently as possible. What you find here is by no means exhaustive, but it should be enough to get you started. Let’s dive in!
+
+==A Few Things To Note If Coming From Maya==
+
+-There is no 'Channel Box'. You select your axis in the Curve Editor to view them.
+
+-The Outliner is called the Layer/Scene Explorer. There are both layer and hierarchy sorting options located at the bottom of the window. (See button to open below) 
+
+[[File:1_Open Scene Explorer_Outliner.JPG|355x355px|Scene Explorer button]]
+
+
+-3ds Max does not keep Auto Key on if you close the scene. Be mindful of this. You must turn it on every time you open Max and start animating. It’s located at the bottom right hand side of the interface. You’ll know it’s on when the Auto Key button and time slider turn red. Adjusting things with Auto Key off allows for global curve adjustments if needed. (See below)
+
+[[File:1 Auto Key.JPG|355x355px|Auto Key Toggle]]
+
+
+-’K’ to set a key. (‘S’ key toggles the snapping function. Hit ‘S’ again to deactivate.)
+
+-’Z’ frames the selection in viewport(Like ‘F’ in Maya). In 3ds Max ‘F’ changes the camera to front orthographic view.
+
+-Alt + W expands and contracts the viewport that your mouse is currently hovering over.
+
+-The comma(,) and period(.) keys let you frame through your shot while ‘/’ will let you play in the viewport.
+
+-To Playblast, hit ‘X’ with the mouse over the interface and type ‘Typreview’, select ‘Create Typreview’. Set the file path and settings to your liking. It's common practice to send them to a 'Playblasts' folder located within the specific shot folder that you're working on. If you don't see this, one can always be created.
+
+-Shift + S is a way to toggle visibility on controllers that manipulate your character for easier viewing. In 3ds Max 2024 there's also a feature to filter these in specific viewports by right clicking on the small filter icon that can be seen in the top left of the viewport, under the ‘Filter’ tab.
+
+-You can’t copy and paste keys with Ctrl+C > Ctrl+V like in Maya. You can either select the keys in the timeline and slide them while holding Shift, or in the curve editor hold shift and slide selected keys to copy them. Use the ‘Ctrl’ button to lock for side to side sliding. Also, if you’d like to paste a curve and its keys onto a different axis you simply right click on that curve's name to the left in the curve editor and select 'Copy'. Then, right click and 'Paste' it onto the desired axis. (See below)
+
+[[File:Sliding Keys Time Slider.mp4|335x355px|Sliding Keys Time Slider]]
+
+
+-3ds Max is equipped with all the same tangent types as Maya including AutoSpline, Stepped, Linear, Smooth, Fast and Slow. These can be accessed at the top bar in the Curve Editor. (See Below)
+
+[[File:Tangent Types.jpg]]
+
+-To move a key or tangent handle in the curve editor you must click on the key or tangent handle itself at its location. Unlike in Maya, they can’t be manipulated with the middle mouse button.
+
+-Undo is Ctrl + Z. It's recommended to set the number of times you can undo. Go to the 'Customize' menu and select 'Preferences'. This will show under the 'General' tab 'Scene Undo' which shows a number next to 'Levels:'. Set this to whatever your preference. I usually do at least 200. (See Below)
+
+[[File:Scene Undo.jpg|255x255px]]
+
+-For motion paths, with the control selected go to the 'Motion Panel'. Click the 'Motion Paths' button and it will appear. If you need to keep it on for that specific controller check the ‘Always Show Motion Paths’ box below that. Motion paths are very robust and useful in 3ds Max and they don’t tend to slow down your scene like in Maya. (See below)
+
+[[File:1 Motion Path Button.png|355x355px|Motion Path Button]]
+
+-Animation Layers exist in 3ds Max but have not been thoroughly fine tuned by Autodesk. They do NOT work with the MAKE pipeline. Please refrain from using them.
+
+-Some of the rigs at MAKE will be equipped with an elbow/knee swivel control instead of a pole vector set up. To find this, select the main hand control of the arm or leg you want to swivel and go to the ‘Modify’ tab. You should see ‘Attribute Holder’ in the modifier stack. If that is selected the ‘Custom Attributes’ will be revealed below that along with the ‘Swivel’ spinner to adjust. This spinner is keyable and the curve will show up turquoise in the graph editor and will only reveal itself when you open the layers found to the left under Modified Object > Attribute Holder > Custom Attributes > Elbow Swivel. (See below)
+
+[[File:Elbow Swivel Spinner.jpg|355x355px|Elbow Swivel Spinner]] [[File:Elbow Swivel Curve.jpg|355x355px|Elbow Swivel Curve]]
+
+-At MAKE the frame range starts at 1000. This should already be set up automatically when you open Max. If you need to shift the timeline in either direction you can hold down Ctrl + Alt + Right Mouse Button to add frames to the end and Ctrl + Alt + Left Mouse Button to add to the beginning, moving side to side until you get the desired number of frames. There is also the option to open the ‘Time Configuration’ settings and type in your desired frame range. (Located under the fast forward button in the bottom right near the Auto Key button. (See below)
+
+[[File:Frame Range Bigger.mp4|355x355px|Frame Range Bigger]]
+
+[[File:Time Configuration Button.jpg|355x355px|Time Configuration Button]]
+
+
+-At MAKE we generally include 12 frames at the beginning and end of our shots (Heads & Tails). These are if we need extra frames in either direction when editing. Animating these extra 24 frames helps ensure the pipeline continues smoothly. Animate like you would if the shot were actually that long.
+
+-MAKE has a Tween Machine that can be accessed from the MAKE Tools menu. This tool allows you to move selected keys from position, rotation and scale towards or away from neighboring keys, creating in-between poses. Be advised that while this feature works as expected it WILL toggle Auto Key off when using. Be sure and turn it back on before moving forward. (See below)
+
+[[File:Tween Machine.jpg]]
+
+
+-The ability to create Selection Sets is available if needed. There’s a drop menu in the toolbar at the top of the main interface that says ‘Create Selection Set’. With the controls you want to make a set out of selected, simply click and label the new set as you see fit, hit enter and it will be added to the drop menu automatically. You can make edits to your selection sets using the 'Manage Selection Sets' button located to the left of the selection set drop menu. (See below)
+
+[[File:Create Select Set.jpg|355x355px]] [[File:Select Set Examples.jpg|355x355px]] [[File:Manage Selection Sets.jpg|355x355px]]
+
+
+-Keying visibility on objects can be useful for many things. With the object that you want invisible or transparent selected, make sure Auto Key is ON. Then right click and select ‘Object Properties…’. Under the ‘General’ tab > Rendering Control there's a ‘Visibility’ spinner with a range of 0.0 to 1.0. In order to get it started and for the ‘Visibility’ track curve to be revealed in the curve editor you have to set the spinner to any number other than 1.0. Once that key is there you can open the curve editor and manipulate however much visibility over however many frames you want. (See below)
+
+[[File:Visibility.jpg|355x355px]]
+
+
+-You can key Material IDs if needed. Set up your materials and connect them to a multi-material (Multi/Sub-Object), these can be found under (General) in the slate  material editor. Right click on this and ‘Assign material to selection’. Add a 'Material' modifier to the object and with Auto Key ON. The keys will show up when toggling through the corresponding numbers on the Multi/Sub-Object. (See below)
+
+[[File:MaterialSubObject.jpg|355x355px]] 
+[[File:Material Box.jpg|355x355px]]
+
+==Useful Tools In Main User Interface & Viewport==
+
+-F3 and F4 toggle between Wireframe and Wireframe Unshaded.
+
+-2D Pan Zoom Mode. Click the ‘+’ In the top left of viewport > ‘2D Pan Zoom Mode’. You can move the camera around as needed. When finished, exit by selecting it at the top of the viewport and click exit.
+
+-Shift + F to see the camera's frame edge(Aspect Ratio). Helpful for shot cam.
+
+-To make your frame range longer or shorter hold Ctrl + Alt + Right OR Left mouse button and drag to the right or left, back and forth 
+
+-With the specific control(s) selected, Alt + Right Click + Assume Skin Pose. This is like zeroing out controls in Maya so that your character returns to its original pose. When a character is made, the skin pose is set by the person who rigged it, so it's there by default when you bring the character in. (See below)
+
+[[File:Assume Skin Pose Pic.jpg|355x355px]] 
+
+[[File:Assume Skin Pose.mp4|355x355px|]]
+
+-Switch Spaces menu for World/Gimbal/Local. Gimbal is recommended most of the time in order to keep your curves as organized as possible. (See below)
+
+[[File:Gimbal World Space Switch.jpg|355x355px]]
+
+-Mind the pivot button next to the space switching menu. This will change and make things pivot from the wrong place. You want it to be set at to the two bars with two pluses at the bottom. (See below)
+
+[[File:Use Pivot Point Center Button.jpg|355x355px]]
+
+-Holding ’Alt’ for micro/focused scrubbing/adjustments on up and down spinner dials. (See below)
+
+[[File:Alt Micro Movements.mp4|355x355px]]
+
+-Right click spinner dials to zero out rotation or translation. (See below)
+
+[[File:Set To Zero Right Click.mp4|355x355px]]
+
+-Alt + A for align tool. First select the thing, Alt + A, then select the thing you want to align to. Adjust settings that pop up to include rotation as needed.
+
+==Opening Curve Editor & Dope Sheet==
+
+-The Curve Editor can be accessed from the top menu Graph Editors > Track View - Curve Editor…
+Or there's a button on the main interface. (See below)
+
+[[File:Open Curve Editor.jpg|355x355px|]]
+
+-There’s a Dope sheet available, if desired, under Graph Editors > Track View - Dope Sheet…
+
+-There are also examples of what the buttons will look like as seen in the interface toolbar next to these labels in the menu.
+
+==Useful Tools In Curve Editor==
+
+See photo below for frequently used tools that will be covered here.
+
+[[File:All Tools Buttons Used.jpg|355x355px]]
+
+-Interactive zoom in the curve editor. Ctrl + Alt + Middle Mouse movement for zooming. (See below)
+
+[[File:Interactive Zoom.mp4|355x355px]]
+
+-Double Box button for framing curves or selected keys. (See below)
+
+[[File:View Curves - Key Selection Button.jpg|355x355px]]
+
+-Lock button to adjust multiple tangents simultaneously. (Must be unchecked in order to break tangents). (See below)
+
+[[File:Lock Tangents Button.png|355x355px]] [[File:Break Tangents.jpg|355x355px]]
+
+-Hold shift and select tangent to break the tangent if needed.
+
+-Access Buffer Curves under the ‘’Curves’ menu. Buffer Curves allow you to see what your curves were at the time you turned them on so you can still see what you previously did while making further adjustments.
+
+
+
+'''Buttons For Moving & Adding Keys In The Graph Editor'''
+
+
+*Move Key button (For general use of moving keys around.) (See below)
+
+[[File:Move Keys Tool.jpg|355x355px]]
+
+*Insert Key button (Like ‘i’ in Maya. Drops a key straight onto the curve at whatever location you want while leaving the curve relatively the same.) (See below)
+
+[[File:Insert Key Tool.jpg|355x355px]]
+
+*Slide Keys button allows you to slide keys around on one axis only.  (See below)
+
+[[File:Slide Keys.jpg|355x355px|Slide Keys]]
+
+*Scale Curves tool allows for quick rescaling of all keys selected. You can extend and contract up and down or side to side as needed. (See below)
+
+[[File:Scale Curves Tool.jpg|355x355px]]
+
+*Grow Key Selection button highlights additional keys based on the original key selection.
+
+*Select Next Key button (Hold 'Shift' to send keys in the opposite direction). This is very handy for selecting a specific key when you have multiple keys stack on top of one another.(See below)
+
+[[File:Select Next Key Button.jpg|355x355px]]
+
+*Set curves to Infinity button (Parameter Curve Out-of-Range Types). (See below)
+
+[[File:Set Out Of Range Types Infinity Curves.jpg|355x355px]]
+
+==Making Certain Geometry Temporarily Un-selectable==
+
+-You may want to turn off the option to select the character’s geometry and or parts of the environment while animating. In Max this is called ‘Freezing’. This can be done primarily in the Scene Explorer, click the snowflake that’s next to the piece of geo or the entire layer of geo that you want to freeze. This can be done with all layers and objects.
+
+-By default any piece of geo that’s frozen will show up gray in the viewport. You can change this back to normal by selecting all the geo that you want frozen (they can be selected in the Scene explorer if already frozen), right click and select ‘Object Properties…’. Then under the Display Properties at the bottom left you can uncheck ‘Show Frozen in Gray’. Then click ‘OK’. (See below)
+
+[[File:Show Frozen In Gray.jpg|355x355px|]]
+
+==Locking Down Cameras==
+
+-You can freeze cameras using the same methods as described above.
+
+-There’s also a more serious option that ensures no camera will move anymore. For this there’s a ‘Lock Cams’ button in the Make Toolbox. Go to the dropdown menu and select ‘Lock Transforms’. Clicking this will automatically lock all cameras in the scene while still preserving whatever animation may be on it. Use the ‘Selection Only’ option beneath the button if needed. (See Below)
+
+[[File:Lock Cams.jpg|255x255px|]]
+
+==Parenting & Constraints==
+-If the shot you’re working on requires constraints there are a few options. Primarily, unless the character needs to pick up and set the object down, you should default to the MAKE Parent. First select the child(the thing you want to be driven/influenced by the other object) then hold down Ctrl + SpaceBar and click the thing you want to be parented to, then quickly let go. If it works your selection will jump to only the parent object and the child will now move with it.
+
+-If you need to set up the MAKE Parent simply go up to the ‘Customize’ menu and open the ‘Hotkey Editor…’. Search for it in the ‘Type to search by Actions…’ field. Select it and assign Ctrl + Space. Then click ‘Done’ and it should be set up. (See Below)
+
+[[File:Make Parent Hotkey.jpg|355x355px|Make Parent Hotkey]]
+
+-For other constraint situations ask what the best option for your specific shot should be as not all constraints work well with the pipeline.
+
+-You can experiment with the other available constraints under the Animation > Constraints menu. Constraints in 3ds Max tend to be a little less confusing and rigid than in Maya.
+
+==Saving & Loading Animation==
+
+-It’s likely that you’ll need to save and load animation with your character semi-frequently. To do this, select either the control or controls from which you want to save the animation. Go to the ‘Animation’ menu at the top and select ‘Save Animation’. Save in the desired location. 
+
+-When ready to load animation select the control(s) that you wish to load onto, go to the ‘Animation’ menu once again and select ‘Load Animation’.
+
+-Navigate to your previously saved animation location.
+
+-Before moving forward make certain that the ‘Absolute’ and ‘Replace’ circles to the right are checked.
+
+[[File:Absolute And Replace.jpg|355x355px|Absolute And Replace]]
+
+-Click ‘Load Motion’ and wait for it to load in.
+
+-Make adjustments as needed. (See below)
+
+==Bringing A Rig Into The Scene==
+-Ideally, any rig you wish to use will be published and ready to add to the scene via the Asset Switch.
+
+-To begin, access the Asset Switch from the ‘MAKE Tools’ drop down menu from the top menu bar.  
+
+-Click the ‘No Object(s) Selected’ button. Navigate to the desired asset and select the specific characters .asset file, click open. The asset switch will populate with the different published versions of that character that can be selected. Typically you want the most up to date version depending on if it’s the Anim rig, Render rig or Full rig. When you’ve selected the type of rig and the version that you want click the ‘<<Switch Asset>>’ button at the bottom. (See below)
+
+[[File:Character Asset Selection.jpg|355x355px|Character Asset Selection]]
+[[File:Asset Switch Loaded.jpg|355x355px|Asset Switch Loaded]]
+
+-The character rig will appear at origin. It’s standard practice to always leave the Blue Hexagon (Global Control) at zero when animating. In order to get the character in place you may use the inner green Hexagon (Local Control) to move the entire character.
+
+-Happy animating!
+
+-Another way to bring in a rig is by merging one in. Go to File > Import > Merge and navigate to the rigs file on the server. The merge window will pop up listing everything that’s in the rigs file. Click the ‘All’ button in the bottom left to make sure everything is selected, then click OK.
+The rig will show up at origin. (See below)
+
+[[File:Merge Rig.jpg|355x355px|Merge Rig]]
+
+==Image Plane For Video Reference In Scene==
+
+There are several ways to do this, but you’ll find one solution below.
+
+-Make sure you’ve cut down and converted the video you wish to use into an image sequence. 
+
+-Create a new plane in 3ds Max from the Standard Primitives. Adjust size as needed.
+
+-Create an .IFL file. Go to the ‘Utilities’ tab(Wrench) and click the ‘More…’. Select ‘IFL Manager’ and click OK.
+
+-IFL Manager will show up in the Utilities panel.
+
+-Click the ‘Select…’ button in the IFL Manager.
+
+-Navigate to the location of your image sequence, scroll down and select the last image in the sequence. Hit ‘Open’.
+
+-The IFL Manager will show the number of frames in the ‘End:’ section.
+
+-Click the ‘Create…’ button and give the new .IFL file a name.
+
+-Open the Slate Material Editor (M button). To the left under Maps > General select a bitmap and drag it into the editor. Select the IFL file you just named and click ‘Open’.
+
+-Then add a Scanline > Standard material to the editor. Link the ‘Bitmap’ to the ‘Diffuse Color’.
+
+-Select your plane. Right click and select ‘Apply Material To Selection’ or hit the ‘Apply Material To Selection’ button.
+
+-Now the image sequence should be applied. You can scrub the timeline to see that it worked.
+
+Reference Video:
+https://www.youtube.com/watch?v=FpFFXENWpgU
+
+
+==See Also==
+
+-For more information regarding caching and the character pipeline at MAKE, see: [[How to set up and troubleshoot a character pipeline in 3dsMax]]
+
+-For More information with regards to rigging characters at MAKE, see: [[Rigging a character in 3dsMax]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Animating_In_3ds_Max_Quick_Start_Guide

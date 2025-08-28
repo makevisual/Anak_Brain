@@ -1,0 +1,68 @@
+As you open Wrike to enter your time, the Dashboard view can give you an overview of the current tasks you are assigned to, which tasks are overdue, projects ordered by due date, or other custom filters. 
+
+===== Wrike Folders=====
+The folders are listed down the left side.
+
+::'''MAKE''' root level folder holds tasks for the office, like the Ad League Bowling schedule.
+::'''-YourName''' is for personal tasks and Misc time logging. The Subfolders are for Sick and Vacation tasks.
+::'''Holidays''' holds all the tasks for holidays we get off of work. Assign holiday time to these tasks after the holiday has passed.
+::'''Projects''' holds subfolders for all of the projects we are currently working on. They are divided into Client, Internal, and Pitches.
+
+=====Projects=====
+All time for projects gets added to the Time task in the specific project folder. The Main task is where comments and files related to the project are put. When posting a comment, you can use the @ symbol to notify a specific person about the comment. When posting links to local files, make the file path two lines. The first line is the path to the folder containing the file, and the second line is the name of the file.
+
+==Entering Time==
+Enter time at the end of the day or the beginning of the following day.
+
+#Select the project for which you would like to enter time.
+#Select the Time task. It will be called "Time". 
+#Click the drop down arrow next to the time entry.
+#Enter the number of hours, set the date, write a description of what you did, click "Add Entry".
+
+:[[File:HowtoEnterTime LightspeedWrikeMode.mp4|none|thumb]]
+
+'''NOTE:''' Do not enter your time on the individual tasks you are working on, but in this Time task designated for the whole project- that way, not everyone linked to the wrike task you were working on gets notified for every time entry you make.
+
+Also, if you're looking for a way to look at all your time entries in one place- navigate to the Timesheets sidebar in the Dashboard view. See below:
+[[File:HowtoAccessTimesheets.mp4|thumb|link=|none]]
+
+====Holiday Time====
+Each Holiday that we get off  with pay will have a Wrike task in the Holidays folder that can be found in the "Shared with me" space.  
+
+A new Wrike task for each Holiday on the correct date will be created every year.  
+
+After the holiday has passed, enter 8 hours in the time entry slot for the date of the holiday. Do not complete the task, everyone enters their holiday time in this same task. 
+
+====Misc Time====
+Time spent on things other than projects defined in wrike should be applied to misc time. The "Misc" task can be found by selecting the folder with your name.
+
+====Sick Time====
+Select the "Sick" Sub Folder under your Name folder.   
+
+Create a new task called for example "Sick Day 4/15/2024". Set the date to the day you were sick, make the status of the task "Vacation" and assign the task to yourself.   
+
+Enter 8 hours in the time entry for the day(s) you were sick and complete the task.  
+
+'''You do not have to message the general MAKE chat'''- it may be wise to chat directly the few people who are expecting materials from you that day, and Danny.
+[[File:Sick Time.mp4|none|thumb]]
+
+====Reminder====
+Navigate to your Name folder. Create a new task called "Enter Time". Set the workflow to persistent and set the date to today. Add it to your dashboard.
+The idea is; after entering time in everyday, move it to the next day so you have a reminder for the next day. THE ENTER TIME TASK IS NOT WHERE YOU ENTER TIME. That's the Time tasks under each project folder, or your Misc task.
+
+==Requesting Time Off==
+
+# Select the "Vacation" Sub Folder under your Name folder. 
+# Create a task named for example, "Vacation June 23-27" or "Wisdom Tooth Surgery - 2:00pm". 
+#* If you are not taking a full day, make sure you put the time you will be leaving in the title of the task. 
+# Set the date(s) on the task for the correct day(s), make the status of the task "Vacation" and assign the task to Danny AND yourself. 
+# Danny will unassign himself from the task when your time off has been approved. 
+#* Your time off will show up in the Time off Calendar that is visible to everyone. 
+#* It is a good idea to remind Danny and anyone that you are working with closely or reporting to a few days before you will be gone.
+# After returning from your time off, add the appropriate hours for the appropriate days to the task, then mark the task complete.
+
+[[Category:Wrike]]
+[[Category:Onboarding]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_Enter_Time

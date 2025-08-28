@@ -1,0 +1,91 @@
+[[File:Scriptwriting_for_a_commercial_SpongebobThe.gif|thumb]]
+
+=Introduction=
+Although some projects come to the studio with predetermined shot structure and dialogue, sometimes MAKE is given the task of writing the entire script from scratch. This is usually done by a small team in a series of stages, beginning with rough ideation and ending with a carefully formatted, client-approved script. These stages are usually interspersed by meetings between the director, producer, and writing team, to set goals and refine ideas.
+
+==Preparation==
+The chosen writing team will be contacted by the director and producer when a new project requires a script. The team will be provided with a project brief- a document containing the basic parameters and intent for the spot- and any other project information available, such as product demo videos or production team video chat recordings.
+
+==Kickoff==
+Generally, a kickoff meeting will be held between the director, producer, and writing team once the writers have been informed on the project details. Here, any questions can be answered and goals clarified. Depending on the project, the director will inform the writers on which stage to begin (Rough Ideation, Detailed Concepts, etc.)
+
+The writing will take place in the '''MAKE Docs''' folder on Google Drive. '''MAKE Docs''' contains folders for each of the studio's projects, which in turn each contain sub-folders called '''Ideation''' and '''Scripts''', among others.
+
+==Rough Ideation==
+In the project's '''Ideation''' folder, each writer will create a new document '''(+New > Google Docs)''' and name it '''[BrandName]_[SpotName]_Ideation_R[RoundNumber]_[FirstName]_[VersionNumber]'''. For example:
+
+ <nowiki>
+HESS_JollyJoyride_Ideation_R1_Alex_v001</nowiki>
+
+At this stage, each writer will type several rough ideas (usually around 4-6) for the spot, one paragraph each. These ideas should each strive to communicate a general synopsis of the commercial, focusing on broad strokes and what makes each one unique, while staying true to the client's requirements. This is the most creative part of the process, as a wide range of ideas will help the production team hone in on the ones most likely to succeed.
+
+After each round of Rough Ideation is complete, the writers will send the production team links to their ideation documents. The ideas will be reviewed, and a follow-up meeting will usually take place, in which some ideas will be scrapped and others will get refinement suggestions or move straight to the next stage. Multiple rounds of Rough Ideation writing and meetings may be needed to produce enough director-approved ideas. These will then be proofread by the producer and sent to the client for feedback.
+
+Any ideas approved by the client will move onto the Detailed Concepts stage. If more are required, writers may be asked to return to Rough Ideation.
+
+==Detailed Concepts==
+At this stage, each client-approved synopsis will become a two-paragraph concept that describes the commercial's storyline in more detail. Writers will copy their idea synopses from the previous round into a new document in the '''Ideation''' folder, entitled '''[BrandName]_[SpotName]_Concepts_R[RoundNumber]_[FirstName]_[VersionNumber]'''. For example:
+
+ <nowiki>
+HESS_JollyJoyride_Concepts_R1_Alex_v001</nowiki>
+
+Beneath each synopsis, the detailed concept should be written. The goal here is not to give a play-by-play of every moment in the spot, but rather to take the general themes and story beats of the initial idea and solidify them into a rough sequence of events. An example of appropriate length and formatting is as follows:
+
+
+----
+
+'''''Synopsis:'''''
+''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.''
+
+'''Concept:'''
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+
+----
+
+
+As with Rough Ideation, once the concepts are complete, writers will send a link to their documents to the production team. The documents will be reviewed, a meeting will likely take place, and it will be decided which concepts should be revised, scrapped, or moved forward. After as many rounds of director/client review as needed, a single concept will be chosen by the client. This concept will be turned into a script.
+
+==Script==
+In this final stage, the writer who created the chosen concept will usually write the script. However, if several projects are being scripted at once, duties may be split and scripts assigned according to necessity.
+
+The writer will duplicate an existing script template, provided by the producer in the '''MAKE DOCs/[ProjectName]/Scripts''' folder, and rename it to '''MAKE_[BrandName]_[Season/Year(if applicable]_[SpotName]_[SpotLength]s_Script_[VersionNumber]'''. For example:
+
+ <nowiki>
+MAKE_HESS_2022_JollyJoyride_30s_Script_v001</nowiki>
+
+At MAKE, scripts are formatted in a very specific way. The spot details, such as brand, product name, spot length, and script title, will sit at the top of the page. Beneath this, for some clients, will be the spot's "'''Key Message.'''" If applicable, this can be found in the project brief. Just above the script itself is the '''Synopsis''' written earlier. The actual script is formatted as a five-column table. From left to right, the columns are as follows:
+
+
+----
+===SHOT===
+Lists the shot number (S010, S020, S030, etc.)
+
+===VIDEO===
+Provides a brief description of the visuals happening onscreen. If the shot type (live-action, CG, etc.) is different than the preceding one, it is indicated with a bolded prefix. The most common are '''CGI, Live-Action,''' and '''STOCK.'''
+
+===TIME===
+Notes the length of the shot in seconds, down to the nearest 0.5 second. (e.g. :01, :02.5, etc.)
+
+===AUDIO===
+Describes the audio heard during the shot. Music or sound effects that play over several shots only need to be noted when they start and end. Dialogue should be bolded, and ellipses used to indicate lines spoken over multiple shots (see example below.) Prefixes are also used here to indicate the type of audio and the speaker of dialogue. The most common are '''VO, CharacterName,''' Music, and SFX.
+
+===TIME===
+Notes the total elapsed time of the spot at the end of the current shot.
+
+----
+
+
+Below is an example of the formatting used in a typical MAKE script table:
+[[File:Scriptwriting for a commercial ExampleScript.JPG]]
+
+
+Using the synopsis and concept as guides, the writer will use this table to create a precise play-by-play of the commercial's visuals and audio, along with timestamps that will help the director and animatic artists understand the flow of the shots.
+
+When the script is complete, the writer will send its link to the production team for review. After any revisions, it will then be sent to the client for feedback, revised again if necessary, and once approved, be used by the editors and animatic artists to create the first version of the spot.
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Scriptwriting_for_a_commercial

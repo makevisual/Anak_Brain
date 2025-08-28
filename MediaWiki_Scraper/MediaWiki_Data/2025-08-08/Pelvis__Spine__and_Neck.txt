@@ -1,0 +1,98 @@
+== Previous Article: ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous Article: [[Arms/Clav]]
+
+== Pelvis, Spine, and Neck ==
+[[File:PSAN FinishedSetup.png|frameless]]
+
+Let’s create a very simple setup for the spine, pelvis, and neck. All we’ll need to do is create controls and parent everything into a hierarchy.
+
+
+[[File:PSAN SpinePelvisClavCtrls.png|frameless]]
+
+Here are the ctrls I created for the spine and neck. There is a ctrl for each spine bone and the neck bone. At the pelvis, there are actually two ctrls. The lower green ctrl will control the whole torso rotation, while the upper yellow ctrl will control just the hip rotation. Both of these controls share the same pivot point at the pelvis bone.
+
+
+[[File:PSAN parenting spine Hierarchy.png|frameless]]
+
+Lets begin parenting all the bones and ctrls. I’ll write the steps in list form to make it easier. You can also refer to the diagram above.
+
+* Parent the neck bone to the neck ctrl.
+
+* Parent the neck ctrl, clavicle ctrls, and chest bone to the chest ctrl.
+
+* Parent the chest ctrl to the mid-spine ctrl below it.
+
+* Parent the mid-spine ctrl to the bottom spine ctrl below it.
+
+* Parent the bottom spine ctrl and both of the IK arm ctrls to the pelvis ctrl.
+
+* Parent the hip ctrl to the pelvis ctrl.
+
+* Parent each bone to its respective Ctrl, except the Pelvis bone which should be parented to the hip ctrl.
+
+
+[[File:PSAN parentingPelvisHierarchy.png|frameless|504x504px]]
+
+Here is a more detailed look at what to do for the pelvis and hip ctrls. Make sure that the parents for each leg are parented to the hip ctrl.
+
+Make sure you freeze transforms.
+
+Now if you rotate the hip ctrl, only the pelvis bone and the leg parents should follow.
+
+If you rotate the pelvis ctrl, the whole torso should rotate with it.
+
+[[Stretch Bones|If your character is muscular like mine, you may want muscle deformation for pectoral muscles or the trapezius muscle. You can take a look at the stretch bones documentation for info on how to do this.]]
+
+== Optional Features: ==
+
+=== Chain Tools Spine: ===
+If your character has a really long, thin neck you can also do this same process for the neck.
+
+This Chain Tools spine allows a little more flexibility and stretchiness.
+
+[[File:PSAN SpineChToolsSetup.png|frameless|405x405px]]
+
+I’m going to remove the other spine bones except the pelvis and the chest bone. I’ll build the bone chain in this gap.
+
+
+[[File:PSAN ChTools Line.png|frameless|416x416px]]
+
+When creating the line for your Chain Tools setup, turn on the “Snap To Endpoint” toggle. It will make your life easier if you create an endBone on your pelvis. Now you have something to snap your line to. Create a line that stretches from your chest bone to your pelvis bone.
+
+
+[[File:PSAN SpineChTools.png|frameless|385x385px]]
+
+Create your bone chain. [[Legs/Feet|Follow the same steps as in the Leg tutorial to create this chain]], or [[Chain Tools|refer to the Chain Tools documentation here]]. This bone chain is 3 bones long. If your character has a longer torso, you may need more bones/chain knots.
+
+
+[[File:PSAN SpineParentHierarchyChTools.png|frameless|370x370px]]
+
+Like the other Chain Tools setups, create a point helper to be the parent of each of your chain knots. Make sure you parent the chain knots to their respective parents.
+
+Let’s begin parenting everything in the rig. The Ctrls follow the same hierarchy as the regular spine setup.
+
+Parent the lower chain knot parent to the hip Ctrl (marked in yellow in the image). Make sure the Pelvis and leg parents are also parented to this ctrl.
+
+Parent the upper chain knot parent to the chest ctrl (The largest spine ctrl in the image).
+
+Parent both of the handles (Tiny Red helpers) to the Middle spine ctrl (under the chest ctrl in the image).
+
+Make sure you freeze your transforms for all your ctrls.
+
+[[File:PSAN ChToolsHipDemo.png|frameless|381x381px]]
+
+Now if you rotate the hips you can see the spine bones moving and stretching with it.
+
+[[File:PSAN ChToolsSpineDemo.png|frameless|383x383px]]
+
+And if you bend the spine you should see the bones bend to follow it.
+
+== Next Article: ==
+Next Article: [[Head]]
+
+__FORCETOC__
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Pelvis,_Spine,_and_Neck

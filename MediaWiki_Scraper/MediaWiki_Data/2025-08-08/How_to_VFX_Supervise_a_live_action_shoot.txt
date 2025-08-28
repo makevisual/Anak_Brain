@@ -1,0 +1,74 @@
+As VFX Supervisor, you have several responsibilities on set, as well as off.
+
+'''GEAR:'''
+<ul>
+<li>3-4 green tracking marker rods</li>
+<li>VFX laptop</li>
+<li>Streaming Laptop</li>
+<li>Schedule Laptop</li>
+<li>360 camera</li>
+<li>laser measure</li>
+<li>tape measure</li>
+<li>tape</li>
+<li>tracking markers</li>
+</ul>
+
+'''Arriving on set:'''
+When arriving on set, find where you will 'live' for the duration of the shoot. Most often this will be on the same folding table where the Director is stationed, but check with the Director/AD/Producer if you are unsure where to set up camp. If your gear bags are not near your station, ask a PA where they were unloaded from the truck, and bring them to your station.
+
+
+Note: You MUST have the laptops connected to AC power at all times, as their batteries will die very quickly upon being unplugged.
+
+
+Your first action will usually be to establish the streaming connection for the client to view. For this, you will connect the BLACKMAGIC SDI CONVERTER to the LIGHTNING port of the streaming laptop. Ask the AC on set to provide you with an SDI connection to the camera. You will need to specify that your connection must be the 'End of the Line', because the converter contains no SDI output, and thus cannot pass the signal to any other devices. Ensure you have a stable internet connection via a high-speed wifi network, or via a connected ethernet cable if Wifi is not available.
+
+
+Once connected, you will launch the [[How and When to use OBS for recording meetings|OBS]] app, and view the Blackmagic card as your primary input. You will then create a new WINDOWED SCENE window to display the feed, and maximize the window. Connect to the Zoom call for the day, hit the "Share Screen" button and select your Windowed Scene view of your stream. Ensure you select OPTIMIZE FOR VIDEO, and deselect SHARE SOUND. Ensure your webcam is disabled, as well as your microphone is muted. Open the Chat window and tuck it off screen to avoid incoming messages interrupting the feed. This laptop serves as a monitor for both you and the client to view the shoot, and you will typically not interact with this laptop once you have successfully started the stream.
+
+
+Next, find where the Schedule TV is placed and connect the Schedule Laptop to it. If the TV and stand are not currently set up, ask a PA to help you assemble and connect the stand in an out-of-the-way location. Ask the Director or AD where to place it if you are unsure. Use the remote found in your gear bag to power on the TV and set it's input to 'Computer'. Open a Chrome window and navigate to the Shooting Schedule document found on the MAKE Docs Google Drive.
+
+[[File:VFX_setup.png|border]]
+
+Finally, set up the VFX laptop. This is your primary workstation for the duration of the shoot.
+<ul>
+<li>Find the USB HUB from your gear bag and connect it to the USB-C port on the right side of the laptop. To this you will connect two EXTERNAL SSD's on which you will store the day's footage.</li>
+<li>Get the RED mag reader from the AC and plug it into the USB-A port on the VFX laptop.</li>
+<li>Open the days [https://makevisual.com/brain/mediawiki/index.php?title=Shooting_Schedule Shooting Schedule]</li>
+<li>from the [[MAKE Docs Google Drive|MAKE DOCS Google Drive]], duplicate the VFX Data Sheet from the root folder into the folder for the current shoot, and rename the new copy to suit your project</li>
+<li>Open the Annotated animatic, to have as reference</li>
+
+</ul>
+
+'''VFX WORK:'''
+
+[[VFX Shooting Document|VFX Shooting Doc]]
+There are several important pieces of information you need to record in the VFX Data Sheet. For each shot, and for any changes that happen within a given shot, you will need to record the camera information, including height and focus distance at start. The lens focal length '''MUST''' be recorded for every shot and every time it changes during a shot.
+
+
+
+You will also need to place [https://makevisual.com/brain/mediawiki/index.php?title=VFX_Tracking_Markers_Best_Practices&action=edit&redlink=1 Tracking Markers] in the camera frame when doing shots where the camera moves, to enable tracking in post. Use the Green tracking sticks included in your VFX kit, as well as the tracking stickers and markers found in your gear bag, as needed for the needs of the shot. Your goal should be to ensure that no less than 9-12 distinct points are visible at all times throughout the duration of the shot. More is better. (a 'point' is any set of pixels that are distinct from those around them. Each marker stick contains several tracking points.)
+
+Work to ensure that markers do not intersect with the subject or actors throughout the shot, do not obstruct anything, and do not appear in the background behind a blurry object in the foreground. Your goal should be to ensure that all trackers can easily and quickly be removed from a shot with a 'trash matte' level of roto work.
+
+
+'''DATA'''
+
+
+When a RED Mag is filled, the AC will bring it to you to offload, and ask for a new mag. You must record the Roll number for each mag you unload (A001, A002, A003...) to ensure that no duplicates are made. Open both SSDs and completely erase any contents from previous shoots that have already been offloaded. Plug the mag into the RED mag reader, and copy the contained "AXXX_..." folder onto each of the SSD drives you have plugged in. Place things in the following structure: 'Project_Name/MMDDYY/RED/..' with each new day of shooting getting a new 'MMDDYY' date folder. 
+
+
+At the end of the shoot day, Ensure that both SSD's go to a different location overnight, to prevent data loss in case something horrible happens like a building fire or car crash. There is always a second backup of the data. On multi-day shoots this usually means leaving on SSD at the stage and taking the other with you to offload at the studio. On single-day shoots, send one drive home in the gear bag with PA's, and take the other one with you personally. Always two locations.
+
+
+When Offloading at the studio, you will copy footage to the V:/Footage folder, with the exact same structure as that found on your SSD. 
+
+
+'''WHEN SHOOTING FOOTAGE AT HIGHER THAN 24 FPS'''
+
+at  24fps or less, proxies can be created in camera at recording time. If recording at higher than 24fps, or if in-camera proxies are not enabled, you will need to manually proxy files.
+
+Once files are copied to the server, run the R3D files through media encoder with the preset found here: <blockquote>U:\resources\Presets\Adobe Media Encoder\~RED PROXY - ProRes LT.epr</blockquote>(NOTE: Only red clips ending in '_001' need to be added to media encoder, the subsequent parts will be loaded automatically at render time)
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_VFX_Supervise_a_live_action_shoot

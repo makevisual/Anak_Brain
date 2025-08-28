@@ -1,0 +1,13 @@
+=== Optimizing Task Creation ===
+Generally, when building a project it is good to build the schedule first before we start to work and if that is the case, there is a quick way to create all the work tasks based off the schedule. To do this, make sure to you create a master task that all phases and review tasks, meeting, and shoot are under. Example below:
+[[File:WrikeTaskBestMethods Subtasking ScheduleExample01.png|left|Example of a schedule with a proper structure for copying into actionable tasks]]
+
+This example can then have the top task copied and placed into the main project section. After doing so, make sure to remove all Feedback From Client tasks and change all of the rest into actionable tasks like "To-Do". This now makes all of the tasks have due dates but note that if the schedule shifts, you have to manually go back and update the due dates of each task that was effected. Once you finish all the status updating, please remember to add in the tasks for the project that would not be on the schedule, i.e. LookDev, Log Shoot Day Footage, and Music Searching.
+
+=== When to use a Milestone Vs. a Task ===
+For the most part a Milestone will interact exactly like a task, except a Milestone only has an end date. This is extremely helpful when you need to move a bunch of tasks and don't want to worry about effecting the start times. Noteable, a milestone is best used in the Calendar as it lets you set when the deliveries are meant to be done. The calendars' point is just the show the key dates which are literally Milestones.
+
+A task however, is great for assigning because you set start dates and end dates to tell everyone when they should start on this piece and when they should finish this piece. Sometimes the point in which the task should be finished is not the date in which we are delivering and that is why it is good to set tasks dates, where Milestones cannot convey that information as well.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Wrike_advanced_techniques

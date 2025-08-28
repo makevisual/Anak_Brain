@@ -1,0 +1,55 @@
+=Creating and editing captions in Premiere=
+- Note: If you do not have the closed caption utilities, speak with the network administrator to get the appropriate plugins to premiere.
+
+==1. Generate a transcription of the audio==
+Open the '''Text''' panel by going to Window > Text.<br>
+Under the '''Transcript''' tab, click the '''Transcribe Sequence''' button.<br>
+Use default settings in the '''Create transcript''' window.<br>
+Premiere will generate a transcription from the sequence's audio.<br>
+[[File:Transcribing a sequence.gif]]
+
+==2. Fix mistakes in the transcription while referencing audio==
+Correct any mistaken words.<br>
+Make sure proper nouns are capitalized.<br>
+For example, change <code>Transformers beast alliance</code> to <code>Transformers: Beast Alliance</code>
+<br>[[File:Create a closed caption using Adobe Premiere.gif]]
+
+==3. Create closed captions from transcription==
+Click the '''CC''' button to create captions from the transcription. This switches the window to the '''Captions''' tab.<br>
+An orange caption track has been created in the timeline. The caption track can be edited like a video track.<br>
+[[File:Create closed captions from transcription in Premiere.gif]]
+
+==4. Change caption text font, size, and placement==
+Open the '''Essential Graphics''' panel by going to Window > Essential Graphics.<br>
+Switch to the '''Edit''' tab.<br>
+Select all the captions in the Text panel or in the timeline.<br>
+Change the font with the drop-down menu, change the text size with the slider, and change caption placement under '''Align and Transform'''.<br>
+[[File:Essential Graphics panel.png|thumb]]
+
+==5. Edit captions for ideal line breaks==
+In the '''Captions''' tab in the Text panel, edit the caption lines to break where there are pauses in speech.<br>
+<code>Right-clicking in the Captions tab allows you to delete and add text blocks.</code>
+Caption lines should not be long—lines shouldn't exceed 40 characters.<br>
+Captions can be a maximum of two lines.<br>
+[[File:Editing captions.gif]]
+
+==6. Align captions with audio==
+Edit the caption track so that captions match the speech in the audio.
+<br>
+[[File:Aligning captions to audio.gif]]
+
+=Creating a script from captions=
+# Under the '''Captions''' tab, click the three dots, then select '''Export to TXT file...''' in the drop-down menu.
+# Remove timecodes and extra lines and edit the lines into sentences so that it reads like a script.
+# Rename the file with the proper naming convention. For example: <code>MAKE_Project_Spot_Format_Script_30s_v000</code>
+# Save the TXT file in the designated subfolder. Example: <code>([Project] > Renders > Scripts)</code>
+
+=Creating VTT and SRT files for delivery=
+# Under the '''Captions''' tab, click the three dots, then select '''Export to SRT file...''' in the drop-down menu.
+# Duplicate the SRT file.
+# Use a free online converter to convert the exported SRT file to a VTT file. <code>https://www.happyscribe.com/subtitle-tools/convert-srt-to-vtt</code>
+# Rename the VTT file to the provided ISCI code. Save it to the designated delivery subfolder.
+# Open the duplicated SRT file. Remove timecodes and extra lines and edit the lines so that it reads like a script. Save the SRT file with proper naming conventions in the designated subfolder.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Create_a_closed_caption_using_Adobe_Premiere

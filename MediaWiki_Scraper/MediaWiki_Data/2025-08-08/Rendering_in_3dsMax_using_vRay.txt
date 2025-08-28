@@ -1,0 +1,252 @@
+=VRay=
+VRay is rendering engine we use in studio for 3dsMax. 
+
+When you first open 3ds Max, it will default to Vray for it's rendering.
+
+
+If you are working in new computer with fresh 3dsMax install, go to "customize" and click on "Custom Defaults Switcher"
+
+Click on "Max.vray" then "Set". This will set your default setting such as default materials to Vray.
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_01.jpg|300px]]
+
+
+If you have any question regarding vray, there's extensive help page online 
+
+https://docs.chaos.com/display/VMAX/V-Ray+for+3ds+Max+Help
+
+
+=Setting up Vray scene=
+For Vray render to work propery, you need to use vray material and Vray lighting
+
+==Vray Material==
+There are many varities of vray materials (VrayMtl, VrayLightMtl, FrayFastSSS2) but VrayMtl is most used and default material for Vray.
+
+I'll quickly explain what each of parameters do but read through Vray help doc for more help.
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Material_01.jpg|600px]]
+
+"Diffuse" is basically a color of material. 
+
+"Reflect" is how much object reflects environment. Black reflects nothing. White is maximum. Putting color tints reflection.
+
+"Glossiness" is how sharp the reflection is. 1 is sharpest and use 0.5 to 0.6 for dull material. If you need to go lower, it is better off killing reflection completely. 
+
+"Fresnel IOR" is greyd out since by default it is linked to "IOR" next to Refract. I recommend unlinking them by clicking L next to it. 
+
+Default value of 1.6 can be used for most of objects like plastic, wood, rubber, etc. Increase the value to 5~10 to achieve Chrome/Mirror effect.
+
+"Refract" Controls transparency of the material. Black is non transparent, White is completely transparent.
+
+
+Read help for other settings.
+
+Now that I have material setup for objects, Let's add light
+
+
+==Vray Lights==
+
+There are many different Vray Lights. "VrayLight" is the one that is used in most of cases.
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_01.jpg|300px]]
+
+
+Click on vraylight and drag on viewport to create light. It will default to Plane light.
+
+Let's rotate light so it's facing objects in scene.
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_02.jpg|1000px]]
+
+
+Now to check how light is affecting the object, we will use viewport rendering
+
+Click on "Standard" then select "Vray viewport IPR"
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_03.jpg|1000px]]
+
+
+
+Let's hide vray light object from rendering and add one more to lighten the scene
+
+In light's property, click on invisible to hide it from render. In most casese, you do not want to see light object in render.
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_04.jpg|300px]]
+
+
+Now, I'll duplicate the light to right side.
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_05.jpg|1000px]]
+
+
+Material on right side is supposed to be chrome but since there's no background it doesn't appear to be chrome.
+
+We can add HDRI image to fix that. Create another light. In this one you will change type to "Dome"
+
+You will see whole scene gets blown away. This is because HDRI's light's default "multiplier" value should be 1
+
+Let's change the value. Scene is still bright since it's using white color as hdri. 
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_06.jpg|1000px]]
+
+
+Click on "No Map" window will pop up to select map. Go to Vray tab and select "VrayBitmap"
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_07.jpg|300px]]
+
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_08.jpg|800px]]
+
+
+Another window will popup. Now go to folder where you saved HDRI image and select it.(Saved inn the project you are working on)
+
+[[File:Creating Rendering in 3dsMax using vRay__Vray_Lighting_09.jpg|1000px]]
+
+Now you can clearly see right material is chrome. let's click on "Invisible" toggle of dome light so that we don't see hdri image on background.
+
+
+You can now turn off viewport rendering by clicking "Vray viewport IPR" again
+
+
+==Render Setup==
+
+click F10 or Render setup button to look at vray render setting. 
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Setting_01.jpg|500px]]
+
+
+You will see that by default rendering type is set as "Progressive"
+
+Progressive method has set time that vray will render until that time expires. 
+
+This method is great for rough first pass sinsce we want to render fast but unsuitable for final renders.
+
+Let's change it to bucket. There are two setting you will want to tweak here. 
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Setting_02.jpg|400px]]
+
+
+"Noise threshold" sets how clean you want your frame to be default value of 0.02 is suitable for final render. Use 0.1 for rougher faster render.
+
+"Max subdivs" how many division renderer can make to reach noise threshold goal. If you set it higher, it will divide as much as it can to reach noise threshold
+
+if value is lower, it will stop after certain subdivision before reaching noise threshold goal. Default value of 12 will work for most casese.
+
+
+Open Camera tab to see Motion blur. By default it is off. Turn it on and set Interval center to 0. You can change duration to 0.25 if you want less motion blur or leave it as 0.5
+
+If you are using "Physical Camera" Vray will use motion blur setting from camera and this setting in Render setup will be ignored. Let's close Render Setup
+
+
+
+==Render using LPM==
+
+LPM is layer based rendering plugin we use to send render to Render farm.
+
+[[Using LPM for rendering in 3dsMax|You can find a detailed article on the use of LPM here.]]
+
+Click on "MAKE Tools" and select "LPM2p8"
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_01.jpg|300px]]
+
+
+New window will open with some defautl settings. Toggle open Beauty. First Right click on "Environmental override" and delete. It's old property that doesn't work anymore.
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_02.jpg|300px]]
+
+
+LPM flows from bottom to up. Red color means it will hide it and grey means it will unhide it. Clicking on icon will cycle through them. Do not use Blue since it grab current status of object instead of overrriding it.
+
+So from bottom up, LPM will hide All objects and turn on objects that are on top of it. Same for lights.
+
+
+In Scene explorer, lets add lights to light layer and objects to new layer for rendering.
+
+Go back to LPM. Right click on Geo layer and click on "Add" then "Add layers". Now choose layer that objects are in. Do the same for light layer.
+
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_03.jpg|1000px]]
+
+
+Now we are ready to test render using LPM. Right click on Beauty then "Render preview 50%" LPM will automatically set resolution to half of final render to save time previewing.
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_04.jpg|1000px]]
+
+
+Ok now that render is working but we want to add ground. Create plane and add it to new layer. We will add this layer into Matte layer in LPM.
+
+We can see ground plane in chrome's reflection. Now we want to create new lpm layer to render ground separately to comp it later.
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_05.jpg|1000px]]
+
+
+Click on lighting button then select "beauty pass" It added new beauty pass.
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_06.jpg|500px]]
+
+
+Click on Beauty layer and press enter to rename it we will also change previous Beauty layer
+
+We will delete "environment override", add light layer then add ground layer to Geo layer. Add object on top of ground to "shadowcasters" Let's preview
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_07.jpg|1000px]]
+
+
+We can see that objects are properly creating shadow on ground.
+
+Now right click on lpm layer and add "Vray5 RenderElement Override" 
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_08.jpg|700px]]
+
+
+You will see element overrides you can add to render to use in [[Nuke Standards and Practices|comping later.]]
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_09.jpg|700px]]
+
+
+Add VrayBackToBeauty, VrayCryptomatte, VrayDenoiser, VrayDepthRGB and VrayOptionRE. You can remove or add others as needed but VRAyOptionRE is always recommened since it reduces EXR file size.
+
+Copy "Vray5 RenderElement Override" and paste it do Ground layer.
+
+
+Now that you have layers setup, let's select folder you will be rendering to.
+
+Click on Set on bottom right corner to choose "Image Sequence" folder of shot you are working on.
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_10.jpg|700px]]
+
+
+Expand Shots panel and rename shot. Right click on "Common" to open new window.
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_11.jpg|700px]]
+
+
+Here you can change properties for shot. "Time OUtput", "Output Size" and "Camera" are three things that are commonly used in here. when you are done. close window
+
+Right click on shot name and click on "Include passes" here you can select passes to render per shot. Change it to selected passes and select two layers you want to render.
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_12.jpg|700px]]
+
+
+Selecting passes here will make it easier when you want to rerender just one of those passes by toggling them on and off under shot setting.
+
+Now we are ready to send it to farm. click on "network" at the bottom and new window will popup
+
+[[File:Creating Rendering in 3dsMax using vRay__Render_Using_LPM_13.jpg|700px]]
+
+
+Default setting will work for most cases. Two things that you might want to change is "Priority" and "Task Chunk Size"
+
+Priority set's priority of the job you send to farm. 
+
+40: I don't need it tomorrow 50: I don't need it today 60: I need it today 70: I really need it today 80: I need it in next hour 90+: I need it right now.
+
+Client's job will almost always come first when it comes to rendering priority.
+
+Task chuck size sets how many frames farm computer renders once it opens the file. If your render is rendering really quick and taking more time to open, you can increase this number higher.
+
+if everything looks good, you can click on "Ready to submit ## passes" then check in deadline.
+
+[[How to check render in Deadline]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Rendering_in_3dsMax_using_vRay

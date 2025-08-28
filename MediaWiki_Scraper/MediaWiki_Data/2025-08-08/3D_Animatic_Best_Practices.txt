@@ -1,0 +1,109 @@
+=What is a 3D Animatic?=
+3D animatics are a collection of unrendered shots in video format. They often serve the purpose of acting as a first step of visualization from a script or 2D storyboards. 3D animatics can contain CG shots, live action shots that will be filmed later on in the production, or a combination of both. They will often feature placeholder assets or simpler versions of the product or characters that will be replaced in later iterations of the spot.
+
+Think of it as the building blocks for the spot, where each shot will eventually be upgraded and replaced with better animation, actual rendered shots, and high quality visuals.
+
+This article will explain best practices to utilize while you create an animatic to ensure you're building a strong foundation for the spot during production.
+
+=Before You Start=
+
+== Understanding Scripts ==
+
+[[File:3D Animatic Best Practices ScriptExample.png|500px]]
+
+Here's an example of a script for a Hot Wheels spot. The location of the script will most likely be
+
+The length (30 seconds) and other general info is at the top, and listed below are descriptions of each shot in the spot.
+
+Location will most likely be linked in Wrike task of animatic
+There are two types of shots in spots, Live-Action and Animation. Shots labeled Live-Action        Live-action shots can feature CG elements, for example most toy spots feature recorded footage with CG elements in the background. Animation shots are composed entirely of CG elements and involve no live-action integration. Live-Action shots These shots have different     , which will be explained more below.
+Mention island shot, explain what it is
+
+== 2D Animatics ==
+
+A storyboarded 2D animatic may have already been made for the spot. This will serve as a great reference, as a lot of the visual legwork is already done with composition and clarity in mind. These can typically be located in the (blank) folder of the project.
+ <nowiki>
+link</nowiki>
+
+== Resources ==
+
+Resources go here
+product demo videos showing how product works
+Packaging to inform overall look we're aiming for
+physical copy of product may also be given if available
+The assets you'll be using will most likely be linked in your animatic Wrike task by the producer, as these are usually prepared ahead of time
+
+'''Bold text'''
+
+== Example Animatics ==
+
+Here's an example of a 3D animatic and the final version of a spot (put videos here)
+
+Notice how the characters are ___, and the animatic environment is simplified but still clear as to where the location is.
+
+
+Here's another example
+
+== Folder Navigation ==
+
+Create an animatic folder in your project by making a copy of the ___ folder and renaming it 
+Create a shot in your animatic folder by making a copy of the ___ folder and renaming it ''S_010''.
+Audio - Usually scratch VO made, music track (or multiple options)
+
+= Making the Animatic =
+
+== Important Considerations ==
+
+'''★ This is the most important part of the article, read everything listed here. ★'''
+
+• '''Your 3D scene should be at the correct scale, 1 unit = 1 inch.'''
+
+[[File:3dsMax_SnP_Scale_step1.jpg|250px]][[File:3dsMax_SnP_Scale_step2.jpg|250px]][[File:3dsMax_SnP_Scale_step3.jpg|250px]]
+
+• '''Camera focal lengths for live action shots can ONLY be 14*, 20, 24, 35, 50, and 85* (*in very specific instances)''' because these are the lenses we have for physical production shoots.
+
+• '''Animate the camera in gimbal or local only, not view.'''
+
+put image here of where to change this
+
+• '''All shots need 12 frames of "heads" before the length listed in the script (frames 1000-1012) and 12 frames of "tails" at the end of the shot.''' This is if we need to add on frames in the beginning or end of shots or shift things, there’s leeway in the edit.
+
+== Animating ==
+
+Save your file into either the animation. Name your max file ''HWRS_S_010_Animatic_Animation_v001.max''
+Typically, for TVC we're working in the aspect ratio of 16x9, or 1920x1080. Press Shift+F to see a film gate in your viewport. For social posts, we   work from a large 4k square and crop in in comp,  give camera template here
+
+Mention for the animatic, clarity is more important and the focus should be less on super polished animation and more about shot clarity, composition, and camera moves.
+
+For the animation, you should be focusing on animating key poses and actions to establish the specific timing and movement of elements in the scene. It should not be thoroughly polished.
+
+
+
+For playblasts,           good naming thing is $scenefile.mp4
+
+2D moves, slow motion, crash zooms in edit
+
+Red borders and blue borders for CG/live action distinction ..or identification
+Shot labelling
+
+For more in-depth info about animating, check out this article: [[Animating In 3ds Max Quick Start Guide]]
+
+== Creating the Edit ==
+
+If there are multiple artists working on an animatic there will be only one person "running the edit".
+It is recommended to compile your shots as you create them to ensure they flow together nicely. Your "Edit" file is where this will happen, and will contain your shots, scratch VO, music, any necessary sound effects, and supers or other supplementary visual effects.
+talk about Hiero or Premiere
+Export the edit here
+
+== Viewport Lighting ==
+
+Viewport lighting
+
+= Conclusion =
+
+For more information on creating complex rigs, check out __ located here:
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=3D_Animatic_Best_Practices

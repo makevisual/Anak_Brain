@@ -1,0 +1,48 @@
+=What is an EDL,XML,OTIO=
+An EDL (Edit Decision List) is a document that contains a list of edits for a video or film project. It includes information such as the timecode, the duration, the type of edit, and the source and destination of each edit. EDLs are commonly used in post-production workflows to transfer edit information between different software applications.
+
+XML (Extensible Markup Language) is a markup language that is used to encode documents in a format that is both human-readable and machine-readable. It is commonly used in web development, data exchange, and other applications where structured data needs to be stored and transported. XML documents contain tags that define the structure and content of the data.
+
+OTIO (Open Timeline IO) is a file format and API for exchanging timeline-based editorial data between different software applications. It is designed to provide a standardized method for exchanging data between different post-production tools, allowing editors to work with a variety of software applications and easily transfer their work between them. OTIO files can contain information about timelines, edits, effects, audio, and other elements of a post-production project.
+
+= Exporting from Adobe Premiere =
+
+=== '''To export an EDL or XML file in Adobe Premiere, you can follow these steps:''' ===
+
+# Open your Premiere project and make sure your sequence is selected in the Timeline panel.
+# Click on the File menu in the top menu bar and choose Export > EDL or Export > XML.
+# In the Export Settings window that appears, choose the format you want to export (EDL or XML) from the Format dropdown menu.
+# Choose the location where you want to save the exported file in the Output File field.
+# Configure any additional options as needed, such as the range of the sequence to export or the type of tracks to include in the export.
+# Click the Export button to begin the export process.
+# '''When the export is complete, click OK. Or your file will not be saved!'''
+
+[[File:XMLexport_DialogueBox.jpg|300px]]
+
+* Once the export process is complete, you will have an EDL or XML file that you can use to transfer your project to other editing software or to archive your project's edit decisions.
+
+=== OK. I exported to a file. Now what? ===
+
+* Pass along a link to the file you've created to person taking over the online edit.
+* Follow up with that person to make sure the file works properly and pat yourself on the back for a job well done. Now get back to work and stop gloating!!
+
+''But wait.. What if that person is me?''
+
+==To import an EDL, XML, or OTIO file into  Hiero, you can follow these steps:==
+
+# Open Nuke Hiero and create a new project.
+# Click on the "Import" button in the toolbar at the top of the screen.
+# In the Import dialog box, select the file format you want to import, which could be EDL, XML, or OTIO.
+# Browse and select the file you want to import, then click on the "Open" button.
+# In the Import Options dialog box, you can choose various options for importing the file, such as the sequence start timecode, the handle length, the import format, etc.
+# Once you have set the import options, click on the "Import" button to begin the import process.
+# After the import is complete, you will see the imported clips and sequences in the Project panel.
+# You can now drag and drop the imported clips and sequences into the timeline or into a bin in the Project panel to start working with them.
+
+Note that the exact steps for importing EDL, XML, and OTIO files may vary slightly depending on the version of Nuke Hiero you are using. However, the general process should be similar across all versions.
+
+
+[[Category:Editing, Nuke Studio, Premiere, EDL, XML, OTIO, Heiro]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Export_EDL,_XML,_OTIO_for_use_in_online_edit

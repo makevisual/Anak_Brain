@@ -1,0 +1,56 @@
+This article will cover the basic conventions for materials in Unreal Engine 5.
+
+== Best Practices and Standards ==
+
+=== Material Graph ===
+* When you change any materials in the Material Editor you have to '''hit Apply button on the top left to apply the change'''. (Hit Save as well if you want to save the result).
+[[File:Materials in Unreal Engine Best Practices and Standards Apply button.jpg]]
+* Unreal Engine uses PBR (Physically Based Rendering) materials, not Vray Materials.
+* Unreal Engine uses a color map as the Master Color unlike Vray Material uses colors inside the reflect map in 3dsMax.
+
+<blockquote><big>'''Brief Texture map compatibility'''</big>
+
+<big>3ds Max Vray Material ↔ Unreal Engine PBR Material</big>
+
+Diffuse map ↔ Base Color
+
+Reflect map ↔ Specular
+
+Bump map ↔ Normal
+
+Glossiness map ↔ 1-Roughness</blockquote>
+* If you want to make a color node '''use the Constant3Vecror node'''.
+
+* If you want to Input a number '''use the Constant node'''.
+* When using a Texture map as the Base Color, '''turn on the sRGB check box''' to make sure it's sRGB. For the others like roughness, specular, etc. '''turn off the sRGB check box'''.
+
+* When you utilize the metallic value you either '''use 0 or 1'''. There's no in-between for metallic value.
+
+
+
+=== Assign Materials by using Material Instance ===
+
+* '''Create materials with modularity in mind''': Try to create the master Material that can be reused in different parts of your project. This helps reduce memory usage and makes managing your project assets easier.
+
+* After you create Materials you don't want to assign them directly to the Static Meshes. Instead, '''create Material Instances from your Material''' so that you can use the <u>Parameters function</u>. '''It lets you adjust material instances in real-time''' so that you don't have to apply and save materials every time you make a change.
+
+# To create a Material Instance, L-click the Material on the Content Drawer, and hit Create Material Instance.
+
+[[File:Materials in Unreal Engine Best Practices and Standards Material Instances01.jpg]]
+
+2. Assign the Material Instance to the Static Mesh.
+
+3. Open Material Graph of the Material, L-click the node you want to convert into a Parameter, hit Conver to Parameter, and rename it as preferred.
+
+[[File:Materials in Unreal Engine Best Practices and Standards Material Instances02.jpg]]
+
+4. Now if you double-click and open Material Instance you can see Parameter is created under the Detail tab - Parameter Group. Check the box to activate the Parameter. Now you can adjust the Material Instance value in real time.
+
+[[File:Materials in Unreal Engine Best Practices and Standards Material Instances03.jpg]]
+
+=== Tips ===
+
+* Hold down Ctrl + L at the same time '''to rotate the sun''' which is handy for seeing different light scenarios.<br />
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Materials_in_Unreal_Engine_Best_Practices_and_Standards

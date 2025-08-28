@@ -1,0 +1,158 @@
+== Previous Article: ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous Article: [[Pelvis, Spine, and Neck]]
+
+== Head: ==
+[[File:Head BaseBones.png|frameless|412x412px]]
+
+Here are the base bones we created for our head. Right now, all we have are bones for the head, neck, jaw, and hat. Let’s see how we can add a little more control to this area.
+
+
+[[File:Head AdditionalBonesPlan.png|frameless|520x520px]]
+
+Above is a diagram of all the things I’m going to add to my character rig. He definitely needs control of his eyes, eyebrows, and tongue. I’m also going to add controls for his nose, teeth, and the feather in his cap. We’ll need to create new bones for each of these areas.
+
+
+[[File:Head EyeBones.png|frameless|516x516px]]
+
+Let’s start with the eyes. Create a bone and snap it to the center of the eye. Make sure it’s straight. Then, duplicate this bone. Rotate the duplicated bone up until it is aligned with the top eyelid. Then duplicate the eye bone again and rotate it until it is aligned with the lower eyelid. These will be the bones for our eyes and eyelids. Create a gimbal node on the eye bone and name all the bones.
+
+
+[[File:Head TongueBones.png|frameless|512x512px]]
+
+Next create the bones for the tongue. I’m putting 4 in, but the amount may vary depending on your character.
+
+You can also put a chain tool for the tongue if it requires it, but be aware of twist and roll when rigging that.
+
+
+[[File:Head TeethNoseBones.png|frameless|509x509px]]
+
+Next I’ll create the bones for the teeth and nose. These will just be straight bones that sit inside the mouth and nose area.
+
+[[File:Head AutoGrid.png|frameless]][[File:Head BrowHelpers.png|frameless|380x380px]]
+
+Lastly, let's create the brows. To make things easier, let’s use Autogrid. In the create tab, select the point helper button. Check ON Autogrid. Now when you make a point helper in your scene, it will position your object on the surface normal of your geo. I’m creating 4 helpers where I want my brow bones to go.
+
+
+[[File:Head BrowPos1.png|frameless]][[File:Head BrowPos2.png|frameless|305x305px]]
+
+I’ll create bones for my brow, and snap them to the point helpers. I’ll further adjust their position as needed and delete my temporary helpers. Make sure these bones are named properly.
+
+
+[[File:Head BonesMirror.png|frameless|450x450px]]
+
+Next let’s mirror the brow bones. For the eye bones and the eye gimbal node, duplicate them and move them to the other side rather than mirroring. This will help later with ensuring the eyes and lids rotate correctly on the rig.
+
+
+[[File:Head Feather1.png|frameless|321x321px]][[File:Head Feather2.png|frameless|317x317px]]
+
+To create the feather in his cap, create a bone and position it from the feather’s base to tip. Use the refine tool to subdivide it and reposition the bones.
+
+[[File:Head HeadParents.png|frameless|418x418px]]
+
+Let’s create some parents for the components of our face rig. I’m making a head parent point helper, a head bend helper, and a parent for the mouth and nose. Making a helper for head bend and a parent for the mouth and nose isn’t strictly necessary, but it can come in handy if you want to give your head a little squash/stretch.
+
+The head parent is very important for the face rig so make sure you have that at the very least.
+
+[[File:Head EyeCtrlAndParent.png|frameless|401x401px]]
+
+Let’s begin making ctrls. We’ll start with the eyes. I like to make one ctrl for each eye that controls eye rotation, and ctrls for the upper and lower lids. The pivot for each of these is at the center of the eye. Make one side, then duplicate it and move it into place on the other side of the head instead of mirroring. Parent these ctrls to the eye’s gimbal node, then to head parent helper, or the head bend helper if you are making that control. Make sure you freeze transforms before testing their movement in gimbal mode. 
+
+[[File:Head NoseChinCtrls.png|frameless]]
+
+Next I’ll create the ctrls for the nose and chin. The pivots for  these ctrls are at their respective bone’s pivots.
+
+[[File:Head BrowCtrls.png|frameless|494x494px]]
+
+Create ctrls for each brow bone. Make sure they are visible in front of the eyebrow hair. Parent these to the head parent, or the headbend helper if you’re making a bendy head.
+
+[[File:Head TongueCtrls.png|frameless|425x425px]][[File:Head TongueParenting.png|frameless|441x441px]]
+
+Let’s also create the ctrls for the tongue. Working from the tip of the tongue back, parent each ctrl to the one that came before it. Parent the last tongue ctrl to the jaw ctrl.
+
+
+[[File:Head ToothBones.png|frameless|470x470px]][[File:Head ParentingMouthguts.png|frameless|429x429px]]
+
+We’ll create an arc for each of the tooth bones. These will be the ctrls for the upper and lower teeth geo. Parent each tooth bone to its respective ctrl. Parent the upper tooth ctrl to the mouth parent. Parent the lower tooth ctrl to the jaw ctrl.
+
+[[File:Head AdditionalHeadCtrls.png|frameless|568x568px]]
+
+Create ctrls for the head, hat, and feather. Feather ctrls are parented from the tip to the base of the feather, then to the hat. The hat is parented to the head ctrl. The nose bone is parented to the nose ctrl, then the nose ctrl is parented to the head parent. Finally, the head parent is parented to the head ctrl.
+
+[[File:Head HeadParenting.png|frameless|422x422px]]
+
+For now, parent the head bone to the headbend helper, then parent the headbend helper to the head ctrl. This may change if you choose to set up the head bend ctrl.
+
+== Optional Features: ==
+
+=== Head Stretch and Bend: ===
+
+==== Head Stretch: ====
+[[File:Head SquetchCtrl.png|frameless|404x404px]]
+
+Let’s create a ctrl that we’ll use for our squash and stretch. Create a circle and place it near the jaw ctrl. Parent it to the jaw ctrl. Freeze transforms.
+
+We’ll use the Reaction manager to control the stretch. Make a note of the orientation of the pivot for the stretch ctrl in gimbal mode. In this case, the Y axis is pointing up and down. Open up the Reaction Manager.
+
+[[File:Head EnableToChooseDriver.jpg|frameless]][[File:Head ReactionManager StretchDriver.png|frameless|573x573px]]
+
+Press the green plus button, and select the Y Position of the ctrl. This will be the driver for our stretch.
+
+[[File:Head ReactionManager StretchDriven.png|frameless|537x537px]]
+
+Select the mouth parent and press the white plus button. Navigate the popup and select the Y Position. Do the same for the nose ctrl.
+
+[[File:Head ReactionManager StretchState.png|frameless|672x672px]]
+
+Create 3 states. The first is the rest pose, so everything should be zero. The rest of the values are up to you, but the rule of thumb for this is the value you put for your nose parent should be less than the value for your mouth parent. Play with the values to get the amount of stretch you’re looking for. Take note of the values I used for the rig above.
+
+Ideally, when you create your stretch value, the jaw bone should not translate beyond the max stretch position of the stretch ctrl. When you create your squash value, the nose bone should not translate beyond the bounds of the eye bones when at the max squash position of the stretch ctrl.
+
+[[File:Head StretchDemo.png|frameless]][[File:Head SquashDemo.png|frameless|354x354px]]
+
+Now if we move the stretch ctrl down, we can see how the head will stretch, and if we move it up, we can see how the head will squash.
+
+==== Head Bend: ====
+[[File:Head ReactionManager JawBend.png|frameless|525x525px]]
+
+Now let’s do the process again to allow the jaw to bend left and right. The Z Position goes left and right on the stretch ctrl for this rig, so I’ll make a new reaction and set the stretch as the master, and the transform as the Z Position.
+
+Then, for the objects to be driven, I’ll add the Z Position for the mouth parent and the nose parent. I’ll also add the X Rotation for both parents.
+
+[[File:Head ReactionManager BendState.png|frameless|612x612px]]
+
+I’ll create 3 states again. Once again, these values are up to you, it’s best to play around with them.
+
+For this rig, when the stretch ctrl moves to the left 8 units, the mouth parent will move left 3 units and turn -15 degrees on the x axis. The nose parent will move 1 unit and turn -10 degrees on the x axis. The opposite will happen in the other direction.
+
+This will cause the jaw to bend and twist.
+
+[[File:Head BendDemo.png|frameless|436x436px]]
+
+If we move the head, we should see the chin and nose following and twisting.
+
+[[File:Head HeadBendCtrl.png|frameless|381x381px]][[File:Head HeadBendPArent.png|frameless|416x416px]]
+
+Let’s create a ctrl for the head bend. I’ll create an arc and make it’s pivot at the headbend helper. Parent the hat ctrl to the head bend ctrl, then parent the head bend ctrl to the head ctrl.
+
+[[File:Head BendHelperDemo.png|frameless|477x477px]]
+
+Now if you rotate the head bend helper, the eyes, brows, hat, and head bone should follow.
+
+After Skinning, the head bend and the stretch control can be enhanced with morph targets. You can create morph targets for head squash and stretch that will key on and off with the movement of a ctrl. If this is something you want to do, [[Driving Morphs With Ctrls|here is the tutorial for creating ctrl driven morphs.]]
+
+Here are some additional tutorials for different ways to create the components of the face. The best method will vary depending on what your character is like and how it must move.
+
+[[Floating Bones Mouth Rig]]
+
+[[Spline Skinning|Spline Skinning (For Sausage Mouths)]]
+
+[[Cartoon Eyeballs]]
+
+== Next Article: ==
+Next Article: [[Rigging Hair]]
+__FORCETOC__
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Head

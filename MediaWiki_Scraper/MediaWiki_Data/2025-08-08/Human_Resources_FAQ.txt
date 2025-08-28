@@ -1,0 +1,193 @@
+This page is a work in progress, but you can currently reference the [[Employee Benefits and How to Set Them Up]] page. Otherwise, Danny is our HR, with Elisabeth assisting.
+
+== <u>Benefits & Compensation Related</u> ==
+ You can find the answer to many of your benifits and compensation questions on the [[Employee Benefits and How to Set Them Up]] page.
+
+====== What benefits does MAKE offer to <u>Employees?</u> ======
+
+* Blue Cross Blue Shield MN Medical insurance│PPO plan ''[Coverage must be accepted or declined within 30 days of your first day of employment]''
+* Simple IRA with up to 3% match ''[available after a 3 month waiting period]''
+* Monthly Parking ''[if needed]''
+* 6 paid holidays per year
+* 120 hours per year of paid time off ''[broken down into 10 days vacation and 5 days sick]''
+* Membership to CPP gym
+
+====== What are my health insurance options and costs? ======
+MAKE offers it's employees the BlueAccess℠ HSA Gold $2,700 Plan 653 from Blue Cross Blue Shield MN. It is a PPO (Preferred Provider Organization) health insurance plan, meaning you can receive care from providers either in-network or out of network. You will typically pay less out-of-pocket costs for in-network providers.
+
+The cost of premiums (the amount paid monthly for health insurance coverage) for the Employee and Employee's Spouse/Partner are paid by MAKE. MAKE does <u>not</u> pay premiums for Dependent Children. 
+
+You can access plan documents at the links below.
+
+* [https://bluecrossmn.widen.net/s/6rzzh9frxd/2025_49316mn1070018-00_sbc.pdf 2025 BlueAccess℠ HSA Gold $2,700 Plan 653 - Summary of Benefits and Coverage]
+* [https://bluecrossmn.widen.net/s/d98ccb2txq/2025-sg-blueaccess-hsa-gold-plan-653-benbooklt.pdf 2025 BlueAccess℠ HSA Gold $2,700 Plan 653 - Benefit Booklet]
+* [https://bluecrossmn.widen.net/s/rfxglcdvt8/2025-sg-access-hsa-gold-plan-653-benhlts.pdf 2025 BlueAccess℠ HSA Gold $2,700 Plan 653 - Benefit summary]
+
+====== How do I set up my BCBS account? ======
+You can create your BCBS account at the [https://members.bluecrossmn.com/ New User Registration] link. 
+
+You will need the following information.
+
+* First and Last name
+* Date of birth
+* Member ID
+
+If you have not received your BCBS card in the mail, you can get it by calling 1-888-279-4210.
+
+====== What if I need to see a doctor and I haven’t gotten my insurance card yet? ======
+You are covered by insurance starting on the active date in your BCBS account. For new employees, this is the same as your start date at MAKE. Your insurance card will be mailed to you but it can take a few weeks. 
+
+If you need to see a doctor before your card arrives, you can set up your BCBS account (see previous question) and print your card from your account.  
+
+====== Does MAKE offer dental insurance for Employees? ======
+No, MAKE does not offer dental insurance. 
+
+====== How much paid time off (PTO) do <u>employees</u> get? ======
+ 
+Employees get 120 hours of paid time off per calendar year. This breaks down to 10 vacation days and 5 sick days.
+
+Unused PTO hours do roll over but only into the next calendar year, after that those PTO hours are lost.  
+ Example: 
+ Frank's first day at MAKE is January 1st, 2025, he starts his first year at MAKE with 120 hours of PTO. 
+ He uses 50 PTO hours in 2025. 
+ The remaining 70 hours of PTO from 2025 rollover into 2026.
+ Frank begins 2026 with 190 hours of PTO available to him. 
+ There was no tropical vacation for Frank in 2026 :( and he only used 60 hours of PTO. 
+ Frank's 10 hours of unused PTO from 2025 goes away and Frank will begin 2027 with 120 hours of PTO. 
+
+====== How much notice should I give when I am planning to take time off? ======
+ 
+You should give as much notice as possible when you plan to take time off. 
+
+Enter your time off into Wrike when you make your plans so Danny can approve them, and it gets added to the Time Off Calendar in Wrike that’s visible to all users. 
+
+Best practice is to remind Danny and any project leads about your time off the week or day before, depending on how long you will be out.   
+
+====== What is the sick time policy for employees? ====== 
+
+====== What is the sick time policy for interns? ====== 
+
+====== What Holidays are paid? ======
+
+* New Years Day
+* Memorial Day 
+* Independence Day
+* Labor Day
+* Thanksgiving 
+* Christmas
+
+====== When and how do I get paid? ======
+ 
+You will be paid bi-monthly via the ADP direct deposit you set up when you started. ( https://login.adp.com/welcome )
+
+Bi-Monthly pay means you will receive deposits twice a month on the 15th and the last day of the month. 
+
+It is important to know that our pay is delayed by a pay period. Meaning the payment you receive on the 15th of the month is not for the hours you worked the last two weeks of the previous month, it is for the hours worked the first two weeks of the previous month. 
+
+This delay also means that you will receive your first “paycheck” after 4 weeks and your last “paycheck” at least two weeks after your last day.  
+
+====== What is the company’s retirement plan and how can I participate? ======
+ 
+After a 3 month waiting period, MAKE offers a Simple IRA with up to 3% match through Fidelity to <u>full-time employees</u>. 
+
+A SIMPLE (Savings Incentive Match Plan for Employees) IRA is a retirement plan where employers and employees of small businesses can make tax-deferred (pre-tax) contributions.
+
+Elisabeth can answer questions and provide the necessary information for setup, or if she's not available, Danny.
+
+Below are the forms and process for setting up your MAKE Simple IRA.<blockquote>[https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/empbroch.pdf General Fidelity SIMPLE IRA Information Brochure (PDF)]
+
+'''''STEP 1''''' -- ''Set up your Simple IRA account with Fidelity''
+
+  You can set up your account online [https://www.fidelity.com/open-account/overview here] or print the paperwork out and mail the hard copy to Fidelity. 
+
+* [https://www.fidelity.com/customer-service/forms-applications/simple-ira-complete Complete the Fidelity SIMPLE IRA Application - Online]
+* [https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/new-fidelity-account-simple-ira.pdf New Fidelity Account_SIMPLE-IRA - Paper]
+
+'''''STEP 2''''' -- ''Complete Fidelity SIMPLE IRA Salary Reduction Agreement''
+
+Once your Simple IRA account is set up with Fidelity you will then complete a 'Salary Reduction Agreement' and return it to Elisabeth.
+
+This form designates how much you want deferred from your paycheck and contributed to your Simple IRA. You are able to contribute as much as you would like as long as you do not exceed the max annual deferral amount for a calendar year. MAKE will match your contribution up to 3%.
+
+''<u>NOTE</u>'': Please be sure to fill out 4. Date Salary Reduction Begins section with the first day of the next pay period after you sign the form. (i.e. signed form: 1/22/2023, date salary reduction begins: 2/1/2023)
+
+* [https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/salreduct.pdf SIMPLE IRA Salary Reduction Agreement]
+
+It is '''''highly''''' recommend that you save copies of all of the forms that you fill out and read through from this process for future reference.</blockquote>
+
+====== Does the company match Simple IRA contributions and at what percent? ======
+ 
+Yes, MAKE will match your contributions up to 3%.
+== <u>Process-Related</u> ==
+
+====== What is the procedure for requesting time off? ======
+ 
+https://makevisual.com/brain/mediawiki/index.php?title=How_to_Enter_Time#Requesting_Time_Off
+====== What’s the process if I’m sick? Who do I contact? ====== 
+
+====== How to update my emergency contact(s)? ======
+ 
+Let Elisabeth know if you need to change your emergency contact or update their contact information.
+====== If I move, how do I update my address? ======
+====== How do I sign up for health insurance if I opted out or didn’t need it when I was hired? ======
+====== How do I make changes to my Simple IRA contributions? ====== 
+
+====== How do I access my pay slips and tax statements? ====== 
+
+====== What if I have an issue with my computer? ======
+ 
+Create an IT Support Ticket in Wrike
+
+https://www.wrike.com/workspace.htm?acc=212378#/forms?formid=1371746 
+====== How do I enter my Time?   ======
+ 
+https://makevisual.com/brain/mediawiki/index.php?title=How_to_Enter_Time
+== <u>Job-Related</u> ==
+
+====== What should I include in my company email signature? ====== 
+
+====== How do I set up my LinkedIn profile? ====== 
+
+====== Am I allowed to post about work projects on social media? ====== 
+
+== <u>Company Culture Related</u> ==
+
+====== How long is a workday? What time do people usually arrive? What time do people usually leave? ====== 
+
+====== Am I expected to answer emails out-of-hours? ====== 
+
+====== How much time do I get for lunch? ====== 
+
+====== Should I bring lunch or do people go out to eat? ====== 
+
+====== What is the company dress code?  What should I wear? ====== 
+
+====== Where can I find opportunities for continued learning? ====== 
+
+====== Do we celebrate birthdays? ====== 
+
+== <u>Studio/Office Related</u> ==
+
+====== What is the address of the studio? ======
+MAKE is located in the Canadian Pacific Plaza Building. <blockquote>
+120 S 6th Street, 18th Floor
+
+Minneapolis, MN 55402</blockquote>
+
+====== What is the WIFI network and password? ======
+<blockquote>
+network: MAKE_Guest
+
+password: makewifiaccess</blockquote>
+
+====== How do I get a key FOB for the building and studio? ======
+ 
+
+====== Are parking passes available for employees? Interns?   ====== 
+
+====== What food in the kitchen(s) is for sharing? ======
+====== What do I need to know about using the dishwashers? ======
+====== What do I need to know about keeping personal food in the refrigerators? ======
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Human_Resources_FAQ

@@ -1,0 +1,51 @@
+== Why Transcode? ==
+After a shoot, we will need to take the footage from the camera and ingest it into our pipeline to be used by artists. Since raw .R3D files are quite large and cumbersome, we convert the footage to lower res proxy MOVs and work with those in our edit until it's time to conform footage for final shots. 
+
+== Offloading from RED Mini Mag to Server ==
+Connect the RED Mini Mag reader to a '''''USB3.0 or faster''''' slot on a PC. Front panel slots tend to be underpowered for the speeds the reader uses, so use a port on the '''back''' of the PC. Insert the Mini Mag to be offloaded, a window should open showing the contents of the Mag.
+[[File:Connect miniMag.png|thumb|none]]
+
+If one is not already created, you will need to make a folder In '''T:/Footage''' with a name that matches the main Project's folder name. The "HW - Action Spiral" project gets a folder in the Footage drive called "HW - Action Spiral",
+
+Within this folder, create a folder with the days date, and then within that, create a folder to represent the '''Camera''' that the footage is from. Typically this will be 'RED' and '360', but various shoots may use other types of cameras as well. eg. 'GoPro', 'Drone', 'IPhone_A'... etc
+
+Finally, within the camera folder, '''COPY/PASTE''' (not Move) The root level footage folder from the Mag. RED footage is automatically sorted into a folder matching the reel name/number of the Mini Mag, but you may need to manually sort footage from other camera into proper folders.
+
+[[File:FootageFolders.png|none|thumb]]
+
+
+The RED Mini Mag reader can offload at speeds around 400 mbps if connected and working properly, and a full Mag will offload in around 30 minutes. If you are connected to an underpowered port, or have loose connections on the cables, you may see speeds around 40 mbps or lower. In these cases - If possible - try connecting to a different port or computer, or be prepared to wait several hours longer for the offload.
+
+== Verify the integrity of the footage ==
+
+
+After footage has finished transferring, you'll want to verify that nothing got lost along the way. Right click your newly copied folder and open it's 'Properties' panel. Do the same for the folder you copied from on the Mini Mag reader. 
+
+Compare the 'Size" of both folders and check that the are the exact same. If they are not, either the data did not all copy over, or it was copied over into a folder with things already in it. You'll need to either restart the copy and let windows detect which files to skip, or more reliably copy a fresh version to a folder you know is clean and empty.
+
+
+[[File:VerifyFolderSize.png]]
+
+If the file sizes match, open a random few of the folders and view the R3D files within to ensure that they have pixels and look like you would expect them to.
+
+== Transcode R3D files into MOV proxies ==
+(Typically you will do a transcode once per Shoot Day, but special circumstances may necessitate more or less frequent transcodes)
+
+For detailed info on using Media Encoder, read: [[Encode a video using Adobe Media Encoder]]
+
+
+After all the footage for a given Shoot Day is offloaded, navigate to the Camera folder and enter <code>*001.r3d</code>  in the Windows Search bar. R3D's are split into multiple parts if they go over 3.75gb, and so many takes will have more than one R3D file; one for each part. We only need to transcode the first part, and Media Encoder will combine them all for us during the process.
+[[File:SearchforR3dFiles.png|none|thumb]]
+
+
+Select all the R3D files this search returns, and drag them all into Media Encoder's queue. Once added, select the jobs in Media Encoder and edit their Export Settings to use the Quicktime ProRes Proxy template. If you do not have that preset, it can be loaded from the server here:<blockquote>"U:\resources\Presets\Adobe Media Encoder\RED PROXY - ProRes LT.epr"</blockquote>Apply this preset to all footage jobs, leaving all output paths untouched, and start the transcode. Media Encoder will save an MOV proxy file with the correct color space into each folder next to the R3D footage.
+
+== Using External Drives on Location Shoots ==
+
+
+When shooting at MAKE, footage can be offloaded directly on to the server. During shoots at locations other than MAKE, footage will first be offloaded onto 2 separate but identical SSD drives for storage until footage can be brought back to the studio to offload. Organize the structure of these drives to match that of the '''T:/Footage''' drive, so files can be copied over seamlessly and without needing to reorganize files after-the-fact.
+
+'''NOTE:''' If these drives are not being brought back to MAKE at the end of a shoot day and offloaded, ensure that the drives are stored in separate places in the interim; Leave one on set and take one home with you, give one to a producer, etc. They are a redundant backup of each other and are separated so that if tragedy befalls one (fire, theft, car crash, etc), the other is not affected.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Offload_and_Transcode_footage_from_a_film_shoot

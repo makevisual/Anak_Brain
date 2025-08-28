@@ -1,0 +1,69 @@
+=== Just looking to Export Stems From Our Audition Template? ===
+Watch this short tutorial to use our Adobe Audition Template, utilize its bus track system to export and name all the files you need in an audio package. 
+
+[[File:CreatingAnAudioPackage ExportingMixandStems.mp4|250px]]
+
+== What is an Audio Package? ==
+An audio package is a group of files that you send to a client or another audio engineer. These audio packages split up a mix into pieces called '''Splits''' or '''Stems.''' A single audio mix can be split up into '''Music''', '''Sound Effects'''<sub>,</sub> and '''Voice Performance.''' 
+
+The purpose of an audio package is to provide pieces of an audio edit for; 1.) A broadcast audio engineer to do a broadcast mix.  2.) An editor who might need to make updates to see/say without effecting the music or sfx. 3) To a client who asks with other final deliverables.
+
+The main utility behind providing stems is that you can change the timing of one component without effecting the others. This is useful when we are updating audio throughout production before final delivery. The editor can make adjustments using Stems instead of recreating the audio mix
+
+every time there is a change. Stems allow flexibility in our process. Some common situations are;<blockquote>Ex1. You want to make the voice come in later on a shot but you want to keep the music the same.  
+
+Ex2. You want to change the music, but keep the Voice and the SFX the same. </blockquote>
+
+== What files go into an Audio Package? ==
+A deliverable audio package should always be checked by a person who specializes in Audio at Make, and the Producer on the project. This means at least 3 people have heard the mix double checked the stems before it goes out the door. 
+
+An audio package contains a mix and three stems '''for every spot and its cutdowns in final delivery'''.  
+
+  '''One package per Spot - These should all be uncompressed .wav files/48khz/32 bit.'''
+ 1.)One flattened reference mix with everything mixed together. This often goes in the final deliverable. We label this file as a Master Audio mix.
+ 
+ 2.)One file with ONLY Music in the track - For final delivery make sure this music is purchased, with any watermarks removed form the downloaded music.
+ 
+ 3.)One File with ONLY Voice in the track.
+ 
+ 4.)One File with ONLY SFX in the track - Sometimes you need to split SFX down even further into; Brand Specific Sounds from Client, Whooshes, Impacts etc. But we only do this upon request from client or editor. 
+
+== How to Create an Audio Package ==
+'''Method 1:''' Easiest Method - Use our Adobe Audition Template and export all the stems through its Bus track system. ( Video at top of the article ) - This is great for organizing your stems and exporting them all at once, once set up, this is the quickest method especially if you have multiple cutdowns. 
+
+'''Method 2:''' Not Ideal and for Emergencies only ( but can be utilized in the absence of audio specialists)
+
+# Manually export each mix and its associated stems by soloing audio layers in your edit in Premiere or After Effects - this is a pain in the ass and prone to mistakes - be methodical and patient. Don't rush. 
+# Make sure all files your match your edit length.
+# Listen to each file you've made to make sure the Stems are isolated correctly. You will be surprised how easy it is to forget to turn off the music when exporting your voice or sfx stems. 
+# You will have to repeat this process for every cutdown you have for final delivery. This may consist a 30s, 20s, 15s, 10s and 06s - up to 24 files. 
+# '''These files should all be uncompressed .wav files/48khz/32 bit.'''
+
+== Naming Structure for the Audio Package ==
+ SpotName_EditLength_STEM_(category descriptor)_v###
+
+'''Audio Master:''' SpotName_EditLength_AudioMaster_v###
+
+'''VoiceStem:''' SpotName_EditLength_STEM_VOICE_v###
+
+'''Sound Effects Stem:''' SpotName_EditLength_STEM_SFX_v###
+
+'''MusicStem:''' SpotName_EditLength_STEM_Music_v### 
+
+''Note: for music that needs to be licensed and is water marked tag this file with an extra "_Watermarked" after the version #.''
+
+=== '''Organizing Your Stems into Folders''' ===
+After naming your files and adding the version number to them, please place the STEMS in a folder, and name that folder after the Master Audio Mix.  Name the folder: SpotName_EditLength_Stems_v###
+
+This makes it easier to identify and read the long list of files that you send in an audio package.
+
+=== Where to put your files ===
+An Audio Package is created to send to; 1.) a client as part of the final deliverables, or 2.) an external audio engineer to make broadcast mixes. 
+
+ <nowiki>Project/Renders/Audio</nowiki>
+Create a folder with the name: SpotName_Audiopackage_v00X
+
+Within that folder, take all the files and throw them into a zip file with the same name and send it to your producer.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_an_audio_package

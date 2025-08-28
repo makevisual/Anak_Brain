@@ -1,0 +1,121 @@
+= MAKEs AI Policy =
+== Introduction ==
+
+	This document outlines the responsible and strategic use of AI tools to optimize and enhance workflows in our creative studio.
+
+	Our current use of AI is as a production tool that aids and accelerates processes like ideation, concept generation, and aids in repetitive tasks, while ensuring that human-driven, original creativity remains at the core of our work. 
+
+	Our vision for the future use of AI is as a complementary toolset that allows the creative direction of artists to be executed in an efficient, and productive manner.
+
+	At the end of the day AI is here, and is being used by others. To stay competitive and healthy as a commercial production company, AI is a toolset we will need to incorporate into our work. It is not just replacing work, some jobs would not happen at all without AI Support, given timelines and budgets. 
+
+
+== Vision and Approach to AI ==
+	
+	AI is an Assistive Tool
+
+		Here at MAKE we will be using AI as an assistive tool rather than a replacement, designed to empower artists to make better creative decisions faster. Currently there are many assistive tools we use in production from wacom tablets over paper, to AI denoisers and upscalers that refined finished images. Our stance is to use AI as a tool to aid in production, not to remove creative decision making from the process.
+
+
+=== Current Applications of AI at MAKE ===
+
+		AI Is currently used in production at MAKE in a variety of ways, ranging from Image models generating concept imagery for pitch decks, to denoising and upscaling images to save on render time. There are even uses for generating variations on VO takes, or assisting in pipeline tool development. AI is already here and being used throughout production.
+
+
+=== Long-Term Vision for AI Integration ===
+ 
+		Our goal is to prioritize human direction over AI autonomy, ensuring that artists guide and refine AI outputs. This will make sure the creative spirit is present, and will also hold our work to a high level of quality and integrity.
+
+		AI will be used as a tool for filling roles traditionally occupied by stock content, such as background assets, models, visual references. It also will be leveraged to automate, streamline, or otherwise improve time consuming or repetitive tasks.
+
+		Tools will be integrated into familiar and comfortable workflows that incorporate AI as part of the production process that the artist or creator can execute reliably, repeatedly, and with precision.
+
+
+==Ethical Considerations==
+
+	Final creative decisions will remain human-led to preserve artistic authenticity, reflecting both skill and creativity.
+	
+	While AI will replace certain repetitive tasks, it also enables new possibilities and helps maintain competitive viability. Those that do not leverage these toolsets will be at a disadvantage in the commercial production space, and may not be able to stay viable.
+
+	We will develop skill sets so generative work is based off of proprietary art and training whenever possible, and offer training and information to artists to expand their skill sets to include the use of AI tools.
+	
+
+==Client Relations and Intellectual Property==
+
+	AI usage will be transparently disclosed to clients, noting that in most commercial art cases, the focus is on the result rather than the production method. Clients do not typically demand disclosure on AI’s role in asset creation, given the production respects copyright laws.
+
+	AI-generated content, when edited and approved by artists, becomes part of the studio’s proprietary deliverables. Similar to how stock footage when included in an edit, or a 3D asset when composed in a scene and rendered, becomes transformational. 
+
+
+==MAKE's Commitment to Artistic Excellence with AI==
+
+	AI serves as a tool to expand creative boundaries, and assist our productivity, ensuring MAKE’s core mission of creative storytelling is preserved and elevated, while staying competitive in a dynamic industry.
+
+
+= Frequently Asked Questions (FAQs) on AI Use =
+	
+== Why is the studio choosing to use AI in its creative process? ==
+	
+		AI tools allow us to maintain competitiveness in an industry where cost and speed are critical. By using AI, we can accomplish more in less time, allowing artists to focus on higher-value, creative aspects of projects. AI is a tool—like any other—that helps us work efficiently while staying true to the studio's artistic vision.
+
+
+== Will AI take over parts of my job? ==
+	
+		AI will be used to handle repetitive and time-consuming tasks, such as initial ideation or creating repeat background elements, rather than replacing the core creative decisions brought to each project. Think of AI as a support mechanism that frees up your time to focus on creative choices that only a creative can make.
+
+
+== Is the studio concerned about the ethical implications of using AI? ==
+	
+		Yes, we are mindful of the ethical concerns and are committed to keeping AI’s role in production transparent and artist-directed. Our approach is that AI serves as a tool rather than an independent creator. It is a way to amplify abilities, not to undermine or replace them.
+
+		-- Only use ethical sourced models?
+		-- Should we communicate extent to clients?
+		-- Should we have a disclaimer, some other information on our website?
+
+
+== What control will I, as an artist, have over AI-generated content? ==
+
+		Artists retain creative control. AI-generated content serves as a starting point or a supplemental resource, and you can modify, improve, or discard it as you see fit. AI is an aid that supports artistic vision, not something that defines it.
+
+
+== Will I need to learn new skills to work with AI? ==
+ 
+		To some extent, yes, as AI becomes a bigger part of creative work, we’ll provide resources and training to feel confident using these tools. Working with AI is like learning any new software or tool, and staying competitive has always been a part of this industry.
+
+
+== Does AI-generated content have the same copyright status as human-made work?==
+
+		Currently, AI-generated content cannot be copyrighted in the same way as human-made work, so we always ensure there’s significant human involvement. Artists contributions make each project uniquely ours. AI outputs are more like stock content; they serve as raw material, which, when refined by an artist, becomes part of our proprietary work.
+
+
+== Will clients know when AI is used in our projects? ==
+ 
+		We’re transparent about the AI tools in our workflow, but we’ve found that clients are generally more focused on results than on the specific tools we use to achieve them. Our priority is to deliver high-quality work that meets clients’ expectations, and AI helps us reach those standards efficiently. If clients express interest, we’ll discuss our approach openly.
+
+
+== Is AI threatening the authenticity of creative work? ==
+
+		AI is a tool that we use to extend creative possibilities, it is not a replacement for authentic artistry. Just as green screens replaced certain manual processes or as stock footage supplements filming, AI serves a supportive role. By managing AI responsibly, we’re able to ensure that our work retains its originality, driven by artists’ input and decisions.
+
+
+== How does AI fit into the studio’s future goals? ==
+
+		AI enables us to continue taking on new projects and to remain competitive, ensuring the studio’s long-term success and stability. Our goal is to use AI to elevate the studio’s output, not to detract from the skills and expertise of our artists. By using AI in a responsible way, we are better equipped to deliver more ambitious and creative projects.
+
+
+== Could AI ever replace artists completely? ==
+
+		AI cannot fully replace artists because its work is inherently derivative. AI models are trained on existing data, meaning they can only create based on patterns they’ve learned from previous work. This limits AI to producing outputs that are variations or combinations of existing styles and ideas. True creativity, however, is about innovation, empathy, and the ability to convey meaning, emotion, and context—qualities that are uniquely human.
+
+
+== How does AI affect the quality and originality of the studio’s work? ==
+	
+		AI offers us a starting point, but the final look and feel of our work is crafted by our artists. AI-generated content helps speed up preliminary stages or offers ideas we might not have considered. The originality and creativity remain firmly in the hands of our artists, ensuring that the quality of our work is never compromised.
+
+
+== What if I feel uncomfortable with AI's role in the creative process? ==
+
+		The goal is to create an environment where artists feel empowered by technology rather than overshadowed by it, if you feel uncomfortable, please come speak with Danny, and we can discuss the concerns further.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MAKE_AI_Policy

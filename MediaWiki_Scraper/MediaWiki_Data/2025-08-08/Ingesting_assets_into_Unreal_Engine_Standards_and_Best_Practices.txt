@@ -1,0 +1,16 @@
+[[File:UE UI.png|frameless|1031x1031px]]
+
+# Place Actors Panel - Contains basic primitives and scene objects.
+# Scene Viewport - Visual representation of the current scene.
+# Outliner - List of all objects in the current scene.
+# Content Browser - Folder view of all objects/assets/content in the current Project.
+# Details Panel - Properties and options for the currently selected object.
+
+== Importing Assets ==
+Static scene or environment assets can be imported into Unreal as FBX files. Most environment objects will be imported as '''Static Meshes,''' and be arranged to dress scenes as needed. In some cases, objects with simple bones for articulation can be imported as '''Skeletal Meshes.''' These are useful in places where an environment asset might need articulation (doors, levers, scissors, etc) to get an appealing layout, but which will ''not'' need to be animated.
+
+== Importing Animation ==
+Animated characters and objects should generally be animated in 3ds Max and then exported/imported into Unreal as an Alembic file. These files are very similar to a normal geometry Point Cache, meaning that they can store a mesh in the exact state in which it was animated, but at the cost of having very limited control over the mesh once it is cached. Any animation changes needed will have to happen in 3ds Max and be re-exported into Unreal.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Ingesting_assets_into_Unreal_Engine_Standards_and_Best_Practices

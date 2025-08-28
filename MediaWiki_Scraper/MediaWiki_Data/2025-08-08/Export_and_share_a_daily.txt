@@ -1,0 +1,52 @@
+=What is a daily=
+A daily is an edit rendered alongside the main edit that is used primarily for internal review and quality control. Daily renders are usually rendered at the start or end of each day during the post production cycle, and are shared internally though Wrike with all team members that have worked on the project. The idea is to get as many eyes on the edit as possible, so if there are mistakes or problems with the edit, they are more likely to be caught before making it to the clients. Daily renders are also useful for updating project directors, and producers with current in progress work, so they can make sure its on brand, notes are being addressed correctly, and help gauge if deadlines are going to be met.
+
+What differentiates a daily from the main edit
+*Dailies are not shared with clients
+*Dailies always include timestamps, burn-ins, and safe frames
+*Daily renders often contain in-progress or broken shots
+
+=Rendering A daily from Foundry Hiero=
+'''Step-by-step'''
+<ol>
+	<li>Make sure your burn-in and Safe frames are turned on before rendering a Daily
+	</li>
+	
+	[[File:SafeFramesBurnIn.jpeg|250px]]
+	
+	<li>Select all of the sequences you want to export a daily for, Right click, and choose export. Or the hotkey ''"CTRL+Shift+E"'' <li>
+	</li>
+		<ol>
+			If your Hiero project does not have any export presets grab them from a previous project and add them to the current projects export presets
+			
+		</ol>
+	<li>Dailies should always be rendered to a ''"Project\Renders\Dailies\Timestamp"'' Folder like the example below. As well as include a timestamp in the file name. this should be done with Hieros bracketed token strings, for example the date folder can be auto generated using the ''"{YYYY}-{MM}-{DD}"'' string in a folder path	 
+	</li>
+		
+		
+		
+		[[File:DailyExport.jpeg|250px]]
+		
+	<li>Make sure all the tracks you want to render are visible. Click render.
+	</li>
+</ol>
+
+
+=Rendering A daily from Adobe Premiere=
+
+=Sharing a daily with Wrike=
+By default a dailies task will be created in Wrike when a project is added to Wrike. you should never have to make a new one. It is always located in the ''"info"'' folder.
+
+'''Step-by-step'''
+<ol>
+	<li>Add the network location of the daily render to the Wrike tasks body description.</li>
+	<li>assign the task to yourself, and all team members that are part of the project, as new team members are added to the project, they should also be assigned to the dailies task.</li>
+	<li>In the comment box use the @assingees command to let people know a new daily has been posted. </li>
+	[[File:WrikeDailies.jpeg|250px]]
+</ol>
+
+[[Category:Adobe]]
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Export_and_share_a_daily

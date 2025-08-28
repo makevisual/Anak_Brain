@@ -1,0 +1,131 @@
+== Making Decks using InDesign (or Semplice) ==
+
+=== Decks: External communication docs ===
+Decks, or external communication docs such as presentations, pitches, production books, mood boards, etc are essential to communicate with clients and agencies during productions.
+
+=== Navigating in InDesign ===
+Except few occasions, InDesign is the primary software to create docs. Following is a tutorial of basics of InDesign. It's where to start at least...
+
+https://www.youtube.com/watch?v=RXRT3dHu6_o&ab_channel=EnvatoTuts%2B
+
+==== Overview ====
+Using InDesign, conceptually, is very similar to using After Effect; you bring in the assets to Spread and individual layers, like bring those in to Comp and timeline in AE. Unless you force to embed, all the images or videos are brought in as Links.
+
+===== Tools and panels =====
+
+* Like any other Adobe software, tools are quite straight forward. There are few tools and panels mostly used for the presentations and production books; Gap, Type, Rectangle frame and Rectangle(shape). 
+
+* For panels; Layers, Pages, Styles, anything related to Text (character, paragraph, etc), Links, Hyperlinks, and EPUB Interactivity Preview
+
+* Gap tool (U):this allows you to adjust proportions of frames retaining the size of a gap between them.
+
+[[File:Deck toolpanels.jpg|none|thumb|1422x1422px|There is no hard rule of panel setting. It's up to you making the deck.]]
+
+===== Pages =====
+
+* Pages panel is divided into two parts; Parent Spreads and Spreads.
+** Parent Spreads are templates for the actual working spreads. Spreads are pages that are going to be exported. You simply click and drag a parent spread to the bottom half of the panel in order to create working spread. Any changes you make on parents are reflected throughout the corresponding spreads.[[File:Deck pages.jpg|none|thumb|611x611px]]
+*Right after creating spreads, all the elements on the spread are locked. You have to unlock them by selecting elements while holding Ctrl+Shift - either click each elements one by one or click and drag to select multiple objects.
+
+===== Styles =====
+Styles, just like Parent spreads, are presets for certain elements. You can create styles for Character, Paragraph, Object, Table and Cell. Styles allow you to make multiple changes throughout the spreads at once.
+[[File:Deck style.jpg|none|thumb|550x550px]]
+
+===== Hyperlinks, SWF Preview or EPUB Interactivity Preview =====
+MAKE decks are interactive; we want to present motions and motion idea as much as possible. We frequently feature mood edits, animation tests, work examples, etc that showcase the overall directions of the project.
+
+* To create Hyperlinks: select the item you would like to add a link, right click, Hyperlinks/New hyperlinks.[[File:Deck hyperlinking.jpg|none|thumb|952x952px]]
+* If hyperlinks are active, thick blue dash lines are created on the object with hyperlink.[[File:Deck Hyperlink.jpg|none|thumb|880x880px]]
+* Preview the hyperlinks using EPUB Interactivity preview; click the play button on the preview panel. Hyperlinked object turns clickable on the preview window.[[File:Deck epub-review.jpg|none|thumb|776x776px]]
+
+===== Layers =====
+Layers panel indicates the hierarchy of the elements. You can put multiple items in one layer. Think about it as another way to group or categorize the elements
+[[File:Deck layers.jpg|none|thumb|381x381px]]
+
+===== Links =====
+Links panel shows the list of item links. It is just like the project panel in After Effect. InDesign can be considered a print version of After Effect; you bring elements into the spread and they are only previewed in it. You can track back to the source by selecting the item on Links(right click, Reveal in Explorer)
+[[File:Deck links.jpg|none|thumb|510x510px]]
+
+* Links also indicates any changes on the source (yellow triangle with exclamation mark or red question mark if the source is missing or disconnected).
+
+
+
+=== Deck making process ===
+
+==== Search reference and create contents ====
+
+* Contents can be anything depending on the subject of the doc, such as styleframes, boards, animation tests, renders, found reference, moodedits, moodboards, etc
+** Searching for real life examples such as other commercials in similar business, subjects, brand, products is also crucial to set a proper tone of the communication and pre-vis process.
+
+* Copy the template folder name "MAKE_R10__[client_project]__presentation_Updated" in the following
+
+ U:\MAKE_Reel\MAKE_Reel10\MAKE_Reel10__Templates
+
+* Then paste it to a project’s or pitch’s Presentation folder
+
+ [project/pitch root folder]\Design\Presentation
+
+* After you successfully copied the folder, make sure you relink all the document graphics to the duplicates through Links panel. Select an item or items, right click and select Relink.
+** As long as the file names are the same, it will automatically find and relink all the other sources as well. You can choose between White version and Dark version depending on the overall atmosphere of the project.[[File:Deck relink.jpg|none|thumb|445x445px]]
+* Lay out pages on Spread: simply select and drag parent spreads you want to use to the spread.
+** Unless it's for informal communications, Cover must be added and have necessary info such as logos, client & project info, subject of the document, version of the document the date to be sent out.[[File:Deck Cover.jpg|none|frame|The deck cover contains logos of MAKE, agency and client, project and campaign title, subject of the deck, version number, and the date when the deck is finalized and delivered.]]
+
+==== Start building a document ====
+
+* Keep in mind that we want our docs look slick and nice. Following is the exemplary document about layout design. Internalize how this doc feels and looks.
+
+ U:\resources\Tutorials\The_Art_Of_Deckmaking_1.15.22 (1).pdf
+
+* Sometimes, less is more.
+** It can be really busy and overwhelming when you face a wall of thousand images. Go through your reference and look at them twice, thinking if these are the best reference to communicate ideas and concepts.
+** If necessary, modifying references can be the best way to get to the point.
+* Review the deck and check the links
+** Use EPUB Interactivity Preview to check if the all the hyperlinks are working in order.
+** Review and proof read write ups. Make sure all the contents are correct and up to date.
+
+==== Export the deck ====
+
+* Before exporting, make sure the export preset is imported to your InDesign.
+
+ [Your working presentation template folder in Project]\Presentation_Boards_Assets\Export_Preset\
+
+* Import 'MAKE_PT' present to your InDesign[[File:Deck lodingPDFsetting.jpg|none|thumb|926x926px]]
+* Export the deck to Renders/Presentation[[File:Deck export.jpg|none|thumb|1173x1173px]]
+
+==== Version iteration convention ====
+At the end of the deck PDF, we have a primary version number (v001) and secondary version number (_01, _02...). The primary version number indicates each round of delivery to clients or agencies. The secondary version number means the iteration count after each round of internal review. Once the deck is finalized, duplicate the deck and save it in Delivery, delete the secondary version number.
+[[File:Deck version.jpg|none|thumb|769x769px]]
+
+=== Delivery ===
+
+* By default, the deck is delivered as sharable FTP link. So the PDF should be uploaded to MAKE FTP server.
+** Install FileZilla if you don't have one. You can search online or install the one in the following.
+
+ U:\resources\apps\filezilla
+
+* Run the FTP access preset Batch file to get the access credential
+
+ U:\resources\apps\filezilla\CopyDefaults.bat
+
+* MakeVisual will show up once the setting is added.[[File:Deck v001.jpg|none|frame]]
+** If above does not work, ask IT support or Technical director for the assistance.
+
+* Once you access to Makevisual.com, search the project folder. If none exists, you can create one by right clicking and selecting 'Create directory'[[File:Deck ftp directory.jpg|none|thumb|528x528px]]
+* Upload your deck in the new folder. Once the upload is complete, right click the deck and copy URL[[File:Deck URL.jpg|none|thumb|520x520px]]
+* Modify the URL to make it sharable
+** Original URL won't guarantee public access. Delete everything before the THIRD makevisual.com, then add '<nowiki>http://'</nowiki>
+** From this  '''<nowiki>ftp://makevisual@ftp.makevisual.com/makevisual.com/RBFF/re-vite/MAKE_RBFF__Re-Vite_Treatment_v001.pdf</nowiki>'''
+** To this '''''<nowiki>http://makevisual.com/RBFF/re-vite/MAKE_RBFF__Re-Vite_Treatment_v001.pdf</nowiki>'''''
+* Review the deck, check all the interactivity in the deck. Overwrite of version up the link if necessary.
+* Once the deck is approved, notify a producer in charge that it's good to be sent out!
+
+==== Some exceptions ====
+Over the course of time, we more often deliver docs and renders through Frame.io. In this case, you can inform the lead/person in charge of the project the file paths and post the PDF on the Wrike task. Make sure you mention the person though!
+
+== Making a deck in Semplice ==
+
+* We often make decks - especially pitch decks - on Semplice to maximize the interactivity and emphasize motion ideas. The process and procedure are not much different from those of website project updating. [[How to update the MAKE website|Please check website updating article for more on that.]]
+* Instead of duplicating the regular Project template, duplicate Webpitch doc template, work off from it.[[File:Deck semplice.jpg|none|thumb|792x792px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Deck_making_procedures

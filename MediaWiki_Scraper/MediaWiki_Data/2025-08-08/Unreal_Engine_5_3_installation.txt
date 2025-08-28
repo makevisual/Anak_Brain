@@ -1,0 +1,16 @@
+[[category:Unreal Engine]]
+[[category:IT]]
+
+* Download Epic Games Launcher: https://store.epicgames.com/en-US/download
+* Navigate to the 'Library' tab in un Unreal Engine section.
+
+[[File:Image.png|none|thumb|581x581px]]
+
+* Click the '+' Next to engine versions and select the appropriate Engine Version, currently 5.3.0
+* [[File:Engines.png|frameless]]
+*
+
+* Click the 'Install' button on your new engine version, and wait until setup is complete. Around 30 minutes.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Unreal_Engine_5.3_installation

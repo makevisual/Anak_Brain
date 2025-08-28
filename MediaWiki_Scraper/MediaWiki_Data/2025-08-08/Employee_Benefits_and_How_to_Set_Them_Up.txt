@@ -1,0 +1,75 @@
+[[Category:Onboarding]]
+==Overview==
+Benefits include the free monthly parking contract for the parking garage, vacation time, health insurance, and the tax-free retirement account with up to 3 percent match. MAKE does not provide dental insurance for adults- but the State of Minnesota mandates providing it for children under the age of 18. 
+
+=====Parking Contract=====
+Ask Elisabeth on your first day about parking if you will be driving to work. We park in the City Center Parking Ramp, about 10 min walk away by skyway. Note the skyways often close at 6. To get signed up, fill out the paperwork (link below to download) and return it promptly to Elisabeth along with a headshot of yourself on a plain background. Note that it can take up to two weeks for a badge to be given to you that you will use to scan in and out of the garage for free. Ideally this would be provided before your start date, so you can have it filled out and processed before your arrival.
+
+[https://makevisual.com/Forms/City%20Center%20Parking%20Contract.pdf City Center Parking Form]
+
+=====Health Insurance=====
+
+Blue Cross Blue Shield MN Medical insurance │ PPO plan  
+
+<nowiki>**</nowiki> 100% of Premium cost is paid by MAKE for the Employee and Spouse/Partner. Premiums for Dependent Children are not paid for by MAKE.
+
+* You must either sign up for coverage or decline coverage <u>within 30 days of your first day of employment</u>. 
+
+* If you choose to sign up for coverage you will be mailed your insurance card at the home address that you provided on your Enrollment Form. Note you will be covered by insurance from your date of hire but it can take a few weeks to receive your card. Once you have your insurance card with your Member ID number you can set up your BCBS MN Account here: https://members.bluecrossmn.com/ If you need your insurance card asap please talk to Elisabeth and she can help get the process expidited. 
+
+[https://makevisual.com/Forms/2023%20BCBS%20MN%20BLUEACCESS%20SMALL%20EMPLOYER%20PLAN%20Benefit%20Booklet.pdf 2023 BCBS MN BLUEACCESS SMALL EMPLOYER PLAN Benefit Booklet]
+
+=====Vacation=====
+
+The baseline is 120 hours per year of paid time off [broken down into 10 days vacation and 5 days sick]. However there is room to individually negotiate regarding your needs with Danny. When you request time off, do it in advance as much as possible and notify Danny. Reference the [[How to Enter Time]] task. Rollover for unused time is one year.
+
+===== Holidays =====
+6 paid holidays per year [New Years, Memorial Day, Independence Day, Labor Day, Thanksgiving and Christmas]
+
+===== Gym =====
+There is a free gym for employees of this building in the first floor of the Canadian Pacific Plaza. If you want to be able to use it, fill out the following form and return it to the office coordinator (Nadia). 
+
+[https://makevisual.com/Forms/CPP_Fitness_Center_Membership&Waiver_Form.pdf CPP Fitness Center Membership & Waiver Form] 
+
+==Retirement Account==
+
+Your retirement account, if you choose to use it, will be an Simple IRA with up to 3% match [available after a 3 month waiting period] run by Fidelity. Elisabeth can provide the necessary information to set it up, or if she's not available, Danny.  By federal law, MAKE is mandated to provide up to a 3 percent salary match on your deposits to the account, which will be automatically deducted from your paycheck before tax. So, if you hypothetically earn 50k, MAKE will match up to $1500 dollars of your money with another 1500 throughout the year, paid in bimonthly installments in each pay period. Monitor your Fidelity account to make sure all the deposits go through, as that is Danny's responsibility.
+
+
+<u>Here is the scoop on setting up your MAKE Simple IRA</u> 
+
+''What is a Simple IRA?'' 
+
+A SIMPLE (Savings Incentive Match Plan for Employees) IRA is a retirement plan where employers and employees of small businesses can make tax-deferred contributions. 
+
+* [https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/empbroch.pdf SIMPLE IRA Employee Enrollment Brochure (PDF)]
+
+* [https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/sumdesc.pdf SIMPLE IRA  Summary Description] 
+
+'''''STEP 1''' -- Set up your Simple IRA account with Fidelity''
+
+You can set up your account online or by printing the paperwork out and mailing the hard copy to Fidelity. 
+
+* [https://www.fidelity.com/customer-service/forms-applications/simple-ira-complete Complete the Fidelity SIMPLE IRA Application - Online]
+* [https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/new-fidelity-account-simple-ira.pdf New Fidelity Account_SIMPLE-IRA - Paper]
+
+'''''STEP 2''' -- Complete Fidelity SIMPLE IRA Salary Reduction Agreement''
+
+  Once your Simple IRA account is set up with Fidelity you will then complete a 'Salary Reduction Agreement' and return it to Elisabeth. 
+
+  This form designates how much you want deferred from your paycheck and contributed to your Simple IRA. You are able to contribute as much as you would like as long as you do not exceed the max annual deferral amount for a calendar year. MAKE will match your contribution up to 3%.
+
+* [https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/salreduct.pdf SIMPLE IRA Salary Reduction Agreement]
+
+''NOTE'': Please be sure to fill out 4. Date Salary Reduction Begins section with the first day of the next pay period after you sign the form. (i.e. signed form: 1/22/2023, date salary reduction begins: 2/1/2023)
+
+It is '''<u>highly</u>''' recommend that you save copies of all of the forms that you fill out and read through from this process for future reference. 
+
+If you have specific questions you can ask either Elisabeth or Danny. 
+
+==Pay==
+
+Pay is bimonthly, meaning that you receive 24 paychecks a year. We are also paid a pay period away from the hours worked ( aka it doesn't happen immediately, but with two weeks delay). It is tracked by your ADP account (login here: https://login.adp.com/welcome) which should be set up when you fill out the W4, I-9, the ADP form, and insurance forms with Elisabeth. KEEP AN EYE on your personal email used for your ADP which should receive a link to confirm the account. This will happen when Danny enters the ADP form, which can be up to two week delay. Once you have your login, you will be able to see payments, how much is deducted for tax and your retirement, and receive your tax documents yearly.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Employee_Benefits_and_How_to_Set_Them_Up

@@ -1,0 +1,60 @@
+At times, you may need to set up and use MAKE's camera or lights to test a shot, create social media content, or in cases of off-site shoots -- give the gear to a crew to use on-set. Keeping the myriad components for each piece of equipment in it's place and in good condition is vital to ensuring everything works when we need it to.
+
+== Gear ==
+'''''Before using any piece of gear''''', open it's case and take stock of all of the things inside it. Reference the [[How to Check out or use film equipment#Inventory Documents|Inventory Documents]] to check that everything that should be in the case is indeed present. If anything is missing or damaged, [[Submitting a ticket|Submit a Ticket]] to the stage manager and inform them verbally as well.
+
+=== Cameras ===
+
+==== RED ====
+The RED is our main cinema camera. The vast majority of footage we work with is shot using it, and for almost all 'Video' needs, this is the camera to use.
+
+==== Nikon ====
+This is a DSLR camera with a general purpose kit lens, and works well for most 'Still' needs. 
+
+==== Canon ====
+Similar to the Nikon, this DSLR camera works well for most 'Still' needs, and some 'Video' needs. We have several different sizes of prime lenses that fit this camera, including macro and fisheye, so it is helpful for more specialized uses as well.
+
+==== GoPro ====
+The GoPro is a very small specialty camera that can be used to record both 'Still' and 'Video' content in unique hard-to-reach angles and places that cannot be achieved with the other more traditional cameras. 
+
+==== iPhone ====
+In certain use cases -- A vertical-format only Social spot, for instance -- it may be desirable to simply film on a cell-phone style camera. This is a special use camera, and is generally for shots that want to look more 'casual'.
+
+=== Grip Gear ===
+
+==== Lights ====
+There are two main types of lights we have available to use, depending on your needs. 
+
+* '''<nowiki/>'Panel'''' type lights are rectangular sources that give soft, diffuse shadows and can emit light in any color on the RGB spectrum. These lights can be softened further using softboxes or diffusion frames, but they cannot generate hard, harsh shadows.
+* '''<nowiki/>'Point'''' type lights are small and intense sources of light that can be focused or diffused at will, depending on need. This type of light could become a bright and intense spotlight, or can be diffused through a softbox/frame to create a large soft source that mimics a 'Panel' type light. Because of this, 'Point' lights have more general-purpose use and are often the first light type you should grab. Smaller, lower-wattage lights are available in full RGB spectrum, while larger more intense lights are typically limited to neutral colored 5600k light.
+
+==== Stands ====
+There are many different types of stands available for use, many of which serve overlapping purposes and can be used for many different things. In general, there are:
+
+* '''Light Stands -''' These are smaller, lightweight stands with a 'Baby pin' style connector on top. They safely hold most sizes of lights and are easily adjustable for height. Must be sandbagged when used with heavy loads.
+* '''C-Stands -''' This is the main Go-To stand to use for any and every type of grip gear. They have extremely adjustable heads and arms that fit 'Baby pin' connectors, as well as a large variety of clamps, connectors and general-purpose gear. For most uses besides holding lights, a C-Stand will be the tool to use.
+* '''Combo Stands -''' Combining a 'Baby Pin' connector with a 'Junior Pin' receiver, these are heavy duty stands that be be used for large equipment or heavy lights. These can be used as traditional light stands, but that is overkill and could be done better with a dedicated light stand.
+
+==== Flags/Screens/Frames/Etc ====
+When lighting, most often you will be doing something to the light besides pointing a bare light at your subject. There are many nuances to this, but the main uses are:
+
+* '''<nowiki/>'Diffusing'''' - Spreading the light over a larger area to give a softer look to the light. This is done by attaching a softbox/dome to your light, or shining the light through a Diffusion Frame that is being held with a C-Stand in front of your light.
+* '''<nowiki/>'Bouncing'''' - Catching some light either directly or indirectly and reflecting it back at the subject. When used to bounce light directly from a source, it can effectively become a large Diffuser and create a large, soft light source. When used indirectly, it's catching ambient light in the space and reflecting it onto your subject, creating an effective fill light or reflection card. 
+* '''<nowiki/>'Flagging'''' - When there are things that you want to prevent a light from shining on, you should use a flag. For example, if a rim light looks nice on most of the subjects body but looks too harsh on their face, a small opaque or semi-opaque flag may be partially inserted between the light and the subject, to strategically shadow some of the light hitting their face and make it more appealing. Flags are available in many shapes/sizes and can be grabbed and held effectively using a C-Stand
+
+=== '''Storage Locations''' ===
+It is important to store gear in the correct location, so that it can be easily found next time it's needed. '''Always return gear to it's proper storage location.''' If you are unsure of the proper storage location, '''''Return gear to where you found it.''''' You may also ask the stage manager for direction as to where something should be or is stored, if you cannot locate it.
+
+
+[make a map of general storage locations]
+
+== Inventory Documents ==
+If checking out and using only one or two pieces of equipment, it's often okay to simply reference these lists online. '''If checking out many pieces of gear to send to a shoot or off-site somewhere, you should print the list out and physically mark the boxes checking things in or out in order to avoid mistakes.'''
+
+
+[https://docs.google.com/spreadsheets/d/1VCKe4P1dZfe6kCW8z1FfwLSN5h4fGP9105edj1wshno/edit#gid=0 '''MAKE Gear Inventory Sheet''']
+
+[https://docs.google.com/spreadsheets/d/1b1gvnC1H_vyEj6DtvHdmqwvV2m1MoqTD4_8SDv4gdVM/edit#gid=0 '''MAKE Stage Inventory''']
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_Check_out_or_use_film_equipment

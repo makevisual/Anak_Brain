@@ -1,0 +1,101 @@
+= Previous Article =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous article: [[Preliminary Checks]]
+
+== Bones Overview and Naming ==
+
+=== Bones Overview: ===
+Let's quickly go over some of the bone tools again before we begin. For a more in-depth overview of the bone tools, [[Rigging Basics|please see the Rigging Basics page.]]
+
+[[File:Beginning The Rig Bone Tools Overview.png|frameless|467x467px]]
+
+To create bones, open the Bone Tools dialogue box (located in the Animation drop down > Bone Tools…). Here’s a quick rundown of some of the buttons you’ll be using:
+
+Create Bones: With this enabled you can create bones wherever you click in the viewport.
+
+Bone Edit Mode: Allows you to adjust bone placement without being locked to length/rotation
+
+Refine: Used to subdivide a bone wherever you click.
+
+Connect Bones: Creates a bone between two separate bones.
+
+Create End: Creates an endBone, which is needed for IK or repositioning bones.
+
+Mirror: Mirrors bones across a chosen axis without negative scaling. See below for more info.
+
+The “Bone Objects” box contains spinners that can adjust the diameter and taper of the selected bone.
+
+=== Naming Bones and Rig Elements: ===
+It can become tedious to name countless bones by hand. To make the process simpler and faster, you should use the “Interactive Renamer” (External Tools > Interactive Renamer). Here you can choose what to rename and how it will be named. Make sure it’s set to “Objects.” Objects are renamed in the order they are selected, so if you want to name a chain of bones make sure you select each bone in the order you want them to be named so that they get numbered properly.
+[[File:Beginning The Rig Interactive renamer window.png|none|thumb|432x432px|The Interactive Renamer tool window]]
+
+Here are the naming conventions:
+[[File:Beginning The Rig Naming Conventions.png|none|thumb]]
+When creating control shapes, the object type will be labeled as “Ctrl.” You can also use labels such as “Helper,” “Parent,” “IKgoal,” etc.
+
+== Initial Bone Placement ==
+Now we can begin creating bones for our rig. Please make sure that you are creating bones in your character’s “Rig” layer.
+
+=== Legs: ===
+[[File:Beginning The Rig Initial Bone Placement Leg.png|none|thumb]]
+The easiest way to create chains of bones for the body is to create one long bone that spans the length of a limb, position it, and then use “refine” to subdivide it to create new joints. This is how the bones were created for this character’s spine, arms, and legs.
+
+When creating the bones for IK limbs, make sure you build the bones from the base of the limb down. For example, on the leg above, the bones are built from the hip down to the ankle. This is so that the endbone, which is necessary for creating an IK setup, sits at the ankle where the IK goal needs to be.
+
+Important: When positioning bones, you almost always want to do it with “Bone Edit Mode” Turned on. You should also NEVER scale bones, nor should you freeze transforms on bones.
+
+Also as we begin, please be aware that the bone colors in these tutorials don’t mean much of anything. I just use them to help me differentiate between overlapping structures and see the rig better. :)
+
+
+For hard-to-place areas like the top of the leg bone, it’s important to be aware of the anatomy of the character. On a real human body, the leg’s pivot can be identified by the Greater Trochanter landmark, where the hip will dip in slightly in the place it attaches to the bone. It’s not necessary to get that technical with it, but in situations where you’re unsure of a bone’s placement it might help to refer to those landmarks. [[Skinning|Bones can be repositioned at any time, even after skinning.]] Just make sure to turn off “always deform” in your skin modifier before making any adjustments, then turn it back on when you’re done. Just be careful, and save your scene first before making any potentially rig-breaking adjustments!
+
+=== Feet: ===
+[[File:Beginning The Rig Bones Placement Feet.png|frameless|508x508px]]
+
+For the feet, you’ll want the bones to start at the ankle and end at the toe. There are two individual bones of the foot, one stretching from the ankle to the ball of the foot, and another from the ball of the foot to the toe. An endBone is not necessary for the foot, but it might be wise to keep it until you are satisfied with the positioning of the bone and are ready to delete it.
+
+=== Spine: ===
+[[File:Beginning The Rig Bones Placement Spine.png|frameless|520x520px]]
+
+You’ll want to keep the spine relatively straight. The number of bones and their placement will vary from character to character. For this character, there are three spine bones. The 3rd spine bone, labeled as chest in the image above, is longer because I don’t want that area of the character to bend as much as below the arms. Think about where you would want the character’s ctrls to be, and how many are necessary.
+
+The neck will stretch from the top of the spine to the base of the skull, and the headbone can stretch to the top of the head, though this isn't strictly necessary. The jaw should usually be placed under the ear and stretch down to the chin. If you have additional geometry such as a hat or glasses, you should place bones for those as well.
+
+
+Hands:
+
+[[File:Beginning The Rig Bones Placement Hands.png|frameless|486x486px]]
+
+Hands are created the same as arms and legs. In the front view you can create one long bone and subdivide it with Refine. Adjust their placement first from the front, the side. Then you can duplicate and translate the rest of the finger bones.
+
+== Mirroring: ==
+
+
+Before mirroring any bones, make sure all of your current bones are named properly. This will ensure that you won’t have to rename a ton of bones once everything is mirrored.
+
+There are two ways to mirror bones.
+
+[[File:Beginning The Rig Mirror Tool.png|frameless|438x438px]]
+
+The first way is to use the Mirror tool in the Bone Tools. To do this, select the top bone in your hierarchy and note it’s X position. Then, click the mirror button. By default, it will mirror your bone from its local pivot point. To mirror across the world axis, you’ll have to offset the bone. To calculate the offset value, multiply the X position of your bone by 2, and type this into the Offset box.
+
+The advantage of using this mirroring method is it does not negatively scale your bones. However, a disadvantage is that it does not properly name your bones once mirrored. Instead, it will add “(mirrored)” to the end of your bone name.
+
+[[File:Beginning The Rig MAKE Mirror.png|frameless|381x381px]]
+
+The second way to mirror your bones is to use “Mirror Rig v1.3” in the MAKE toolkit, located in the rigging panel. To mirror your bones, make sure “Mirror as Duplicate” is checked on. Also make sure that “Auto: ‘Left’ ⇔ ‘Right’” is turned on. This will automatically rename your bones to be “_R_” when mirrored. Then just hit “Mirror X.” Simple as that. [[Preliminary Checks|If this produces unexpected results, your character may be facing the wrong direction.]]
+
+If your bones are in a more complicated parenting setup, you may get a warning to enable “Auto Breakout Selection.” if this happens, just undo and try again with “Auto Breakout Selection” turned on. 
+
+This tool can be used to mirror all sorts of objects, and will be used later to mirror ctrls and helpers in our rig. It CANNOT be used to mirror IK goals, so if you are making IK arms/legs, make sure you mirror their bones first before applying any IK solvers.
+
+The major disadvantage of using this tool is it negatively scales things to mirror them. This isn’t really a big deal for bones, but it can be an issue for ctrls, as it may mess with their orientation. Usually this problem can be solved by just changing their scale value to 100.
+
+Personally, I will almost always use the “Mirror Rig v1.3” tool over the Bone Tools Mirror, and from this stage out it will be used any time something in the rig needs to be mirrored. '''It is highly recommended you use the “Mirror Rig v1.3” tool in the MAKE Toolbox instead of Mirror in the Bone Tools.'''
+
+= Next Article =
+Next article: [[Legs/Feet]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Beginning_The_Rig

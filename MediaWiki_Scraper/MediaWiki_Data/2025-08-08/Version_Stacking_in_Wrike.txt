@@ -1,0 +1,31 @@
+When submitting an update to an asset in Wrike, always version stack your results
+
+*Where do you put it, where do you find it?
+**Files can be linked in multiple places, and is an advantage of Wrike's database, so they can be in multiple places easily
+**Put in the header of a long task, to easily find.
+
+*Animatic / Edit
+**Placed in the Dailies task
+**Also in the animatic / Edit task or notes
+
+*Asset
+**In the asset task itself
+
+*How do you actually do the version stacking,?
+
+*How do you actually do the Multiple location linking?
+**Multiple locations only need to be set once
+
+*What are the benefits?
+**Able to compare versions, both sequentially and in tandem..
+**Able to verify delta of change.
+**can reflect oh history of notes.
+**If reversions need to occur, they are easy to find.
+**Makes it easy for someone to see the progress of a project, and its history, when they begin their phase
+
+=Demonstration Video=
+
+[[File:Version Stacking in Wrike v001.mp4|700px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Version_Stacking_in_Wrike

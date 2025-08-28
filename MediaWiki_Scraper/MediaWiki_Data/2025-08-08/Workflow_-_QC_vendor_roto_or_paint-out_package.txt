@@ -1,0 +1,36 @@
+=What is this page for?=
+This page is to help breakdown how Make handles roto or paint-out packages from the vendors we work with. This step by step will teach you what we do with these packages after they are received.
+
+= Process =
+'''Step By Step'''
+
+* Go into your gmail, check to see if you've received an email from the roto client.
+
+[[File:QC vendor roto or paint-out package.png|frameless|900x900px]]
+
+* Open the email and download the files provided.
+
+[[File:QC vendor roto or paint-out package gif 1.gif|frameless|768x768px]]  [[File:QC vendor roto or paint-out package gif 2.gif|frameless|776x776px]]
+
+Go to your download folder and move the zip file you downloaded to the source folder called Sancio, in which you will create a folder with the current date [MM-DD-YY] to place the zip file in. Then extract the main zip file and the sub folder(s).  
+
+[[File:How to make a schedule for Roto vendor 1 New.mp4|frameless|765x765px]]  [[File:How to make a schedule for Roto vendor 1 new Part 2.mp4|frameless|753x753px]]
+
+Once you done extracting the folder(s), delete the zipped subfolder(s) then open the each one to check on the rotos to see if there's anything wrong with them.
+
+[[File:How to make a schedule for Roto vendor 3 new.mp4|frameless|768x768px]]  [[File:How to make a schedule for Roto vendor 3.mp4|frameless|770x770px]]
+
+Refer back to the roto sheet for your project to see if the amount of files matches the duration in the doc.
+[[File:Screenshot 2024-06-27 142451.png|left|frameless|Everything in this range counts. For this, its 97 frames total|763x763px]]
+[[File:Screenshot 2024-06-27 142845.png|frameless|671x671px]]
+
+If everything looks good copy the file(s) location then go to Wrike and @assignees, list the amount of shots sent, and paste the file location of the file(s) you downloaded.
+
+[[File:Alerting people on wrike.png|frameless|763x763px]]
+
+<br />After that, go back to the roto sheet and change the status of the files you received to 'waiting approval' and then email Sancio thanking them for the shots.
+
+[[File:Screenshot 2024-06-27 143448.png|frameless|768x768px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Workflow_-_QC_vendor_roto_or_paint-out_package

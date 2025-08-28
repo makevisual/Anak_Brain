@@ -1,0 +1,277 @@
+
+= Modeling =
+
+Be sure to review [[3dsmax_Standards_and_Practices|3dsMax Standards and Practices]] as you are modeling.
+
+==Command Panel==
+The command panel is where you can access most of the modeling tools available in 3ds Max.
+[[File:Creating an asset CommandPanel.PNG|thumb|left|200px]]
+
+===Create===
+To create an object, you would select the "Create" tab and pick an object to add to the scene under the "Object Type" submenu. 
+
+Just below the tabs is a submenu for different types of objects you can create. These include geometry, shapes, lights, cameras, helpers, space warps, and systems.
+
+There is a dropdown menu below the submenu for more options for each type of object.
+
+After selecting the object you want to use, you will click drag it into your scene. Right click to exit out of the create primitive tool once you have the amount of primitives you want.
+
+[[File:Creating an asset CommandPanel Modify.PNG|thumb|left|200px]] 
+
+
+
+
+
+
+
+
+
+
+
+===Modify===
+To modify the primitive mesh, you would click on the tab next to "Create". This is the "Modify" tab. This is where you add modifiers to your primitive to start modeling. 
+
+You can also edit the names and colors of your objects in this panel, just below the tabs. (You can also edit names of objects in the Scene Explorer.)
+
+Modifiers are operators that exist within 3dsMax to help you edit your existing mesh. There are many different modifiers that each perform different actions, and each modifier comes with their own parameters you can adjust to get the results you want.
+
+To add a modifier, have the object you want to edit selected, and in the modify panel, select the dropdown menu labeled "Modifier List". Here you will be given a list of modifiers you can use. The list is very long so I will not be explaining each one here. Test and try out different modifiers and find what would be most useful to you in your modeling process.
+
+You can also quickly search up modifiers by pressing "X" on your keyboard while your viewport is selected, and type in the specific modifier you want to add. 
+
+If you find yourself repeatedly using the same modifiers while modeling, it can help to configure a modifier set to make these commonly used modifiers easier to access. 
+
+You can find the "Configure Modifier Sets" button here in the modify panel.
+
+[[File:Creating an asset CommandPanel ModifierSets.PNG]]
+
+Set the total number of buttons you want, and drag the desired modifiers from the modifier list into the empty buttons before hitting enter. They should appear just below your modifier list.
+
+[[File:Creating an asset CommandPanel ConfigureModifierSets.PNG|300px]]
+
+
+[[File:Creating an asset CommandPanel Hierarchy.PNG|thumb|left|200px]]
+
+===Hierarchy===
+The next tab is the "Hierarchy" panel. This tab contains all the controls for modifying pivots, IKs, and linking in a hierarchy.
+
+You can modify the pivots of your objects, or apply a temporary pivot to your objects based on the world ("Working Pivot"). 
+
+The other two submenus more particularly pertain to modifying your object for rigging, as well as the "Motion" tab to the right, so I will not explain those in this article.
+
+[[File:Creating an asset CommandPanel Display.PNG|thumb|left|300px]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===Display===
+Next in the Command Panel is the "Display" tab. This panel contains all the controls necessary to display or hide objects.
+
+You can also change the type of color for the wireframe and shaded display.
+
+Here also contains controls for freezing objects. Freezing objects prevents them from being selectable while manipulating objects in a viewport. 
+
+Lastly, you can change your display options of your selected objects in the "Display Properties" menu, such as making an object see-through or turning on backface culling.
+
+[[File:Creating an asset CommandPanel Utilities.PNG|thumb|left|200px]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===Utilities===
+The last tab is the "Utilities" panel. Many miscellaneous tools are located in this panel. 
+
+You can collapse multiple objects into one by selecting "Collapse" while having all the objects you wish to merge selected together.
+
+You can measure the distance or length of an object with the "Measure" button.
+
+Lastly, to reset the transforms of an object, you would use the "Reset XForm" button, which applies an XForm modifier to any objects you have selected.
+
+
+
+
+
+
+
+
+
+
+==Scene Management==
+Be sure that as you are modeling, that you are naming and organizing your objects simultaneously. This will make the pipeline much more efficient and easier for both you and anyone else who will be working with your asset down the line. 
+
+You can easily see all the objects and layers in your scene through the Scene Explorer. You can find the Scene Explorer here.
+
+[[File:Creating an asset Modeling SceneExplorerLocation.PNG]]
+
+Here is an example of what a Scene Explorer might look like.
+
+[[File:Creating an asset Modeling NamingConventions v02.PNG|500px]]
+
+When you create an asset through Asset Switch, your scene will be given these layers to use (named accordingly based on the name and tag you input earlier). You are free to add any more layers beyond the ones given to you. 
+
+''As you create assets, be sure to name them appropriately according to [[3dsmax Standards and Practices#Scene Organization]]. The Class type is optional but preferable especially for characters.''
+
+===Interactive Renamer===
+
+If you need to rename a significant amount of objects, you can speed up this process using the Interactive Renamer. This can be found under the "External Tools" tab.
+
+[[File:Creating an asset InteractiveRenamer.jpg]]
+
+Interactive Renamer will load all the objects you have selected in which you can apply name changes to any or all of the objects at once. 
+
+[[File:Creating an asset Modeling InteractiveRenamer.PNG]]
+
+You can apply a prefix or suffix, change the base name, renumber multiple versions of one object, as well as replace certain letters with different letters (for example if you mirrored some objects and wanted to change the name from L_ to R_ or vice versa)
+
+==Modifier Stacking and Nondestructive Workflow==
+
+[[File:Creating an asset Modeling ModifierExample 01.PNG|thumb|This is what a typical modifier stack may look like.]]
+
+The biggest perk of using 3dsMax is the program's ability to allow a nondestructive workflow, aka the ability to go back and change previous edits without having to redo everything that was done afterwards. This is done through modifier stacking.
+
+As you add modifiers to an object, they do not bake into the object immediately, rather they stack on top of any previous modifiers. This means you can continue to edit an object in any older modifier and any modifiers above will adjust according to changes you make below. 
+
+===Editing Modifier Stacks===
+
+You can change the order of the stack as you please. This order may or may not change the result of your asset's look. If you have a selection mode on in one of your modifiers with any section of the object selected, it will carry onto any modifiers applied above. For example, if you have a section of verts selected in an Edit Poly modifier, and you apply a Relax modifier on top without exiting the selection mode, the Relax modifier will only affect whatever you had selected in your Edit Poly modifier.
+
+You can copy modifiers across multiple objects. You can also copy and paste modifiers as instances if you have multiple objects that you want the same modifier to be consistently affecting at the same time. You can do this by right clicking the modifier you want to duplicate of one object and selecting "Copy" and selecting the modifier stack of your target object and selecting either "Paste" or "Paste Instanced". 
+
+To collapse a stack or part of a stack, just right click in the modifier stack and select "Collapse To" to collapse only from the selected modifier down, or "Collapse All" to collapse the entire stack into one editable poly. You can collapse modifiers as you work to bake changes into your object and keep your object's modifier stack clean, but some modifiers should be kept unbaked for various reasons. 
+
+Using the stack to the right as an example, modifiers like Turbosmooth and Shell should almost always be kept unbaked into your object. 
+
+Turbosmooth increases the density of your object, and while it makes your object look smoother, it can increase the file size of your asset when it is only really necessary for rendering, as well as make it difficult to make changes to your mesh once it has been collapsed. 
+
+Shell modifiers add thickness to your object, which can be useful for objects like clothing, but like the Turbosmooth modifier, they add the number of polygons, and in the case of clothing, the thickness can interfere with cloth simulation and result in crashing geometry, so it is smarter to leave this unbaked and simply apply it after the cloth has already been simulated to render.
+
+Other modifiers that may be left in the stack will generally include modifiers that will need to be adjusted in the future or used in animation or rigging (like noise, bend or twist modifiers), but these will be situational and will depend on the needs of the individual asset being made. Communicate with your director or whoever you will be passing your asset onto what exactly your asset needs.
+
+On the other hand, it may be intuitive to collapse certain modifiers as you work on them, because they may behave erratically if you try to edit any modifiers below them, and can cause you lose the work you did on them. Notorious examples would be the Unwrap UVW modifier and edit poly modifier. 
+
+For example, editing (and sometimes just selecting) any modifier below the Unwrap UVW modifier in the example stack can cause you lose any work you did on the Unwrap modifier due to recalculations, so it might be a good idea to collapse the Unwrap modifier and below before making any more edits. You can always add another Unwrap modifier later if you want to make further edits to your UVs.
+
+==Importing Geometry==
+To import geometry in from outside 3ds Max, you will need to go to File -> Import -> Merge. When  you go to locate your object, be sure all file types are on so you can see file types besides max files. 
+
+Once the object is brought in, be sure to 
+*reset scale
+*reset pivots
+*check that the imported mesh matches the original
+*check that normals and smoothing are correct
+
+==Modeling Tools==
+
+===Make Toolbox===
+[[File:Creating an asset Modeling MakeToolbox.PNG|left|150px]]
+
+Make provides you with a toolbox that compiles a variety of scripts that can significantly simplify and speed up your modeling process.
+
+It is located on the left side of your 3dsMax scene by default.
+
+Generally the toolbox is pretty self-explanatory, but the most useful features in the toolbox for creating assets will be in the common tools and the modeling tools in the tab over. 
+
+Useful tools include applying a modifier to all selected objects as well turning off modifiers in either render or in viewport only, mirroring objects across any axis, quickly attaching and detaching objects together, and auto-renaming Left to Right on objects.
+
+If the Make Toolbox does not show up or you have accidentally deleted the window, you can find it in the "MAKE Tools" tab under the name of "MAKEToolbox".
+
+===Modeling Toolbar===
+
+When you have any edit modifier selected (Editable Poly, Edit Poly modifier, etc.), you will be given a modeling toolbar to help you edit your asset.
+
+[[File:Creating an asset Modeling ModelingToolbar.PNG|900px]]
+
+A lot of these tools can be located in the parameters section of your edit poly modifier as well.
+
+The toolbar will also change based on what selection mode you are on (vertex, edge, polygon, element, etc.)
+
+Most of these tools are self-explanatory, but if you are confused by any of them, you can hover over the tool and a pop up menu will appear with a brief explanation of the tool.
+
+===Important Modifiers for Modeling===
+*''Edit Poly''
+**This is your all-around modifier for modeling. You can get access to sub-object mode, where you can select verts, edges, faces, or elements to edit your geometry. It also comes with other modeling tools such as extrusion, chamfering, welding, and more, as well as the ability to use soft selection.
+*''TurboSmooth''
+**Turbosmooth modifier will smooth out your model by multiplying the amount of loops on your geometry. This modifier will usually go at the very top of your modifier stack as we want to maintain as low a poly count as needed, and have the Turbosmooth modifier on just for render time. 
+*''Shell''
+**The Shell modifier adds a thickness to your geometry. You can adjust the inner thickness and the outer thickness as desired. This can be good for turning planes into cubes, or to create thickness on objects such as cloths. In the case of cloth, be sure to leave the Shell modifier un-collapsed because it will most likely be rigged or simmed, and will cause a lot of geometry crashing. It is better to sim/rig the cloth as a planar mesh and just shell afterwards.
+*''Symmetry''
+**The symmetry modifier will make your geometry symmetrical, as implied by the title. You can select which axis it will symmetrize on, as  well as the point of symmetry (expand the symmetry modifier and select the "Mirror" subtab). You can also choose whether to weld the vertices on the axis, and the threshold for welding. 
+*''XForm''
+**Xform modifier will reset all of your transformations on your object. This will reset your axis in correspondence with the world. If your symmetry modifier axis is not lining up with the world space, resetting with Xform modifier will change this accordingly. 
+*''Bend/Taper/Twist''
+**These are a bunch of different modifiers that all perform their own actions, but have the same process. They can allow you to procedurally edit your geometry. They are simple actions, but they are very clean and look better and are easier to do than through the edit poly modifier.
+*''Chamfer''
+**The chamfer modifier bevels the hard edges of your object. It is good for rounding out edges as well as providing additional resolution to your mesh. This can be especially useful for hard surface modeling.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Modeling_an_asset_in_3dsMax

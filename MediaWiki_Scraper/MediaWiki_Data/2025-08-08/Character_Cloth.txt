@@ -1,0 +1,142 @@
+== Previous Article: ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous article: [[Skinning]]
+
+== Character Cloth Setup: ==
+My character has clothing that I want to be simulated in the final animation. I’ll set up the simulation now so that it can be run easily at a later time.
+
+
+'''While This doc is an overview of setting up and simulating cloth for a character, it's not exhaustive documentation on cloth simulation in 3ds Max itself. Here are some additional resources for more in-depth cloth sim knowledge.'''
+
+* For a video demonstration of cloth in 3DS max, please take a look at the resources in the filepath below:
+** U:\resources\Tutorials\Turbo Training\Advanced Cloth Workshop\Disc1\Content
+
+* [https://help.autodesk.com/view/3DSMAX/2021/ENU/?guid=GUID-1663898B-7C53-4123-9D54-7B7EE843FB92 For more info on cloth sim and the specific tools and settings in 3ds Max, please see the 3ds Max Documentation.]
+
+
+[[File:1 Cloth EvaluateTheGeo.png|frameless]]
+
+Let’s take a look at my character. We can see that his body is in three pieces. This won’t be ideal for simulating our cloth, as the simulation might get stuck on the cracks between each piece of geo or simulate strangely. I want a clean piece of geo to use for my cloth simulation, but I don’t want to change the geometry of my character’s body.
+
+[[File:2 Cloth ProxyColliderGeo.png|frameless]]
+
+To fix this, I’ll create a driver geometry object for my cloth to collide with. The driver object above was created by duplicating my character’s geo and welding the edges together. I also deleted any unnecessary geometry that my cloth was unlikely to interact with. I colored the driver geo red so that I can easily distinguish it from the rest of the body geo.
+
+I’ll add a skin wrap modifier to this and add my character’s geometry to the skin wrap. Then I’ll convert to skin and delete the skin wrap. I’ll name the object “C_FOR_Geo_Body_COLLIDER” and put it in its own layer (called “C_FOR_ClothDrivers.”).
+
+I will also duplicate my cloth geo and rename it “C_FOR_Geo_Shirt_DRIVER.” I’ll add it to my cloth drivers layer and make sure it is skin wrapped to the body geo just like the body collision object. 
+
+These driver objects will get simulated, and the original cloth geo will get skin wrapped and point cached to the simulated cloth driver for the render scene. Please see the “Preparing For Render” section for more details after you have set up your simulation.
+
+[[File:3 Cloth ClothModifier.png|frameless]]
+
+Next I’ll add a cloth modifier to my cloth driver object. The cloth modifier will sit above the skin modifier. In the image above, there are turbosmooth, displace, and shell modifiers above the cloth, but you should delete those on your cloth driver object since they won’t be necessary and can slow simulation down if turned on.
+
+Copy your cloth modifier and paste instanced on your body collision object above the skin.
+
+[[File:4 Cloth ClothModifierOverview.png|frameless]]
+
+Here’s a brief overview of what you may use the most on the Cloth modifier.
+
+The Object properties lets you control the parameters of the simulated objects (more on this below.). 
+
+The "Simulate Local" button starts the simulation without creating a cache, used to drape cloth or sew seams.
+
+The “Simulate” button will generate a cloth simulation, and “Erase Simulation” will erase what you’ve simulated. Pretty straightforward.
+
+The "Set Initial State" button captures the current deformation of the cloth driver object so simulations will start with that pose.
+
+The gravity is default set to -980.0, I would keep it around this value unless it's necessary to change it. 
+
+The start frame is the beginning of your simulation, and the end frame is where it stops. 
+
+Self collision allows the cloth to collide with itself. In the image above, The self collision value is set to 0, but you should bump it up to 1.
+
+[[File:5 Cloth ClothProperties.png|frameless]]
+
+Click on the Object Properties. A window will pop open. In the left side of this window is a list of the objects that are a part of your cloth sim. You can see that the two objects in my list are the cloth collider geo and the cloth driver geo. 
+
+Let’s adjust the properties of the collision object first.
+
+[[File:6 Cloth CollisionProperties.png|frameless]]
+
+Select your collision object in the list(in my case it’s “C_FOR_Geo_Body_COLLIDER”). At the bottom of the Object Properties window, check on “Collision Object.” 
+
+The Depth value is the value at which the collider will stop pushing back on the cloth.
+
+[[File:7 Cloth CollideDepthZero.png|frameless]][[File:8 Cloth CollideDepthOne.png|frameless|319x319px]]
+
+For example, take a look at the images above. 
+
+The depth value for the left simulation is 0. You can see that there is no collision resistance on the cloth object, causing it to clip through the leg. The depth value for the right side is set to 1. You can see that there is significantly more resistance between the collision object and the cloth object, and the cloth does not intersect with the leg so much.
+
+The Offset value controls the offset between the collision object surface and the cloth object.
+
+[[File:8 Cloth CollideDepthOne.png|frameless|371x371px]][[File:9 Cloth CollideOffsetPointZeroFive.png|frameless]]
+
+In the images above, the left side sim has an offset value of 0. You can see that the cloth intersects the leg. The sim on the right side has an offset value of 0.5. You can see that the cloth now no longer intersects the leg, as there is an offset between where the cloth collides and the collision object surface.
+
+
+[https://help.autodesk.com/view/3DSMAX/2023/ENU/?guid=GUID-A4692D86-F486-4348-9892-1E37B69F6F1E For a more in-depth explanation of the properties under “Collision Object,” please see the 3ds Max documentation page.]
+
+
+Now let’s adjust the simulation properties on our cloth object.
+
+[[File:10 Cloth ClothPropertiesSettings.png|frameless]]
+
+Select your cloth object from the list and check on “Cloth” at the top of the Object Properties window.
+
+You can select a preset from the drop-down menu that will get you close to the cloth behavior you want. For my character, I’m using “Burlap.” You may need to further adjust your properties from the chosen preset. For my needs, this preset is enough.
+
+There are a lot of settings you can adjust in the cloth properties, and if I went into all of them in-depth here it would be redundant and probably not as good as the documentation that already exists for these parameters! [https://help.autodesk.com/view/3DSMAX/2023/ENU/?guid=GUID-80CAE782-8EFD-4E9E-ABA2-C53127D6659A So, for more in-depth information on the cloth properties, please see the 3ds Max documentation page.] Essentially, many of these settings help define how stiff the fabric is, how light or heavy it is, and how much friction it has.
+
+Now that we have our cloth set up, let's run a simulation and see what happens.
+
+
+Under “Simulation,” click “Simulate.” make sure that your start and end frame are set for your test (my range is set to 1000-1100).
+
+[[File:11 Cloth NoGroupNoPants.png|frameless]]
+
+Right away, there are some issues with my simulation. The shirt slides around on my character’s chest and the bottom of his tunic falls clean off! He’s even lost his belt and belt buckle. This is not ideal for our render.
+
+What I really would like to do is have the majority of the tunic follow the body as if it were skinned, and only have certain areas of the clothing be simulated, such as the bottom of the tunic and the collar and sleeve ends.
+
+To do this, I’ll need to create a vertex group that will define what will follow the skin and what will follow the cloth simulation.
+
+[[File:12 Cloth ClothModifierGroupEdit.png|frameless]]
+
+Let’s create a group now. Select the drop-down icon on your Cloth modifier and click on “Group.”
+
+[[File:13 Cloth ClothModGroupSettings.png|frameless|391x391px]]
+
+Let’s take a look at our parameters in the group settings.”Make Group” creates a vertex group, which you can name. If you need to edit your selection, do so and then hit “Change Group” to keep your changes. “Preserve” preserves the deformation of the modifiers below the cloth modifier, such as the skin. We will need to use this later. [https://help.autodesk.com/view/3DSMAX/2023/ENU/?guid=GUID-FF3EC329-A154-418A-B613-F3D39F3A8364 For a more in-depth look at all the Cloth Group Parameters, please see the 3ds Max documentation page.]
+
+[[File:14 Cloth SelectVertsGroup.png|frameless]][[File:15 Cloth GroupSoftSelection.png|frameless]]
+
+Select the vertices on your shirt that you want to follow the skin. Click “Make Group” to create a vertex group of your selection and name the group. 
+
+In my Group Parameters I’ll turn on Soft Selection and lower the falloff. I’ll also turn on edge distance and turn the distance value up to about 10 or so. This is just to make the transition between the skin and the simulation more gradual. Once I’ve made the adjustments, I’ll click “Change Group” to save my settings.
+
+[[File:16 Cloth ClothSimulationWithGroup.png|frameless]]
+
+Now if I resimulate my cloth, the behavior is much more consistent with what I want, and my guy doesn’t lose his pants.
+
+I’ll erase my test sim since I don’t want my cloth to be simmed for the final export of the rig.
+
+== Preparing For Render: ==
+Lets prepare the render cloth object for the render scene.
+
+[[File:17 Cloth PointCacheModifier.png|frameless]]
+
+Select your render cloth geo. Create a Skin Wrap modifier and select the cloth driver object (the simulation cloth) to the list. Turn off the Skin Wrap. We will only need it in our character FX scene.
+
+Next add a Point Cache modifier (NOT the WS Point Cache modifier!) and put it above your skin wrap. Turn off its visibility.
+
+When the time comes for the character’s cloth to be simulated, it will be done in the character FX scene. The Skin Wrap will be turned on for the render cloth, and then the cloth will be point cached so that the cache can be used in the render scene instead of a heavy cloth simulation. This will keep the render scene light, speed up render time, and prevent any cloth simulation glitching in the render.
+
+== Next Article: ==
+Next article: [[Finishing The Rig]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Character_Cloth

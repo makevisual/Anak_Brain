@@ -1,0 +1,110 @@
+In this article you'll learn how to prepare, slate, and export a finished spot for delivery. Buckle up!
+
+=Slates: An introduction=
+In broadcasting, a slate is a title card listing important metadata of a television program, included before the first frame of the program. The broadcasting equivalent of a film leader, the slate is usually accompanied with color bars and tone, a countdown, and a 2-pop. The metadata of the slate is displayed visually, listing written information, such as client, agency, title, length, ISCI Code, Audio, Production company, date, and copyright.
+
+Slates are not one-size fits all. Many clients have different requirements for how they need to receive slated files, always check with your projects producer and the delivery specs for specific information relating to your project and how the slated videos should be delivered.
+
+Please review the [[Broadcast TVC deliverable standards and best practices]] to ensure you are delivering the best edits you can.
+
+Here are common details to include in the slate, however these may change on a client or project basis
+
+ <nowiki>
+Client
+Title
+Length
+Code ( ISCI / AD-ID )
+Audio ( Stereo / mono / 4.1 etc... )
+Production Company ( MAKE )
+Date</nowiki>
+
+=Slating for Broadcast in Nuke Studio or Hiero=
+
+==Render Masters and Superless==
+Before you get started Slating I would highly suggest renaming your edits to the new client naming you likely recieved with the deliverables list. You don't have to do this but it can save time renaming files later and keeps things more consitant. In most projects you will likely have an edit that named something like this: ''HW_Racerverse_SP24_Segment_30s'' but the client will ask for the final files to be named something far different like ''MAHZ3138000H'' or ''HSTF4034000H TRA Earthspark Combiners 1H24 Kid 15 A - 15 16x9''. 
+
+You can follow this article to set up your Masters, Superless, and Graphics Only Edits:
+<br>[https://makevisual.com/brain/mediawiki/index.php?title=Creating_Masters,_Super-less_Masters,_and_Graphics_Only_Edits '''Render Masters, Superless & Graphics Only Edits''']
+
+After the Masters, Superless, and Graphics Only versions are rendered import them back into your Hiero/Studio project. 
+  
+=Check your masters!=
+[[File:Slating a project for broadcast TVC - DoubleCheck-Blanking v01.jpg|thumb|A good way to check for blanking]]
+Before moving on take some time to check your masters for any errors. There could be wild things you didn't see in the edit that will make you furious. This is a good time to scroll to the bottom of this page and start a Premiere project to help you check your renders. Check for things like blanking (black lines), graphics passes not working right in premier (usually a premult problem), audio issues, or whatever else catches your attention.
+
+Here's a handy article that covers lots of what to check for:
+
+https://makevisual.com/brain/mediawiki/index.php?title=Review_an_edit_for_QC<br>
+<br>
+<br>
+<br>
+<br>
+
+
+==Create your Slates==
+[[File:Slating a project for broadcast TVC - DeliverablesRequest v01.jpg|thumb|Slate Instructions]]
+[[File:Slating a project for broadcast TVC - SlateExample v01.jpg|thumb|Nuke Studio Slate Sequence]]
+===Import Slate presets===
+Now you need to import the Make Slate templates. You can do this by [https://makevisual.com/brain/mediawiki/index.php?title=Slating_Templates Opening the file listed at this link], which will open a new project in Hiero. You can then drag the assets you need from the Slate Templates project into your project. The files are automatically copied into your project, not removed from the old one. 
+
+===Duplicate and Name===
+Duplicate the slate template that best fits your edit and rename it according to the client deliverables request. Duplicate the slate template for as many slates you require.
+::''Fun Fact: I personally like to fill out one Slated Sequence first with correct information THEN duplicate the sequence to create the other slates with a nice starting point.''
+
+===Building a Slate===
+''check out the cool image to the right labeled "Nuke Studio Slate Sequence" while reading these instructions. Everything talked about here should be clearly visible in that image''
+
+1. Adjust your slate timing and 2-pop to what the client has requested. Sometimes they want 5 seconds, sometimes 7. 
+
+2. If requested adjust the START TIMECODE. Some clients request that the spot starts at exactly 1:00:00, with the slate happening before that timecode. 
+
+3. Drag your rendered Master or Superless into the timeline, after the end of the 2-pop. 
+
+4. Once the Master or Superless is in the timeline, check the end frame. If it's a 30 second spot the final frame should be at 29:23. A 15 second will be at 14:23 (''plus whatever time the requested slate heads adds'').
+
+5. Check your framerate! You should be exporting at Broadcast framerates so they will probably be 23.976 or 29.97. 
+
+6. Replace the audio that came with the Master or Superless with the Audio Mix from the edit. (''to remove the audio use CTRL+ALT+LEFTCLICK to select the audio and then delete it'')
+
+7. Fill out the slate:
+<ul>
+<li>Your project deliverables should have client requested slate information similar to the top image in this section. Change the Right and Left text columns to reflect the requested data. 
+<li>'''Always copy the ISCI codes!''' Don't try to type them and risk a mistake!
+<li>Use Studio/Hiero's Automatic Date formatting, seen in this sections second image. The imported default uses [date %D], which formats MM/DD/YY. Like in the second image more specific formating can be used: [date %m]/[date %d]/[date %Y] fills out as MM/DD/YYYY, which is what this client requested.
+<li>Make sure to change the Legal line. It's small! You might miss it (''I have'')
+<li>Look at it. Look at it again! Then probably look at it a third time. Make sure the information is correct!
+	<br>
+</li>
+	</ul>
+<br clear=all>
+
+==Ready your Export settings==
+[[File:Slating a project for broadcast TVC - ImportPresets v01.jpg|thumb|Project Presets in the Export Window]]
+[[File:Slating a project for broadcast TVC - SetPaths v01.jpg|thumb|Set your project paths]]
+<ul>
+<li>Import the delivery presets into your current project. You can do this by opening the export window (''CTRL+SHIFT+E'') and dragging the presets from the local preset to the project presets (''the left and right windows in this sections first image''). If you don't have the presets available locally you can open a project that was recently delivered and copy the presets over to your local presets by dragging them from the right to the left window. Dragging any presets into either window copies the preset to the new location.
+<li>Make sure to rename your presets to whatever your project is called since they will possibly have specific changes depending on delivery requirments. 
+<li>Set each Export preset to your projects render folder in a new "Slated" folder (''....\Renders\Edits\Slated\Date''). Slated edits are dated, not versioned. It's possible we'll be delivering these multiple times and the date is what makes them unique. In the second image to the right you can see an example. ''You have to do this for each preset, it's not universal for the project.''
+<li>Adjust each preset to match what the clients deliverables require. Many of the pre-designed presets we use will work as is, but the client may have specific requests for naming. In the second image on the right the client requested the date be in the MM/DD/YYYY format which is not how the preset comes in. 
+<li>The Client may require specific Video Codecs or Audio Sample Rates, these should be included in your deliverables information, but if not double check with your producer. The Default should be Apple ProRes 422 HQ 10-bit with 48hz Audio Sampling.
+<li>Also in the image to the right you can see the final output is G{sequence}.{ext} this was because the client's Superless versions were to be named the same thing as the master, but with a G at the front of the file name. Hiero has some great tools for automating file naming, learn them! They will save you time.
+</ul>
+<br clear=all>
+
+==Export!==
+[[File:Slating a project for broadcast TVC - PerfectlyNormalSodas v01.jpg|thumb|Fizzy and Lovely]]
+
+Export! Click the button and relax. Go get a soda. It actually shouldn't take very long but you'll want one for the next part.
+<br clear=all>
+
+==Check again==
+[[File:Slating a project for broadcast TVC - DoubleCheck v01.jpg|thumb|Check Check Checkity Check]]
+
+You're probably tired of checking, but check again. A smart thing to do is import your Slated & Unslated renders into a new program like Adobe Premier and check the renders against each other. In the image to the right I'm watching the Master, The Superless, then checking the Superless against the graphics pass, then checking the Superless with the Graphics Pass against the Master using Difference, THEN check the Master Slate, the Superless Slate, Then the Master against the Superless. That may seem tedious (''and it is!'') but this will help you catch any errors you may have missed during the process. Maybe you didn't notice the Slate Copywrite in the Superless until you compared it to the Master! Maybe your ISCI code is actually wrong! Maybe you somehow exported with the wrong color space or audio sampling! A million little things could happen that will come back later with a big client FAIL that you can catch here. 
+So Check!
+
+Okay you should be done now, send it to whoever. Like I care. 
+<br clear=all>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Slating_a_project_for_broadcast_TVC

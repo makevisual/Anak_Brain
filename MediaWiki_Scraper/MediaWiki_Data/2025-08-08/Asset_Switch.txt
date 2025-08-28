@@ -1,0 +1,97 @@
+= What is the Asset Switch? =
+Asset Switch is MAKE's in-house tool used to manage assets. It allows artists to quickly and safely swap out objects with final assets, handle different versions of an asset, and manage material and animation data.
+
+This tool is particularly useful for production pipelines that require frequent asset updates or for working with complex scenes where manual swapping would be time-consuming and prone to error.
+
+[[File:AssetSwitch How To Create Asset.png]]
+
+== Main Features (v 1.7.3) ==
+
+=== Asset Switch ===
+
+* '''Asset Management:''' references an Asset File (*.asset) to a scene object and is used to manage associated components of such asset, like meshes, materials and animation data.
+* '''Version Control:''' easily switch between different versions of a published asset, making sure users are always working with the correct model, material or animation.
+* '''Multiple Import Modes:''' Asset Switch automatically searches and populates the tool with all the compatible published versions of the current selected asset without the need of folder searching from the user side. The currently supported object import methods are:
+** '''Max File:''' Switches in a standard 3dsMax files by replacing only the relevant data of the selected asset;
+** '''Vray Mesher:''' Switches in a standard VRay mesh file by creating a Proxy and placing it on the correct world space according to the switched out asset;
+** '''Vray Mesh Parts:''' Switches in several VRay Proxy objects, each a component of a published asset, in order to keep intact a hierarchy/rig of the original asset. Useful for mechanical rigged assets.
+* '''Material Switching:''' supports switching in standard material library files (*.mat) or tyLibMtl files that encapsulates the full material library into a single tyLibMtl node. Also supports applying materials according to a published mapping file (*.matmap) back to their correct objects even if they don't share the same Multi/Sub-Object Material.
+* '''Animation Switching:''' supports switching animations either from a published animation file (*.xaf) or quickly apply the animation of a switched out asset on a new switched in asset.
+
+=== Publish Center ===
+
+* '''Independent Categorized Publishing:''' Allows the user to independently select which kind of object or property will be published by selecting different categories (3ds Max File, Material, V-Ray Mesh, V-Ray Mesh Parts, and Animation)
+* '''Version Control:''' Each category has its own version number spinner and prefix, enabling independent versioning for each asset component.
+* '''Customizable Options:''' The tool provides an "Options" button for some asset types, allowing users to configure publishing settings, such as export modes, animation ranges, and material conflict resolution.
+* '''INI File Integration:''' Settings for each publish type, including selected publishing categories, material conflict default options, V-Ray mesh animation settings, etc, are saved and loaded from an *.ini file saved inside the ENU folder of the user's 3dsMax install.
+* '''Publish Log''': A dedicated log file records the details of each publishing operation, including warnings and errors, which can be opened directly from the UI.
+
+== How to Use ==
+
+=== 1. Setting up an Asset ===
+Before you can use the tool to switch in and out an asset, you must first create and publish one.
+
+To create an a new Asset, in the Asset Switch menu bar choose "Setup" and then select "Create new Asset".
+
+[[File:AssetSwitch How To Create Assets.png]][[File:AS Create New Asset.png]]
+
+A new window called "Create New Asset" will pop up. In order to initialize your new asset you will need to:
+
+# '''Choose the Asset's project folder by clicking on the "Choose Project" button.'''
+# '''Select a category in accordance to your asset.'''
+# '''Assign a handle to your asset:''' A 'Handle' is a 3 letter all caps tag that is used to identify and organize an asset within a project. Make sure not to use the handle of an asset that already exists when creating your asset. ''For example, a character named Lothar could have as tag '''LTH''' (in all CAPS).''
+# '''Assign a unique name to your asset:''' The 'Name' is what the asset will be referred to as, and should be descriptive without being verbose.
+
+Once all the fields are satisfied, you can create a new asset by clicking the "Create Asset" button. An '''ASSET GLOBAL''' object (by default, a circle shape object) will be created in the center of your scene - '''all geometry related to the asset must be parented to this global and the Multi/Sub-Object Material applied to those objects must also be applied to the global''' in order to be published and used. All relevant folders and files will be created automatically, and your scene will be saved to the current assets' working files
+
+'''Note:''' Asset Switch uses this global to identify and manage the asset.
+
+Your asset folder that Asset Switch creates contains many different folders. For creating and publishing an asset, you will mainly be using the "Build" and "Publish" folder.
+
+[[File:Asset Folder Structure.png]]
+
+=== 2. Publishing an Asset ===
+Publishing an asset is an essential step for the Asset Switch workflow since the published files are what will populate the Asset Switch UI and allow the user to load different versions of the asset.
+
+To publish an asset, select its global and press the "Publish" button on the Asset Switch main window.
+
+[[File:AS Publish Asset.png]][[File:AS PublishCenter.png]]
+
+This will open Asset's Switch "Publish Center" window, where you can check what kind of property/object to publish, set different options for each of them, and version/prefix them to create a unique and traceable history of your asset.
+
+To publish your asset you'll need to:
+
+# '''Check one or more object type/property to publish:''' You can choose between Material, 3ds Max File, .vrmesh, .vrmesh Parts, and Animation .xaf File.
+# '''Edit the relevant options:''' By clicking the "Options" button of the desired categories you'll be presented with different choices like the desired default behavior in case of material conflicts, export animated VRay meshes, set ranges for your animation export, etc.
+# '''Edit the Prefix (optional):''' You can choose to add a unique prefix to better identify your published asset instead of the default "ver" prefix.
+# '''Update the version number:''' Make sure to put a number that does not conflict with exiting assets or your pre-existing files will be '''overwritten'''!
+
+It is worth noting that all major buttons, spinners, edit text boxes, dropdown lists have tooltips that provide valuable information about what their functionality is.
+
+Once you are happy with your selected object types, properties and options, click the "Publish (n) Assets" button and wait for the process to finish. If any errors or noteworthy warnings are detected, a log will open detailing the process that caused the error.
+
+All the relevant files will be automatically saved on their corresponding folder that you can inspect inside your "...\<Project>\Assets\<Category>\<AssetName>\Publish" folder.
+
+[[File:Asset Publish Structure.png]]
+
+=== 3. Switching an Asset ===
+Switching an asset is the core function of Asset Switch, allowing you to quickly and easily swap materials, objects and animation versions previously published by any user across the pipeline.
+
+[[File:AS Main Window.png]]
+
+In order to switch an asset, you must:
+
+# '''Select the Asset's Global.'''
+# '''Select the type of switch you want to perform:''' By checking Material/Objects/Animation group you also enable some options to perform while switching.
+# '''Select the version of the published:''' By using the dropdown lists, you can specify what asset version to load.
+
+When satisfied with the versions to load, click the "Switch Asset!" button. Your selected objects/materials/animations should be loaded and your asset is now updated.
+
+It is worth noting that Asset Switch also allows the user to perform a scene hold before Switching the asset - this might be handy in case you want to be safe before switching in an asset and have a point of return in case the switching goes wrong. To enable this feature, click the "Hold" button on the lower right corner of Asset Switch's main window. With it enabled, after the switch, the "Revert" button will become available in case you want to return your scene to the previous state prior to the last switch.
+
+= Quick Links =
+
+* [[Using LPM for rendering in 3dsMax]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Asset_Switch

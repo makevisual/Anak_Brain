@@ -1,0 +1,20 @@
+There are a couple common issues with Wacom Cintiq monitors (pen tablet displays) that the user can/should attempt before requesting IT Support via Wrike. They are listed in the order of most common occurrence to least common.
+
+=== Cintiq has power but the screen is blank ===
+This issue occurs most frequently after a user wakes up their workstation for the first time for the day or after extended periods away from their workstation where monitors go to sleep. On certain model Cintiq the monitor will have power and a video signal and the backlight will turn on meaning that you see a gray/black screen and a power light on the display, but can't actually see the picture. This issue occurs when the monitor fails to properly wake from sleep resulting in the contrast on the monitor being set to a negative value which results in no picture on the display.
+
+==== Symptoms: ====
+
+* The monitor's power light (usually blue or green) is on.
+* Other monitors attached to the workstation show a picture but the Cintiq display is blank.
+[[File:2-Symptoms-Annotated.png|646x646px]]
+
+==== How to resolve the issue: ====
+
+# Press the menu button in the upper right corner to access the menu. 
+## If the menu button does not display the menu on-screen, this section will not resolve your issue. Move onto the next section for additional troubleshooting steps. <br> [[File:3-Step1-contrastfix.png|844x844px]] <br>
+#Use the navigation buttons on the right side of the display to select "Brightness/Contrast". <br> [[File:4-Step2-contrastfix.png|596x596px]] <br>
+#Press the navigation button that corresponds with the down arrow to scroll to Contrast, then press the button that corresponds with the left arrow icon to select contrast. Once contrast is selected, press the button that corresponds with the "up" arrow to increase the contrast from the negative number to any value equal to or larger than 0. One press up should change the number from -78 to 0 and you should immediately see picture. Assuming the picture has returned, press the menu button near the top right corner of the display to close the menu. <br> [[File:5-AdditionalSteps-ContrastFix.png|689x689px]] <br>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Index.php?title=Wacom_Cintiq_Troubleshooting

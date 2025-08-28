@@ -1,0 +1,190 @@
+=Introduction=
+Adobe Premiere Pro is MAKE's editing software of choice for creating all of our initial spot edits and animatics. Several settings and processes within the program are used in specific ways at MAKE for quality and consistency throughout the studio. This article is intended to get the reader up to speed on the fundamentals, and can act as a starting point for making a new Premiere project from scratch.
+
+[[File:Premiere_Standards_and_Practices_HeaderImage.jpg|500px|center]]
+
+==What Are "Offline" and "Online" Edits?==
+
+When projects are edited at MAKE, the first rough draft (or "rough cut") with actual footage is created in Premiere, and is known primarily as the '''"offline edit."''' It uses proxy footage and includes basic editing effects, rough green-screen keying, and mattes to create a vision of the final product with all its final components. This is the edit that will be sent for client approval before moving on to the online edit.
+
+The '''"online edit"''' is created in Nuke Studio, using the offline edit as a template. It uses higher resolution footage, final animated clips and graphics, and proper keying and roto work, all of which are rendered as sequences from Nuke.
+
+=New Project Setup=
+
+==Creating the File==
+Open Premiere Pro. For studio consistency, the software version should be 2024 - this way, artists throughout the studio can access and edit each other's project files.
+
+
+===File Naming===
+
+Click '''New Project''', and in the '''Project name''' field, give the file a name. Some common naming conventions are as follows:
+
+*Offline Edit: '''[ProjectHeader]_[ProjectSubheader]_Offline_Edit_[VersionNumber]'''
+**(Example: MBX_SustainabilitySP24_Offline_Edit_v001)
+
+*Animatic: '''[ProjectHeader]_[ProjectSubheader]_Animatic_[VersionNumber]'''
+**(Example: MBX_SustainabilitySP24_Animatic_v001)
+
+
+===File Location===
+
+Under the '''Project Location''' dropdown, click '''Choose Location''' to browse for a folder. Common Premiere project locations are as follows:
+
+*Offline Edit: '''[ProjectFolder]/[SPOTFolder]/Edit/Offline'''
+**(Example: Matchbox - Sustainability - SP24\SPOT_Sustainability_SP24\Edit\Offline)
+
+*Animatic: '''[ProjectFolder]/[AnimaticFolder]/Edit'''
+**(Example: Matchbox - Sustainability - SP24\Animatic_MBX_ProjectSustainability_SP24\Edit)
+
+===Import Settings and Placeholder Media===
+
+This initial Import window allows the user to choose placeholder media, import their own starting footage, or tweak Import settings, but these options are irrelevant for now.
+
+Click '''Create''' to start the new project.
+
+==Scratch Disks==
+
+Scratch Disks are the locations where your computer stores Premiere's auto-generated files, which are created when rendering the timeline or exporting videos. These files can quickly add up, decreasing Premiere's performance, so it is critical to set the Scratch Disk location right away for each new project. The best place is on your local computer's C: Drive.
+
+To set Scratch Disks, go to the Menu Bar and click '''File > Project Settings > Scratch Disks...''' This will open a window allowing each category of file to be set independently. The only one that needs adjusting is '''Video Previews'''. Click its '''Browse''' button, and navigate to your computer's C: Drive. Create a folder in a memorable location, name it accordingly, and click '''Select Folder'''. Click '''OK''' to finalize the Scratch Disk settings.
+
+''(Note: Remember to periodically delete the scratch files from this folder, to prevent taking up unnecessary storage space.)''
+
+                               [[File:Premiere_Standards_and_Practices_ScratchDisksLabeled.png|550px]]
+
+
+==Interface==
+
+For most standard editing projects, the '''Editing''' workspace will provide all the necessary tools. To enable it, go to the Menu Bar and select '''Window > Workspaces > Editing'''. This will automatically activate and lay out the panels where most standard operations will take place: '''Program''', '''Timeline''', '''Effects''', '''Effect Controls''', and '''Project'''. In the Menu Bar's '''Workspaces''' tab, panels can be enabled and disabled, allowing users to save their own unique Workspace setups. A lot of file organization will happen in the '''Project''' panel, so it is recommended to detach it and make it bigger in a separate monitor.
+
+                  [[File:Premiere_Standards_and_Practices_BasicInterfaceLabeled.png|750px]]
+
+'''''The Editing workspace layout, useful for most common editing projects.'''''
+
+
+==Bins==
+
+Keeping project content organized is simple using Bins: customizable folders saved within each Premiere project. To create them, click the '''Bin''' icon near the bottom right of the '''Project''' panel. Name the bin, and color-code it (if desired) by right-clicking the orange box on its left, and selecting '''Label'''. Repeat this process for whichever categories the current project demands. Bins can be dragged inside each other to create a system of nested folders. The following is a useful Bin layout that includes all the primary content categories used at MAKE, but these can be added to or removed depending on the needs of the project:
+
+                  [[File:Premiere_Standards_and_Practices_BinSetup.png|800px]]
+
+*'''''Animatic''''' ''(Rendered animatic files and assets/placeholders used only in the animatic)''
+*'''''Assets''''' ''(Individual media components like audio and graphics, as well as tools like safe frame charts)''
+**'''''Adjustment Layers''''' ''(Customizable layers used to apply specific effects to multiple clips at once)''
+**'''''Audio''''' ''(Sound files like .MP4s and .WAVs)''
+***'''''Music''''' ''(All watermarked and/or final music files)''
+***'''''SFX''''' ''(Sound effects)''
+***'''''VO''''' ''(Voice-overs and other dialogue)''
+**'''''Backgrounds''''' ''(Live-action, 2D, or CG background plates)''
+**'''''Graphics''''' ''(Individual 2D or CG elements and transition effects)''
+**'''''Logos/Legal''''' ''(Company logos and legal text)
+**'''''Solids''''' ''(Fields of solid color, like Color Mattes and Black Video)''
+*'''''Footage''''' ''(All unedited live-action video clips straight from the camera, sorted into bins by shot)''
+*'''''Sequences''''' ''(The main segments of compiled and edited content created within the Premiere project)''
+**'''''Edits''''' ''(The primary sequences where the main video(s) are constructed)''
+**'''''Nests''''' ''(Sub-sequences generated from "nesting" specific content within an existing sequence)''
+**'''''Shots''''' ''(Sequences of clips all from the same shot, used for sorting and weeding takes)''
+
+
+
+=Importing Media=
+Media can be imported to Premiere by dragging it into the '''Project''' panel or by selecting '''File>Import (Ctrl+I)'''.
+
+==Which Files?==
+In Premiere, the we typically use '''.MOVs''' and '''.MP4s''' for video, along with various audio files like '''.WAVs''' and still images like '''.TIFFS,''' '''.PNGs,''' and '''.JPEGs.''' The type and variety will depend on the project.
+
+
+Our live-action cameras capture high quality video files called '''.R3Ds,''' but these will be saved for the final clean-up edits in Hiero and Nuke. The lower quality proxy files listed above are perfect for Premiere, since they load faster and work better for large-scale, creatively-intensive edits with lots of moving parts.
+
+
+===File Locations:===
+
+*Live-action video footage (.MOVs)- '''''Project''/''SPOT''/''Shot''/Footage/F01'''
+**''This folder will contain sub-folders like "Plate," "Plate_D," "Proxy-Half," etc. Plate footage is the original, higher quality video, while Proxy footage is lower quality and faster to edit. "D" stands for "de-noised," while "Half" and "Quarter" refer to their resolution compared to the original footage.''
+
+*Raw, full-res video footage (.R3Ds)- '''T:/Footage/''Project''/''Date''/RED/'''
+**''These will contain sub-folders with raw .R3D footage shot on the specified date.''
+
+*Graphics, Audio, Still Images, etc.- These come from various sources, but many of them can be found in '''''Project''/Assets'''.
+**''This folder contains sub-folders dedicated to various content categories, such as Audio, Effects, and Images.
+
+==Creating Sequences==
+Every edit begins by making a Sequence, which is an editable timeline with layers for compiling media.
+
+To make one, go to the '''Project''' panel and click the '''New Item''' icon on the bottom right, then select '''Sequence...''' In the popup window, give it a name. Next, click the '''Settings''' tab to set the following options:
+
+*Editing Mode: '''DSLR'''
+*Timebase: '''23.976 frames/second'''
+
+*Frame Size: '''1920''' horizontal, '''1080''' vertical, 16:9
+*Display Format: '''23.976 fps Timecode'''
+*Working Color Space: '''Rec. 709'''
+
+*Preview File Format: '''QuickTime'''
+*Codec: '''Apple ProRes 422 LT'''
+
+                             [[File:Premiere_Standards_and_Practices_SequenceSettings.png|600px]]
+
+
+===Keep Existing Settings===
+Once the settings have been adjusted, media files can be dragged from the '''Project''' panel onto the '''Timeline''' to create the edit. If the settings of the dragged clip (resolution, frame rate, etc.) don't match the sequence, a prompt will appear (see below). Click '''Keep Existing Settings''' to apply the Sequence Settings to the dragged clip.
+
+                               [[File:Premiere_Standards_and_Practices_ClipMismatchWarning.png|500px]]
+
+===Set to Frame Size===
+Next, right-click on the clip and click '''Set to Frame Size''' (NOT Scale), fitting the clip to the sequence's frame. This can be done to multiple selected clips at once.
+
+===LUTs===
+Footage from our camera will appear dull and desaturated at first. This is because it needs a LUT applied. To do this, select all applicable clips in the '''Project''' panel, right-click them and select '''Modify>Interpret Footage...''' A window will appear, and under the '''Color Management''' section, click the '''Input LUT''' dropdown and select '''Add LUTs...''' Browse to '''''Project''/Assets/Resources/Luts/REC709''' and choose:
+ <nowiki>
+RWG_Log3G10 to REC709_BT1886 with MEDIUM_CONTRAST and R_3_Soft size_33 v1.13</nowiki>
+
+=Editing Essentials=
+All editing projects are different, but the following tips and standards will apply to many of them:
+
+==Time Remaps and Speed Changes==
+It is best to handle these adjustments in a structured way to avoid confusing yourself or other artists down the pipeline. '''Speed Changes''' are simple timing adjustments that affect an entire clip at once, while '''Time Remaps''' are precise timing adjustments that allow the speed to increase/decrease at specified points in the clip. ''Do not use both on the same clip, as it will over-complicate the process.''
+
+
+To apply a Speed Change, right-click a clip in the timeline and select '''Speed/Duration...''' The speed can now be adjusted either as a percentage, or by inputting the desired length of the clip.
+
+                                          [[File:Premiere_Standards_and_Practices_SpeedDuration.png|300px]]
+
+
+To apply a Time Remap, select a clip and go to the '''Effect Controls''' tab (upper left of the Editing workspace). Open the '''Time Remapping''' dropdown and the '''Speed''' sub-dropdown. In the graph to the right, drag the horizontal line up or down to increase or decrease the speed percentage, and click the diamond-shaped '''key''' button to set keyframes where the speed can be changed. Drag the bracket points to adjust the speed ramp timing as needed. Click the blue '''stopwatch''' icon to reset the speed and keyframes if you need to start over.
+
+                  [[File:Premiere_Standards_and_Practices_TimeRemap.png|650px]]
+
+==Nests==
+Nests are useful tools for organizing and editing multiple clips at once within the Timeline. To create one, select all the clips you wish to include in the nest, right-click on them, and click '''Nest...''' Give the nest a name and click '''OK'''. A sequence for the nest will appear in the '''Project''' window- don't forget to drag it into the correct Bin!
+
+The nest can now act as its own sequence-within-a-sequence in the timeline. Effects can be applied to the nest as a whole, affecting everything within it.
+
+===Transforming and Retiming with Nests===
+One of the most helpful uses for nests is making stacked, non-destructive changes to a clip's transforms and timing. Technically both these effects and more can be applied to the original clip itself, which is appropriate for very rough drafts. However, if a higher degree of precision is needed, it is better to separate those effects onto different, independent layers of a nest hierarchy.
+
+
+The standard nest hierarchy goes as follows:
+
+  '''Transform nest'''
+    ^'''Speed/Time Remap nest'''
+      ^'''Original footage clip'''
+
+
+Other effects like Lumetri Color, masks, blur effects, etc. can be placed on the original footage clip. With the layers of nesting, the transforms and retimes can be tweaked anytime without negatively affecting the other variables.
+
+'''''Note on Retimes: Do not apply speed/timing changes on multiple levels of a hierarchy. This is important for later steps of the editing pipeline.
+
+
+
+==Mogurts/Essential Graphics==
+
+Another useful tool for quickly creating customizable graphics is Mogurts/Essential Graphics. These are pre-built effects, titles, and transitions that have a specific look already baked in, so the user can simply input their own text or transforms to make a polished video in a fraction of the time. Read more about them in the article [[Essential Graphics| here! ]]
+
+
+
+
+[[Category:Adobe]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Premiere_Standards_and_Practices

@@ -1,0 +1,62 @@
+==== This page is subject to change or get updated ====
+Solid mood boards can deliver creative directions more clearly to clients/agencies or other artists.
+
+Following is the procedure of making mood boards.
+
+== Prepare the InDesign file ==
+
+* Please read the following page regarding the usage of InDesign
+** [[Deck making procedures]]
+
+* Get your InDesign ready up to the point where the master graphic elements are relinked, and the cover image and project information are updated.
+
+== Search references ==
+
+* Pay attention to the creative direction(s) during the briefing. Taking a note will help you to stick to the key subjects. Do not hesitate to ask questions for clarification.
+* Find hi-res images--ideally larger than 2k if possible. Use screen grab function of Windows if necessary.
+* Hi-res images allow you to have more flexibility to frame the images in InDesign.
+* Some file formats-esp. webp-would need to be converted to other image formats by using Photoshop.
+* During this process, search videos as well. Some nice stills can be extracted for mood boards.
+* Save your findings here.
+ [Project root folder]/Reference/[new folder named 'img'] OR
+ 
+ [Project root folder]/Reference/[new folder named 'img']/[name of subject]
+* If you also find videos, save them here.
+ [Project root folder]/Reference/[new folder named 'vid']
+
+== Layout ==
+
+* Import OR Click-and-drag the image(s) to InDesign and start putting them in place.
+* There is no hard rule for the placement. However, you may want to emphasize the nicest examples, so you can place them relatively larger then the others.
+* Keep the number of images under 12 per page. Don't make a single page too crowded.
+* Make sure the images ,as a set, present the enough range of subjects.
+
+== Color correction ==
+
+* Color correction helps unifying images overall, which makes the whole board feel more consistent.
+* Color correction is optional; we do color correction depending on how important the pitch/presentation would be or how much time we have to spend.
+* Do color correction on only selected images.
+
+== Styleframes ==
+
+* Modify reference images to make conceptually more clear images; finding perfect reference is also important. However, we often have to modify reference or make styleframes to present our creative directions more clearly.
+
+== Export a PDF & Delivery ==
+
+* Read [[Deck making procedures|How To Make A Presentation article to learn about the PDF export.]]
+* Save the PDF here
+
+ [Project root folder]/Renders/Presentation
+
+* Save iterations of the version of the presentation here. Once the presentation is finalized, copy the PDF to here, deleting the iteration in the file name
+
+ [Project root folder]/Renders/Presentation/Delivery
+
+* Following is the file naming convention
+
+ MAKE__[client-project]__[subject]_presentation__[version ex: v001]_[iteration ex: 001].pdf
+
+* Send  a producer or supervisor the path to the PDF.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_make_a_mood_board

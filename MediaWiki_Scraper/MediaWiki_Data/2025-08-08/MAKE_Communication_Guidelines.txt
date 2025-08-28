@@ -1,0 +1,20 @@
+==Communication==
+====Preferences====
+There are many ways to communicate through the studio, from wrike, chat, email, and physically talking to people. All have their place, but for everyone's best interests, here are some loose guidelines on how and when to use each
+
+===== Wrike =====
+Use Wrike for anything that needs to be tracked or referenced later — status updates, file paths, notes, and deliverables. It’s the authoritative location for tasks and project-related communication.
+
+=====Chat=====
+Great for quick updates, casual check-ins, or nudging someone to check Wrike (e.g., “Hey, new version is up on the task!”). Just remember: if it’s important, put it in Wrike too. You can even chat someone the link to a wrike task or update.
+
+When chatting, try to consolidate your messages into one clear post instead of sending a rapid-fire stream — it’s easier to read and less disruptive.
+
+=====In Person=====
+We love collaboration, but many people are deep in focused work. Try to limit in-person interruptions unless it’s urgent or scheduled — it helps everyone stay in the zone.
+
+=====Email=====
+Primarily used for calendar invites, meeting scheduling, or formal outside communication. Internal updates are better handled through Wrike or chat for visibility and speed.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MAKE_Communication_Guidelines

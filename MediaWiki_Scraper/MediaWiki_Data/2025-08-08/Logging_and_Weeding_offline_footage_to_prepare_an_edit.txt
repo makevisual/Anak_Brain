@@ -1,0 +1,73 @@
+=Introduction=
+When footage is shot on set, the resulting video files will need to be organized and trimmed into convenient, easily identifiable clips that editors can use to build the edit. At MAKE, this process is done using Adobe Premiere Pro, along with a vital tool called the [[VFX Shooting Document|VFX Data Sheet]]- a document created on-set which lists every shot and its relevant information. It is initially created and edited in the '''MAKE Docs''' folder on Google Drive, before being moved to:
+ <nowiki>
+[Main Project Folder]/Source/Docs </nowiki>
+
+The following instructions will guide you through this process.
+
+
+==Project Setup==
+Begin by opening the Premiere file for your specific project. This will often be provided to you, and should contain all footage sorted into bins (folders), along with a duplicatable template sequence. If a project file was not provided, use the following steps to make one.
+
+====Create the Project====
+Create a new Premiere project '''(File > New > Project...)''', name it, and in the '''Project Location''' dropdown, click '''Choose Location...''' and navigate to
+ <nowiki>
+[Main Project Folder]/[SPOT Folder]/Edit/Offline </nowiki>
+Create a new folder here called '''Footage Weed''' and save your weeding project here.
+
+====Create Master Bins====
+In the Project Panel, on the bottom right, click the '''New Bin''' icon to create a new bin. Rename it '''Footage'''. Create a second bin called '''Sequences'''. Within '''Sequences''', create one last bin called '''Shots'''.
+
+[[File:Logging_and_Weeding_offline_footage_to_prepare_an_edit_NewBin.JPG|300px]]
+[[File:Logging_and_Weeding_offline_footage_to_prepare_an_edit_MasterFolders.JPG|500px]]
+
+====Import the Footage====
+In the File Explorer, navigate to the footage folder for the current project: 
+ <nowiki>
+T:/Footage/[Project Name] </nowiki>
+Here should be some folders labeled with 6-digit numbers corresponding to each date the footage was shot. Within each of these folders is another folder labeled '''RED''', housing subfolders which all contain .MOV video and miscellaneous camera files. To easily extract only the .MOV files for weeding, navigate to each '''RED''' folder and search "mov" in the File Explorer's search bar. Select all of the .MOV files and drag them into the '''Footage''' bin in your Premiere project. Repeat this for all '''RED''' folders.
+
+====Sort the Footage Into Shot Bins====
+There will likely be a very large number of video files in the '''Footage''' bin now. They will need to be organized into smaller bins- one for each shot in the spot. Use the [[VFX Shooting Document|VFX Data Sheet]] to find shot names and determine which video clips go with which shots. Select all clips for a specific shot and drag them onto the '''Bin''' icon to create a new shot bin, and name it accordingly (s010, s020, etc.) Repeat until all footage is sorted into bins by shot.
+
+[[File:Logging_and_Weeding_offline_footage_to_prepare_an_edit_ShotFolders.JPG|500px]]
+
+====Create a Template Sequence====
+Select all the footage in one shot bin and drag it onto the '''New Item''' icon on the bottom right of the Project Panel. A new Sequence will appear in that shot bin. Rename it '''Template Sequence'''. Right-click on the sequence and select '''Sequence Settings...''' Adjust the options according to the current project's requirements. Typical projects will have a '''Frame Size''' of 1920x1080 and a '''Timebase''' of 23.976 frames/second- see example below- but verify with the producer to be certain. ''(Important to do this correctly, as this sequence will be duplicated to create all others.)'' Click '''OK'''. Drag this sequence to the '''Sequences > Shots''' folder. Drag the sequence into the Timeline and delete the clips from it. The template sequence is now ready for use.
+
+[[File:Logging and Weeding offline footage to prepare an edit SequenceSettings.JPG]]
+
+
+==Creating Sequences==
+Duplicate the template sequence as needed to create one sequence copy for every shot. Rename these sequences with the same names as the shot folders (s010, s020, etc.) as determined by the [[VFX Shooting Document|VFX Data Sheet]].
+
+Some clips will not belong to a specific shot. Often, the filming crew will shoot clean plates, still shots of backdrops or products, or other miscellaneous content that may be useful in compositing. Check the [[VFX Shooting Document|VFX Data Sheet]] for any notation on these clips to use when logging. If no notation is given, use best judgement to create and name bins for them in Premiere.
+
+[[File:Logging_and_Weeding_offline_footage_to_prepare_an_edit_ShotSequences.JPG|500px]]
+
+==Adding Footage to Sequences==
+Beginning with the first shot, double-click the sequence to activate it in the timeline. Drag all footage from the corresponding shot folder to the timeline, on layer '''V2'''. If prompted, click '''Keep Existing Settings''' so that the sequence settings remain as you set them. Select all clips in the timeline and right-click them. Click '''Fit to frame''' to auto-adjust their size to the sequence settings. If the clips have empty audio tracks attached, select all clips, right-click them and select '''Unlink''', then delete the audio tracks. Repeat this process for every shot sequence.
+
+==Weeding Footage==
+Now that the project has been set up, the footage can be weeded. This involves trimming excess footage from clips, sorting clips into tiers based on quality/usability, and separating clips into groups based on camera angle, subject, or other on-set variables. Follow these steps to weed:
+
+*Open a shot sequence in the Timeline. Scrub through the sequence with the playhead to get a feel for the subject/action the shot is depicting. Use the latest animatic as reference if it's unclear from the footage alone.
+
+*Working chronologically, left to right, move through the timeline, trimming and deleting excess footage from the beginning/end of each clip. A good rule of thumb is to trim immediately when the camera starts to move, and then when it stops again. If there is no camera move, trim a few frames before and after the subject's action. ''(Note: Sometimes the action will be repeated several times in one long take- this is called a "series," and should still be cut into individual clips. The motion of the camera and subject back to starting position can make it confusing which direction the action is supposed to go, so referencing the animatic is useful here.)''
+**Use hotkeys to greatly speed up the trimming process. Make sure the timeline layer ('''V2''' in this case) is selected, and use '''Shift+Left/Right Arrow Keys''' for quick timeline scrub, '''Left/Right Arrow Keys''' for slow timeline scrub, '''D''' to select current clip at the playhead, '''Ctrl+K''' to cut clip at playhead, and '''Shift+Delete''' to "ripple delete" selected clip (deletes clip and moves all successive clips to the left, closing the gap).
+
+*If some clips feature a different subject (e.g. a different Hot Wheels car performing the same action), a different camera angle, or any other significant change in composition, keep the similar clips beside each other and drag them to create small gaps between groups of the same subject/composition. This will make it easier for the editor to find what they are looking for. Try to keep everything in as close to chronological order as possible.
+**If desired, use clip label colors to differentiate slight differences in clips within the same group (e.g. purple when toy parts are assembled left to right, and orange when assembled right to left). To assign a label color, right click selected clip(s) and click '''Label > (Choose color)'''.
+
+*In the [[VFX Shooting Document|VFX Data Sheet]], some clips will have comments beside them, like "Good," "Great," "Client Likes," etc. These clips should be emphasized in the Premiere project timeline so the editor can easily find the best takes. To do this, drag clips to higher or lower layers depending on their quality. For example, average clips could stay on '''V2''', "Good" clips go up to '''V3''', "Amazing" clips go up to '''V4''', and poor but potentially salvageable clips go down to '''V1'''. If a clip looks totally unusable, it can be deleted. ''(Note: The notation comments will always be different, and sometimes may not exist. Use best judgement to rank clips in a way that makes sense for each sequence.)''
+
+[[File:Logging_and_Weeding_offline_footage_to_prepare_an_edit_Timeline.JPG|800px]]
+
+
+Repeat this process for all remaining sequences.
+
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Logging_and_Weeding_offline_footage_to_prepare_an_edit

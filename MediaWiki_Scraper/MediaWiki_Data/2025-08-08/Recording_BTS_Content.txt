@@ -1,0 +1,31 @@
+In order to simplify the creation of BTS and Breakdown videos after projects complete, without needing to explicitly go back and 're-record' certain actions, we should be recording and storing videos of working on scenes/assets as we go.
+
+Follow this article to install and use OBS for recording:
+
+[[https://makevisual.com/brain/mediawiki/index.php?title=Workflow_-_How_and_When_to_use_OBS_for_recording_meetings|Using OBS to record your Screen]]
+
+Store all recordings in your project in this location:<blockquote>..\Assets\Promotional\Content\Videos</blockquote>
+
+== When and what to record: ==
+We want to record 2-3 minutes of all/most KEY phases of a project. We do not want hours of footage, but enough that we can reference any part of the process and have footage to suit. Record a few minutes and name your files in a way the describes their content.
+
+-Storyboarding
+
+-Design
+
+-Modeling
+
+-Texturing
+
+-Rigging (2d or 3d)
+
+-Layout (2d or 3d)
+
+-Animating (2d or 3d)
+
+-Lighting/Painting
+
+-Comping
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Recording_BTS_Content

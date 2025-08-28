@@ -1,0 +1,22 @@
+
+== How to make a shooting schedule ==
+
+[[Creating a Shooting Schedule]]
+
+== Document Location ==
+
+The live shooting document is stored in google drive in your projects folder
+
+If you need to access the template, it can be found in the templates / brand folder
+<blockquote>https://drive.google.com/drive/u/0/folders/0AC6jQ8G_PA24Uk9PVA</blockquote>
+
+Or in the MAKE Google drive you can navigate to the template file here:
+ <nowiki>
+Templates / Brand > [ project template ] > Template_Production related </nowiki>
+
+After a shoot has finished and footage sorting/weeding begins, the VFX supervisor or Producer should save this doc as a PDF in the Spot's Project Folder:
+ <nowiki>
+..\Source\Docs\</nowiki>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Shooting_Schedule

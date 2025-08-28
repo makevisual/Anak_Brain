@@ -1,0 +1,84 @@
+== Five Deliverable Standards ==
+
+=== '''<u>1. Social Distribution Schedule</u>''' ===
+
+* '''[https://www.wrike.com/open.htm?id=914444060 Master Social Media Schedule] ''(The schedule that contains all platforms content in one place.)'''''
+
+* '''[https://www.wrike.com/open.htm?id=1065959003 MAKE Schedule & Channels]- [https://www.linkedin.com/company/3585296/admin/ LinkedIn]  - [https://www.instagram.com/makegallery/ Instagram] - [https://twitter.com/MAKEVISUAL Twitter] - [https://www.facebook.com/makevisual Facebook] - [https://vimeo.com/makegallery Vimeo]'''
+* '''[https://www.wrike.com/open.htm?id=1065958575 MAKE Originals Schedule & Channels]-'''
+
+=== '''<u>2. Guidelines for Posting</u>''' ===
+
+* '''As you schedule your posts, tailor them to each channel—make sure they share a consistent voice for each channel.'''
+** <sub>EX: An update to LinkedIn and a tweet that both promote your latest whitepaper shouldn’t look identical, but they shouldn’t sound like they came from two different people, either -- Start with a unified message that aligns with your brand voice, then package it for each unique channel. The trick is to build off your brand’s voice while adding a personal twist so your readers know it’s actually you who’s posting.</sub>
+* '''Be Mindful of Character Limitations.''' ''(Each channel has a character max.)''
+** Reference: https://influencermarketinghub.com/social-media-character-limits/#toc-0
+* '''Know the Art of the #Hashatg - for every platform.'''
+** Reference: https://influencermarketinghub.com/trending-hashtags/
+* '''NO Copywriting Allowed.'''
+** Ex. Journalism 101 - Copy and paste is a no-no. But, you can rewrite and rephrase as much as you'd like...:)
+* '''The Hootsuite Account is your BFF—Danny will set you up an account.'''
+** Account Link: https://hootsuite.com/login?signin-source=&redirect=dashboard#/streams
+* '''Documentation Spreadsheet; once the post is complete CPY and Paste the posts' content.'''
+** Spreadsheet link: https://docs.google.com/spreadsheets/d/1GYfz1VDGDyh3n5rVx8oqLWzPvXL2IZlgfvKkvu9UyUs/edit#gid=0
+
+=== <u>3. Tools to measure and improve reach</u> ===
+
+# Hootsuite - MAKE IG, TW, FB & LI - https://hootsuite.com/login?signin-source=&redirect=dashboard#/streams
+# LinkedIn Analytics - LI  - https://www.linkedin.com/company/3585296/admin/
+# Google Analytics - MAKE Originals YouTube - https://ads.google.com/
+
+=== <u>4. Engaging, share-worthy content</u> ===
+
+* Be and Advocate for MAKE & Encourage others - Google Chat > MAKE Announcements > to spread announcements. - MAKE Blog > platform for sharing more in-depth/personal content. 
+* Empower your employees to engage positively on their personal social accounts
+** Reference: https://www.artplacer.com/learn-how-to-market-yourself-as-an-artist-in-8-simple-steps/
+* Engage in Comments, Shares & Reposts on All Platforms.
+** Reference: https://www.forbes.com/sites/square/2020/12/04/5-ways-to-engage-consumers-on-social-media/?sh=6926611bb3f4
+* Inclusivity
+** Utilize inclusive Pronouns (They/them/theirs/folks/friends)
+** Be thoughtful about representation
+** Never make assumptions
+** Make text accessible, using plain language and accessible to people learning English as a second language or those with learning disabilities
+** Use diverse imagery and icons. This includes stock imagery, emojis, and branded visuals. (I use the "yellow" face/hand emojis)
+
+=== <u>5. Post Clarification or Approval</u> ===
+
+* Clarify what information is OK to share always before posting and understand what is a violation of confidentiality to share BY ASSIGNING SUB-TASKS IN WRIKE. 
+** Danny Robashkin - will approve all posts on every platform. 
+** Producer(s) - will provide the resources. (File paths, credit lists, important notes & production schedules)
+** Oren Robashkin - will sometimes review / provide comments if he's very involved in the project/post.
+** Aaron D. - Tech questions / Archived Projects 
+
+== Best Practices for Additional Support ==
+
+# '''Do’s and don’ts'''
+#* DO list the company as your employer in your social media bio (if you wish to)
+#* DON’T engage with competitors in an inappropriate way
+#* DO share company social media posts, events, and stories
+#* DON’T share company secrets or confidential information of your colleagues
+#* DO express your own opinion — just make sure it’s clear you’re not speaking on behalf of the company
+#* DON’T comment on legal matters pertaining to the company
+#* DO report harassment you’ve experienced or noticed
+#* DON’T engage with trolls, negative coverage or comments
+# '''BE PROACTIVE''' 
+#* Plan / Schedule Content Months in Advance if you can.
+#* Open the Floor to Ideas for Social Posts
+#* Know your Limitations 
+# '''Create A Social Media Strategy!!!''' 
+#* Resource: https://blog.hootsuite.com/how-to-create-a-social-media-marketing-plan/
+# '''Handle Negativity With Grace and Sincerity'''
+#* Know that negative commentary is bound to happen.
+# '''Strategic is better than clever'''
+#* Don't skip and processes or try and argue with content you feel passionate about - follow procedures.
+# '''Audit MAKE's Performance as well as YOUR OWN.'''
+#* Take notes & be thorough.
+#* Don't be afraid to think outside the box.
+#* Think on-your-toes mindset works best.
+# '''Optimize Everything'''
+#* Embedded links as much as you can. 
+#* Use tags & hashtags 
+#* Repost, Repost, Repost
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Social_Media_Distribution_deliverable_standards_and_best_practices

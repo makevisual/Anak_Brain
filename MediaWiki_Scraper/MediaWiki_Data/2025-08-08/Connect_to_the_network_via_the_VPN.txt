@@ -1,0 +1,41 @@
+[[category:IT]]
+
+== New VPN Client - 2/25/2025 ==
+As of 2/24/2025 SonicWall no longer offers Sonicwall Mobile Connect. Nic is in the process of updating this article with new screenshots to reflect the new VPN client instructions. For now, basic instructions are below.
+
+# Install the NetExtender VPN client from SonicWall's website. The current link is: [https://www.sonicwall.com/products/remote-access/vpn-clients SonicWall VPN Clients]
+## Select the correct version for your computer. If you use Windows and you are unsure which option to choose, the 64-Bit MSI is likely the best choice.
+# Once installed the NetExtender client should launch automatically. Click "Add connection" to create the VPN connection. This step is only done on the first launch.
+## In the Add Connection window enter the following in the corresponding box:
+### '''Name:''' Make
+### '''Server:''' 50.249.104.46:4433
+## Click Next
+## On the Security Alert window click '''Trust'''.
+## Additional boxes will become available on the Add Connection screen. Enter the following information into the corresponding box:
+### '''Username:''' Your VPN Username. If you do not have this, contact Nic or Aaron.
+### '''Password:''' Your VPN Password. If you do not have this, contact Nic or Aaron.
+### '''Domain:''' Select "Make" from the dropdown box.
+### Click '''Save.'''
+## Click '''Save.'''
+# On the main NetExtender window, click '''Connect.'''
+# Once connected you should be able to work as though you were onsite at the office. Network drives and resources should be accessible.
+
+== Outdated Instructions for VPN - Disregard ==
+
+Installing the VPN client is simple and can be done from the Microsoft Store on your Windows 10 or Windows 11 based device.
+
+# For Windows 10 & Windows 11 based devices, install the SonicWall Mobile Connect App from the Microsoft Store on your computer.
+<br>[https://www.microsoft.com/store/productId/9WZDNCRDSFKZ?ocid=pdpshare SonicWall Mobile Connect] Direct link to the app. If for some reason this link does not work, simply search for SonicWall in the Microsoft Store and install the '''SonicWALL Mobile Connect App.''' <br> [[File:1.VPN-SonicWall Mobile Connect.png|alt=SonicWall VPN App|frameless|419x419px]]
+# Launch the SonicWALL Mobile Connect App from your Start Menu or by clicking “Open” in the Microsoft Store window where you installed the app.
+# In the SonicWALL Mobile Connect Application, click “Manage”:  <br>[[File:2.VPN-SonicWall-Manage.png|alt=Click Manage|597x597px|frameless]]
+# Click “OK” on the pop-up to be taken to the VPN Connection Page in Windows Settings: <br>[[File:3.VPN-SonicWall-ClickOK.png|555x555px|frameless]]
+# Click “Add VPN”:<br> [[File:4.VPN-AddVPN.png|alt=Click Add VPN|frameless|542x542px]]
+# In the Add VPN screen, populate the top 3 boxes with the following information then click Save at the bottom of the window.
+## '''VPN Provider:''' SonicWall Mobile Connect – Select from Dropdown
+## '''Connection Name:''' MAKE
+## '''Server name or address:'''<nowiki>https://50.249.104.46:4433</nowiki> <br>[[File:5.VPN-ConnectionInfo.png|596x596px|frameless]]
+# Back on the main VPN Settings screen you should now see a connection called “MAKE”. Click '''Connect''' to proceed, then enter your VPN Username and Password when prompted.
+## After the first-time setup, you can launch the VPN from the VPN connections settings tab in Windows without the need for additional setup. Your login credentials will also save. For future connections you can simply click “Connect” and the VPN will connect automatically.<br> [[File:6.VPN-Connect.png|alt=Click connect.|frameless|628x628px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Connect_to_the_network_via_the_VPN

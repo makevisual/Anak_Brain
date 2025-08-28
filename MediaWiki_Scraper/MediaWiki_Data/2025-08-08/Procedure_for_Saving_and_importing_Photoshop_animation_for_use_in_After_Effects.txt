@@ -1,0 +1,25 @@
+After Effects has the capability to read Photoshop files as footage. As a result, animation done in Photoshop does not need to be exported as an image sequence, saving significant time.
+
+
+
+[[File:FILE NAME.jpg|thumb|right]]
+Once a Photoshop animation has been completed, it needs to be broken up by pass into individual Photoshop files. Each of these Photoshop pass files should contain only their respective passes and nothing else. Each of these Photoshop pass files should be placed within a folder named after the subject that the passess of animation belong to. That folder should exist in the ''ImageSequence'' folder of its respective shot folder.
+
+
+
+Once saved into the ''ImageSequence'' folder, these Photoshop pass files are now render files and should '''NEVER BE WORKED IN'''. Any animation work and revisions should '''always''' be done in the working Photoshop animation files located in the Scene > Animation folder of each respective shot folder. The Photoshop render files are then updated/overwritten and never iterated. As such, these render files should never have an iterative extension number. Any iteration or numeral extension may cause after effects to read the Photoshop render files as belonging to a sequence rather than containing a sequence.
+
+
+
+[[File:Import.jpg|thumb|right]]
+When Importing the Photoshop render files into After Effects, a prompt will appear presenting options of how to treat the files. By default, the option should be set to ''Footage''. If not, set the option to footage and click 'okay'. 
+
+
+'''Important:'''  Be sure to double check that the frame rate and color is correct. If not, the file can be corrected by right clicking it in the Project panel and selecting Interpret Footage > Main.
+[[File:Interpret.jpg|thumb|left]] * Please note that unless specified otherwise, all animation should have a framerate of 24.
+
+
+If all has been done correctly, the file may now be used as footage and placed and edited within the timeline.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Procedure_for_Saving_and_importing_Photoshop_animation_for_use_in_After_Effects

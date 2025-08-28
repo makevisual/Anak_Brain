@@ -1,10 +1,12 @@
-
 import os
+import re
 import sys
 import json
 import argparse
 from typing import Dict, Any, List, Optional
+from datetime import datetime
 import requests
+import mwparserfromhell
 
 API_URL     = "https://makevisual.com/brain/mediawiki/api.php"
 BOT_USER    = "Aaron Dabelow@Anak_Brain"
@@ -141,8 +143,52 @@ def require_env():
     if missing:
         raise SystemExit("Missing environment variables: " + ", ".join(missing))
 
-def mw_cleanText():
-    pass
+def wikitext_breadcrumb(arg_text, arg_pageName):
+
+    breadcrumb  = "When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title="
+    arg_text    += "\n\n\n"
+    arg_text    += ( breadcrumb + (arg_pageName.strip().replace(" ", "_")))
+    return arg_text
+
+def save_page_text(base_dir: str, page_title: str, text: str) -> str:
+    """
+    Save cleaned text to a dated directory, with filename based on page title.
+    - base_dir: root directory where dated folders will be created
+    - page_title: MediaWiki page title (e.g. "2D_Rendering_in_Deadline")
+    - text: cleaned page text
+    Returns the path to the saved file.
+    """
+    # Create date-based subdirectory (YYYY-MM-DD)
+    date_dir = datetime.now().strftime("%Y-%m-%d")
+    save_dir = os.path.join(base_dir, "MediaWiki_Data",date_dir)
+    os.makedirs(save_dir, exist_ok=True)
+
+    # Sanitize filename (allow letters, numbers, underscore, dash)
+    safe_title = re.sub(r"[^A-Za-z0-9_\-]", "_", page_title)
+    filename = f"{safe_title}.txt"
+
+    file_path = os.path.join(save_dir, filename)
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+    return file_path
+
+def parseAndSavePageByTitle(client, arg_title):
+
+    curPage = arg_title
+    print("\n Fetching Page : ", curPage)
+
+    # Get the page content
+    curPageContent = (client.get_wikitext(curPage))
+
+    # Breadcrumb the URL back to the source URL
+    curPageContentBreadcrumbed = wikitext_breadcrumb(curPageContent, curPage)
+
+    # Save the file out
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    outputFile = save_page_text(base_dir, curPage, curPageContentBreadcrumbed)
+    print("Page Saved - ", arg_title , " - " , outputFile)
+
 
 def main():
     require_env()
@@ -164,17 +210,17 @@ def main():
     titles = client.get_all_pages()
 
     print(f"Fetched {len(titles)} titles:")
+
+    # Fetch and Save all the pages
     for t in titles:
         print(" -", t)
+        parseAndSavePageByTitle(client, t)
 
+    # Fetch and Save the first 10 pages
+#    for t in titles[:10]:
+#        print(" -", t)
+#        parseAndSavePageByTitle(client, t)
 
-    # Test page parsing
-    curPage = titles[1]
-    print("\nSample page fetch:", curPage)
-    curPageContent = (client.get_wikitext(curPage))
-    print(curPageContent)
-    curPageContentClean = mw_cleanText(curPageContent)
-    print(curPageContent)
 
 if __name__ == "__main__":
     try:

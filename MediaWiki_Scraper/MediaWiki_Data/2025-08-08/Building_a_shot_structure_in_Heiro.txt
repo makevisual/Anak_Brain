@@ -1,0 +1,116 @@
+Hiero can be used to generate the folder structures for all of the shots of a given project. This is goes hand-in-hand with [[Conforming an online edit in Hiero]] and generally takes place at the same time.
+
+There are a lot of prerequisite processes to successfully generating the comps and folder structures listed below, see [[Conforming an online edit in Hiero]] for more information. 
+
+Before starting the steps below make sure you have the preset folder structres for the below exports added to your local presets in Hiero. They can be found here
+ <nowiki>
+U:\resources\Presets\Foundry Hiero\Hiero_ExportPresets_v001.hrox</nowiki>
+
+
+=Best Practices=
+<ul>
+	<li>If you are tweaking the settings, export 1 shot, to make sure it is good, then do them all.
+	</li>
+	<li>You can increment your reference plates, comps, and footage exports to a v002 or more, if the edit changes.
+	</li>
+	<li>You can easily overwrite files that already exist with no prompt or warning. Be careful when re-exporting existing shots.
+	</li>
+	
+</ul>
+
+=Building the Footage Folder Structure and Conform Nuke Scripts=
+	'''Setp-By-Step'''
+	<ol>
+	<li>In your conform sequence, after all of your takes have been named, and organized onto named video tracks.
+	</li>
+	<li>After you have swapped the .MOV clips for .R3D
+	</li>
+	<li>After you have changed the color space to Rec709
+	</li>
+	<li>Select all of the shots you wish to generate the footage folder structure for, and Right click > Export.
+	</li>
+	<li>Change you export type to Process as Shots in the top left
+	</li>
+	<li>Drag the Local preset, ''"__PROJECT__Footage"'' from the left to the right, Project export presets, to add it to your project.
+	</li>
+	<li>Change the export location to your Spot folder
+	</li>
+	<li>Make sure all tracks you wish to export are selected, the cut length is selected, apply retimes is checked, include frames is checked and set to 12 frames ( This is the typical heads and tails to add to a shot, but can be modified if needed ) and the start at frame should be 1000.
+	</li>
+	<li>Click export, and the folder structures and conform comps will be created
+	</li>
+	</ol>
+
+	[[File:BuildingAShotStructureInHeiro_FootageExport_v001.JPG|250px]]
+
+=Building the Reference Folder Structure and Reference Sequences=
+'''Setp-By-Step'''
+	<ol>
+	<li>Get the latest offline edit from the person who edited the rough cut.
+	</li>
+	<li>Run it through media encoder and create a .jpeg sequence of the edit as well as as a .Wav file of the audio
+	</li>
+	<li>Bring these into your Hiero Edit, and add them to your Sequences timeline
+	</li>
+	<li>Cut the Jpeg sequence along each shots start and end frames to create cuts that match the cuts in the offline rough cut.
+	</li>
+	<li>Rename each of the cuts you just made to correspond with the names you gave to the footage in your conform sequence. It is important that they are exactly the same, as the folders the references are exported to are defined by this name
+	</li>
+	<li>Select all of the shots you wish to generate the Reference image sequences and reference folder structures for, and Right click > Export.
+	</li>
+	<li>Change you export type to Process as Shots in the top left
+	</li>
+	<li>Drag the Local preset, ''"__PROJECT__Reference"'' from the left to the right, Project export presets, to add it to your project.
+	</li>
+	<li>Change the export location to your Spot folder
+	</li>
+	<li>Make sure all tracks you wish to export are selected, the cut length is selected, apply retimes is not checked, include frames is not checked, and the start at frame should be 1012. If you changed the amount of heads and tails in the previous section, you will want to change this start frame to begin offset by the same amount above. For example 16 heads, start on frame 1016 )
+	</li>
+	<li>Click export, and the folder structures and reference sequences will be created
+	</li>
+	</ol>
+
+	[[File:BuildingAShotStructureInHeiro_ReferenceExport_v001.JPG|250px]]
+
+=Building the Composite Folder Structure and Composite Nuke Scripts=
+'''Setp-By-Step'''
+	<ol>
+	<li>Skip Items 2-6 if you have already build the Reference folder structure
+	</li>	
+		<li>Get the latest offline edit from the person who edited the rough cut.
+		</li>
+		<li>Run it through media encoder and create a .jpeg sequence of the edit as well as as a .Wav file of the audio
+		</li>
+		<li>Bring these into your Hiero Edit, and add them to your Sequences timeline
+		</li>
+		<li>Cut the Jpeg sequence along each shots start and end frames to create cuts that match the cuts in the offline rough cut.
+		</li>
+	<li>Rename each of the cuts you just made to correspond with the names you gave to the footage in your conform sequence. It is important that they are exactly the same, as the folders the references are exported to are defined by this name
+	</li>
+	<li>Select all of the shots you wish to generate the Comps and Comps folder structure for, and Right click > Export.
+	</li>
+	<li>Change you export type to Process as Shots in the top left
+	</li>
+	<li>Drag the Local preset, ''"__PROJECT__Comps-3D"'' from the left to the right, Project export presets, to add it to your project.
+	</li>
+	<li>Change the export location to your Spot folder
+	</li>
+	<li>Make sure all tracks you wish to export are selected, the cut length is selected, apply retimes is not checked, include frames is checked and set to 12 ( Again, if this was chosen as a different value above, reflect that here ) and the start at frame should be 1000.
+	</li>
+	<li>Click export, and the comps nuke scripts and folder structures created
+	</li>
+	</ol>
+
+	[[File:BuildingAShotStructureInHeiro_CompsExport_v001.JPG|250px]]
+
+
+
+
+
+
+
+
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Building_a_shot_structure_in_Heiro

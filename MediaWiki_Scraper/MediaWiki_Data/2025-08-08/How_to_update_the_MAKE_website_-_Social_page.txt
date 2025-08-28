@@ -1,0 +1,79 @@
+=== The goal of social project updating you should expect. ===
+We present social projects in the layout mimicking Instagram layout, featuring account profile(logo bug in this case), hashtags, etc. Semplice does not provide such a preset for this type of display, so the template is a combination of custom code module and video module.
+[[File:Content Examples.jpg|thumb|915x915px|Content examples|none]]
+
+=== Items you need before updating socials ===
+* Compressed render (Amazon Cloud link)
+* Sometimes you have to modify the edit to fit in the format. (ex: if the final project render is in 4x5, 9x16, or 16x9, crop them to fit in 1x1)
+* Client's/brand's/product's logo bug (FTP link)
+* Client's/brand's/product's IG profile name
+* Project title
+* Some relative hashtags (3~5 depending on the length)
+
+=== Updating process ===
+
+* Set up the project folder
+
+ U:\MAKE_SITE\MAKE SITE 10\__SocialPage
+
+* Duplicate [Template] and rename the folder structure accordingly
+** Overall preparation process is not much different from that of website project updating.
+* Get the video link and video thumbnail ready. [[How to update the MAKE website|Check out the Website  project updating article for more about video links and thumbnails.]]
+* Make and upload a client/product logo bug on MAKE FTP
+** Logo bug spec: 83 px square, JPEG
+* Upload the logo bug on MAKE FTP
+** Install FileZilla if you don't have one. You can search online or install the one in the following.
+
+ U:\resources\apps\filezilla
+
+* Run the FTP access preset Batch file to get the access credential
+
+ U:\resources\apps\filezilla\CopyDefaults.bat
+
+* MakeVisual will show up once the setting is added.[[File:Filezilla.png|alt=Filezilla access|none|frame|Filezilla access]]If above does not work, ask IT support or Technical director for the assistance.
+
+==== Updating Social page ====
+You can locate the page under Page menu in Semplice.
+[[File:Social page.jpg|none|thumb|656x656px]]
+* Duplicate and edit the Social post column. Make sure your duplicate stay in the SAME SECTION though.
+** A column is a set of Custom CSS and Single vid module. You edit the custom code on the top and update the video link on the vid module
+** [[File:Social post.jpg|none|thumb|568x568px|One Social post is a set of two modules; custom code and single video]]
+* ﻿Update the video - [[How to update the MAKE website|Check out how to update the video on Website update article]]
+* Add class 'unclickable' under Styling
+* Set the video on Autoplay/Loop/Muted/Hide Control, so it may play automatically as the page is loaded.
+* [[File:Module setting.jpg|none|thumb|1124x1124px|Module settings]]
+
+﻿  ﻿
+
+==== Editing custom code ====
+[[File:Custom code.jpg|none|thumb|1152x1152px|Editing custom code]]Following the custom code to generate the social post layout.<blockquote>''<nowiki><div class="socheader"></nowiki>''
+
+''<nowiki><div class="soclogo"></nowiki>''
+
+''<img src="<nowiki>'''[URL TO LOGO BUG]'''" alt="'''[SIMPLE FILE NAME OF LOGO BUG]'''</nowiki>" />''
+
+''<nowiki></div></nowiki>''
+
+''<nowiki><div class="socdesc"></nowiki>''
+
+''<nowiki><div class="socbrandname"><strong></nowiki>'''[CLIENT or BRAND NAME]'''<nowiki></strong></nowiki><nowiki><span class="sochandle"></nowiki>'''@[CLIENT/BRAND IG PROFILE]'''<nowiki></span></nowiki><nowiki></div></nowiki>''
+
+''<nowiki><div class="soctitle"></nowiki>'''[PROJECT TITLE]'''<nowiki></div></nowiki>''
+
+''<nowiki><div class="sochashtag"></nowiki>'''#[LIST OF HASHTAGS]'''<nowiki></div></nowiki>''
+
+''<nowiki></div></nowiki>''
+
+''<nowiki></div></nowiki>''</blockquote>
+* Here is the visual reference to identify which is what.
+
+[[File:Custom code editing.jpg|none|frame]]
+
+* Save and version up the Social page.
+** Versioning up helps to preserve the previous versions of the page, which allows us to go back in the case of revisions or accidental loss of contents.
+** [[File:Version save.jpg|none|thumb|547x547px|Versioning up the page]]
+* Preview the page if everything functions well.
+* If everything is in order, save again and publish the page!
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_update_the_MAKE_website_-_Social_page

@@ -1,0 +1,14 @@
+*[[Offload and Transcode footage from a film shoot]]
+*[[Premiere Standards and Practices]]
+*[[Logging and Weeding offline footage to prepare an edit]]
+*[[Create a notation edit in Heiro, Premiere, or After Effects]]
+*[[Export and share a daily]]
+*[[Reduce offline editorial project file]]
+*[[Export EDL, XML, OTIO for use in online edit]]
+*[[Conforming an online edit in Heiro]]
+*[[Export and share a daily]]
+
+[[Category:Workflow]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Workflow_-_Offline_Editorial

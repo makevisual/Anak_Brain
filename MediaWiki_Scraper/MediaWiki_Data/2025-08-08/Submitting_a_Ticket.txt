@@ -1,0 +1,34 @@
+[[Category: Process]]
+
+== When to Request IT Support ==
+IT Support can be requested through Wrike's Request forms section if you need assistance. Before requesting assistance it is highly recommended that you attempt to reboot your computer. If your issue is related to one monitor not working, it is recommended that you try to unplug the monitor from power, wait 15 seconds, then plug the monitor back into power to see if that resolves the issue. Many common issues can be resolved by "turning it off and on again". When submitting a support request, you can either submit a request for yourself or you can select a different user if the issue is for someone else. Support can/should be requested in the following scenarios - note that this list is not all inclusive:
+* '''Computer Hardware Issues''' such as: Blue Screen of Death, unexpected shutdown/crashing, computer won't fully boot up. Monitor, keyboard, mouse, webcam, speakers, headphones, drawing tablets, or other peripherals are not working at all or not working as expected.
+* '''Network Issues''' such as: unable to connect to the internet or a network share/drive. Unable to access guest wifi, etc.
+* '''Data Recovery''' such as: files missing from their expected location on the network shares.
+* '''Software or Plugin Issues''' such as: Program crashing repeatedly, plugins missing or not working as expected, or if you would like to request software that is not currently installed on your computer. Note that software requests for software not currently available within the environment will be reviewed on a case-by-case basis.
+* '''Common area equipment not working as expected''' such as: Displays above elevator and reception desk on 18 not working, displays or computers in other common areas such as the conference room or near the entrance door into the 17th floor or near the kitchen on 18th floor.
+* '''Credential issues''' such as: Unable to log into an application or computer.
+
+== Submitting a Ticket in Wrike ==
+To submit a ticket in Wrike, access Wrike either via a web browser, desktop app, or phone app and make sure you are logged into your Wrike account then complete the following steps:
+# Navigate to Request forms.  <br>[[File:1.RequestSupport-Wrike.png|700x700px]]
+# Select "IT Support Ticket" from the list of choices. <br> [[File:2.RequestSupport-Wrike.png|702x702px]]
+# Select answers in the dropdown and text boxes and click the next button to move through each step of form submission.
+#When responding to "How important is this issue?" consider the following: Are you able to complete your work on another open workstation nearby? Are you approaching a critical deadline and need the issue resolved immediately, or is it something that could be resolved tomorrow? Select the best answer based on your ability to do work by using a different workstation or implementing a workaround. <br> [[File:3.RequestSupport-Wrike.png]]
+#When selecting Hardware issue, select based on whether this is impacting your workstation or a server or render node.
+#If prompted, provide the computer name. If the computer is your workstation the computer name should be on a sticker on the top of the computer tower/case and will be in the format: MAKE##'
+#The form will prompt you to enter the computer location. In most cases, this will be a desk number which is located on a label typically on the front of one of the legs of your desk. In the intern area on 18th floor the desk numbers are on the side of the arm that your top largest monitor is mounted on either on the left or righthand side of the articulating arm. Desk numbers are in the format of ##### where the first 2 numbers are the floor the desk is located on and the last 3 numbers are the desk number. Example:  18001.
+#When responding to "What is the issue?" Please include any information such as what you were doing when the issue occured, if the issue is repeatable or only occurs intermittently, and any steps you've taken to try to resolve the issue yourself. If the issue only occurs when doing a certain task, please include that information.
+#If appropriate, provide screenshots showing error messages or examples of the issue. <br>[[File:4.RequestSupport-Wrike.png|alt=Populating the fields for a hardware support request.|882x882px]]
+#Click Submit.
+
+
+==What to expect when you submit a ticket==
+*Most support requests are resolved same day or next day.
+*Someone will contact you either directly through Wrike, in person at your desk, or via Google Chat to let you know they have received your ticket and are in the process of working through the issue.
+* If the issue is not causing total work stoppage, IT will work with you to coordinate a time to repair/resolve the issue for you. If the issue is causing total work stoppage and/or your workstation is completely down someone will typically visit your desk as soon as possible to begin working on the issue rather than contacting you to schedule a timeslot.
+*When possible IT will schedule repairs to occur during your lunch break or after you leave for the day to avoid causing additional delays.
+*Once your issue is fully resolved, IT may opt to keep your Wrike ticket open for a short period of monitoring to ensure the issue does not recur. IT will mark your ticket "Completed" when the final/full fix is implemented and the issue is considered resolved.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Submitting_a_Ticket

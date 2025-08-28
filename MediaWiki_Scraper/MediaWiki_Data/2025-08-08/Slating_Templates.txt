@@ -1,0 +1,27 @@
+=Slating Templates for Nuke Hiero=
+
+Slating templates can be imported into any Hiero edit from the U:\ drive
+
+ <nowiki>
+U:\MAKE_Reel\MAKE_Reel10\MAKE_Reel10__Templates\MAKE_R10__slate\MAKE_R10__slate.hrox</nowiki>
+
+Once imported into an edit they can be duplicated and modified per the specs of the project. for example, the client, agency, title, ISCI codes, and copyright will always need to be modified. In many cases new fields will need to be added, and existing fields will need to be removed. The date Field will auto generate.
+
+=Slating Templates for Premeire=
+
+Slating templates can be imported into any Premeire edit from the U:\ drive
+
+ 24 fps
+ U:\MAKE_Reel\MAKE_Reel10\MAKE_Reel10__Templates\MAKE_R10__slate\MAKE_R10__client_project__slate__003.aep
+
+ 2997 fps
+ U:\MAKE_Reel\MAKE_Reel10\MAKE_Reel10__Templates\MAKE_R10__slate\MAKE_R10__client_project__slate__2997_001.aep
+
+
+Once imported into an edit they can be duplicated and modified per the specs of the project. for example, the client, agency, title, ISCI codes, and copyright will always need to be modified. In many cases new fields will need to be added, and existing fields will need to be removed. The date Field will auto generate.
+
+
+[[Category:Template]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Slating_Templates

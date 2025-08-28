@@ -1,0 +1,108 @@
+=What is an Asset?=
+An asset is anything that will be used in a project. This will include any 3D files, caches, materials, and poses. As you make progress on an asset, they can be published out for other people to use in layouts and be continuously updated as you complete the asset without disrupting the rest of the pipeline.
+
+Assets are organized by characters, objects, sets, effects and misc.
+===Characters===
+A character is an asset that has a control scheme to articulate and animate the meshes to do a performance.
+=== Objects===
+An object is an asset that is not designed to be animated, and doesn't require articulation. An example would be a rock, or table. Note that a static asset may still need to be point cache ready, if it is going to be handled by a character. In which case it would need to have a local controller an point cache modifiers prepared in the asset. This will not apply to any of the proxied versions. Some objects may require a degree of deformation similar to a character, however it typically has much less control, and isn't designed to do a performance. An object may be published in both animatable and non-animatable formats, because it may not be moving in every instance it is used.
+=== Sets ===
+A set is an asset that depicts the location of a scene and will typically be a compilation of environmental elements and object assets previously made within the project.
+===Effects===
+An effects asset holds objects related to various scene VFX like particle systems, smoke, water sim, etc.
+===Misc===
+This is an asset that should be used if the object in question does not neatly fit on any of the categories above.
+== AssetSwitch Brief==
+''(AssetSwitch will be a separate article, can link to it later)''
+
+In 3ds Max, assets are set up by Asset Switch, which will help you initialize and publish your asset.
+
+The Asset Switch is a tool used to manage assets, versions, materials, and caches in-between multiple scenes. It has native support of 3dsmax files and VRayMesh files, however it can publish and load anything assembled within 3dsMax and is published out using the Asset Switch.
+
+The Asset Switch can be launched from the 3DsMax main menu bar under the "MAKE Tools" menu item, and will automatically display the information for any asset, if the object(s) you have selected are initialized as an asset global.
+===Creating an Asset===
+To create an a new Asset, in the Asset Switch menu bar choose "Setup" -> "Create new Asset".
+
+[[File:AssetSwitch How To Create Assets.png]]
+
+Next you will then choose the category of asset you are creating, and set its handle and name.
+
+[[File:Creating an asset AssetSwitch Settings.jpg]]
+
+A 'Handle' is a 3 letter all caps tag that is used to identify and organize an asset within a project. Make sure not to use the handle of an asset that already exists when creating your asset. The 'Name' is what the asset will be referred to as, and should be descriptive without being verbose. ''For example, a character named Lothar could have as tag '''LTH''' (in all CAPS).''
+
+Once all the fields are satisfied, you can create a new asset. The folders and files necessary will be created automatically, and your scene will be saved to the current assets working files, as well as an initialized '''ASSET GLOBAL''' will be created. The asset global is the control object (by default, a circle shape object) for the entire asset you are making. All geometry related to the asset and its materials must be parented to this global in order to be published and used. '''Note:''' Asset Switch uses this global to identify and manage the asset.
+
+Your asset folder that Asset Switch creates contains many different folders. For creating and publishing an asset, you will mainly be using the "Build" and "Publish" folder.
+
+[[File:Asset Folder Structure.png]]
+==Build Folder==
+These are the categories within the build folder. Additional folders may be created if necessary, and could include "Paint" or "Sim", if desired.
+
+[[File:Asset Build Structure.png]]
+===Layout===
+The process of building an asset is often non-linear. In the character layout file is where all of the elements are assembled if needed, once a layout file for an asset is created, it will be the home for most complete version of the asset, as well as the published 'Full' version of the asset. The other build files can still be worked in, however any changes or additions must be brought into the layout file upon completion.
+===Model===
+In the model scene is where you should be working on the modeling, and uvw mapping.
+
+Different versions of the model may be created within the same file. For example there may be different clumps of grass or versions of a tree. These meshes may all be saved within the same asset file.
+===Rig===
+In the rig scene is where you should be working on the rigging. It is important that all of your rigging is compatible with the [[Rigging a character in 3dsMax|3D character pipeline]]. You may or may not be working with the final model, so ensure that before the skinning and binding phase you retrieve the appropriate model or shade file. If you are not, you must re-bind the correct meshes. Use the skinwrap tool to copy weights, but always convert it to a skin afterwards and remove the skin wrap.
+===Sculpt===
+You would put any sculpting files in this folder. This would include Zbrush sculpting files and mudbox files if applicable.
+===Shade===
+Each project should have a defined shade scene. Use that scene, saved into the shade folder, and import in the asset model. Begin to shade using the defined light setup. Include all of your materials in one multi-sub material, and apply that one material to the entire asset (including its Global!). Set which material is on each piece of geometry using a 'material' modifier or use Make Toolbox's MultiSub Creator tool to condense all selected objects' materials into one multi-sub material. This is requisite for the 3D character pipeline.
+
+
+For complicated assets, with many versions, like animated grass and all of its versions, it may be possible to have many initialized assets within the same file. With a character it is often just one file that will later be published into its constituent rigs.
+==Publish Folder==
+Any published assets will be saved here. These will include materials, max files, vrmesh files, vrmesh part files and animation files. For the most part, you will be publishing these files through Asset Switch.
+
+[[File:Asset Publish Structure.png]]
+
+You can publish assets even when you are not finished with your asset to be used in layouts, and continue to work and republish your asset as you update it. They will be automatically updated in any scenes they are being used in as they get republished.
+===Publish Center===
+To publish an asset, select its global and press the "Publish" button on the Asset Switch main window.
+
+[[File:AS Publish Asset.png]]
+
+This will open Asset's Switch Publish Center, where you can select what kind of property/object to publish, set different options for each of them, and version them to create a history of the asset.
+
+[[File:AS PublishCenter.png]]
+
+Some publishing types offer options to tailor the published asset.
+===Material Publishing Options===
+[[File:AS Publish Material Options.png]]
+*'''Also save tyLibMtl material:''' Publishes a tyLib material alongside the regular 3dsMax *.mat material library file. ''This might be useful in case the user wants to swap material libraries by directly loading such libraries on tyLibMtl.''
+*'''Global and Children conflict:''' Allows to select a default behavior in the case the publishing routine encounters conflicts between the material(s) applied to the Global of the asset and its children (like different materials).
+*'''Children conflict:''' Allows to select a default behavior in the case the publishing routine encounters conflicts between the material(s) applied to the Asset's children (like different materials).
+===3dsMax Publishing Options===
+[[File:AS Publish Max Options.png]]
+*'''Publish asset only (recommended):''' This is the default mode, which publishes only the asset and the objects linked to it.
+*'''Publish entire scene:''' This mode forces the entire scene, even objects not linked to the Asset's global, to be published with it.
+===VRMesh Publishing Options===
+[[File:AS Publish Vraymesh Options.png]]
+*'''Export Animation:''' Publishes a Vray Animated Proxy mesh according to the time range set.
+
+*'''Number of faces in preview mesh:''' Sets the number of faces to be used in previewing the Vray Proxy mesh.
+===Animation Publishing Options===
+[[File:AS Publish Animation Options.png]]
+*'''Set Range:''' Limits the published animation to the selected range
+*'''Load saved names before transferring animation:''' Before publishing the animation, loads the object's name from its User Properties and applies it to the object.
+==Surfaces Folder==
+Any texture files being used to shade an asset will be saved here. Working files to make these textures (such as Substance Painter files) will also be placed here, preferably in its own folder to separate between working files and files being used directly in your asset.
+
+Be sure when you are applying any custom bitmaps to your asset that the file paths come from this folder. This will keep your asset organized and easy to locate if your asset gets reused for another project. If a file path in your asset is not linked in the correct drive, it will not properly render on the farm.
+=Quick Links=
+*[[Modeling an asset in 3dsMax]]
+*[[Laying out uvs on an asset in 3dsMax]]
+*[[Texturing an asset in 3dsMax]]
+*[[Using hair and fur on an asset in 3dsMax]]
+*[[Shading an asset in 3dsMax]]
+*[[Publishing an asset in 3dsMax]]
+*[[Converting CAD for production]]
+*[[Creating assets from photos with Substance]]
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_an_asset_in_3dsMax
