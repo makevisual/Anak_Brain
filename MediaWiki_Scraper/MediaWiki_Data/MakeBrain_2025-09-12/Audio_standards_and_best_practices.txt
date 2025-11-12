@@ -1,0 +1,65 @@
+==Usage==
+Only use audio, even for scratch mixes, that is for commercial use, or can be purchased for commercial use. This avoids things accidentally making it into the spot that is not licensed, or able to be licensed.
+
+==Good Habits==
+1.) '''Monitor Your Levels''' by setting ALL devices and apps to 50% volume. Set your computer volume settings, your external speaker nobs, settings for headphones and any app settings to 50%. This ensures that you are mixing your volume accurately to neutral settings. 
+
+2.) '''Quieter is better''' - You can always make something louder, but once you hit 0 decibels the loudness information clips and you get a distorted and unpleasantly loud signal. When audio clips past 0 decibels, that audio information is lost and there is no way to replace it. 
+
+3.) '''Listen to your Exports''' - Playback everything you export to make sure everything in your mix is expressed accurately.
+
+4.) '''Use Premium Beats for Music''' - We have a subscription to Premium Beats and it is most useful if we hit our minimum amount every month. Also we must use music that we can actually license and use on our projects. Do not use music we can't license.   
+
+https://www.premiumbeat.com/music-collections - note you will need to make a Shutterstock account to download any preview/watermarked samples.   
+
+5.) '''Use High Quality Samples''' - We have an audio library full of useful samples that are free to use. If you cannot find a sound in our library, a reliable and free source is;   
+
+https://freesound.org/. - note you will need to create an account to download samples.    
+  Makes Audio Library: U:\resources\Audio
+==Things to Avoid==
+'''Avoid making audio changes in comp (Premier, After Effects or Nuke) and then forget to document these changes''' - If the changes are made in edit and not in an audio program, then the changes made in edit won't be reflected when we send it to get mastered for broadcast. When this happens, we have to have someone render out the reference edit and then very carefully recreate all the changes again in adobe audition. So document the changes and let a producer know about them in a Wrike task. 
+
+'''Don't work with Mixdowns''' - This is less flexible as Music, Voice and SFX are flattened. The one exception; if you are using audio for ''reference only'' and aren't seeking approval on audio on your project. 
+
+'''Don't use bad, low quality samples''' - All audio we send to clients should be clean, no buzzing, no distortion, no blasting over 0-db, no cheap sounding effects. Bad sound can skew the perception of the animation. We'd rather make a good impression and have the audio aid the impression of the visuals. 
+
+'''Do not use music we can't license''' - Sources of music to always avoid include; Spotify, Youtube, Purchased personal music from a record label or independent label, any music that you've downloaded without a license agreement. Make is simple and stick to Freesound.org or PremiumBeats. 
+==What do I work with?==
+When you receive audio from a client or an editor, it will either be for ''scratch audio'' or a ''final mix''. Scratch audio is rough audio meant to help nail down timing and general feel of your visual edit. A final mix is approved audio that is ready for delivery. If it is not clear which one you working with, ask the producer attached to the project.   
+
+The first thing you should do when you receive audio; a. Check that the audio matches your picture. b. Check that the audio reflects the most up to date client approved script.    
+
+If the picture or edit changes and you need to make Audio updates to the audio files you have received, you should always;
+
+#'''Use Separated Audio Stems''' - A Stem is a layer of audio that is separated out into Music(Music), Voice(Vox) or Sound Effects(SFX). This means you can change the timing of the voice without changing the music or sound effects, making your edit process more flexible.
+#'''Document any changes when making audio adjustments in another program''' - After making changes, put the locations of your reference edit in a Wrike task and give it to the producer. They will hand it off to an audio editor to clean up and make the changes in an audition edit.
+#'''Work with .wav files''' - This is a high-fidelity and uncompressed format. The file sizes are negligible. The only exception is if you need an .aiff or .mp3 for preview purposes in another program like Nuke or 3Ds Max.
+
+==Making Audio Changes==
+Make your Audio timing changes using one of these methods;
+
+#'''IDEAL METHOD''' - Make all audio changes in Adobe Audition and render out updated stems to use in your edit. Learn how to edit in Adobe Audition (here).
+#'''QUICK METHOD''' - Rough in your audio changes in comp and give it to the producer, tell them the audio is very rough and needs an Audio Editor to clean it up. (This rough timing will be used as reference later to make actual clean stems from Audition) This is more common in early animatic stages of our process.
+
+== Audio Settings==
+If you are starting from our [[Setting up an audio project in audition#Step 01|Audition Template]] the settings are already baked into the template. If you need an explanation of standard settings we use, go to [[Setting up an audio project in audition#The Settings|The Settings]] section here.
+
+
+Where to Place Audio Files, Edits and Renders
+
+'''Project/Source/Audio''' - Any Audio file that comes from an external source. These sources include stock websites or third party Audio Designers and Musicians. If these are things that still need to be purchased or licensed. Place it in folder that is clearly labeled ( Unpurchased, Unlicensed)
+
+'''Project/Renders/Audio''' - Any mix and stems created by us as part of an edit to be sent to a client for feedback. Where final deliverable audio and its iterations go. 
+
+'''Project/Source/Client''' - Any audio produced or purchased by the client and sent directly to us. 
+
+'''Project/Spot/Audio''' - This is where we put all audio edits associated with that specific spot. 
+
+'''Project/Spot/Renders/Audio''' - This is where we place scratch audio and in progress mixes that are incremental and associated specifically with that spot. 
+
+'''Project/Assets/Audio''' - This is where we save anything recorded at/by Make for use in multiple spots. Ex. Toy Foley where we have recorded the sounds a Toy makes. 
+
+'''U:\resources\Audio''' - Any Audio we have made, purchased ( or is already free to use) should eventually be added to our library.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Audio_standards_and_best_practices

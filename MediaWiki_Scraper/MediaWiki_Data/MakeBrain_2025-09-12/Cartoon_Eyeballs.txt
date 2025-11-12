@@ -1,0 +1,90 @@
+= Back to Hub =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+= Cartoon Eyeballs =
+Highly expressive, good for really stylized cartoony characters with floating eyes. '''WARNING: This rig has a major disadvantage, please see the note below.'''
+
+
+[[File:01 ToonEye CoverImage.png|frameless]]
+
+ADVANTAGES:
+
+* Stretchy, big range of motion, expressive
+
+DISADVANTAGES:
+
+* Due to the WS FFD used, this rig’s geometry CANNOT BE POINT CACHED. The geo on this rig must be tyCached instead. Be aware that this creates an extra step when exporting animation to the Layout scene, and is not necessarily in best practice.
+
+== Setting Up the Rig ==
+[[File:02 ToonEye GeoSetup.png|frameless]]
+
+The geo for this demo is just a sphere with two hemispheres rotated at a 45॰ angle for the eyelids. The lids have a shell modifier on them to give them thickness.
+
+The geometry in this demo has two separated upper and lower lids, if the geometry you have has one combined piece of geo for the eyelids you will need to create two additional bones in your rig for weighting.\
+<nowiki>***</nowiki>
+
+[[File:03 ToonEye EyeAndLidBones.png|frameless]]
+
+Begin by creating the bones for the lids and eyeball. Create one bone at the center of the eye, and two bones rotated 45° to match the edges of the eyelids.
+<nowiki>***</nowiki>
+
+[[File:04 ToonEye Weightbones.png|frameless]]
+
+If your eyelid geo is all one piece, you will need to create two additional bones in order to assist in weight painting while skinning later. These two bones are created at the geometry origin facing the back of the eye. They are positioned at a 45° angle. When you are weight painting the eyelids, you can add weight from the back of the eyelid geometry to these bones in order to maintain volume and prevent the eyeball from poking through. These will be parented to the eyeball’s local control.
+<nowiki>***</nowiki>
+
+[[File:05 ToonEye StretchBones.png|frameless]]
+
+Next we will create the stretch bones that will control the WS FFD that will drive the eye stretch. Create two bones, one stretching vertically through the center of the eye geo and one going horizontally. Leave the end-bones on these, as we will use them to generate the stretch bone. One at a time, with the endbone selected, open the rigging menu in the MAKE toolbar and hit the “stretch point” button under “Basic Rigs v1.2.” You will notice that some point helpers will be generated that can be used to stretch the bone.
+
+
+[[File:06 ToonEye WorldSpaceFFD.png|frameless]][[File:07 ToonEye FFDinfluenceAllVertices.png|frameless|303x303px]]
+
+Next we will create the WS FFD. in the Create tab, under Space Warps >> Geometric/deformables, select FFD(Box) and create an FFD in your scene. Snap it to the center of your eye geo, and set its size to be the same dimensions as your eye. Make sure to check “All vertices” under Deform in the FFD parameters. This will ensure that all the vertices of the geometry will follow the deformations of the FFD.
+
+[[File:08 ToonEye WeightFFD.png|frameless]][[File:09 ToonEye TestingFFDweights.png|frameless|262x262px]]
+
+Now We will weight the FFD to the stretch bones. With your FFD selected, Create a skin modifier and add your stretch bones to the skin (do not add end-bones). Weight all the vertices of the FFD 50% to each bone. Now if you move the point helpers of the stretch bones, you will see the FFD stretches with them.
+<nowiki>***</nowiki>
+
+[[File:10 ToonEye EyeCtrls.png|frameless]]
+
+Next we will create the controls for animation. Create controls for the eyelids and eyeball, make sure that the origin for these is at the center of the eyeball. Create a control for the whole eye. This will be the local control for the whole eye rig (this can also be a point helper). Parent the eyeball and eyelid controls to the local control. Make sure they are named and freeze transforms. Parent the eye bones to their respective control.
+<nowiki>***</nowiki>
+
+[[File:11 ToonEye SquishCtrls.png|frameless]]
+
+Next create controls for each of the point helpers on the stretch bones. Make sure each one is centered on its helper. Parent each control and the FFD to the local control, then parent each point helper to its respective control. Make sure everything is named properly and freeze transforms on controls.
+<nowiki>***</nowiki>
+
+[[File:12 ToonEye EyeWeightTests.png|frameless]]
+
+Skin your eyeball and eyelids to their respective bones. If your Eyelids are all one piece and have the additional two bones, below is an example of what the weights might look like for you.
+
+[[File:13 ToonEye OnePieceLidWeight01.png|frameless|290x290px]][[File:14 ToonEye OncePieceLidWeight02.png|frameless]]
+[[File:15 ToonEye BindToSpaceWarp.png|alt=Bind To Space Warp icon|none|thumb]]
+Notice that the influence of the extra bones is most concentrated on the back of the eye to maintain volume.
+
+Next we will need to bind the eye geometry to the WS FFD. To do this, select the “Bind to Space Warp” button ( located in the upper left corner of the Max window). Select a piece of geo, and then drag to select the FFD. Do this for each piece of eye geo. 
+
+
+[[File:16 ToonEye FFDdeformEyeTest.png|frameless|311x311px]][[File:17 ToonEye FFDdeformEyeTest2.png|frameless]]
+
+Now you should be able to move your eyeball stretch ctrls and your eyeball will stretch or squash. If you transform the controls for the eyeball or eyelids, they will move independently from the stretch transformation.
+
+Now your eyeball rig is complete. You can parent the eye’s local control into your head parent and it should follow the rest of the rig.
+
+== Exporting to the Render Scene ==
+When it’s time to move the animation over to the Layout scene, we can tyCache the geometry rather than point cache it. To do this, create a tyFlow in your scene. Put the tyFlow into its own layer. You will probably want to name it something like “+FX_eyes.” Then open the tyFlow editor.
+
+
+[[File:18 ToonEye tyFlowSetupExport.png|frameless|296x296px]][[File:19 ToonEye ParticleExportRollouttyFlow.png|frameless|294x294px]]
+
+In the tyFlow editor, add an “Export Particles” operator to the tyFlow Editor viewport. In the operator settings, make sure the export type is set to “tyCache.” Next we will add our geometry to the export operator. Open up the Geometry settings and check ON “Include additional geometry.” In the additional geometry box below, add all of your eye geo.
+
+Before exporting, set the frame range and select the filename and output for your tyCache. It’s best to create a folder for the tyCache in your shot’s “Caches” folder. You will also want to make sure that Material ID and Mapping are checked on for your export so that the material can be reapplied to the tyCache. Once you have generated your tyCache, make sure you apply your eye material to it before merging it into your render scene. Now whenever you re-generate your tyCache it should update in your render scene.
+
+That’s it! Have Fun! :)
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Cartoon_Eyeballs

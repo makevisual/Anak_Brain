@@ -1,0 +1,68 @@
+== Previous Article: ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous Article: [[Head]]
+
+== Rigging Hair: ==
+[[File:1 Hair Intro.png|frameless|451x451px]]
+
+My character has luscious locks. I’d like a little more control over its motion than a simulation alone may allow, so I’m going to rig my hair so that it can be deformed like the rest of the body.
+
+[[File:2 Hair HairmeshLinkOnModifier.png|frameless]]
+
+To do this, I’m going to create a “HairMesh Link” Modifier on my character’s hair object. The placement of the modifier shown above is crucial.
+
+The HairMesh Link Modifier links to a geo object that can be manipulated to deform the hair. We don’t have an object in our scene to link the hair to, so we’ll create one. In the HairMesh Link Parameters click the button that says “Create Link Obj. from HairMesh.” A mesh will be generated and automatically link to the hair. Put this new mesh into its own layer, and call it something like “Hair Rig.”
+
+[[File:3 Hair DemoOfHairmeshLink.png|frameless|325x325px]][[File:4 Hair HairmeshLinkGeo.png|frameless|325x325px]]
+
+Now if we manipulate the geometry of our hair link mesh, we can see the hair deforms with it. This hair link mesh can be rigged in the same way as the rest of the body’s geo.
+
+[[File:5 Hair Bones1.png|frameless|374x374px]]
+
+Create some bones for your hair. I’ve created four bones that will be used to control the hair rig. Create a gimbal node at the top bone (near the scalp).
+
+[[File:6 Hair HairCtrls.png|frameless|361x361px]]
+
+Create ctrls to control your hair bones.
+
+[[File:7 Hair Hierarchy.png|frameless|465x465px]]
+
+Parent the hair ctrls starting from the end of the hair working toward the scalp. Parent the top ctrl to the gimbal node, then parent the gimbal node to the head ctrl or the head bend ctrl. Parent each bone to its respective ctrl.
+
+
+The Hair link mesh can then be skinned like normal geo, and the hair will follow.
+
+[[File:8 Hair SkinWrapToHead.png|frameless|377x377px]]
+
+You will also need to skin wrap the hair object itself to the head of the character. Make sure to convert the skin wrap to skin.
+
+== Hair Skin Wrapping: ==
+For hair that sits on the face, like eyebrows, sideburns, etc, we can skin wrap the hair.
+
+[[File:9 Hair SkinWrapModifierStack.png|frameless]]
+
+Create a skin wrap modifier on the eyebrows, and make sure it sits underneath all the displacement and hair modifiers. Before generating a skin, turn off all the modifiers above the skin wrap and then turn them back on again once the skin is generated.
+
+[[File:10 Hair HairFollowDemoBrows.png|frameless|390x390px]]
+
+Now the hair will follow the bones.
+
+== Creating a Proxy Hair Mesh: ==
+Sometimes you may want to see the eyebrows while animating, but the hair mesh is too heavy to keep on in the scene.
+
+[[File:11 Hair ProxyBrows.png|frameless]]
+
+Let’s use the Hair Mesh Link modifier to create a proxy mesh we can look at instead.
+
+Like before, create a hair mesh Link modifier for your brows. This time, it can be at the top of the modifier stack, underneath the WS Hair Display Modifier. Generate a Link mesh. Then, delete the Hair Mesh Link Modifier from the modifier stack. Skin wrap the proxy geo brows to the head and generate skin.
+
+[[File:12 Hair ProxyBrowsDemo.png|frameless]]
+
+Now we have a proxy mesh to represent our hair without slowing our scene way down. Put your proxy geo into the “Hair Rig” layer you created earlier, and turn off the visibility of the Hair layer.
+
+== Next Article: ==
+Next article: [[Skinning]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Rigging_Hair

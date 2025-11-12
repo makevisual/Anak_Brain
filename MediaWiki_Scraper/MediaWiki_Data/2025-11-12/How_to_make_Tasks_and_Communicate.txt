@@ -1,0 +1,22 @@
+This is an article about to make a task, update a task, and communicate within Wrike.
+
+===  1. Click the + button and name the task you're making. ===
+[[File:WrikeTask101 Part1.mov|none|thumb|1920x1920px|1. Click the + button and name the task you're making.]]
+
+=== 2. Write the description for the task. ===
+[[File:WrikeTask101 Part2.mov|none|thumb|1920x1920px|2. Write the description for the task.]]
+
+=== 3. Assign the task to a person. ===
+[[File:WrikeTask101 Part3.mov|none|thumb|1920x1920px|3. Assign the task to a person.]]
+
+=== 4. Fill in the date for the task. ===
+[[File:WrikeTask101 Part4.mov|none|thumb|1920x1920px|4. Fill in the date for the task.]]
+
+=== 5. Communicating on Wrike is similar to communicating via social media. Type @ followed by a name. You can also use @assignees to communicate with everyone added to the task. You can reply to comments, add photos and video, and reply with emojis. ===
+[[File:WrikeTask101 Part5.mov|none|thumb|1920x1920px|5. Communicating on Wrike is similar to communicating via social media. Type @ followed by a name. You can also use @assignees to communicate with everyone added to the task. You can reply to comments, add photos and video, and reply with emojis.]]
+
+=== 6. To update a task you edit the status and change to whatever the progress of the task is. ===
+[[File:WrikeTask101 Part7.mov|alt=|none|thumb|1920x1920px|6. To update a task you edit the status and change to whatever the progress of the task is.]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_make_Tasks_and_Communicate

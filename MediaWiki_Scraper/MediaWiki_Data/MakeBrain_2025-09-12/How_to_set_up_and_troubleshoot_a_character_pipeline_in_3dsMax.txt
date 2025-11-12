@@ -1,0 +1,116 @@
+Point Cache allows for updates to animation using finalized, published versions of the rigs in layout scenes (Full Rig, Animation Rig, Render Rig). This allows for lighter scenes for each party and the ability to work simultaneously on both animation and layout as needed without having to have the actual animation rigs in the layout scenes. Instead of relying on the animation controls for information, the point cache that we use records in object space, the WSM is the world space version, and is not used usually. In addition to being lighter, there are also fewer ways for the animation to have errors, when rendering on a farm. Then this information is applied to a 'Render Rig' that's set up in a layout scene to receive that information. This way the animation can be updated and loaded onto the render rig as needed and project files can stay lighter.
+
+== Creating A New Animation Scene ==
+Start the process by making a copy of the latest layout scene for your shot. Save it to the animation folder and replace 'layout' with 'animation_v001' in the title. Open this new animation file and version up to begin animating.
+
+There will likely only be one main camera viewport. Hit 'Shift + f' over the main camera viewport to see the aspect ratio of the shot, also split the screen in the menus to the left so you have a perspective viewport to work in. 
+
+The scene may already contain early model versions of the character(s) you want to use. Delete these and anything else in the scene that you don't need for animation such as extra cameras, lights. This keeps the scene light and allows for real time playback. Save whatever parts of the environment, such as the ground or other objects that are necessary for your character(s) to interact with.
+
+== Loading In An Animation Rig ==
+[[File:AssetSwitch Anim.png|thumb]]
+In the Make Tools menu at the top select 'Asset Switch'. Once open click the 'No Object(s) Selected' button, navigate to the character's '.asset' file in the character’s main file within the project, click ‘Open’. 
+
+The top button in the Asset Switch will show the character’s name and set up both the material and the rig versions in the drop down menus below that button (next to ‘Ver’).  For the animation scene you'll want to select the animation rig (Anim_001) from the dropdown. Click the 'Switch Asset' button at the bottom. The animation rig will appear at origin.
+
+Bring the character into place using the green Local control only. Do not move the Blue Global, leave it at origin.
+
+Happy animating.
+
+== Driving Characters Or Assets With Constraints ==
+When you have a character that needs to move with something, such as inside a vehicle, you'll want to use constraints. Firstly, you may utilize the Make Parent Constraint to constrain the character's Local control (Green Inner Hexagon) to whatever you need the character to follow. To set the Make Constraint, first select the child, then the parent while holding 'Control', then hit the Space bar while still holding 'Control'. If this is not bound as a shortcut on your computer, you can assign the MAKE PARENT CONSTRAINT macroscript in the hotkey editor. This will link the character to the object you want. The Make Constraint consists of both a position and an orientation constraint instead of just a normal parent.
+
+It should be noted that you should not move the Global control (Blue Inner Hexagon) from origin.
+
+Additionally, if you'd like a character to pick up and or drop an object you may use position and orientation constraints, depending on your needs. These constraints are keyable in the motion panel under the 'Position' and 'Rotation' buttons respectively. You can add targets to these child and parent objects and animate the weights of these values over time as needed. it is recommended that you utilize point helpers instead of using these constraints on the actual controls. Parent the parents! 
+
+Be advised that 'Link Constraints' are not compatible with MAKE's pipeline.
+
+== Caching Your Animation ==
+Once your animation is ready it's time to cache out so it can be brought into the layout scene.
+
+To begin Point Caching, version up your animation scene. Open the Make Toolbox from the top menu if it’s not already open. Select the rigging tools button at the top. You’ll be utilizing the buttons in the section titled ‘PointCacheBatch’.
+[[File:Xml.jpg|thumb]]
+First, make sure you hit 'Snap to Timeline' so the correct time range gets cached.
+
+Select all geo for the character you wish to point cache. Double click on the characters geo layer or select the character's geo after turning off the controls.
+
+In the Make Toolbox select 'cache mod on'. This turns on point cache modifiers on all selected pieces of geometry. Once that's done select the triple dot button next to 'cache selection' to create a location for the cache to go. In the project’s shot folder there will be a 'Caches' folder. Open this and create a folder for your specific character's cache. Give it a name that relates to the character and a version number. Example STO_v001. Click 'Select Folder'. The cache will start.
+
+You'll see the cache working as the blue bar completes each piece of geo. Repeat this process each time you want to update animation in the layout scene.
+
+Save your scene.
+
+== Caching Into The Layout Scene ==
+First, before opening the layout scene ensure that no one else is using it. Version up once you're in.
+
+Create an extra viewport screen to work in. Remove any old model versions if they're in the scene.
+
+First you need to bring in a render rig using the Asset Switch again. With the Asset Switch open, hit the 'No Object(s) Selected' button and navigate once more to the character's '.asset' file. This will populate the rest of the menus. You’ll need to select the 'Render_001' for the render rig from the bottom drop down menu. Select 'Switch Asset' to bring in the rig. Render rigs have no controls other than the Blue Global. It will already have Point cache modifiers on its pieces of geo.
+
+Be sure and click 'Snap to Timeline' in the Make Toolbar again for this scene.
+
+Next, with the geo still selected hit the triple dot button next to 'Reload Selection' and navigate to your previously saved cache in the 'Caches' folder. Opening that will immediately begin to point cache the geo with all of your cached animation.
+
+Save your scene.
+
+== Character Effects Scene Creation ==
+If effects and simulation are to be a part of the project there will need to be a Character Effects scene created in addition to animation and layout scenes. Start the process by making a copy of the latest layout scene. Save it to the Effects folder and replace 'layout' with 'Effects_v001' in the title. Open this new file and version up to begin bringing in the animation. Load in your animation rig using the same process stated above with the "Asset Switch'. Once that's done you'll need to load in the animation for each character from your animation scene. 
+
+With the animation scene open select all controls on the specific character who's animation you need. Go up to the 'Animation ' menu and select 'Save Animation'. Give the file a name and location. Then return to your effects scene and select all the controls on the same character. Again, return to the 'Animation' menu at the top and select, 'Load Animation'. Navigate to the animation file that you just saved out from your animation scene.
+
+== Objects That Can't Be Point Cached ==
+If there are objects that you've animated in the animation scene that can't be point cached you'll need to either File > Import > Merge them in from the assets objects folder, or from the animation scene itself. If you can help it it's best not to have objects with controls in the layout scene. However, if you do need to do this you can merge them in (this should carry with it all of the animation if taking from the animation scene) or you can use the Transforms Baker in the Make Tools.
+
+Note that an object typically needs skin or some other modifier affecting it on a sub-object level in order to create information Point Cache can record. Add a skin modifier and weight it to a bone. Geo can't simply be parented to a bone or control. It must be skinned and weighted in order for the point cache to pick it up. If you're doing this make sure the object has a global that the geo is parented to.
+
+==== Transforms Baker ====
+Note that this option is destructive, you can't undo once it's been done. It's recommended that you save your scene beforehand, go through this process, save out the item you need and then reopen the scene to the state before it was performed.
+
+In the animation scene, create a point helper, align and constrain it to the object that you want to get the animation from. Select the Transforms Baker in the Make Tools menu and click the 'Bake To Control Object'. This will bake keys down on each frame of the point helper that it creates. Select the point helper that has the animation on it, at the top menus select Animation > Save Animation. Either create a new Animations folder or save this in the caches folder.
+
+Now return to the layout scene, create a new point helper, align and constrain it to the desired object so it's in the same position as the point helper in the animation scene. Select the point helper and at the top go to Animation > Load Animation. Navigate to your saved animation file. This will get the object to move along in the same way as the animation scene.
+
+==== Rigging Objects To Avoid ====
+Certain objects that are sometimes utilized can't be point cached and or break the point cache along the way. Ideally, these aspects will be worked out before one gets to this point, but sometimes they do need to be a part of the process. These include, but are not limited to World Space FFD's, Link Constraints, Etc. In that case, you can Tycache, VrayMesh export, or Alembic Cache something out, preferred in that order. If you're unsure, feel free to ask someone for advise.
+
+== Troubleshooting ==
+Below Are some potential solutions to issues that may arise during this process.
+
+==== Cache Mode Still On ====
+If you return to the animation scene and the character isn't following the controls anymore. Point cache mode is still on. Simply select the character's geo and select the 'Cache Mode Off' button from the Make Toolbox. This turns off all point cache modifiers on each piece of geo selected. The character should follow the controls again.
+
+==== 'Snap To Timeline' Isn't Clicked ====
+If you're point caching but nothing seems to be happening make sure you've hit 'Snap To Timeline', this ensures that the cache will start at the current timeline range which starts at 1000 at MAKE. Otherwise it will start caching at frame 1 and nothing will happen(Because there's nothing on frame 1). You must remember to re-click this every time you open the scene if you're going to be point caching.
+
+==== Not Everything Was Selected When Caching ====
+If something didn't carry over make sure it was on the geo layer in the animation scene when you selected. if it was outside of that layer simply put it in the geo layer and re-cache.
+
+==== Point Cache Modifier May Not Be Present ====
+If there is a piece of geo that isn't doing what it's supposed too there may not have been a point cache modifier on either the render rig or the animation rig. Check the modifier stack to verify. Add it where needed and try re-caching. Also, with the geo selected you can click the 'Add Point Cache Above Skin' button in the make toolbox.
+
+==== Render Rig Isn't Current ====
+The render rig that's currently in the scene may not be the most up to date version. You can check what version you're using by selecting the global and opening the asset switch. Sometimes there may have been updates that were just added in without a new publish, so it doesn't hurt to just reload it in anyway just in case.
+
+==== Checking If Renderable Geo Is Parented To The Global Only ====
+All geo that you plan on point caching must be parented to the Global (Blue Control) on both the animation and render rig. You can check this by selecting a piece of geo and hitting 'Page Up' on your keyboard. The selection will change to what that geo is parented to.
+
+==== Geo Names Don't Match Between Scenes ====
+In render and layout scenes make sure the name of the piece of geo in question is the same for both animation and render rigs. If you need to change the name, with the geo selected, make sure to open scene utilities in the Make Toolbox and click the 'Save Name On Selected' button.
+
+==== Animation Rig Geo/Object Geo Isn't Weighted To A Bone ====
+Add a skin modifier and weight it to a bone. Geo can't simply be parented to a bone or control and be point cached. It must be skinned and weighted in order for the point cache to pick it up. If you're doing this make sure the object has a global that the geo is parented to.
+
+==== Static Object Needs A Noise Modifier ====
+[[File:Noise Modifier.png|thumb|431x431px]]
+There are times when a piece of geo doesn't get recorded by the point cache simply because it's not moving enough. In a case like this, you can add a noise modifier and set it to a very subtle level so that the point cache can then pick it up. Add the noise modifier below the point cache in the modifier stack as seen in the photo. Under 'Strength' set either x, y or z to .001. Make sure that the 'Animate Noise' box is checked.
+
+==== Modifier Stack Order Mismatch ====
+Making sure the modifier stacks between the animation and render rigs are as consistent as possible will help to insure that everything gets point cached properly.
+
+==== Geo Cache Is Too Big ====
+[[File:Pc2 Example.png|thumb]]
+If there is an item that has a high poly count, sometimes the cache file comes out larger that 1 gig (1,000,000 KB). File size can be seen in the folder you cached into. If this happens and the geo won't cache you can change a few settings in the point cache batch menu as seen in the picture. Crank up the frames per sample from .25 to 1.0 and change .xml to .pc2. Then recache and it should follow like normal.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_set_up_and_troubleshoot_a_character_pipeline_in_3dsMax

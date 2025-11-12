@@ -1,0 +1,257 @@
+=What is keying and roto=
+keying is isolating object or person on green/blue background using various keying nodes. (ex/ keylight, primatte, IBKGizmo)
+
+Roto is manually drawing splines around object or person to isolate them from background.
+
+
+Early in the comping process, we will do rough keys to create rough daily edit. Then shots will be sent to outside vendor for proper keying or roto.
+
+[[How to prepare shots or content for vendor]] 
+
+
+If keying needs to be done in studio, you want to work on them incrementally getting rid of obvious flaws first then refine.
+
+Don't spend too much time in one shot to finalize since that shot could get cut off from edit.
+
+= Keying in Nuke =
+
+==Keylight==
+First, you will want to connect "OCIOFileTransform" to footage to increase contrast and color for better keying.
+
+[[How to get OCIOFileTransform]]
+
+
+Press Tab to search for keylight. Connect Source input to footage you want to key.
+
+Double click on keylight node to open the property
+
+[[File:Keying and roto in Nuke__Start.jpg|1000px]]
+
+
+"Screen Colour" is where you will set background color (green or blue) to key
+
+click on black colored icon next to color wheel. it will turn into spoid.
+
+hold down "Ctrl" key and click on green/ blue background of footage 
+
+[[File:Keying and roto in Nuke keying 01.jpg|1000px]]
+
+
+Green background will turn into black. now you have keyed green background 
+
+press A key see in alpha view. Goal is to make green background mostly black and objects mostly in white.
+
+[[File:Keying and roto in Nuke keying 02.jpg|1000px]]
+
+
+Start by adjusting Alpha Bias numbers. Change RGB values individually to make object alpha more white and background more black.
+
+Open "Screen Matte" and adjust "Clip Black" and "Clip White" 
+
+[[File:Keying and roto in Nuke keying 03.jpg|1000px]]
+
+
+once you are happy with result, you want to link alpha channel back to untreated footage.
+
+Create "Shuffle" node below the footage and link keylight to A channel.
+
+
+In shuffle node, connect A channel's alpha to output's alpha
+
+Resulting image will be unpremultiplied so put premultiply node before connecting to background.
+
+[[File:Keying and roto in Nuke keying 04.jpg|1000px]]
+
+
+If your footage has items that weren't keyd (light, stage, etc), you will want to roto them out.
+
+
+=Edge Care=
+When you are done with keying, you will see that edges around objects don't blend too well with background
+
+You will need to do some despill and edge blending to get better integration
+
+Let's start by adding erode on our key. Press tab to search erode and place it after our keying work.
+
+[[File:Keying and roto in Nuke__Edge_Care_01.jpg|1000px]]
+
+
+Dialate node will show up. By changing "size" you can choke or expand keyed edges.
+
+Let's put -2 in "size". You will see that it got rid of white around edges. Don't choke too much since it will remove edge details.
+
+[[File:Keying and roto in Nuke__Edge_Care_02.jpg|1000px]]
+
+
+Let's put despill on our footage. Despill removes green tint on footage casted by green screen.
+
+We will use "DespillMadness" node right below shuffle where we merge alpha. Always despill before premultiply for correct look.
+
+[[File:Keying and roto in Nuke__Edge_Care_03.jpg|1000px]]
+
+
+Default setting got rid of greens on footage but also made yellow color to look orange
+
+Let's change "despill algorithm" to find setting best suitted for this footage. 
+
+
+Cycling through the algorithm, "double red average" gave most accurate color for the footage while removing green colors.
+
+Tweak "fine tune" if needed to get better color or better green removal.
+
+[[File:Keying and roto in Nuke__Edge_Care_04.jpg|1000px]]
+
+
+Now we are going to add lightwrap to mimik light spill from background to foreground objects.
+
+
+Create "bm_Lightwrap" node before premultiply and connect BG input. Lightwrap will create proper look when place before premultiply.
+
+Default setting of the lightwrap is bit strong so start by changing "Brightness" to 0.5. 
+
+
+Now you can tweak settings to get a look that looks best to use. 
+
+For this shot, I changed "Merge Operation" to Screen and turned off "Use Luminance-based wrap" to get result I want.
+
+[[File:Keying and roto in Nuke__Edge_Care_05.jpg|1000px]]
+
+
+Lastly, we are going to add "EdgeBlur" after premultiply. EdgeBlur works best on premultiplied footage.
+
+Edgeblur can blur edges and change brightness of edges to better integrate with background. 
+
+For this shot, I'll set "size" to 2 since objects are small in frame and set "brightnes" to 0.75 to match darker background.
+
+[[File:Keying and roto in Nuke__Edge_Care_06.jpg|1000px]]
+
+
+You can also add more edgeblur with mask to extra blur defocused area.
+
+
+==IBKGizmo==
+IBKGizmo is often used in studio to key fine detail (ex. hair)
+
+IBKGizmo consists of IBKColour which is used for isolating green background and IBKGizmo actual keying node
+
+
+In this example, you can see edges around hair doesn't respect background's brightness or color
+
+[[File:Keying and roto in Nuke IBK 01.jpg|1000px]]
+
+
+Let's start by connecting IBKcolour node to footage. Change screen type to green in this case.
+
+Lower the Red and Blue value in "lights" to isolate object or person in black
+
+[[File:Keying and roto in Nuke IBK 02.jpg|1000px]]
+
+
+Increase "size", "erode" and "patch black" so you are left with green screen covering everything
+
+[[File:Keying and roto in Nuke IBK 03.jpg|1000px]]
+
+
+Now lets create IBKGizmo node and connect bg, fg and C to appropriate place.
+
+Connect it's output back to footage using "merge" node. Use "Copy"operation since we want to replace previous key on hair.
+
+Make sure to merge it in after premultiply and despill since IBKGizmo output is already premultiplied and despilled.
+
+[[File:Keying and roto in Nuke IBK 04.jpg|1000px]]
+
+
+You will see edges around hair is much cleaner. Now tweak the setting to make it more natural.
+
+In this shot, turning off "use bkg luminance" and "use bkg chroma" resulted in best looking key
+
+All that's left to do is put roto around hair so we are only using IBK around hair edges
+
+[[File:Keying and roto in Nuke IBK 05.jpg|1000px]]
+
+
+IBKGizmo changes color of the footage to create good looking key but it is not ideal for creating clean alpha so only use it when it's needed.
+
+
+==IBKColour to create shadow==
+IBKColour can be used to create shadow on keyed objects.
+
+Idea is to use IBKColour's chocking property to create clean green plate behind object while keeping shadow on green surface.
+
+
+In this example, you can see objects look floaty on top of background.
+
+[[File:Keying and roto in Nuke IBK Shadow 01.jpg|1000px]]
+
+
+Start by connecting IBKColour to footage. Change "screen type" to green and lower Red and Blue value to isolate objects in black
+
+[[File:Keying and roto in Nuke IBK Shadow 02.jpg|1000px]]
+
+
+Now tweak "size", erode" and "patch black to remove black from screen. Becareful not to change it too much since you will lose shadow detail.
+
+Shadow will go behind the footage and will be rotoed so some black is ok.
+
+[[File:Keying and roto in Nuke IBK Shadow 03.jpg|1000px]]
+
+
+Now we are going to add shuffle and make alpha white to get rid of alpha created by IBKColour. 
+
+[[File:Keying and roto in Nuke IBK Shadow 04.jpg|1000px]]
+
+
+Next we are going to add "Color Correct" to desaturate and make background brighter. Wherever there is no shadow should be complete white.
+
+Tweak contrast to get nice clean shadow.
+
+[[File:Keying and roto in Nuke IBK Shadow 05.jpg|1000px]]
+
+
+
+Put "Clamp" node below it. Clamp will limit white so you will not get bright spot when you multiply shadow pass.
+
+Now let's merge back in between background and footage as multiply operation.
+
+[[File:Keying and roto in Nuke IBK Shadow 07.jpg|1000px]]
+
+
+All that's left is to create roto to isoalte shadows. 
+
+[[File:Keying and roto in Nuke IBK Shadow 08.jpg|1000px]]
+
+
+=Roto in Nuke=
+There are two ways to roto in nuke. "Roto" node and "RotoPaint" node
+
+In Roto node, you draw splines to isolate object. In RotoPaint, you use brush to paint objects.
+
+
+==Roto==
+In node graph view, pressing O will create Roto node.
+
+When you are rotoing, you want to be looking at original resolution of the footage. Viewing footage after reformat node will create roto that doesn't match original footage scale.
+
+
+Start drawing splines either around the item you want to keep or item you want to delete whichever is easier per shot.
+
+When you are done with the frame, go to different frames to adjust roto to match item. 
+
+
+For rotos that needs high accuracy, do frame numbers in reverse geometric sequence (128,64,32,16,8,4,2) between frames as needed. This way, you will alway be making keyframe exactly in the middle of previous keyframes
+
+When you are done with Roto, merge it with keying node you created as mask or matte operation.
+
+[[File:Keying and roto in Nuke Roto 01.jpg|1000px]]
+
+
+==RotoPaint==
+Roto paint is often used to erase small matte issues for few frames. In node graph view, pressing P will create Rotopaint node. 
+
+By default, roto paint will only paint on single frame. You can change that from menu on top as neede.
+use stencil operation in merge node when you want to paintout things using Rotopaint.
+
+[[File:Keying and roto in Nuke RotoPaint 01.jpg|1000px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Keying_and_roto_in_Nuke

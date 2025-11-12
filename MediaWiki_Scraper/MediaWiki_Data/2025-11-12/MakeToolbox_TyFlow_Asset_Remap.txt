@@ -1,0 +1,43 @@
+= TyFlow Asset Remap =
+
+== Overview ==
+[[File:TyFlowAssetRemap UI.png|380x380px]]
+
+'''TyFlow Asset Remap''' is a tool from the MakeToolbox toolset designed to batch re-path external assets, such as VRay Proxies, used within TyFlow objects. It is used to fix broken asset links when a project's folder structure has been changed or moved.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "TyFlowAssetRemap" from the scripts dropdown menu.
+# '''Select Asset Path:''' Click the '''"Select Assets Path"''' button and navigate to the root folder where the TyFlow asset files are now located.
+# '''Set Options:''' Configure the remapping process using the checkboxes:
+#* '''Search subfolders:''' Enable to have the tool search recursively through all subdirectories of the selected path.
+#* '''Only missing assets:''' Enable to only update paths for assets that are currently reported as missing.
+#* '''Only selected TyFlow(s):''' Enable to limit the operation to the TyFlow objects currently selected in the scene. If disabled, all TyFlow objects will be processed.
+# '''Execute Remap:''' Click the '''"Remap"''' button to begin the re-pathing process.
+# '''Review Results:''' After completion, check the status labels for a summary of the operation. For detailed information on any duplicate or missing assets, consult the MAXScript Listener.
+
+== User Interface ==
+The interface contains controls for path selection, search options, and execution, along with a status report section.
+
+=== Path Select ===
+
+* '''Select Assets Path:''' A button to open a folder browser and select the root directory containing the assets.
+* '''X:''' A button to clear the currently selected path.
+* '''Selected folder:''' A label that displays the name of the currently selected folder.
+
+=== Options ===
+
+* '''Search subfolders:''' A checkbox to toggle searching within subdirectories.
+* '''Only missing assets:''' A checkbox to toggle remapping only for assets with broken paths.
+* '''Only selected TyFlow(s):''' A checkbox to limit the tool's operation to the current selection.
+
+=== Execution & Status ===
+
+* '''Remap:''' The main button that starts the asset remapping process.
+* '''Assets to remap:''' A status label that shows the total number of assets targeted for remapping.
+* '''Assets remapped:''' A status label that shows how many assets were successfully re-pathed.
+* '''Duplicate Assets:''' A status label that indicates if multiple files with the same name were found in the search path.
+* '''Missing Assets:''' A status label that shows how many assets could not be found in the specified path.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_TyFlow_Asset_Remap

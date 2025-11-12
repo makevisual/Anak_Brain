@@ -1,0 +1,40 @@
+
+
+'''<u><big>General Information</big></u>''' 
+
+Every shoot has different equipment needs that are based on where a shoot takes place, the subject and the desired look. 
+
+The equipment list for a shoot is finalized during the Crew Pre Production meeting that takes place before Prelight. 
+
+This meeting always includes the Director, Producer(s), VFX, DP, Key Gaffer and Key Grip. 
+
+Depending on the specifics of the shoot this meeting could also include: 1st AC, Toy Tech, Art Department, Production Coordinator etc. 
+
+{| class="wikitable"
+|+'''<big><u>MAKE Equipment Reference and Tracking Documents</u></big>'''
+|[[2024 MAKE Stage Inventory]]
+|All inclusive list of Camera and G&E equipment owned by MAKE.
+|-
+|[[MAKE Gear Package]]
+|Check In/Out List of equipment owned by MAKE for used for off site shoots.
+[[Workflow - Check out or using film equipment]]
+|}
+'''<big><u>General Equipment List Steps for Three Types of Shoots</u></big>''' 
+
+# <big>'''On-Site Shoot'''</big> (@ MAKE)
+#* [[2024 MAKE Stage Inventory]] and Project Boards/Animatics are shared with Crew before Crew Pre Production Meeting. 
+#* During Crew Pre Production meeting director will go through all shots to discuss how the desired effect will be accomplished, using what specific Camera, G&E, etc. equipment.  
+#* Item(s) determined necessary that are not on the [[2024 MAKE Stage Inventory]] are added to list of items for rental. This rental list is contributed to and compiled in an email between Producer, DP, Gaffer, Grip. 
+#* Final equipment rental list is then sent to rental vendor and a price quote is requested.
+#* Price quote is shared with Creative Director prior to prelight for approval. 
+# <big>'''Off-Site Studio Shoot'''</big>
+#* The same steps are followed as for an On-Site Shoot except: 
+#** During the Crew Pre Production Meeting it is decided if and what <u>MAKE owned Camera, Camera equipment, Lenses and/or Lights</u> will be brought to the Off-Site Studio.   '''''NOTE'''''  *** No MAKE owned G&E equipment is brought to Off-Site Studios. All G&E equipment is rented. ***
+#** [[MAKE Gear Package]] list is used to Check equipment OUT before it is taken to the Off-Site Studio and checked back IN when it returns to MAKE after the shoot.
+# '''<big>Location Shoot</big>'''
+#* The same steps are followed as for an Off-Site Studio Shoot except: 
+#** Equipment Rental discussion and rental list creation will largely take place during the Location Tech Scout.
+#** Additional production equipment and rentals including transportation, tables, chairs, etc. will be needed. Line Producer/Production Coordinatior is in charge of these items.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Determine_equipment_list

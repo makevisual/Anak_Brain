@@ -1,0 +1,33 @@
+= PRSswap =
+== Overview ==
+[[File:PRSAndSwap UI.png|299x299px]]
+
+'''PRSswap''' is a tool from the MakeToolbox toolset designed for the swapping of transform values (Position, Rotation, and Scale) between two objects. This tool offers control, enabling users to select specific axis for each transformation type.
+
+== How to Use ==
+The tool requires exactly two objects to be selected to function correctly.
+
+# '''Open the Tool:''' From MakeToolbox, select "PRS_Swap Tool" from the scripts dropdown menu.
+# '''Select Two Objects:''' In the viewport, select the two objects whose transforms you wish to swap.
+# '''Choose Axis:''' Use the checkboxes in the Position, Rotation, and Scale groups to specify exactly which axis you want to exchange. By default, all axis are selected. You can deselect any you wish to remain unchanged.
+# '''Execute Swap:''' Click the '''"Transform and Swap"''' button to perform the operation. The selected transform values will be exchanged between the two objects.
+
+== User Interface ==
+
+=== Position ===
+This group contains three checkboxes ('''X''', '''Y''', '''Z''') that control which axis of the objects' positions will be swapped.
+
+=== Rotation ===
+This group contains three checkboxes ('''X''', '''Y''', '''Z''') for swapping rotation. The tool's behavior changes based on your selection:
+
+* '''One Axis Selected:''' The tool will swap and align only the selected axis, recalculating the other two to maintain a valid orientation.
+* '''Multiple Axis Selected:''' The tool will swap the entire rotation matrix between the two objects.
+
+=== Scale ===
+This group contains three checkboxes ('''X''', '''Y''', '''Z''') that control which axis of the objects' scales will be swapped.
+
+=== Transform and Swap Button ===
+Clicking this button executes the swap based on the axis selected in the groups above. An error message will appear if you do not have exactly two objects selected.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_PRS_and_Swap

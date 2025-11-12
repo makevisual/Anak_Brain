@@ -1,0 +1,91 @@
+
+== Step-by-step workflow to create a project from a blueprint in Wrike: ==
+
+# Log in to your Wrike account and navigate to the "Workspace" where you want to create the project.
+# Click on the 3 vertical sandwich menu in the top left to pull up the navigation panel.
+# Select "Blueprints" to pull up all the available project blueprints.
+# Browse the available blueprints and right click on the one that applies to your project, this will most likely be "Client Project Template" with the most recent date.
+# Right-click on the blueprint and select "Create from blueprint" to bring up the project creation window
+# On the "Create a New Project" page, fill in the project details and select "+ Location" and set it to "Client".
+## Set the Project Name to the full title, this can be long and it will not impact anything but it is best to have the full name so you can find it later on.
+## Set the project with a Pre-Fix (generally just the project name itself will work), so every task will have the project name. Note: This prefix will put it on every task on the calendar and that can become too long to read, if your title is too long just make an acronym so everyone can find it easily.
+## Set the start date of the project, you will still need to manually shift many key dates but I suggest setting it to a Monday as it will line up a lot of the templates days to work days naturally.
+
+   Note: If you forgot to select a location it will place it in your "Personal Space" by default.
+
+== How to move a project into a shared space ==
+To share a project is very simple and is needed incase a project is living only in one of your spaces, i.e. "Personal Space".
+
+If you select a project, the overview window of the project comes up on the right and in the below image, the arrow points to the spaces this project lives in. 
+
+The plus sign lets you add the project to locations. If the project is '''not''' in "Active Client Project" or "Active Pitches Space", it will '''not''' be visible to the entire company. 
+
+A project can have multiple locations at the same time but the most important is to have "Active Client Project" in the project line.
+ To remove a project from a section, hover over the name and click the "x" and it will be removed.
+[[File:Creating Wrike Projects ProjectOverviewPage ProjectLocation.jpg|778x778px]]
+
+== Setting Up the Wrike Project ==
+After the initial project is created, we then need to go through and update all the small pieces on it.
+
+Pieces requiring specific updating are:
+
+The schedule folder needs to have the name added to the end of it, the time task needs to have the project name added to it, Make sure the project name matches exactly with the server folder, update the project cover letter with the scope of work with deliverables.
+
+== Best Practices for organizing tasks ==
+Create the schedule and work in as it happens in phases then use those schedule tasks to mirror into the main task structure with phases and dates set in all of them.
+
+[[File:Creating Wrike Projects ScheduleExampleWithPhases.jpg|frameless|759x759px]]
+
+The phases are the parent tasks and then each subtask is an action point in the process.
+ 
+The parent tasks that are phases can be assigned for what color base just to visually aid.
+
+All steps are in the following category: Send Client, Receive Client, Meeting, Event, Shoot, Delivery
+
+After the schedule is set and approved, you can copy all the main parent task into the project folder and it will then have all your due dates set for all the tasks and give a structure of everything that will be done. The main thing you need to do after the copying is to update all the tasks status to the correct status and delete all the receive from client receive tasks that are not needed to reduce clutter. Need to make sure to update the shoot day tasks from "Shoot" status so it does not duplicate on the MAKE shoot calendar in Wrike.
+
+[[File:Creating Wrike Projects ParentTaskExample.jpg|frameless|759x759px]]
+
+Always set start and end dates on your tasks so they can populate correctly on reports and tools in Wrike.
+
+[[File:Creating Wrike Projects WorkflowReport.jpg|frameless|759x759px]]
+
+==== Tips for how to Wrike project organizations ====
+Wrike has a few tools that are buried in Wrike but when you know where they are, they can help you immensely. 
+
+[[File:Creating Wrike Projects ImportFromExcel.png|frameless|800x800px]]
+
+One is "import from Excel". This feature lets you take a formatted excel and create all the tasks and subtasks based off of them. The reason this is powerful is because you can pull down a schedule from a previous project and use Excel (or Google Sheets) Find and Replace feature to change the name of everything in one quick swoop.
+   Note: If you use this, it will probably break any links as the task IDs change.
+
+
+Another big tool the help move everything all at once is for a schedule requires changing the view to list view as this gives access to the "Mass Edit" button (why is it only on List View, only Wrike makers know).
+
+[[File:Creating Wrike Projects ListViewMassEdit.png|frameless|619x619px]]
+
+Once you select Mass Edit you can select all the tasks and shift them dates all at once by hitting the advanced schedule button revealing all the selections of mass edit.
+
+[[File:Mass Edit full options.png|frameless]]
+
+This is also helpful if you want to mass change status' of tasks. Which is helpful for the next tip.
+
+
+To make a project's task structure of all the To-Do's without having to make each one individually and set all the due dates individually. You can copy the scheduling tasks parent into the main project and use the mass edit feature to turn all "Send Client" tasks to "To-Do" tasks and delete all "Receive Client" tasks. Then you have now made all of the tasks parent and structure ahead of time. Just remember that as you update the calendar you need to update the due dates on each task as you go.
+
+=== Delivery Tasks ===
+With the task structure built, it is always good to know what the end goal of any project is and to get all of the deliverable specs to verify. Sometimes those specs can create curve balls through the project that might adjust and add extra steps into the structure so knowing the end before you begin is massively helpful. If you are you working on a project with a consistent client, i.e. Habsro, Spinmaster, or Mattel. then you can reference the old deliverables set as a good baseline. You can also always find deliverable templates for the bigger clients, or make them for yourself by creating a task in your personal space, so you can copy and paste later.
+
+
+[https://www.wrike.com/open.htm?id=1396265606 Deliverable template] tasks that you can copy and paste for the major clients are
+
+* Hasbro - https://www.wrike.com/open.htm?id=1396265674
+* Mattel - https://www.wrike.com/open.htm?id=1396265675
+* Spinmaster - https://www.wrike.com/open.htm?id=1396265671
+* Market Team at MAKE - https://www.wrike.com/open.htm?id=1396265672
+* MN Filmboard Instructions- https://www.wrike.com/open.htm?id=1163453741
+
+
+All of these Tasks are meant to be copied and then customized to the current deliverables that are needed for this specific project.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Create_Wrike_project

@@ -1,0 +1,44 @@
+=Masters=
+Video mastering is simply the term for finalizing your video product. During the mastering process, you will establish the version to be deployed for distribution. The masters will be used to create all of the video files included in the final delivery.
+<br>
+
+The Masters will be used to create the digital versions of the edit, which will uploaded to the web for distribution, as well as imported into slated edits, where they will be rendered again with the slates for broadcast distribution.
+<br>
+
+Masters should be rendered using a visually lossless file format. Use ProRes files unless otherwise specified by the delivery specs.
+
+=Super-Less Masters=
+Super-Less Master are similar to the above, but with supers, logos, and legal removed. 
+
+You should always build your edit in a way that these elements are not baked into your shots. They should be easy to turn off or on with a single click. See the photo below for a good example of how supers are brought into an edit. all of the supers are on their own video tracks and are not part of the shots.
+<br>
+[[File:Creating_Masters,_Super-less_Masters,_and_Graphics_Only_Edits_-_SuperTracksExample_v01.JPG|250px]]
+<br>
+
+Super-Less versions of the edit should always be distinguished by a change in the file name, usually by just adding a ''"_Superless"'' to the end of the file name. It is a good idea to create a new export preset in Hiero for the Super-Less versions with the change in file name, and selected tracks for the export.
+<br>
+[[File:Creating_Masters,_Super-less_Masters,_and_Graphics_Only_Edits_-_SuperlessExport_v01.JPG|250px|caption]]
+
+
+
+=Graphics Only Edits=
+
+Graphics Only Edits are exactly as they sound, a version of the edit with only graphics. this should be the reverse of what was disabled to create the Super-Less Edits. Graphics Only edits do not need audio.
+<br>
+
+Like the Super-Less, your edit should always build your edit in a way that these elements are easy to isolate.
+<br>
+
+Graphics Only Edits always need to be rendered with an alpha channel, use ProRes 4444.
+<br>
+
+The Graphics Only Edits should always be distinguished by a change in the file name, usually by just adding a ''"_GraphicsOnly"'' to the end of the file name. It is a good idea to create a new export preset in Hiero for the GraphicsOnly versions with the change in file name, codec, channels, and selected tracks for the export.
+<br>
+[[File:Creating_Masters,_Super-less_Masters,_and_Graphics_Only_Edits_-_GraphicsOnlyExport_v01.JPG|250px]]
+
+
+
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_Masters,_Super-less_Masters,_and_Graphics_Only_Edits

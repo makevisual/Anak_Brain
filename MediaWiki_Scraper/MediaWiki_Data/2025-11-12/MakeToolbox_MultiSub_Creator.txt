@@ -1,0 +1,40 @@
+= MultiSub Material Creator =
+[[File:MultiSubCreator UI.png|307x307px]]
+
+== Overview ==
+The '''MultiSub Material Creator''' is a tool from the MakeToolbox toolset designed to automate the process of combining materials from multiple objects into a single Multi/Sub-Object material. This is useful for scene optimization, allowing artists to consolidate many materials into one, which is then applied back to the objects with the correct material ID assignments. The tool can either create a brand new Multi/Sub-Object material or append new materials to an existing one.
+
+== How to Use ==
+The workflow depends on whether you are creating a new material or modifying an existing one.
+
+=== Creating a New Multi/Sub Material ===
+
+# '''Open the Tool:''' From MakeToolbox, select "MultiSub Mat Creator" from the scripts dropdown menu.
+# '''Select Objects:''' In the viewport, select all the objects whose materials you wish to combine.
+# '''Name the Material:''' In the "Material Name" text field, enter a desired name for the new material.
+# '''Choose Creation Method:''' Ensure the '''"Create new MultiSub"''' radio button is selected.
+# '''Combine:''' Click the '''"Combine MultiSub Material"''' button. The tool will process the selected objects, create the new material, apply it, and display the new Multi/Sub-Object material in the Slate Material Editor.
+
+=== Appending to an Existing Multi/Sub Material ===
+
+# '''Open the Tool:''' From MakeToolbox, open the "MultiSub Mat Creator" tool.
+# '''Open Slate Material Editor:''' Make sure the Slate Material Editor is open.
+# '''Select Material in Slate:''' In the Slate editor, select the single Multi/Sub-Object material node you want to add to.
+# '''Choose Method:''' Select the '''"Use selected MultiSub"''' radio button.
+# '''Link Material:''' Click the '''"Get selected MultiSub"''' button. The button's text will change to the name of your selected material, confirming it's linked.
+# '''Select Objects:''' In the viewport, select the new objects whose materials you want to add to the linked Multi/Sub material.
+# '''Combine:''' Click the '''"Combine MultiSub Material"''' button. The tool will add the new materials to the existing Multi/Sub material and apply it to the newly selected objects.
+
+== User Interface ==
+
+* '''Material Name:''' A text field to define the name of a new Multi/Sub-Object material. This is only active when "Create new MultiSub" is selected.
+* '''Create new MultiSub / Use selected MultiSub:''' These radio buttons switch the tool's mode of operation.
+** '''Create new MultiSub:''' The default mode. It gathers materials from selected objects to build a new Multi/Sub-Object material from scratch.
+** '''Use selected MultiSub:''' This mode allows you to add materials to an existing Multi/Sub-Object material.
+* '''Get selected MultiSub:''' This button links the tool to a Multi/Sub-Object material currently selected in the Slate Material Editor. It is only enabled when "Use selected MultiSub" is active.
+* '''X (Clear Button):''' Clears the currently linked material, allowing you to select a different one.
+* '''Combine MultiSub Material:''' The main action button. Clicking it executes the combining process based on the current settings and object selection.
+* '''Object Status / Material Status:''' These labels provide real-time feedback during the operation, showing which object is being processed and the final count of combined materials or skipped objects.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_MultiSub_Creator

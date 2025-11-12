@@ -1,0 +1,128 @@
+=Where to start=
+
+So, you find yourself here, with the task in front of you to make a MAKE Brain article. The [[Main Page| MAKE Brain]] runs on Mediawiki, and has an extensive help file, and reference library online which you can find at the following links.
+
+[[https://www.mediawiki.org/wiki/MediaWiki| www.mediawiki.org/wiki/MediaWiki ]]
+
+[[https://www.mediawiki.org/wiki/Help:Formatting| www.mediawiki.org/wiki/Help:Formatting ]]
+
+----- 
+
+But if you have done this before, or would like to jump right in, you can very easily, by following this guide.
+
+For starters, your '''''Cheat Sheet''''' to being able to easily and quickly make an article, is to steal the formatting of another, or to use it as a reference point. By clicking 'Edit Source' above any article, you can view its source text, and view all of its formatting, and pick and choose what you want to use. Instead of hunting around for what you want, there is an article for you, one that contains most of the common formatting situations.
+
+[[TestPage| This is the test page that is a good starting point. ]]
+
+=Article Request=
+
+If you recieved a request to create an article, follow these steps to find and include the information on your article that is needed.
+
+[[File:Creating_an_article_in_the_MAKE_Brain_Article_Request.JPG|450px]]
+
+To locate your article stub that has not been made yet, you can find your page to start editing by going here:
+https://makevisual.com/brain/mediawiki/index.php?title=Special:WantedPages&limit=500&offset=0
+
+[[File:Creating_an_article_in_the_MAKE_Brain_Locate_article_stub.JPG|450px]]
+
+This will list all the referenced, but not yet existing pages. You can now search for your "Article Stub" in this page, click its link, and you will be brought to its editing page.
+
+Then you can go ahead and create your article with the appropriate content, text, images, or videos.
+
+[[File:Creating_an_article_in_the_MAKE_Brain_New_Article_Creation.JPG|450px]]
+
+You will additionally want to include the article category link as well, as the very last thing on your page. Your category, if you have one, is listed in your request task. It is possible that there could already be a category in your article when you start it, and this is OK. Please add your category as well, each article can be the member of multiple categories.
+
+If appropriate, you can link your article in other articles, but if you received an article request, it is already referenced in at least one location.
+
+=Making your own Article=
+
+You can make an article for any topic needed, and you do not need permission or approval to create one. If you find yourself explaining a process or technique multiple times, that is a good indicator you may want an article to hold the information, as well as any media.
+
+To do so, you simply need to create a link to a page, and follow it, to start editing. To create a link to a page, you simply type the desired name of the page, within brackets, like this, and a link to that page will be created. If that page already exists, clicking the link will take you there, if not, clicking the link will prompt you to create the page.
+
+ <nowiki>
+[[This is the name of my new article]]</nowiki>
+
+Whenever creating a page you should follow the following standards and best practices to ensure a consistent and functional MAKE Brain.
+
+=Standards and Best Practices=
+
+=== Give your article a descriptive, and active name ===
+
+The MAKE Brain is a repository for information regarding aspects ranging from production, animation, the physical office, IT, Software, Onboarding, and nearly anything else worth recording. Please take a moment to consider a concise, descriptive, and active name.
+
+A name should be descriptive, so it can be differentiated from other similar articles. Additionally when describing a process with software, include the name of that software. That way if the process is changed to a different method in the future, the article can be differentiated, and we wont need to delete potentially useful information.
+
+Giving an article an active name is a good idea, because many of the topics are processes or techniques. There are some that are documents, or information repositories, that a clear name should help distinguish. Below are some examples of poor names, compared to a better name that can be used.
+
+* 'equipment' vs 'Ways to check out equipment'
+* 'edit checklist' vs 'Review an edit for QC'
+* 'exporting an edit' vs 'Encode a video using Adobe Media Encoder'
+
+===Link to your article in multiple places===
+
+The more places that your article is linked, the more useful it will become. If you are given an existing article to create, then it is already linked in some places. But if you are creating a new one, you will need to add it into some pages, or the main page, for it to be visible. There are other ways that an article can become vible as well. Here are some locations you can add links
+
+* Main Page - The main page is organized to contain many groups of information. Find the appropriate area to add your link.
+* Workflows - If you have a more specific article, or something that is part of a process, it can be linked in a 'workflow', which is a series of related articles that are presented in a progression, to help locate other, related, and relevant articles.
+* Bread Crumbs - In other articles inline text [[TestPage|like this]] can link to [[Main Page|various places]]. You can add links like this to anyone's article if appropriate.
+* Categories - Adding each article to a category is a good way of making it easy to locate related articles as well. If you are given a category, please add it. Otherwise you can find an existing one that is related to add. Note - A category should be the last thing on a page. An article may be the member of multiple categories.
+
+===Considerations===
+
+*Nothing is precious, articles can be created easily, you do not need permission to make an article!
+*There are version histories, and backups of the articles, do not feel like you are stepping on any toes by making an edit or an update, previous versions can be restored if needed.
+*As you are reading through the MAKE Brain, if you notice some information that is out of date, or incomplete, add to, or correct it. This is a living library that is only as useful as its content.
+
+=How To=
+
+===Navigate to or create a page===
+
+You can create a new article anywhere, simply by creating a link to it. This is how you can create a new article.
+
+ <nowiki>
+[[This is the name of my new article]]</nowiki>
+
+Once created, you can follow that link to a page that will prompt you to add content to, and create the page.
+
+===Include the category===
+
+Include a category tag, that looks like this, as the very last thing in your page, and it will draw a category box.
+
+You can add as many categories as you want, they are non-exclusive
+
+ <nowiki>
+[[Category:Technique]]</nowiki>
+
+===Include and embed Media===
+
+You can upload pictures and video to the Mediawiki, where it will be hosted, and is available site-wide. Anywhere you call the reference to the file on any page, it will be displayed. Files have histories, and their own pages as well. All the files must have a unique name, or they will cause conflicts with existing files. As you create content, it is important to give it a descriptive, unique name.
+
+For starters, please save any media to the MAKE Brain location on the network. You can find that location here:
+ <nowiki>
+U:\MAKE_SITE\MakeBrain\Pages_and_Content</nowiki>
+
+[[File:Creating_an_article_in_the_MAKE_Brain_Where_to_save.JPG|450px]]
+
+In this folder, please make a sub-folder with the name of the article that you are creating content for. Please name your files with the name of the page, plus their description, to make sure there are only unique names, and there are no conflicts. You can 
+
+[[File:Creating_an_article_in_the_MAKE_Brain_Recursive_image.JPG|450px]]
+
+To include media, click on the 'upload file' link on the left-hand side.
+
+[[File:Creating_an_article_in_the_MAKE_Brain_Upload_a_file.JPG|450px]]
+
+Once you have uploaded you media ( images or video ) you can embed it into an article in the various ways [[TestPage|that are displayed on the Test Page]].
+
+Once you have uploaded an image, you can call that image, and set its width by using the following syntax.
+
+ <nowiki>
+[[File:Creating_an_article_in_the_MAKE_Brain_Upload_a_file.JPG|450px]]</nowiki>
+
+That should be everything needed to create a basic MAKE Brain article!
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_an_article_in_the_MAKE_Brain

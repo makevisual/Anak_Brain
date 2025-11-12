@@ -1,0 +1,65 @@
+== Previous Article: ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous article: [[Rigging Basics]]
+
+== Preliminary Checks: ==
+Before we begin the rigging process, we should first double check our character models and make sure they are suitable for rigging.
+
+== Scale and Placement ==
+Before checking the scale of your character, make sure your scene scale and units are set up properly in 3ds Max.
+[[3dsmax Standards and Practices|See here for more details on scale and units settings in 3ds Max.]]
+
+[[File:Preliminary Rig Checks Scale and Placement.png|250px]]
+
+First check and make sure the geometry and the global are located at the world origin (0,0,0).
+Then make sure the geometry and global are set at the correct scale. In gimbal mode, take a look at the absolute scale of each piece of geo and the global (located in the bottom right side of the 3ds Max window). Everything should be set to 100. If the global is incorrect, scale it to the correct size. Before rescaling, parent your geo to the global.
+
+[[File:Preliminary Rig Checks 100 Percent Scale.png|250px]]
+
+We can also see that the grids are 10x10 units. Looking at our character in the front view, we can see that he is 80 units tall, making him about 6’ 5” (1 unit = 1 inch). This height seems consistent with the character. If your character is too small, but the scale is 100, you may have to scale to the desired size and reset xforms (Utilities panel > Reset XForm > Reset Selected).
+
+[[File:Preliminary Rig Checks Measuring Tape.png|250px]]
+
+If you wanted to confirm this value you could measure the character. Press “X” in the viewport and type “tape measure” into the pop-up search 
+(also located in create > helpers (standard) tab as "Tape"). Select the Tape Measure and measure the height of the character.
+
+[[File:Preliminary Rig Checks Measuring Tape Length.png|250px]]
+
+We can see the length in the Tape Measure Parameters. The measured length is 80 inches.
+
+== Rotation ==
+[[File:Preliminary Rig Checks Character Faces South Orientation.png|250px]]
+
+Be sure to also make sure your character is facing “South” in the negative Y direction. This is marked as “FRONT” on the viewcube in the upper right corner of your Max window. This is the direction all characters should be facing in order to ensure consistency.
+
+== Symmetry ==
+[[File:Preliminary Rig Checks Symmetry Tools.png|250px]]
+
+Make sure all of the verts in the center of the geo align with the world center axis. There is some leeway with symmetry during skinning with the mirror threshold, making it possible to mirror weights even if there is some minor asymmetry, like with the modeled-in tears the tunic of this character. However if you are unsure about the symmetry of a character you can check it by eye with the symmetry modifier (do not collapse this: can mess up UVs). You can use the symmetry tools (modeling ribbon > Polygon Modeling dropdown > Symmetry Tools) to make the geometry symmetrical if there are inconsistencies. You’ll need to duplicate your geo and select it with the symmetry tools picker first.
+
+If you have a character that is by design asymmetrical, it may be helpful to create a symmetrical version of the character for skinning. You would skin this symmetrical mesh, and then skin-wrap the asymmetrical mesh to the symmetrical one in order to transfer the weights.
+
+== Materials ==
+Make sure that all the materials that are applied to your character exist under one multi-material, and that the multi-material is assigned to your character. If there is more than one material applied to your character, it will interfere with publishing when you are done rigging your character. Technically, having one multi-material is in best practice and should be happening anyway, but sometimes people make mistakes.
+
+If you find that there are multiple materials applied to your character instead of one multi-material, please send it back to the person who created them and ask them to revise it. Or if you made the mistake, fix it! your future self will thank you.
+
+== Unnecessary Modifiers ==
+[[File:Preliminary Rig Checks Uncheck Slice And Weld.png|none|thumb|This character's eyes have a symmetry modifier that can be collapsed before rigging.]]
+It’s important to make sure unnecessary modifiers are collapsed out of the stack. In this instance, the character’s eyes have a Symmetry modifier on them that can be collapsed out. (If your character has eyes that intersect one another, uncheck “Slice Along Mirror” and “Weld Seam” before collapsing so that the eyes remain whole, separate geo.)
+
+Do not collapse modifiers like the turbosmooth or displacement, as they are part of the rendering rig and would make the rig too dense and heavy for animation. Instead, turn modifiers such as Turbosmooth and Displacement off in the viewport to keep things running smoothly. A good rule of thumb is to collapse things below the skin modifier, and things above it can remain.
+
+Additionally, for other types of geo, it may be necessary to refrain from collapsing the modifier stack. This is especially important for hair meshes (which have modifiers that specify the appearance and styling for the hair) and cloth drivers (which have modifiers used to simulate cloth physics and collision).
+
+If you’re unsure about what a set of modifiers are doing, ask the person who modeled the character to clarify first before collapsing the stack.
+
+== Parent Geo to Global ==
+Once all of your preliminary checks are done, parent all of your character’s geometry to the global ctrl. This is one step towards ensuring your asset is exported properly when publishing the rig at the end.
+
+== Next Article: ==
+Next article: [[Beginning The Rig]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Preliminary_Checks

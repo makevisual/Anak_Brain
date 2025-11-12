@@ -1,0 +1,74 @@
+=== [[MAKE AI Policy|'''MAKE AI Policy''']] ===
+If you have any concern regarding AI usage at MAKE, please check the above.
+
+=== Introduction ===
+
+* Midjourney is very useful for pitching process, especially to make mood boards and quick styleframes.
+* It can accelerate the preproduction process especially if the project is such a quick turnaround with a short timeline.
+* It also informs many visual information early on the process such as texture types and materiality, and such.
+
+=== How to access Midjourney ===
+
+* You need Discord to use Midjourney. You can access Discord either using the application installed on the desktop or via the website.
+** https://discord.com/
+* Log in using MAKE credential, made specifically for Midjourney: ask a technical director for the credential
+* Midjourney bot, where you command to generate images, can be found under Direct Chat.[[File:Midjourney Bot.jpg|none|thumb|Midjourney Bot]]
+
+=== How to use Midjourney ===
+
+==== Commands ====
+[[File:Command.jpg|none|thumb|385x385px|Basic commands]]
+
+* Midjourney is a text based AI, so writing prompts correctly and specifically is the key to yield better outcomes.
+* Type the command you want to use, then hit enter to write the prompt.
+
+==== /imagine ====
+
+* This will be the very first go-to command that is used the most of the time. '''/imagine''' is the command to generate images.
+* Write the prompt as specifically as possible to yield better results.
+* If you are generating images in particular styles of existing properties like specific animations or products, type the names in Title Case. When you have them in Title Case, it usually results better images much closer and relevant to original style sources.
+** Example #1
+ American football video game having funny glitches --ar 16:9 vs '''Madden NFL''' video game is having funny glitches --ar 16:9
+[[File:Comparison.jpg|none|thumb|1384x1384px|Example #1]]
+
+* Example #2
+
+ fire truck in disney cars style vs Smiley baby firetruck in '''Disney Cars''' style --ar 16:9
+[[File:Comparison2.jpg|none|thumb|984x984px|Example #2]]
+
+* '''''Does adding Aspect Ratio matter?'''''
+** It sort of matters; if you add aspect ratios in your prompt, Midjourney will look at the reference in those ratio. By default Midjourney will generate images in 1:1, referencing social posts most likely. If you set the aspect ratio on 16:9, it will likely reference sources in 16:9 such as movie screen shots, which is conceptually already close to the style we want.
+
+* If you are generating graphic assets to make styleframes or particular reference images of certain objects, listing keywords would be enough to yield what you need. [[File:Listing.jpg|none|thumb|700x700px|Listing prompts]]
+* If you are generating reference images for moodboards, be very specific with the writing. the prompt can combined with listing and full sentences. [[File:Fullsentence.jpg|none|thumb|700x700px|Listing and sentences; Courtesy of Alec]]You can also generate images in certain ratio by adding the following at the end of the prompt. Keep that in mind that if you set up aspect ratio, Midjourney will reference source images in that ratio.
+
+ [Prompt] --ar 00:00 (ex: --ar 16:9) *ar stand for Aspect Ratio
+
+* ''Be careful with spacing! Midjourney prompts are case and space sensitive!''
+* The following is the link to Midjourney command & prompt help, if you want to know more about additional commands & prompts
+** https://docs.midjourney.com/docs/prompts-2
+
+==== Upscaling (U) and Vary (V) ====
+[[File:UpscaleNDVary.jpg|none|thumb|700x700px]]
+* You will find U and V, and numbers next to those letters. Numbers indicates the image number. Image #1 is the top left; #2 is the top right; #3 is the bottom left, #4 is the bottom right.
+* U is to get higher quality image, V is to get more variations of the selected image. For example, you like Image #2 and you want to have more variations like Image #2, you may click V2.
+* After initial upscaling, you can upscale or vary the image once more in two ways; Subtle and Creative.
+** Upscale Subtle will upscale the already upscaled image little bit more.
+** Upscale Creative will upscale the image drastically by adding more details.
+** Vary Subtle will generate a batch of variations with very subtle differences.
+** Vary Strong will generate a batch of variations with drastic differences.
+[[File:VariationSutleStrong.jpg|none|thumb|990x990px|Variation Subtle vs Strong]]
+
+==== Refresh the batch ====
+If you don't see anything you like among the batch, you can repeat the command by clicking Refresh to get a new batch with different options.
+
+==== Zoom Out ====
+Zoom Out is literally to put the camera further away from subjects so we can see more extensions around the subject.
+[[File:ZoomOut.jpg|none|thumb|1138x1138px|Zoom Out]]
+
+==== Save the image ====
+You can access higher res images if you click through to get to the full res version. 
+[[File:Image-2024-10-29 11 41 16.png|none|thumb|700x700px|Save Image]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Intro_to_MidJourney

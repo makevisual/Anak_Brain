@@ -1,0 +1,20 @@
+= Object Collapser =
+[[File:ObjectCollapser UI.png|177x177px]]
+
+== Overview ==
+'''Object Collapser''' is a tool from the MakeToolbox toolset designed to collapse the modifier stack of selected objects.
+
+== How to Use ==
+
+# '''Open the Tool:''' From MakeToolbox, select "Object Collapser" from the scripts dropdown menu.
+# '''Select Objects:''' In the viewport, select one or more objects that have modifiers you wish to collapse.
+# '''Collapse:''' Click the '''"Collapse Objects"''' button. The modifier stack on each valid selected object will be collapsed.
+
+'''Note:''' The tool will only affect selected Geometry and Shape objects that have one or more modifiers applied.
+
+== User Interface ==
+
+* '''Collapse Objects Button:''' This is the main and only action button. Clicking it will immediately perform the collapse operation on all valid objects in the current selection.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Object_Collapser

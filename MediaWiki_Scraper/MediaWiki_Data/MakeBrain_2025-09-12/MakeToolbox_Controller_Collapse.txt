@@ -1,0 +1,36 @@
+= Controller Collapse =
+
+== Overview ==
+[[File:ControllerCollapse UI.png|294x294px]]
+
+'''Controller Collapse''' is a tool from the MakeToolbox toolset that "bakes" or "caches" the animation of an object's controllers into explicit keyframes. It is useful for simplifying complex controller setups into standard Bezier keyframes.
+
+This process can improve scene performance, ensure animation compatibility with other software (like game engines), and "lock in" procedural animation.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "ControllerCollapse" from the scripts dropdown menu.
+# '''Set the Frame Range''': Enter the start and end frames manually or click "Snap To Timeline" to use the current scene's animation range.
+# '''Choose controllers to collapse''': Using the checkboxes ("Collapse Transforms" and/or "Collapse Attributes").
+# '''Select Objects''': Select one or more objects in your scene.
+# Click '''"Collapse in Selected"''' to run the tool on your current selection, or '''"Collapse in All"''' to run it on every object in the scene.
+
+== User Interface ==
+The script's interface is organized into two main sections.
+
+=== Frame Range ===
+This group defines the time segment that will be baked.
+
+* '''Start / End Spinners''': Manually set the start and end frames for the collapse operation.
+* '''Snap To Timeline''': Automatically sets the start and end spinners to match the active timeline range in your scene.
+
+=== Keyed Controllers ===
+This group contains the main actions and options for the tool.
+
+* '''Collapse in Selected''': Executes the collapse operation only on the objects that are currently selected.
+* '''Collapse in All''': Executes the collapse operation on all objects in the scene.
+* '''Collapse Transforms''' (Checkbox): When checked, the tool will bake the Position, Rotation, and Scale controllers of the objects.
+* '''Collapse Attributes''' (Checkbox): When checked, the tool will bake any animatable custom attributes found in the objects' modifiers.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Controller_Collapse

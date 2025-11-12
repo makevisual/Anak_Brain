@@ -1,0 +1,26 @@
+= VrayProxy Display Changer =
+
+== Overview ==
+[[File:VRayDisplayer UI.png|233x233px]]
+
+'''VrayProxy Display Changer''' is a tool from the MakeToolbox toolset that allows a user to quickly change the viewport display mode for selected VRayProxy objects. This is useful for managing scene complexity and improving viewport performance when working with many high-poly proxies.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "VrayDisplayer" from the scripts dropdown menu.
+# '''Select Objects:''' Select one or more VRayProxy objects in the viewport.
+# '''Choose Display Mode:''' In the tool's interface, click the radio button corresponding to the desired display mode. The change will be applied immediately to all selected proxies.
+
+== User Interface ==
+The interface consists of a single group of radio buttons that control the display property of VRayProxy objects.
+
+=== VRayProxy Display Mode ===
+
+* '''BoundingBox:''' Displays the proxy as a simple wireframe box, representing its total volume.
+* '''Preview from file (faces):''' Displays a decimated, solid-shaded version of the proxy's geometry as defined in the proxy file.
+* '''Preview from file (edges):''' Displays a decimated, wireframe version of the proxy's geometry.
+* '''Point:''' Represents the proxy as a single point marker at its pivot.
+* '''Show whole mesh:''' Displays the full, original geometry of the proxy in the viewport. This is the most visually accurate but also the most resource-intensive option.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_VRay_Displayer

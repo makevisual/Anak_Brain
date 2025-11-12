@@ -1,0 +1,396 @@
+'''Welcome to the MAKE Brain! Here you can find information and resources '''
+=Intro to MAKE =
+*[[Employee Onboarding]]
+<!--
+	* key company policies
+	* Go over what a typical day at the office looks like and mention:
+	* Regular work times
+	* Vacation/ paid time off
+	* Remote Access
+	* Sick leave
+	* Phones
+-->
+
+*[[IT Orientation Introduction]]
+*[[Communication Channels]]
+*[[Google Workspace Overview]]
+<!--
+	* MAKE Email
+	* Skype
+	* FrameIO
+	* Discord
+*[[IT_Orientation_Introduction|IT Orientation]]
+** [[Project Folder structure]]
+
+	* IT Best Practices
+		** Don't install stuff
+	* Network
+	* Naming conventions
+	* Licensing and software and passwords, keep your stuff
+-->
+*[[Artistic Vision]]
+<!--
+    * MAKE Artistic Presentation
+-->
+
+= Production =
+=== Production Workflows ===
+*[[Workflow - Production Checklist]]
+*[[Workflow - Deliverables standards and best practices|Workflow - Collect information from client]]
+*[[Workflow - Offline Editorial]]
+*[[Workflow - Online Editorial]]
+*[[Workflow - Editorial Offline to Online]]
+*[[Workflow - Create project working environments]]
+*[[Workflow - Audio]]
+*[[Workflow - Broadcast TVC]]
+*[[Workflow - Digital Distribution]]
+*[[Workflow - Social Media Post]]
+*[[Workflow - Create Production Book]]
+*[[Workflow - How to archive a project]]
+*[[Workflow - How to create an asset in 3dsMax]]
+*[[Workflow - QC vendor roto or paint-out package]]
+*[[Workflow - How and When to use OBS for recording meetings]]
+*[[Workflow - How to create a Roto Vendor schedule]]
+
+=== Production Techniques ===
+*[[How to create and schedule a zoom call]]
+*[[Creating Shot Diagrams]]
+*[[How to prepare shots or content for vendor]]
+*[[How to Check out or use film equipment]]
+*[[Deliverables standards and best practices]]
+*[[How to VFX Supervise a live action shoot]]
+*[[VFX Tracking Markers Best Practices]]
+*[[Wrike advanced techniques]]
+*[[Wrike Tools Calendars and Reports]]
+*[[Deck making procedures]]
+
+= Guidelines =
+[[MAKE Strategy 2024]]
+
+= Digital Content Creation =
+
+=== Editorial and Video Techniques ===
+*[[Studio Color Pipeline: ACES Overview & Best Practices]]
+*[[Studio Color Pipeline: How to Use ACES at MAKE]]
+*[[Encode a video using Adobe Media Encoder]]
+*[[Graphics Templates in Adobe CC]]
+*[[Create a closed caption using Adobe Premiere]]
+*[[Reduce offline editorial project file]]
+*[[Conforming an online edit in Hiero]]
+*[[Create a notation edit in Hiero, Premiere, or After Effects]]
+*[[Creating a Roto Document and packaging footage to send to Rotoscope team]]
+*[[Export and share a daily]]
+*[[Slating a project for broadcast TVC]]
+*[[Offload and Transcode footage from a film shoot]]
+*[[Logging and Weeding offline footage to prepare an edit]]
+*[[Creating a graphics package]]
+*[[Review an edit for QC]]
+*[[Creating a BTS or VFX breakdown of a project]]
+*[[Working with, and understanding action, title, and island safe]]
+*[[Creating MoodEdits|How to create mood edits]]
+*[[DaVinci Resolve Standards and Practices]]
+
+=== 3D Asset Techniques ===
+*[[Rigging a character in 3dsMax]]
+**[[Rigging Basics]]
+**[[Preliminary Checks]]
+**[[Beginning The Rig]]
+**[[Legs/Feet]]
+**[[Arms/Clav]]
+**[[Head]]
+**[[Rigging Hair]]
+**[[Skinning]]
+**[[Character Cloth|Cloth]]
+**[[Finishing The Rig|Finishing]]
+*[[Vehicle Rigging in 3dsMax]]
+*[[Creating an asset in 3dsMax]]
+**[[Modeling an asset in 3dsMax]]
+**[[Laying out uvs on an asset in 3dsMax]]
+**[[Texturing an asset in 3dsMax]]
+**[[Using hair and fur on an asset in 3dsMax]]
+**[[Shading an asset in 3dsMax]]
+**[[Publishing an asset in 3dsMax]]
+**[[Converting CAD for production]]
+**[[Creating assets from photos with Substance]]
+*[[Gaussian Splatting]]
+
+=== 3D Animation Techniques ===
+* [[Animating In 3ds Max Quick Start Guide]]
+
+=== 3D Pipeline Techniques ===
+* [[How to set up and troubleshoot a character pipeline in 3dsMax]]
+* [[Introduction to Deadline]]
+
+=== 3D Rendering Techniques ===
+*[[Rendering in 3dsMax using vRay]]
+*[[Using LPM for rendering in 3dsMax]]
+*[[Troubleshooting Idiot Checks in LPM when submitting renders in 3dsMax]]
+*[[Rendering Unreal Engine using NukeX]]
+*[[Introduction to Deadline]]
+
+=== 2D Rendering Techniques ===
+*[[2D Rendering in Deadline]]
+
+=== AI Techniques ===
+*[[MAKE AI Policy]]
+*[[Intro to MidJourney]]
+*[[Intro to Stable Diffusion]]
+*[[Intro to TyDiffusion]]
+
+=== Authoring System Techniques ===
+*[[Ingesting assets into Unreal Engine Standards and Best Practices]]
+* [[Materials in Unreal Engine Best Practices and Standards]]
+* [[How to prepare materials for a multi-sub object import in Unreal Engine]]
+
+=== 2D Animation Techniques ===
+*[[Creating an animation in Photoshop for use in After Effects|Creating an animation in Photoshop]]
+*[[Creating an animation in ToomBoom Harmony]]
+*[[Exporting a .png sequence from photoshop]]
+*[[Procedure for Saving and importing Photoshop animation for use in After Effects]]
+
+=== 3D Compositing Techniques ===
+*[[Nuke Standards and Practices]]
+*[[Keying and roto in Nuke]]
+
+=== 2D Compositing Techniques ===
+*[[Sunny Side Down 2D Compositing]]
+
+=== Audio Techniques ===
+*[[Audio standards and best practices]]
+*[[Creating audio stems and mixdowns]]
+*[[Creating an audio package]]
+
+=== Concepting, Writing, and Ideation Techniques ===
+*[[How to write a script for a MAKE Original]]
+*[[How to make a mood board]]
+*[[How to make styleframes]]
+*[[Storyboard procedures and best practices]]
+
+=== Project Techniques ===
+*[[Create a notation edit in Hiero, Premiere, or After Effects]]
+*[[Building a shot structure in Hiero]]
+*[[Delivering files to client via FTP, Frame IO, Dropbox or Extreme Reach]]
+*[[Creating a BTS or VFX breakdown of a project]]
+
+=== Brand Collateral Techniques ===
+*[[Update the Front hall display]]
+*[[How to update the MAKE website]]
+*[[How to update the MAKE website - Social page]]
+*[[How to update Vimeo]]
+*[[How to update Social Media platforms]]
+*[[Creating social media content]]
+
+=Resources=
+
+*[[Office Coordinator responsibilities and processes]]
+
+====IT and Helpdesk====
+* [[IT Support Ticket]]
+* [[Active Directory - Accounts, Logging On, and Permissions]]
+* [[Connecting to a domain computer with windows remote desktop connection]]
+* [[Troubleshooting networking issues]]
+* [[Troubleshooting computer issues]]
+* [[Troubleshooting software issues]]
+* [[Submitting a ticket]]
+* [[Adobe Creative Cloud Licensing]]
+* [[Google chat space setup]]
+
+====Learning====
+* [[Using the MAKE Brain]]
+* [[Creating an article in the MAKE Brain]]
+* [[Online Classes Library]]
+* [[Tutorials Library]]
+* [[3dsMax Beginner Courses]]
+* [[How to give a Workflow Workshop]]
+
+====Templates====
+* [[Presentation & Production Book]]
+* [[Motion and editorial Templates]]
+* [[Slating Templates]]
+* [[Resolutions and aspect ratios]]
+* [[VFX Shooting Document]]
+* [[Shooting Schedule]]
+* [[Shooting Diagrams]]
+* [[Shooting Schedule]]
+* [[Vendor DCC templates]]
+* [[Digital Asset List Templates]]
+* [[Call Sheets]]
+* [[MAKE Gear Package]]
+* [[2024 MAKE Stage Inventory]]
+* [[HotWheels 3D Assets Directory]]
+
+====Assets====
+* [[Resources - Stock Footage]]
+* [[Resources - Models]]
+* [[Resources - Images]]
+* [[Resources - Audio]]
+
+=Software and Tools=
+
+[[Software and Tools Overview]]
+
+
+==Wrike==
+[[Wrike|All Wrike Articles]]
+
+General Info
+*[[How To Navigate Wrike]]
+*[[How to Enter Time]]
+*[[How to make Tasks and Communicate]]
+*[[Wrike task best methods and practices]]
+*[[Wrike standard task usage]]
+*[[Wrike advanced techniques]]
+*[[Version Stacking in Wrike]]
+Producer Info
+*[[Create Wrike project]]
+*[[How to create a public calendar and share it in Wrike]]
+*[[Create project schedule in Wrike]]
+*[[Wrike Tools Calendars and Reports]]
+
+==FrameIO==
+[[:Category:FrameIO |All FrameIO Articles]]
+*[[Create FrameIo project]]
+*[[FrameIO best methods and practices]]
+
+==Adobe CC==
+[[:Category:Adobe|All Adobe Articles]]
+
+* [[Installing Adobe Creative Suite]]
+* [[licensing Adobe products]]
+
+* [[Premiere Standards and Practices]]
+* [[After Effects Standards and Practices]]
+* [[Photoshop Standards and Practices]]
+* [[Working with custom brushes in Photoshop]]
+
+==Autodesk==
+
+[[licensing Autodesk products]]
+
+===3dsMax===
+[[:Category:3dsMax|All 3dsmax Articles]]
+
+* [[MakeToolbox]]
+
+* [[3dsmax Standards and Practices]]
+
+====3dsmax 2021====
+* [[3dsmax 2021 installation|3DSMax 2021 & Plugin Installation]]
+* [[3dsmax 2021 MAKE Tools]]
+
+====3dsmax 2023====
+* [[3dsmax 2023 installation]]
+* [[3dsmax 2023 Plugins]]
+* [[3dsmax 2023 MAKE Tools]]
+
+===Maya===
+[[:Category:Maya|All Maya Articles]]
+====Maya 2023====
+* [[Maya 2023 installation]]
+* [[Maya 2023 Plugins]]
+
+==Chaos Software==
+[[:category:Chaos Software|All Chaos Software articles]]
+
+* [[licensing ChaosGroup products]]
+* [[Vray 5]]
+* [[PhoenixFD 3]]
+
+==Unreal Engine==
+[[:category:Unreal Engine|All Unreal Engine articles]]
+* [[Unreal Engine Standards and Practices]]
+
+===Unreal Engine 5.1===
+* [[Unreal Engine 5.1 installation]]
+* [[Unreal Engine 5.1 Plugins]]
+* [[Unreal Engine 5.1 MAKE Tools]]
+
+==Foundry==
+
+[[licensing Foundry products]]
+
+===Nuke===
+
+[[:category:nuke|All Nuke Articles]]
+* [[Nuke Standards and Practices]]
+
+====Nuke 13====
+* [[Installing Nuke|Nuke 13 installation]]
+* [[Nuke 13 Plugins]]
+* [[Nuke 13 MAKE Tools]]
+
+====Nuke 14====
+* [[Installing Nuke|Nuke 14 installation]]
+* [[Nuke 14 Plugins]]
+* [[Nuke 14 MAKE Tools]]
+
+==AWS Thinkbox==
+[[:category:Thinkbox|All AWS Thinkbox articles]]
+
+* [[licensing AWS Thinkbox products]]
+* [[Deadline 10 installation]]
+* [[AWS Thinkbox Plugins for 3dsMax installation]]
+
+==ACT!==
+* [[How to enter data in ACT!]]
+* [[How to retrieve information in ACT!]]
+
+==Stable Diffusion==
+[[:Category:Stable Diffusion |All Stable Diffusion Articles]]
+*[[How To Access & Use Stable Diffusion]]
+*[[How To Restart Stable Diffusion if it is unavailable]]
+
+==Other==
+* [[ Anderson technologies / Syntheyes ]]
+* [[RawtoAces]]
+* [[Asset Switch]]
+* [[3D Printing Troubleshooting ]]
+
+=Software and IT=
+[[:Category:IT| All IT articles]]
+===Requesting IT Support===
+* [[Submitting a Ticket]]
+
+=== Workstation & Monitor Troubleshooting ===
+Try one of these self-service support articles if you're experiencing an issue.
+* [[Wacom Cintiq Troubleshooting|Wacom Cintiq Troubleshooting]]
+* [[Common Hardware Issues & Workarounds]]
+
+===Email & Calendar===
+* [[Log into Microsoft Outlook for Email]]
+
+===Computer Setup===
+* [[Setup a workstation]]
+* [[Setup a rendernode]]
+* [[Re-Enable Toast Notifications]]
+* [[Add a Device to the Domain]] (Active Directory)
+
+=== Software Installation ===
+* [[Installing Adobe Creative Suite]]
+* [[3dsmax 2021 installation|Installing 3DSMax & Plugins]]
+* [[Installing Nuke]]
+* [[Installing Deadline 10]]
+
+===Accessing Render Nodes===
+* [[Access a Render Node via Remote Desktop Connection]]
+
+===Network Access===
+* [[Network locations and purposes]]
+* [[Connect to the network]]
+* [[Emulate the network]]
+* [[Connect to the network via the VPN]]
+
+===Version Control===
+* [[Connect to our codebase using Github]]
+* [[Create a SVN Database]]
+* [[Administer a SVN Database]]
+
+===Network Backup and Restoration===
+* [[Backup files with Veeam]]
+* [[Restore files with Veeam]]
+
+===Codebase===
+* [[Connect to our codebase using Github]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Main_Page

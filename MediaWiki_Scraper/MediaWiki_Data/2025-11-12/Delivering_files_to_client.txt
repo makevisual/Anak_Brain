@@ -1,0 +1,6 @@
+This article has been split into multiple topics
+
+[[Delivering files to client via FTP, Frame IO, Dropbox or Extreme Reach]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Delivering_files_to_client

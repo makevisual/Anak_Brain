@@ -1,0 +1,32 @@
+= Distance Monitor =
+
+== Overview ==
+[[File:DistanceMonitor UI.png|202x202px]]
+
+'''Distance Monitor''' is a tool from the MakeToolbox toolset that interactively displays the distance between two points in the viewport. This is a helpful tool for precision modeling, animation, and rigging, allowing you to get real-time feedback on the spacing between elements.
+
+The two points can be the pivots of two different objects or two vertices within a single Editable Poly or Editable Mesh object.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "DistanceMonitor" from the scripts dropdown menu.
+# '''Select Objects''':
+#* '''To measure between objects''': Select two objects.
+#* '''To measure between vertices''': Select a single Editable Poly/Mesh object and enter its vertex sub-object mode. Select exactly two vertices.
+# '''Click "Enable Distance Monitor"''': A line, markers, and a text label showing the distance will appear in the viewport between your selected points.
+# '''To measure a new set of points''': Change your selection and '''right-click''' the main monitor button (which now reads "Right Click to Update").
+# '''To stop the monitor''': simply click the main button again to disable it (Recommended to always turn it '''OFF''' if you don't need to monitor the distance of objects or vertices).
+[[File:DistanceMonitor Example.png]]
+
+== User Interface ==
+The script's interface is simple and focused on its core task.
+
+* '''Enable Distance Monitor''': This is the main toggle for the tool.
+** When '''clicked on''', it activates the viewport display. The button's text will change to "Right Click to Update".
+** When '''clicked off''', it deactivates the display and cleans up the tool.
+** When '''right-clicked''' (while active), it updates the measurement points based on your current selection without needing to turn the tool off and on.
+* '''<-->''': This text label provides context for what is currently being measured. It will display the names of the two objects or the indices of the two vertices.
+* '''Print Distance to Listener''': Click this to print the current measured distance value to the MAXScript Listener. This is useful for logging values to use them somewhere else.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Distance_Monitor

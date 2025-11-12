@@ -1,0 +1,39 @@
+= Controller Tools =
+
+== Overview ==
+[[File:ControllerTools UI.png|251x251px]]
+
+'''Controller Tools''' is a tool from the MakeToolbox toolset  that provides a set of common, time-saving utilities for managing object controllers. It is primarily used during character rigging and animation setup to quickly zero out, clear, copy, and paste object transforms.
+
+The script allows an animator or rigger to easily create a "zeroed out" state for controls, reset them to a default state, or transfer transform values between objects, either from memory or via an external file.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "Controller Tools" from the scripts dropdown menu.
+# '''Select Objects''': Select one or more objects in your scene you wish to modify.
+# Select the object(s) you wish to modify.
+# Use the buttons and checkboxes as described below to perform the desired action.
+
+== User Interface ==
+The script's interface is divided into two main sections for managing controllers and copying transforms.
+
+=== Controllers Setup ===
+This group is for initializing and resetting controller states, which is a fundamental part of rigging.
+
+* '''Zero''': This button sets up a "position_list" and a "rotation_list" controllers on the selected objects. This effectively creates a new, clean "zero" state on a separate layer in the controller stack, preserving the object's original position as a "frozen" value.
+* '''Clear''': This button resets the controllers on the selected objects back to standard "Position_XYZ" and "Euler_XYZ" controllers, removing any list controllers.
+* '''Freeze Transforms''' (Checkbox): If checked, the "Zero" and "Clear" operations will also set the object's Skin Pose. This is critical for ensuring a character mesh deforms correctly from its bind pose.
+
+=== Copy Transforms Controller ===
+This group allows you to copy and paste an object's complete transform (position, rotation, and scale).
+
+* '''Copy / Save''': Copies the transform matrix of the selected object(s).
+** If "Save to / Load from File" is unchecked, it copies to memory.
+** If checked, the button text changes to "Save," and it will prompt you to save the transform data.
+* '''Paste / Load''': Pastes a stored transform matrix onto the selected object(s).
+** If "Save to / Load from File" is unchecked, it pastes from memory.
+** If checked, the button text changes to "Load," and it will prompt you to open a *.txt file to load the transform data from.
+* '''Save to / Load from File''' (Checkbox): Toggles the functionality of the Copy/Paste buttons between using internal memory and using external files.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Controller_Tools

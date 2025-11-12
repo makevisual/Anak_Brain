@@ -1,0 +1,112 @@
+
+2D compositing is a vital aspect of modern motion design and animation, acting as the bridge between raw assets and a polished final product by seamlessly integrating all visual elements into a cohesive whole. It transforms individual layers of animation, backgrounds, and effects into a unified scene, ensuring that every detail—from lighting and color to depth and texture—works harmoniously. This process not only enhances the aesthetic quality of a project but also reinforces its narrative and emotional impact. 
+
+== Where Do I Start? ==
+Refer to the Following After Effects File Template (we're now on v005).
+
+'''Z:\Projects\Sunny Side Down [INT]\Assets\Templates'''
+ 
+
+
+
+Make a copy of the template and paste within the shot Comps folder you are working under.
+
+Rename the After Effects File to reflect the shot you are working on.
+
+'''PROJECT NAME_EPISODE_SHOT_COMP_VERSION'''
+
+'''Ex. SSD_EP01_S210_COMP_v001'''
+
+Now you can enter the copied After Effects File and make your changes.
+
+I have recorded a VIDEO of the whole process as well.
+
+https://drive.google.com/file/d/1_6ubUiN29EehXqwcqWDj-V9IHZtJiPPw/view?usp=drivesdk 
+== File Naming ==
+Adjust render naming conventions to reflect the episode number and shot number of the shot you're working on. 
+
+'''PROJECT NAME_EPISODE_SHOT_ASPECT RATIO_VERSION'''
+
+'''Ex. SSD_EP1_S110_16x9_v001'''
+
+
+
+== Importing Sequences ==
+When importing animation sequences, follow these steps: 
+
+# File
+# Import
+# Multiple Files
+# Select your sequence
+# "Import As" dropdown feature is set as "Footage"
+# "Sequences Options" checkbox is checked as "OpenEXR Sequence"
+# "Import Options" checkbox is checked as "Create Composition"
+# Select the Import button
+# Repeat steps 4-8, until you have all of your sequences within the project, then select the Done button when you're done.
+# Place your sequences into the "IMG Sequences" folder
+
+== Interpreting Sequences ==
+When interpreting animation sequences, follow these steps:
+
+# Select a sequence and right click.
+# Highlight the "Interpret Footage" option.
+# Select the "Main" option.
+# Ensure that the Frames Per Second is set at 24.
+# Select the "OK" button to exit the menu.
+# Select the same sequence and right click.
+# Highlight the "Interpret Footage" option.
+# Select the "Remember Interpretation" option.
+# Select all other sequences and right click.
+# Highlight the "Interpret Footage" option.
+# Select the "Apply Interpretation" option.
+
+== Preserving RGB ==
+Is the color of your sequence affected when you import it into After Effects?
+
+This happens when the color profile of your original footage doesn't match the project's working color space, which is why it's crucial to properly interpret the footage upon import to maintain color accuracy.
+
+# Select a sequence and right click.
+# Highlight the "Interpret Footage" option.
+# Select the "Main" option.
+# View the 'Color' panel rather than the 'Main Option' panel. 
+# Under 'Color Space', checkmark the box for "Preserve RGB (disable color management conversions for this item)".
+# Select the "OK" button to exit the menu.
+
+== Adding a Simple Gradient ==
+When adding a simple gradient to a character or item, follow these steps:
+# Make a copy of the color layer of the character or item, and place the copy above the original layer.
+# Add a Gradient Ramp effect to the copied layer. (For example, in SSD we use: Start Color: FFFFFF, End Color: 1AECFF)
+# Add a 'Simple Choker' effect and set the 'Choke Matte' to '5.00'
+# Set the layer's Blending Mode to Multiply
+# Set the layer's Opacity of 50%
+
+
+There is another way to do this- can just copy the characters color layer, go to Effects > Generate > Fill, fill with a teal color or blue, then set to multiply over the existing color.
+
+Use a mask to define where you want it to fade away. Feather the mask to create the gradient.
+
+== Compositing Design Language ==
+Each of these elements plays a key role in creating immersive and professional compositions.
+# '''Color Grading''' – Adjusting overall tones and hues to set the mood and unify the scene.
+# '''Edge Treatment''' – Softening or sharpening edges to integrate elements naturally.
+# '''Glow/Bloom''' – Adding a subtle glow to highlights for a dreamy or realistic light effect.
+# '''Lens Distortion''' – Simulating the curvature of a camera lens for realism.
+# '''Motion Blur''' – Conveying realistic movement and speed for dynamic scenes.
+# '''Reflections''' – Integrating reflections on surfaces to enhance realism.
+# '''Specular Highlights''' – Accentuating light hits on shiny or metallic objects.
+# '''Ambient Occlusion''' – Enhancing shadows in crevices for added depth and dimension.
+# '''Rotoscoping''' – Manually isolating objects for precise layering or effects.
+# '''Masking/Matte Painting''' – Creating custom masks for clean compositing or extended environments.
+# '''Parallax''' – Simulating depth with layered background and foreground movement.
+# '''Vignette''' – Subtle darkening around the edges to draw attention to the focal point.
+# '''Chromatic Aberration''' – Applying realistic shifts in color channels for a cinematic look.
+# '''Particle Effects''' – Adding dust, smoke, or sparkles to enrich environments.
+# '''Noise Reduction''' – Cleaning up footage for clarity while retaining a natural feel.
+# '''Shadow Catching''' – Making shadows interact with different layers or surfaces.
+# '''Light Wrap''' – Bleeding light from a bright background onto foreground objects for realism.
+# '''Sharpening''' – Enhancing detail and focus in specific areas.
+# '''Depth of Field''' – Simulating camera focus to guide viewer attention.
+# '''Time Remapping''' – Adjusting the speed of layers for dramatic or subtle effects.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Sunny_Side_Down_2D_Compositing

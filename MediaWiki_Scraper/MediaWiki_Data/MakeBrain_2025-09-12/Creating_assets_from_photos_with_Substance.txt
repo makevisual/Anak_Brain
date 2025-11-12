@@ -1,0 +1,119 @@
+=Generating assets from photos=
+For the most part, assets will either be modeled in studio, or bought from a commercial source to be used. In some cases, when a specific object that you have in person needs to be modeled in 3D, but may be too complicated to create from scratch, you can generate a mesh and materials to make an asset through photography instead. This is called photogrammetry. 
+
+While the mesh topology and UVs generated from photogrammetry will be horrific at best, for smaller assets that do not need to be deformed, this may be the most efficient option.
+
+=Substance 3D Sampler=
+Substance 3D Sampler is a program that allows you to adjust materials as well as capture and extract materials from photographs. 
+
+For our purposes, we can use the 3D capture feature to generate a mesh and materials of an object we have in real life. To use this feature, you must be on at least version 4.0.2.
+
+=Taking photographs for 3D capture=
+Because the 3D Capture feature is mainly automatic, it's extremely important to provide photographs that are as accurate and clear as possible. Due to this, there is a specific method to taking photographs in order to ensure a good looking mesh and materials.
+
+===Setting up the Space===
+*The area must be evenly lit, with not too much contrast on your desired object. Substance 3D documentation recommends overcast days, but you can create a more controlled environment in a studio, like the example on the right. 
+
+[[File:3DSampler SettingUpPhotographs 02.JPG|thumb|Studio setup for 3D Capture|450px]]
+
+*Use a high resolution camera with a lens that can take high quality sharp images. Avoid using wide angle lenses as the distortion can affect the software's interpretation of the object. A DSLR camera with a good macro lens and an adjustable tripod will generally provide good and high quality results.
+
+*Make sure the object makes up as much of the frame as it can while maintaining its sharpness. You can use multiple types of lenses if you need to capture some extra details but the program may have a difficult time differentiating between the different lenses.
+
+*Keep your camera level as you take pictures. The program will struggle to compute from images that are taken at an angle and may distort results. This can be most easily accomplished by using a tripod.
+
+*The software does not process reflective or specular objects very well, so reduce reflectivity by either putting a matte finish on the object, or avoid strong lighting to reduce shine. Images can also be edited and corrected in Lightroom before it gets computed by the software.
+
+*For objects that can be difficult to differentiate between angles (most nonpatterned spherical objects apply to this), it can be helpful to attach markers to the object to aid the program in locating an accurate angle and position of the object.
+
+[[File:3DSampler PhotoMarkers.jpg|thumb|A bowl with tape markers of random sizes attached to it.|450px]]
+
+*''Do not move the object while taking photographs. The software relies on the relative positions of the object to surrounding features in the image in order to reconstruct the object. This will create inaccurate results and you may need to restart the photographing process if the object gets moved from its original position.''
+
+*When taking photographs, make sure your images are heavily overlapping each other. This will help the program to connect the information between photos when reconstructing the mesh. Depending on the complexity of the object, you may end up taking at least 100-200 photos or more. Try to take photos as sequentially as possible because the software gives you an option to process your images sequentially which may help.
+
+[[File:3DSampler OverlappingPhotos.JPG|1550px]]
+
+===Processing the Photos===
+
+Your photos need to be in JPG format in order to be used by the software. If you are using a DSLR camera, you will be given RAWs. We will need to convert these into JPGs before we can use them in Substance. This can be done most quickly in Lightroom. After you copy out your raw format photos from the camera to your computer, you can import them into your Lightroom session. 
+
+At this point, you can also edit your photos to color correct and minimize lighting contrast (you will most likely have to apply the same photo edits to all photos being used to maintain consistency.) You can copy (CTRL+C) edits from one photo and paste (CTRL+V) them onto any other selected photos as well. 
+
+[[File:3DSampler ProcessingPhotos.JPG|1450px]]
+
+From there, you will select all the images you want to export and hit export from the file menu. Create a new folder to put the JPGs in, and export at 100% resolution.
+
+=3D Capture in Substance 3D Sampler=
+
+===Importing Data Set===
+
+Once your photos are prepared, you will import them into Substance 3D Sampler through the 3D Capture feature under the "Get Content" button (the + sign on the top left). ''(As of version 4.0.2 this feature is still in beta.)'' 
+
+[[File:3DSampler GetContent.JPG|850px]]
+
+Import all of the images into your data set. 
+
+Check that all of the correct images are in. Sometimes they will be separated into photogroups due to different specs, such as different focal lengths or sensor sizes from the metadata that exists within the photo. 
+
+[[File:3DSampler DataSet.JPG|850px]]
+
+Check that the information is all correct and submit to alignment. You will want to switch the precision to "High" before you start processing. The software will now start aligning the photographs all together to reconstruct a proxy mesh. You can also change the photo ordering from "Default" to "Sequence" if you did take photos sequentially though it will usually work pretty well just on "Default", too.
+
+
+==Video Tutorial Part 1==
+
+This video covers the "Processing Photos" and "Importing Data Set" portion of this article.
+
+[[File:Substance3DSampler 3DCapture Tutorial v03 Part1.mp4|1080px]]
+
+
+===Revising the Mesh Reconstruction===
+
+You will be given a proxy mesh to preview the object once the photos have been aligned by the software. They will be comprised of dots, as well as the camera placement predictions for each photo submitted. 
+
+[[File:3DSampler MesReconstruction.JPG|850px]]
+
+''If any photos could not be aligned, they will be colored in yellow with a warning. They could not be aligned most likely due to an error as explained in [[Creating assets from photos with Substance#Taking_photographs_for_3D capture]].'' 
+
+The more dense the dots are assembled, the more details can be collected in that area. If the preview is looking good, crop out any unnecessary geometry by showing the bounding box in the "Region of interest" section on the right. You can adjust the size of the box to include only the mesh that you want to keep. You only need to do this if it is necessary. If you leave the extra geometry, the material applied to the object will include the material of the unnecessary geometry, which can lower the resolution on the materials of the objects you ''do'' need. 
+
+[[File:3DSampler BoundingBox.JPG|850px]]
+
+Be sure to turn the geometry details to "Raw" and hit Submit once you are happy with your results.
+
+===Post-Processing===
+
+Once your processing finishes, you should end up with a mesh preview of your object. This is what the software could calculate based on the images you imported in, along with the materials applied as best as it could. The topology will be horrendous, as well as the UVs, but you can take a look through the buttons on the bottom of the preview window, as well as a nontextured solid preview of the mesh. 
+
+[[File:3DSampler PostProcess.JPG|850px]]
+
+Be sure to set the asset resolution to 4096 x 4096, and if needed, you can mess around with other settings such as decimation if you want the vertex count increased or reduced. If you decide to change any settings, you must process a new version before you can add to project. The reconstruction will be reprocessed and a new preview mesh will be created. You can still return to old versions if you are not happy with your new results. 
+
+Once you are happy with your preview mesh, you will hit the "Add to project" button to confirm the mesh. Give your mesh the appropriate name and hit "Ok".
+
+You will now see your mesh in your project window. To export it, you will hit the share button on the right panel of the program and hit the "Export as..." button.
+
+[[File:3DSampler ExportLocation.JPG]]
+
+In the export settings window, check that the name is correct and the directory is going to the right place. You can check on the subfolder button option if you want to.
+
+Under the "Mesh settings" tab, and select "FBX" for the format. Under the "Material settings" tab, select "JPEG" for the format, and check that the resolution is still 4096 x 4096. 
+
+[[File:3DSampler ExportSettings v02.JPG|650px]]
+
+From here, you can hit "Export". 
+
+When you check your folder you saved out to, you will find an FBX file, as well as several JPEGs of diffuse maps. You can now use this mesh wherever you want.
+
+==Video Tutorial Part 2==
+
+This video covers the "Revising the Mesh Reconstruction" and "Post-Processing" parts of the this article.
+
+[[File:3DSampler VideoStandinPart2.JPG|1081px]]
+----
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_assets_from_photos_with_Substance

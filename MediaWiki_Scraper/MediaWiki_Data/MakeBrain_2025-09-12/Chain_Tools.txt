@@ -1,0 +1,96 @@
+== Back To Hub ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+= Chain Tools =
+[[File:1 ChTools SPKchToolsRig.png|none|thumb|380x380px|Chain tools can be used almost anywhere- here, the sour patch kid’s rig is made up almost entirely of bone chains.]]
+Chain Tools can be used to create a bone chain that behaves like a spline. It can be used to create bendy, stretchy, and squishy characters. It can also be used to help prevent pinching and collapsing during twists.
+
+== Creation and Anatomy of Bone Chains ==
+
+==== Creating a Bone Chain: ====
+Chain Tools can be found in “External Tools > Chain Tools.”
+
+[[File:2 ChTools chToolsLocation.png|frameless]]
+
+In order to create a bone chain, we must first create a spline. This is a required component for chain tools to function. 
+
+For this demo, I’ll just create a line. Ideally, you will want to create your line wherever it is needed within your rig. 
+
+Put it in its own layer and name the layer (eg. “Leg_ct”). Make sure your chain tools layer is the active layer. Chain Tools generates a lot of objects, so in order to keep track of all the components it makes, it’s best to let the chain generate all its components into its own layer, which can live in your rig layer. This will make it easier to find and name your chain later.
+
+
+Below is the window for creating a bone chain:
+
+[[File:3 ChTools ChToolsRolloutOverview.png|frameless|545x545px]]
+
+I’m not equipped to fully explain what each of these settings does, so for our purposes I’ve only highlighted the settings we use the most above. [http://www.joleanes.com/chain-tools.html If you’re interested in a more in-depth look at what each of these settings does, you can take a look at the Chain Tools website.]
+
+Before hitting “OK,” make sure your line is selected or else you will get an error box.
+
+==== Anatomy of a Bone Chain: ====
+[[File:4 ChTools AnatomyOfABoneChain.png|frameless|534x534px]]
+
+This is the anatomy of a bone chain.
+
+The big blue helper is the Root of the whole chain. Double clicking on this will select the chain and all its components. You can use this to move or delete the whole chain. When you start parenting all the components into your rig, you’ll need to parent this root helper in as well so it follows along.
+
+The big red helpers are chain knots. Chain knots represent the vertex points of the spline. You will always have at least two chain knots, one at the beginning and end of your chain. If the spline you used to create the chain has multiple vertices, you will have a chain knot for each vertex. 
+
+The Small red helpers are tangent handles. Tangent handles function the same as they would on a spline, and can be used to adjust the shape of your chain. We would normally use these to create bendy ctrls for our rigs.
+
+The small blue helpers are chain points. They are the targets that each bone looks at to determine its orientation. '''It is very important to never mess with these helpers.''' They are part of the fundamental structure of the bone chain and the chain will break if you transform or reparent any of these helpers.
+
+== Bone Chains in the Rig ==
+Here are a few common ways to incorporate chain tools into your rig:
+
+==== Bendy IK Limb: ====
+[[File:5 ChTools BendyIKLimb.png|frameless]][[File:6 ChTools BendyLegLine.png|frameless|402x402px]]
+
+Here I have an IK leg. I want to give the calf some bendy control. I’ll create a line object for the leg that stretches from the pivot of the lower leg to the pivot of the endBone. 
+
+[[File:7 ChTools BendyLegBoneChain.png|frameless]]
+
+I’ll select this line and create a bone chain with three bones, using the settings outlined previously.
+
+[[File:8 ChTools RepoTheBezierHandle.png|frameless]]
+
+Next I’ll grab each bezier handle and move them in local space up the bone until they are next to their respective chain knot helper. Moving them close to the ends of the chain will prevent the bones from bending during normal IK deformation of the leg.
+
+[[File:9 ChTools CreatingParentForKnot.png|frameless]]
+
+Next I’ll create a parent point helper for each chain knot. This will just act as a buffer between the chain knot and whatever it’s parented to. Snap the new point helper to the chain knot and then parent the chain knot to the point helper. Do this for all chain knots. Parent the chain knot parent at the knee to the lower leg bone, and parent the chain knot parent at the ankle to the leg endBone.
+
+[[File:10 ChTools BendyCtrls.png|frameless]]
+
+Let's create some ctrls for our bendy leg. Create some circles and snap them to the pivots of the bezier handle controls. Adjust their size and shape in sub object mode with a Spline Edit modifier. Then parent each bezier handle to its respective ctrl.
+
+[[File:11 ChTools BendyHierarchy.png|frameless]]
+
+Parent the bendy ctrls to their respective chain knot parent helpers.
+
+[[File:12 ChTools BendLegDemo1.png|frameless]]
+
+Now if we move the leg, the Bone chain should follow.
+
+When skinning, you would skin all the lower-leg geo to the bones in the bone chain (minus the endBone) rather than the lower leg bone.
+
+[[File:13 ChTools BendLegDemo2.png|frameless]]
+
+And if we move our bendy ctrls our leg should follow along. '''Be aware that bone chains cannot be mirrored,''' so you will need to repeat this process again for the other side of your character.
+
+==== Bendy FK Setup: ====
+You can parent a chain tools setup into an FK rig hierarchy for rig features like stretchy spines.
+
+[[File:14 ChTools BendyFK.png|frameless]]
+
+In this example, we have a bone chain and three ctrls in an FK setup, where the bottom ctrl is the top of the hierarchy. Each chain knot has its own point helper that it’s parented to, and each of these parents is parented to its respective ctrl. There isn’t a chain knot for the middle ctrl, so grab the two bezier handle controls and parent them to the middle FK ctrl.
+
+[[File:15 ChTools BendyFKDemo.png|frameless]][[File:16 ChTools BendyFKSquash.png|frameless|365x365px]]
+
+Now when we bend our ctrls they deform how we would expect for an FK setup. If we translate our ctrls, we can see our bones squash.
+
+= Back To Hub =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Chain_Tools

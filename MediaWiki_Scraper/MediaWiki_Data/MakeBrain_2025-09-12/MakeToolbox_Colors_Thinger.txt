@@ -1,0 +1,53 @@
+= Colors Thinger =
+
+== Overview ==
+[[File:ColorThinger New UI.png|244x244px]]
+
+'''Colors Thinger''' is a tool from the MakeToolbox toolset designed to quickly change the wireframe color of selected objects. It can be quite useful in complex scenes for organization and was specially considered for color-coding character rig controls.
+
+The script provides a compact user interface with a palette of preset colors, custom color pickers, a unique gradient application mode, and an automatic coloring tool for rig splines.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "ColorsThinger" from the scripts dropdown menu.
+# '''Select Objects''': Select one or more objects in your scene.
+# '''To apply a color''':
+#* '''Solid Color''': Click any of the color swatches to apply that color to all selected objects.
+#* '''Gradient Color''': Check the "Apply color as gradient" box first, then click a color swatch. This will apply a smooth color gradient across the selected objects.
+#* '''Custom Color''': 
+#*# Use one of the two small color pickers at the top to choose a custom color.
+#*# Click the larger swatch that appears directly below the picker to '''apply''' your saved custom color to the current selection.
+#* '''Auto Rig Color''': For character rigs, select all the spline controls that are part of the rig hierarchy and click the "Auto Rig Color" button to automatically color-code them based on their position.
+
+== User Interface ==
+The script's interface provides several tools for coloring objects.
+
+=== Color Palette ===
+A series of color swatches allows for one-click color changes. The tooltips for each swatch suggest a common use case for rigging:
+
+* '''Red''': Rig Nodes and Control Splines
+* '''Orange''': Operation Nodes and Sub Controllers
+* '''Blue''': Global and Group Controllers
+* '''Green''': Symmetric Controllers and Sliders
+* '''White''': General purpose
+* '''Black''': Geometry
+* '''Left/Right Swatches''': Specifically for left and right-side controllers.
+
+=== Custom Colors ===
+
+* '''Color Pickers''': Two small color pickers at the top of the UI allow you to define and save two separate custom colors.
+* '''Apply Swatches''': Below each picker is a larger, clickable swatch displaying your saved color. Click this swatch to apply the corresponding custom color to your selection. These swatches work with the Gradient Mode.
+
+=== Special Modes ===
+
+* '''Apply color as gradient''' (Checkbox): When enabled, clicking a color swatch will apply a gradient of that color across the selection, with each object receiving a slightly different shade. The shade intensity is determined by the order of the selected objects.
+* '''Auto Rig Color''' (Button): This powerful feature is designed for character rigs. It automatically colors selected spline shapes based on their position relative to the world center:
+** Controls on the '''left side''' (positive X-axis) are colored blueish.
+** Controls on the '''right side''' (negative X-axis) are colored reddish.
+** Controls in the '''center''' (X-axis is zero) are colored green.
+** Top-level (Global Controller) controls are colored blue to identify them as global controllers.
+==See also==
+[[MakeToolbox]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Colors_Thinger

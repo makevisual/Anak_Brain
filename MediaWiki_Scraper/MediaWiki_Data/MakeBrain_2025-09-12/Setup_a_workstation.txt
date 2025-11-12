@@ -1,0 +1,27 @@
+
+[[category:IT]]
+Setting up a workstation consists of loading an operating system (current default OS is Windows 10 Pro as of 2/29/2024), installing VNC, Deadline, and a number of registry changes, and finally installing all additional software such as [[3dsmax 2021 installation|3DSMax 2021]], [[Nuke 14 installation|Nuke]], and [[Installing Adobe Creative Suite|Adobe Creative Cloud]] apps. The process to load the operating system and create the user account is documented below. Installing 3DSMax, Nuke, and the Adobe CC products are documented on separate software installation pages which are linked in this article.
+
+== Recommended: Check BIOS / UEFI Settings ==
+Since we will be going through several reboots during this process, it is a great time to quickly check a few settings in the BIOS or UEFI Settings on the workstation. On most models of workstations the process to enter the BIOS or UEFI settings is to boot or reboot the computer, and as soon as you see the display turn on and show the motherboard manufacturer splash screen, '''press the delete key''' to enter the BIOS or UEFI settings. Once in the BIOS or UEFI settings - if working on a device with an ASUS motherboard you will likely need to press the F7 key, or click on the screen where it says "Advanced Setup" or "Advanced Settings" to access all available options. The location of these settings varies slightly between motherboard models, but the settings below are generally what you are looking to change if they are not already in this state:
+
+* '''Wait for F1 on Error - Disable''' - Some motherboards will wait for a user to press the F1 key upon rebooting if there is any kind of hardware error detected or if the workstation unexpectedly lost power. In most cases we don't want to wait for user input to clear the error with the F1 key and most of these errors are not impactful on device usage/performance so they can safely be ignored.
+* '''Resizable BAR - Enable''' - Some motherboards have a setting that should be enabled called "Resizable BAR". This setting should be enabled as it allows the CPU to access more of the memory and video memory than if the setting is disabled so this will provide a performance boost in some scenarios.
+
+== Load the Operating System ==
+The steps to load the operating system are similar across all workstation models, one exception being that there are different models of motherboard installed in workstations throughout MAKE and the initial step to boot from the Windows Installation Media / Flash Drive vary slightly. Steps below will call out if there is a difference in process depending upon the workstation or motherboard manufacturer.
+
+# To load the operating system, at a minimum the computer should be connected to: Power, Network, at least one monitor/display, keyboard, and a mouse. Make sure the monitor is attached to the dedicated video card on the workstation, not the integrated video. On most workstation models the correct video connections will be towards the bottom of the computer near the power supply where you plug in the power cord.
+# Insert a Windows 10 Flash drive into a USB 3.0 port for fastest loading of files. USB 3.0 ports are typically indicated by blue plastic inside of the USB port on the computer. Windows 10 flash drives are located in the render farm and are labeled for use depending on whether you are imaging a render node or a workstation.
+# Power the computer on. As soon as you see a video output showing text or a fullscreen logo showing a manufacturer's name (Dell, ASUS, SuperMicro, etc.) you will need to press a key to invoke the boot menu on the computer so that the computer boots from the flash drive and not the internal Solid State drive. The boot menu key is different across models/manufacturers. See below for the correct key to press:
+## '''Dell:''' Press the '''F12''' key as soon as you see the Dell logo on the screen. Once presented with boot options, select the USB flash drive option from under UEFI Boot. [[File:WorkstationSetup-DellBootMenu.png|frameless|517x517px]]
+## '''SuperMicro''': Press the '''F11''' key as soon as you see the SuperMicro logo or other text on the screen indicating the computer is booting. [Image to be added ASAP]
+## '''ASUS''': Press the '''Delete''' key as soon as you see the ASUS logo or other text on the screen indicating the PC is booting. Once in the BIOS / UEFI settings:
+### Locate the item that corresponds to the USB flash drive in the Boot Priority list.
+### Click the bottom right corner of the boot item that corresponds to the flash drive and drag it to the top of the list so it is just under the text "Boot Priority"
+### Press F10 or click "Save & Exit". The computer will reboot and then boot directly to the USB flash device. [[File:WorkstationSetup-AsusBootMenu.png|820x820px]]
+# Once the device boots into Windows Installation, you will follow the prompts as indicated below to install Windows 10 Pro.
+##
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Setup_a_workstation

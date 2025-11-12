@@ -1,0 +1,147 @@
+=General Info=
+
+[https://www.youtube.com/watch?v=pbYAhjASGFY| Introduction into Resin Printing and Common Mistakes]
+
+[https://www.youtube.com/watch?v=MU0Cq_bjhy4| Supports]
+
+[https://www.youtube.com/watch?v=Jo1aoHnRY5Q| Print Cleaning]
+
+[https://www.youtube.com/watch?v=dZJ3-RENTyc| Chitubox Hollowing and Drainage Holes]
+
+=Intro to Resin Printing=
+===Why 3D Print?===
+* to reduce CG workload for VFX spots
+* a cheaper option for clients than CG
+* an alternative to avoid having to track difficult shots
+
+==Modeling with Real Life considerations==
+[[File:ResinPrinter.PNG|323px|right]]
+
+* Consider how a resin printer works. Resin printers print upside down and in rows, so you have to visualize theoretically how your model would be built and understand where failures are more likely to occur
+
+* Would your model work in real life as you have it set up now? Consider floating elements and vulnerable structure types. Open/1 sided meshes do not exist in real life. Floating pieces of resin do not exist in real life. How will you fix these issues, or how will you reinterpret these features to work in the real world?
+
+* If you want floating elements like clouds or magical elements, you need to consider how you will portray that in real life, will you need to build a stand to allow that to appear floating? Will you discreetly add a support to the existing model to create the illusion of a floating piece?
+
+* Thin pieces are more fragile and prone to breaking or bending during printing, consider thickening thin parts of a print to minimize failures
+
+* Optimize resin usage, hollow out structures where possible and understand limitations to thickness and size
+
+* Pieces that are too thick will use an excessive amount of resin that will never be noticed, and the inside resin will have a significantly harder time curing because it lacks UV exposure compared to the resin on the outside of the print, if a piece must have a specific thickness consider hollowing out the inside and modeling proper drainage to allow uncured resin to escape the inside
+
+* Printers will have a set maximum size they can print, if your model exceeds this size then consider either scaling down your print to fit or cutting into pieces that can be attached after printing, making sure to model attachment pieces so your pieces can attach together accurately. 
+
+* 3D Printers interpret very precise models on a computer into real life structures, so they are prone to margins of error. Give your models breathing room for these margin of errors. Make sure attachment pieces are not modeled extremely close together, so that even if shifting were to occur you can still attach your resulting prints together.
+
+[[File:ModelBreakdown.PNG|900px|center|thumb|Model Breakdown Example]]
+
+==How is 3D modeling converted for 3D Printing (Slicing Software)==
+===Exporting as OBJs with the correct settings===
+[[File:Saturn4Ultra16k.jpg|200px|thumb|Elegoo Saturn 4 Ultra 16k]]
+From 3dsMax, export selected as an OBJ, with the scale set to 25.4. Export each mesh as its own OBJ so you can manipulate them separately in Chitubox.
+
+[[File:OBJExport.PNG|330px]]
+
+Chitubox sets up a virtual scene of your 3D printing space where you can set up your prints. You will need to select which printer you are using. The printers available in the lab are the Elegoo Saturn 3, and the Elegoo Saturn 4 Ultra 16k. The Saturn 3 has the largest printing space, while the Saturn 4 Ultra 16k has the smallest. Your default scene will have your build plate facing up by default, but in reality during printing it will facing down and print from the bottom up, so that will change how you approach setting up your scene.
+
+===Supports===
+Print time is dependent on your print height, so the taller your print set up is, the longer it will take to print. Set up your scene as horizontally as possible without sacrificing support and structure in order to maximize print time and success. Your Chitubox scene will give you an approximate print time and amount of resin used. 
+
+Some structures by design cannot support itself well, no matter how you try to work around it. In these cases, you will need to build separate support structures that will support your print during the printing process but can be easily detached from your main print once you remove it from the printer. Structures that are thinner or more delicate will need more supports to prevent warping or breaking during printing, while thicker and more structured designs will need less because they are naturally more self supporting. 
+
+You can manually place supports where needed, or automatically generate supports by Chitubox. You can also adjust the thickness, density, and other features of your supports to better support your prints.
+
+Using supports will create textured surfaces on your print. In general, any side of your print that faces the build plate will be of lower quality than the side facing away from the build plate. You will want to set up your scene so that the side less seen in your final product will be printed on the "bad" side and the side that will be most prominently on display will be printed on the "good" side. 
+
+Taking off your print will require a good bit of strength and elbow grease, which can lead to chipping of cured resin. For this reason, most prints are printed on a raft, so that you can have a bed to take off your print without compromising the print you want to preserve as well as possible.
+
+===Slicing===
+
+Once your scene is ready for print, Chitubox will take your meshes and slice them into images that will print rows and rows of images on top of each other to generate a mesh in 3D physical space. You can adjust settings at this point, such as exposure time on each layer, how thick each layer should be, the temperature each layer is heated at, and more. Usually, you can just start printing with the default settings and adjust as needed. 
+
+''Common Issues and Troubleshooting Guide can be found [[3D_Printing_Troubleshooting#Troubleshooting|here]]. ''
+
+Your file will give you a print preview of your print and you can track each slice over time. This is a good time to check for any vulnerabilities in your print scene.
+
+Once your file is finished and sliced, you will transfer this file to a USB stick to bring to your 3D printer.
+
+==3D Resin Printer Setup and Safety Workflow==
+
+'''Uncured resin is a skin irritant, and repeated exposure can lead to a serious lifelong allergy. If your skin comes into contact with uncured resin, wash with water and soap immediately.'''
+
+''PPE: Nitrile gloves, Safety glasses, respirator, and protective clothing''
+
+Ventilation ''must'' be on while working in the lab.
+
+===Contaminated Zones and Uncontaminated Zones===
+
+Any place that has uncured resin is a contaminated zone, this includes the 3D printers and the tables they sit on, the table with IPA for rinsing, the UV turntable, and any worktables used for resin work. Have your PPE on when working in these areas, and change out gloves as needed to prevent further spread of resin.
+
+Places that are free of uncured resin are uncontaminated zones and need special care to remain uncontaminated, including the painting station, the supply rack, and the general area near the door. If you are moving from a contaminated area to an uncontaminated one, swap to clean gloves or work barehanded. Prints that have been cured through the UV turntable must be handled with clean gloves as they are considered fully uncontaminated once cured. 
+
+Things that travel between the studio and the printing lab such as the USB sticks and the keys ''MUST'' be kept uncontaminated as we do not want to expose our coworkers to any uncured resin.
+
+If you happen to get uncured resin on anything meant to be uncontaminated, wipe away as much excess as you can and leave it to cure under the UV lights for a few minutes before handling it again. All trashbags that have uncured resin in them must also be cured with the UV lights before getting thrown away.
+
+==Workflow==
+===Printing===
+Transfer your print file to a usb stick, and plug into whatever 3D printer you configured your file to. Make sure your printer is prepped for printing by checking the resin tank and making sure there are no cured chunks floating around and is refilled with enough resin, and making sure the build plate is clean, level, attached and secure. Be careful to not let the USB stick touch any contaminated areas and begin print. 
+
+===Print Removal===
+Once print is complete, remove the build plate from the 3D printer and use a metal scraper to pry the print off the plate. Take off any supports and excess material and throw in the discard bin. Do not cure your print until your supports are removed, because the supports will harden once they are exposed to UV light and become significantly harder to take off. 
+
+Clean your build plate and 3D printer of any excess resin that may have dripped out, as well as any pieces of cured resin left in the basin or the build plate, as this will affect any later prints.
+===Rinse===
+Dip your print in the first IPA bin to preliminarily remove any uncured resin. Be careful to not splash the IPA when you clean your prints as it is infused with uncured resin and will irritate your skin if it splashes onto you. Wipe off resin with your hands as well as swishing it in the first IPA bin.
+
+Take the spray bottle of pure IPA and spritz your print down, holding it over the first bin to let the excess drip into the bin. 
+
+Then do a final rinse in the second IPA bin. Your print should feel fully matte and have no sticky residue left on it. 
+
+Set aside on a tray with paper towels lined to allow your print to air dry. Depending on the complexity of the piece this can take a few minutes to half an hour. 
+
+===UV Cure===
+Once the print is dry, take a clean paper towel with some pure IPA and wipe down any sticky residue left over. This is leftover uncured resin mixed with alcohol, and if the residue is left on your print when you cure, it will stay sticky forever and you will not be able to remove it at all, and this will affect the adhesion of any paints or glues used down the line. 
+
+Place your print on the turntable in an angle that allows the most exposure to the UV lights. If you lay it flat, the bottom part of your print will never be exposed to the UV lights and so it will never properly cure. 
+
+Turn on all of the UV lights and let your print cure for 20-30 minutes depending on the print thickness and complexity of design. 
+
+===Refinement===
+Once your print is fully cured, remove from the turntable with clean gloves onto a clean tray.
+
+At this point, you can work on your print in the uncontaminated areas with clean gloves or barehanded. You can buff away any unwanted textures or details with sandpaper, and proceed to paint your print if you wish.
+
+=Troubleshooting=
+
+===If Raft is peeling off of the build plate===
+* check that your scene is not creating suction or a space vacuum during printing
+
+* change to a raft shape like cross grid
+
+* re-level build plate
+
+* increase bottom exposure time (this will make your raft more brittle, it will be more difficult to detach from build plate but can be more useful for larger and heavier prints)
+
+===If 3D print is peeling off of raft but the raft is intact===
+the temperature difference between the bottom layer and normal layer is too drastic too fast, increase transition layers (https://www.reddit.com/r/Phrozen/comments/vzibab/what_is_transition_layers_and_how_does_it_work/)
+
+===Layer Shifting at random intervals===
+* check and tighten bolts on build plate to prevent wobbling
+
+* reduce/avoid jostling of the machine during printing
+
+* revise supports to maximize better print structure
+
+* slow down printing speed (decrease bottom retract speed and retract speed)
+**''this will significantly increase print time''
+
+===Current issues troubleshooting===
+* layer shifting consistently at the end of the print
+**could be related to unaligned z hop at the top of the machine
+**probably need to print at an angle, losing proper adhesion on a flat surface
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=3D_Printing_Troubleshooting

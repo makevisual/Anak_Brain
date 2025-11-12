@@ -1,0 +1,24 @@
+=== What is a Task? ===
+A Task is an actionable item or a note generally. To denote tasks the description field should have a full write up what what is needed to be done, location of assets that will be referenced on the server, examples for LookDev, Due Dates, and if multiple people are working on a single task then who is doing which work. Wrike has a fantastic ability of creating check boxes and anytime we have client notes we should always try to use those so people can track the status of each micro request as they work, remember all work can be interrupted and a running tally always helps everyone. The title of each task should have all the important information and be treated like a header of a request, even if it is in the title field please remember to put it in the description as well. Tasks assigned to others should almost always have an actionable title (ex. Project X - Review an implement client notes - xx.xx.xxxx). People get many tasks and if there is no clear action they will get ignored as a mere mention.
+
+=== When to Subtask? ===
+A subtask is basically where you should put all requests and work that is related to do the main task that needs to be done for the main task to finish. (There is also a use of treating the main tasks as a phase but that will be discussed later in the Project Management section.) Examples of sub-tasking would be for any first round animatic requires a scratch VO read and music search, also a rough edit round 1 requires logging of the shoot footage. Examples below
+[[File:WrikeTaskBestMethods Subtasking RoughEditExample01.png|left|Rough Edit Subtask Example|alt=Rough Edit Subtask Example|frame]]
+[[File:WrikeTaskBestMethods Subtasking AnimaticExample01.png|center|Animatic Subtask Example|alt=Animatic Subtask Example|frame]]Another reason to create subtasks is if you plan to assign related tasks to people who do not need access to the main task. This avoids too many notifications and clearly defines who must complete the specific task.
+
+=== Workflows and Status ===
+A workflow contains status' in them and the default workflow is used for all tasks that are actionable. This will be the main workflow everyone uses, unless, they are making an "Info" task or working on scheduling. All workflows can have tasks Completed/Closed and should be done once they are completed to help clean up everyone's assignment dashboards and "my To-Do" page in Wrike.
+
+=== Task Etiquette ===
+These are strong guidelines and should be adhered to as much as possible.
+
+* <u>Header</u> - When making a task, it is important to make the header something that makes sense both for the work and for understanding what was happening if we have to look back. 
+* <u>Description</u> - The description fields should have all server links for files that a person need and all internet links that are relevant.
+* <u>Assignment</u> - Assigning a person should only be done AFTER all of the task fields are filled out. This is because Wrike will not notify a person of small updates, generally, and unless you ping them with an @ mention in the chat box, they will not know of the updates.
+* <u>Dates</u> - The Date field is one of the most important fields that often get overlooked. Setting the due date is not enough, you MUST put in the date range of the work as it then populates on the workload chart to make people show all of the workloads of all employees. To set a date, you simply click the date field and set the start and end dates, do not worry about going over the weekends.
+* <u>Due Time</u> - If there is a due time on the task, put it in the header and make sure to mention it to the people that are assigned to it as just relying on the header is not enough.
+* <u>Updates</u> - When updating a task, please @ mention people by name to make sure everyone you are intending to see the updates get the notification as @assignees might not get everyone on there.
+* <u>Notification</u> - If multiple people are assigned to a task that needs work to be done on it, it is proper to denote who is working on what. This is for ease of clarity when someone is looking at the task and also for history of the project, sometimes we have to go and look back and try to figure out who did what for each project.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Wrike_task_best_methods_and_practices

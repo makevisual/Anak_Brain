@@ -1,0 +1,55 @@
+== Character Rigging Hub ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+= Floating Bones Mouth Rig =
+[[File:1 MouthRig Intro.png|frameless]]
+
+This rig is made up of 8 main floating controls, with 8 intermediate controls that interpolate evenly between the transforms of the main controls. This can be used to create a mouth rig with a wide range of motion.
+
+=== Setting up the rig: ===
+[[File:2 MouthRig BonesSetup.png|frameless]]
+
+First we must create the bones of the mouth. For this demo mouth I created 16 bones, where the top lip and bottom lip each have 7 bones and each mouth corner has one bone. Rotate the bones so that they follow the curvature of the lips. position them so that the origin of each bone is in the volume of the lips, as if they were centered inside a tube.
+
+[[File:3 MouthRig HelperSetup.png|frameless]]
+
+Next position a point helper at the origin of each bone. In the Demo image, the larger red and green point helpers will be for the main lip ctrls, while the small yellow point helpers will be for the intermediate ctrls.
+
+[[File:4 MouthRig CtrlSetup.png|frameless]]
+
+Next create the ctrls that will be used to animate the mouth. The origin of each ctrl should be centered at each bone. Ideally, the ctrl shapes should be visible outside the mouth geometry, floating in front of the lips. To do this, create an “Edit Spline” modifier and select the whole spline, moving it outward from its origin so it sits in front of the lips.
+
+[[File:5 MouthRig RedAndGreenHierarchy.png|frameless]]
+
+We will now begin to form the hierarchy of the mouth structure. On the main ctrls (colored red and green in this demo) select the point helper and the bone, and parent them to the ctrl object. Do this for each main ctrl.
+
+[[File:6 MouthRig YellowCtrlHierarchy.png|frameless]]
+
+Next we will work on the intermediate ctrl. First parent the bone to the ctrl, then parent the ctrl to the point helper. Do this for each intermediate ctrl.
+
+[[File:7 MouthRig ParentingIntermediateCtrls.png|frameless]]
+
+We will now begin parenting the intermediate controls to the rest of the rig. Select all the point helpers of the intermediate controls and parent them to the head parent (or the mouth parent, if you have one).
+
+[[File:8 MouthRig ParentingCtrls.png|frameless]]
+
+Next select the main ctrls on the top of the mouth (including the mouth corners) and parent them to the head parent (or mouth parent). Select the main ctrls on the bottom of the mouth and parent them to the jaw bone. This will ensure that the mouth will open when the jaw is rotated down.
+
+[[File:9 MouthRig PositionConstraintTargetList.png|frameless]][[File:10 MouthRig ConstraintGuide.png|frameless]]
+
+In order to make the intermediate ctrls follow the main ctrls, we must constrain them. On each individual intermediate control, select the point helper and position constrain it to the point helpers of each main ctrl it sits between. Check on “keep initial offset” so that the intermediate control maintains its position. On the bottom lips, add an orientation constraint as well so the intermediate controls will rotate with the jaw.
+
+[[File:11 MouthRig MouthRigDemo1.png|frameless]]
+
+Now if we move one of the main controls, we can observe that the intermediate control follows. 
+
+[[File:12 MouthRig MouthRigDemo2.png|frameless]]
+
+We can also adjust the intermediate controls to refine the pose.
+
+Make sure that all of your ctrls, bones, and point helpers are named properly according to the conventions of your rig, and don’t forget to freeze transforms on your ctrls.
+
+That’s it! Have fun! :)
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Floating_Bones_Mouth_Rig

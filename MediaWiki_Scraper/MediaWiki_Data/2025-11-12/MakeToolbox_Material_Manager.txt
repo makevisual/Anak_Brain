@@ -1,0 +1,35 @@
+= Materials Manager =
+
+== Overview ==
+[[File:Materials Manager UI.png|197x197px]]
+
+'''Materials Manager'''  is a tool from the MakeToolbox toolset designed to help manage and transfer materials in a scene. It allows you to save an object's material to an external *.mat file and also store the path to that file within the object's User Properties.
+
+This creates a persistent link between an object and its material library.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "Cluster_attach_Spline" from the scripts dropdown menu.
+# '''To save a material''':
+#* Select a single object that has the material you want to save.
+#* Click '''"Save material"'''. You will be prompted to choose a location and name for the *.mat file. The path to this file will be automatically stored on the selected object's User Properties.
+# '''To link a material library''':
+#* Select one or more objects.
+#* Click '''"Load material"'''. Choose an existing *.mat file. The path to this file will be stored on all selected objects' User Properties.
+# '''To apply a stored material''':
+#* Select one or more parent objects that have a material path stored on them.
+#* Click '''"(re)apply material"'''. The script will load the material from the stored path and apply it to the selected parent object(s) and their first-level children.
+# '''To check the status''':
+#* Select one or more objects and click the '''"R"''' button to see which material library is linked to them in the status text box.
+
+== User Interface ==
+The script's interface is focused on the core workflow of saving, loading, and applying materials.
+
+* '''Load material''': Prompts you to select a *.mat file from your drive and stores its path in the User Properties of the selected object(s).
+* '''Save material''': Takes the material from a single selected object and saves it as a new *.mat file while also storing its path on that object.
+* '''(re)apply material''': Applies the material from the stored path to the selected parent object(s) and their first-level children.
+* '''R''' (Button): Updates the status text box with information about the selected object(s).
+* '''Status''': A read-only field that displays feedback, such as the path to a stored material library or the number of selected objects that have valid material path data.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Material_Manager

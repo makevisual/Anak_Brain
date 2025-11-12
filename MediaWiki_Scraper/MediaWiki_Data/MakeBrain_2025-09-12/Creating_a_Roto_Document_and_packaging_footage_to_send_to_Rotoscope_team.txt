@@ -1,0 +1,129 @@
+[[Category:Process]]
+
+In this article you'll learn how to create a Roto Document and pack it & it's related footage to send for rotoscoping. 
+
+=Why send for rotoscoping=
+Do ''you'' want to do it? Rotoscoping is hard and time consuming so why not send it to a team who can get it done fast and efficiently while we focus on other aspects of the project. 
+
+=Creating the document=
+
+''Fun Fact! The person writing this article has done this several times and still gets lost. Do yourself a favor and check out past projects to see how it was done before to make sure you're doing it right''
+
+==Find shot footage & move it to the Outbox==
+Within each shot you'll find a FOOTAGE folder and an OUTBOX folder. 
+*In the FOOTAGE folder you'll find one or more files named like F01, F02, F03, etc, and within THOSE you'll find several versions of the footage like PLATE, PLATE_D, PLATE-HALF, PLATE-HALF-D, etc. <br>
+*In the OUTBOX folder create a new folder and name it ShotName_F##__V001. Example: S_MB-CP_VFX-070__F01__v001 (*ShotName_Footage1_version1*). If you need to send these files again in the future, they will be called V002.
+*Find the footage you need rotoscoped from the FOOTAGE folder and copy it in the new folder you just made in OUTBOX.<br>
+Your OUTBOX folder should now look similar to this:
+
+[[File:RotoDocs_FolderExample-1.jpg|400px]] 
+
+==Creating a reference image describing the desired roto==
+Open the footage however you want and scroll through it to find an image that shows everything you want rotoscoped. This could be many things, as shown in the example images below. You may want just a toy, a toy and a hand, a person, a table, it depends on the shot. Outline what you wish to keep in red and then fill the rest of the image with a red layer at about 20% opacity. The red highlighted section represents what you wish to get rid of, and the untouched section represents what you wish to keep. You can be somewhat loose about outlining, this is just a general description of what you're asking for. <br>
+Below are examples of a shot where it we just wanted the greenscreen behind the table replaced, and one where we wanted to keep just the toy because extra compositing was going to be needed on the table. 
+
+[[File:RotoDocs_TheAllOfIt.jpg|350px]]   [[File:RotoDocs_JustTheToy.jpg|350px]]
+
+It is also possible that you'll want a second roto pass done for another object in the same footage. The images below show a shot that needed a lot of changes both to the car and to the background. The primary ask (in red) was a roto for the car so we could replace the color of the vehicle, and the secondary ask (in green) was the area behind the bridge so we could add in lush trees to replace empty winter ones. If you need a secondary roto create a second reference image with a green highlighted section.
+
+[[File:RotoDocs_Primary.jpg|350px]]   [[File:RotoDocs_Secondary.jpg|350px]]
+
+''Note: don't go nuts! We don't have infinite money to spend having the team roto every little thing. Keep what you want to the minimum. Think ahead and focus on what you really need done and what you can do yourself''
+
+''Note: Save time and tedium! You can set up'' '''Actions''' ''in Photoshop to automate a lot of this. Look it up online or go ask someone who's done a roto sheet how to set them up.''
+ 
+==Creating the document==
+===Locate or create the doc===
+*Open your Google Drive Folder and navigate to '''MAKE Docs''' (''if you don't have access ask a producer or someone to get it for you''). 
+*Once there find the project folder. Projects can be either in the main MAKE Docs folder or sometimes in a group folder (''for example the full year of Hot Wheels spots are grouped in one folder''). 
+*Inside you may or may not find a document labeled '''Sancio -''' '''''ProjectName''''' '''- Roto Sheet'''. If you find it: GOOD! If not, you can copy the document from the MAKE TEMPLATES folder [https://docs.google.com/spreadsheets/d/1vhWXKJdEVM7vMex6gKpyR8ugbpm1UgzSyczY1UTPmsE/edit?usp=sharing|or click here and make a copy]. '''If you're copying it make sure to copy BEFORE you start editing stuff'''
+
+===Fill out the doc===
+Inside the Roto Doc you'll find a spreadsheet with Rows for shots and Columns where information will need to be entered. This part is relatively self-explanatory: fill out the document until all of the shots you've chosen to send are represented and look similar to the image at the bottom of this section. Here's a breakdown of what each column represents and what to fill it with: <br>
+
+'''SHOTS -''' The name of the shot goes here. Copy this EXACTLY from your shot folder and only put it in the thin Blue column. The other cells will auto-fill the information.<br>
+'''STATUS -''' The current status of the roto. When you fill out the document set these to '''TO-DO'''. As the team works on the shot they will update the status. Once we receive the shots back we will also update the status.<br> 
+'''DESCRIPTION -''' What's in the shot. This could be anything from Toys, Toy Play, Characters, Table, Bread, etc. It's extra imformation to describe the shot. <br>
+'''DURATION-''' The frame range of the footage.<br>
+'''TASK -''' What you're asking for. This is divided into ''Key/Roto'' and ''Keep''. Key/Roto is a description of what you want gone, and Keep is what you want to to... well... keep. Finally there's a Color in parenthesis that describes what you're talking about in relation to the highlighted part of the image you made earlier.<br>
+'''WORKING RES -''' The resoultion of the footage you're providing.<br>
+'''DELIVERABLES -''' This is what you expect back from the Roto Team. Usually this is just "Rendered Matte at working res".<br>
+'''ARCHIVE -''' The name and location of the file they're looking for. This should auto-fill based on what you wrote in the SHOTS column.<br>
+
+The final column is where you put the image. To do this select the empty cell and then go up to the menu and select ''Insert > Image > Insert Image In Cell''. 
+
+Below are examples of two filled out rows from a Matchbox project. The first image is a single request, the second is a more complicated request. You can also go check other projects for more examples of what was done in the past if you're worried about descriptions or anything else. Some projects require more information.
+
+[[File:RotoDocs_DocumentExample.jpg|1000px]]
+[[File:RotoDocs_DocumentExample-2.jpg|1350px]]
+
+
+You are mostly done with the Roto Document now, but it still needs a link to a dropbox folder. 
+
+
+=Uploading the files and creating a link=
+==Zip the shots==
+In each shot folder you should now have an Outbox folder with one or more Shot folders within it. [[Creating a Roto Document and packaging footage to send to Rotoscope team#Find shot footage & move it to the Outbox|Remember? From Earlier.]] <br>
+Zip that folder up! Zip all of the shots you plan to send as seperate Zipped folders. <br>
+Your OUTBOX folders should now look similar to this:
+
+[[File:RotoDocs_FolderExample-2.jpg|400px]] 
+
+==Create a folder to upload==
+*Create a new folder with the project name here: V:\Dropbox\MAKE Dropbox\Admin Admin\Sancio\<br>
+*In that folder create 2 new folders named "_ReferenceDocuments" and "_RotoPackages".<br>
+*"_ReferenceDocuments" will be where you place the Roto PDF you created, but don't do it just yet! It still needs a link you're about to get.<br>
+*In "_RotoPackages" '''copy all of the zipped shots you plan to send'''.<br>
+You should now have a folder with the name of your project that looks similar to this:
+
+[[File:RotoDocs_FolderExample-3.jpg|400px]]
+
+==Get a link==
+We're now going to get a link to send to the Roto Team so they can access the footage and get to work.
+
+[[Delivering files to client via FTP, Frame IO, Dropbox or Extreme Reach#Dropbox|To get the link follow the instructions by clicking here,]] or follow the insturctions below. The wiki link has pictures!<br>
+
+Great news: When you added the files to the Dropbox Folder mentioned above they automatically started uploading. We need to get a link to the folder that's being uploaded.<br>
+To do this you'll need to connect remotely to a computer. Either use REMOTE DESKTOP CONNECTION or VNC if you have it installed. In the VNC Server option type: blue. Encryption is probably set to "let VNC server choose" that's fine. Click Connect. Use the credentials below:
+ <nowiki>
+Username: administrator
+
+PW: mine</nowiki>
+
+Once you're logged into VNC you'll be connected to the BLUE server. Navigate to the project folder you just created. Right click on the folder and click SHARE (''it will have a little dropbox icon next to it''). This will open a window with "Create Link" as an option. Click that. If the link was already created in the past it will instead say "Copy Link". They do basically the same thing.
+
+==Finish  the Roto Document==
+===Add the link===
+The last thing to do is copy that link to the roto document. At the top of the document, under the name you'll see either a blank space or a blue link from a previous project. Copy your new link into this space. Now the document has a quick link to the dropbox folder filled with the footage they need.
+The Roto Document is now done. Hurray. 
+
+[[File:RotoDocs Link.jpg|800px]] 
+
+===Creating the PDF===
+Once you've finished creating the roto document save it as a PDF. 
+You can do this in Google Drive by either selecting ''File > Download > PDF'' or ''File > Print'' then selecting PDF once given the option of where to print to.
+Copy the created PDF to the "_ReferenceDocuments" folder you created earlier. This will automatically upload as well. 
+
+=You're done. Tell whoever assigned you the task=
+In the wrike task description add:
+*A link to the Roto Document of Google Sheets
+*The Dropbox link
+*A network path to the PDF
+*A network path to the Dropbox Folder. 
+
+@ the task creator and inform them the task is complete. 
+
+
+=Sending more files for the same project=
+Oh dear! You missed something or you need more things rotoscoped that you never anticipated. It happens. All you need to do is follow the steps above again, with a few little changes. 
+
+*First follow the same steps to [[Creating a Roto Document and packaging footage to send to Rotoscope team#Find shot footage & move it to the Outbox|copy the footage to the outbox.]] If you're sending the same footage again, name it v002 instead of v001. Yes you'll be uploading the same thing again. It's fine.
+*Then [[Creating a Roto Document and packaging footage to send to Rotoscope team#Creating a reference image describing the desired roto|create the desciption images.]]
+*In your roto document at the bottom of the page you'll see some tabs. Right click on one and click DUPLICATE. This creates a new spreadsheet within the same document. Call this new Roto sheet Batch 02 (''or 3 or 4 ect...''). Now [[Creating a Roto Document and packaging footage to send to Rotoscope team#Fill out the doc|do the same steps to fill out the roto document]]
+*[[Creating a Roto Document and packaging footage to send to Rotoscope team#Zip the shots|Zip the footage]] and add it to the same "_RotoPackages" folder [[Creating a Roto Document and packaging footage to send to Rotoscope team#Create a folder to upload|From above.]] ''You should not be overwriting anything during this step. Make sure the files you create are at least v002''. 
+*Save the new roto document tab as a PDF and add it to the "_ReferenceDocuments" folder. You do not need to create a new link for this because they are part of the same project and the old link still leads to the correct dropbox folder. 
+
+That's it. The same steps as before but no need to create new links.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_a_Roto_Document_and_packaging_footage_to_send_to_Rotoscope_team

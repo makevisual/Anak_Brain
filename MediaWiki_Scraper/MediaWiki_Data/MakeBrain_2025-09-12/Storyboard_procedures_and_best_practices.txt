@@ -1,0 +1,84 @@
+
+=== We have some workshop videos on this topic ===
+===== Workshop - Storyboarding Techniques in Photoshop - 2024-08-14 =====
+https://youtu.be/9Jdv7ttDPyI
+
+===== Workshop - Storytelling Through Composition - 2024-12-18 =====
+https://youtu.be/Ph_NZQG5iEU
+
+===== Workshop - DigitalPainting Standards and Best Practices - 2025-03-11 =====
+https://youtu.be/y9nSBbl5fYI
+
+=== Beginning a Project ===
+At MAKE, we typically use Photoshop to storyboard. This way we have access to a full range of brushes, lighting options, etc that suit commercial storyboards that typically require higher polish than entertainment.
+
+At the start of a project, however, it's good to set the right expectations of process.
+
+===== Ask the project lead: =====
+''"How tied down should my thumbnails be before showing you? (Super sketchy or go straight to clean?)"'' 
+
+''"Do you want to see the boards set to time (in animatic form) or just in a grid?"''
+
+''"Is lighting/value important for the animatic to read right? Color?"''
+
+''"What aspect ratio is most important to the end product? Should I board in square format, vertical?"''
+
+
+Depending on the project, you may board using Toonboom Harmony (for example, if setting the boards to music is important for timing.) ToonBoom Harmony can allow for more "animated" loose boards, and has a better timeline. However, it's no good for more painterly or textured boards- if the boards are meant to be very cinematic, stick to Photoshop.
+
+
+Then, sit down and read through the script. If there is no script, there should be at least an outline before you start boarding. Read through it several times, and if you can, even out loud to imagine it play in your mind. 
+
+As images and compositions pop into your mind, have a notebook or document open nearby to scribble down thumbnails and thoughts. Thinking more now will save you pain trying to hook up shots later. 
+
+=== Setting up your Photoshop file ===
+For the final boards, name each shot like this:
+
+'''ProjectTitle_SpotName__S010_F010_v000'''
+
+The FRAME number (F010) will often never go up, because inside each Photoshop file, you'll put the frame numbers (F010, F020, F030) as the folder names inside the PSD.
+
+Example image from a PSD from House on the Outlands: 
+[[File:Storyboard FileOrganization example.jpg|left|thumb|376x376px]]
+
+
+As you can see, the folders are all labelled by the frames needed to convey the action, which is 3 (010, 020, 030). The numbering is designed so you can easily add more frames later (for ex, you ad 025 between 020 and 030).
+=== TIPS and TRICKS: ===
+There is a way to use action sets to quickly color your boards and add lighting. Here is the link to purchase (ask Danny): https://stringbing.gumroad.com/l/tone-iko-touch?layout=profile
+
+The link also holds the tutorial video on how to use them.
+
+Generally it's a good idea to always copy your environments into each frame folder, rather than only putting the "moving parts" in each frame. That way you can have frames underneath be turned on and not mess anything up, and the folders are easier to dig through.
+
+
+Finally- try layer comps in Photoshop. Here's a link to a great layer comps storyboarding tutorial: https://vimeo.com/213626234
+
+What's the big deal? Well, layer comps can help you render out a bunch of frames quickly, if you have to do revisions on 12+ frames, by letting you save which frames you want turned on or off, then going to File > Export > Layer Comps to Files. 
+
+Then select your render folder, and voila! All 12 layer comps render themselves out, rather than you clicking on and hiding folders manually and then exporting a jpeg 12 times.
+
+More on rendering below:
+
+=== ONCE YOU ARE DONE DRAWING: RENDERING OUT ===
+Since the boards we do in Photoshop are not set to time, we use exporting jpegs out of Photoshop into Premiere to bridge the gap and set the timing there.
+
+Go to the Storyboards > Renders, create a folder labelled with the Spot name or Episode Title. You'll always export the files with the same ending, no version number, to this folder- and that way premiere will overwrite and update automatically your edit. To not lose your previous work, you'll create subfolders in the episode folder that are called "V001", etc, where you move the previous version into and then export your updated frames into the now empty main folder.
+
+Example screenshot below:
+[[File:Storyboard Renders Organization example.jpg|left|thumb]]
+
+
+
+
+
+
+
+
+
+Now you are ready to make the animatic- and that's a different article here: [[Animatic procedures and best practices]]
+
+
+<nowiki>[[Category:Documentation]]</nowiki>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Storyboard_procedures_and_best_practices

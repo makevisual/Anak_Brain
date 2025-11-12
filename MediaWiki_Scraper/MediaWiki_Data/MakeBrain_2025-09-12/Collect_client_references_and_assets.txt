@@ -1,0 +1,17 @@
+For every project this is going to be different but generally you need to request from your client the following:
+
+# [[Collect Legal, Logos, and Supers from client|Legal, Logos, and Supers]]
+# Creative Brief/Deck
+# Scope of work
+# [[CAD Asset requirements and standards|CAD files of product]]
+# Art files with textures
+# [[Client product standards and best practices|Request of physical version of the product]]
+# Visual references or creative direction
+# List of contacts for project approvals
+# [[Collect Deliverable specifications from client|List of deliverables that will be need to be made]]
+# Schedule for delivery/air date
+
+Most of these items will have to be delivered after project kick offs.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Collect_client_references_and_assets

@@ -1,0 +1,59 @@
+== On-Set VFX Data ==
+The meta-data that the camera stores along with footage contains a lot of useful information. But there are something it doesn't contain, and for those things we use the VFX Data Sheet. This Document stores the relevant information for a given shot that an artist or editor may need to reference whilst working on a spot.
+
+== Document Location ==
+
+The live shooting document is stored in google drive in your projects folder
+
+
+If you need to access the template, it can be found in the templates / brand folder
+<blockquote>https://drive.google.com/drive/u/0/folders/0AC6jQ8G_PA24Uk9PVA</blockquote>
+
+Or in the MAKE Google drive you can navigate to the template file here:
+ <nowiki>
+Templates / Brand > [ project template ] > Template_Production related </nowiki>
+
+After a shoot has finished and footage sorting/weeding begins, the VFX supervisor or Producer should save this doc as a PDF in the Spot's Project Folder:
+ <nowiki>
+..\Source\Docs\</nowiki>
+
+== VFX Data Sheet ==
+[[File:VFX DataSheet.png|none|frame]]
+
+(If needed, additional rows may be added to any shot to extend the space in which to make notes)
+
+
+'''SHOT:''' The number listed for the shot in the [[Shooting Schedule]]. This number may be different from animatic shots or other documents, but it should always match the shot number from the schedule. This number is what the AC will use to slate each shot on set.
+
+'''TIME:''' The Actual Time that the crew start setting up this shot. This time may be different from the time listed in the schedule.
+
+'''SUBJECT:''' This is to note the general content of the shot. This is to be able to easily identify shot numbers containing ''Slates'' or ''Plates'', or the actual content of the shot.
+
+'''TAKE:''' It is not necessary to record data for every single take. Sometimes many takes are shot without any of them being usable, so generally only takes of some note are recorded here. Record the '''Reel (A001_)''' and '''Take (_C001)''' numbers every time a new card is inserted into the camera, for subsequent takes on the same Reel, only the Take number needs to be recorded.
+
+'''QUALITY:''' A rough indication of the quality of the shot. This can be a little subjective, but most takes that are usable are considered 'GOOD', while really excellent takes are marked 'BETTER'. Typically the only take marked 'BEST' will be the one the client or director calls out as The One To Use.
+
+'''NOTES/DESCRIPTION:''' This is where general comments about the shot are recorded. These comments are primarily to inform the person doing the [[Logging and Weeding offline footage to prepare an edit]] and those who will [[Create a notation edit in Heiro, Premiere, or After Effects]] what the feeling about a take was on-set, and if there should be any special considerations for time remaps or crops/etc.
+
+'''CAMERA:''' Which camera recorded the footage.
+
+'''LENS:''' Focal length of the lens used for a given take. this may change between shots and even between takes.
+
+'''F-STOP:''' Technically on cinema lenses this is "T-Stop", but for our purposes just record the stop indicated on the physical lens, not the digital readout on the monitor as the digital readout can be inaccurate.
+
+'''ISO:''' The camera's ISO setting. Typically this is 800, but may move for some situations.
+
+'''SHUTTER:''' The camera's Shutter Angle. This number may change when shooting at high frame rates or when recording fast-moving objects.
+
+'''COLOR TEMP:''' Typically set to 5600k Daylight, to create neutral lighting. This may be adjusted depending on specific light use or lenses.
+
+'''FPS:''' The Frames Per Second the camera is currently recording.
+
+'''RESOLUTION:''' Pixel resolution currently being recorded. This is typically 8k, but may be less for high-speed or other special situations.
+
+'''FOCUS DISTANCE - S/E:''' The rough distance from the subject to the sensor of the camera at the start of a shot, and at the end if there is a move. Lenses are different lengths and are not a reliable measurement point. The Sensor Plane of the camera is a consistent point, and is indicated on the camera body, slightly behind the lens mount.
+
+'''HEIGHT - S/E:''' The height from the center of the sensor to the floor on which the subject is standing. If shooting a toy on a tabletop, for example, this should indicate the height of the camera above the table, NOT above the literal floor.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=VFX_Shooting_Document

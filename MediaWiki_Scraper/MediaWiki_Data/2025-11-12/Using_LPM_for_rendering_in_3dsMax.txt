@@ -1,0 +1,457 @@
+=What is LPM?=
+LPM (Layer Pass Manager) is a scene manager that allows a single 3dsMax scene to store multiple states of any render-able or script-able element. These states can be submitted to render either locally or to the render farm through Deadline Submitter. LPM operates off of layer-based render passes that control elements such as object visibility, render settings, atmospherics, and light properties. These passes are used to build shots with varying frame ranges, resolutions, and cameras. Because of LPM's organizational structure, layers and shots can easily be merged between 3dsMax scenes. In this article you can read about the basics of LPM, how to set up passes and shots, and how to submit shots for rendering.
+
+= LPM UI Basics =
+LPM can be accessed through the MAKE Tools menu on the main 3dsMax toolbar. Go to MAKE Tools and select LPM2p9 (LPM2p8 can also be used) to launch the window.
+When you launch LPM for the first time in a scene, a set of objects will be generated under a scene layer called "zz-LPM." This layer is where LPM will store all of the data for passes and shots, and it can be ignored unless LPM data is being merged into the scene.
+
+Below is a basic guide for the LPM UI. These elements will be discussed in more detail later:
+
+[[File:LPM BaseUIGuide.JPG|450px]]
+
+'''Settings and Tools:''' This is where the bulk of settings and tools for LPM are located. On the left side, the active viewport box dictates which view will be rendered when previewing a pass, so you'll want to have this set to your render camera in most cases. The toolbar below the active viewport box has various functions, such as creating and duplicating passes, creating sets, and adding overrides. What these buttons affect is determined by which pass is currently displayed in the active pass box, located above the active viewport box. Clicking on a pass will set it as active. On the right side, there are buttons for viewing the last rendered image, distributed rendering (currently not functional), and quick scripts. Quick scripts (the lightning symbol) includes script templates for common types of passes (note that some of these templates are obsolete, like the adjustments submenu and RPF passes).
+
+'''Passes:''' This is where all your passes live. By default, an empty Beauty pass is generated when you launch LPM for the first time. Use the +/- box to expand and shrink the passes section.
+
+'''Shots:''' This is where your shots live. By default, a generic shot is generated when you launch LPM for the first time. Use the +/- box to expand and shrink the shots section.
+
+'''Render Output Path:''' This is the file path where your rendered frames will go once a render has been submitted. By default, this path is set to the 3dsMax folder, but frames should never be rendered there.
+
+'''Render Submission:''' This is where you will submit renders locally or to the farm. Either choose the "Local" button to submit a local render or the "Network" button to connect to the Deadline Submitter. Renders can also be submitted with the top left corner "Render" button in some cases, but we almost always render through Deadline. In the bottom left corner there is a drop down menu that says "Shots." This can be left alone because renders should always be submitted as shots.
+
+= Setting up a Render Pass =
+
+A pass is essentially a saved state of your scene that only exists within LPM and can have different properties from the base scene. There are a few ways of creating a pass in LPM. You can right-click on or near the passes section and select "New Pass" or you can click the "Create New Pass" button on the above toolbar. In both these cases, an empty pass is created with an "All objects" and "All Lights" set. Because this method doesn't include any of the layers we need, it's easier to create a new pass through quick scripts templates in the top right corner. You can also start from the generic beauty pass that is generated when opening LPM. 
+
+=== Renaming Passes and Pass Groups ===
+
+To rename a pass, select the pass and press enter, rename the pass, and press enter again to exit renaming. It's extremely important to rename passes to match with the type of pass you're building. Not only will the name of a pass be displayed in LPM, it will also be the name of the folder your rendered frames exist in once a render is submitted. This can become confusing if names are not specific enough, and going back later to change the name of a pass will create pathing issues in Nuke comps that reference your image sequence. Being specific and organized from the very beginning is crucial in keeping workflow smooth and efficient. For example, if creating a beauty pass for a specific character, instead of calling it "Beauty_001," a better name would follow the format "CHR_CharacterName_Beauty." More information on naming conventions can be found in the "Types of Render Passes" section.
+
+Another important part of organizing passes is using pass groups. Groups help condense similar passes together into folders that can be collapsed and shrunk as needed, keeping the LPM window from getting cluttered when there are many passes in one scene. Right-click on or near the passes section and select "New Group" and a folder symbol will be created in your pass section. Make sure you rename (hit enter) this folder to match the contents of the group. Common group names include CHR, ENV, and FX. After renaming, drag and drop the correct passes into the group.
+
+To enable or disable a pass or group, click on the teapot/folder symbol next to the name. A disabled pass or group will have a red box with a line through it over this symbol.
+
+=== What's in a Pass? ===
+
+There are a few essential elements that make up render passes: object sets, light sets, overrides, and scripts. These are presented as layers in a pass. Layers are evaluated from bottom to top, therefore objects can't be present in more than one layer of a single pass. If an object is in multiple layers, whichever layer is on top will override its presence in the layer below it. To add any of these layers to your pass, right-click on your pass and go to add, then select what element you want to add. Ex: right-click -> add -> object set. You can also add some of these elements from the toolbar located above passes. If you're using a quick script pass, most of these layers will already be made for you.
+
+[[File:LPM AddLayerSet.jpg|350px]]
+
+These are some of the layers commonly found in passes. Some of these layers use object sets as a base but have altered properties which will be discussed later. Note that not all of the layers available to you are listed below, and not all of these layers will be relevant for all passes:
+
+[[File:LPM PassGroup Example.JPG|350px|right]]
+ 
+'''1. Reflectors:''' An object set. Objects in this layer aren't visible to camera and do not cast or receive shadows, but they do appear in reflections. 
+
+'''2. ShadowCasters:''' An object set. Objects in this layer aren't visible to camera but they do cast shadows, receive shadows, and appear in reflections.
+
+'''3. Mattes:''' An object set. Objects in this layer act as mattes to the geo layer and have an alpha contribution of -1.
+
+'''4. Geo:''' An object set. Objects in this layer have full visibility to camera with lighting and shading. This is where you want all of the visible geometry for a pass to go.
+
+'''5. All Objects:''' An object set that is in every pass and includes a wildcard selection (includes all objects in the scene). It is disabled by default and should remain disabled. Do not use.
+
+'''6. Lights:''' A light set. This is where you include all lights you want to be visible in your pass.
+
+'''7. All Lights:''' A light set that is in every pass and includes a wildcard selection (includes all lights in the scene). It is disabled by default and should remain disabled. Do not use.
+
+'''8. Environment Override:''' An override that controls the Environment, Effects, Elements, and Atmosphere panel for a pass. This includes properties such as background color and environments map, global lighting, render elements (obsolete), atmospherics, and special effects.
+
+'''9. Script:''' An override that can edit anything accessible via Maxscript. Allows for pre and post-render properties.
+
+'''10. VRay5 Render Elements Override:''' An override that allows you to choose which VRay render elements are rendered with your pass upon submission. By default, this menu includes a handful of render elements to choose from.
+
+=== What do the dots mean? ===
+
+When building layers, you'll probably notice that each layer has a dot to the left of its name. Layers by default have a gray dot next to them (except for "All Objects" and "All Lights," which are red). There are three dot colors corresponding to three modes.
+
+[[File:LPM Dots Example.jpg|180px|left]]
+
+'''Gray:''' All objects or lights within the layer will be rendered regardless of their visibility within the 3dsMax viewport. Those elements that are hidden will be un-hidden upon render time.
+
+'''Red:''' All objects or lights within the layer are disabled and will not be rendered regardless of their visibility in the viewport.
+
+'''Blue:''' Objects and lights within the layer will not have their visibility altered at render time. This means that an element invisible in the viewport will remain invisible in the render. This is a messy way of working and can quickly become confusing, so it is not recommended to ever use this mode.
+
+=== Adding Scene Objects to Layers ===
+
+When adding scene objects to your layer sets, you should ALWAYS add them as scene layers, NOT individual objects. To do this, right-click on a layer, go to add, then select "Add Layer." A window will appear that displays all of the layers in your scene explorer. Check the box next to the layers you want to add, exit the window, and you're done. Ideally, your scene layers will be well organized and match closely with the naming conventions of your pass, making pass setup quick and easy. For example, the Geo layer for a character pass called "CHR_CharacterName_Beauty" might include a scene layer called "C_CharacterName_Geo." For more info on naming conventions for scene layers, refer to [[3dsmax Standards and Practices]].
+
+[[File:LPM SceneLayer AddLayer.JPG|400px]] [[File:LPM SceneLayer Selection.JPG|150px]]
+
+=== Changing Properties for Individual Layers ===
+
+Render properties can be adjusted per layer through the Edit and Edit VRay submenus. To access either of these menus, right-click on the layer and select either "Edit..." (left images) or "Edit Vray..." (right image). You can then make adjustments to things such as object visibility, mattes, lights, reflection, refraction, and shadows. For a lights layer, changes can be made to how light affects properties like diffuse, specular, and reflections. 
+
+[[File:LPM Edit Menu.jpg|120px]] [[File:LPM EditVRay Menu.jpg|300px]] [[File:LPM EditLights Menu.jpg|160px]]
+
+This process is how layers such as Reflectors, ShadowCasters, and Mattes are set up. While there's really no reason to build any of these by hand because LPM will generate them for you, here's an example of how the Reflectors layer is set up to give an idea of how adjusting these properties can affect your render.
+Looking at the Edit submenu for this layer, shadows and camera visibility have been turned off, but reflections are still on. This means that the objects in this layer won't be visible or cast shadows, but they will appear as reflections in objects around them that are visible.
+
+[[File:LPM EditReflectors Menu.jpg|120px]] [[File:LPM OverrideMaterial.jpg|250px]]
+
+Another important aspect of the Edit submenu is the material override button. When you want to create a material override for an object or set of objects, NEVER duplicate the objects in the scene and give them a separate material. Select the material you wish to use for the override and click the left arrow next to the material button (see above image). The material name will appear and the checkbox will be turned on. Clicking the right arrow will display the override material in the material editor. Note that material overrides will affect all objects within a layer set, so if you only want certain objects to be affected they will need to be split up into a separate layer set.
+
+=== Writing Scripts ===
+
+When you aren't able to build something using LPM's other tools, you can do it by writing a script. Once added to a render pass, double-click or right-click and edit the script override. Make sure both Pre-Render and Post-Render are checked on, otherwise the effects of the script won't be reversed after a render is completed. In the Pre Script box, include the script for whatever operation you are wanting to execute, and in the Post Script box, write the reversal for the operation. 
+
+Here is an example of a basic script. In this script, we want to change some of the render settings to render a 360 dome of the scene, but only for this pass. So in the Pre Script we include the script for adjusting the render settings, and in the Post Script we reverse it back to its original state.
+
+[[File:LPM Script Example.jpg|300px]]
+
+For more information on how to set up and write scripts, refer to the following video:
+
+https://www.youtube.com/watch?v=3Z1iGHwpsrk
+
+=== Environment Overrides and Render Elements ===
+
+Environment Overrides are useful in setting up atmospherics and effects in specific passes. This includes elements such as volume lights, VrayEnvironmentFog, and Phoenix FX. A full list of environment and effects can be found in the Environment and Effects panel for 3dsMax (hit the 8 key). To open the environment override panel, add it to your pass then double-click or right-click and edit it. Check the override button under the correct section, then check the box for the specific effects you wish to include. It is important to note that in order for this to work, your effects must be set to inactive (uncheck the "Active" box) in the global Environment and Effects window. Otherwise, the effects will appear in every pass regardless of the override layer. Also note that in the override panel, there is a render elements section, but it is obsolete and should be ignored.
+
+The VRay5 Render Elements Override allows you to choose which elements will render with your pass when it is submitted. After rendering, these elements are useful for compositing. To open the render elements panel, add it to your pass then double-click or right-click and edit it. By default, there are eight commonly used elements listed that can be checked on or off, but more can be added through the Render Elements tab of the 3dsMax Render Setup panel (F10). There are three elements that should pretty much always be checked on: 
+
+'''VRayBackToBeauty:''' Gives you access to all render elements needed to build the beauty pass from scratch. This includes things like, specular, reflections, and diffuse.
+
+'''VRayDepthRGB:''' Gives you access to the ZDepth channels.
+
+'''VRayLightmix:''' Gives you the ability to edit every light in your 3D scene individually.
+
+Other render elements can be checked on as needed. Keep in mind that some elements can increase render time significantly (especially VRayAO), so it is important to leave these elements checked off if you are not using them.
+
+[[File:LPM EnvironmentOverride Menu.jpg|125px]] [[File:LPM RenderElements Menu.jpg|200px]]
+
+=== Previewing a Render Pass ===
+
+To preview a pass once you are finished building it, right-click on it and and click either Render Preview 50% or Render Preview 100%. 50% will render a preview of the pass at half resolution and is quicker. There are, however, some render issues that won't show up in a lower-res renders, so if you're having issues with your pass or want to be extra careful, preview rendering at 100% will be more accurate. 
+
+[[File:LPM RenderPreview.jpg|350px]]
+
+=== Merging in Render Passes ===
+
+LPM is designed so that passes can easily be merged into other 3dsMax scenes. To do this, first make sure you have launched LPM in the scene you are merging in to. Then go to File -> Import -> Merge and choose the file you are merging LPM from. On the merge menu, find the LPM_Root. Under the root, you'll see all your passes and their layers. Select the pass root and layers you wish to merge and click ok, but do NOT select the LPM_Root. You will probably see a pop up warning you about duplicate names. You'll always want to hit "Merge" for all duplicates, never replace old or rename new layers. You will also see a message asking if you want to parent your passes to the LPM_Root of your current scene. Say yes! If all of this is done correctly, your passes will be merged in with all of their names and layer sets intact. If all of your scenes have the same scene layer structure, everything should match up perfectly and it will save you time re-building identical passes or adding scene layers again manually. This is another example of how consistent naming and organization really helps with efficiency.
+
+[[File:LPM Merge Example.jpg|250px]]
+
+= Types of Render Passes =
+
+=== Beauty Passes ===
+
+[[File:LPM_CharacterPass.jpg|200px|thumb|left|BraveHurts/Damsel Distress/Shot 010]]
+
+There are a variety of different render passes that we create in LPM, but a majority of these passes are beauty passes. Beauty passes are standard passes that include geometry, lighting, and shading for a specific subset of objects. Objects most often get split up by type, and each type of object has its own pass. For example, characters get their own passes, or different layers of the environment get their own passes. This is done not only because it makes each aspect of a render easier to edit later on in Nuke, but also because it can be difficult for the farm to render frames that have too much data within them. This is particularly true for scenes with heavy environments in them. Below is a list of some types of beauty passes we use.
+
+[[File:LPM_EnvironmentPass.jpg|200px|thumb|left|BraveHurts/Catapult/Shot 030]]
+
+
+'''Character passes:''' There are two ways of setting up character passes. The first is giving each character its own render pass with just that character in it. So, if you have three characters in a scene, you will have three different character passes. The second is including characters in one single pass so they will be rendered together. This works well for shots that have a larger number of characters in it or have characters interacting/touching each other. Whether characters should be rendered separately or together should be decided on a per shot basis. Character passes are generally named according to this format: CHR_CharacterName_Beauty. Character passes include character geometry and are normally matted by the environment. They may also receive shadows from other characters or FX in the scene.
+
+
+[[File:LPM_FXPass.jpg|200px|thumb|left|BraveHurts/Catapult/Shot 030]]
+
+
+'''Environment passes:''' Environment passes are usually split into passes based on depth. These passes often correspond to the foreground, middleground, and background layers within a scene. It's not always necessary to split the environment into multiple passes and will depend on the complexity and camera positioning of each shot. Environment passes are generally named according to this format: ENV_00_Beauty for the foreground, ENV_01_Beauty for the middleground, and ENV_02_Beauty for the background. Sometimes, there needs to be extra environment layers on top of those previously mentioned. Environment passes tend to be the "bottom" layer in compositing and receive shadows from characters, FX, and other elements in the scene.
+
+
+
+
+
+'''FX passes:''' There are many different types of FX passes including those for smoke, dust, liquid, dirt, debris, fire, atmosphere, and more. Each FX should have its own pass named accordingly. Separating them out makes it easier to fine tune them in Nuke and keeps the passes running smoother on the farm. FX passes are normally the "top" layers in compositing and are matted by characters and environment. FX passes are generally named according to this format: FX_FXName_Beauty or FX_FXName.
+
+
+
+=== Other passes ===
+
+While most passes we render are beauty passes, there are occasionally other passes you might need to render on a per shot basis. Some of these passes might be considered beauty passes, but they have properties that deviate from a standard beauty pass. Here are just a few examples, but there are many more:
+
+'''Shadows:''' Includes just the shadows casted by specific objects in a scene. There is a preset for this pass under quick scripts.
+
+'''Masks:''' Objects are rendered out to be used as a mask in Nuke.
+
+'''Rim Light:''' Includes just the effects of the rim lights in the scene and can make things easier to dial up and down in Nuke. 
+
+= Setting up a Shot =
+
+Located under the passes section, shots are essentially a set of properties that can be applied to a pass or set of passes and will be used at render time. By default, a generic shot is generated when you launch LPM for the first time in a scene. To rename the shot, press enter, rename it, and press enter again. To create a new shot, right-click on the "Shots" icon and click "New Shot." Shots should follow the naming structure of the shot or asset followed by a version number. This version number should generally be incremented each time a pass is sent to the farm with changes made to the scene. It's important to be specific and intentional with shot names because the name of the shot will be the name of the folder where all of your passes will render to. Going back and renaming this later can make things confusing and possibly mess up file paths in Nuke. Some examples of appropriate shot names are S_BH-DAM_010_v001 and DAM_Damsel_v001.
+
+[[File:LPM GenericShot.jpg|right|250px]]
+
+=== What's in a Shot? ===
+
+There are two main parts of a shot, shot properties and passes.
+
+'''Shot properties:''' By default, a common properties node is added to each new shot. This includes properties such as time output, output size, and renderable camera. These can all be edited through the common properties submenu.
+
+'''Active passes:''' By default, all passes active in the pass section are set to render with a shot. To add only specific passes to a shot, drag and drop them from the pass section onto the shot. It is good practice to always drag the passes you want to render onto your shot, even if you want all passes to render. This keeps your shots organized and it is clear which passes will render with a shot. To enable or disable a shot or pass, click the camera or teapot symbol next to it to toggle it. Keep in mind that only passes and shots that are enabled will render upon submission to the farm. This means that if a pass is enabled in the shot but disabled in the passes section, it will NOT be submitted to render.
+
+[[File:LPM ExampleShot.jpg|right|250px]]
+
+=== More on Shot Properties ===
+
+To open the common properties submenu, double-click on it or right-click and choose edit. Here there are a variety of properties that can be edited, and to edit them you must first check the checkbox next to that property. There are three properties that should always be set when setting up a shot for submission: 
+
+'''1. Time Output:''' Determines the frame range to be rendered. It's better to choose a range or specific set of frames. Don't select the active time segment option.
+
+'''2. Output Size:''' Determines the resolution of rendered frames. Common resolutions are 1920x1080 and 3840x2160, but these vary from spot to spot.
+
+'''3. Camera:''' Determines the camera which will be rendered. There can only be one camera set for each shot.
+
+There are a few other settings in the properties submenu, but these are rarely if ever used.
+
+[[File:LPM CommonProperties.jpg|250px]]
+
+=== Multiple Shots ===
+
+There are times where it may be necessary to have multiple shot setups for one scene. A few examples of this could be:
+
+1. Having different frame ranges. Maybe you have a shot where the camera isn't moving. You might be able to render some of your passes (the foreground or background, for example) as single frames depending on what else is happening in the shot. This saves render time on the farm by not rendering unnecessary frames.
+
+2. Having multiple cameras. Multiple cameras require multiple shots, regardless of whether other properties are the same.
+
+3. Different output sizes. It's not uncommon for us to render different aspect ratios of spots such as 16x9, 9x16, 1x1, etc., and each aspect ratio might require a different resolution.
+
+= Setting an Output Path =
+
+The output path is where your rendered frames will go to after a job is sent to the farm. It is important to ALWAYS set the correct file path for your shots. Renders should always be pathed to the image sequences folder of your shot or asset. To choose a file path, click the "Set" button in the bottom right corner of LPM and browse to the correct location. These are some examples of appropriate file paths:
+
+ <nowiki>
+W:\Projects\BraveHurts\SPOT__DamselDistress_20s\S_BH-DAM_010\Image_Sequences</nowiki>
+
+ <nowiki>
+W:\Projects\BraveHurts\Assets\Characters\DAM_Damsel\Image_Sequences</nowiki>
+
+[[File:LPM OutputPath.jpg|600px]]
+
+= Submitting Passes to Render =
+
+There are two ways of submitting renders through LPM, locally on your machine and to the farm through Deadline. Almost all rendering is done through our render farm. Local rendering is rare and only used in specific situations.
+
+=== Submitting Through Deadline ===
+
+To submit passes to the farm we use the [[Creating Introduction to Deadline|Deadline Submitter]]. To access this, click the "Network" button at the bottom right of the LPM window. Opening the Deadline Submitter window will take a few seconds while the Submitter contacts the deadline repository and runs an idiot check on your scene to check for common problems that might cause your render to be broken. The Submitter window contains a handful of properties, most of which can be changed on the window. At the top it shows information about your job. Some of this info is based on settings in the Render Setup panel and will have to be tweaked there (see [[Rendering in 3dsMax using vRay]] for more details). When you're ready to submit a render to the farm, click the "Ready to submit passes" button. It can take a while to submit if you have a large number of passes or shots enabled. Below is a breakdown of the different options within the Deadline Submitter window.
+
+[[File:LPM DeadlineSubmitter.jpg|right|250px]]
+
+{| class="wikitable" style="width: 80%; height: 18em;"
+|+ 
+! 
+! 
+|-
+! style="width: 14em;" | Name
+| The name the job will be listed as in the deadline jobs window.
+|-
+! Comment
+| The comment field can be a useful place to set a note that is visible to you and others in the deadline job window.
+|-
+! Batch
+| The name of the Batch that the submitted jobs will be placed in. Batches group multiple jobs under a collapsible header in the deadline window. It doesn’t change how your jobs will render but just keeps the deadline window clean and organized.
+|-
+! User
+| This field will auto fill with your deadline username and is not editable. If this field isn’t showing your username, check your login status in the deadline monitor.
+|}
+
+==== Job Options ====
+
+{| class="wikitable" style="width: 80%; height: 57em;"
+|+ 
+! 
+! 
+|-
+! style="width: 14em;" | Priority
+| Priority determines the order that jobs will render on the farm. Priority ranges from 0 (Least important) to 100 (Most important). Deadline will assign any available render nodes to the highest priority job in the queue. Be aware of other’s render needs and be a good render neighbor.
+|-
+! Group
+| Deadline groups allow you to specify a specific set of machines for your job to run on.
+|-
+! Limits
+| Limits at their simplest functions like groups, but they can also have much more complex functionality.
+|-
+! Submit as Suspended
+| When enabled (Colored Blue), your job will be submitted to deadline but will be suspended and will not start rendering until it is either resumed manually or scheduled/made dependent.
+|-
+! Override Framerange
+| Override LPM’s specified frame range without altering your LPM settings.
+|-
+! Copy to Textures Repository
+| LEAVE AS “DO NOT COPY TEXTURES TO REPOSITORY” unless absolutely needed! Files on the network are already accessible to render nodes, so don’t use the copy to repository function unless necessary.
+|-
+! Frame Buffer
+| Let’s you specify a frame buffer for 3ds Max to render with on the network (3ds MAX default buffer or the Vray frame buffer). There are slight differences between the two frame buffers that sometimes offer an advantage in using one over the other, but in most cases the difference is non existent.
+|-
+! Encode in EXR
+| When enabled, 3ds MAX will render all of separate render elements and store them in the beauty EXRs as extra non-visible channels that are accessible with NUKE or After effects. It’s usually best to not enable this feature and have separate image sequences for each element. Storage savings is negligible and the results are the same.
+|-
+! Ignore Missing Files
+| If checked 3ds MAX will ignore any missing texture or cache files when rendering on the farm. If unchecked, your job will error with missing assets. Either setting can be both good and bad and should be used with caution.
+|-
+! Restart 3ds Max
+| If enabled (as it usually should be) rendernodes will create new instances of 3ds MAX for each new frame in the task.
+|-
+! Close on Complete
+| LEAVE CHECKED unless absolutely required!
+|-
+! Ignore Missing DLL(s)
+| Works exactly the same as “Ignore Missing Files” but with 3ds MAX plugins instead of external files. It’s best to leave this box checked and just be aware of plugins in your scenes and what’s available on the farm.
+|}
+
+==== Task Options ====
+
+{| class="wikitable" style="width: 80%; height: 30em;"
+|+ 
+! 
+! 
+|-
+! style="width: 14em;" | Interruptible
+| When enabled, your submitted jobs can be stopped mid-render to allow a higher priority job to to start rendering. The Integer field on the right (Default of “50”) lets you choose a threshold for when your job can be interrupted. If the threshold is 50, only tasks that are more than 50% complete will continue to render if a more important job enters the queue.
+|-
+! Task Start Timeout
+| This is the number of seconds the rendernodes will wait while a job loads. If your job takes longer to load then the Timeout time, The rendernodes will drop the jobs and consider them unrenderable.
+|-
+! Task Chunk Size
+| This is the number of frames that each task will contain. Every job you submit it broken into “Tasks” and each rendernode will pick up 1 task at a time by default. If your Task Chunk size is 5 then each rendernode will render 5 frames of your job before going and getting a new task.
+|-
+! Frame Order
+| This is the order in which your frames will be rendered. Most commonly you should use “First to Last” or “Last to First”
+|-
+! Override Framerange
+| Override LPM’s specified frame range without altering your LPM settings.
+|-
+! Integration - Auto Draft Preset
+| When enabled, your job will be rendered to a compressed mp4 video for viewing or for automatically emailing a copy.
+|}
+
+==== Utilities ====
+
+{| class="wikitable" style="width: 80%; height: 20em;"
+|+ 
+! 
+! 
+|-
+! style="width: 14em;" | Perform Idiot Check
+| Will rerun the idiot check and look for render related problems in your scene and output the results in the bottom of the Submitter window.
+|-
+! Remove Missing Plugins
+| Will remove any plugins referenced in the scene that are not installed on your workstation.
+|-
+! Remove Missing Maps
+| Will remove any external maps or caches that are referenced in the scene but are not linked to files on the network or local machine.
+|-
+! Optimize Scene
+| Not yet functional.
+|-
+! Optimized Submit
+| Not yet functional.
+|}
+
+==== Submit ====
+
+{| class="wikitable" style="width: 80%; height: 22em;"
+|+ 
+! 
+! 
+|-
+! style="width: 14em;" | 3Ds MAX Hold on Submit
+| Will perform a scene “Hold” before submission that allows you to return to the “Hold” state by using “Fetch” in the Edit menu. Basically a temporary save.
+|-
+! Re-evaluate Submission
+| Click to update your Deadline Submitter window with any changes you’ve made to the LPM window like enabling/disabling passes, changing shot settings, etc. . .
+|-
+! Submit [x] Passe(s)
+| Sends your Jobs to Deadline for rendering. The colored bars on the sides of the button indicate issues with your scene that might affect your render. Check render log for details.
+
+Red: Unrenderable. Will not allow you to submit.
+
+Yellow: Issue are detected, but can still be submitted.
+
+Green: No issues detected. Ready for submission.
+|-
+! RenderLog
+| Displays status of the render and issues detected by the idiot check.
+|}
+
+=== Idiot Check ===
+
+The idiot check is a process that happens when you first open the Deadline Submitter. It examines your file for potential issues with your render. The results of the idiot check can be seen in the render log of the Submitter and are represented by three colors: Green for no errors, yellow for some errors (but still submittable), and red for not submittable. It is possible to bypass the idiot check by clicking the "Skip IC" button (bottom right) before connecting to the Submitter. This is discouraged because submitting a job with issues could cause errors with the resulting rendered frames or even damage the farm. Do so cautiously. There are a variety of functions that the idiot check will go through.
+
+
+The submission logs are saved for reference, including the error count, and are ocaisionally polled / audited to encourage everyone to have as few errors as are possible. An error here or there, or in a pinch is not an issue, but multiple repeated ignored errors should be avoided.
+
+
+'''To learn how to fix or solve issues''', please read the [[Troubleshooting Idiot Checks in LPM when submitting renders in 3dsMax]] article for ways to correct any errors.
+
+=== Checks that are performed ===
+
+'''File size.''' Checks file size. A file more than 1gb is not submittable, and anything above 500mb will give an error.
+
+'''No cameras.''' Checks for renderable cameras in the scene.
+
+'''Camera multipass.''' Checks for camera multipass effects.
+
+'''Frame rate.''' Checks for a 24 fps framerate.
+
+'''Autoback.''' Checks to make sure you are not submitting from an autoback file.
+
+'''Render elements.''' Elements must be set up through LPM, not default 3dsMax. Checks to see if they are active.
+
+'''Hairfarm.''' Checks that hairfarm is not rendering as an effect.
+
+'''Plugins.''' Checks for missing or broken plugins.
+
+'''Normals.''' Checks for bad normals in your scene.
+
+'''Hidden lights.''' Checks if rendering hidden lights is disabled.
+
+'''Locked viewport.''' Checks if a locked viewport is being rendered.
+
+'''Assets in project.''' Checks to make sure all external references are in the project.
+
+=== Submitting a Local Render ===
+
+To submit a local render on your machine, click the "Local" render button at the bottom right of the window next to the "Network" button. The local render dialogue will immediately pop up and start rendering. Before rendering, make sure you have a set frame range in your render properties. Please note that local rendering is bugged in LPM2p8. If local rendering is needed, make sure you are using LPM2p9.
+
+= Bringing it all Together =
+
+Below is an example of a "finished" LPM setup. Finished is in quotations because there is always the possibility of things changing. Keep in mind that this is just one setup and its contents will not apply to all situations. This shot is from BraveHurts-> Damsel Distress-> Shot_010.
+
+[[File:LPM FullExample.png|800px]]
+
+= Common Mistakes, Issues, and Considerations =
+
+Here is a list of common issues that people have or things that should be considered when working in LPM. If you're having a problem, consider checking this list first:
+
+1. If LPM crashes while submitting a render to Deadline or doing a preview render, DO NOT save over your file. Increment the file, check to see if everything is working, and go back to an old file if needed. When submitting to LPM, it will temporarily change the settings and object properties of your file. If LPM crashes mid-submission, it will often not revert back to the file's original settings, and fixing these by hand is difficult and not worth the effort. Saving before submitting in LPM is a good idea so you always have something to go back to. 
+
+2. If you're previewing a render and are getting unwanted reflections or refractions, you probably forgot to change the reflection/refraction value to 0 in your mattes layer. Go to mattes-> edit Vray-> Reflection/Refraction amount-> 0.
+
+3. If you're working with atmosphere and it is showing up in all passes, you probably forgot to disable the global setting in the Environment and Effects panel (8). Open the panel, select the atmosphere, and uncheck active. Make sure you only enable it using the Environment Override layer of your passes.
+
+4. If your passes aren't rendering as you expect them to, make sure the dots next to your layers are set to the correct color. Red is disabled, gray is enabled, and blue will follow visibility within scene file (do not use).
+
+5. DO NOT work in the LPM window with autokey on. Many things in LPM are keyable and it is very difficult to find and remove these keys once they have been placed. If this happens to you, return to an old version of the file before LPM was keyed.
+
+6. If something is not rendering but it is included in your "Geo" layer, it might be because that object is also present in a layer above that. Objects can only exist in one layer, and whichever layer is evaluated last (bottom to top) will be the one it is present in.
+
+7. If your scene is over 1gb, it will not be submittable to the farm. To bypass this, click the "Skip IC" button before connecting to Deadline Submitter.
+
+8. If you need to re-render a small section of frames or a single frame, DO NOT change the frame range in the LPM shot. Make this change on the Deadline Monitor after a job is submitted.
+
+9. If a pass isn't rendering but it is enabled in the shot, check to make sure it is enabled in the passes section as well.
+
+10. Always troubleshoot render issues using the full resolution of a render because some render issues will only be present at 100% resolution.
+
+11. Always keep your LPM as organized as possible. This includes using correct naming conventions for everything, keeping a version number for your shots, and keeping your passes in the appropriate folders.
+
+12. If you need to render the same object twice with different materials, always use a material override in LPM. Never duplicate the geo in your scene and apply a separate material.
+
+13. Only include render elements you need. Some will increase render time significantly (especially AO).
+
+14. Never use the "all active passes" in a shot. Always drag your desired passes into a shot.
+
+15. The render element section of the Environment Override layer is obsolete. Always use a Vray 5 Render Elements Override.
+
+16. Always set an output path for your renders.
+
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Using_LPM_for_rendering_in_3dsMax

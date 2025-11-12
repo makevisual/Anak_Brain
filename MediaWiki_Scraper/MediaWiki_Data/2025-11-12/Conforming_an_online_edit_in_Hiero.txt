@@ -1,0 +1,101 @@
+'''<nowiki/>'Conforming'''' is the process of taking an approved Rough Edit and extracting all of the shot names, lengths, etc, and building them into a nice clean edit pipeline with "official" versions of each shot. Things like Folder Structure, Shot Names, Footage Proxies, are all defined at this step so that artists need to spend as little time as possible worrying about the technical/procedural aspects of a shot and can instead focus on the content of the shot itself. It also ensures that updating any shots or making any high-level changes to the edit is as simple as possible, especially as projects grow large and complex, but creating stands that all shots and artists adhere to whilst working.
+
+== Preparing the Offline Edit: ==
+The Rough Edit is located in the '''''<nowiki/>'../Spot/Edit/Offline/'''''' folder. Open the latest version and immediately save a new version with "_CONFORM" appended to the name. Apply this same name to the sequence inside Premiere as well.
+
+
+The 'offline' or rough edit in premiere will typically have multiple layers for various things like footage, logos, backgrounds, etc. 
+
+[[File:Offline.png|frameless]]
+
+
+The first step is to strip all unnecessary layers and items out, leaving only the shot footage remaining. All other elements will be rebuilt in each shot later. 
+
+[[File:Footage.png|frameless]]
+
+
+Any footage in nested sequences should un-nested and trimmed so that it's first and last frames match the first and last frames of the nested sequence. In some shots the nested sequence may have multiple footage clips or different time remaps, this is OK. Just ensure that the first and last frames are correct on all clips, leaving them stacked to group them together for their shot. The end result should be a timeline containing nothing aside from exactly the clips that are used in the final edit, and those being exactly the correct frame ranges.
+
+When the conform timeline has been cleaned of all extraneous assets, export the timeline to a '''Final Cut Pro XML''' file. This file contains the paths to each piece of footage used and it's frame range, and is what is used to rebuild the rough edit inside of Hiero.
+
+[[File:Export XML.png|frameless]]\
+
+
+
+== Building the Hiero project ==
+
+* Drag the conform XML into your project. It will automatically create a sequence with your clips from the offline edit, as well as import all of the associated footage items.
+* Save the project as an Online edit, '''<nowiki/>'v000'''' in your project's Edit folder.
+* Delete anything in the sequence that is not a footage item; text layers, supers, legal, logos, etc should all be stripped out if they exist.
+* If one does not already exist, create a new track named '''"Reference"''' and place the offline edit/animatic in it. Use the final output render from premiere for this, avoid using source assets or individual clips if possible to ensure the conform is being done from a known, approved source and avoiding potential sources of misinterpretation.
+* Cut this reference track into clips that match the cuts in the edit. Align the reference shots with the source footage for each vertically in the timeline, if there are multiple pieces of source footage for one shot, create a new track for each and stack them. It is OK if the duration of reference shots does not match the duration of source clips, which can be the result of time remapping. ''You should just <u>visually confirm the the first and last frame seen in the reference is the same as what is seen in the footage.</u>''
+* Spacing each stack of clips out in the timeline horizontally will make things easier to read and keep organized.
+* Name each of your footage tracks ''''F01, F02, F03...'''<nowiki/>' for as many tracks as needed. Sort your tracks by priority, so that F01 has the 'main' footage, with subsequent tracks being secondary or tertiary footage.
+* Remove effects from clips. Any animated transforms, time warp, grade, or other nodes should be deleted from all source footage.
+** -Transforms that are rotating footage 180 degrees can remain. This simplifies the footage export later.
+** -If fixed retimes are present on footage (150%, 230%, etc), these can remain if desired. Round these down to the nearest whole frame (100%, 200%...) by right clicking the clip and selecting '''Editorial > Retime...''' and using the method '''<nowiki/>'Keep Source Duration''''
+* Select all clips in each stack and press 'Shift + Alt + /' to rename them. Use a name that follows standard [[Building a shot structure in Hiero|Naming Conventions]] for each shot, increasing the shot number sequentially (010, 020, 030...) as you move through the timeline. ALL CLIPS IN EACH STACK SHOULD HAVE THE EXACT SAME NA
+
+'''Timeline with stacked footage:'''
+
+[[File:FootageTracks.png|frameless|832x832px]]
+
+=== Prepare Footage ===
+We need to export EXRs from the R3D files in the correct color space, to allow us to rebuild their color accurately late in the comp process. For each piece of footage to be conformed, double click it to open it's Read Properties. 
+
+* Change the file extension from '''<nowiki/>'.mov'<nowiki/>''' to '<nowiki/>'''.R3D'''' to switch the source from reading proxy files to reading raw footage files.
+* Check the frame range of the clip before and after switching to R3D. The total number of frames should be the same, though both numbers should be '''1''' less on R3D than they were in the MOV, due to MOVs not counting frame '''0'''.
+* Ensure the Input Transform is set to '''<nowiki/>'rec709'''', so color is read and applied correctly.
+
+[[File:FootageInterpret.png|frameless|578x578px]]
+
+
+To double check you have converted all files, you can right click on your sequence and open it in '''Spreadsheet View''', which allows you to easily confirm all of the clips in your sequence have been changed to '''R3D'''.
+
+[[File:Spreadsheet.png|frameless|573x573px]]
+
+=== Exporting ===
+
+* Right click your sequence in the project and open the Export dialog.
+* The dialog contains presets stored both in your current project as well as on your local computer. Set the export process at the top to '''<nowiki/>'Process as Shots'''', and drag the template PROJECT presets from left > right to add them to your project.
+* Rename the presets for your project, as well as change the '''Export To''' path to match your SPOT folder location.
+* A project containing templates can be found on the server [[Nuke Studio Export Templates|here]], if your local versions are missing. These can be added to your machine in the same way as above, drag them Right > Left to add them to your local machine templates.
+
+[[File:Export.png|frameless|412x412px]]
+
+
+Once its renamed and linked to the SPOT folder, run the 'Comps-3D' export template. This will create folders in the Spot based on the names given to each stack of clips, and create default Nuke comps that are named correctly, that have the correct frame range (Plus 12 frames of heads and tails), and that have write nodes prebuilt and linked to the correct output paths.
+
+Next select only the footage items in your sequence timeline, right click them and again click 'Export'. This time run the "Footage" export template. This will create the nuke scripts used to render the raw footage into EXRs. This step does not create the EXRs directly.
+
+Finally, select only the reference clips in your sequence timeline, and right click to Export them. Export using the "Reference" template. This will render a JPG sequence for each shot to use as reference, and it will render an EXR sequence as a v000 for each of the shot. These v000 sequences can then be used to create a first version of the full online edit, as they all link to the correct locations where final shots will be rendered.
+
+== Exporting Footage ==
+The exports from Nuke Studio creates a Conform script in each Shot's ../Comps/Conform/ folder. Open the scripts using NukeX to allow full editing of all nodes.
+
+* Save a new iteration of the file.
+* The Studio export creates several nodes in the script, for all the different resolutions and outputs that may be needed. There are also nodes for metadata and potentially static time remaps and frame rotations if applicable.
+* Studio will also create a small group of nodes in the upper right of your script that will denoise your footage. Connect these nodes in line between the 2nd and 3rd write nodes, so that write nodes ending in "_D" get denoised, and nodes without it, don't. You should always double check visually what the Denoiser is doing to your footage and ensure the settings are appropriate. Don't just blindly accept the default settings without checking.
+* Depending on the resolution of your footage, and what you will be using in the shot, you may need disable some of the write nodes before exporting. Raw R3D footage is typically 8k resolution, and if we don't need the full resolution, we will typically not render the full Plate, to say time and space. This is highly dependent on the needs of the shot, so check how it will be used before deciding what to export.
+
+'''Conform Scripts:'''
+
+[[File:Conform Script.png|frameless]]  [[File:Conform setup.png|frameless|349x349px]] 
+
+'''Plate -''' Full Resolution, direct conversion of the footage, EXR files
+
+'''Plate-Half -''' 50% Resolution of the plate, direct conversion of footage, EXR files
+
+'''Plate_D -''' Full Resolution plate, denoise applied, EXR files
+
+'''Plate-Half_D -''' 50% Resolution plate, denoise applied, EXR files
+
+'''Proxy-Half_D -''' 50% Resolution, denoise applied, JPG files for reference only
+
+'''Proxy-Quarter_D -''' 25% Resolution, denoise applied, JPG files for reference only
+
+
+Once finished, send all enabled write nodes to the farm to render. This will do the final conversion from R3D files to EXR and leave us with exactly the frames we need, in exactly the place we need them, ready to be used in shots.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Conforming_an_online_edit_in_Hiero

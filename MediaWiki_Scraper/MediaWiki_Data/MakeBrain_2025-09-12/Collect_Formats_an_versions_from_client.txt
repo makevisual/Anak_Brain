@@ -1,0 +1,115 @@
+You need to verify with the client that you have all their deliverables. 
+
+===TVC Deliverables===
+Each distribution house will have its head format set-up but the basics are
+Aspect 16x9
+Resolution 1920x1080
+Note: Title safe and Legal lines are required
+
+
+[[File:Creating_Collect_Formats_an_versions_from_client_Social-Media-Image-Sizes.png|frameless|480x480px]]
+
+===Instagram Standards===
+
+'''Instagram post sizes (feed photos):'''
+Landscape: 1080 x 566 pixels
+
+* Portrait: 1080 x 1350 pixels
+* Square: 1080 x 1080 pixels
+* Supported aspect ratios: Anywhere between 1.91:1 and 4:5
+* Recommended image size: Width of 1080 pixels, height between 566 and 1350 pixels (depending on whether the image is landscape or portrait)
+
+'''Instagram photo thumbnail sizes:'''
+
+* Display size: 161 x 161 pixels
+* Recommended upload size: 1080 pixels wide
+
+'''Instagram Stories image size: 1080 x 1920 pixels'''
+
+Tips:
+
+* This is an aspect ratio of 9:16.
+* Uploading an image with a smaller pixel size (but the same aspect ratio) means the Story will buffer quickly.
+* If you don’t use this ratio, the Story might show with strange cropping, zooming, or leave large sections of the screen blank.
+* Instagram Reels use this same sizing.
+
+'''Instagram carousel image sizes:'''
+
+* Landscape: 1080 x 566 pixels
+* Portrait: 1080 x 1350 pixels
+* Square: 1080 x 1080 pixels
+* Aspect ratio: landscape (1.91:1), square (1:1), vertical (4:5)
+* Recommended image size: Width of 1080 pixels, height between 566 and 1350 pixels (depending on whether the image is landscape or portrait)
+
+'''Instagram Reels sizes:'''
+
+* 1080 x 1920 pixels
+* This is an aspect ratio of 9:16.
+* Cover photo: 1080 x 1920 pixels
+* Keep in mind that Reels are cropped to a 1:1 image in your profile feed and a 4:5 image in the home feed.
+
+'''Instagram ads image sizes:'''
+
+* Landscape: 1080 x 566 pixels
+* Square: 1080 x 1080 pixels
+* Minimum width: 320 pixels
+* Maximum width: 1080 pixels
+* Supported aspect ratios: Anywhere between 1.91:1 and 4:5
+
+'''Image sizes for Instagram Stories ads: 1080 x 1920 pixels'''
+
+Tips:
+
+* Instagram recommends leaving roughly “14% (250 pixels) of the top and bottom of the image free from text and logos” to prevent them from being covered.
+* As of September 2020, Facebook and Instagram ads are no longer penalized if more than 20% of the ad space is text.
+
+===TikTok Standards===
+
+'''TikTok profile photo size: 20 x 20 pixels (minimum size to upload)'''
+
+Tips
+
+* While 20 x 20 is the minimum upload size, upload a higher quality photo for future-proofing.
+
+'''TikTok profile photo size: 20 x 20 pixels (minimum size to upload)'''
+
+Tips
+
+* While 20 x 20 is the minimum upload size, upload a higher quality photo for future-proofing.
+
+'''TikTok Video'''
+
+* Standard 1080x1920
+
+
+
+===YouTube Standards===
+
+'''YouTube profile photo size: 800 x 800 pixels (recommended)'''
+
+Tips
+
+* Make sure the focus of your photo is centered for best results.
+* Files should be JPEG, GIF, BMP or PNG. Animated GIFs won’t work.
+* Photos will render at 98 x 98 pixels.
+
+'''YouTube banner image size: 2048 x 1152 pixels (at minimum)'''
+
+* Aspect ratio: 16:9
+* Minimum area for text and logos without being cut off: 1235 x 338 pixels
+* Maximum file size: 6MB
+
+'''YouTube video size: 1280 x 720 pixels (at minimum)'''
+
+Tips
+
+* YouTube recommends that videos intended for sale or rental have a higher pixel count: 1920 x 1080 pixels.
+* YouTube requires videos to be 1280 x 720 pixels in order to meet HD standards.
+* This is a 16:9 aspect ratio.
+
+'''YouTube thumbnail''' 
+
+* size: 1280 x 720 pixels
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Collect_Formats_an_versions_from_client

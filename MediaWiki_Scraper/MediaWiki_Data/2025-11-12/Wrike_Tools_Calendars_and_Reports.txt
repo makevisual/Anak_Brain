@@ -1,0 +1,20 @@
+===  Making a report is universal so below is how you can make a Workload report. ===
+# <u>Access Wrike Dashboard</u>: Log in to your Wrike account and navigate to the dashboard. This is typically the landing page upon logging in.
+# <u>Select Workload View</u>: Locate the "Workload" view or option within Wrike. This view allows you to see the distribution of tasks and workload across your team members.
+# <u>Adjust Filters</u>: Use filters to refine the workload report according to your needs. You can filter by project, team member, timeframe, task status, or any other relevant criteria. This step ensures that the report focuses on the specific workload you want to analyze.
+# <u>Review Workload Data</u>: Once you've applied the desired filters, review the workload data presented in the report. This may include information such as the number of tasks assigned to each team member, task deadlines, task priorities, and any other relevant details.
+# <u>Share the Report</u>: To share it with relevant coworkers. Wrike typically offers options to export reports in various formats such as PDF, Excel, or CSV. Alternatively, you can share the report directly within Wrike with your team members or project stakeholders.
+
+By following these steps, you can efficiently generate a report of workload in Wrike to better understand task distribution, optimize resource allocation, and track team productivity.
+[[File:Wrike Tools Calendars and Reports - Space Snip 1.png|center|thumb|Space View to find the Tools Section]]
+[[File:Wrike Tools Calendars and Reports - Space Snip 2.png|center|thumb|Report Window for the Creation]]
+
+===  Here is a quick run down on how to make Calendars in Wrike ===
+This topic is covered in the following articles:
+
+[[Create project schedule in Wrike]]
+
+[[How to create a public calendar and share it in Wrike]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Wrike_Tools_Calendars_and_Reports

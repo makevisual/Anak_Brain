@@ -1,0 +1,472 @@
+=Intro=
+
+'''Why use Davinci Resolve?'''
+
+*All the post production things you do - editing, color grade, audio mixing, FX, etc. can be done in one app. Here at MAKE, we will be using it for mainly editing and color grade/correction.
+*You can collaborate with others over the internet and share a project file and work on it at the same time.
+
+'''Layout'''
+
+1. Cut Page - Editing
+
+2. Color Page - Color Grade
+
+3. Fusion - FX / Compositing
+
+4. Farlight - Audio
+
+=Starting a Project=
+
+=== Overall Layout ===
+
+*Page Buttons - Located at the bottom of the page. Each page takes you to a different "app". All of these pages share the '''same timeline'''. So you don't have to export your timeline for each page. 
+
+*Timeline - The equivalent to Premiere's "sequences". Different people can work on the same project, but not timeline. You can switch to a different timeline in the upper right tab. You can also go to the Media Pool on the left side of the page and find a different timeline. Double click on them to open the timeline.
+
+*Project Settings - The '''Cog''' that is located in the bottom right corner of the interface
+**Settings you want to get right '''BEFORE''' you start on your project:
+***Timeline Resolution
+***Timeline Frame Rate
+***Color Management
+
+=== Project Manager ===
+
+*Where you open and create new projects. 
+*The Project Manager is the '''Home''' button in the bottom right corner of the interface. 
+*Where the projects "live" and where you create a project library.
+
+=== Saving out a Project ===
+
+1.Right click on the project
+
+2. Export
+
+3. Save as a .drp file (Davinci Resolve Project)
+
+4. Good for sharing or backing the project up. You are basically making a copy of the project.
+
+=Media Page=
+
+=== Overview ===
+
+The Media Page is where you import media, rename it, organize it and preview it. 
+
+=== Layout ===
+
+
+'''Media Pool''' - List of organized media that's been added to the project; the media you're going to use. You can:
+*Scrub through thumbnails
+*Change size of thumbnails
+*Change views - List View shows properties and you can right click on the properties bar to change what properties you want to see. 
+
+
+'''Audio / Metadata / Inspector / Capture Tabs'''
+
+Metadata - Where you can add notes and log your footage.
+*In the dropbdown list (top right corner of the metadata tab), select '''Shot & Scene''' and there you can add notes and log your footage.
+
+Inspector - Where you control the properties of what clips you have selected. You can change things in the media even before you put it in the timeline.
+
+Capture - Capturing things from a film scanner or tape deck.
+
+
+'''Bins'''
+
+Normal and Smart Bins - basically folders and filters to help with organizing your media
+
+'''Overview of Layout'''
+
+[[File:DRP LayoutOverview.png|800px]]
+
+=== Organization Using Bins ===
+
+*Right click in the Media Pool and select '''New Bin'''
+*Collections - automatically smart sort media
+*Smart Bins
+**Based on properties that you want to sort by; basically like a filter!
+**Keywords: Select media > Metadata tab > add keywords > under Smart Bins, there will be bins created based on keywords
+
+=== Organization Using Auto Syncing of Visual and Audio ===
+
+1. In the Metadata tab, type in the scene and shot as you import them into the project.
+
+2. In the Media Pool, go to List View > Right click properties bar > uncheck everything EXCEPT: Scene, Shot, Take and Sync Audio.
+
+3. The video and audio that should be linked should be right next to each other.
+
+4. Select both your visual and audio takes (same scene, shot, take). 
+
+5. Right click > Auto Sync Audio > Based on Waveform. 
+
+6. It will automatically sync your audio, link it and will stick the audio in place of the on-camera audio. 
+
+7. Right click on the media > Clip Attributes > Audio tab > it will show what audio is linked so you can change back and forth on if it's linked or not.
+
+=Cut Page=
+
+=== Overview ===
+
+The Edit Page is used to put together  your story, overall well-rounded. It's designed to streamline editing. 
+
+=== Layout ===
+
+'''Media Pool''' - It's more simplified than the Edit Page's Media Pool
+
+'''Timeline'''
+*Lower Timeline - moves '''UNDER''' the playhead (the playhead stays stationary). Always zoomed '''IN'''.
+**Upper Timeline - moves '''ABOVE''' the playhead and it moves around. Always zoomed '''OUT'''.
+**Designed to NOT have a gap between the clips. 
+**[[File:DRP CutPage Sliders.png|50px]] - Sliders = Inspector toggles in one place; however, the Inspector is still on this page. 
+
+'''Viewer''' - Only 1 viewer, but if you double click on a clip in Media Pool, it will pull up that clip in the viewer. Click in the Timeline to see the timeline in the viewer. 
+
+=== Editing in the Cut Page ===
+
+*You can only '''TRIM''' a clip. The page is designed to have no gaps. 
+**To get gaps:
+***[[File:DRP CutPage RippleToggle.png|50px]] - Track editing options (at the trackhead) > Turn Off Ripple
+*Note when editing your audio may get offset from video. You mainly want to do straight cuts when using the Edit Page.
+*Good for: a news story, vlog, something where you don’t have fancy audio, rough cut.
+
+=== Strength of the Cut Page ===
+
+==== Source Tape ====
+
+*Located: Upper right corner of the viewer -> [[File:DRP CutPage SourceTape.png|50px]]
+**Source Clip | Source Tape | Timeline
+*Take all the media from whatever bin you're using into the Media Pool and will put them out end-to-end in a little playboar in the viewer. It allows you to easily find certain clip like B-roll. 
+*you can then mark in and out the desired and put itin your timeline. 
+
+==== Edit Buttons ====
+
+*Located: Along the Timeline Toolbar
+*Types:
+**Place on Top
+**Ripple Overwrite
+**Smart Insert
+
+==== Multi Cam Edits ====
+*Select all of the clips of the same moment > click '''Sync Clips'''[[File:DRP CutPage Sync.png|50px]]> Brings up the '''Sync Clips Window''' 
+*You can sync by: In/Out, Timecode or Audio
+*Sync and Save Sync
+*New icon in the corner of the clips showing that they belong together: [[File:DRP CutPage Synced.png|50px]]
+*Create a new timeline > drag and drop a clip in the timeline > go to the '''Sync Bin''' > pull another clip and it will automatically set an in at the point it would sync with playhead.
+
+=Edit Page=
+
+=== Overview ===
+
+The Edit Page is where you put together your story; put together the series of shots.
+
+=== Layout ===
+
+*Media Pool
+*Timeline
+*Tool bar
+*Viewer
+*Panels - Effects, Sound Library, Keyframes, Inspector
+
+'''Overview of Layout'''
+
+[[File:DRP EditPage LayoutOverview.png|800px]]
+
+=== Editing in the Edit Page ===
+
+==== Start ====
+
+1. Make a new timeline - right click anywhere in the media pool > Timelines > Create New Timeline > Adjust settings if needed
+
+==== Adding Media ====
+
+1. Double click on a video clip to pull it up on the Media Viewer
+
+2. Shortcuts: 
+   '''J''' = Play Backwards
+   '''K''' = Stop
+   '''L''' = Play Forwards
+
+3. Inserting Clips
+
+Option 1: Drag clip into timeline the adjust/clip from there
+
+Option 2: You just use the video clip OR audio if you drag using either the film strip or wave audio icon from hovering over the viewer: [[File:DRP EditPage AudioVideoViewerIcon.png|100px]]
+
+Option 3: You use the Timeline tool bar to: 
+
+[[File:DRP EditPage TimelineToolBarIcons.png|420px]]
+
+==== Trimming Clips ====
+
+1. Bracket on the sides of the clip - click and drag to desired spot. 
+
+2. Delete leftover empty space on left side - click on empty space and hit backspace. 
+   '''Backspace''' = Delete selected
+   '''Delete''' = Ripple delete
+
+3. Trimming in Media Viewer in the Media Viewer
+
+*Mark In - At the start of desired clip, click '''"I"''' (Mark In) or this button: [[File:DRP_EditPage_MarkIn.png|50px]]
+
+*Mark Out - At the end of desired clip, click '''"O"''' (Mark Out) or this button: [[File:DRP EditPage MarkOut.png|50px]]
+
+4. Splitting Clips
+
+[[File:DRP EditPage SpiltTool.png|50px]] Blade Edit Mode - where you can split a clip into two
+   '''Ctrl + B''' = Razor (Split clips at Playhead)
+   '''Ctrl + Shift + [''' = Start to Play head
+   '''Alt + Mouse Scroll Wheel''' = Zoom in and out on the Timeline (or toggle Slider on Timeline Toolbar)
+   '''Ctrl + Shift + <''' or '''>''' = Shift selected clip up or down the timeline
+
+==== Editing Details in the Edit Page ====
+
+*Go to the Inspector Tab - where all the properties "live"
+
+*Video - you can use the Overlay to visualize your transforms on the clip (turn on/off)
+
+*Audio - you can do basic audio editing (similar to Farlight) and use the Mixer and Track Header
+
+*Effects - Drag the Effect to the clip. It then opens a new tab in the Inspector called "Effects". There you can edit the effect. To delete the effect, in the Inspector's Effects tab, clic on the trashcan icon. 
+**Examples: OPen FX (Visual Effects), Titles (Text), Generators
+
+==== Extra Tips ====
+
+*If audio is playing on one side of headphones (mono recording in a stereo track)... 
+**Right click on the track header > Change Track Type to > select Mono
+
+=Fusion Page=
+
+=== Overview ===
+
+*Fusion's mainly used for compositing. 
+*You can take any clip from any timeline and bring it into Fusion -> look at a shot in the Edit Page and switch over to Fusion and it brings it up. 
+
+=== Layout ===
+
+*Media Pool
+*Viewer
+*Inspector + Other Panels
+*Nodes
+**Node = A box that gets lined up like a flowchart. Has an input/output.
+
+=== Using Nodes ===
+
+Where to find nodes
+*Effects > Tools > Nodes
+*Toolbar (Commonly used nodes)
+*Click and drag your desired node into: 
+**Viewer = to see it
+**Node Panel = to add it to the "flow chart"
+
+==== Toolbar Nodes ====
+
+'''Image Node'''
+*Displays an image either from Media Pool (drag clip in editor) or Timeline | generates an image
+*Background node: creates a solid color and change the color in the Inspector
+*Fast node: Generates clouds
+*Text node: Generates text image
+
+'''Effect Node'''
+*Effects on an image | needs an image to exist
+*Blur node, Color Correct node, Curves, Brightness/Contrast, Transform
+
+'''Merge Node'''
+*"Putting an image on top of another image"
+*Put the output of the foreground image into the green input of the merge with the background image plugged in. 
+*Note: You're NOT putting an effect "over" an image. You run it through an effect and with merge you put something over something else. 
+*Use multiple merge nodes with multiple images
+*Multi Merge Node: You can plug in multiple image and use layers in the Inspector... BUT it can get a bit confusing with your layer list AND layout. 
+
+'''Mask Node'''
+*To select "part" of the image
+*Located: In Toolbar -> [[File:DRP FusionPage Mask01.png|200px]]
+*Example: Grab the circle (found in toolbar), view it (1), you can adjust the shape / invert (in the Inspector) and then connect in any Mask input (the blue arrow) saying "whatever that node's job is, only happens inside of the mask". 
+   [[File:DRP FusionPage Mask02.png|600px]]
+
+==== Example: Using a Blur Node ====
+
+*Timeline Toolbar > Blur Node [[File:DRP FusionPage BlurNode.png|30px]] > Drag between the MediaIn/Out Nodes
+*Having the Blur Node selected, you can edit/toggle it in the Inspector tab
+*Go back to the Edit Page and it's the output of the Fusion
+
+=== Example Walkthrough - Make a Night Time Shot With Fog ===
+
+1. LUT [[File:DRP FusionPage LUT.png|50px]]- gets you a better color space depending on what you filmed on
+
+2. Color Correct whole image darker/night time
+
+3. Color Correct the Sky
+*Color Curves - uncheck alpha, adjust curves
+*Create Polygon Mask - isolate the sky and up the feathering
+
+4. Add brightness of the lights
+*Color Correct node and add to the view and merge over what we've already done. Color correct to make the lights how you want them to look. 
+*Polygon Mask - isolate the lights, feather it out. (This is added on top of the night scene you made.) You can stack the polygon nodes. 
+
+5. Add Fog
+*Fast Noise Node and merge - make adjustments in Inspector
+*Mask along the ground
+*Merge - make it subtractive
+
+'''Flowchart Example:'''
+
+[[File:DRP FusionPage NightTimeFlowchart.png|1550px]]
+
+=== Example Walkthrough - Comping Footage On Top of Footage ===
+
+'''Note: For this example we are putting an alien into a spaceship'''
+
+1. Bring BOTH clips into Fusion
+*In Edit Page > have footage you want on top of the footage for the bottom > Right click top footage > New Fusion Clip > It will combine the clips in Edit and give you two MediaIn nodes
+
+2. Masking out the Spaceship + add the Alien
+   You're putting the alien IN the cockpit, so you want alien clip to be in the background and cockpit clip to be in the background and cockpit clip to bin the foreground.
+*Polygon node connected to space ship node. *When you're gonna mask something directly make sure you have the image in the first viewer.*
+**Turn off this switch in the Inspector to draw ON TOP of the image - [[File:DRP FusionPage Polygon.png|150px]]
+***Invert
+***Resize alien to fit in the mask (Transform Node - [[File:DRP FusionPage TransformNode.png|50px]])
+**Add a shadow on the alien for believability 
+***Color Correct node (after the Transform node) - bring gain down
+***Add a Mask for only the part you want the shadow to be 
+
+'''Flowchart Example:'''
+
+[[File:DRP FusionPage AlientinSpaceshipFlowchart.png|1000px]]
+
+=== Example: Motion Title ===
+
+1. Optional: Create a "blank" Fusion Composition
+*Edit Page > Effects > Fusion Composition/Adjustment Clip > click and drag onto the Timeline > have it selected and the go into Fusion
+2. Create your title (If you didn't create new composition, then the text would be "attached" to the background)
+3. You can do whatever you want with the title sequence! 
+4. Animation
+*[[File:DRP FusionPage Key.png|30px]] - the keys in the Inspector
+
+=== Shortcuts ===
+
+   '''GENERAL'''
+   '''1''' or '''2''' = Toggle Node in Viewer (Dots under node box tells if it's in the viewer or not)
+   '''F2''' = Renaming nodes
+   '''Click + drag node + Shift''' = To connect/disconnect a node in between other nodes
+   '''Shift + Spacebar''' = "Select Tool" menu with node options
+
+   '''SPECIFIC'''
+   '''Creating an Underlay'''
+      Select desired nodes > Effects > Tools > Flow > double click '''Underlay'''
+      Alt + click the underlay = to JUST select underlay
+   '''Ctrl + grab/drag handles''' = Adjusting handle of the Polygon node
+
+
+= Color Page = 
+
+=== Overview ===
+
+Color Page's main function is to help with color correction. 
+
+=== Layout ===
+
+1. Media Pool
+
+2. Viewer
+
+3. Color Nodes
+*Adding nodes - Serial Nodes
+*Multiple nodes will do ONE THING SPECIFICALLY and together grouped will show on the shot
+
+4. Clips
+*Click on the shot you want to adjust
+
+5. Mini Timeline
+
+6. Panels
+
+'''Layout Overview'''
+
+
+
+=== Using the Color Page ===
+
+====Primary Tools ====
+
+Lift - Controls darkest parts of the image
+
+Gamma - Controls the medium darks of the image
+
+Gain - Controls the lightest parts of the image
+
+Offset - Control the entire image's overall brightness and color
+
+[[File:DRP ColorPage PrimaryColorWheels.png|500px]]
+
+The rainbow icon in the corner of a clip tells you that it's been adjusted -> [[File:DRP ColorPage ClipAdjusted.png|100px]]
+
+==== Primary Controls ====
+
+Temperature - Changes the color balance between warm and cool tone in the image
+
+Tint - Shifts the balance of an image between green and magenta. 
+
+Contrast - Increases the difference between the darkest and brightest parts of an image. 
+
+Pivot - Modifies the center joint around which contrast is applied, affecting how the image's highlights and shadows are expanded or compressed
+
+Mid/Detail - Changes the sharpness and definition in the image's midtones, where skin tone often appear. 
+
+[[File:DRP ColorPage PrimaryColorAdjust.png|500px]]
+
+==== Helpful Shortcuts / Buttons ====
+
+   [[File:DRP ColorPage ColorCompare.png|50px]] = Turn on/off to compare color correction edits to the original image
+
+   '''Ctrl + Home''' = Resetting everything in your node
+
+    [[File:DRP ColorPage NodeTurnOnOff.png|100px]] - Click on the # of the node in the left-bottom corner = Turning on/off nodes in viewer
+
+==== Color Management ====
+
+Color Management - log footage to footage that looks good on screen
+
+'''Changing Color Management'''
+
+There are different ways to change your color management
+
+1. Project Settings
+*Project Setting (Cog) > Color Management > Adjust for the whole project but the Timeline sets can override those settings
+
+2. Timeline Settings
+*Right click in the Media Pool > Timelines > Timeline Settings > Color
+
+3. Color Space
+*Default DaVinci YRGB - Letting the footage as is
+*DaVinci YRGB Color Managed - doesn't change anything but...
+*Right click clip > Input Color Space > What log format you shot on (You can shift select all the clips and apply color management)
+
+4.Adding Color Management Node
+*Add node > Add Serial > Drag it to the end close the flowchart (close the the Output node). This is the last thing that will affect the clip
+*Label CST (Color Space Transform)
+*Upper right > Effects > Color Space Transform > drag onto the node
+*In the Settings:
+**Input color space: What footage you have
+**Input Gamma: What footage you have 
+**Output Color Space/Gamma (dependent on where you're exporting to)
+***Example: Rec.709 - for YouTube, Phone, Internet, etc
+**Everything else is personal preference (example below):
+***Tone Mapping Method > Luminance Mapping
+***Gamut Mapping Method > Saturation Compression
+**Applying the Color Management Node to other clips
+***Shift select all the clips > Middle mouse click on the clip you want to copy from > Replace > CST node on all the shots now
+
+5. Clip Nodes vs Timeline Nodes
+*Toggling - [[File:DRP ColorPage ClipvsTimelineToggle.png|200px]] (right side of the viewport)
+*You can affect ALL the clips in the Timeline for a unified look
+
+6. Groups
+*Make a group: Click on what clips you want, right click and Create New Group > Label Group
+**You'll see [[File:DRP ColorPage Link.png|50px]] to show that clips are in a group. 
+
+7. Grabbing Stills
+*Right click clip > Grab Still > Gallery
+*Not only a still but also a PRESET (keeps all your info of nodes)
+*Play Still - shows a wipe screen, good to match footage
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_To_Use_DaVinci_Resolve

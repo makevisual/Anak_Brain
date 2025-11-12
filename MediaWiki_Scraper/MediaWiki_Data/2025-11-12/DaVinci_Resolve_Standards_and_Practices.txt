@@ -1,0 +1,247 @@
+=Introduction=
+DaVinci Resolve is MAKE's editing software of choice for creating all of our initial spot edits and animatics. Several settings and processes within the program are used in specific ways at MAKE for quality and consistency throughout the studio. This article is intended to get the reader up to speed on the fundamentals, and can act as a starting point for making a new DaVinci Resolve project from scratch.
+
+'''''Note:''' Prior to 2025, our offline editing workflow was done in Adobe Premiere Pro. See [[Premiere Standards and Practices]] for our guide on that software.''
+
+[[File:DaVinci_Resolve_Standards_and_Practices_HeaderImage.jpg|500px|center]]
+
+==What Are "Offline" and "Online" Edits?==
+
+When projects are edited at MAKE, the first rough draft (or "rough cut") with actual footage is created in DaVinci Resolve, and is known primarily as the '''"offline edit."''' It uses proxy footage and includes basic editing effects, rough green-screen keying, and mattes to create a vision of the final product with all its assembled components. This is the edit that will be sent for client approval before moving on to the online edit.
+
+The '''"online edit"''' is created in Nuke Studio, using the offline edit as a template. It uses higher resolution footage, final animated clips and graphics, and proper keying and roto work, all of which are rendered as sequences from Nuke.
+
+
+=New Project Setup=
+
+==Creating the File==
+Open DaVinci Resolve. For studio consistency, the software version should be up to date - this way, artists throughout the studio can access and edit each other's project files.
+
+===Network Project===
+Some projects at MAKE will use the Network feature, allowing multiple users to work in one shared project. Before beginning a project, confirm with your producer or director which route to take. Using a network project offers several key benefits, especially for collaborative workflows:
+
+*Multi-User Collaboration: Multiple editors, colorists, sound designers, and VFX artists can work on the same project simultaneously, streamlining post-production.
+
+*Centralized Project Management: Projects are stored on a shared server, allowing easier access, version control, and backup from a central location.
+
+*Improved Workflow Efficiency: Teams can divide tasks (editing, grading, audio, etc.) across workstations, reducing bottlenecks and improving turnaround time.
+
+*Consistent Project Updates: Changes made by one team member are instantly available to others, ensuring everyone is working with the most up-to-date version.
+
+===Creating and joining a network project===
+
+[[File:ResolveNetworkProject 01.jpg|500px|center]]
+
+===Adding a Network Project To Your Library===
+The following info is for both creating and connecting to a shared network project
+*Name: ''The image is an example for a Downy project.'' This field will be unique to your project.
+*Location: vm-m2
+*Username: Administrator
+*Password: mine
+
+[[File:Resolve_Network_Cred.jpg|thumb|center]]
+
+===Local Project===
+If you are NOT working on a collaborative project, then starting a local project will be a little more straight forward
+
+[[File:LocalProject01.jpg|thumb|center|489x489px]]
+
+===File Naming For a New Project===
+
+In the '''Name''' field, give the project file its unique name. Some common naming conventions are as follows:
+
+*Offline Edit: '''[ProjectHeader]_[ProjectSubheader]_Offline_Edit_[VersionNumber]'''
+**(Example: MBX_SustainabilitySP24_Offline_Edit_v001)
+
+*Animatic: '''[ProjectHeader]_[ProjectSubheader]_Animatic_[VersionNumber]'''
+**(Example: MBX_SustainabilitySP24_Animatic_v001)
+
+===Media Location===
+
+In the '''Media Location''' field, click '''Change Location''' to browse for a folder. '''''This will not create a shareable project file (.DRP); it only tells the program where the project's media lives. See below for instructions on exporting a shareable .DRP project file. The media location and project file location will be the same folder.''''' The most typical DaVinci Resolve locations for these are as follows:
+
+*Offline Edit: '''[ProjectFolder]/[SPOTFolder]/Edit/Offline'''
+**(Example: Matchbox - Sustainability - SP24\SPOT_Sustainability_SP24\Edit\Offline)
+
+*Animatic: '''[ProjectFolder]/[AnimaticFolder]/Edit'''
+**(Example: Matchbox - Sustainability - SP24\Animatic_MBX_ProjectSustainability_SP24\Edit)
+
+
+Click '''Create''' to start the new project.
+
+[[File:DaVinci_Resolve_Standards_and_Practices_UntitledProject.jpg|500px|center]]
+
+==Media Storage (Scratch Disk)==
+
+Media storage (or scratch disk) refers to the location where your computer stores DaVinci Resolve's auto-generated files, which are created when rendering the timeline or exporting videos. These files can quickly add up, decreasing the software's performance and filling up company storage, so it is critical to set the proper Media Storage location right away for each new project. The best place is on your local computer's C: Drive.
+
+To set Media Storage, go to the Menu Bar and click '''DaVinci Resolve > Preferences...''', then select the '''Media Storage''' tab on the left. This will open a list where file paths can be added and removed. The default location will be the project folder itself, but since this is on MAKE's shared network, it must be changed. Select the default path and click '''Remove'''. Then click '''Add''', and navigate to your computer's C: Drive. Create a folder in a memorable location, name it accordingly, and click '''Select Folder'''. Click '''Save''' to finalize the Media Storage settings.
+
+''(Note: Remember to periodically delete the files from this folder to prevent taking up unnecessary storage space.)''
+
+[[File:DaVinci_Resolve_Standards_and_Practices_MediaStorage.jpg|700px|center]]
+
+==Project Settings==
+
+Now that the project exists and Media Storage is set, it's time to confirm the project settings. In the main menu bar, select '''File > Project Settings...'''
+
+
+The '''Master Settings''' tab contains the most important and commonly adjusted options. For a standard offline edit project, ensure the following items are set as such:
+
+'''Timeline Format'''
+*Timeline resolution: '''1920 x 1080 HD'''
+*Timeline frame rate: '''23.976 frames per second'''
+
+'''Video Monitoring'''
+*Video resolution: '''1920 x 1080 HD'''
+*Format: '''23.976p'''
+
+'''Optimized Media and Render Cache'''
+*Proxy media format: '''ProRes 422 HQ'''
+
+                             [[File:IMAGENAME.png|600px]]
+
+The '''Color Management''' tab contains critical settings for maintaining proper color space standards with the rest of the studio pipeline. The following settings should be set as:
+*ALEX WILL UPDATE THIS. Quick note to include: Color management settings CAN be adjusted after footage is imported, but you should never start editing (particularly color edits) until the color management settings have been set.
+
+                             [[File:IMAGENAME.png|600px]]
+
+The '''Camera Raw''' tab allows the user to adjust parameters universally to all camera raw files in the given project. The settings should be set as such:
+
+*Raw profile: '''RED'''
+
+                             [[File:IMAGENAME.png|600px]]
+
+==Interface==
+
+DaVinci Resolve is a robust program with seven individual workspace pages, each dedicated to a specific stage in the editing pipeline. For MAKE's offline edit purposes, the majority of work will be done in the '''Edit''' page. To view it, click the '''Edit''' button in the '''Page Selector''' at the bottom of the screen. This will display a layout of panels where most standard operations will take place: '''Media Pool''', '''Source Viewer''', '''Timeline Viewer''', '''Inspector''', '''Effects Library''', '''Toolbar''', '''Timeline''', and '''Mixer'''. Most panels can be stretched and resized to fit your workflow.
+
+[[File:DaVinci_Resolve_Standards_and_Practices_InterfaceLabeled.jpg|750px|center]]
+
+==Bins==
+
+Keeping project content organized is simple using Bins: customizable folders saved within each DaVinci Resolve project. To create them, right-click inside the '''Media Pool''' panel and select '''New Bin'''. Name the bin, and repeat this process for whichever categories the current project demands. Bins can be dragged inside each other to create a system of nested folders. The following is a useful Bin layout that includes all the primary content categories used at MAKE, but these can be added to or removed depending on the needs of the project:
+
+[[File:DaVinci_Resolve_Standards_and_Practices_Bins.jpg|700px|center]]
+
+*'''''Animatic''''' ''(Rendered animatic files and assets/placeholders used only in the animatic)''
+*'''''Assets''''' ''(Individual media components like audio and graphics, as well as tools like safe frame charts)''
+**'''''Adjustment Layers''''' ''(Customizable blank layers used to apply specific effects to multiple clips at once)''
+**'''''Audio''''' ''(Sound files like .MP4s and .WAVs)''
+***'''''Music''''' ''(All watermarked and/or final music files)''
+***'''''SFX''''' ''(Sound effects)''
+***'''''VO''''' ''(Voice-overs and other dialogue)''
+**'''''Backgrounds''''' ''(Live-action, 2D, or CG background plates)''
+**'''''Graphics''''' ''(Individual 2D or CG elements and transition effects)''
+**'''''Logos/Legal''''' ''(Company logos and legal text)
+**'''''Solids''''' ''(Fields of solid color, like Color Mattes and Black Video)''
+**'''''Utilities''''' ''(Miscellaneous informational or placeholder files, like safe frame charts)''
+*'''''Footage''''' ''(All unedited live-action video clips straight from the camera, sorted into bins by shot)''
+*'''''Sequences''''' ''(The main segments of compiled and edited content created within the DaVinci Resolve project)''
+**'''''Edits''''' ''(The primary sequences where the main video(s) are constructed)''
+**'''''Nests''''' ''(Sub-sequences generated from "nesting" specific content within an existing sequence)''
+**'''''Shots''''' ''(Sequences of clips all from the same shot, used for sorting and weeding takes)''
+
+=Importing Media=
+Media can be imported to DaVinci Resolve by dragging it into the '''Media Pool''' panel or by selecting '''File>Import>Media... (Ctrl+I)'''.
+
+==Which Files?==
+In DaVinci Resolve, the we typically use '''.MOVs''' and '''.MP4s''' for video, along with various audio files like '''.WAVs''' and still images like '''.TIFFS,''' '''.PNGs,''' and '''.JPEGs.''' The type and variety will depend on the project.
+
+
+Our live-action cameras capture high quality video files called '''.R3Ds,''' but these will be saved for the final clean-up edits in Hiero and Nuke. The lower quality proxy files listed above are perfect for DaVinci Resolve, since they load faster and work better for large-scale, creatively-intensive edits with lots of moving parts.
+
+===File Locations:===
+
+*Live-action video footage (.MOVs)- '''''Project''/''SPOT''/''Shot''/Footage/F01'''
+**''This folder will contain sub-folders like "Plate," "Plate_D," "Proxy-Half," etc. Plate footage is the original, higher quality video, while Proxy footage is lower quality and faster to edit. "D" stands for "de-noised," while "Half" and "Quarter" refer to their resolution compared to the original footage.''
+
+*Raw, full-res video footage (.R3Ds)- '''T:/Footage/''Project''/''Date''/RED/'''
+**''These will contain sub-folders with raw .R3D footage shot on the specified date.''
+
+*Graphics, Audio, Still Images, etc.- These come from various sources, but many of them can be found in '''''Project''/Assets'''.
+**''This folder contains sub-folders dedicated to various content categories, such as Audio, Effects, and Images.
+
+==Creating Timelines==
+Every edit begins by making a Timeline, which is an editable sequence with layers for compiling media.
+
+To make one, go to the '''Media Pool''' panel, right-click and select '''Create New Timeline...''' (Ctrl+N). In the popup window, give it a name. Next, click the '''Settings''' tab to set the following options:
+
+*Editing Mode: '''DSLR'''
+*Timebase: '''23.976 frames/second'''
+
+*Frame Size: '''1920''' horizontal, '''1080''' vertical, 16:9
+*Display Format: '''23.976 fps Timecode'''
+*Working Color Space: '''Rec. 709'''
+
+*Preview File Format: '''QuickTime'''
+*Codec: '''Apple ProRes 422 LT'''
+
+                             [[File:Premiere_Standards_and_Practices_SequenceSettings.png|600px]]
+
+===Keep Existing Settings===
+Once the settings have been adjusted, media files can be dragged from the '''Project''' panel onto the '''Timeline''' to create the edit. If the settings of the dragged clip (resolution, frame rate, etc.) don't match the sequence, a prompt will appear (see below). Click '''Keep Existing Settings''' to apply the Sequence Settings to the dragged clip.
+
+                               [[File:Premiere_Standards_and_Practices_ClipMismatchWarning.png|500px]]
+
+===Set to Frame Size===
+Next, right-click on the clip and click '''Set to Frame Size''' (NOT Scale), fitting the clip to the sequence's frame. This can be done to multiple selected clips at once.
+
+===LUTs===
+Footage from our camera will appear dull and desaturated at first. This is because it needs a LUT applied. To do this, select all applicable clips in the '''Project''' panel, right-click them and select '''Modify>Interpret Footage...''' A window will appear, and under the '''Color Management''' section, click the '''Input LUT''' dropdown and select '''Add LUTs...''' Browse to '''''Project''/Assets/Resources/Luts/REC709''' and choose:
+ <nowiki>
+RWG_Log3G10 to REC709_BT1886 with MEDIUM_CONTRAST and R_3_Soft size_33 v1.13</nowiki>
+
+=Editing Essentials=
+All editing projects are different, but the following tips and standards will apply to many of them:
+
+==Time Remaps and Speed Changes==
+It is best to handle these adjustments in a structured way to avoid confusing yourself or other artists down the pipeline. '''Speed Changes''' are simple timing adjustments that affect an entire clip at once, while '''Time Remaps''' are precise timing adjustments that allow the speed to increase/decrease at specified points in the clip. ''Do not use both on the same clip, as it will over-complicate the process.''
+
+
+To apply a Speed Change, right-click a clip in the timeline and select '''Speed/Duration...''' The speed can now be adjusted either as a percentage, or by inputting the desired length of the clip.
+
+                                          [[File:Premiere_Standards_and_Practices_SpeedDuration.png|300px]]
+
+
+To apply a Time Remap, select a clip and go to the '''Effect Controls''' tab (upper left of the Editing workspace). Open the '''Time Remapping''' dropdown and the '''Speed''' sub-dropdown. In the graph to the right, drag the horizontal line up or down to increase or decrease the speed percentage, and click the diamond-shaped '''key''' button to set keyframes where the speed can be changed. Drag the bracket points to adjust the speed ramp timing as needed. Click the blue '''stopwatch''' icon to reset the speed and keyframes if you need to start over.
+
+                  [[File:Premiere_Standards_and_Practices_TimeRemap.png|650px]]
+
+
+==Nests==
+Nests are useful tools for organizing and editing multiple clips at once within the Timeline. To create one, select all the clips you wish to include in the nest, right-click on them, and click '''Nest...''' Give the nest a name and click '''OK'''. A sequence for the nest will appear in the '''Project''' window- don't forget to drag it into the correct Bin!
+
+The nest can now act as its own sequence-within-a-sequence in the timeline. Effects can be applied to the nest as a whole, affecting everything within it.
+
+===Transforming and Retiming with Nests===
+One of the most helpful uses for nests is making stacked, non-destructive changes to a clip's transforms and timing. Technically both these effects and more can be applied to the original clip itself, which is appropriate for very rough drafts. However, if a higher degree of precision is needed, it is better to separate those effects onto different, independent layers of a nest hierarchy.
+
+
+The standard nest hierarchy goes as follows:
+
+  '''Transform nest'''
+    ^'''Speed/Time Remap nest'''
+      ^'''Original footage clip'''
+
+
+Other effects like Lumetri Color, masks, blur effects, etc. can be placed on the original footage clip. With the layers of nesting, the transforms and retimes can be tweaked anytime without negatively affecting the other variables.
+
+'''''Note on Retimes: Do not apply speed/timing changes on multiple levels of a hierarchy. This is important for later steps of the editing pipeline.
+
+
+
+==Mogurts/Essential Graphics==
+
+Another useful tool for quickly creating customizable graphics is Mogurts/Essential Graphics. These are pre-built effects, titles, and transitions that have a specific look already baked in, so the user can simply input their own text or transforms to make a polished video in a fraction of the time. Read more about them in the article [[Essential Graphics| here! ]]
+
+==Interface Tutorial==
+
+Here is more documentation on how to use Davinci Resolve!
+*[[How To Use DaVinci Resolve]]
+
+
+[[Category:Adobe]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=DaVinci_Resolve_Standards_and_Practices

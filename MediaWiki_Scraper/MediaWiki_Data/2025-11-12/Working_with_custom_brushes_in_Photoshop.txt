@@ -1,0 +1,33 @@
+
+==Overview==
+
+Each project has its own settings request. First of all, you need to ask the requirements, then set up your bush in Photoshop
+and group the set brushes in a new folder with a current project name for future use.
+Or ask for brushes or a brush folder to install in your Photoshop.
+
+== How to Install brushes ==
+
+'''Setting''': Window- Brush - New Brush Group
+
+'''Install''': Window- Brush - Import Brush
+
+You also can go to brush setting for creating specific brushes with textures and save it with naming:
+https://astropad.com/how-to-create-custom-brushes/ 
+
+
+== Other useful tools for drawing nice outlines in Photoshop ==
+
+''P: Pen tools''
+   https://helpx.adobe.com/photoshop/using/drawing-pen-tools.html
+
+''U: Shape tools: Rectangle/Ellispel''
+   https://helpx.adobe.com/photoshop/using/drawing-shapes.html
+
+''M: Marquee tools (Right click - Stroke)''
+
+''Right-click layer - Blending Options - stroke.''
+
+Those can build a path/shape for smooth strokes and may be easy to change after you get some feedback.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Working_with_custom_brushes_in_Photoshop

@@ -1,0 +1,78 @@
+U:\resources\Audio
+
+== Introduction ==
+The Audio folder in resources holds a curated library of Sound Effects. We use these for a variety of purposes such as; 1.) creating sound effects for an edit 2,) recording Foley for a specific product 3.) putting together reference tracks for an audio designer. How and what we use depends on the source of the audio file. If the audio sample you are using comes from an external site where the licensing for the sample isn't clear or explicit—don't use it.  Everything in the Resources audio folder has been verified as a free-to-use sample or was something recorded or bought by us to use in our projects.
+
+== Audio Sample Sources ==
+1.) Freesound.org - these are free to use in projects, but avoid using them out of the box, tweak and manipulate them if used in a final mix. Most of our audio samples come from here.
+
+2.) In House Recording - These are Foley/Recording sessions or Sound Design sessions that occurred at Make. These will be clearly labeled in a unique folder that starts with "Library__(description of audio sample set)"
+
+3.) Third Party Audio Packages - These are sample packs that we have purchased and we can use these any way we like. These often come pre-organized with clear file names.
+
+== Organization ==
+This is always evolving and we are due for another round of organization of this folder that is more intuitive. An organizational update will be coming. For now, here is a brief overview of the folders and what is in them.
+
+''Note: Do not link any edits to the files in this folder. Copy the files you want into the project you are working in. These files go in the Assets/SoundEffects folder. If you are using Adobe Audition, this will happen automatically, but for''
+
+''all other editing software please copy before using these files.''
+
+'''(__to Sort)''' - This is a grab bag of incoming audio samples yet to be sorted.
+
+'''(_Abstract)''' - These are strange sounds that are hard to pin down
+
+'''(_Ambient)''' - These are noise floors for interiors and exteriors of all kinds. This is ambient background noise.
+
+'''(_Animals)''' - Any noise made by an animal
+
+'''(_Cartoon)''' - These are silly samples that sound like they come out of Warner Brothers Cartoon
+
+'''(_Cinematic)''' - These are hits, booms, stingers and risers that make any moment feel more cinematic. Non-Diegetic Sounds
+
+'''(_Foley)''' - A broad category with a lot of different things in it. This is a broad class of diegetic sounds like footsteps, wooshes, cloth movement etc.
+
+'''(_Music)''' - This is all music we have purchased or samples of instruments that have been recorded.
+
+'''(_Sci-Fi)''' - These are weird sounds like transformers, lasers and mechanical flourishes that feel Sci-Fi
+
+'''(_Sports)''' - This is Foley that  has to do with specific sports like golf, basketball, soccer etc.
+
+'''(_UIX)''' - These are sounds associated with the user experience of digital devices like button clicks, beeps and pings.
+
+'''(_Human)''' - These are human voices, and human produced sounds. This folder is in development. See the Foley Folder for this category for now.
+
+'''(Library__1001 Sounds)''' - This is a purchased library of sounds, with its own organization and naming structure. A bit of everything in there.
+
+'''(Library__Adobe_SoundEffects)''' - came with adobe suites. Offers a range of sounds that are clearly labeled.
+
+'''(Library__AF_LeafandStoneTextures)''' -  AF- Stands for Alec Foley - These are leaf and stone textures recorded for the Ranger Controller of our X-box controller pieces.
+
+'''(Library__AF_Toys)''' - AF stands for Alec Foley - These are collected recordings of toys. Non-Proprietary sounds like plastic clicks, wheels, snaps and other handling of toys.
+
+'''(Library__ASD_SCIFI)'''  ASD stands for Alec Sound Design. These were created in Ableton and used as part of our sound kit for Make Originals Branding
+
+'''(Library__HalfLife_SFX)''' Just for laughs, these are sounds from the Half Life video game. Don't know how we got these. Don't use them on projects.
+
+'''(Library__Infinity_CinematicPack)''' - A purchased Sound Pack for cinematic design that skews towards sci fi action.
+
+'''(Library__Lucas)''' - A high quality sound pack from Lucas Arts. It has Jets, Aircraft Carriers, Corvettes, Water, Fire, Helicopters, Animals. Too bad Lucas Arts didn't label any of the files with names and instead put those file names in a pdf. Needs further organization.
+
+'''(Library__MakeRecordings)''' - These are recordings of people and objects at Make.
+
+'''(Library__ProjectRenders)''' - These are sound passes made for a given project that are not Proprietary or attached with a given product.
+
+'''(Library_ThatSound)''' - These are purchased drum samples. For Dj's.
+
+'''(Misc_To_organize)'''  - Another grab bag of uncategorized sounds.
+
+'''(Recording_RoomNoise) -''' This is the sound of our sound booth, samples here help with noise cancelation and reduction.
+
+'''(Templates)'''  - This is our audition Audio template.
+
+'''(Vehicles)'''  - This is foley and sounds of all kinds of vehicles both real and imagined.
+
+== Tips ==
+Go to U:\resources\Audio and use the search bar to type in key words such as "woosh" or metal. Most files are practically named so this will pull up most of the sound samples
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Resources_-_Audio

@@ -1,0 +1,63 @@
+==='''<u>Socials Folder Setup:</u>'''===
+The Animator will copy and paste the standard '''[project]''' folder template into the folder created by the Marketing Content Creator. Rename the folder from '''"[project]"''' to '''"Working Files".'''
+
+Within the Working Files folder, make a copy of the '''[spot]''' template folder. Rename the copied '''[spot]''' template folder to mimic the Pub folder naming convention. ''Ex.'' If the Pub folder is named "2024_07_22_BraveHurts_ReDraw_Challenge", the naming convention for the [spot] folder should be "SPOT_BraveHurts_ReDraw_Challenge".
+
+Within the shot folder, make a copy of the '''[shot]''' template folder. Rename the copied '''[shot]''' template folder to mimic the spot folder naming convention. ''Ex.'' If the spot folder is named "SPOT_BraveHurts_ReDraw_Challenge", the naming convention for the [shot] folder should be "SHOT_BraveHurts_ReDraw_Challenge".
+
+
+====Working with After Effects====
+If the animator is working with After Effects, the animator will work under the '''Composite''' folder. Save After Effects files within the '''Composite''' folder: '''Working Files > Spot > Shot > Comps > Composite'''
+
+Typical folder structure within After Effects should be as follows:
+
+'''Assets'''
+
+'''Audio'''
+
+'''Comps'''
+*'''_PreComps (Sub folder within the Comps folder)'''
+'''Footage'''
+
+'''Img Sequences'''
+
+'''MISC'''
+
+'''Renders'''
+*'''4K Renders (Sub folder within the Renders folder)'''
+*'''HD Renders (Sub folder within the Renders folder)'''
+'''Solids'''
+
+When the video is complete, save the renders to: '''Working Files > Spot > Renders'''
+
+Save the render as '''Match Source - High bitrate.'''
+
+
+====Working with Premiere====
+If the animator is working with Premiere, the animator will work under the '''Edit''' folder. Save Premiere files within the '''Edit''' folder: '''Working Files > Spot > Edit'''
+
+Typical bin structure within Premiere should be as follows:
+
+'''Assets'''
+*'''Clips'''
+*'''IMGS'''
+*'''MISC'''
+'''Audio'''
+*'''Music'''
+*'''SFX'''
+*'''VO'''
+'''Effects'''
+
+'''Nests'''
+
+'''Sequences'''
+
+'''Video'''
+*'''A - Roll'''
+*'''B - Roll'''
+When the video is complete, save the renders to: '''Working Files > Spot > Renders'''
+
+Save the render as '''Match Source - High bitrate.'''
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Social_Folder_Setup

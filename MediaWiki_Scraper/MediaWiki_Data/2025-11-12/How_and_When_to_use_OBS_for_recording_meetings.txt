@@ -1,0 +1,26 @@
+=Why we record meeting with OBS =
+Sometimes when a meeting is being held certain clients aren't comfortable with being recorded during meetings. 
+[[File:Zoom Recording-consent-prompt.png|left|thumb|Zoom Recording Alert|152x152px]]
+
+
+
+
+
+During meetings, occasionally feedback and notes can be missed, misinterpreted, or forgotten. To prevent this from happening we record meetings using OBS.
+
+=How we record our meetings. =
+
+#
+#
+#
+
+
+
+'''When to use OBS for recording meetings:'''
+
+# Sometimes when a meeting is being held certain clients aren't comfortable with being recorded during meetings. During meetings, occasionally feedback and notes can be missed, misinterpreted, or forgotten. To prevent this from happening we record meetings without the client's permission.
+# You shouldn't hit the record button in video calls because all participants get alerted when a session is being recorded. A solution to this problem is to use OBS to record the meetings because clients aren't alerted.
+#
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_and_When_to_use_OBS_for_recording_meetings

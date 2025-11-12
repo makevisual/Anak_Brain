@@ -1,0 +1,76 @@
+Gaussian Splatting - GSplatting - is the process of converting multiple photos of an object into an almost-magical point cloud, creating a surfaceless 3d object that is nearly photoreal and and renderable from any angle in 3d scenes. It is similar to Photogrammetry, but instead of solving to create a mesh, it solves to create a point cloud that contains color as well as opacity on each point. When captured correctly, a Gsplat can include basic lighting information that is relative to the camera, letting the object have 'hero' lighting in every orientation.
+
+== Capturing Photos ==
+[[File:GsplatCapture.png|border|right|frameless|732x732px]]
+
+
+Garbage in - Garbage Out. The first and most important step is good photos of the object. You should aim for an ideal range of 100-400 photos from all different angles and heights, capturing every side of the object. It is imperative that the object and tracking points do not move (relative to each other) during the course of capturing photos, or the whole set must be throw away and restarted.
+
+
+The tracking algorithms align things based on the position and angle differences of the camera between images. This means that panning/tilting the camera from a fixed point is the worst possible input to give the software. Each photo should be taken after moving the camera slightly in any direction, to create the parallax that the software needs to tracking and align everything. An ideal amount of overlap would have each photo be no more than around 5% different from the ones before and after it, so there is easily traceable details through every photo. It is almost always a good idea to include some tracking planes with unique symbols/letters on them. These should be flat/planar to provide the best input for tracking.
+
+
+The advanced method is to break these rules, fix the camera at a certain height and rotate the subject through the lights. This works because we remove all external details besides the subject we are tracking, so the software is tricked into thinking that the camera is moving instead of the subject. It is still crucial here that the trackers and the subject never move relative to each other.
+
+== Tracking/Alignment ==
+Photos are tracking and aligned using Reality Scan. Photosets are added for processing using the '+ Input' button. Add any photos to be tracked and aligned.
+[[File:Addinputs RC.png|none|thumb]]
+Once all photos have been loaded, switch to the 'Alignment' tab and click 'Settings" 
+
+[[File:Alignment.png|frameless]] 
+
+[[File:Alignment settings.png|frameless]]  
+
+Depending on the number of photos, you can adjust the 'Image Overlap'. With many photos that are very similar, setting this to 'High' can produce a better track in less time, but can error and give bad results if there is not enough similarity between photos. Medium is a safe choice but can take longer to solve. 
+
+Setting the Reprojection Error to 5 can allow a little more flexibility in tricky alignments.
+
+With photosets captured using wide-angle/fisheye lenses, changing the Distortion model from Brown3 to Division can produce good results.
+[[File:Distortion model.png|none|thumb]]
+
+
+Finally, click the 'Align' button and allow the software to cook.
+
+[[File:Align.png|frameless]]
+
+
+After tracking, you should have a component with your aligned cameras, and a point cloud showing a representation of your scene. If you have multiple components with only portions of your total photoset in them, or if the point cloud preview looks unfamiliar/broken, your alignment has failed. Trying different alignment settings above can often lead to a new usable result, and it is possible to manually assist in tracking/aligning objects in tricky scenes, but in 9 out of 10 cases that fail to track with any settings, it will be faster and easier to recapture a new photoset with better tracking points included.
+
+
+Finally, after all photos have been aligned, you should export the Registration data, and the point cloud. These are found in the Alignment tab:
+
+[[File:ExportRC.png|frameless]]
+
+
+-You should export the Registration as 'Internal/External camera parameters'
+
+-Export the point cloud as a .PLY object, with ASCII export set to 'false'
+
+== Solving ==
+Solving is done in Postshot. In a new Scene, select Import and add your photoset. Also include in the import your exported Registration data and Point Cloud..
+
+[[File:Postshot import.png|frameless]]
+
+
+Ensure that 'Downsample Images' is unchecked, and Radiance Field is set to 'Splat3'. Click Import and allow it to train for a few dozen steps before hitting 'Pause Training' in upper left.
+
+[[File:Postshot Settings.png|frameless|715x715px]]
+
+
+Here is where we set our final settings:
+
+-Max Splat Count to 6000
+
+-Anti-Aliasing enabled
+
+-Region of Interest enabled. This should be scaled and moved to contain only the subject and as little else as possible to increase solve speed.
+
+-Stop Training After 60 kSteps. On larger photosets this may need to be reduced to prevent VRam overflow. It can be stopped and restarted at higher steps to get better solves as needed.
+
+-Store Training Context enabled. This allows to stop training and restart without clearing the radiance field.
+
+
+Then 'Start Training' again in upper left. Allow to cook for several hour or until desired resolution is reached. This file can then be saved, cleaned up, and exported into other softwares for rendering.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Gaussian_Splatting

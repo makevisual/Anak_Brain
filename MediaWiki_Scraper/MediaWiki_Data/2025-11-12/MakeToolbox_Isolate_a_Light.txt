@@ -1,0 +1,23 @@
+= Isolate A Light =
+
+== Overview ==
+[[File:IsolateALight UI.png|177x177px]]
+
+'''Isolate A Light'''  is a tool from the MakeToolbox toolset that allows a user to select a single light and temporarily turn off all other lights in the scene. This makes it easy to adjust and preview one light at a time without affecting others. The tool stores the on/off state of all lights, which can be restored with a second click.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "Isolate_A_Light" from the scripts dropdown menu.
+# '''Select a Light:''' In the viewport, select exactly one light object.
+# '''Isolate:''' Click the '''"Isolate Selected"''' button. All other lights in the scene will be turned off.
+# '''Restore:''' Click the '''"Isolate Selected"''' button again to restore all lights to their original on/off states.
+
+== User Interface ==
+The tool consists of a single checkbutton that toggles the isolation state.
+
+* '''Isolate Selected:''' This button activates and deactivates the light isolation.
+** '''Checked (On):''' The currently selected light remains on, while all other lights are turned off.
+** '''Unchecked (Off):''' All lights are returned to the on/off states they had before the isolation was activated.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Isolate_a_Light

@@ -1,0 +1,40 @@
+=How to use=
+Browse the following locations for desired images, and then copy them into your working project, so all the assets are within the directory.
+
+
+=Where to find images=
+You can find many images in U drive to use for textures 
+ <nowiki>
+U:\resources\__Textures</nowiki>
+
+and HDRI images can be found in here
+ <nowiki>
+U:\resources\__HDRI</nowiki>
+
+
+Images are not very organized in U drive so it could be easier to download new textures/hdri from sites like
+
+https://polyhaven.com/
+
+
+or grab textures from already made models in
+ <nowiki>
+U:\resources\Models</nowiki>
+
+
+We also have account in Shutterstock so if you need images from the site, ask producer, director of the spot
+
+https://www.shutterstock.com/
+
+=Where to save images=
+
+Always copy over your textures to project you are working on. Do not link to files in U drive
+
+
+They can either go into project's images folder (ex/ W:\Projects\BraveHurts\Assets\Images) 
+
+
+or "Surfaces" folder of Specific asset you are working on. (ex/ W:\Projects\BraveHurts\Assets\Characters\DAM_Damsel\Surfaces)
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Resources_-_Images

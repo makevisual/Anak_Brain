@@ -1,0 +1,46 @@
+At Make we use a few different software's to organize and communicate. It is good to stick with communicating as much as possible in Wrike as your default because everyone can see it and when we are looking back on previously done work.
+
+
+Different channels of communication
+
+* Wrike
+* Google Workspace
+* Zoom
+* In-Person
+
+===  Wrike ===
+This is our organization platform for all projects and how tasks and information of current work is being done. Each task with actions that need to be done, should be set as To-Do, while tasks that are just information for people to see and understand should be set to Info.
+
+All To-Do tasks need to have clear directions of who is doing what and when it is due. Any assets need to be listed out and server paths should all be pasted into Wrike.
+
+Questions about the tasks should be done in the comment's section at the bottom with use @ signs to ping the person who the question is directed at. (A follow-up message in chat does not hurt and should be done for anything with a rush on it)
+
+[[Wrike task best methods and practices]]
+
+[[Wrike standard task usage]]
+
+[[Wrike advanced techniques]]
+
+=== Google Workspace ( chat ) ===
+In the google workspace, you can find the chat app, this is where we do most of our day-to day communication.
+
+The main thing to remember to is Chat is not easy to search and all things that could be considered important communication or helpful for future work can be said here but NEED to be backed-up in Wrike in the tasks that were being discussed
+
+Quick calls are also done on google meet and meetings of smaller groups are often done through google meet to discuss processes and approach to particular situations
+
+Group chats are often made for projects to discuss intent and happen at the beginning of every project for the ideation and concepting phases so everyone can easily post their writings together. This mentality of easy posting is great but remember it HAS to be backed up on Wrike or once that chat group closes, all of that information is gone to everyone forever. ex. of a concepting round getting backed up with info in Wrike is https://www.wrike.com/open.htm?id=1183197084
+
+=== Zoom ===
+
+
+This is for workflow meetings, full company meetings, client interactions, camera feeds during shoots. Zoom meetings can be scheduled and sync'd to a google calendar as normal and all zoom guides can be found online through their website.
+
+[[How to create and schedule a zoom call]]
+
+=== In-Person ===
+
+
+This is still one of the best ways to just talk and show examples of work and discuss internal directions noes. It is always recommended that the outcome of the meeting should have a recap message done in Wrike summarizing what was discussed so everyone can see and remember what was discussed.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Communication_Channels

@@ -1,0 +1,31 @@
+Here is the basic Wrike interface and numbers to help break down where items are and can be found when navigating Wrike.
+
+[[File:Wrike Navigation Start Page.png|thumb|alt=Home Page/Start Page|Home Page/Start Page|none|1721x1721px]]
+This is the starting page and here you will find the following:
+
+1 - This is the home button and the side ribbon
+
+2 - This is the spaces part in the side ribbon where you can see every project and the onboarding space
+
+3 - On the homepage you will find in the main navigation window the Inbox, this is where all @ mentions, assignments, and status changes will be seen on tasks that your are assigned to/follow
+
+4 - This is the pinned section for pieces you pin to find again later.
+
+[[File:Wrike Navigation Project and Task.png|thumb|alt=Project and Task page|Project and Task page|none|1537x1537px]]
+
+This is the Project and Task window and here you will find the following:
+
+1 - The project name and the info, always good to check to make sure you are in the correct project window. Below it is the + sign and this is how you add tasks or folders.
+
+2 - These are all the tasks and in this example you can see the drop down is clicked to reveal subtasks.
+
+3 - Once you have clicked the task, you will see the status/assignee/due date all on the top there.
+
+4 - Subtasks are displayed here and added here.
+
+5 - This is the comments field where previous communication has happened and where you can mention people with @ sign. The other mentions to be aware of are @followers and @ assignees. 
+
+Note: Everyone mentioned/assigned/creator are in the @followers, but only the people assigned get @assignee mentions
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_To_Navigate_Wrike

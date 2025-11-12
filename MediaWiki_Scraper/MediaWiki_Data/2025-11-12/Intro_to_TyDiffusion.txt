@@ -1,0 +1,25 @@
+= What is TyDiffusion =
+
+TyDiffusion is an AI Image model built right into 3dsmax based off of stable diffusion. It can be used to generate images and video. AI is a big topic, please read the [[MAKE AI Policy]] to understand our goals and strategy when it comes to AI Use in the studio and in production.
+
+[https://www.youtube.com/watch?v=Ckj8x4huv7E|Here is a sizzle reel of what you can expect to be able to do in TyDiffusion]
+
+= When should I use it =
+
+TyDiffusion has a lot of control and can be driven by 3D objects via Control Net, or openPoseIO, This offers a lot of control to be able to precisely direct your AI in a way you would not be able to easily do in other applications. 
+
+Additionally, TyDiffusion has baking tools integrated, which allow you to texture an asset or scene easily and project that onto your scene geometry for use.
+
+For other applications you may be better off using [[Intro to MidJourney|Midjourney]] for generating good visuals, [[Intro to RunwayAI|RunwayAI]] for video, or [[Intro to Stable Diffusion|Stable Diffusion]] for using the automatic 1111 distribution of stable diffusion setup on our AI server test platform.
+
+= How can I use it? =
+
+Tydiffusion is a part of the 3dsMax deployment here at MAKE, and is installed automatically with 3dsMax. Simply launch tydiffusion and hit the 'one click install' button and it will download all associated components for your use.
+
+here is the tydiffusion documentation
+[https://docs.tyflow.com/tyflow_AI/tyDiffusion]
+
+[https://www.youtube.com/watch?v=xh7f9vPUuho|Here is a good starting video on how to use tyDiffusion in 3dsMax]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Intro_to_TyDiffusion

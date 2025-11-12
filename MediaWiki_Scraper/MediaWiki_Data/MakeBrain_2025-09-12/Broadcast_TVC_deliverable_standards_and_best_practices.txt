@@ -1,0 +1,75 @@
+Each major account has templates that are covered in the article linked at the below.
+
+[[Create Wrike project]]
+
+The main things to know about broadcast TVC Deliverables is that every one of them will have an ISCI and generally a slate. If the deliverable is going to Extreme Reach, each account can have that company create individual deliverables so it is good to verify with you client what the exact specs are. Extreme Reach can also update their deliverable specs without alerting companies so it is also good to find the latest ones on their website and verify them there as well before starting the deliverable creation.
+
+This is the latest Extreme Reach specs and webpage
+
+https://helpcenter.xr.global/hc/en-us/articles/5758928813332-North-America-TV-Video-Specifications
+
+The basics are:
+
+===== File Naming =====
+
+* The file name should be the Ad Code with the file extension at the end
+** (ZYWX9876000H.mxf or ZYWX9876000H.mov).
+* If you’re not using Ad-ID, file names should follow these guidelines:
+* File names can only contain letters and numbers. No special characters or spaces.
+* HD file names must end with an “H” but cannot end with “HH”.
+* In Canada, the “H” is not a requirement for HD assets.
+* Keep file names to 12 characters or fewer to avoid potential rejections from TV destinations.
+
+===== Ad Code Length Restrictions =====
+
+* ABC and ESPN allow up to 13 characters
+* NBC and FOX allow up to 15 characters
+* DIRECTV allows up to 16 characters
+* CBS allows up to 20 characters
+* Discovery allows up to 25 characters
+
+===== File Size and Duration =====
+
+* Maximum 5 GB for uploading through the XR platform directly.
+* Maximum duration for the specifications listed is five minutes.
+
+===== Content Layout =====
+
+* 5 seconds of Slate
+* Ad-ID must be present on the slate and must match the Ad-ID in the metadata.
+
+===== Start frame =====
+
+* Active audio/video must start on frame 168 for 23.98 fps or frame 210 for 29.97 fps.
+* The first frame is counted as frame zero.
+* Video content must run to the last frame with no additional black.
+* Creative fades are accepted as long as the duration does not exceed 10 frames.
+
+===== Audio Levels =====
+ATSC RP A/85 and ITU-R BS. 1770-3
+
+Target Loudness level should be -24 LKFS +/- 2LU
+
+* Maximum True Peak -2dBTP Any content that does not conform to the -24 LKFS loudness level mandate will be automatically normalized to meet the loudness requirement. The normalization will adjust the overall audio level to meet a -24 LKFS loudness aim with no impact on the dynamic range.
+* True-Peak level should be below -2 dB TP To avoid any potential rejections from TV and digital destinations, we recommend keeping true-peak levels below -6 dB TP.
+
+===== Video Levels =====
+ITU-R BT.601, ITU-R BT.709, and EBU R 103
+
+===== Waveform Monitor Scale Levels =====
+Black level = 0% / 0mV
+
+White level = 100% / 700mV
+
+RGB = 0% - 100% / 0mV - 700mV
+
+===== Slates =====
+Always good to see how to slate projects here and the article on it is below
+
+[[Slating a project for broadcast TVC|Slate a Project for Broadcast TVC]]
+
+===== Wrike Deliverables =====
+[[Deliverables worksheet|Deliverables Worksheet]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Broadcast_TVC_deliverable_standards_and_best_practices

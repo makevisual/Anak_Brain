@@ -1,0 +1,5 @@
+= What is the Asset Switch? =
+Asset Switch is MAKE's in-house tool used to manage assets. It is capable of creating assets, publishing them, track versions, dependencies, file paths and easy switch in to ensure that an asset created and updated by an artist is at the disposal of all other users in the pipeline.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=AssetSwitch

@@ -1,0 +1,64 @@
+
+= Texturing =
+
+For texturing characters or hero objects, they will most likely need to be exported into a separate program such as Substance Painter or Zbrush to do more specific and detailed texturing, but most other smaller objects that need to be textured can be done just in 3dsMax alone, saving both time and space.
+
+==Exporting meshes for texturing==
+
+If you need to bring your object to a different program for texturing or sculpting, you'll have to export your mesh out of 3dsMax first. 
+
+Collapse all your modifiers on your object. If some modifiers need to remain stacked for your 3dsMax model such as Turbosmooth and Shell modifiers, you can just clone your object and collapse that model specifically for exporting purposes while leaving your original model intact. 
+
+To export a single or multiple objects, be sure you have the object(s) you want to export selected. Go to the File tab, and hovering over the Export button, select "Export selected...". 
+
+Give an appropriate name and save to your project folder. Most objects can just be exported as an FBX file. Your object's mesh can now be imported into any other program to be textured.
+
+==Displacements==
+
+[[File:Creating an asset Displacement.PNG|thumb|Displace Modifier parameters.]]
+
+If you have any displacement maps you made for your mesh, you can apply it with the Displace Modifier.
+
+The Displace Modifier uses your displacement map to push the geometry around on the object using either pre-existing UVs or through 4 different gizmos similar to the UVW Map Modifier. 
+
+You can start the Strength off at 1.0. Be sure to turn on Luminance Center and set the Center to 0.5.
+
+Next, you will input your displacement map into the "Map" Option under the "Image" section of the parameters. If you are using any image type besides an EXR, be sure to turn on the gamma override after you select your displacement map. If you are using an EXR file you can just skip the color correction options.
+
+[[File:TexturingAnAsset GammaOverride.PNG]]
+
+Scroll down to the "Map" section, and check on "Use Existing Mapping", if you unwrapped your UVs and used those UVs to sculpt your displacement maps.
+
+[[File:Creating an asset Displacement LowPoly.PNG|400px]]
+
+You may encounter that nothing on your model changed! Remember that the Displacement Modifier relies on pushing what geometry exists on your model already. If you have small details being projected, you will need a higher resolution in order for those details to show up.
+
+Insert a Turbosmooth underneath your Displace modifier, and increase the amount of iterations until you are satisfied with the amount of detail. This can get heavy very quickly, so these two modifiers will usually left off in the viewport during layout and animation to keep the scene optimized, and will only be on during rendering time.
+
+[[File:Creating an asset Displacement HighPoly Shaded.PNG|400px]] [[File:Creating an asset Displacement HighPoly.PNG|400px]]
+
+You can adjust the strength or decay of your displacement depending on how much contrast in detail you want, as well as blur your map to soften edges or details on your displacement.
+
+==Viewport Canvas==
+[[File:TexturingAnAsset ViewportCanvas.PNG|left|200px]]
+For quick maps such as making masks, you can paint directly on your model in 3dsMax and export maps out. This is achieved through Viewport Canvas. Viewport Canvas is located in the Tools command bar.
+
+After assigning a regular vray material on your object you want to paint on, select viewport canvas. This will bring up a window of painting tools. 
+[[File:TexturingAnAsset ViewportCanvasTools.PNG|right|200px]] 
+
+To start painting, you will need to create a texture map to paint on. Select the paintbrush tool and select the map you want to paint on (this will most likely be the diffuse map). This will open up the settings for creating a new texture map. 
+
+[[File:TexturingAnAsset ViewportCanvasMap.PNG]]
+
+Set to your desired resolution size (if it is just a map meant for masking out materials, it does not need to be a large size) and set your directory appropriately (most likely to the Surfaces folder of your asset) before hitting OK.
+
+You can now paint directly on your model. The tools are rather primitive and do not offer much beyond the basics, but this can be helpful in quickly creating masks without having to open up a separate program. A layers window will generate for you to separate your paintings if you choose.
+
+[[File:TexturingAnAsset ViewportCanvasWindow.PNG|600px]]
+
+When you have finished painting, you can export your texture maps out by going to your layers window, opening your "File" rollout, and selecting "Save PSD as" or "Save Bitmap (Flattened) as" depending on what you need. It should save to the directory you set when you created the texture map. You can now use this bitmap file as a regular texture file.
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Texturing_an_asset_in_3dsMax

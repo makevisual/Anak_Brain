@@ -1,0 +1,29 @@
+= Select By Percent =
+[[File:SelectByPercent UI.png|213x213px]]
+
+== Overview ==
+'''Select By Percent''' is a tool from the MakeToolbox toolset designed to reduce the current object selection to a specified percentage. It offers two methods for this reduction: selecting objects randomly or selecting them at even intervals based on their selection order.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "Select By Percent" from the scripts dropdown menu.
+# '''Select Objects:''' Select two or more objects in the 3ds Max viewport.
+# '''Set the percentage:''' Use the spinner to define the percentage of the currently selected objects you wish to keep in the new selection.
+# '''Choose a method:'''
+#* Check '''"Random Selection"''' to select a random subset of the objects.
+#* Check '''"Even Selection"''' to select objects at regular intervals from the original selection order.
+# '''Apply the selection:''' Click the '''"Select"''' button. The tool will then update your selection based on the chosen settings.
+
+== User Interface ==
+The interface contains a few controls to configure the selection process.
+
+* '''Percent to select:''' A spinner that determines what percentage of the original selection will be included in the new selection.
+* '''Random Selection:''' When this checkbox is active, the tool will randomly choose which objects to keep, based on the specified percentage.
+* '''Even Selection:''' When this checkbox is active, the tool selects every Nth object from the original selection. The interval is calculated from the percentage (e.g., 50% selects every 2nd object, 30% selects every 3rd object) like shown in the following image. The order of the initial selection determines the order in which the tool selects the new objects.
+
+[[File:SelectByPercent Even eg.png]]
+
+* '''Select:''' This button executes the function and applies the new, reduced selection to the objects in the viewport.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Select_by_Percent

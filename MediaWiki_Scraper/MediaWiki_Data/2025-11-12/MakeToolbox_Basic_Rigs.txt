@@ -1,0 +1,105 @@
+= Basic Rigs =
+
+== Overview ==
+[[File:BasicRigs UI.png|248x248px]]
+
+'''Basic Rigs''' is a module for the ''Make Toolbox'' in Autodesk 3ds Max, designed to streamline common character and mechanical rigging tasks. It provides a set of one-click tools to create stretchy bones, pistons, point helpers to break gimbal locks, control objects, and complex stretchy IK chains, saving riggers significant time and effort.
+== How to Use ==
+Each function is designed to work with a simple object selection and a single button click.
+
+=== Stretch Point ===
+This tool is perfect for creating simple stretchy parts like antennae, tails or any object that can use skinned based Squash and Stretch. Most commonly it is used as bones to help fill in muscle or volume, by deforming between two bones, and averaging the deformations between them.
+
+[[File:BasicRigs StretchyPoint Select.png]]
+
+1. '''Select a node''': In a chain of bones, select the end bone.
+
+2. '''Click the Stretch Point button'''.
+
+[[File:BasicRigs StretchyPoint Applied.png]]
+
+3. '''Two point helpers will be created''': The point near the end bone controls the position and stretch of the bone, while the other helper controls the orientation/upnode of the chain. Moving the end point will allow you to Squash and Stretch the bone setup.
+
+[[File:BasicRigs StretchyPoint SnS.png]]
+
+=== Piston Maker ===
+Use this to rig hydraulic cylinders, shock absorbers, or other two-part linear actuators.
+
+1. '''Select the two objects''': Those will be the start and end position of the piston rig (e.g., a tube and a cylinder).
+
+[[File:BasicRigs PistonMaker Selection.png]]
+
+2. '''Click the Piston Maker button'''.
+
+[[File:BasicRigs PistonMaker Applied.png]]
+
+3. '''The tool creates two point helpers''': Each of the selected object is parented to one of the helpers and constrained to always aim at the other, creating a stable piston mechanism.
+
+=== Gimbal Chain ===
+This adds a layer of control by creating a point helper into the hierarchy to help animators avoid gimbal lock.
+
+1. '''Select one or more objects''': The objects can be isolated or part of a hierarchy (e.g., the shoulder, elbow, and wrist bones).
+
+[[File:BasicRigs GimbalChain Selection.png]]
+
+2. '''Click the Gimbal Chain button'''.
+
+3. '''A new point helper is created''': For each selected object, a Point Helper is inserted between the object and its original parent, providing an extra layer of rotation control while maintaining the hierarchy in place. This is similar to Maya's Create Group function.
+
+[[File:BasicRigs GimbalChain Applied.png]]
+
+=== Ctrl Ring ===
+This quickly creates animator-friendly control shapes for rig components.
+
+1. '''Select one or more objects''': Select the objects you wish to add a shape control object to.
+
+2. '''Click the Ctrl Ring button'''.
+
+[[File:BasicRigs CtrlRing Applied.png]]
+
+3. '''A new Circle Shape is created''': For each selected object, a green circular spline is created at the object's position, and the object is parented to it. The animator can now select and manipulate the ring to control the object. This shape object also has an Edit Spline modifier applied to it, so the user can edit the circle control shape entering the Spline Sub-Object mode (pressing 3) and manipulating directly the desired position, rotation and scale of the spline for better visual feedback on the rig's scope.
+
+=== Stretchy IK ===
+This tool applies a robust, squash-and-stretch behavior to an IK chain.
+
+1. '''Create a standard IK chain''': using the 3ds Max native tools, create a HI-Solver on a bone chain.
+
+[[File:BasicRigs Stretchy Selected.png]]
+
+3. '''Select the IK Handle''' (the solver's end effector goal).
+
+4. '''Check the Allow negative stretch (Optional)''': If you want the chain to be able to shrink.
+
+5. '''Click the Stretchy button'''.
+
+[[File:BasicRigs Stretchy Applied.png]]
+
+6. '''Process Complete''': The script automatically adds the necessary script controllers and custom attributes to the IK handle and bones to enable the Stretchy IK. The stretch behavior can be customized in the Modifier panel of the IK handle.
+
+To remove the rig:
+
+1. '''Select the same IK Handle'''.
+
+2. '''Click the Remove button''': The script will safely remove all controllers and restore the chain to its original state.
+
+== User Interface ==
+The tool is presented in a compact rollout panel with two main sections.
+
+=== Main Tools ===
+
+* '''Stretch Point''': Creates a simple, single-bone stretchy rig from the selected end bone.
+* '''Piston Maker''': Generates a two-part piston or hydraulic rig from two selected nodes.
+* '''Gimbal Chain''': Aligns a Point helper to the selected node and parents this node to the helper. This can prevent Gimbal Lock by inserting an extra transformation layer to the selected node.
+* '''Ctrl Ring''': Creates a circular spline shape and parents the selected node to it.
+
+=== Stretchy IK Group ===
+
+* '''Stretchy''': Applies a full, script-based stretchy system to an entire IK chain.
+* '''Remove''': Cleans up and removes the stretchy IK system created by the tool.
+* '''Allow negative stretch''': A checkbox that, when enabled, allows the Stretchy IK chain to shrink shorter than its original length.
+
+==See also==
+[[MakeToolbox]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Basic_Rigs

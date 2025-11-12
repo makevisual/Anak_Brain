@@ -1,0 +1,30 @@
+= Symmetrize =
+
+== Overview ==
+[[File:Symmetrize UI.png|296x296px]]
+
+'''Symmetrize''' is a tool from the MakeToolbox toolset that creates a symmetrical version of a mesh based on a reference object. Unlike the default Symmetry Modifier, this tool preserves the vertex order and the UV coordinates of the final mesh which makes it also useful to create flip versions of morph targets.
+
+== How to Use ==
+
+# '''Open the Tool:''' From MakeToolbox, select "Symmetrize" from the scripts dropdown menu.
+# '''Prepare a Base Object:''' You need a mesh that is perfectly symmetrical and in a neutral pose. This object must not have non-uniform scaling applied (a Reset XForm is recommended in case this object has been scaled).
+# '''Select the Base Object:''' Click the '''"Select Base Object"''' button in the tool's UI and pick your symmetrical base mesh from the viewport.
+# '''Choose Symmetry Axis:''' Select the local axis (X, Y, or Z) along which the symmetry operation will be performed.
+# '''Select Target Objects:''' In the viewport, select the mesh or meshes you want to make symmetrical.
+# '''Set Options (Optional):'''
+#* Check '''"Flip Instead of Symmetrize"''' to mirror the base object instead of symmetrizing the selected object. This mode is intended to create flip versions of morph targets.
+#* Uncheck '''"Make a copy of the Object"''' if you want to replace the original object instead of creating a new one.
+# '''Execute:''' Click the '''"Symmetrize Objects"''' button to perform the operation.
+
+== User Interface ==
+The interface provides controls for selecting objects, defining the symmetry axis, and choosing the operation mode.
+
+* '''Select Base Object:''' A pickbutton used to select the symmetrical base mesh from the scene.
+* '''Symmetry Axis (Local):''' A set of radio buttons (X, Y, Z) to define the local axis of symmetry for the operation.
+* '''Symmetrize Objects:''' The main button that executes the symmetrizing process on the currently selected objects.
+* '''Flip Instead of Symmetrize:''' A checkbox that alters the tool's function. When checked, it mirrors/flips the Base Object's geometry. When unchecked, it makes the selected object's geometry symmetrical.
+* '''Make a copy of the Object:''' A checkbox that determines the output. If checked (default), a new symmetrical object is created. If unchecked, the original selected object is replaced with the symmetrical version.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Symmetrize

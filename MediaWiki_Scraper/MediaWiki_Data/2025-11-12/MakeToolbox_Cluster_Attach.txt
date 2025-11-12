@@ -1,0 +1,40 @@
+= Cluster Attach/Detach =
+
+== Overview ==
+[[File:Cluster Attach Detach UI.png|284x284px]]
+
+'''Cluster Attach''' is a tool from the MakeToolbox toolset that offers a quick, memory-efficient method for attaching and detaching large numbers of objects. It is especially useful for scenes where many geometric objects need to be either merged into a single mesh or separated from a single mesh into their individual components.
+
+== How to Use ==
+
+=== To Attach ===
+
+# '''Open the tool''': From MakeToolbox, select the "Cluster_attach" from the scripts dropdown menu.
+# '''Select Objects''': Select the objects to attach and, in the user interface Attach group, enable or disable the "'''Allow undo'''" option, and press the "'''Attach Selected'''" button to attach only the selected objects or "'''Attach All'''" to attach all objects present on the current scene.
+
+=== To Detach ===
+
+# '''Select Objects''': Select the objects to detach, enable or disable the "'''Center pivot'''" option, and press the "'''Detach Selected'''" button.
+
+== User Interface ==
+The script's interface is divided into two main groups: '''Attach''' and '''Detach'''.
+
+=== Attach Group ===
+This section contains tools for merging multiple objects into a single Editable Poly object. This process is designed to be faster and use less memory than the native tools in 3ds Max.
+
+* '''Attach Selected''': Click this button to combine only the objects currently selected in your scene.
+* '''Attach All''': This button combines ''all'' geometric objects in the entire scene into one. A warning dialog will appear to confirm this action.
+* '''Allow undo''' (Optional): When checked, the attach operation can be undone. Be aware that this option can increase memory usage and slow down the operation. It is best left unchecked for very large scenes.
+
+=== Detach Group ===
+This section provides tools to separate a single object's mesh elements into individual objects.
+
+* '''Detach Selected''': Click this button to detach all '''ELEMENT''' sub-objects for each of the currently selected objects.
+* '''Center pivot''' (Optional): If this is checked, the pivot point of each new object created during the detach process will be automatically moved to its geometric center.
+==See also==
+[[MakeToolbox]]
+
+[[MakeToolbox Cluster Attach Spline]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Cluster_Attach

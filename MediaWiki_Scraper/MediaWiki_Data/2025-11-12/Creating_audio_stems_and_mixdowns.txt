@@ -1,0 +1,60 @@
+=== Reasons We Export Stems and Flattened Mixdowns ===
+1.) Flexiblitiy: Providing a mix and the layers that created them provides any editor the ability to make changes to the Voice, SFX and MUSIC independently of one another. 
+
+2.) We don't always have an audio editor available, when changes are needed, Stems allow any editor to make changes without needing an audio specialist. 
+
+3.) Voice, SFX and Music are standard stems needed in the final mixing stage for broadcast. This is an industry standard practice with audio that accompanies all deliverables. If it is not needed for broadcast mixing, It is still often requested anyway by clients. 
+
+=== What are Stems and Mixes ===
+STEMS: Are a layer of audio that represents a certain category of diagetic or non-diagetic sound. These categories are often divided into VOICE, SFX and MUSIC. These are the most common but we are not limited to these. Sometimes we need to differentiate what sound a product makes vs what sounds we add to spice up the mix. Additional stems may be required according to client and project needs. The goal is economy, too many stems make the process hard to reproduce, too few stems and you lose flexibility. 
+
+MIX/MIXDOWN: This is audio lingo for flattened mix and it is the default file tag provided in adobe audition. All it means is that the file contains all the layers and types of sound that are flattened into one signal — Apposite to a flattened tiff or psd. This is most useful for verifying that all layers, added together, do not clip when dropped into your edit.   
+
+BUS LAYER: These are layers in most DAW's including Adobe audition that act as funnel or group. Any effects or changes made to the bus layer, are applied to all layers connected to it. For more on how this works you can find that [[Setting up an audio project in audition#Multi-Track Bus System|here]].
+
+=== Start from Our Template and Use the Bus System ===
+You may choose to create stems and mixes from any program that handles audio. But the process is cumbersome and unreliable where mistakes can easily be made, especially when exporting cutdowns and versions of a spot for delivery. 
+
+The best practice is  to start from our Audio Template which takes advantage of a Bus System to help with the ease of tracking, organizing and exporting stems and mixdowns. 
+
+Find our [[Setting up an audio project in audition#Step 01|Audio Template]] here along with an explanation of our audio [[Setting up an audio project in audition#Multi-Track Bus System|Bus System]] here.
+
+== Steps used to Export Audio Stems and Mixdowns In Adobe Audition ==
+The following instructions assume you have created an Audition edit from our template and have not changed any of the default names on the yellow bus layers. Note: It is important that you do not change the names of the bus layers as they are used to standardize names upon export. 
+
+=== STEP 01: Define Time Selection ===
+Navigate to Window/Selection View. Be exact and type in the precise start and end times you want to render. This ensures every stem and mix are identical in length. You will notice a grey work area define your in and out points.
+
+=== STEP 02: File Export ===
+Navigate to File/Export/Multitrack Mixdown/Time Selection. Note: Picking time selection ensures all of the layers exported follow the in and out points you entered in Step 1. This opens up a dialogue box called Export Mutlitrack Mixdown.
+
+=== STEP 03: Export Multitrack Mixdown ===
+Name your file according to our naming convention.
+ <nowiki>ProjectName_SpotName_Duration(Seconds)_Audiomix_v001</nowiki>
+Delete (_Audiomix_v001) so that your file name ends with the duration number measured in seconds. Do not add an underscore, suffix or any punctuation. Audition will add the name of the buses as an extension to the file name. 
+
+Set your location. Don't know where to put it, here is a [[Audio standards and best practices#Where to Place Audio Files, Edits and Renders|guide]]. Make sure you put these files in a folder with a version number.
+
+Verify your settings. Click here to see what the [[Setting up an audio project in audition#The Settings|Standard Settings]] are. Make sure you export as .wav unless you have a specific reason not to. 
+
+Go to Mixdown Options and hit the change button. Uncheck the box labeled STEREO. Scroll until you hit the bottom and check the BUS box. This will activate all bus layers that you want to export. You can also select the time selection option in the range. Hit OK. 
+
+Make sure to uncheck the boxes: Including markers and other data and Open files after export. 
+
+In the Export Multitrack Mixdown panel hit OK. 
+
+=== '''STEP 04: Add the Version Number''' ===
+Go to where the files are saved and then add the version number at the end of each file name. 
+
+=== '''STEP 05: Listen to each file and give to a  Producer or Editor''' ===
+Listen to each file and make sure the names match the type of sound in each stem. Copy the file location and send to a producer or editor. 
+
+== Trouble Shooting ==
+
+=== Incomplete Stems ===
+When an individual layer is not connected to a the bus layer it will not export through our bus system. This leads to incomplete stems where some sounds were exported while others were not. 
+
+Solution: A quick way to check what layers are not exporting. Solo the Bus layer (S). Doing so will also solo all connected layers. Find the ones that aren't connected and connect them. Middle mouse scroll over the disconnected layer until you see a dropdown menu marked with and arrow pointed to screen right. This is the send options menu where you can send a layer through any other layer to inherit its effects. Open the drop down menu and find the intended bus and select it. Then follow steps 1 through 5 again and export new stems in a new version folder. Listen again to verify that everything came through.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_audio_stems_and_mixdowns

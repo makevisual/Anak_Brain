@@ -1,0 +1,74 @@
+== Beginner Crash Course: ==
+
+https://area.autodesk.com/learn/courses/3dsmax-intro/
+
+https://area.autodesk.com/learn/courses/3dsmax-intro/01-navigating-the-interface
+
+https://area.autodesk.com/learn/courses/3dsmax-intro/02-working-with-scenes/
+
+https://area.autodesk.com/learn/courses/3dsmax-intro/03-modeling-basics/
+
+https://area.autodesk.com/learn/courses/3dsmax-intro/04-retopology-in-3ds-max/
+
+https://area.autodesk.com/learn/courses/3dsmax-intro/05-adding-materials/
+
+https://area.autodesk.com/learn/courses/3dsmax-intro/06-working-with-uvs/
+
+https://area.autodesk.com/learn/courses/3dsmax-intro/07-animation-basics/
+
+== Modeling ==
+
+=== Hard Surface ===
+
+https://www.youtube.com/watch?v=pNp5-7fcgVs
+
+https://www.youtube.com/watch?v=_iAs_ndhXf4
+
+=== Retoplogy ===
+
+https://www.youtube.com/watch?v=HhUMdy-0kSI
+
+https://www.youtube.com/watch?v=sKEu2Gs3G_U&t=92s
+
+=== UVWs ===
+
+https://www.youtube.com/watch?v=K95DPn4cWx0
+
+Rigging and Animation
+
+https://www.youtube.com/watch?v=OKdoNmJmU8k
+
+https://www.youtube.com/watch?v=6KyzBpHutgw
+
+== Tyflow ==
+
+https://www.youtube.com/watch?v=3uDuwrhK3Dw
+
+https://www.youtube.com/watch?v=nRK-RixV4vg
+
+https://www.youtube.com/watch?v=Lpz4uODOH2M
+
+https://www.youtube.com/watch?v=rx-URPQ21Do
+
+== Surfacing and Materials ( vray ) ==
+
+https://www.youtube.com/watch?v=tBYnZ_plW7Y
+
+https://www.youtube.com/watch?v=sZ5DldHnwD0
+
+== Rendering ( vray )== 
+
+https://www.youtube.com/watch?v=0uC1tAAUgbQ
+
+https://www.youtube.com/watch?v=yOZgKIpHryQ
+
+https://www.youtube.com/watch?v=hWUuQZncDgk
+
+https://www.youtube.com/watch?v=G-gdx3R2Wg8
+
+== Good place to find more tutorialss==
+
+https://3dsmaxtutorial.com/
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=3dsMax_Beginner_Courses

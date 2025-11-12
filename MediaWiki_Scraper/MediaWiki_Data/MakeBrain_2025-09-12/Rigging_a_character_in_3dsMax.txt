@@ -1,0 +1,53 @@
+=Character Rigging Hub:=
+==Rigging Basics==
+[[Rigging Basics]]
+
+==Preliminary Checks==
+[[Preliminary Checks]]
+
+== Beginning the Rig ==
+[[Beginning The Rig|Beginning the Rig]]
+
+== Legs/Feet ==
+[[Legs/Feet]]
+
+== Arms/Clavicle ==
+[[Arms/Clav]]
+
+== Pelvis, Spine, and Neck ==
+[[Pelvis, Spine, and Neck]]
+
+== Head ==
+[[Head]]
+
+==== Optional/Special Face Rig Tutorials: ====
+
+* [[Floating Bones Mouth Rig]]
+* [[Driving Morphs With Ctrls]]
+
+==== Cool But "Forbidden" Face Rig Tutorials: ====
+Technically you could do them but it's not advised, as there are major drawbacks to these methods that are not in best practice. They are indeed cool, though.
+* [[Spline Skinning]]
+* [[Cartoon Eyeballs]]
+
+== Hair ==
+[[Rigging Hair]]
+
+== Skinning ==
+[[Skinning]]
+
+== Cloth ==
+[[Character Cloth]]
+
+== Finishing ==
+[[Finishing The Rig]]
+
+== Additional Rigging Tools: ==
+
+* [[Rig Buddy]] (unfinished)
+* [[Chain Tools]]
+* [[Stretch Bones]]
+* [[Reducing Pinching With Data Channel]] (unfinished)
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Rigging_a_character_in_3dsMax

@@ -1,0 +1,13 @@
+
+== Introduction ==
+If you are having an issue with your computer, we have created a WRIKE form to walk you through common issues and solutions.
+If your problem persists, you can submit a ticket and receive the appropriate help.
+
+== Resources ==
+Please take a refresher through the [[IT Orientation Introduction]] to see if there is a solution to your issue.
+
+== Support ticket link ==
+[https://www.wrike.com/workspace.htm?acc=212378#/forms?formid=1371746 Follow this link to submit a ticket in wrike]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=IT_Support_Ticket

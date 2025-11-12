@@ -1,0 +1,22 @@
+Wrike Default Workflow tasks all have a bucket of what each one is comprised of and below we will explain each status.
+
+* '''Active''' - When you make a task this is the default status that a task is made in, it is NOT a status for action.
+* '''To-Do''' - This is the task status for all actionable items that need to be done and is used as the first step.
+* '''In Progress''' - Once the work has begun, the artist should change the task to this status to state that this task is currently being worked on and additional direct is not needed.
+* '''Awaiting Review''' - You post the path to the render in the comments or upload it to Wrike (based on workflow needs) and change it to awaiting review. The Producer and Director will review it and then take the next steps.
+* '''Needs Revision''' - This status will be changed by the reviewer(s) (Director and/or Producer) and be accompanied by notes on what to do for the next round. The artist will change back to the In-Progress/Awaiting Review steps when they are ready for the next review round
+* '''Approved''' - This status is used to denote to the task assignee that everything is complete for them to do but left open incase something is needed for the 
+* '''Persistent''' - Used for a constant reminder for dashboards so people can remember to do something, i.e. time entry
+* '''Completed''' - The task creator will use this once they have confirmed that everything around that task is complete and delivered.
+* '''Deferred''' - used if a task went from active to non-active in order to denote that this is not a fully cancelled task. 
+* '''Cancelled''' - This is used instead of deleting to tell someone the task was, as it sounds, cancelled and no longer needed so work can be wrapped up and stopped down. It is commonly recommended that a quick summary of where things left off is put in the comments field so if any questions arise around this down the road, it is is known why it was cancelled and where it was left off.
+
+[[File:Wrike standard task usage TaskDropdown.png|frameless]]
+
+==== Info Tasks ====
+Other tasks that could be used as status' that need explaining is the info task. This task is not an actionable task and is found in the Account Workflows>Catagories>Info
+
+This task is just to distribute information and is more of an FYI or storage of information about the projects that others may need to know. These are only closed out when the project is fully delivered.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Wrike_standard_task_usage

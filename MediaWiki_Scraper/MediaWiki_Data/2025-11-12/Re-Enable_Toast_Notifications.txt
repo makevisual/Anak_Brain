@@ -1,0 +1,27 @@
+=How To Re-Enable Toast Notifications=
+
+===Copy the Registry Edit File to your Desktop===
+Copy the file <code>Enable_ToastNotifications.reg</code> from <code>U:\users\AD\__ComputerSetup\Re-Enable Toasts</code> to your desktop.
+
+<br>[[File:1. Copy File to Desktop.png|frameless|611x611px]]
+
+===Run the file from your desktop===
+Double click to Run the file from your desktop.
+
+[[File:2-Toasts-RunFile.png]]
+
+===Click Yes on the Prompt that Appears===
+Click "Yes" to run the file.
+[[File:3-Toasts-ClickYes.png|frame|none]]
+===Click the Notifications Icon in your System Tray===
+Click the Notifications Icon in the bottom right corner of your task bar to open the Notifications Pane. Then click "Manage Notifications" in the top right corner of the notifications pane.<br>[[File:4-Toasts-Notifications1.png|880x880px]]
+
+===Toggle the Notifications Option from Off to On===
+Locate the Notifications toggle setting which is currently set to Off and click the slider to switch the setting to On.<br>[[File:5-Toasts-Notifications2.png|698x698px]]
+
+Note that you will still need to allow notifications for each site that you wish to receive popup notifications for in your web browser settings for each page on which you wish to see pop-up notifications on your Windows Desktop.
+[[Category:IT]]
+[[Category:Wrike]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Re-Enable_Toast_Notifications

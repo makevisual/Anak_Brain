@@ -1,0 +1,31 @@
+= Skinning Tools =
+
+== Overview ==
+[[File:SkinningTools UI.png|224x224px]]
+
+'''Skinning Tools''' is a utility from the MakeToolbox toolset designed to simplify the process of rigidly binding one or more meshes to a single object or bone using a Skin modifier. The tool provides functions to either create a new skin relationship based on selection or convert an existing parent-child hierarchy into a skin-based one.
+
+== How to Use ==
+
+=== To Skin Objects to a Parent ===
+
+# '''Open the tool''': From MakeToolbox, select the "SkinningTools" from the scripts dropdown menu.
+# '''Select the child objects:''' In the viewport, select the mesh or meshes you want to skin.
+# '''Select the parent object:''' While holding the "CTRL" key, select the object that will act as the bone or parent. This object must be the last one selected.
+# '''Choose parenting option (optional):''' If you want to create a standard parent-child link in addition to the skin modifier, check the '''"Parent object as well"''' box.
+# '''Apply the skin:''' Click the '''"Skin Parent"''' button. The tool will apply a Skin modifier to each child object and assign 100% of its influence to the parent object.
+
+=== To Convert Existing Parenting to a Skin Relationship ===
+
+# '''Select child objects:''' In the viewport, select one or more objects that are already parented to other objects.
+# '''Convert to skin:''' Click the '''"Convert parent to skin"''' button. For each selected object, the tool will apply a Skin modifier and assign its existing parent as the sole bone with 100% influence.
+
+== User Interface ==
+The interface consists of a single group with controls for skinning and parenting operations.
+
+* '''Skin Parent:''' This button applies a Skin modifier to the selected objects. It uses the last object in the selection as the single bone for all other objects in the selection.
+* '''Convert parent to skin:''' This button applies a Skin modifier to any selected object that has a parent, using that parent as the bone.
+* '''Parent object as well:''' When checked, this checkbox makes the "Skin Parent" function also create a direct parent-child hierarchy link between the objects.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Skinning_Tools

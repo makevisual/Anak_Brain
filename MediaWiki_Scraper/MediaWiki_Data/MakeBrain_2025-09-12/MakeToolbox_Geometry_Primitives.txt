@@ -1,0 +1,24 @@
+= Geometry Primitives =
+
+== Overview ==
+[[File:GeometryPrimitives UI.png|177x177px]]
+
+'''Geometry Primitives''' is a tool from the MakeToolbox toolset that creates subdivision-friendly primitive shapes - an all-quad geometry spherified box and a cylinder.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "GeometryPrimitives" from the scripts dropdown menu.
+# '''Click the button''': for the primitive you wish to create ("S-Box" or "Q-Cylinder").
+# '''A pop-up menu will appear''': Select the desired number of divisions or sides for your primitive.
+# '''The new primitive will be created''': Your new primitive will be at the world origin.
+
+== User Interface ==
+The script's interface provides two buttons for creating specialized primitives.
+
+* '''S-Box''': Creates a "spherified box," which is a sphere made entirely of quad polygons.
+** '''One/Two Divisions''': This option controls the number of subdivisions, allowing you to choose a lower or higher resolution base mesh.
+* '''Q-Cylinder''': Creates a cylinder with all-quad topology, including the caps.
+** '''Eight/Twelve Sides''': This option determines the number of sides for the cylinder.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Geometry_Primitives

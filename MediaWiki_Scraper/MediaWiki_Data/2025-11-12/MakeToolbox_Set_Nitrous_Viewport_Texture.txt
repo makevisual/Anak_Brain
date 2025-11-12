@@ -1,0 +1,22 @@
+= Nitrous Viewport Texture =
+
+== Overview ==
+[[File:SetNitrousViewportTexture UI.png|190x190px]]
+
+'''Nitrous Viewport Texture''' is a tool from the MakeToolbox toolset that adjusts the maximum resolution of textures displayed in the 3ds Max Nitrous viewport. This utility allows users to control the texture quality for either improved performance or higher visual fidelity while working.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "SetNitrousViewportTexture" from the scripts dropdown menu.
+# '''Select a resolution:''' Click one of the buttons corresponding to the maximum pixel dimension you want for your viewport textures (512, 2048, or 4096).
+# '''Observe the change:''' The tool will apply the selected resolution limit and automatically refresh the scene's materials to reflect the new setting in the viewport.
+
+== User Interface ==
+The interface contains a single group of controls for setting the texture size.
+
+* '''512:''' Sets the maximum displayed texture size to 512x512 pixels. This can improve viewport performance in scenes with many high-resolution textures.
+* '''2048:''' Sets the maximum displayed texture size to 2048x2048 pixels.
+* '''4096:''' Sets the maximum displayed texture size to 4096x4096 pixels. This is useful for viewing detailed textures directly in the viewport.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Set_Nitrous_Viewport_Texture

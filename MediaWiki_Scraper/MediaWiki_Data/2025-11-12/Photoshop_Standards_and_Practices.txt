@@ -1,0 +1,58 @@
+
+=Photoshop Standards and Practices for Animation=
+Keyboard shortcuts and Actions are mandatory for making both animation and drawing in Photoshop faster, more efficient, and easier. Furthermore, optimizing your workflow is the best way to make the act of producing much faster and easier overall.
+
+This article is about sharing techniques and tools that can make the process of animating in photoshop more about the act of drawing, spacing, and timing and less about clicking buttons and navigating menus/tools.
+
+The first topic to discuss is the allocation of labor between your hands. One hand should be primarily responsible for drawing, and the other for keyboard shortcuts and keystrokes to reduce the non-drawing process that your drawing hand should have to perform. 
+
+For instance, pressing “b” for brush and “e” for eraser is far more efficient than clicking the brush/erase tool icon or flipping your stylus around to use the eraser. This may seem like a personal preference but is in fact much quicker and efficient. Especially when taking into account how much time can be saved over the many hours, days, weeks, months, years, etc of drawing and animating. 
+
+This can be expanded even further than just assigning shortcuts to tools. Photoshop has the unique feature of assigning a series of deeply customizable actions to a single function key via the Actions menu. For instance, creating a new layer, colorizing, and setting its exposure to 1 frame can all be performed by one key press. This can trivialize laborious processes that otherwise take time and effort, giving you more focus on drawing. See (source)
+
+“''How can I do this faster and more efficiently?''” This is a method of thinking that should permeate into every aspect of your workflow. If a process sucks, it is highly likely there is a better way to do it.
+
+===== Getting started with Animation =====
+Before we can begin animating, we need to talk about the timeline. For the record, there should never be a reason to ever convert or create a Frame Timeline. Common misconception is that animation in photoshop is done in the Frame Timeline mode. This tool is entirely obsolete and holds no benefits over working in the Video Timeline. Simply put, do not ever use the Frame Animation panel. It is bad.
+
+To set up your photoshop document for animation, we first need to open the Video Timeline. Navigate to Window > Timeline. By default, the timeline will be inactive. Click the button in the middle that says “Create video timeline”. This should convert any existing or future layers in your photoshop document to animation layers by giving them a default exposure of 149 frames. Please note that it is strongly encouraged to shrink the display size of your layer thumbnails in the Timeline to make viewing multiple frames more convenient/optimal. This can be done by clicking the settings icon to the upper right of the timeline panel (), selecting Panel Options, and selecting “none” in the thumbnail size display. It is also imperative to work in frames rather than in timecode. This is also located in the Panel Options beneath.
+
+Another important note is that Photoshop will by default set the Framerate to 29.97. This must be changed to 24. In order to make this change, click on the settings icon once again and navigate down to Set Timeline Frame Rate. Then simply type out or select 24 from the drop down menu within the panel that appears and click ‘ok’.
+
+Your photoshop document is now ready for animation.
+
+===== Layers in Animation =====
+The next topic of interest is '''layers'''. Each layer in your layer panel menu has an exposure in the timeline. This exposure can be altered by two ways: dragging the beginning/end of the layer in the timeline, or by cutting the layer at the playhead. Both of these methods should be linked with a keyboard shortcut that is most convenient for you to remember and perform with your free/keyboard hand. For instance, Shift F1 for Split at Playhead, F1 for Set beginning of layer, and F2 to Set End of Layer. This will reduce the amount of clerical work and keep you focused on the act of animation
+
+Layers should be grouped neatly within folders based on the stage or pass being worked on. For instance, Rough, Lines, Color, Shadows, Highlights, etc. Layers should never be ungrouped or unorganized. Organizing will make it much easier for you to navigate or do revisions, but will also help others to navigate your file. Working in a pipeline, it is very common for others to have to access your work, Being as clean and responsible as possible is utterly imperative.
+
+In addition to grouping, you have the option of working within Video Groups. These groups contain layers in a single “line” in the timeline rather than a cascading series of layers. The benefit is a straight forward view of your frames. The drawback is that creating new layers offsets the length of every layer beyond the new layer and will require resizing/re-exposing the layers to where they need to be in the timeline. It also removes the ability to drag two frames to overlap another for inbetweens and instead forces using the clumsy Onion Skin tool.
+
+Pros and cons aside, this is a perfectly acceptable method of working in animation and is purely a personal preference.
+
+Colorizing your layer thumbnails can help you manage and keep track of your extremes, breakdowns, and in-betweens. To do this, simply right click the eye icon of the layer in the Layer panel on the right of your screen and select a color from the drop down menu. The rule of thumb at Make is Red for extremes, green for breakdowns, orange for further breakdowns, and neutral for in-betweens. In the event you need to very slowly ease several drawings from one extreme to a final or resting extreme, the inbetweens can be colorized in the order of red, green, orange, yellow, gray, blue, violet, and neutral for any remaining frames. This will make it clear that the drawings are exact inbetweens.
+
+On the subject of layers, there will be a time when you need to onion-skin 2 layers to produce an in-between. Do not use the onion-skin tool. It is very limiting and time consuming to use and toggle. Instead, drag or use keyboard shortcuts to set  the start and end of the relevant layers over/below the layer you are working in, lower their opacities, and colorize the lines if need be. With shortcuts this should be a very quick and painless procedure.
+
+
+'''Please note''' that Onion-skinning should be used for only producing inbetweens. It is a common mispractice to lean on onion skinning for producing any intermediary drawings or breakdowns, reducing the exploration of acting potential. Onion skinning will box you into working within strict confines of your extremes and will not give you a clear image of your spacing, arcs, actions are working outside of those key drawings. Flipping is a far more useful and ‘open’ method for finding your poses in relation to your extremes, treating the extremes as blueprints but not dictating how any intermediary drawings should be controlled.
+
+
+On that note, flipping is a technique that can be performed using keyboard shortcuts.
+
+In photoshop, the best method for flipping between two drawings is to assign keyboard shortcuts to “go to>start of work area” and “go to>end of workarea”. For instance, F7 and F8. You then set the start and end of your work area to the desired layers and press F7 and F8 to flip between your designated frames.
+
+
+'''Please note--''' An unfortunate limitation to Photoshop's shortcuts is that the Panel Menu tools cannot be assigned to single letter keys and will either force using the “ctrl”, “alt”, and “shift” keys, or a combination of any of those. The exception to this rule are the function keys.	
+
+
+'''Additionally,''' the keyboard arrow keys can be used to move frame by frame if you are flipping between two layers that run side by side. This feature can be turned on and off by clicking on the settings icon in the upper right hand side of the timeline panel and selecting “enable timeline shortcut keys”.
+
+
+Now that you have finished animation, you can check out *[[Procedure for Saving and importing Photoshop animation for use in After Effects]]
+
+
+[[Category:Adobe]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Photoshop_Standards_and_Practices

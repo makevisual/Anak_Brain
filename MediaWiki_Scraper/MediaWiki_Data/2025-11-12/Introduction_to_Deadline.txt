@@ -1,0 +1,35 @@
+[[Category:Process]]
+
+In this article you'll learn about Deadline, the Render Farm monitor, and how to best use it while everyone else is ALSO trying to use it. This is essentially a Best Practices article, and will talk about how to use Deadline in a way that makes everyone think you're very cool AND nice.
+
+=What is Deadline?=
+Deadline is our render farm monitor. It allows people to see the status of renders, modify or delete jobs, and see the overall state of the render farm throughout the day. You can use it to suspend, resume, fail, or schedule a job, and a whole lot more. 
+
+=Creating a user=
+To create a user all you need to do is open Deadline and click '''File > Change User'''. A window will pop up. Select '''Create New User''', enter your user name, and click '''OK'''. That's it, you now have a user. 
+
+=Priority=
+Priority is how the farm decides which job to start next. Priority scales from 0 to 100; 0 being the lowest Priority and 100 being the highest. High Priority jobs will be chosen to render before low so crucial renders can make it through quicker than ones that aren't needed immediately. 
+
+==Know your job's Priority==
+When setting your priority it's important that you know when your renders are needed, when ''others'' renders are needed, and how busy the farm currently is. Your job may seem very important to ''YOU'' but it might not actually be more important than the renders needed for delivery in the next few hours. You should have a general knowledge of when your project is needed, but might not know the status of other projects. Check in with your whoever is in charge of your project if you're unsure if you should push your priority higher.
+
+==MAKE Priority basics==
+'''2D / Compositing Job Defaults''' are automatically set to 95. They're fast frames and they take priority over everything else due to how fast they will be finished. No other renders on the farm should pass 95, and probably never pass 90. 
+
+'''3D Job Defaults''' Should be at 50 priority for starters, and can get increased in priority as needed, depending on if it is a client or internal project
+
+'''Client Jobs''' should be below 90, but are more important than internal jobs. As a general rule it's nice to keep client jobs around 70-80 when the farm is filling up
+
+'''Internal Jobs''' should be around 50-60 or lower, particularly if not needed any time soon.
+
+:::''Fun Fact: There are exceptions if your renders are needed NOW. If they are don't be afraid to bump your priority higher and bully your way to the top of the queue. Just make sure to also inform someone in case there is something else with even higher priority that you're unaware of''
+
+=Watch your jobs for problems=
+Once you've submitted a job check in on it. Watch for errors, make sure things aren't taking longer than they should, and check frames to see if something is wrong. Basically: try not to waste farm time with broken renders. If you see something wrong, pause or remove the job from the farm and check it so other renders can make it through.
+
+=Clean up=
+Occasionally open up all of the filters on deadline and check if you have a bunch of completed or failed jobs on the farm and delete them. It's up to all of us to keep deadline tidy!
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Introduction_to_Deadline

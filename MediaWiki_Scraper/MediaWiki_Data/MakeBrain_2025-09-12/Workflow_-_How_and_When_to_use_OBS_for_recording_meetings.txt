@@ -1,0 +1,39 @@
+=What is this page for?=
+This page is to step by step process for how and when you should use OBS for recording meetings. 
+
+Whenever we have meetings with clients we like to record them to refer back to things we may have missed and to give the artists access to them in case they want to go back for themselves.
+
+We record using OBS because most clients don't like the meetings recorded; recording using zoom notifies the client. OBS alleviates this issue since no one is notified while in use.
+
+'''YOU CANNOT SHARE/SAVE THESE RECORDINGS OUTSIDE OF MAKE, THESE ARE FOR INTERNAL USE ONLY.'''
+
+=Set up=
+'''Step By Step'''
+
+* Download OBS: 
+** https://obsproject.com/download 
+* Open OBS
+[[File:OBS Download.png|frameless|363x363px]]
+
+* Go to Settings > Output. Under recordings choose a path where you would like your recordings to go. I'd recommend creating a folder called meeting recordings in your own U:\users folder.
+* Set the format to .MP4
+[[File:OBS SETTINGS.png|frameless|307x307px]]
+* Go to Settings > Audio and set your desktop audio to default and microphone audio to your webcam. Apply then leave settings.
+[[File:Audio.png|frameless]]
+* Check to see if the Desktop audio and Mic/Aux are present in the audio mixer and are working.
+[[File:Obs audio mixer.png|frameless|405x405px]]
+* Under sources click on the + and add display capture and select a monitor that you normally have zoom on.
+[[File:Add Display Capture.png|frameless]]
+* Set up complete.
+
+
+=Recording=
+When you are in a meeting via Zoom, Chat, etc. pull up obs and hit the record button in the bottom right of OBS. That's it!
+
+[[File:Recording a Meeting.png|frameless|846x846px]]
+
+=Where to Store=
+For client work, I would put them in Z:\Projects\'''[Your Project''']\Source\Meetings
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Workflow_-_How_and_When_to_use_OBS_for_recording_meetings

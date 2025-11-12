@@ -1,0 +1,112 @@
+When you want to use your 3ds Max Geo with Multi-sub material in Unreal Engine this document will show you the basics of importing fbx file as a Static Mesh and rebuilding its Materials properly inside the Unreal Engine. 
+
+In a larger context, we can simplify the process into four steps.
+
+# Export fbx from 3ds Max and import as Static Mesh to Unreal.
+# Get necessary Texture Maps from 3ds Max and import them as Textures in Unreal.
+# Assign materials to Static Mesh in Unreal. 
+# Rebuild Material in Unreal with Imported Textures.
+
+
+== 1. Export fbx from 3ds Max and import as Static Mesh to Unreal ==
+Follow this in order to export Geo from 3ds Max as fbx file and Import it to Unreal Engine as Static Mesh and Material
+
+
+
+
+
+1. '''Select all the Geos''' you need to Export in 3ds max.
+
+2. File tab - Export - '''Export Selected.'''
+
+3. Set it to '''.fbx''' format '''Uncheck Turbo Smooth''' and '''change Units''' '''to Centimeters''' and hit OK.
+
+[[File:How to prepare materials for a multi-sub object import in Unreal Engine 3dsMax FBX Export Example01.png]][[File:How to prepare materials for a multi-sub object import in Unreal Engine 3dsMax FBX Export Example02.png]]
+
+4. '''Open Unreal''' '''Engine''' and Ctrl + Space to '''open the Content Drawer.'''
+
+5. '''Add a new folder''' at the preferred location in the Content Drawer.
+
+6. Drag and '''drop the exported fbx''' from the folder '''to the Content Drawer'''. This will make FBX Import Options window pop up.
+
+7. Under the Mesh-Advanced dropdown, '''check Combine Meshes'''. If not, all the attached Geos will be imported as separate Static Meshes.
+
+[[File:How to prepare materials for a multi-sub object import in Unreal Engine 3dsMax FBX ImportOptionsWindow example01.jpg]]
+
+8. If your model has a UDIMs as a texture you should check Import UDIMs box under Texture dropdown.
+
+[[File:How to prepare materials for a multi-sub object import in Unreal Engine 3dsMax FBX ImportOptionsWindow example02.png]]
+
+9. If you successfully imported the fbx you'll able to see '''Static Mesh and Materials are created'''. (If some Materials are missing don't worry, we can just create one)
+
+10. '''Create folders''' named "Materials" and "Textures" for organizing purposes.
+
+
+
+==2. Get necessary Texture Maps from 3ds Max and import them as Textures in Unreal==
+You probably have two kinds of texture maps inside 3ds Max.  
+
+1. <u><big>Texture maps that are generated from other software(Substance Paint...etc).</big></u>  
+
+In this case, you'll already have Vray texture maps in the surface folder of 3ds Max so drag and drop those textures into the Textures folder you created in Unreal Content Drawer.  
+
+2. <u><big>Texture maps that are generated and exist only inside 3ds Max.</big></u>
+
+In this case, locate the material by follwoing below.   
+
+#Open Material Editor in 3ds Max.
+#Click the object on the viewport you want to locate its material.
+#Hit "get from selected" on the Material tab on Material Editor.
+
+Now you have to right-click the found material and hit the '''Render Map function''' to export the texture map. After you export the texture map drag and drop those textures into the Textures folder you created in Unreal Content Drawer.  
+
+[[File:How to prepare materials for a multi-sub object import in Unreal Engine 3dsMax RenderMapButton Location.png]]
+
+<nowiki>***</nowiki> There is a utility called "bake to texture" to export all the maps simultaneously if you have too many maps to save.***  
+
+After you figure out all the texture maps, drag and drop all the texture maps you need into the Texture folder in Unreal Engine Content Drawer.                                                                                                                                                                                    
+
+==3. Assign materials to Static Mesh in Unreal==
+Double-click the Static Mesh to open Static Mesh Editor.               
+
+On the Details Tab on the right, under the Material Slots drop-down, you'll see the list of Materials that need to be assigned for Static Mesh.
+
+A Slot Name Mirrors Vray Material name from 3dsMax.This makes us easy to figure out which material slot we should assign certain materials by dragging and dropping the materials from the content drawer to the Material Slots. 
+
+[[File:Unreal MaterialSlot Location.png|frameless|1056x1056px]]
+
+
+
+==4. Rebuild Material with Imported elements==
+Now we have all the basic elements we need to start rebuilding the Material for Unreal Engine.
+
+
+
+Double-click a Material you want to edit to open Material Graph.
+
+Ctrl + Space to open the Content Drawer and browse the Textures folder you prepared previously.
+
+Drag and drop the textures onto the Material Graph and connect them accordingly<blockquote><big>'''Brief Texture map compatibility'''</big>
+
+<big>3ds Max Vray Material ↔ Unreal Engine PBR Material</big>
+
+Diffuse map ↔ Base Color
+
+Reflect map ↔ Specular
+
+Bump map ↔ Normal
+
+Glossiness map ↔ 1-Roughness</blockquote>
+example)
+
+[[File:How to prepare materials for a multi-sub object import in Unreal Engine 3dsMax MaterialGraph Example.png]]
+
+
+When using a Texture map as Base Color, turn on the sRGB check box to make sure it's sRGB.
+
+For the others like roughness, specular, etc. turn off sRGB.
+
+[[File:How to prepare materials for a multi-sub object import in Unreal Engine 3dsMax Checkbox sRGB.png]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_prepare_materials_for_a_multi-sub_object_import_in_Unreal_Engine

@@ -1,0 +1,48 @@
+=UV Mapping=
+Your asset will need to have proper UVs in order to apply good looking textures. The main methods of UVing your asset will be through either the Unwrap UVW modifier or the UVW Map modifier.
+
+==UVW Map Modifier==
+[[File:Creating an asset UVW MapModifier.PNG|thumb|UVW Map Modifier parameters.]]
+
+The UVW Map modifier allows you to control how a material gets projected onto an object. There are 7 different mapping options, as well as controls to adjust the length and width, and tiling of the map. This modifier is good for procedural materials, and works better on simpler shaped assets.
+
+This modifier also has a gizmo that allows you to adjust the placement directly on the object you are mapping. You can find the gizmo by hitting the dropdown button next to the modifier in the modifier stack. 
+
+[[File:Creating an asset UVW Gizmo.PNG]]
+
+The gizmo will show up as whatever mapping option you chose and you can translate, rotate, and scale this gizmo to adjust your mapping.
+
+[[File:Creating an asset UVW Gizmo 02.gif]]
+
+===UV Channel Stacking===
+
+In 3dsMax, you can assign multiple bitmaps in a material. This is done by assigning different map channels to each bitmap, and then having multiple UVW map modifiers set to each different map channel. This can be especially helpful when making environments, as one object may require multiple types of bitmaps applied. 
+
+A video is linked below to better explain the process and purpose of using multiple UV channels.
+
+[https://youtu.be/3CnsQDUHA0E UVW Channels and Tiles]
+
+==Unwrap UVW Modifier==
+
+If you have an asset with complex shapes and need more precision in controlling the mapping of your object, it may be more helpful to use an Unwrap UVW modifier instead of a UVW Map modifier.
+
+You can open the UV editor in the parameters with the button labeled "Open UV Editor..."
+
+[[File:Creating an asset UVW UnwrapModifier.PNG]]
+
+The editing window provides you with a toolkit for unwrapping your object. Your object may already have some UVs made from the primitive you started your asset from. If you want to remove these UVs, the best way would be to select all the faces and do a quick planar projection, located in the Unwrap parameters under the "Projection" tab. 
+
+[[File:Creating an asset UVW UnwrapModifier Planar.PNG]]
+
+From here, you can start cutting seams into your object to unwrap. To cut a seam, have the edges you want selected (you will have to pick the edge selection mode located in the Unwrap modifier parameters), and hit the "Break" button under the Explode tab. 
+
+To sew a cut seam back together, you will hit the "Stitch to Target" button under the Stitch tab, instead. 
+
+You can lay out your UVs with the "Quick Peel" under the Peel tab, and relax your UVs with the buttons under the "Reshape Elements" tab. You can also simulate relaxation with the Relax tool under the "Tools" tab on the top toolbar. 
+
+You can also automatically pack all of your UVs into your grid with the "Pack: Custom" button under the "Arrange Elements" tab.
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Laying_out_uvs_on_an_asset_in_3dsMax

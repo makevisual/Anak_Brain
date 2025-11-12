@@ -1,0 +1,25 @@
+= Modifier Globals =
+[[File:ModifierGlobals UI.png|222x222px]]
+
+== Overview ==
+'''Modifier Globals''' is a tool from the MakeToolbox toolset designed to quickly enable or disable all specified modifier present in the scene. It provides a simple interface to control modifier visibility for either all objects in a scene or only the current selection.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "Modifier Globals" from the scripts dropdown menu.
+# '''Choose a Modifier:''' Select the modifier you wish to control from the dropdown list (e.g., "Turbosmooth", "Shell", "Skin").
+# '''Set Scope (Optional):''' Check the '''"Apply to selection only"''' box if you only want to affect the objects you currently have selected. If left unchecked, the tool will affect every object in the scene.
+# '''Commit the Operation:''' Click one of the four buttons to change the state of the chosen modifier.
+
+== User Interface ==
+* '''Modifier Dropdown List:''' This list contains all the modifiers the tool can control. You must select one modifier from this list to act upon. The list includes common modifiers such as '''Turbosmooth''', '''Meshsmooth''', '''Shell''', '''Skin''', '''Chamfer''', and more.
+* '''Apply to selection only:''' A checkbox that filters the tool's operation.
+** '''Unchecked (Default):''' The chosen action will be applied to every object in the scene that has the specified modifier.
+** '''Checked:''' The action will only be applied to the currently selected objects that have the specified modifier.
+* '''Turn On:''' Enables the selected modifier in both the '''viewport''' and the '''final render'''.
+* '''Turn Off:''' Disables the selected modifier entirely, turning it off in both the '''viewport''' and the '''final render'''.
+* '''Off in Render:''' Keeps the modifier visible in the '''viewport''' but disables it for the '''final render'''.
+* '''Off in View:''' Disables the modifier in the '''viewport''' but keeps it enabled for the '''final render'''. This is ideal for improving viewport performance while ensuring the modifier's effect is present in the final render.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Modifier_Globals

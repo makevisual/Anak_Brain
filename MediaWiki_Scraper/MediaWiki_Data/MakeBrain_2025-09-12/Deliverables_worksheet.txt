@@ -1,0 +1,24 @@
+A deliverables worksheet is a task that explains at the end of the project what is needed by the client in both deliverables and format methods. An example of a complex deliverable set from Hasbro is:
+
+https://docs.google.com/spreadsheets/d/1KiMhIXbhEzNdFjxIhLqIWzy-GCW8u3cFHdq0PI3lG30/edit?usp=sharing
+
+
+These are built from collections and interpreting deliverable sheets we get from the client that can be found here
+
+https://drive.google.com/file/d/1c4rBugmLbvcqE2Ik3WpGAYuVjO3PqV-a/view?usp=drive_link
+
+
+The reason we do this, is so we can lift sections that we need as a template for the projects we are working on and distill it into easy to read and understand lists for the artists. Taking the hours to write all of this will end out saving you on the delivery crunch time and eliminate potential mistakes of people not understanding what is being asked as each client lays the information out differently and our goal is uniformity. 
+
+
+All Major accounts have Wrike deliverable templates that we keep updated with the latest text specs as we get them.
+
+
+Hasbro - https://www.wrike.com/open.htm?id=975080113
+
+Mattel - https://www.wrike.com/open.htm?id=1166507706
+
+Spinmaster - https://www.wrike.com/open.htm?id=1000840370
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Deliverables_worksheet

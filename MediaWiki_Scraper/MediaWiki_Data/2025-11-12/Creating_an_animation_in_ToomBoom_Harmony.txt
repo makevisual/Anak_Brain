@@ -1,0 +1,80 @@
+== Starting a Project in Harmony ==
+
+===== Resolution =====
+Toon Boom is primarily a vector program, so your working resolution is usually higher than the resolution of your scene. This gives you decent leeway for resizing. The resolution you select mainly determines the resolution of your render, which is why it is referred to as “camera size” in the project launch screen. 
+
+Regardless, when working on a 1920x1080 project, the 4K_UHD preset would be a good choice to start with, as it shares the aspect ratio but will give you double the res you need. The other options can be left at default (ex: frame rate 24, field of view: vertical)
+
+You can change your resolution at any time in the “scene” tab, and your work will automatically rescale so that your camera and framing do not change, as long as you keep the same aspect ratio.
+
+===== Warning: Versioning =====
+There is an option in toon boom called “save as new version”. DO NOT USE THIS. Because of the way toon boom is structured, this function is almost completely useless.
+
+To properly save a new version, just click “save as” and type the new version number in the name, as you would with photoshop. Do not save the new version inside the previous version’s scene folder (the one containing the toon boom file, along with folders labeled “elements, drawings, etc.). “Save as” will create a new scene folder for you.
+
+===== Naming Limitations =====
+Unfortunately, toon boom file names have a relatively short character limit. You will want to follow the typical naming convention the best you can (the same as a photoshop animation file), but you may need to shorten things. You can also create another folder to store your toon boom scenes in, with the full, proper naming convention for your project, to make them easier for others to find.
+
+== Paintbrush Tool ==
+
+===== Drawing =====
+Tends to feel nicer to draw with than the pencil tool. It also has some better texture options and the capacity for pressure-sensitive opacity. Because of this, it is almost always the best choice when it comes to rough animation and storyboards.
+
+===== Tweaking =====
+Scaling or shrinking pre-existing lines too much may make them lose resolution.
+
+Once you’ve drawn a line, that’s mostly how it will stay. You can make broad changes, by scaling and skewing, but anything beyond that is difficult.
+
+===== Coloring =====
+Coloring is the main reason the pencil tool is often preferred for final animation. However, the following coloring problem only affects textured brushes. For solid, non-textured brushes, you can use the fill bucket without issue.
+
+To color textured paint brush linework using the paint bucket tool, you will have to convert to a bitmap layer. This will give you access to different fill tool options, which will allow you to fill more accurately. However, converting your layer will also flatten your drawings. You will lose your individual strokes and the ability to edit your colors without refilling. Because of this, try to only color in this way once you are certain there are no more line or palette tweaks to be made.
+
+If you fill-bucket textured lines without converting to a bitmap layer, you will get a halo. You can still color this way if you want to preserve drawing editability, but it will take more time, as you will need to color the edges manually.
+
+== Pencil tool ==
+
+===== Drawing =====
+The smooth function tends to feel stranger for pencil lines than for brush lines, making it somewhat more difficult to draw with, but the lines are more editable. Pencil lines are usually ideal for final animation, but brush lines may be preferable for rough passes or storyboards.
+
+===== Tweaking =====
+Once you’ve drawn a line, you can change it as much as you want with the contour tool (little white arrow).
+
+Unlimited resolution (pre-render)—You can scale lines as much as you want without them becoming pixelated.
+
+You can manually adjust the tapering of lines using the pencil editor tool, located in the drop-menu of the contour editor (little white arrow).
+
+Even after your animation is drawn, you can go back and change the line style: tapering, texture, and thickness. 
+
+===== Coloring =====
+Unlike with textured paint brush lines, no layer-conversion is required before coloring. However, the fill bucket can still be a bit fidgety. The close gap function doesn’t always work, or it works too well and leaves little empty gaps in the corners of linework, so you will have to be mindful. You will often have to adjust your linework to close gaps while coloring.  Because of this, it is not recommended to color on your original line layer. Instead, duplicate the layer and fill on the new one instead. That way, you can delete the linework from your fill layer later on, leaving your original drawings on top.
+
+The paint bucket in Toon Boom only sees the center line of the pencil, not the “meat” of it. Because of this, gaps preventing you from filling aren’t always clearly visible. To help with this, you can change the linework on your fill layer to be uniform thickness and thin, so you can see closer to what the paint bucket sees.
+
+== Toon Boom Color Palette ==
+With exception of bitmap layers, all the colors you use in Toon Boom are stored in the color palette. When you change a color in the palette, you also change the color in the drawings you’ve made. So, feel free to draw and fill with temporary colors, then choose final colors later. You can also change the opacity of your colors, which is helpful for lineless work. 
+
+You can select by color in Toon Boom, making colors a good way to organize things. If you want your fill layer separate from the line layer, you can duplicate the line layer and turn all the lines to a new temporary color. After filling, you can select that temporary color and delete the lines.
+
+'''Fun fact:''' in Toon Boom, you can color drop select anything on your monitors, even outside of the Toon Boom window.
+
+== Useful Tools (section work-in-progress) ==
+Contour Editor: Adjust points on lines- can use to hone your arcs and animate subtle in-betweens by copying over a set of lines and then just adjusting the contour points.
+
+Merge Pencil Lines (Looks like a piece of tape over two lines): Allows you to easily remove gaps between pencil lines, even on jagged points (It will not straighten the angles when you merge!)
+
+Cutter Tool: A good way to clean up lines so there's no little "tags" or lines sticking out from where they should end. Just swipe it across the stray line and it will disappear, cutting it at the overlap point where it meets another line.
+
+Apply to all frames: allows you to select or edit all frames on a layer at once.
+
+Safe Area (multiple rectangles inside one another, in the same tool section as the lightbulb icon) displays the guide box for the action-safe part of the screen.
+
+== Links to Helpful Tutorials on process: ==
+Clean-up tips: https://www.youtube.com/watch?v=hUYMX1c9gN4
+
+Edge-tips with pencil tool cleanup: https://www.youtube.com/watch?v=NeVJJz1Vl_o
+
+Textures in Toon Boom: https://www.youtube.com/watch?v=gI-dNjXjDUk
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_an_animation_in_ToomBoom_Harmony

@@ -1,0 +1,95 @@
+=What to do=
+
+When a project is nearing completion, and '''once again upon completion''' but before delivery, a spot should be reviewed for Quality Control ( QC ).
+
+Some vendors, like Mattel, will send our projects through a rigorous frame by frame analysis to catch any defects. When a project is delivered to its distribution channels, additional checks will be done, to make sure the content is broadcast safe. Sometimes, looking over the file before sending it is the last line of defense before something gets in the wild, and is broadcast. Regardless of the reason we need to ensure our work is error free ( to the best of our abilities ) and meets the requirements requested by the distributors, and client.
+
+Here are a list of common things to look for, and examples, to make it easier for you to find and correct any issues.
+
+=Check Formats=
+
+To check the formats of a project, bring it into Adobe Premiere, from there, you will be able to see frame rate, duration, resolution, pixel aspect ratio, and many other properties. This is the easiest way to verify a batch of files matches the desired specifications.
+
+Here are some, but necessarily all, the specifics to look at.
+
+*Check durations
+*Check frame rates
+*Check resolutions
+*Check pixel aspect ratio
+
+[[File:Review_an_edit_for_QC__Durations_FPS_and_Resolutions.JPG|x100px|lots of information can be verified by bringing the edits into premiere]]
+
+=Check Audio=
+
+You will want to verify if you have the correct audio mix in the edit before delivery. If the project is a [[Workflow - Broadcast TVC | broadcast TVC]], then you will want to make  sure that your audio has been mastered at the [[Audio standards and best practices | appropriate levels]]. There are various types of mixes, and it is always best to verify with the producer of the project that the audio is correct, but a good way to be able to see if the audio that you have is ''incorrect'' is to look at its waveform.
+
+Here is an image that shows two waveforms, the one of the left is not mastered, and the one on the right is mastered. Essentially, you can look and see that the waveform is condensed under a certain 'loudness' level.
+
+[[File:Review_an_edit_for_QC__Audio_Levels.JPG|x200px]]
+
+=Check Edge of Frame=
+
+Quite often our edits involve aggressive repositions, and retiming's, as well as crops, keys, transforms, you name it. It is very easy for an image to not reach the edge of frame, when it once did. Sometimes there will be a thin black outline, sometimes there will be a stretched pixel band that fills the area. It is important to look for both types of artifacts, particularly when there is a lot of motion blur, which can disguise the issue.
+
+The best approach to catching these issues is to watch opposite corners of the edit, with the format outline one, one frame at a time. After frame by framing through the edit, you will catch something, nearly guaranteed. 
+
+Here are two examples of the errors, one with the image pulling back over black, and one where a transform node is stretching pixels to the edge of frame, disguising the issue. Both can be resolved by extending the plate, or modifying your repo.
+
+Both are pretty subtle, and are easy to miss.
+
+[[File:Review_an_edit_for_QC__FormatSlipping.JPG|x200px]]
+[[File:Review_an_edit_for_QC__FormatStretching.JPG|x200px]]
+
+
+=Check Safe Frames=
+
+Safe Frames are an important guide to ensuring your content is able to be viewed on the available distribution methods without issue. There are multiple different standards for different projects, so it is always best to verify and not assume. If an edit needs to be reworked because of a safeframe issue it can be frustrating, and put the delivery in jeopardy, or causing last minute headaches.
+
+*Action and title safes / center cut title safes
+[[File:Review_an_edit_for_QC__SafeFrames.JPG|x200px]]
+
+=Check Legal=
+
+Best practice is to compare any legal to the script, and if any divergence has happened, for it to be documented, or otherwise recorded.
+
+=Check Colors=
+
+*Look for overbrights / rolloffs
+
+This is one of the easiest things to get through, so it is really important to scrutinize your scopes and look at your individual color channels to see if things are clamping.
+
+The best goal is for nothing to max out at 100% value, this is where colors can get into unsafe broadcast values.
+
+Here are some examples of colors that are hitting the extremes a bit hard, and having harsh rolloffs, as well as clipping into unsafe color values.
+
+[[File:Review_an_edit_for_QC__Overbrights_scope-bad.JPG|x200px]]
+[[File:Review_an_edit_for_QC__Overbrights_scope-bad_Content.JPG|x200px]]
+
+
+Here is an example of some more controlled, but visually just as bright colors.
+
+[[File:Review_an_edit_for_QC__Overbrights_scope-good.JPG|x200px]]
+[[File:Review_an_edit_for_QC__Overbrights_scope-good_Content.JPG|x200px]]
+
+
+=Check Miscellaneous Errors=
+
+*Look for matte line issues
+
+With all the and roto work involved, matte lines are something to keep a keen eye for. here are some examples of situations where a premultiplication, or other similar error was made.
+
+[[File:Review_an_edit_for_QC__MatteLine_01.JPG|x200px]]
+[[File:Review_an_edit_for_QC__MatteLine_02.JPG|x200px]]
+
+Some other things to look out for would be the following:
+
+*double frames
+
+*motion blur artifacts / steps 
+
+*and any other new or unique thing that could be causing issues.
+
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Review_an_edit_for_QC

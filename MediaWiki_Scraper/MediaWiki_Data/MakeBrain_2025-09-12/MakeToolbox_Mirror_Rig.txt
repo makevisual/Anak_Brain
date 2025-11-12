@@ -1,0 +1,49 @@
+= Mirror Rig =
+
+== Overview ==
+[[File:MirrorRig NewUI.png|501x501px]]
+
+'''Mirror Rig''' is a tool from the MakeToolbox toolset designed to mirror object hierarchies, such as character rigs, across a specified axis. It includes rigging-specific tools to handle constraints, object naming, and geometry normals automatically.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "MirrorRig" from the scripts dropdown menu.
+# '''Select Objects''': Select the objects (or hierarchy of objects) you wish to mirror.
+# '''Choose your desired options''': Use the '''Mirror Method''', '''Duplication''', '''Rig Checks''', and '''Renaming''' panels to set up your mirroring operation.
+# '''Commit the Mirror operation''': Click one of the '''Mirror''' buttons (X, Y, or Z) to mirror the selected objects.
+
+== User Interface ==
+The script's interface is organized into several groups, each controlling a different aspect of the mirroring process.
+
+=== Mirroring ===
+
+* '''Mirror X / Y / Z''': These are the main action buttons. They will mirror the current selection across the corresponding world axis.
+
+=== Mirror Method ===
+This section determines how the mirror operation is performed.
+
+* '''Use negative scale:''' Uses a simple scaling method to flip objects. This is fast but not recommended for complex rigs as it can break coordinate systems.
+* '''Mirror entire hierarchy:''' This is the recommended method for rigs. It calculates a mirror for each object and rebuilds the hierarchy, preserving local coordinate systems.
+* '''Flip 2nd/3rd axis:''' Controls axis orientation for the advanced mirroring method to ensure controllers are oriented correctly.
+
+=== Duplication ===
+
+* '''Mirror as duplicate''': If checked, the script will create a mirrored copy of your selection instead of mirroring it in place.
+* '''Duplicate as instance''': If "Mirror as duplicate" is active, this option will make the new objects instances of the originals. This is only available when "Mirror as duplicate" is checked.
+
+=== Rig Checks ===
+These options handle common issues that arise when mirroring rigged components.
+
+* '''Flip Lookat constraints''': Automatically adjusts the settings on any LookAt constraints within the selection to ensure they point correctly after being mirrored.
+* '''Flip Geometry Normals''': If any of the selected objects are geometry, this will flip their surface normals to prevent them from appearing inside-out after the mirror.
+* '''Auto Breakout Selection''': Unparents any selected objects whose parents are ''not'' part of the selection.
+
+=== Renaming ===
+This section provides powerful tools for renaming the mirrored objects.
+
+* '''Auto: 'Left' <=> 'Right'''': When checked, automatically renames objects using a list of common pairs (e.g., "Left" becomes "Right", "_L_" becomes "_R_", and vice-versa).
+* '''Custom rename''': Allows you to define your own find-and-replace naming convention using the text boxes below.
+* '''Preview renaming''': Opens a new window showing a list of how your selected objects will be renamed based on your settings, allowing you to verify the names before mirroring.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Mirror_Rig

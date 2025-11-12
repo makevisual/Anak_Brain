@@ -1,0 +1,52 @@
+= Bake and Save =
+
+== Overview ==
+The '''Transform Baker''' is a utility for Autodesk 3ds Max designed to "bake" the complex, final animation of objects into a simple, keyframed format. It records an object's position, rotation, scale, and visibility on every frame of a specified range and saves this data to an external XML Animation File (*.xaf).
+
+This process is essential for simplifying complex animation setups (like those using rigs, constraints, or procedural controllers) into raw keyframes, making the animation easier to export, transfer to other objects, or use in game engines.
+
+== How to Use ==
+
+# '''Select Objects''': In your 3ds Max scene, select the object or group of objects whose animation you want to bake.
+# '''Run the tool''': From MakeToolbox, select the "BakeAndSave" from the scripts dropdown menu.
+# '''Set Frame Range''': Click the '''"Snap to Timeline"''' button to quickly set the tool's start and end frames to match your scene's active timeline or manually enter the Frame Range using the available spinners
+# '''Choose Options''': Choose to '''"Save Transforms"''', '''"Save Visibility"''' and/or '''"Create baked ref objs"'''.
+# '''Bake Animation''': Click the '''"Bake and Save"''' button.
+# '''Save File''': A file dialog will appear. Choose a location, name your animation file (e.g., "my_Animation.xaf"), and click '''Save'''. Be mindful of the options present on this save dialog to proper translate to your export needs.
+# '''Process Complete''': The tool will create temporary objects, copy the animation frame by frame, save the *.xaf file, and then delete the temporary objects, leaving your original scene intact.
+
+== User Interface (UI) Breakdown ==
+
+=== Frame Range ===
+This section defines the time range for the baking process.
+
+* '''Start/End Spinners''': Manually set the start and end frames.
+* '''Snap to Timeline''': A button that automatically syncs the spinners with the active frame range on the 3ds Max timeline.
+
+=== Options ===
+These checkboxes control what data is baked.
+
+* '''Save Transforms''': Bakes the object's '''position''', '''rotation''', and '''scale'''. This is the primary function and is enabled by default.
+* '''Save Visibility''': Bakes the object's visibility property. The object must have a visibility controller for this to work (see Utilities).
+* '''Create baked ref objs''': When checked, the temporary box objects used for baking will not be deleted after the process is complete. This is useful for debugging or for having a visual reference of the baked animation in the scene.
+
+=== Bake and Save ===
+This section controls the main baking process.
+
+* '''Bake and Save Button''': Starts the baking process and prompts you to save the *.xaf file.
+* '''Progress Bars''': The top bar shows the overall progress through the frame range, while the bottom bar shows the progress of baking the selected objects within the current frame.
+
+=== Load ===
+This section is for applying a baked animation file to objects.
+
+* '''Load Button''': After selecting objects in the scene, click this to open a file dialog. Selecting a *.xaf file will apply the saved animation to the selected objects.
+
+=== Utilities ===
+A set of helper tools to prepare your objects for baking or cleanup.
+
+* '''Check sel for dupe names''': Checks if any selected objects share the same name, which can cause issues. The results are printed to the MAXScript Listener.
+* '''Add visibility tracks to sel''': Adds the necessary visibility controller to all selected objects so their visibility can be animated and baked.
+* '''Delete animation on sel''': Removes all animation keyframes from the currently selected objects.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Bake_and_Save

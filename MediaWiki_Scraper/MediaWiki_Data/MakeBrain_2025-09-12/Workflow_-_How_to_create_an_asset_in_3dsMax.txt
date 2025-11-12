@@ -1,0 +1,12 @@
+*[[Creating an asset in 3dsMax using the asset switch]]
+*[[Modeling an asset in 3dsMax]]
+*[[Laying out uvs on an asset in 3dsMax]]
+*[[Texturing an asset in 3dsMax]]
+*[[Rigging a character in 3dsMax]]
+*[[Using hair and fur on an asset in 3dsMax]]
+*[[Shading an asset in 3dsMax]]
+*[[Shading an asset in 3dsMax]]
+*[[Publishing an asset in 3dsMax using the asset switch]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Workflow_-_How_to_create_an_asset_in_3dsMax

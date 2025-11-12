@@ -1,0 +1,132 @@
+=Software Installation and Setup=
+Install the following if not already installed
+
+'''Install unreal engine 5.1'''
+	<ul>
+	<li>Selected in the unreal portion of the epic games launcher
+	</li>
+	<li>https://store.epicgames.com/en-US/download
+	</li>
+	</ul>
+	
+'''Install Nuke 14.0v2'''
+	<ul>
+	<li>U:\resources\apps\Foundry\Nuke14.0v2_Silent_Install.bat
+	</li>
+	</ul>
+
+'''Install Nuke Server 3.0v1 UE5.1'''
+	<ul>
+	<li>U:\resources\apps\Foundry\NukeServer_UE5.1_SilentInstall.bat
+	</li>
+	</ul>
+
+'''Activate the Nuke Server Plugin'''
+	<ol>
+	<li>In unreal engine navigate to ''Edit > Plugins''
+	</li>
+	<li>Search for ''"Nuke Server"'' and click the checkbox to active
+	</li>
+	<li>[https://youtu.be/BG2CNDhwU_8?t=108 Video Tutorial]
+	</li>
+	</ol>
+
+
+
+
+
+=Connecting Nuke and Unreal Engine=
+In order for NukeX and Unreal to talk to each other, a connection has to be formed, this is done though an intermediary server, Nukex and Unreal can then pass data though this server to each other.
+
+<br>
+'''Running the Nuke Server'''
+	<ol>
+	<li>In unreal engine navigate to ''Window > Nuke Server''
+	</li>
+	<li>Click ''Start Server'' to bring it online
+	</li>
+	<li>[https://youtu.be/BG2CNDhwU_8?t=108 Video Tutorial]
+	</li>
+	</ol>
+	
+With the Nuke Server running in Unreal and your project open, you can now connect to it in Nuke through the ''UnrealReader'' Node by hitting the ''Connect to Server'' Button.
+
+You can even change the ''Host Name'' field in the Unreal Reader to another workstations IP address and render on different computer than you are working on. That other computer you are connecting to would then need to be running unreal with the project open and have the nuke server running rather than your own workstation.
+</br>
+You can Find out a computers IP address by opening windows network and internet settings and clicking the properties button next to your ethernet connections
+<br>
+[[File:Rendering_Unreal_Engine_using_NukeX_-_IPAddress_v01.jpg|250px]]
+
+
+=Rendering Basics=
+	In order to render anything you will need a camera, cameras together with the Unreal sequencer will define what will be rendered. The sequencer is where you will define your camera, shot duration, frame range, frame rate, and the timing of any animation.
+	<br>
+	From there you can select a map and Sequence to render from your unreal project.
+	<br>
+	The frame range in the Unreal Reader node must overlap with the frame range in your Unreal Sequencer, because Unreal will unload your camera on frames that are out of range of the sequencer.
+	<br>
+	You can set up a prerender in the Write section of the Unreal Reader node. This should always be done, comps should never be running live off of the Unreal Reader node.
+	
+	
+	
+=Rendering, AOVs, Masks, Aliasing, and Sampling using Unreal Reader=
+'''AOVs and Masks'''
+	<ul>
+	<li>AOVs can be added through the Render tab of the Unreal Reader node
+	</li>
+	<li>[https://youtu.be/yIXjqnH8GCI?t=116 Rendering AOVs]
+	</li>
+	<li>[https://youtu.be/iPorXtgyU-Q?t=65 Rendering Stencil Layers]
+	</li>
+	</ul>
+	
+'''Aliasing and Sampling'''
+
+	<ul>
+	<li>Aliasing and sampling are controlled through the Advanced tab in the Unreal Reader node, through the Spatial and Temporal Sample Count values.
+	</li>
+	<li>Increasing these values is effectively a linear multiplier on render time, as each sample is literally rendering the frame an additional time
+	</li>
+	<li>Values of about 6 temporal and 6 spatial resulted in almost no noise/aliasing in a test scene. Higher values seem provide diminishing returns on quality
+	</li>
+	</ul>
+	
+
+
+=Considerations and Notes=
+<ul>
+<li>'''DO NOT USE A SEPERATE WRITE NODE TO PRE-RENDER THE UNREAL READER NODE''' - Only use the internal write node within the the Unreal Reader node
+</li>
+	<ul>
+		<li>Using a separate write node causes the engine to refresh on every frame
+		</li>
+		<li>Animation does not come through
+		</li>
+		<li>takes significantly longer to render
+		</li>
+	</ul>
+	
+	<li>You must be using NukeX to use the Unreal Reader node
+	</li>
+	<li>Destination folders for the Unreal Readers prerender must be manually created, frames will not render if the folder does not exist
+	</li>
+	<li>Ambient animation and simulations will remain consistent between render versions as long as the warm up frames stays consistent, but if the warm up frame count changes, the ambient animation timing will change
+	</li>
+	<li>If you push the ''"fetch latest"'' button in the nuke reader node while Unreal is saving or autosaving it will crash Unreal. It can be a good idea to disable autosave while rendering with the unreal reader node for this reason
+	
+	<li>If you are planning on using Nukes ZDefocus in combination with a depth pass you should have all screen space effects that affect pixel positions disabled in Unreal. As it will offset the pixels in your rgb beauty render from your depth pass. most of these are found in the post processing volumes settings.
+	</li>
+		<ul>
+		<li>Chromatic aberration
+		</li>
+		<li>Lens distortion
+		</li>	
+		</ul>
+</ul>
+
+
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Rendering_Unreal_Engine_using_NukeX

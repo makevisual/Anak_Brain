@@ -1,0 +1,122 @@
+=What is CAD?=
+CAD, or computer-aided design, are files that contain 3d meshes which are typically provided by the client for a project. These files need to go through a process to ensure that they are production ready for our use at MAKE.
+
+= Types of CAD =
+
+The most common types of CAD files that we receive from clients:
+* OBJ
+* STL
+* STP
+Additionally, decals in the form of Illustrator files could be provided by the client for products like toys. Images of the product may also be provided for reference.
+
+= Where to Locate CAD =
+The location of CAD files are usually supplied by producers or individuals that are overseeing a project and are in communication with the client. It is best practice to confirm with a producer about where to find the files, but it is typically placed in the Source > Client folder for a project.
+
+[[File:Converting CAD for production CADlocations.PNG|250px]]
+
+= Opening and Importing CAD Files =
+There are multiple ways to import CAD files. One way is using a software application called Fusion360, and the other being using 3dsmax. After the CAD files go through Fusion360, they will be imported into 3dsmax regardless, it is just an extra step that can be taken before importing into Max if necessary.
+== Fusion360 == 
+Fusion360 is an Autodesk application used for product design and manufacturing. It is an additional tool that can be used in the process of dealing with CAD files. Fusion360 is appropriate to use when whole meshes are extremely dense and you are running into significant problems when importing into max. Fusion will take whole meshes and separate them into pieces so they're more manageable for max when importing in a typically time efficient manner.
+
+To use Fusion, you will need a license from your network administrator, which can be assigned remotely.
+
+Launch Fusion and select File>Upload to import your CAD. On screen left you will see your hierarchy, and the CAD should come in under a folder called Bodies. Alternatively, selecting Insert>Insert Mesh from the top menu will also bring in the mesh if you're having issues with the upload feature.
+
+[[File:Converting CAD for production FusionImport.PNG|250px]]
+
+Warning signs may appear on some of the pieces of geometry that have been separated. If you double click on these signs Fusion will propose a solution to fix the issue with the geometry. Select OK to apply the proposed change.
+
+[[File:Converting CAD for production FusionWarnings.PNG|250px]]
+
+After the warnings have been corrected, save your project on the top menu. Then select File>Export to export. Name your export and select FBX as the file type, then choose a location for the export to go. Since this process is done through connecting to the digital cloud and not locally, it may fail many times so keep retrying until the export is successful.
+
+[[File:Converting CAD for production FusionExport.PNG|250px]]
+
+Now that your FBX is exported it can be imported into Max.
+
+== 3dsmax == 
+To import your CAD into 3dsmax, select File, Import, and import again from the top menu. A dialogue will pop up where you can locate your CAD file and import it into the scene.
+Once your CAD is opened another dialogue will pop up with import settings. Depending on what type of file your CAD is, different import settings will appear.
+== Troubleshooting Importing == 
+Different settings when importing will impact the appearance of your mesh in max. For example, for OBJ imports sometimes CAD won't load in unless Import as single mesh is turned on, so if you're having a hard time getting the file to open or the geometry is extremely broken upon import, try different import settings. Files could potentially have issues because the files provided might have been used strictly for physical production of the asset.
+
+[[File:Converting CAD for production OBJImportSettings.PNG|250px]]
+
+= Making CAD Production Ready =
+Depending on the asset, different processes will be undergone for the CAD to become production ready. Some assets may need rigs or geometry modifications, while others will serve as reference for new models to be created based on their likeness.
+
+== Starting the Process == 
+Here are some general things to check with the mesh upon import:
+* Is the scale proper for the project that the asset will be used for?
+* Is the mesh roughly at the origin in 3D space? What about the pivot point? Is it resting on the grid/ground and facing forward?
+* Any issues with normals or holes in the geometry?
+* If reference is provided, does the CAD that you imported match it?
+
+Here is an example of a CAD mesh directly after it was imported. The topology is extremely dense and the scale is incorrect for the spot that it will be used in. The front of the mesh is also facing right instead of forward in 3D space.
+
+[[File:Converting CAD for production StitchBeforegray.PNG|250px]]
+
+[[File:Converting CAD for production StitchBefore Wireframe.PNG|250px]]
+
+== Retopologizing == 
+After the initial checks are made above/corrected, it is best practice to deal with the heavy topology CADs typically have.
+There is a handy modifier called Retopology that can help with this task.
+
+Here's a helpful video about best practices when using the Retopology modifier, and how using the Subdivide modifier can help with getting more uniform topology: https://www.youtube.com/watch?v=sKEu2Gs3G_U
+
+Within the modifier, there are 3 different methods for retopologizing the mesh. Each process varies in how long it takes for the mesh to be retopologized and the quality of the mesh after the process. 
+
+To test the process, enter a number in the face count under target size and select compute. This computing process can be done as many times as needed to get a feel of what you're aiming for with poly count. In other words, each time you compute you won't be retopologizing the mesh you just retopologized, unless you collapse the modifier.
+
+'''ReForm:'''
+This method takes the longest but produces the most desirable results for the topology.
+
+'''QuadriFlow:'''
+This method is the middle ground between ReForm and Instant Mesh, producing better results than Instant Mesh in less time than ReForm.
+
+'''Instant Mesh:'''
+This method takes the least amount of time but provides the most primitive results in turn. It's best practice to start with instant mesh so you can get a feel for the face count that will keep your mesh good quality but with the lowest possible amount of polygons, and continue from there with the other methods and similar poly counts. 
+
+Here's an example of the same mesh with the different retopo methods used.
+
+[[File:Converting CAD for production DifferentRetopo.PNG|500px]]
+
+[[File:Converting CAD for production CADlocations RetopoDifferences.mp4|500px]]
+
+Your model will now be less dense and possess more ideal topology.
+
+[[File:Converting CAD for production StitchAfter.PNG|250px]]
+
+== Attaching, Detaching == 
+It's important to assess how many pieces your CAD is broken up into. If there's a lot you can probably do some attaching to combine pieces, depending on the complexity of the asset. To do this, select two separate pieces of geo, and select attach under the Modeling ribbon.
+
+To break apart meshes, select the polygons you want to be detached and select detach under the Modeling ribbon. This action will separate the two meshes, allowing you to break pieces apart which might be necessary as different parts of the mesh might need certain pieces rigged for animation.
+
+[[File:Converting CAD for production StitchDetach.PNG|250px]]
+
+== Additional Model Cleanup ==
+Some final steps to ensure your asset is rig ready should also be taken. 
+
+* Resetting the XForm on all of your geometry so all of the pieces will share a common scale of 100.
+
+* Freezing Transforms and Rotations on all geometry before rigging is also good practice.
+
+* Be aware of proper naming conventions for materials, geometry, controllers, and layers.
+
+More in-depth info about these operations can be found in the Preliminary checks section of this article  - [[Creating an asset in 3dsMax]]
+
+Here's the final asset with materials and a rig.
+
+[[File:Converting CAD for production StitchAftercolor.PNG|250px]]
+
+= Finalizing =
+When your file is clean and ready for production use, you will need to create an asset for it using Asset Switch. This will ensure that whoever needs to use the asset can locate it easily and it lives within a proper place in the project.
+The asset will also need to be published accordingly for use in the 3D pipeline.
+
+Info on how to create an asset using asset switch and proper publishing practices can be found here: [[Creating an asset in 3dsMax]]
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Converting_CAD_for_production

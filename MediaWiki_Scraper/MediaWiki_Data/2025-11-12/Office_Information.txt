@@ -1,0 +1,237 @@
+
+
+{| class="wikitable"
+|+ MAKE Office Info
+| Address || 120 S 6th St, Suite 1800, Minneapolis, MN, 55402
+|-
+| Phone || (612) 465-8720
+|}
+
+== Welcome to MAKE!==
+
+==== '''About''' ====
+* MAKE, is a commercial production studio that specializes in the art of storytelling through motion graphics, visual effects, and animation.
+* The office is located on the 18th floor of the Canadian Pacific Plaza (also called "the building"). The office has now expanded to the 17th floor too. 
+* Bathrooms are located on both the 18th and 17th floors. If there are any issues with a bathroom (e.g. paper towels are out, toilet out-of-order), notify the Office Coordinator so they can make a service request to the building management.
+
+==== Building ====
+Canadian Pacific Plaza
+
+* ''*Located on the corner of 6th & S 2nd St.''
+* The Canadian Pacific Plaza & the Mpls Skyway system close at 6:00pm. Also, the building is not open on the weekends, but you CAN enter with the MAKE key fob. (See below on key fob details.)
+
+==== Access ====
+If you're a MAKE Full-time Employee you'll be given building access via key fob (retrieve from Elisabeth) and you'll be given a key card for free parking.
+
+* Parking Entrance: On the corner of 7th & Hennepin (Right next to Fogo de Chão)
+
+=== '''Employees''' ===
+{| class="wikitable"
+|+
+!PRODUCTION
+!3D TEAM
+!2D TEAM
+!STRATEGY
+|-
+|Danny Robashkin - Creative Director
+|Joe Kim - 3D Lead Artist
+|Josh Schneider - 2D Lead Artist
+|Iana Prakheeva - Strategy Director ''(part-time)''
+|-
+|Oren Robashkin - New Business Manager / Executive Producer
+|Cody Vinson - 3D Lead Artist
+|Jackie Kim - 2D Lead Artist
+|Amy-Marie (Amy) Steman - Marketing Strategist
+|-
+|Aaron Dabelow - Producer / Technical Director
+|Jordan Powers - 3D Lead Artist
+|Natalia Poteryakhin - 2D Artist & Writer
+|
+|-
+|Alex McKenzie - 3D Artist
+|Menghan Wang - 2D Artist
+|Sapphira Chen - 2D Artist
+|-
+|Elisabeth Hayes - Producer
+|Stanley McNeiece - 3D Artist
+|Adam Othman - 2D Artist
+|
+|-
+|Ben Lodge - Producer / Director
+|Lisa Cui - 3D Artist
+|Rayna Buxton - 2D Artist
+|
+|-
+|Kevin Wisdom - Director
+|Ling Zhao - 3D Artist
+|Emily Cabrera - 2D Artist
+|
+|-
+|Alec Soelle - Art Director / Sound Designer
+|Jun Liu - 3D Artist
+|Sapphira Chen - 2D Artist
+|
+|-
+|Aaron Quist - Art Director ''(part-time)''
+|Riley Eastman - 3D Artist
+|
+|
+|-
+|
+|Lauren Carr - 3D Artist
+|
+|
+|-
+|
+|David Almedia - 3D Tech Artist
+|
+|
+|-
+|
+|
+|
+|}
+
+===WIFI===
+
+You can access the studio WIFI, using these credentials.
+
+ <nowiki>network: MAKE_Guest
+password: makewifiaccess</nowiki>
+
+=== Computer Login ===
+You can access.
+
+ network: MAKE
+ password: mine
+
+== Parking & Skyway ==
+MAKE provides free parking passes to the City Center Ramp, located at 10 S 7th St, Minneapolis, MN 55402. The city center ramp is a 5-10 minute walk away from our office and is accessible by the skyway. When entering the parking ramp, enter on the right side under the "Public Parking" sign (not "Contractor Parking," which is underground parking).
+
+Downtown Minneapolis has an extensive skyway system that connects most of the buildings of downtown so that you can minimize your exposure to inconvenient weather. 
+
+Unfortunately, it closes at 6 pm. The websites https://www.skywaymyway.com/  and https://skywayaccess.com/ are great resources for navigating the skyway.
+
+====== Quick Bite's: ======
+{| class="wikitable"
+!Restuarant
+!Location
+!Restuarant
+!Location
+|-
+|Asian Max 
+|(Canadian Pacific Plaza - 1 min walk)
+|The Burger Place 
+|(U.S Bank Plaza - 9 min walk)
+|-
+|D'Brian's 
+|(Canadian Pacific Plaza - 1 min walk)
+|Chipotle 
+|(U.S Bank Plaza - 9 min walk)
+|-
+|Potbelly 
+|(Rand Tower - 3 min walk)
+|The Burger Place 
+|(U.S Bank Plaza - 9 min walk)
+|-
+|Crêpe Avenue 
+|(The Bridges - 5 min walk)
+|Broadway Pizza 
+|(U.S Bank Plaza - 9 min walk)
+|-
+|Kadai Indian Kitchen 
+|(The Bridges - 5 min walk)
+|Naf Naf Grill 
+|(U.S Bank Plaza - 9 min walk)
+|-
+|My Burger
+|(Skyway system - 6 min walk)
+|Jimmy John's 
+|(U.S Bank Plaza - 9 min walk)
+|-
+|Chipotle 
+|(U.S Bank Plaza - 9 min walk)
+|Green + The Grain 
+|(U.S Bank Plaza - 9 min walk)
+|-
+|Roti Mediterranean 
+|(IDS Center - 13 min walk)
+|Takatsu Sushi 
+|(Baker Center - 13 min walk)
+|-
+|123 Sushi 
+|(IDS Center - 13 min walk)
+|People's Organic 
+|(IDS Center - 13 min walk)
+|}
+===Building Amenities===
+The Canadian Pacific Plaza offers a few different amenities for all who work in the building.
+
+'''Fitness Center'''
+
+All MAKE employees have free access to the building fitness center (located next to Discover Strength) on the first floor. Fitness center access is granted once a [https://makevisual.com/Forms/CPP_Fitness_Center_Membership&Waiver_Form.pdf fitness center form] has been filled out and submitted to the building management office (Artis REIT office). Fitness center hours are the same as building hours (6 am – 6pm), but your key fob will grant 24/7 access.
+
+'''Bicycle Storage and Locker Facility'''
+
+For those who commute by bicycle, the Building has a bicycle storage space with locker rooms on the basement level. To use the bicycle storage facility, fill out the bicycle facility waiver and release form (which can be obtained through the Office Coordinator).
+
+== Office Kitchens ==
+There are two kitchens on the 18th floor, one for food—the "''big kitchen''," and one for drinks—the "''little kitchen''." Both kitchens have a fridge, microwave(s), and a dishwasher. Only microwave food in the big kitchen! You can store your lunch in any of the three fridges.
+
+==== Little Kitchen ====
+The small kitchen is for drinks only. It has a coffee maker and grinder, milk frothing machine, microwave, and hot water dispenser. Refill the hot water dispenser when it runs low. Rinse out the milk frothing machine after use, including the top spinny thing attached to the lid. (It's Natalia's but free to use.)
+
+Tea is located in the first drawer from the top on the right (near the window). Hot chocolate mix and silverware is located in the bottom drawer.
+
+You can use the fridge to keep your packed lunch. You can store your lunch in any of the three fridges.
+
+The drawer closest to the fridge is the recycling. '''In''' '''the little kitchen, the recycling is the drawer on the left'''. The trash is in the drawer closest to the sink.
+Both are labeled on the top edge of the wooden front to help remember.
+
+====== '''- How to make coffee''' ======
+Use the coffee grinder to grind beans. Coffee beans are located in the 2nd drawer on the right.
+
+Put a paper coffee filter (also located in the 2nd drawer) over the built-in coffee filter (rinse out if necessary).
+
+Using the black scoop, put 12 SCOOPS of coffee grounds into the filter. Do not put more than 12 scoops or there will be a mess!
+
+Using the detachable faucet, fill the coffee maker with water to the 12 cup line.
+
+Close the coffee maker lid and hit brew (middle button).
+
+If something has run out in the small kitchen (e.g. half & half or tea), look for more in the pantry.
+
+==== Big Kitchen ====
+There are '''snacks''' in the big kitchen in the island cabinets with handles.
+<br/>The drawer closest to the fridge is the recycling. '''In the big kitchen, the recycling is the drawer on the right'''. The trash is to the left of the recycling.
+<br />
+'''NB:''' The dishwasher in the big kitchen will not run if it is opened and then closed again without pressing the START button. If the light reads that a cycle delay has been started, or if you open the dishwasher during a cycle, make sure to '''press the START button before reclosing the dishwasher'''.
+
+==== '''Kitchen Etiquette''' ====
+It's more important than ever that we maintain clean, organized common spaces in our office. Here are a few etiquette guidelines to keep our kitchen tidy:
+
+* Keep dishes in the right kitchen. Please don't put big kitchen dishes in the small kitchen dishwasher and vice versa.
+* Please don't leave dishes at desk areas.
+* Please load your dirty dishes in the dishwasher before 5 pm so that we can have enough clean dishes in the morning.
+* Keep kitchen countertops clean by wiping down countertops when you leave the area.
+* '''Never''' leave food bits behind in the sinks. Please keep sinks clean and food-free.
+* If you are taking home leftovers from catering, '''always return remaining food to the fridge.''' Don't rely on the person after you putting the food back!
+
+Thank you all for doing your part to keep the MAKE kitchens clean and tidy for everyone!
+
+===Drinks & Snacks===
+We usually keep the fridges stocked with different kinds of sparkling water, soda (Coke Zero, Coke, Diet Coke, Diet Pepsi, Sprite), tea (Bai), milk, and half & half. For snacks, we have a variety of chips, granola bars, protein bars, fruit, and cookies to choose from. Snacks can be found in the drawers in the big kitchen or in the back closet with the fridge. If you have any specific snack requests, talk to the Office Coordinator!
+
+== Finding Office Supplies ==
+Don't hesitate to ask the Office Coordinator where any supplies are that you may need. MAKE stocks a lot of office supplies and cleaning supplies in different storage areas.
+
+====Front Desk====
+First aid supplies and batteries are located in the top drawer at the far end of the front desk. Office supplies—'''staplers, paper, notepads, pens and sharpies, tape, etc.'''—can be found in the other drawers.
+====Closet behind Front Desk====
+This closet is used to hang up coats in colder months. '''It is also the home of our two carts and smaller dollies.''' The vacuums are also stored in this closet.
+
+===Printers===
+There are three different printers/scanners in the office. For most uses, the best printer/scanner to use is the Brother printer/scanner in the back of the 2D artist area. There is also a big Epson printer/scanner next to it, and a smaller Epson printer/scanner in the intern area. Bring files to print on a thumbdrive. And when scanning, bring a thumbdrive to scan to. A thumbdrive can be borrowed from the front desk if needed.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Office_Information

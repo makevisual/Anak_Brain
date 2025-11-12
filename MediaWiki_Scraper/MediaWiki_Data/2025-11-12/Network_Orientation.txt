@@ -1,0 +1,31 @@
+== Default Drives ==
+
+There are many drives available on the network, and each of them often are used for different things. Broadly speaking, the usage for the drives is as follows:
+[[File:Drives.png|frame|none]]
+
+'''M:''' This is a repository drive for the render farm and various tools. Do not do any work on this drive.
+
+'''N:''' This is a repository drive for the render farm and various tools. Do not do any work on this drive.
+
+'''T:''' Archive and storage for raw footage from Live-Action shoots. Footage is copied to other drives for working on shots.
+
+'''U''': General-Purpose utility drive. This is where artists personal folders are stored, along with tools, plugins, fonts/stock elements, and internal content
+
+'''V:''' Space for large sized sim caches, Project delivery DropBox, and some projects are stored here.
+
+'''W/X/Y/Z:''' These are the primary storage drives for projects. Project folders are made by Producers and distributed amongst the drives based on available space and usage.
+
+'''Local Disk (C:)''' This is the actual physical drive in your PC. Software and tools are installed here, but this should generally not be used as a work space. Local previews for Premiere, and temp files, can be stored here but most work should happen on a Project drive or in a personal space on the ''U:'' drive.
+
+'''R:''' This is a temporary location for remote workshops to use as a location visible to the render nodes, without providing access to the full network.  Do not do any work on this drive.
+
+NOTE: You should always be using the 'Projects' shortcut to access projects, rather than navigating the drives manually.
+[[File:Projects.png|none|frame]]
+If the shortcut does not exist, one can be made dragging the Projects icon into your Quick Access bar, from this location:
+ U:\resources\toolbar
+
+== Additional Drives ==
+Depending on your role you may have additional drives for provided information. Please talk to your system administrator and or supervisor about these and what should go in those locations.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Network_Orientation

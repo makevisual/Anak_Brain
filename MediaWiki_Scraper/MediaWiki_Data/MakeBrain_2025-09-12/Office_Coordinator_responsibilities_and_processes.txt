@@ -1,0 +1,360 @@
+
+= Office Coordinator responsibilities and processes =
+Different spheres of the Office Coordinator role:
+
+'''Administrative Assistance'''
+
+* outfitting new hires with key fobs and granting fobs appropriate access (freight elevator/bicycle storage/fitness center)
+* receiving mail, sending packages
+* answering the phone
+
+'''Office/Building Operations'''
+
+* office space management & organization ''-''  keep lobby spotless, declutter storage spaces, stock fridges, buy groceries and misc. office supplies, run dishwashers, clean messes, organize repair for appliances
+* coordinate with building maintenance - repairs, render farm, amenities forms, loading dock forms
+* recycling and sometimes trash removal
+
+* storage stewardship - understand various storage areas, put things in storage and be able to retrieve them
+
+'''Employee Engagement'''
+
+* birthday and anniversary recognition
+* Friday Viewing Fiesta catering
+'''On Set P.A.'''
+* helping out with shoots
+* stage room maintenance
+* taking care of film equipment
+
+=== Administrative Assistance ===
+Important forms
+
+'''Answering the phone'''
+
+If a call rings on Line 1, answer as soon as possible and at least within three rings. If a call rings on Line 4 (Danny's line), allow two rings for Danny to pick up before picking up.
+
+You can quickly talk to Danny, Oren, Matt, and Elisabeth from the front desk by dialing their extension. If the mic is turned on, they will be able to hear you without you having to use the phone receiver. In general, the mic on the front desk phone is left on (as indicated by a red light).
+
+To answer the phone, pick up the receiver and say a greeting ("Hello, thank you for calling MAKE. This is ___ speaking. What can I do for you?"). If the caller is trying to reach a specific person in the office, get the caller's name and the company they're calling with. Put the caller on hold (just press Hold button), then dial the requested person at MAKE using their extension. Ask if they would like to speak to the person on the line, and if not, you can take the caller's contact info and a message.
+
+To take a caller off hold, just press the button for the line they're on (typically Line 1).
+
+To make a call, first press the button for Line 1, then dial the number.
+
+'''Receiving Mail''' - sign for any packages and notify respective recipients
+
+'''Sending Mail'''
+
+<code>'''Fedex''' is located on the first level of the IDS center. We have a business account with Fedex, so they can bill our account for shipments. When bringing packages to mail at Fedex, have this information ready:</code>
+
+<code>MAKE Fedex account number: 3058-9484-2
+
+MAKE phone: 612-465-8720</code>
+
+<code>'''UPS''' is located on the second level of the City Center (across escalators). UPS is usually used for Amazon returns. We do not have a UPS account, so have a card ready for shipments.</code>
+
+<code>'''USPS''' is located on the first level of the LaSalle Plaza.</code>
+
+'''<big>Building Operations</big>'''
+
+Our building—the Canadian Pacific Plaza—is operated by Artis REIT. Ann King is the main point of contact for most needs with building management. Onda is the Property Manager for our building. Security guards will also be a regular contact for the office coordinator.
+{| class="wikitable"
+|+
+Building Management Contacts
+!Name/Title
+!Phone number
+!email
+|-
+|Ann King, Property Administrator
+|651-497-1724
+|aking@artisreit.com
+|-
+|Onda Knutson, General Manager
+|612-850-2390
+|oknutson@artisreit.com
+|-
+|CPP Security (David/Kris)
+|612-217-6420
+|<nowiki>--</nowiki>
+|}
+'''Maintenance Requests through Workspeed'''
+
+<code>Workspeed is the portal used to submit repair requests to the Building Management. Go to Workspeed.</code>
+
+<code>Username: MAKE</code>
+
+<code>Password: N!arwhal980</code>
+
+'''Loading Dock & Recycling Center'''
+
+The loading dock is useful for large deliveries. Instacart shoppers will sometimes like to utilize the loading dock, but they can get confused how to get to our office from the loading dock, so assistance is almost always needed in these cases. During shoots, craft services will typically use the loading dock first thing in the morning.
+
+Whenever we use the loading dock, we need to submit a loading dock form.
+
+When we have furniture deliveries from Room & Board, we will need to set up an appointment with the building management (notify then in advance).
+
+=== Office Operations ===
+'''Daily Operations'''
+
+* Stocking fridges & snacks
+* Running and unloading dishwashers
+* Keeping spaces clean & tidy
+* Submitting maintenance requests
+
+'''Weekly Operations'''
+
+* Ordering groceries & office supplies
+* Ordering and setting up Friday catering (and thoroughly cleaning up afterwards - leave the space as you found it)
+* Ordering Film Club food from Pizza Luce
+
+'''Monthly Operations'''
+
+'''Yearly Operations'''
+
+* Appliance repair scheduling as necessary
+* Changing light bulbs
+
+'''Running Dishwashers''' - Utilize delay settings.
+
+'''Ordering Groceries & Office Supplies''' - We use Instacart to order both groceries and office supplies, but some things need to be ordered from Amazon.
+
+'''Stocking fridges''' - Stock fridges in the morning and at the end of the day.
+
+'''Stocking snacks''' - There are two areas to keep snacks stocked: '''back closet''' and '''cabinets in big kitchen''' in front of fridge.
+
+'''Instacart''' - Keep weekly Instacart order totals to around $500. Sometimes items will be out of stock. In general, people in the office enjoy trying new things so leave room in the budget for new things.
+{| class="wikitable"
+|+Lists of grocery items to keep in stock
+!Food
+!Drinks
+!Coffee/Tea/Milk
+|-
+|Fruit/fruit snacks
+|Bottled water (5 packs)
+|Whole bean coffee
+|-
+|Chips
+|Coke Zero
+|Tea bags (green, black, chai, herbal)
+|-
+|Granola bars/nut bars
+|Diet Pepsi
+|2% lactose-free milk
+|-
+|Trail mix packets
+|Diet Coke
+|A2 Whole Milk
+|-
+|Protein bars
+|Coke
+|Half and half
+|-
+|Beef jerky/beef sticks
+|Sprite
+|Oat milk
+|-
+|Candy
+|Bai
+|Tea concentrate boxes
+|-
+|Cookies
+|Izze (sometimes)
+|Hot chocolate mix/chai tea mix
+|-
+|Bread
+|LaCroix/Spindrift
+|Flavored syrups (hazelnut/French vanilla/caramel/almond)
+|-
+|Popcorn
+|Coconut water (sometimes)
+|Sugar
+|-
+|Cereal bars/breakfast biscuits
+|
+|Honey
+|}
+When we need something from Amazon, create a Wrike task with the item link in the description and assign it to Danny.
+{| class="wikitable"
+|+Lists of office and kitchen supplies to keep in stock
+!Kitchen
+!General
+!Office Supplies
+|-
+|Dishwasher detergent pods
+|Tissue boxes
+|Legal pads
+|-
+|Paper towels
+|Sugar-free gum
+|Half-size notepads (junior canary pads)
+|-
+|Napkins
+|Bandages/first-aid
+|Pens
+|-
+|Dish sponges
+|Restroom amenity tray items (tampons, deodorant, etc)
+|Sharpies/fine-tip sharpies
+|-
+|Cleaning spray
+|OTC medicine (Advil/Tylenol/Zyrtec)
+|Printer ink
+|-
+|Coffee stir sticks
+|Swiffer dusters
+|Paper
+|-
+|Hand soap
+|Heavy duty trash bags
+|Post-it notes
+|-
+|
+|Compressed air
+|Utility knives & blades
+|-
+|
+|Windex
+|
+|-
+|
+|Isopropyl alcohol
+|
+|-
+|
+|Hand sanitizer
+|
+|-
+|
+|Face masks
+|
+|-
+|
+|Batteries (AA, AAA, etc)
+|
+|}
+'''<big>Storage Areas</big>'''
+{| class="wikitable"
+|+Storage Area Organization
+!Front desk
+!Main closet behind front desk
+!Back closet (with backup fridge)
+!Cabinets by Wardrobe room
+!Wardrobe room
+!Freight elevator bay
+!Under-sink cabinets in kitchens
+|-
+|First aid & medicine
+|Coat storage
+|Snack/drink storage
+|Legal envelopes/manila envelopes
+|Face Masks
+|Carts
+|Cleaning supplies (dishwasher supplies/dusters/Windex/hand soap/etc)
+|-
+|Legal pads
+|Restroom amenity tray supplies
+|Headphone and speaker storage
+|Broom and dustpan
+|
+|Tech supplies (cords,etc)
+|
+|-
+|Paper/pens/markers
+|Skate dollies
+|Long-term office storage (rugs, light bulbs/shades)
+|Compressed air
+|
+|
+|
+|-
+|Stamps & envelopes
+|Vacuums
+|
+|Corn broom
+|
+|
+|
+|-
+|Batteries
+|
+|
+|Heavy duty trash bags
+|
+|
+|
+|-
+|Old batteries (KEEP LABELED)
+|
+|
+|
+|
+|
+|
+|-
+|Staplers
+|
+|
+|
+|
+|
+|
+|-
+|Utility knife blades
+|
+|
+|
+|
+|
+|
+|}
+'''Light bulbs are stored in the cabinets in the big kitchen.''' 
+
+'''Our two heavy-duty carts are stored in the freight elevator bay.''' 
+
+MAKE owns the utility closets on floors 19, 18, 17, 15, and 14.
+{| class="wikitable"
+|+
+Utility Closet Use by Floor
+|19th Floor
+|Art department storage
+|-
+|18th Floor
+|Storage servers and Render farm
+|-
+|17th Floor
+|Toy storage
+|-
+|15th Floor
+|Additional network storage, computer & tech storage, appliance storage, MAKE T-shirts & hoodies
+|-
+|14th Floor
+|3D printer supplies
+|}
+
+=== Employee Engagement ===
+'''Friday Viewing Fiesta Catering'''
+
+EZ Cater. Headcount is 20-25. Budget ~$600
+
+'''Birthdays''' - Get treats for the office. Go-tos are Cardigan Donuts, Crumbl Cookies (Door Dash),  
+
+'''Holidays'''
+
+'''Events'''
+
+=== On Set Production Assistant ===
+Shoot Expectations
+
+Film equipment care
+
+Employee Engagement
+
+Birthdays
+
+Holidays
+
+Events
+
+*
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Office_Coordinator_responsibilities_and_processes

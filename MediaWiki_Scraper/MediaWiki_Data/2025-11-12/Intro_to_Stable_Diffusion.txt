@@ -1,0 +1,34 @@
+= What is Stable Diffusion =
+
+Stable Diffusion is an AI Image model that can be used to generate images and video. AI is a big topic, please read the [[MAKE AI Policy]] to understand our goals and strategy when it comes to AI Use in the studio and in production.
+
+= When should I use it =
+
+Stable Diffusion offers a lot of control, but can be a little cumbersome than many may find useful. It is best used when you need to utilize various control nets and other textual inversions to define a model. If those words meant anything to you, or you would like to know about them, then then you are in the right place.
+
+For other applications you may be better off using [[Intro to MidJourney|Midjourney]] for generating good visuals, [[Intro to RunwayAI|RunwayAI]] for video, or [[Intro to TyDiffusion|TyDiffusion]] for having ultimate control in connection with your 3D Scene driving it.
+
+= How can I use it? =
+
+There are 2 ways you can use Stable Diffusion at Make, on is to use the AI Server which is setup and running, and the other is to install and configure locally. 
+
+== AI Server ==
+
+You can access the stable diffusion server by folliwing this article [[ How To Access & Use Stable Diffusion ]]
+If the server is non-responsive, it may need to be restarted, you can do so by following these instructions [[ How To Restart Stable Diffusion if it is unavailable ]]
+
+== Local Installation ==
+
+To run a local installation of Stable Diffusion, you can follow these instructions. You may need administrator privilege to be able to.
+
+AUTOMATIC1111 stable-diffusion-webui github
+https://github.com/AUTOMATIC1111/stable-diffusion-webui
+
+** note - Stable diffusion will be installed wherever you have the sd.webui folder located, and it is strongly recommended you place it in your documents folder
+
+
+ <nowiki>
+C:\Users\[ your user ]\Documents\StableDiffusion==</nowiki>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Intro_to_Stable_Diffusion

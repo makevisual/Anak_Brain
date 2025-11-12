@@ -1,0 +1,70 @@
+=Introduction=
+
+This page contains step by step instructions on how to set up a Zoom invite.
+
+=Process=
+'''Step By Step'''
+
+Log into zoom, in browser '''NOT''' through the app.
+
+ <nowiki>
+www.zoom.us</nowiki>
+
+     
+*Click Schedule and fill in the meeting details
+	
+*'''Topic''' Name the topic 
+
+ <nowiki>
+Example: MAKE X Agency or Client name - Project name</nowiki>
+
+*'''When''' for date and time
+
+Hit save.
+
+=Sending a Zoom invite to attendees=
+'''Step By Step for Gmail'''
+
+If on the App or the browser, both have a Meeting's section and that will be where you find any scheduled meetings you made. Click there and you will see a Copy Invitation button which once clicked will will put the full meeting invite into your computer's clipboard.
+
+
+Below is the arrow link to the Zoom Invite button
+
+[[File:ZoomApp-InviteLink.png|frameless|648x648px]]
+
+
+Once this link is copied, you just need to make an email to all the relevant attendees and send it to them by pasting the copied section.
+
+Note: This will be a massive link so all you really need for people is the in the below picture. The rest can be deleted for the sake of space saving.
+
+[[File:ZoomApp-InviteLink-Pasted Keep Section.png|frameless|508x508px]]
+
+
+
+
+'''Step By Step for Google Calendar'''
+
+If you have your Zoom account linked up to your google calendar, you can click the Schedule button to make a link for future dates and time. Once clicked, you will need to fill out the normal information of start date and time as listed and when all of that is done, you click Save. This will then automatically take you to your calendar that Zoom is linked to and from there you can keep the relevant information and remove the rest for space saving. Now to add people to this event will be the standard google way of adding their emails in the guest section.
+
+
+
+Note: ANY UPDATES TO THE ZOOM LINK THROUGH ZOOM WILL RESET AND CHANGES MADE ON THE GOOGLE CALENDAR. This means that if you do an update to the zoom time/date/header name and hit save, the google calendar event will be completely refreshed to the zoom updates. The only thing that will remain are the Guests section in Google.
+
+
+Below is a picture of the relevant pieces
+[[File:ZoomApp-InviteLink-GCalendarSection.png|none|thumb|660x660px|google calendar page with relevant pieces]]
+
+
+
+
+
+
+
+
+
+
+
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_create_and_schedule_a_zoom_call

@@ -1,0 +1,88 @@
+= PointCacheBatch =
+[[File:PointCacheBatch UI.png|729x729px]]
+
+== Overview ==
+'''PointCacheBatch''' is a tool from the MakeToolbox toolset designed to batch process Point Cache files for multiple selected objects. It was developed for animation and VFX workflows involving objects with Skin modifiers, such as character rigs.
+
+The tool provides a UI to create new caches or load existing ones, with features for managing file paths, version control, frame ranges, and cache settings. It also includes utility functions to quickly add and toggle the visibility of both Point Cache and Skin modifiers, for testing and finalizing cached animations.
+
+== How to Use ==
+The tool's workflow is centered around setting a root directory and then either create or load caches.
+
+=== Initial Setup ===
+
+# '''Open the Tool:''' From MakeToolbox, select "PointCacheBatch" from the scripts dropdown menu.
+# '''Select a Root Folder:''' Click the '''"Select Root Folder"''' button to choose a base directory where all your cache files will be stored. This is a mandatory first step and will enable the other options in the tool.
+
+=== Creating Caches ===
+
+# '''Select Objects:''' In the viewport, select all the objects you wish to create a point cache for (e.g., skinned character meshes).
+# '''Configure Versioning (Optional but Recommended):'''
+#* Ensure '''"Enable versioning"''' is checked.
+#* Enter a base name for the cache set in the text field (e.g., "Character_Run_Anim").
+#* Use the '''"Version"''' spinner to select the version number. The full folder path will be previewed below.
+#* If the folder doesn't exist (indicated by an * at the end of the path), click the '''"Create"''' button to make the versioned subfolder.
+# '''Set Frame Range:''' Adjust the '''Start''' and '''End''' frames for the cache, or click '''"Snap to Timeline"''' to use the scene's current animation range.
+# '''Adjust Options:'''
+#* Set the '''Samples/frame''' for sub-frame accuracy.
+#* Choose the cache file format (*.pc2 or *.xml).
+#* Decide whether to automatically '''Replace''' or '''Skip''' if cache files for the selected object(s) already exist on the selected folder.
+#* For saving, decide if you want to create subfolders based on object '''layers''' by checking the '''"Save/load from layers"''' box.
+# '''Create Caches:''' Click the '''"Create Cache"''' button. The tool will process each selected object, and the progress bar and status labels will provide real-time feedback.
+
+=== Loading Caches ===
+
+# '''Select Objects:''' Select the objects onto which you want to load existing caches.
+# '''Locate Caches:'''
+#* Ensure the correct '''Root Folder''' is selected.
+#* If using versioning, select the correct '''Folder Name''' and '''Version'''.
+#* If the caches are in layer-based subfolders, ensure '''"Save/load from layers"''' is checked.
+# '''Load Caches:''' Click the '''"Load Cache"''' button. The tool will find the corresponding cache file for each selected object and load it into its Point Cache modifier.
+
+== User Interface ==
+The script is organized into groups to manage the caching process.
+
+=== Point Cache Batch ===
+This is the main action group.
+
+* '''Create Cache / Load Cache:''' The primary buttons to start the batch processing.
+* '''Brute Force Caching:''' A checkbox to ensure the caching process is triggered correctly.
+* '''Progress Bar & Status Labels:''' Provide visual feedback on the current operation, progress percentage, and any errors or skipped objects.
+
+=== Cache Root Folder ===
+
+* '''Select Root Folder:''' Opens a dialog to choose the main directory for all cache operations.
+* '''... (Open Folder):''' Opens the currently selected root folder in Windows Explorer.
+* '''Save/load from layers:''' If checked, the tool will create or look for caches inside subfolders named after the layer each object belongs to.
+
+=== Versioning ===
+This group controls the creation and use of versioned subfolders.
+
+* '''Enable versioning:''' Toggles the version control system.
+* '''Folder Name & Version:''' A text field and spinner to define the version name and number (e.g., FolderName_v001).
+* '''Create:''' Creates the specified version folder if it does not already exist.
+* '''Folder Path Label:''' Displays a preview of the full path to the versioned folder.
+
+=== Frame Range ===
+
+* '''Start/End Spinners:''' Set the start and end frames for the cache recording/playback.
+* '''Snap to Timeline:''' Automatically sets the spinners to match the scene's active time range.
+
+=== Cache Options ===
+
+* '''Samples/frame:''' Sets the number of samples to be recorded per frame.
+* '''.pc2 / .xml Checkboxes:''' Selects the desired cache file format.
+
+=== If Cache Exists ===
+
+* '''Replace / Skip Checkboxes:''' Determines the tool's behavior when creating caches for objects that already have existing cache files.
+
+=== Utilities ===
+This group provides helpful shortcuts for managing modifiers on the selected objects.
+
+* '''Add Point Cache Modifier:''' Adds a Point Cache modifier to the stack of each selected object, placing it correctly above the Skin modifier.
+* '''Cache On / Cache Off:''' Enables or disables the Point Cache modifier on selected objects.
+* '''Skin On / Skin Off:''' Enables or disables the Skin modifier on selected objects. This is useful for quickly toggling between the live rig and the cached animation to check the results.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Point_Cache_Batch

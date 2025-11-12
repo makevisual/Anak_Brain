@@ -1,0 +1,37 @@
+[[File:Collect Animatic Assets Animatic FlashExample.jpg|thumb|Example of an animatic made from MAKE]]Here are some of the benefits of using an animatic:
+
+* It can help to visualize the timing, pacing, and compositions of the frames.
+* It can help to identify any potential problems with the story or animation.
+* It can help to get feedback from others on the project.
+* It can help to raise funds for the project.
+
+The process of creating an animatic typically involves the following steps:
+
+# Create a storyboard.
+# Add sound effects and music to the storyboard.
+# Animate the storyboard.
+# Edit the animatic.
+
+Animatics are generally worked on in two categories, a 2D animatic or a 3D animatic. These are done with two different teams but they mainly need the same thing.[[File:Collect Animatic Assets Moodboard FlashExample.jpg|thumb|Example Moodboard made at MAKE]]
+===General Items Animatics Need===
+* Script
+* Scratch VO
+* Music exploration
+* Mood board (if available, many times this is made after)
+* Product reference images
+* Product demo videos
+* Final packaging
+* Logos, lockups, brand guides
+* Physical copy of the product for experimentation
+Many times it is forgotten by clients and others that we need any examples and demonstrations of how the products work. This is extremely important for laying out shots as many times the script was written in a vacuum before we have examples of the products, so they often need to be reworked to match.
+
+[[File:Collect Animatic Assets ToyExample SpideySpeedWayPlaysetExample.jpg|thumb|Toy Playset example from client]]
+
+===Items Needed for 3D Animatics===
+* CAD Files (these will require assembly and prep for animation)
+* CAD / Deco / reference images - ref images super important for cad[[File:Collect Animatic Assets ToyCADExample SpideySpeedWayPlaysetExample.jpg|thumb|Toy CAD example in Microsoft Viewer]]
+
+  CAD files are commonly received in STL format
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Collect_animatic_assets

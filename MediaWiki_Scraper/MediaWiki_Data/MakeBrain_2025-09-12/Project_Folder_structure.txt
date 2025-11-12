@@ -1,0 +1,244 @@
+=MAKE Project Folder Structure Introduction=
+
+The MAKE Project folder structure is the location where nearly all work will be done, and is designed to facilitate ease of use through the entire production process. Each campaign will have its own named project and all work should be completed within it, with a few exceptions. Nothing is set in stone, so additional folders can be created as needed, however the intent of this structure is to be as useful as possible for the largest variety of situations, and should be able to accommodate them.
+
+=How to use the MAKE Project Folder Structure=
+
+To use the folder structure, currently you will make a copy of the template folder, on the appropriate 'Projects' folder on the drive of your choice. The folder template can be found here:
+
+"U:\Pitches\[Project]"
+
+In various places in the template there will be folders that have the a description within brackets. The ' [Project] ' folder name is one such example, these folders are intended to be renamed to the content they hold. So for example ' [Project] ' would become ' BraveHurts ' for that project. 
+
+There are other bracketed template folders that are designed to be duplicated and renamed for each use. They are as follows:
+*[Animatic]
+*[Spot]
+*[Shot]
+*[Asset3D]
+*[MM-DD-YYYY]
+
+Some of these folders can be managed by tools as well, which is covered in more detail in the [[Building_a_shot_structure_in_Heiro]] article.
+
+=Folder List and Description=
+
+==[Animatic]==
+All non-asset files will go in here for making an animatic. Like scene files, edits, image sequences etc...
+===[Animatic]\[Shot]===
+This is a "Shot" Template folder, it is designed to be duplicated and renamed to the name of your shot, like 'SHOT_010' or 'SHOT_VFX-010', and all non-asset files go within its various folders. It is designed to be be a bit of a 'working' location, so shot names, orders, lengths, etc... are not precious. During the animatic process shots may be created and abandoned. Once an edit is approved relevant files need to be moved into the relevant 'Spot' folder.
+::'''[Animatic]\[Shot]\Caches'''
+:: Place caches within this folder, that could be effects simulations, tycaches, character animation files, etc... Please create appropriate sub-folders as needed to help keep things organized. Version numbered folders are strongly recommended ex: 'CharacterAnimation_v001'.
+::'''[Animatic]\[Shot]\Comps'''
+:::Composition files like Nuke or After Effects files for the shot reside in the subfolders here. Additional folders can be created as needed for different types of comps.
+:::'''[Animatic]\[Shot]\Comps\Composite'''
+:::Composition files like Nuke or After Effects files for assembling a shot shot reside here. These are the files that the final image are created and exported from
+::'''[Animatic]\[Shot]\Footage'''
+::Footage Items go in here. Often times a shot will have multiple footage items required to assemble the composition. Each footage item should have a name, typically 'F01', 'F02', 'CleanPlate', 'Reference' etc... Within those named footage folders various encodings are present, to be used as needed. Typically these folders will be created and managed by Heiro, for more information please read the [[Building_a_shot_structure_in_Heiro]] article.
+:::'''[Animatic]\[Shot]\Footage\[Footage_item]'''
+::: The unique named footage item for each shot.
+::::'''[Animatic]\[Shot]\Footage\[Footage_item]\Plate'''
+:::: The full resolution, unmodified plate image. Typically an .exr sequence, to be used for the shot.
+::::'''[Animatic]\[Shot]\Footage\[Footage_item]\Plate_D'''
+:::: The full resolution, denoised plate image. Typically an .exr sequence, to be used for the shot.
+::::'''[Animatic]\[Shot]\Footage\[Footage_item]\Plate-Half'''
+:::: The half resolution, unmodified plate image. Typically an .exr sequence, to be used for the shot.
+::::'''[Animatic]\[Shot]\Footage\[Footage_item]\Plate-Half_D'''
+:::: The half resolution, denoised plate image. Typically an .exr sequence, to be used for the shot.
+::::'''[Animatic]\[Shot]\Footage\[Footage_item]\Proxy-Half_D'''
+:::: The half resolution, denoised plate image. Typically an .jpeg sequence, only to be used for reference, or tracking.
+::::'''[Animatic]\[Shot]\Footage\[Footage_item]\Proxy-Quarter_D'''
+:::: The quarter resolution, unmodified plate image. Typically an .jpeg sequence, only to be used for reference, or viewport background in 3dsMax for quick playback.
+::'''[Animatic]\[Shot]\Image_Sequences'''
+::This is the location of images rendered from 3D, usually 3dsMax of Unreal Engine. These These are the intermediate render files that are intended to be brought into the composite file to be worked on, and are not the final image, or shot. Rendered sequences should go in sub-folders in this folder, for example 'Image_Sequences\S_BH-CAT_020_v001', and each pass or layer would go within that enumerated folder. It is important to number folders here, because versioning is an inevitability. 
+::'''[Animatic]\[Shot]\Images'''
+::This is the location for any images that are used exclusively in this shot. For example if a map that is controlling the scattering of an environmental element like trees or grass, can be placed in this folder. Even though it is being used to modify a set asset, because it is a 'one-off' for this specific shot, it can be placed in this folder. 
+::'''[Animatic]\[Shot]\Playblasts'''
+::This is the location for playblasts created out of 3D, for use in animatics, or as preview items. Place items in named, itterable folders in here
+::'''[Animatic]\[Shot]\Renders'''
+::This is the location for anything that comes out of a composition. Typically these are the renders that are brought into the edit for use as final shots, but also this can include pre-renders from the comp, or other intermediate files. Outputs should be named with a version number. 
+::'''[Animatic]\[Shot]\Scenes'''
+::This folder contains sub-folders for any type of 3D scene that is used for the shot. Additional folders may be created as needed, these are the most typical.
+:::'''[Animatic]\[Shot]\Scenes\Layout'''
+:::This is for the 3D scenes that renders are produced from. All the assets are combined into these scenes. 
+:::'''[Animatic]\[Shot]\Scenes\Animation'''
+:::This is for the 3D scenes that animation is done in, the 3D scenes can contain as little as necessary for the animation, objects will be referenced and merged into the layout scenes for rendering.
+:::'''[Animatic]\[Shot]\Scenes\Effects'''
+:::This is for the 3D scenes that effects are done in, the 3D scenes can contain as little as necessary for the simulations or effects, objects will be referenced and merged into the layout scenes for rendering.
+::'''[Animatic]\[Shot]\Surfaces'''
+::This is the location for any surfaces that are used exclusively in this shot. For example if a substance material is needed to be created for just this shot it would go here. Even though it is being used to modify a set asset, because it is a 'one-off' for this specific shot, it can be placed in this folder. 
+===[Animatic]\Audio===
+Audio files like Audition or other files for the edit reside in the subfolders here.
+::'''[Animatic]\Audio\Edit'''
+::Audition or other sound related projects for just the animatic reside here.
+::'''[Animatic]\Audio\Renders'''
+::Rendered audio files for the animatic go here, they should be in incrementable sub-folders, including the mixdown and any splits.
+===[Animatic]\Edit===
+Here is where your Heiro, Premiere, or Resolve project files reside, while working on the animatic.
+===[Animatic]\Renders===
+Here is where any renders that are not an edit of the animatic should go. For example, test renders of container files ( .mp4 for example ) of the shots that may be made for internal review, or some other type of non-edit and video.
+
+==[Spot]==
+===[Spot]\[Shot]===
+::'''[Spot]\[Shot]\Caches'''
+:: Place caches within this folder, that could be effects simulations, tycaches, character animation files, etc... Please create appropriate sub-folders as needed to help keep things organized. Version numbered folders are strongly recommended ex: 'CharacterAnimation_v001'.
+::'''[Spot]\[Shot]\Comps'''
+:: Place caches within this folder, that could be effects simulations, tycaches, character animation files, etc... Please create appropriate sub-folders as needed to help keep things organized. Version numbered folders are strongly recommended ex: 'CharacterAnimation_v001'.
+:::'''[Spot]\[Shot]\Comps\Composite'''
+:::Composition files like Nuke or After Effects files for assembling a shot shot reside here. These are the files that the final image are created and exported from
+:::'''[Spot]\[Shot]\Footage\[Footage_item]'''
+::: The unique named footage item for each shot.
+::::'''[Spot]\[Shot]\Footage\[Footage_item]\Plate'''
+:::: The full resolution, unmodified plate image. Typically an .exr sequence, to be used for the shot.
+::::'''[Spot]\[Shot]\Footage\[Footage_item]\Plate_D'''
+:::: The full resolution, denoised plate image. Typically an .exr sequence, to be used for the shot.
+::::'''[Spot]\[Shot]\Footage\[Footage_item]\Plate-Half'''
+:::: The half resolution, unmodified plate image. Typically an .exr sequence, to be used for the shot.
+::::'''[Spot]\[Shot]\Footage\[Footage_item]\Plate-Half_D'''
+:::: The half resolution, denoised plate image. Typically an .exr sequence, to be used for the shot.
+::::'''[Spot]\[Shot]\Footage\[Footage_item]\Proxy-Half_D'''
+:::: The half resolution, denoised plate image. Typically an .jpeg sequence, only to be used for reference, or tracking.
+::::'''[Spot]\[Shot]\Footage\[Footage_item]\Proxy-Quarter_D'''
+:::: The quarter resolution, unmodified plate image. Typically an .jpeg sequence, only to be used for reference, or viewport background in 3dsMax for quick playback.
+::'''[Spot]\[Shot]\Image_Sequences'''
+::This is the location of images rendered from 3D, usually 3dsMax of Unreal Engine. These These are the intermediate render files that are intended to be brought into the composite file to be worked on, and are not the final image, or shot. Rendered sequences should go in sub-folders in this folder, for example 'Image_Sequences\S_BH-CAT_020_v001', and each pass or layer would go within that enumerated folder. It is important to number folders here, because versioning is an inevitability. 
+::'''[Spot]\[Shot]\Images'''
+::This is the location for any images that are used exclusively in this shot. For example if a map that is controlling the scattering of an environmental element like trees or grass, can be placed in this folder. Even though it is being used to modify a set asset, because it is a 'one-off' for this specific shot, it can be placed in this folder. 
+::'''[Spot]\[Shot]\Inbox'''
+::Items that are received from a vendor, typically roto or paintouts, go into this folder for each shot. 
+::'''[Spot]\[Shot]\Outbox'''
+::Items that are created to send to a vendor, typically roto or paintouts, go into this folder for each shot. This should include the plate, any reference images, and an archived package for this shot.
+::'''[Animatic]\[Shot]\Playblasts'''
+::This is the location for playblasts created out of 3D, for use in the edit, or as preview items. Place items in named, iterable folders in here
+::'''[Spot]\[Shot]\Renders'''
+::This is the location for anything that comes out of a composition. Typically these are the renders that are brought into the edit for use as final shots, but also this can include pre-renders from the comp, or other intermediate files. Outputs should be named with a version number. 
+::'''[Spot]\[Shot]\Scenes'''
+::This folder contains sub-folders for any type of 3D scene that is used for the shot. Additional folders may be created as needed, these are the most typical.
+:::'''[Spot]\[Shot]\Scenes\Layout'''
+:::This is for the 3D scenes that renders are produced from. All the assets are combined into these scenes. 
+:::'''[Spot]\[Shot]\Scenes\Animation'''
+:::This is for the 3D scenes that animation is done in, the 3D scenes can contain as little as necessary for the animation, objects will be referenced and merged into the layout scenes for rendering.
+:::'''[Spot]\[Shot]\Scenes\Effects'''
+:::This is for the 3D scenes that effects are done in, the 3D scenes can contain as little as necessary for the simulations or effects, objects will be referenced and merged into the layout scenes for rendering.
+::'''[Spot]\[Shot]\Surfaces'''
+::This is the location for any surfaces that are used exclusively in this shot. For example if a substance material is needed to be created for just this shot it would go here. Even though it is being used to modify a set asset, because it is a 'one-off' for this specific shot, it can be placed in this folder. 
+===[Spot]\Audio===
+Audio files like Audition or other files for the edit reside in the subfolders here.
+::'''[Spot]\Audio\Edit'''
+::Audition or other sound related projects for just the Spot reside here.
+::'''[Spot]\Audio\Renders'''
+::Rendered audio files for the spot go here, they should be in incrementable sub-folders, including the mixdown and any splits.
+===[Spot]\Color===
+Items that are used across multiple shots for color purposes, like Nuke Livegroups, or custom luts go in this folder
+===[Spot]\Edit===
+Editorial files go in these subfolders, typically premiere, heiro or resolve projects.
+::'''[Spot]\Edit\Online'''
+Here is where the editorial project goes that is made of assets, shots, or footage that is directly involved in the final edit. Final edit renders come from here. This is created from the offline edit, and will always need to be conformed before the project is delivered.
+::'''[Spot]\Edit\Offline'''
+Here is where the editorial project goes that is made of assets, playblasts, or proxy footage that is NOT involved in the final edit. It is used for quicker and easier exploration and editorial process. This precedes the Online edit, and will always need to be conformed before the project is delivered.
+===[Spot]\Renders===
+::This is the location for anything that comes out of a composition. Typically these are the renders that are brought into the edit for use as final shots, but also this can include pre-renders from the comp, or other intermediate files. Outputs should be named with a version number. 
+
+==Assets==
+===Assets/Audio===
+::'''Assets/Audio/Music'''
+::'''Assets/Audio/Scratch_vo'''
+::'''Assets/Audio/Sound_Effects'''
+===Assets/Characters===
+::'''Assets/Characters/[Asset3D]'''
+===Assets/Effects===
+===Assets/Footage===
+===Assets/Images===
+::'''Assets/Images/Legal'''
+::'''Assets/Images/Logos'''
+===Assets/Objects===
+::'''Assets/Objects/[Asset3D]'''
+===Assets/Resources===
+::'''Assets/Resources/AspectRatios'''
+::'''Assets/Resources/Luts'''
+::'''Assets/Resources/Optical Flares Textures'''
+::'''Assets/Resources/SafeFrames'''
+::'''Assets/Resources/ShootingDiagrams'''
+===Assets/Scripts===
+::'''Assets/Scripts/Build'''
+::'''Assets/Scripts/Default'''
+===Assets/Sets===
+===Assets/Sets/[Asset3D]===
+===Assets/Surfaces===
+
+==Design==
+===Design/Concepts===
+::'''Design/Concepts/Characters'''
+:::'''Design/Concepts/Characters/Renders'''
+:::'''Design/Concepts/Effects/Renders'''
+::'''Design/Concepts/Environments'''
+:::'''Design/Concepts/Environments/Renders'''
+::'''Design/Concepts/Props'''
+:::'''Design/Concepts/Props/Renders'''
+:::'''Design/Concepts/Src'''
+===Design/Presentation===
+:::'''Design/Presentation/images'''
+===Design/Storyboards===
+::'''Design/Storyboards/Comps'''
+::'''Design/Storyboards/Renders'''
+===Design/Styleframes===
+::'''Design/Styleframes/Comps'''
+::'''Design/Styleframes/Renders'''
+
+==Domains==
+
+==Reference==
+
+==Renders==
+===Renders/Audio===
+===Renders/Dailies===
+===Renders/Design===
+===Renders/Edits===
+::'''Renders/Edits/Animatics'''
+::'''Renders/Edits/Offline'''
+::'''Renders/Edits/Online'''
+::'''Renders/Edits/Slated'''
+:::'''Renders/Edits/Slated/[MM-DD-YYYY]'''
+::::'''Renders/Edits/Slated/[MM-DD-YYYY]/Delivery'''
+::::'''Renders/Edits/Slated/[MM-DD-YYYY]/Previews'''
+===Renders/Other===
+===Renders/Packages===
+::'''Renders/Packages/[MM-DD-YYYY]'''
+:::'''Renders/Packages/[MM-DD-YYYY]/Fonts'''
+:::'''Renders/Packages/[MM-DD-YYYY]/GraphicsAsEdit'''
+:::'''Renders/Packages/[MM-DD-YYYY]/Legal'''
+:::'''Renders/Packages/[MM-DD-YYYY]/Logos'''
+
+==Shortcuts==
+===Shortcuts/Caches===
+===Shortcuts/Dropbox===
+===Shortcuts/Footage===
+===Shortcuts/FrameIo===
+===Shortcuts/ftrack===
+===Shortcuts/Wrike===
+
+==Source==
+===Source/Audio===
+===Source/Cast===
+===Source/Client===
+::'''Source/Client/Assets'''
+::'''Source/Client/Audio'''
+::'''Source/Client/Briefs'''
+::'''Source/Client/Notes'''
+:::'''Source/Client/Notes/[MM-DD-YYYY]
+===Source/Data===
+===Source/Docs===
+===Source/Fonts===
+===Source/Footage===
+===Source/Images===
+===Source/Locations===
+===Source/Meetings===
+===Source/Vendors===
+
+:::'''Source/Vendors/[Vendor_MM-DD-YYYY]'''
+Any items received from a vendor, should be downloaded and copied directly into this folder. Once inspected, individual elements can be copied into the respective shot if relevant, which is where those assets should be used from, after they have been proofed / QC'd, and are good for production.
+These items would be things like Audio from an external sound house, roto and Keywork, or models created by freelancers. This is sort of a "Loading Dock" so to speak, of items that are received from external sources. Folders should be named by the vendor, and dated.
+
+==Tests==
+Any quick experimentations or example files can be tossed in here for use by others, or to R&D a process or troubleshoot an issue in an area that is separated from a production shot.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Project_Folder_structure

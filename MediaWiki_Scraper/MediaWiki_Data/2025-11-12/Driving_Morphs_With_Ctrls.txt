@@ -1,0 +1,8 @@
+= Back to Hub =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+= Driving Morphs With Ctrls =
+When rigging a character, you may find that there is a specific pose or shape that you would like your character to have that you aren’t getting with bones alone. In this case, it may be useful to create a morph target to achieve the results you are looking for.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Driving_Morphs_With_Ctrls

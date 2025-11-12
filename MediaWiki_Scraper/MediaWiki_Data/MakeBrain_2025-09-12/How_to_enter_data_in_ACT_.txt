@@ -1,0 +1,425 @@
+This guideline should have all the basics of ACT. It can be hard to understand! The easiest way to learn is to update contacts and reference this instruction with questions. Because the contacts in ACT have been constantly updated, there should be a decent amount of examples on how to update contacts, add notes, histories, etc. You'll pick up how to do everything the more you use ACT. It could be a good idea to look through contacts and each tab. Look through companies' profiles. Try searches, etc.
+
+=== '''Enter contact's information''' ===
+
+==== '''<u>Contact/Salutation</u>''' ====
+
+===== '''Contact''' =====
+
+* Where you put their full name.
+
+===== '''Salutation''' =====
+
+* Where to put their first name / shorten first name, etc. whatever that they prefer to be called.
+
+==== '''<u>Company Line</u>''' ====
+''Different things you will see in the company line of a contact:''
+
+===== '''Name of agency/company WITH a hyperlink (blue & underlined)''' =====
+
+* This means that the contact is linked to their company profile on ACT, all notes and histories will be linked to that company and they will be listed as contacts through that company's record.
+
+===== '''Name of agency/company WITHOUT a hyperlink''' =====
+
+* This means that the contact is at a company that we does not have a company profile created for it on ACT. So they are not linked to any company profiles => no hyperlink (blue & underlined).
+
+===== '''Freelance (in company line)''' =====
+
+* This means that the contact is a freelancer.
+* Freelance should be included before job title in title line (ex: Freelance Art Director).
+
+===== '''UNKNOWN (in company line)''' =====
+
+* This means that we don't know where the contact is currently working.
+* Enter "UNKNOWN" in the company line for contacts who have left an agency but have not updated their LinkedIn profile.
+
+===== '''STUDENT / RETIRED / DECEASED (in company line''') =====
+When you add any of these to a contact record be sure to include any and all information from the fields in the main page of that contact (i.e. Company/title/phone/Address/email/etc.) into a history. 
+
+====== <u>'''''* If they are a STUDENT'''''</u> ======
+* Update City, State & Country based on where they are in school, no need to find and include the school address.
+* In 'Title' line include Student @ name of school.
+* Create a history with any information you have about the situation.
+* If we have a personal email, move that to the main e-mail line. If we do not have a personal email leave the main e-mail line blank (Use your judgement).
+* If they have the tag Updates, leave it as is.
+
+====== <u>'''''* If they are RETIRED'''''</u> ======
+* Update City, State & Country based on where they are retired if you have that information. 
+* In 'Title' line include Retired.
+* Create a history with any information you have about the situation.
+* If we have a personal email, move that to the main e-mail line. If we do not have a personal email leave the main e-mail line blank. (use your judgement).
+* If they have the tag Updates, leave it as is.
+
+====== ''<u>'''* If they are DECEASED'''</u>'' ======
+* Leave only the City, State & Country in the mail pain of the record.
+* Create a history AND a note with any information you have about the situation.
+* Add the tags "NoUpdates" and "UpdatesR" to the record.
+
+==== '''<u>Company Naming</u>''' ====
+
+* '''Format:''' 'Name of agency/company' '''OR''' 'Name of agency/company  / Location' (with spaces on either side of the / ).
+
+* Use 'Name of agency/company  / Location' when the agency has multiple office locations.
+
+===== '''When to create a company profile?''' =====
+* Oren has had a screening with them.
+* We have done a project with them.
+* We have 3 or more contacts at that same company.
+* We are actively trying to get work with that company and want to record any news of them becoming a brand's AOR or Lead Creative Agency.
+
+* Changes made to the linked fields on a company profile will be reflected in all linked contact's information.
+
+''<u>* Linked Fields</u>''
+
+* Address Lines 1, 2 & 3
+* City
+* State
+* Country
+* ZIP Code
+* Website
+
+''<u>* Fields NOT linked (you will need to update for each contact)</u>''
+
+* Phone numbers
+
+===== '''How to create a company profile?''' =====
+Go to the 'Companies' tab in the left-hand column and click the 'Create New' button in the top right corner of the screen.
+
+[[File:How to create a company profile?.png|frameless]]
+
+'''OR''' go to 'Companies' in the menu bar in the top left corner and click 'New Company.'
+
+[[File:How to create a company profile? 1.png|frameless]]
+
+==== '''<u>Title</u>''' ====
+
+* Use the most complete title with the best information, typically from their LinkedIn profile.
+
+* ''Common title abbreviations you will come across and/or use the most:''
+# '''AD''' stands for '''Art Director'''
+# '''CD''' stands for '''Creative Director'''
+# '''ACD''' stands for '''Associate Creative Director'''
+# '''EP''' stands for '''Executive Producer'''
+
+==== '''<u>Department</u>''' ====
+
+* Department of the agency (i.e. internal production company).
+
+* Name of their freelance company.
+
+* Clients/brands/accounts they work on, if we know them.
+
+==== '''<u>Phone</u>''' ====
+
+* '''Phone''': Should be the general line for the agency unless we have a direct number.
+* '''Ext''': If we have a direct number, add it to the phone line and write the direct extension number in this field.
+* '''Mobile''': Cell phone number (can also be added to the 'Home Phone' line in the 'Home Address' section under the 'Personal Info' tab).
+* '''Fax''': Does not need to be filled in for contacts; only include it in the company profile if we have a fax number.
+
+==== '''<u>Tags</u>''' ====
+''Commonly used tags that you will come across and/or use the most:''
+
+===== '''Updates''' =====
+* When someone indicates interest in receiving updates from us (typically by saying yes on a screening sign-in sheet). Besides indicating interest, they will also specify the type of work they’re interested in. Based on their answers, we will add extra tags to their profile to track the types of work and updates we should send, similar to what we did with the Siames "Alone in the Darkness" 2D music video update.
+** '''3D:''' Interested in 3D work/updates.
+** '''2D:''' Interested in 2D work/updates.
+** '''VFX:''' Interested in VFX work/updates.
+** '''Live Action:''' Interested in Live Action Integration work/updates.
+** '''Character Animation:''' Interested in Character Animation work/updates.
+** '''Motion Graphics:''' Interested in Motion Graphics work/updates.
+** '''Photo Real:''' Interested in Photo Real work/updates.
+** '''AR:''' Interested in AR work/updates.
+** '''VR:''' Interested in VR work/updates.
+** '''Illustration:''' Interested in Illustration work/updates.
+** '''Storyboard:''' Interested in Storyboard work/updates.
+
+===== '''UpdatesR''' =====
+* Indicates the contact has unsubscribed from updates.
+* Include a history note about the unsubscribe.
+* '''NOTE''': Anyone added to the '''UpdatesR''' tag must also have the '''No Updates''' tag.
+
+===== '''No Updates''' =====
+* Indicates the contact has requested no updates, typically via a screening sign-in sheet.
+
+===== '''Interest''' =====
+* Tells you to check the Notes tab for more information.
+
+===== '''HMun''' =====
+* Indicates the contact has unsubscribed from holiday mailings.
+
+===== '''Linkedln''' =====
+* Indicates the contact is connected with Danny and/or Oren on LinkedIn.
+
+===== '''Established''' =====
+* Indicates the contact is someone we're consistently talking to or working with.
+
+==== '''<u>Address</u>''' ====
+This is where the company's address goes. The contact's home address should be placed in the 'Personal Info' tab.
+
+==== <u>'''Email'''</u> ====
+
+* '''E-mail''': The contact's work email.
+* '''Personal E-mail''': The contact's personal email. If their work email bounces, we can try to resend to their personal email.
+
+==== <u>'''Website'''</u> ====
+Put the URL to their company's website. If the contact has a personal website or portfolio, use that instead of the company's website.
+
+You can easily find their personal website in the 'Contact Info' section, located right below their name on their LinkedIn profile.
+
+==== '''<u>ID/Status</u>''' ====
+''Commonly used ID/Status that you will come across and/or use the most:''
+
+'''<u>NOTE:</u>''' '''One contact can have more than one ID/Status (e.g., Lead Qualified and Competitor).'''
+
+===== '''Cold Lead''' =====
+* Someone with no specific reason for being added to ACT.
+
+===== '''Lead''' =====
+* Someone we have not had contact with, received a reply from, or had a conversation with, but have found through research or through a suggestion from someone. If you know how this person became a Lead, add it as a history note in their record.
+
+===== '''Lead Qualified''' =====
+* A contact we have met with, emailed with (usually through Oren), or who has attended a screening. Pretty much the next step beyond being just a Lead.
+
+===== '''Lead Established''' =====
+* A further step beyond '''Lead Qualified''', where we have established a relationship and are consistently talking to this contact. (This ID/Status is used less frequently now than before.)
+
+===== '''Customer''' =====
+* People we have worked with before. Will be included in the weekly customer email list. Reach out every 5-6 months.
+
+===== '''Customer LP''' =====
+* A person we have worked with before but has not replied to our emails in a while or has moved away from the advertising agency world. Included in the weekly customer email list, but only reach out once a year (LP = low priority).
+
+===== '''Desired Customer''' =====
+* People on our "Dive Deep Contacts" list—those with whom Oren has a close relationship or agencies with trending/recently impressive work that we want to collaborate with.
+** Every month, we review the 'Dive Deep Contacts' list to identify contacts we haven’t reached out to in the past month and send them a check-in email.
+
+===== '''Customer Established''' =====
+* People we have worked with multiple times. Will be included in the weekly customer email list. Reach out every 3–4 months.
+
+===== '''Employee''' =====
+* Current employees.
+
+===== '''Former Employee''' =====
+* Individuals who previously worked at MAKE.
+
+===== '''Competitor''' =====
+* Typically refers to a contact who transitioned from working at an agency to a production company. This ID/Status is almost always paired with another ID/Status.
+
+===== '''Vendor''' =====
+* Contacts who have provided services or worked with us in some capacity.
+
+===== '''Prospect''' =====
+* People we have pitched to.
+
+If you have questions about other ID/Status, just ask.
+
+=== '''Enter contact's record''' ===
+
+==== '''<u>Opportunity</u>''' ====
+This is where we record new business and work opportunities! Click 'Add new opportunity' to record a new work opportunity offered by the contact. The contact's name will appear in the 'Contacts' tab, indicating they are the one we're in contact with regarding this opportunity!
+
+* '''Name''': Project Name / Name of the work opportunity
+
+* '''Totals''': The project's budget (ask Oren for these details)
+
+'''Days Open:''' 
+
+* '''Open Date:''' The day we started talking about the project
+* '''Est. Close Date:''' Estimated deadline for the project
+* '''Act. Close Date''': Actual close date (once the project is completed or closed)
+
+'''Status:''' 
+
+* '''Open:''' The project is still ongoing
+* '''Closed - Won:''' The project has been completed and delivered
+* '''Closed - Lost:''' We pitched for the project but did not win it
+* '''Inactive:''' The project is no longer available or has been canceled
+
+==== '''<u>Notes / History</u>''' ====
+''When to use a Note vs. History:''
+
+===== '''Note - is something about the contact or company''' =====
+* Married / maiden name
+* School they went to (include name of school as it is written on LinkedIn and in parentheses () after, you can include any other information related, such as where the school is located, what they studied, what years they attended, etc.)
+* Any other relevant info like the accounts they're working on, connections they have, relevant work, their personalities or preferences, etc.
+
+===== '''History - is something that happened''' =====
+Meeting / screening / moved to another agency / "Linked when company was created" / etc.
+
+==== <u>'''History Type & Result'''</u> ====
+''Commonly used History Types & Results that you will come across and/or use the most:''
+
+===== '''Call (Oren will mainly be the one to record this type of history, as these calls are typically quick calls directed to him. Only record the call with relevant information.)''' =====
+* <u>Call Attempted:</u> An attempt was made to call this contact.
+* <u>Call Completed:</u> Complete a quick call with this contact.
+* <u>Call Left Message:</u> A message was left for the contact when they did not pick up the phone.
+* <u>Call Received:</u> A call was received from the contact.
+
+===== '''Meeting''' =====
+* <u>Held</u> (The date we put on this will affect/change the 'last meeting' date in that contacts record): After we finish a meeting, we’re going to add everyone we met in the meeting to ACT. Then, go to the contact profile of one of the people in the meeting. Go to '''<nowiki/>'History'<nowiki/>''' => Set '''Type''' to "Meeting" and '''Result''' to "Meeting Held." Enter the meeting notes into the '''<nowiki/>'Details'''' section. The '''Title''' will be the general summary/info about what the meeting is about or simply the name of the meeting. The '''Date and Time''' should reflect when the meeting was held. Finally, under '''<nowiki/>'Contacts'''' and '''<nowiki/>'Invite'''', add the names of the other people in the meeting. This way, the history record will not only appear in the history section of the contact profile you're on, but it will also show up in the history section of the contact profiles of all other meeting participants
+* <u>Not Held</u>
+
+===== '''Social Message''' =====
+* <u>Social Message - Completed:</u> Record the social message (primarily the LinkedIn message) that Oren sent. Remember to update the date to reflect the day he sent the message.
+* <u>Social Message - Not Completed</u>
+
+===== '''Update''' =====
+* <u>Info Change:</u> Record any information removed and updated in the fields on the main page of that contact.
+* <u>Left Agency:</u> Used when a contact changes jobs to record information about the company they left. In the title, put: ''"Left @[Old Company's Name] and joined @[New Company's Name]."'' In the body of the history, include: 
+** The name of their previous company and title.
+** Their old work phone and email.
+** The month they left (or note if the date is unknown).
+** The name of their new company, title, and the month they joined. Try to format this the same way as the LinkedIn Experience section does!
+
+* <u>Other:</u> Use this for miscellaneous information that doesn't fit into other categories but should be added to the record.
+* <u>Recognition:</u> Include details about awards, articles featuring them, "30 Under 30" lists, etc.
+* <u>Title Change:</u> 
+** Include the title removed, the new title, and the date of the title change (or note if the date is unknown).
+** In the title, write: ''"Changed title from [Name of their last title] to [Name of their new title]."'' Try to format this the same way as the LinkedIn Experience section does!
+
+===== '''Other''' =====
+* <u>Email sent:</u> Used to record the last time we, usually Oren, reached out or sent an email to that contact. Used only for email.
+
+==== '''<u>Group/Companies</u>''' ====
+
+===== '''How to create a group?''' =====
+Go to the 'Groups' tab in the left-hand column and click the 'Create New' button in the top right corner of the screen.
+
+[[File:How to create groups?.png|frameless]]
+
+
+
+'''OR''' go to 'Groups' in the menu bar in the top left corner and click 'New Group.'
+
+[[File:How to create groups? 1.png|frameless]]
+
+===== '''How to create a subgroup?''' =====
+Click and highlight the group for which you want to create a subgroup.
+
+Go to 'Groups' in the menu bar in the top left corner and click 'New Subgroup.'
+
+[[File:How to create subgroups? 2.png|frameless]]
+
+===== '''How to delete a group/subgroup?''' =====
+Click and highlight the group or subgroup you want to delete.
+
+Go to 'Groups' in the menu bar in the top left corner and click 'Delete.'
+
+[[File:How to delete groups-subgroups? 1.png|frameless]]
+
+
+
+''Common groups you will come across and/or use the most:''
+
+===== '''<nowiki/>'Holiday Mailing' group''' =====
+A group created every year that includes people we send our Happy Holiday card to.
+'''<nowiki/>'''
+
+===== '''<nowiki/>'Dig Deep Contacts' group''' =====
+A group containing all of the contacts from our 'Dive Deep Contacts' list (on Wrike).
+'''<nowiki/>'''
+
+===== '''<nowiki/>'DTC Outreach - Freelance Creatives with DTC Experience' group''' =====
+A group/list of contacts who are freelance creatives with experience working directly with brands. We plan to reach out to these contacts to establish relationships and, hopefully, create opportunities to collaborate with them and the brands they work with. (Details on Wrike - Direct to Client folder)
+'''<nowiki/>'''
+
+===== '''<nowiki/>'DTC Outreach - New Business/Account Managers' group''' =====
+A group of contacts with experience working in Account and New Business roles that we plan to reach out to in order to build connections and gain insights into how they find and secure projects/work opportunities from brands. (Details on Wrike - Direct to Client folder)
+'''<nowiki/>'''
+* '''Freelancers or Individuals Between Jobs''': These contacts have titles containing key words such as "Account" and "New Business" and have experience in new business or account roles at advertising agencies. Their profiles indicate they are currently freelancing or in between jobs (e.g., no updates about their current companies or they cannot be found on LinkedIn).
+* '''Former Advertising Agency Employees Now Working Internally at Brands''': These individuals have experience in Account or New Business teams at advertising agencies but are now employed in internal roles at brands.
+
+===== '''<nowiki/>'Hit Me Up Next Time' group''' =====
+A group of contacts Oren plans to meet again or set up screenings with the next time he is back in their cities!
+'''<nowiki/>'''
+
+===== '''<nowiki/>'Targeted Agencies' group''' =====
+A group of contacts at our top 8 targeted agencies (the top agencies we want to target with high intensity). (Details on Wrike - Targeted Agencies folder)
+'''<nowiki/>'''
+
+===== '''<nowiki/>'Editorial Contacts' group''' =====
+A group of news submission/press release contacts.
+'''<nowiki/>'''
+
+==== '''<u>Web Info</u>''' ====
+Here, you can find the URL links to all of the contacts' social channels, such as their Facebook, Google search, LinkedIn, website, etc.
+
+All you have to do is click the type of web link you want to view, then click 'Open Browser.'
+
+To edit links, click 'Edit Links,' select the link you want to edit, then click the 'Edit' button on the right.
+
+<u>'''NOTE''':</u> The contact's website is linked to the 'Website' field on the main page of their contact profile above. The contact's LinkedIn is linked to the 'LinkedIn' field in the 'Personal Info' tab!
+
+==== '''<u>Personal Info</u>''' ====
+
+===== '''Home Address''' =====
+Enter the contact's home address here, along with their home phone number, if available.
+
+===== '''Messenger ID''' =====
+* Unsure: Include if you are not totally confident the email is correct.
+
+* Put their Twitter, Instagram, or other social media accounts/handles here.
+
+===== '''Birthday''' =====
+Enter the contact's birthday here. You can easily find their birthday by clicking on 'Contact Info' below their LinkedIn name on their LinkedIn profile. If you can't find the birth year, just leave it as the current year. We only need the birthday date to know when to reach out and say happy birthday!
+
+===== '''Spouse line''' =====
+* If you know the contact's spouse's name, include it here.
+* If you don't know the contact's work email but know the domain for the company, include it here (e.g., @makevisuaal.com).
+
+* If you have another option for the contact's email (besides their work and personal email), include that in the spouse line as follows: Try: john.doe@makevisuaal.com.
+
+===== '''LinkedIn''' =====
+Enter the URL link to the contact's LinkedIn profile here.
+
+=== '''Enter company's information''' ===
+
+==== <u>'''Company'''</u> ====
+*'''Format:''' 'Name of agency/company' '''OR''' 'Name of agency/company  / Location' (with spaces on either side of the / ).
+
+* Use 'Name of agency/company  / Location' when the agency has multiple office locations.
+
+==== <u>'''Phone'''</u> ====
+Include the phone number of the company's office at that specific location.
+
+==== <u>'''Website'''</u> ====
+Provide the agency/company website URL.
+
+==== '''<u>Address</u>''' ====
+Include the address of the company's office at the specific location mentioned in the 'Company' naming field.
+
+=== '''Enter company's record''' ===
+
+==== '''<u>History Type & Result</u>''' ====
+''Common History Type & Result that you will come across and/or use the most:''
+
+===== '''AOR''' =====
+
+* <u>New Client</u>
+* <u>Lost Client</u>
+
+For both, include the following details in the history record:
+
+# '''Title''': Mention the client/brand that the agency won or lost and their role.
+#* Example: ''Suja Life Appoints BarkleyOKRP as Creative Agency of Record''
+# '''Date''': Put in the date of the article where this information was found.
+# '''Details''': Summarize the article, including:
+#* Specify which agency the client account was won from or lost to.
+#* If the account was won, detail the responsibilities the agency will handle.
+#* Indicate if other agencies were involved in the pitch or competitive round and name them if possible.
+#* Add the URL link to the source/article for reference.
+
+If multiple office locations hold the account:
+
+* Go to the '''<nowiki/>'Contacts'<nowiki/>''' section => '''<nowiki/>'Associated with'<nowiki/>''' => '''<nowiki/>'Companies'''' and choose the company profile for other office locations.
+* Example: An AOR history record for ''BarkleyOKRP / Chicago'' can be associated with ''<nowiki/>'BarkleyOKRP / Kansas City''' if both offices will handle the account.
+
+===== '''Update''' =====
+
+* <u>Info Change:</u> Use this type to record when the agency/company:
+** Changes its name.
+** Undergoes rebranding.
+** Merges with or separates from another company.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_enter_data_in_ACT!

@@ -1,0 +1,31 @@
+= Scene Utilities =
+[[File:SceneUtilities UI.png|347x347px]]
+
+== Overview ==
+'''Scene Utilities''' is a multi-purpose tool from the MakeToolbox toolset that provides a collection of functions for cleaning, managing, and preparing 3ds Max scenes.
+
+== How to Use ==
+The tool is a collection of separate functions, each with its own button.
+
+'''Open the Tool:''' From MakeToolbox, select "SceneUtilities" from the scripts dropdown menu.
+
+* '''To Remove Missing Assets:''' Click either the '''"Remove Missing Maps"''' or '''"Remove Missing Plugins"''' button. The tool will scan the scene and, after a confirmation prompt, remove any references to files or plugins that cannot be found.
+* '''To Remove Note Tracks:''' Click the '''"Remove NoteTrack"''' button to clean all note tracks from the scene's objects.
+* '''To Save an Object's Name:''' Select one or more objects and click '''"Save Name on Selected"'''. This stores each object's current name into its User Defined Properties (select an object ► right-click ► 'Object Properties' ► 'User Defined' tab).
+* '''To Restore an Object's Name:''' Select one or more objects and click '''"Fetch Name on Selected"'''. This retrieves the previously saved name on the object's User Defined Properties and applies it back to the object.
+* '''To Create an Overscan Camera:''' Select an existing camera in the scene. Configure the '''"Overscan Amount"''' and choose a camera type ('''Free''' or '''Physical'''), then click '''"Create Overscan Camera"'''. A new, wider-angle camera will be created and parented to your original camera.
+
+== User Interface ==
+The interface consists of several buttons and controls, each performing a distinct action.
+
+* '''Remove Missing Maps:''' Scans the scene using the Asset Tracker for any bitmap files with a "Missing" status and removes their paths from the materials. A confirmation dialog will appear before removal.
+* '''Remove Missing Plugins:''' Finds and removes references to plugins that are used in the scene but are not currently installed. This helps clean scenes that may have been worked on with different sets of plugins.
+* '''Remove NoteTrack:''' A cleanup utility that iterates through the scene and deletes all Note Tracks, which can sometimes bloat file sizes.
+* '''Save Name on Selected:''' For each selected object, this button stores the object's current name in its User Defined Properties under the key "Make_NodeName".
+* '''Fetch Name on Selected:''' Restores the name of each selected object using the name previously stored in its User Defined Properties.
+* '''Create Overscan Camera:''' Creates a new camera parented to the currently selected camera. This new camera has a wider Field of View (FOV), which is useful for creating "overscan" renders that provide extra margin or bleed around the original camera's frame.
+* '''Overscan Amount:''' A spinner that controls the multiplier for the new camera's FOV. For example, a value of 1.1 makes the new camera's view 10% wider than the original.
+* '''Camera Type Radio Buttons:''' Allows you to choose whether the new overscan camera will be a '''Free''' camera or a '''Physical''' camera.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Scene_Utilities

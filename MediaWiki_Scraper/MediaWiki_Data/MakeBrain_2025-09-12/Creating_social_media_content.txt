@@ -1,0 +1,175 @@
+== What is "Content Creation" in social media? ==
+Whether you're creating MAKE content, Client content or MAKE Original content — social media content is a valuable asset regarding ''what, why'' and ''for whom:''
+
+==== ''what, why'' and ''for whom:'' ====
+* '''''WHAT'':''' Our social platforms give MAKE visibility and a voice.
+* '''''WHY:''''' By creating a social media ''content strategy'', we are able to turn to our social media followers for insight about everything from popular content ideas, building brand loyalty and increasing overall reach.
+* '''''FOR WHOM:''''' When we put valuable efforts into our social media content strategy, we will be able to see the pieces that had the most success on the platforms by watching the likes/comments ''(i.e analytics)'' as well as the traffic and shares within the platform. Since social media offers potentially millions of visitors, it is the most accessible place to increase brand recognition and reputation.
+
+== MAKE vs MAKE Originals Content Guide ==
+
+==== <u><big>'''MAKE Channels:'''- [https://www.linkedin.com/company/3585296/admin/ LinkedIn] - [https://www.instagram.com/makegallery/ Instagram] - [https://twitter.com/MAKEVISUAL Twitter] - [https://www.facebook.com/makevisual Facebook] - [https://vimeo.com/makegallery Vimeo]</big></u> ====
+{| class="wikitable"
+!
+!LinkedIn 
+!Instagram
+!Instagram Story
+!Twitter
+!Facebook
+!Vimeo
+|-
+|'''Content'''
+| - Client Work / Campaigns
+
+- Breakdown / BTS Videos or Imagery
+
+- Student / Intern Work 
+
+- HR Posts; We're Hiring, Join Us, New Hire, etc.
+
+- Holidays / Popular "Days"
+
+- MAKE Studio / Employee Announcements
+
+- Art Films "Clips"
+
+- External Links; Articles, Vimeo Uploads, YouTube Playlists 
+
+- MAKE Originals Initial "Launches / Trailers"
+| - Holidays / Popular "Days"
+- Student / Intern Work 
+
+- Art Films "Clips"
+
+- MAKE Originals Initial "Launches / Trailers"
+| - HR Posts; We're Hiring, Join Us, New Hire, etc.
+- New Instagram post > check it out 
+
+- MAKE Originals Initial "Launches / Trailers"
+| - Holidays / Popular "Days"
+- MAKE Studio / Employee Announcements
+
+- External Links; Articles, Vimeo Uploads, YouTube Playlists 
+
+- MAKE Originals Initial "Launches / Trailers"
+| - Holidays / Popular "Days"
+- Student / Intern Work 
+
+- Art Films "Clips"
+
+- MAKE Originals Initial "Launches / Trailers"
+
+- Behind the Scenes / Studio Pictures 
+
+- Events MAKE attends 
+| - Host MAKE Art films & Client work
+|-
+|'''Aspect Ratios'''
+|1:1 (Square) , 16:9 (Widescreen)
+|1:1 (Square)
+|9:16 (Reel / Short-form Content)
+|1:1 (Square)
+|1:1 (Square)
+|16:9 (Widescreen)
+|-
+|'''Durations'''
+|''Under 20 seconds*'' in order to loop
+|N/A
+|N/A
+|N/A
+|N/A
+|N/A
+|-
+|'''Upload Time'''
+|Mon., Wed. and Friday's @ 10:00am 
+|Mon. - Friday @ 12:00pm
+|Mon. - Friday @ 12:00pm
+|N/A
+|N/A
+|N/A
+|-
+|'''Voice'''
+|Professional, Reputable, Authentic, Innovative & Resourceful
+|Playful & Imaginative
+|Resourceful & Informative
+|N/A
+|Human-centered & Transparent
+|Vivid language & Experimental
+|}
+
+==== <u><big>'''MAKE Originals Channels:'''- [https://www.tiktok.com/@makeoriginals TikTok] - [https://www.instagram.com/makeoriginalseries/ Instagram] - [https://www.youtube.com/@makeoriginals/videos YouTube]</big></u> ====
+{| class="wikitable"
+!
+!TikTok 
+!Instagram
+!Instagram Story
+!YouTube Videos
+!YouTube Shorts
+|-
+|'''Content'''
+| - MAKE Originals Initial "Launches / Trailers"
+- MAKE Micro-short HYPE content
+
+- Character animation
+
+- Trending 'Gen Z' Content, Memes, Giphy's, etc.
+
+- Holidays / Popular "Days" > feat. MO characters
+| - MAKE Originals Initial "Launches / Trailers"
+- MAKE Micro-short HYPE content
+
+- Character animation
+
+- How To / Processes / Breakdown videos
+
+- Holidays / Popular "Days" > feat. MO characters
+
+- Trending 'Gen Z' Content, Memes, Giphy's, etc.
+| - New Instagram post > check it out
+- MAKE Originals Initial "Launches / Trailers"
+| - MAKE Originals Initial "Launches / Trailers
+- Host MAKE Originals Shorts
+
+- Playlists > Animation "Making of," Behind The Scenes, Podcasts & Interviews, 
+
+- How too / Tips and Tricks, New Equipment Reveal
+| - MAKE Originals Initial "Launches / Trailers"
+- MAKE Micro-short HYPE content
+
+- Character animation
+
+- Trending 'Gen Z' Content, Memes, Giphy's, etc.
+
+- Holidays / Popular "Days" > feat. MO characters 
+|-
+|'''Aspect Ratios'''
+|9:16 (Reel / Short-form Content)
+|1:1 (Square)
+|9:16 (Reel / Short-form Content)
+|1:1 (Square)
+|9:16 (Reel / Short-form Content)
+|-
+|'''Durations'''
+|11 to 17 seconds
+|N/A
+|N/A
+|N/A
+|11 to 17 seconds
+|-
+|'''Upload Time'''
+|Mon. - Friday @ 11:00am
+|Mon. - Friday @ 12:00pm
+|Mon. - Friday @ 12:00pm
+|Wednesday Night @ 5:00pm
+|Mon. - Friday @ 11:00am
+|-
+|'''Voice'''
+|Comedic & Relatable
+|Engaging, Community-Focused & Inspirational
+|Resourceful & Informative
+|Authentic, Imaginative & Community-Focused
+|Comedic & Relatable
+|}
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_social_media_content

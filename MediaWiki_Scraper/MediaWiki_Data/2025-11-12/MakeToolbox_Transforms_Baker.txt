@@ -1,0 +1,46 @@
+= Transforms Baker =
+
+== Overview ==
+[[File:TransformsBaker2 UI.png|384x384px]]
+
+'''Transforms Baker''' is a tool from the MakeToolbox toolset used to bake an object's transformations (position, rotation, and scale) into keyframes over a specified frame range. This is useful for simplifying complex animation controllers, constraints, or procedural animation into a standard keyframe sequence. The tool offers two primary modes: baking animation to new helper objects or collapsing the animation directly onto the source objects.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "TransformsBaker" from the scripts dropdown menu.
+# '''Select Objects to Bake:'''
+#* For multiple objects, ensure '''"Apply to selected Objects"''' is checked and select the objects in the viewport.
+#* For a single-fixed object, uncheck the box and use the '''"Select Object"''' button to pick it.
+# '''Define the Frame Range:'''
+#* Click '''"Snap to Timeline"''' to use the scene's current animation range.
+#* Alternatively, manually enter the start and end frames in the spinners.
+# '''Choose the Operation Type:'''
+#* Select '''"Bake to Control Object"''' to create a new Point helper for each object and bake the animation onto the new helpers, leaving the original objects unchanged.
+#* Select '''"Collapse Object's Controllers"''' to bake the animation directly onto the selected objects, replacing their animation controllers with a new set of keyframes.
+# '''Execute:''' Click the '''"Bake Transforms"''' button to begin the process.
+
+== User Interface ==
+The interface is organized into groups for object selection, frame range, operation type, and processing.
+
+=== Object ===
+
+* '''Select Object:''' A pickbutton used to select a single-fixed object to have its animation baked. This is only active when "Apply to selected Objects" is unchecked.
+* '''Apply to selected Objects:''' A checkbox that toggles the tool's mode. When checked (default), the tool operates on all currently selected objects. When unchecked, it operates on a fixed single object chosen via the pickbutton.
+
+=== Frame Range ===
+
+* '''Frame Spinners:''' Two spinners to manually set the start and end frames for the baking operation.
+* '''Snap to Timeline:''' A button that automatically sets the start and end frames to match the active timeline in the scene.
+
+=== Type of operation ===
+
+* '''Bake to Control Object:''' When selected, this mode creates a new Point helper for each object and copies the animation to it. The original object's animation controllers are not modified.
+* '''Collapse Object's Controllers:''' When selected, this mode bakes the final animation directly onto the source objects, replacing any complex or layered controllers with simple PRS keyframes.
+
+=== Bake ===
+
+* '''Bake Transforms:''' The main button that initiates the baking process.
+* '''Progress Bars:''' Two progress bars provide visual feedback during the baking operation. The top bar shows the overall progress through the frame range, and the bottom bar shows the progress for the objects on the current frame.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Transforms_Baker

@@ -1,0 +1,30 @@
+= MAKE's Artistic Vision =
+
+==Overview==
+
+'''The Artistic Pillars'''
+
+Pillar 1: Unusual Pairing
+
+Pillar 2: The Curveball
+
+Pillar 3: High Impact
+
+Pillar 4: The Darkness (And The Sharpness)
+
+Pillar 5: Tongue N' Cheek
+
+Pillar 6: Hyper-Reality
+
+<!-- This is where the overall info about the vision from the presentation -->
+
+'''MAKE Artistic Vision Presentation'''
+
+Read more about MAKE's artistic vision: 
+
+[https://docs.google.com/presentation/d/1iUUOtaRiF5zG8mWZQDQN0QVyAh476WGSG67Og2Eh4m8/edit?slide=id.g36a9447c78e_0_296#slide=id.g36a9447c78e_0_296|MAKE's Artistic Vision Presentation]
+
+<!-- LINK to presentation -->
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Artistic_Vision

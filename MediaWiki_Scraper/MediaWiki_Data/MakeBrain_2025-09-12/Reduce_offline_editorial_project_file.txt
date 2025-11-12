@@ -1,0 +1,47 @@
+=Introduction=
+To prepare live-action footage for the conform process, a few simple steps will need to be followed. The task is done completely within a copy of the latest offline Premiere edit, and involves isolating the footage and temporarily simplifying its speed and transform properties.
+
+                                        [[File:Reduce_offline_editorial_project_file_TimelineBeforeAfter.jpg|900px]]
+
+===Creating the Conform-Prep File===
+
+Open the latest offline edit in Premiere Pro. Click '''File > Save As...''' and save the project in the same location, with the same name followed by "'''_Conform'''."
+
+=Cleaning the Timeline=
+
+Find the primary editing sequence (often the one that appears when opening the project). It should be whichever sequence is the longest, with every piece of footage included. In the '''Project''' panel, duplicate this sequence and rename the new copy with the suffix "'''_Conform'''". This conform sequence will be where the cleanup is done.
+
+In the sequence timeline, delete every piece of media EXCEPT for the live-action footage. This includes all text, audio, animation, and graphics. If there are any footage clips in nests, they will be addressed in the next step.
+
+=Extracting Nested Footage=
+
+For any footage in nests, the clip must be removed from the nest and adjusted to retain whatever frame range was visible when nested.
+
+To do this, move the playhead to the first frame of the nest. Double-click the nest, and each successive interior nest, until you arrive at the footage clip. Trim off ('''C''') and delete any excess clip to the left. Return to the conform sequence, and move the playhead to the last frame of the nest. ''The frame should still be visible - do not place the playhead at the very end of the clip.'' Double-click the nest(s) again until you reach the footage clip. Move the playhead one frame to the right (so the final frame is included) and cut the clip. Delete any excess footage to the right, copy the source clip, return to the conform sequence, and paste it.
+
+You can now delete the nest, keeping only the footage.
+
+===Using Timecode Effect to Find In-and-Out Points===
+
+An alternative method for finding the precise in-and-out frames of footage in a nest is to use a '''Timecode''' effect. Double-click the nests until you reach the source footage clip, then go to the '''Effects''' panel, >'''Video Effects'''>'''Video'''>'''Metadata & Timecode Burn-In'''. Drag this effect onto the clip, then return to the main sequence in the timeline. By scrubbing the playhead across the nest, you can visually confirm the exact footage frame number that the nest starts and ends on.
+
+=Simplifying Speed and Transforms=
+
+With the timeline now only consisting of plain footage, the clips can have their speed and transforms simplified and/or reset, to prepare them for conforming. Perform the following steps on all clips:
+
+===Speed===
+
+Select the clip and determine whether its speed is modified by the '''Effects > Time Remapping''' parameter or the '''right-click > Speed/Duration...''' parameter (it should only be one of these). If the speed is animated/ramped, remove all keyframes so the clip plays at its lowest speed consistently. ''For example, if the clip ramps up from 200% to 300%, remove the 300% keyframes so it runs at 200% throughout.''
+
+Then, to prevent dropped frames and other problems later, set the overall clip speed to the '''next lowest multiple of 100%''', in general. If the clip's motion is so fast that it appears as large jumps from frame to frame (like in time-lapse), slow the clip to a multiple of 100% where the motion appears smooth (e.g. from 1200% to 400%). Aim to reduce the clip's duration to no less than about 20 frames, unless that is its real-time length. This will make camera tracking much easier later on. Conversely, in general, do not slow a clip to a duration where its frame count exceeds a few hundred, in general. This will make rotoscoping much more time consuming and costly.
+
+===Transforms===
+
+Select the clip and go to the '''Effects''' panel. Delete any keyframes under the '''Motion''' section, then right-click the clip itself and select '''Set to Frame Size'''. If a 180-degree rotation is needed to keep the clip upright, the rotation can remain. Doing this will fit the footage nicely in frame at the correct resolution, so it can be viewed and edited as it appeared in-camera.
+
+=Exporting Footage as XML=
+
+Now that the footage has been isolated and simplified, it needs to be exported as an '''XML''' file so the whole timeline can be edited at once in Hiero. In the menu bar, choose '''File > Export > Final Cut Pro XML...''' Keep the default file name (same as the Premiere project), and navigate to '''[SPOT] / Renders''', create a folder called '''CONFORM''', and click '''Save.''' The process is now complete!
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Reduce_offline_editorial_project_file

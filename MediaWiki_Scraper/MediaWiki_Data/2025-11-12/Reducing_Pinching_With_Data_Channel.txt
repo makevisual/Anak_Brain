@@ -1,0 +1,108 @@
+= Back to Hub =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+= Reducing Pinching With Data Channel =
+Sometimes on a rig you may find that the geometry is collapsing in areas that are being pinched and stretched. One way to resolve this issue is to use the Data Channel modifier.
+
+[[File:01 DataChannel IntroImage.png|frameless|462x462px]]
+
+For this demo, we’ll take a look at this worm rig. You’ll notice that he is suffering from severe geometry collapsing near his bent joints. Let’s help him out.
+
+[[File:02 DataChannel AddDataChannelModifier.png|frameless]]
+
+First, let’s add a “Data Channel” modifier above the Skin modifier.
+<nowiki>***</nowiki>
+
+[[File:03 DataChannel ParameterRollout.png|frameless]]
+
+In the parameter rollout for the Data Channel modifier, you will see this Operator Stack. Here we can input data, modify it, and output it using operators. The operator stack in the Data Channel modifier MUST have at least an input operator and an output operator.
+
+[[File:04 DataChannel InputOperator.png|frameless]]
+
+For our needs, we will add a “Tension Deform” operator to the stack. To do this, select the “Add operator” button and choose “Tension Deform” from the pop-up window. Note the icon of vertices on the right. This signifies the type of data coming into the stack.
+<nowiki>***</nowiki>
+
+[[File:05 DataChannel OutputOperator.png|frameless]]
+
+Next, we’ll need to add an output operator. We are choosing Vertex Output because that is the type of data we have input into the stack.
+<nowiki>***</nowiki>
+
+[[File:06 DataChannel DataflowDemo.png|frameless]]
+
+If we look at our operator stack, you’ll notice that there are arrows in front of each operator. An arrow pointing down indicates that data is coming into the stack. An arrow pointing to the right is indicating that data is being output from the stack.
+<nowiki>***</nowiki>
+
+[[File:07 DataChannel positionDataOutput.png|frameless]]
+
+You may also notice that our worm is looking pretty malnourished now. Not to worry, this is because the operator stack is outputting position data instead of vertex color data.
+<nowiki>***</nowiki>
+
+[[File:08 DataChannel VertexColorOutput.png|frameless]]
+
+Let’s fix this. We’ll click on our “Vertex Output” operator, and in the “Vertex Output” drop down menu select “Vertex Color.” 
+<nowiki>***</nowiki>
+
+[[File:Image11.png|frameless]]
+
+Now our worm is a healthy shade of green. If you find that your geometry looks black in the viewport, try turning off any modifiers above “Data Channel” in your Modifier stack.
+
+Our Tension Deform operator is working, but we can’t see any of the colors that indicate where tension is occurring. This is because the Tension Deform operator thinks this pose is the rest pose for our worm.
+
+
+[[File:09 DataChannel BindPose.png|frameless|268x268px]][[File:10 DataChannel CaptureRestPose.png|frameless]]
+
+To fix this, go to the bind pose for your rig and then go back to your Data Channel modifier. In the parameters of the Tension Deform operator, select “Capture Rest Pose.”
+<nowiki>***</nowiki>
+
+[[File:11 DataChannel TensionDeformVertexColor.png|frameless]]
+
+Now we can see all the beautiful colors that indicate where tension is occurring on our character. Areas marked in blue indicate that squashing is happening, and areas marked in red indicate that stretching is happening.
+<nowiki>***</nowiki>
+
+[[File:12 DataChannel TensionDeformAdjustment.png|frameless|437x437px]]
+
+Here are the parameters for the Tension Deform operator. The spinners in the “Adjustments” boxes can be used to adjust the size and intensity of the colors. So if you want to expand the influence of the squashed/stretched areas, you can adjust these values. The “Deform” box contains spinners that will adjust the geometry. Push can push out masked areas, and relax can smooth the geometry. Play with these settings to create your desired results.
+<nowiki>***</nowiki>
+
+[[File:13 DataChannel TensionDeformResults.png|frameless]]
+
+After adjusting our squash and stretch settings, we can see that our worm is looking very happy and healthy!
+
+If this is what you want, you could stop here. However, there may be an instance where you might want to adjust the geometry in one place on your mesh, but not another.
+
+== Masking Tension Deform ==
+If you want to mask out and isolate an area of your mesh to be affected by the tension deform operator, you can create a mask using vertex colors.
+<nowiki>***</nowiki>
+
+[[File:14 DataChannel MapChannel2.png|frameless]]
+
+To do this, let’s check on “Mask with Vertex Colors” in our operator parameters. You can do this on either the squash or the stretch. By default, the spinner is set to Map Channel 2, but you can adjust this as needed.
+<nowiki>***</nowiki>
+
+[[File:15 DataChannel VertexPaintMod.png|frameless]]
+
+Next we’ll add a vertex paint modifier to our modifier stack. Make sure it sits underneath your skin modifier.
+<nowiki>***</nowiki>
+
+[[File:16 DataChannel VertexPaintMapChannel.png|frameless]]
+
+In the Vertex Color parameter rollout, check on “Map Channel” and make sure it’s set to the same map channel selected in your Data Channel modifier.
+<nowiki>***</nowiki>
+
+[[File:17 DataChannel MaskingTensionDeform.png|frameless]]
+
+Now you can paint a mask only in the area that you want to be influenced by the Data Channel.
+<nowiki>***</nowiki>
+
+[[File:18 DataChannel FinalResults.png|frameless]]
+
+Here is our finished worm! Doesn’t he look much better?
+
+This is only one of the many useful ways the Data Channel modifier can be used.
+
+And that’s it! Have fun! :)
+
+__FORCETOC__
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Reducing_Pinching_With_Data_Channel

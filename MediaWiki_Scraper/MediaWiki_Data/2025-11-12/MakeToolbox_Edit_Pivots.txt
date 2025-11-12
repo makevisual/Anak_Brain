@@ -1,0 +1,30 @@
+= Edit Pivots =
+
+== Overview ==
+[[File:EditPivots NewUI.png|252x252px]]
+
+'''Edit Pivots''' is a tool from the MakeToolbox toolset that provides a collection of tools for quickly modifying the objects and/or its pivot points transforms.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "EditPivots" from the scripts dropdown menu.
+# '''Select Objects''': Select one or more objects in your scene.
+# '''Edit the Objects/Pivots''':Click the button corresponding to the operation you wish to perform.
+#* '''For a non-destructive change''': Check the "Use XForm modifier" box. This is more similar to the way the default "Reset XForm" utility works and will introduce an XForm modifier on the top of the stack of the selected object(s).
+#* '''For a permanent change''': Leave the box unchecked. This is not recommended as you will be introducing offsets on the object level transforms (objectoffsetpos, objectoffsetrot or objectoffsetscale) and that can have unintended consequences in rigging.
+
+== User Interface ==
+The script's interface consists of five distinct tools for pivot and object transform manipulation.
+
+* '''Center Origin''': Moves the selected object(s) to the world origin (0,0,0), aligning their pivot points with the center of the scene.
+* '''Align Origin''': Moves the selected object(s) to the world origin '''and''' resets their rotation to zero.
+* '''Gimbal Node''': Creates a new Point helper for each selected object. The helper inherits the object's transforms, and the object is parented to it. This creates a "gimbal" controller, allowing you to transform the parent helper without affecting the child object's local coordinates.
+
+=== Pivot Ops ===
+
+* '''Bottom Pivot''': Moves the pivot point of each selected object to the center of its bottom-most point, based on its bounding box.
+* '''Center Pivot''': Moves the pivot point of each selected object to its geometric center.
+* '''Use XForm modifier''': When checked, the "Bottom Pivot" and "Center Pivot" operations will not change the object's actual pivot. Instead, they will add an '''XForm modifier''' and move its gizmo, creating a procedural and non-destructive pivot offset.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Edit_Pivots

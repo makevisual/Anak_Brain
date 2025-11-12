@@ -1,0 +1,105 @@
+= Google Workspace Deployment & Usage Guide =
+
+Welcome to MAKE's official guide to Google Workspace. This article covers everything you need to get started, stay productive, and understand how the studio is managing email, calendars, chat, Drive, and more. Whether you're onboarding for the first time or just need a refresher, you can read this top-to-bottom to find what you need.
+
+== Deployment Overview ==
+MAKE is now operating on a fully managed Google Workspace instance for:
+* '''Google Chat''' – replacing Skype, Discord, and Teams
+* '''Google Calendar''' – unified scheduling and team visibility
+* '''Google Drive''' – new folder structure with team/individual permissions for online items only
+
+     '''Note:''' Your email is still hosted via DreamHost. You can access it via https://webmail.makevisual.com/ 
+     '''Note:''' See [[Log into Microsoft Outlook for Email]] to setup Outlook or Thunderbird for your email client if preferred.
+
+All workspace tools are accessed in '''Google Chrome''' while signed into your `@makevisual.com` email account. Do not use personal Gmail accounts for work-related tasks.
+
+== Getting Started ==
+# Check your [[IT_Orientation_Introduction|IT Orientation]] for your IT User Folder in Wrike – your temporary password will be stored there, or sent to your personal email.
+# Open '''Google Chrome''', sign in to your `@makevisual.com` account.
+# Click your profile icon → '''Manage Google Account''' → Change Password if not prompted to on first sign in.
+# Consider color-coding your Chrome profiles to clearly distinguish between work and personal sessions.
+
+== Workspace Tools & Best Practices ==
+
+=== Google Chat ===
+* Used for informal communication: quick questions, check-ins, or internal pings.
+* Use it via browser or install the standalone app on desktop/mobile. https://chat.google.com/download/
+* You’re already added to relevant chats: announcements, team rooms, etc.
+* Organize chats into categories if helpful.
+
+====Group Chat Tips:====
+* Project-specific group chats can be created by producers as needed.
+* Artists and departments may also create their own rooms as desired.
+* Don’t over-engineer it—critical communication still lives in Wrike.
+
+====Meetings & Huddles:====
+* Use '''Huddles''' for spontaneous voice chats (like office drop-ins).
+* Use '''Zoom''' for scheduled or client-facing meetings, or more significant meetings. It better transcription and provides a todo list as well.
+* '''Google Meet''' is acceptable for internal calls and casual syncs.
+
+=== Calendar ===
+* Keeping your calendar up-to-date is essential.
+* Accept/decline invites promptly – others can see your response status.
+* Make sure you're operating inside your `@makevisual.com` calendar.
+* Chrome should be set as your default browser to ensure calendar links work correctly.
+
+'''Helpful Features:'''
+* View team members' calendars by subscribing to them.
+* Set visibility settings (e.g., show "busy" for personal events or calendars).
+* Share and combine personal calendars if desired—ask yourself for permission to view.
+* Events will also appear in Google Chat if integrated.
+
+'''Recommended Extensions:'''
+* [https://chromewebstore.google.com/detail/zoom-chrome-extension/kgjfgplpablkjnlkjmjdecgdpfankdle?hl=en|'''Create Zoom Meetings from Google Calendar''']
+* '''Merge Duplicate Calendar Events'''
+* '''Calendar Groups''' – toggle multiple calendars with a single click
+
+=== Email ===
+MAKE is not using Gmail for email. All mail is hosted on the DreamHost server.
+
+**Preferred Access Methods:**
+# [[Log into Microsoft Outlook for Email]] – covers setup via IMAP
+# '''Thunderbird''' is becoming the preferred lightweight alternative. Use the same settings as Outlook.
+
+**Not Recommended:**
+* Gmail (POP3) forwarding – creates issues with invite permissions, delayed message syncing, and broken calendar functionality. Only tolerable for very infrequent email users.
+
+If you need help configuring a mail client like Mailspring or Thunderbird, open a Wrike ticket or talk to Nic.
+
+=== Google Drive ===
+The Drive has been reorganized to reflect studio departments, team groups, and individual roles. You’ve been added to the folders relevant to your role.
+
+**Access & Permissions:**
+* If you need higher-level folder access, view the folder members and request access from a listed admin.
+* Do not move or reorganize anything unless specifically instructed.
+
+> This is our clean slate opportunity. Organize clearly, name consistently, and keep shared spaces clutter-free.
+
+== Notifications ==
+Make sure Chrome is set to allow notifications from Google Chat and Calendar.
+
+**To enable notifications:**
+* Click the gear icon in Google Chat → '''Notifications'''
+* Also confirm your browser (Chrome) allows site notifications
+
+Enable desktop/mobile notifications for:
+* Google Chat
+* Calendar Reminders
+* Email client (if applicable)
+
+== Optimize Your Workspace ==
+To streamline your workflow, we recommend:
+* Using color-coded Chrome profiles to switch between accounts
+* Installing the recommended Google Calendar extensions
+* Pinning Google Chat and Calendar tabs or installing the apps
+* Syncing your work calendar to your phone for mobile access
+
+These minor tweaks can help you stay organized, avoid missing messages, and save time jumping between platforms.
+
+== Support ==
+Start with a support ticket in Wrike. If that doesn’t solve it, message Nic or Aaron directly—Nic is your first stop.
+
+Need help logging in, setting up a browser, or tweaking settings? [[IT_Orientation_Introduction|Visit the IT Orientation]] page.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Google_Workspace_Overview

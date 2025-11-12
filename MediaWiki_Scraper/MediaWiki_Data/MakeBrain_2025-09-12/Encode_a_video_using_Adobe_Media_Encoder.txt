@@ -1,0 +1,73 @@
+=Benefits of Compressed Videos=
+We compress video files so they can be played back in a wider variety of playback engines. Compressed files will also load playback at a faster rate without delay, and can be shared and played through a web browser, this is useful for sharing video files with clients
+
+=Common Formats=
+
+<ul>
+==H.264 (.mp4)==
+		Mp4 files are visually lossy, meaning there will a loss in quality. But they are small in file size and easy to share and playback. we use .mp4 files to preview edit renders, and send to clients for feedback.
+		<ul>
+		<li>[https://www.adobe.com/creativecloud/video/hub/features/learn-about-mp4-format-videos More info on .mp4 files]
+		</li>
+		<li>[https://helpx.adobe.com/media-encoder/using/export-settings-reference.html More info on .mp4 compression settings]
+		</li>
+		</ul>
+		
+		Some of the most important settings when encoding a .mp4 file are, Bitrate, Match Source, and VR Video.
+		
+===Bitrate===
+			Bitrate is the number of bits that are conveyed or processed per second. Effectively, a higher video bitrate means a higher quality video that requires more bandwidth and will have a larger file size. If your bitrate is to low, it will suffer in quality, if your bitrate is too high it may not be able to be streamed through the web without lag.
+			<ul>
+			<li>A bitrate value of 20 minimum and 40 maximum is good for most 1080p videos.
+			<li>
+			</ul>
+===Match Source===
+			The ''"Match Source"'' button will conform the resolution, frame rate, and pixel aspect ratios to that of the source video. You want this in most cases, unless for example, you are intentionally downscaling the resolution. 
+===VR Video===
+			The ''"Video Is VR Checkbox"'' should be unchecked if your video is not a VR Video. If you have this checked mistakenly most social media platforms will attempt to play the video as an interactive VR experience, instead of as a regular embedded video.
+		
+		<br>
+		Here is a preset with good general settings mentioned above that can be added to Adobe Media Encoder
+		
+ <nowiki>
+U:\resources\Presets\Adobe Media Encoder\mp4_HQ.epr</nowiki>
+</ul>
+
+<ul>
+
+==QuickTime (.ProRes)==
+ProRes files are visually lossless, and suitable for mastering. We deliver most final slated edits as .prores files.
+		<ul>
+		<li>[https://support.apple.com/en-us/HT202410 More info on ProRes files]
+		</li>
+		</ul>
+		
+		Some of the most important settings when encoding a .mp4 file are ProRes 422, and ProRes 444
+		
+===ProRes 422===
+		422 ProRes only supports RGB channels.
+===ProRes 4444===
+		4444 ProRes supports RGB and Alpha channels, In nuke you must also change your render chanels to RGBA for the alpha to be rendered.
+
+</ul>
+
+=Process=
+'''Step By Step'''
+<ol>
+	<li>Drag and drop or use the add source button to add video files to the queue
+	</li>
+	<li>Select your encoding format and output location
+	</li>
+	<li>Click the green start button, and the queue will processed in sequence
+	</li>
+	<li>Check your video files before sending them on to the recipient
+	</li>
+</ol>
+
+
+
+
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Encode_a_video_using_Adobe_Media_Encoder

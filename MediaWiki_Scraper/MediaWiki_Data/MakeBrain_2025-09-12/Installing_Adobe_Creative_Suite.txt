@@ -1,0 +1,25 @@
+=Installing Adobe Products (Creative Suite)=
+As of 2/28/2024 the standard version of Adobe Products in use are the Creative Cloud 2023 Apps. These are installed during Workstation and Render Node setup, but in the event that a user needs to reinstall all Adobe applications for some reason, the instructions follow.
+
+===Navigate to the Installation Folder===
+Open File Explorer from your Start Menu or Taskbar and navigate to <code>U:\resources\apps\Adobe\CC_2023</code>. You can copy this file path and paste into the address bar within file explorer for easy access.
+
+[[File:Install3DSMax2021-ClickAddressBar.png]]
+
+[[File:InstallSoftware-PasteAdobeFolderPath.png]]
+===Run the Adobe Creative Cloud Installation File===
+* Render Node: Double click to run the <code>Creative Cloud - 6-15-2023 - Render node.bat</code> file.
+[[File:InstallSoftware-RunCreativeCloud-RenderNode.png]]
+* Workstation: Double click to run the <code>Creative Cloud - 6-15-2023 - Workstation.bat</code> file.
+[[File:InstallSoftware-RunCreativeCloud-Workstation.png]]
+
+If/when prompted, click "Yes" to install Adobe CC. Once the installer window closes you can access all Adobe Creative Cloud products from the start menu on your computer.
+
+==Help! My Adobe Product updated to a newer version!==
+In the event that one or more Adobe products installed on your workstation updated to a newer version and you need to access the earlier version, simply install the legacy version from the Creative Cloud Desktop App on your workstation. Adobe provides instructions with screenshots for this process at: https://helpx.adobe.com/download-install/using/install-previous-version.html 
+
+[[Category:IT]]
+[[Category:Adobe]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Installing_Adobe_Creative_Suite

@@ -1,0 +1,20 @@
+[[Category: IT]]
+Due to recent changes with how Gmail handles external account calendar invitations, it is recommended to migrate your email to Microsoft Outlook as soon as possible.
+
+== Installing Outlook ==
+If Microsoft Outlook is not already installed on your computer, you can install it by launching the Microsoft Store from your Start menu. Search for "Outlook", and install the version indicated in the screenshot.
+
+[[File:1. Outlook - Install.png|701x701px]]
+
+== Configuring Outlook ==
+To configure Outlook for your @makevisual.com email address, complete the following steps:
+# Launch Outlook from your Start Menu. <br> [[File:2. Outlook - Launch.png|522x522px]]
+# On the first screen that appears, enter your @makevisual.com email address and click Continue. <br> [[File:3. Outlook - Enter Email.png|726x726px]]
+# Enter your email password, then click the slider next to "Show more" to configure the email server settings. <br> [[File:4. Outlook - Enter Password.png]]
+# Enter the following values into each box as shown in the screenshot. IMAP Incoming server: imap.dreamhost.com Port: 993 Secure connection type: SSL / TLS (recommended) <br> [[File:5. Outlook - IMAP Settings.png]]
+# Scroll down and enter the following values into SMTP configuration: SMTP Outgoing server: smtp.dreamhost.com Port: 465 Secure connection type: SSL / TLS (recommended). <br> [[File:6. Outlook - SMTP Settings.png]]
+
+Your email is now configured. Note that this is kind of a "fresh start" for your email and you may need to forward calendar invitations from your gmail over to your @makevisual.com email account to get them populated on your calendar. All new emails and calendar invitations will appear in Outlook and you can now use the built in Outlook calendar to manage appointments.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Log_into_Microsoft_Outlook_for_Email

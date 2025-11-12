@@ -1,0 +1,6 @@
+[[Collect all cloud documents into project folder during project close]]
+
+Complete wrike tasks, and place the project into the 'old projects' folder
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Retire_Project_Working_Environment

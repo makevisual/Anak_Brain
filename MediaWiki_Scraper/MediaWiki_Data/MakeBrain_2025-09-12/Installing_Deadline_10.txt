@@ -1,0 +1,9 @@
+ [[Category:Documentation]]
+Deadline is software that allows us to send render jobs from workstations to the render farm, to schedule maintenance tasks, and to utilize workstations as render nodes when they are not being used for other work.
+
+== Installing Deadline (10) ==
+By default, Deadline is installed on all workstations and render nodes. If for some reason you need to reinstall Deadline you may follow these steps:
+# Navigate to the installation folder: <nowiki> Pending </nowiki>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Installing_Deadline_10

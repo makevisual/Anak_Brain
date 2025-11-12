@@ -1,0 +1,44 @@
+To begin the edit phase of the project we need to get the following information from the client.
+
+* Legal Line - This is necessary for TVC deliveries
+* Logos - This is necessary for all island pieces
+* Supers - If there are any specific supers they have or information/translations that we are required to put on screen
+
+===Legal Lines===
+Legal lines will range from the legal text at the bottom of an end island to the legal disclaimers we need to include on shots with special effects. This wording is specific for each client and to get this, we ask ahead of the edit but really we ask the client to send the first rough edit to their legal team for clearance. Then their legal team will give us the exact wording we need.
+
+This is an Island shot example from the Hasbro project Transformer - Rise of The Beast, Beast Alliance. In this example you will see the legal line we had to use for a product based off a feature.
+
+[[File:Collect Legal, Logos, and Supers from client Island LegalAndLogoExample.jpg|frameless]]
+
+This is an example of a legal line we needed to disclaim special effects, being a speed ramp here specifically.
+
+[[File:Collect Legal, Logos, and Supers from client MiddleShot LegalAndLogoExample.jpg|frameless]]
+
+
+===Logos===
+These are to be supplied by the client each time. In the End Island example above, you can see feature logo, product logo (lower left), and company logo were all supplied to us. Unless the project is about logo creation, we generally always ask for logos to be sent to us in a keyable format and if there is any animation with it, to be supplied animating and still as well.
+
+
+===Supers===
+We commonly have to create Supers but many times the text inside the super has to be specific. It is best practice to always ask and check with you client what they need and would like in the supers on screen. This typically is a good question to ask before the rough edit 1 but commonly will be one that changes as the project goes on through the phases.
+Supers vary from text to just onscreen effects.
+
+Supers vary from text to just onscreen effects.
+
+This Super is an example of an onscreen sound effect from the toy happening.
+
+[[File:Collect Legal, Logos, and Supers from client FlashExampleSuper.png|frameless]]
+
+
+This Super is a more common example of text on frame.
+
+[[File:Collect Legal, Logos, and Supers from client SPKExampleSuper.png|frameless]]
+
+
+This Super is common to see but often forgotten to be taken off when we go into the delivery step of the Superless deliverables. This would be one we will commonly make ourselves for a spot and rarely will this be delivered to us.
+
+[[File:Collect Legal, Logos, and Supers from client FlashExampleSuper2.png|frameless]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Collect_Legal,_Logos,_and_Supers_from_client

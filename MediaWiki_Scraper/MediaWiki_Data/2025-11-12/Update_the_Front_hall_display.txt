@@ -1,0 +1,204 @@
+=The Hallway and Kitchen Display=
+
+
+
+The following article will teach you how to update the Hallway and Kitchen display using the Hallway and Kitchen animated template.
+
+The Hallway and Kitchen animated template is a motion graphic that displays a client's logo during client visits.
+
+These displays are significant in being one of the clients first impressions of MAKE.
+
+
+
+=Hallway and Kitchen Display Folder=
+
+All of the assets and comps pertaining to the hallway & kitchen displays can be found here:
+
+ <nowiki>
+U:\MAKE_Reel\MAKE_Reel10\Make_Reel10__Hall_and_Kitchen_Display</nowiki>
+
+
+
+=The Five Steps on Updating the Hallway and Kitchen Animated Template=
+
+1. Go into the '''Comp''' folder and make a '''COPY''' of the latest template comp into the '''Edit''' folder. 
+
+Then, RENAME the template to reflect the Agency & Client that the display is for. 
+
+Example: ''Make_Reel_10__Hallway_Display__Bakugan_Spinmaster__001''
+
+
+2. Everything is set up inside of the templates so that when you update one logo, it will ripple out and apply all the effects necessary for all of the comps (kitchen and hallway). 
+
+There are some small tweaks that may need to be applied depending on the dimensions/style of the logos. 
+
+
+[[File:MakeBrain_UpdateHallwayAndKitchenDisplays_Screengrab1.png|250px]]
+
+
+'''''Highlighted in blue are the only comps/folders you will ever need to modify.'''''
+
+'''''PLEASE LEAVE THE OTHER COMPS ALONE.'''''
+
+
+I. First, import your logos, and place them in the ﻿'''Assets>Logos﻿''' folder.
+
+All display logos should be found here:
+ <nowiki>
+U:\MAKE_Reel\MAKE_Reel10\Make_Reel10__Hall_and_Kitchen_Display\Assets\logos</nowiki>
+
+
+If you don't see your desired logo, then make a folder for it and place it in there. 
+
+Make sure the logos have transparency on the outside.
+
+Ideally, you should make the logos black & white in photoshop, but, if you don't, you can still hue-shift/adjust it in after effects. 
+
+Remember to make them '''BLACK AND WHITE''', not shades of grey.
+
+These need to feel graphic and bold, and the layer adjustments I put in place in the other comps won't work properly on greys.
+
+
+II. Next, open the '''Template__001''' & '''Template__002''' comps. These contain the main logo images.
+
+You can alt+drag or simply place and size the images appropriately in there. 
+
+This would be the comp to do color adjustments if you still have not done that. 
+
+If your display only has ONE logo (for example, if we have a new agency touring the space or we are working direct to client), then just use the same file for both Template comps.
+
+
+III. Open the '''Logo__01__precomp''' and '''Logo__02__precomp''' and check to see if the sizing of the logo is not too big or too small. 
+
+Meaning, so that there's no moments when the "slices" are cutting away into nothing. (see images below for reference)
+
+
+[[File:MakeBrain_UpdateHallwayAndKitchenDisplays_Screengrab2.png|250px]]
+
+[[File:MakeBrain_UpdateHallwayAndKitchenDisplays_Screengrab3.png|250px]]
+
+
+Shortcut: To resize, simply hit "S" on the '''"template"''' precomps and change the scale of the comps. 
+
+When you open them, they're already set to 50% scale, so scaling up shouldn't be an issue.
+
+
+[[File:MakeBrain_UpdateHallwayAndKitchenDisplays_Screengrab4.png|250px]]
+
+
+Once you do these steps, check to see if everything is working properly by going into the '''Hallway_Export''' and '''Kitchen_Export''' comps and scrub through them. 
+
+Note that these are LARGE comps (can't be helped because the Hallway screen is 20k pixels wide), so it won't playback at the correct framerate most likely.
+
+
+3. Once you place in and adjust the logos, you are ready to render.
+
+Because these are very large comps, you have to render image sequences first, then convert to MOV and MP4.
+ 
+In the render queue, the sequences are already set up to the correct outputs, you just have to rename the sequences to reflect the agency and client its for.
+
+﻿
+
+[[File:MakeBrain_UpdateHallwayAndKitchenDisplays_Screengrab5.png|250px]]
+
+
+The Hallway renders will output here:
+
+ <nowiki>
+U:\MAKE_Reel\MAKE_Reel10\Make_Reel10__Hall_and_Kitchen_Display\Renders\_ImageSequences\Hallway</nowiki>
+
+
+The Kitchen renders will output here:
+
+ <nowiki>
+U:\MAKE_Reel\MAKE_Reel10\Make_Reel10__Hall_and_Kitchen_Display\Renders\_ImageSequences\Kitchen</nowiki>
+
+
+4. Once the sequences have rendered, bring them into Adobe Media Encoder. Learn how to properly encode a video using Adobe Media Encoder here[https://makevisual.com/brain/mediawiki/index.php?title=Encode_a_video_using_Adobe_Media_Encoder].
+
+
+The Hallway Display should be an '''Apple ProRes 422 LT''', an MOV.
+
+Feel free to make a preset for this, or import the premade preset from here:
+
+ <nowiki>
+U:\resources\Presets\Adobe Media Encoder</nowiki>
+
+Output the final MOV into there two folders so that whoever is updating the screen can access it:
+
+ <nowiki>
+U:\MAKE_Reel\MAKE_Reel10\Make_Reel10__Hall_and_Kitchen_Display\Renders\Hallway</nowiki>
+
+and
+
+ <nowiki>
+V:\TV_Hall_Display_Renders</nowiki>
+
+
+The Kitchen Display should be '''H.264''', an MP4.
+
+Feel free to make a preset for this, or import the premade preset from here:
+
+ <nowiki>
+U:\resources\Presets\Adobe Media Encoder</nowiki>
+
+Output the MP4 in this folder:
+
+ <nowiki>
+U:\MAKE_Reel\MAKE_Reel10\Make_Reel10__Hall_and_Kitchen_Display\Renders\Kitchen</nowiki>
+
+
+5. Finally, when you've encoded the displays, go back and delete the image sequences. 
+
+They take up a lot of space, so you should clear out those folders as soon as you're done making the final renders.
+
+
+
+=Switching Out the Hallway Display Animation on the Hallway Overhead TV=
+
+1. Find the mouse and mousepad, and turn on the mouse
+
+The mouse and mousepad are located on the mail tray at the front desk. Stand between the front desk and the security doors with your back to the big kitchen to properly view the desktop. The cursor should be in the top right corner of the far right TV (the TV closest to the windows). It may take a minute to get acquainted with the cursor.
+
+
+2. Close the current animation window
+
+Right click on the current animation and select '''Exit''' at the bottom. Now you should see a computer desktop with two file explorer windows open, one showing the '''RamDisk (F:)''' drive and the other showing the Hallway display renders folder.
+
+ <nowiki>
+V:\TV_Hall_Display_Renders</nowiki>
+
+
+3. Format the '''RamDisk (F:)''' drive to clear the previous animation from the drive
+
+Right-click on '''RamDisk (F:)''' and select Format. A pop-up window to commence formatting will appear. Double-check that you are formatting '''RAMDISK (F:)''' and not another drive. Hit Start. Reopen '''RamDisk (F:)''' in another file explorer window if necessary.
+ 
+
+4. Copy the new animation to the '''RamDisk (F:)''' drive
+
+In the other window showing the Hallway display renders folder, find the requested display animation. Drag and drop the animation file into '''RamDisk (F:)'''. This will take a minute to copy because of the file size.
+
+N.B.: If you need to reopen the Hallway display renders folder, go to '''DiskV (\\BLUE) (V:) > TV_Hall_Display_Renders'''
+
+Pro tip: To quickly find the new display animation, sort the files by Date Modified newest.
+
+
+5. Fit the animation to the screen size
+
+Double-click to open the new animation from within the '''RamDisk (F:)''' drive. Right click in the animation window, and select '''View > Zoom > 200%'''. Now you will be able to hover the cursor on the left and right edges of the animation window and drag to resize. Drag each end to the far edge of the monitor display.
+
+N.B.: Clicking on the animation window pauses and unpauses the video.
+
+
+6. Hide the cursor
+
+Place the cursor back in the top right corner of the TV closest to the window. This makes it easier to find the cursor next time the display animation needs to be changed. Ensure that the animation is playing smoothly without buffering.
+
+
+7. Lastly, turn off the mouse and put the mouse and mousepad back on the mail tray at the front desk
+
+
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Update_the_Front_hall_display

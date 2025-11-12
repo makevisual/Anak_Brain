@@ -1,0 +1,18 @@
+1) Have your Photoshop project open.
+
+2) Select '''File''' from the upper left corner of the window.
+
+3) Select '''Export.'''
+
+4) Choose '''Render Video.'''
+
+5) Make sure in the dropdown panel, '''Photoshop Image Sequence''' is selected and not Adobe Media Encoder.
+
+6) Set '''Format to PNG'''.
+
+7) '''Name and save your file''' to its appropriate location.
+
+8) Hit '''Render.'''
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Exporting_a_.png_sequence_from_photoshop

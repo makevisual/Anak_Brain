@@ -1,0 +1,139 @@
+In this article you'll find instructions on how to implement a RawtoAces workflow on a Windows 10 Pro machine as described in this git https://github.com/AcademySoftwareFoundation/rawtoaces
+
+The instructions provided are working as of Feb 19 2025, but since the whole implementation depends on several external libraries (as you'll see during installation) it is possible future implementations change or even break depending on code changes on those dependencies. The version used for each library/software to build this workflow will be provided so users can revert back to working implementations in case of future inconsistencies.
+
+You can also watch a video walking through all the steps to have this workflow installed and running https://www.youtube.com/watch?v=ZCS3Jtng8ZA
+
+= Quick Tips =
+
+* Make sure you have enough disk space (the full process uses between 30 to 50GB after deployed)
+* You should have administrative rights on the machine
+
+= Pre-Requisites =
+
+# [https://cmake.org/download/ CMake] (version installed 3.31.5)
+# [https://visualstudio.microsoft.com/ Visual Studio] (version installed 2022 17.13.0)
+# [https://desktop.github.com/download/ Github Desktop] (version installed 3.4.16)
+# [https://github.com/microsoft/vcpkg vcpkg] (version cloned 2025.02.14 Release).
+# [https://github.com/AcademySoftwareFoundation/Imath ilmbase] (now imath since [https://openexr.com/en/latest/about.html OpenEXR 3.0]) (version used 3.1.12)
+# [https://github.com/ampas/aces_container ACES Container] (version number not available)
+# [https://www.boost.org/ Boost] (version used 1.87.0)
+# [http://ceres-solver.org/ Ceres Solver] (version used 2.2.0)
+# [https://www.libraw.org/about libraw] (version used 0.21.3)
+# [https://www.docker.com/ Docker Desktop] (version used 4.38.0)
+# [https://github.com/AcademySoftwareFoundation/rawtoaces rawtoaces] (version number not available)
+
+= Setup =
+
+=== [https://cmake.org/download/ Cmake] ===
+
+Make sure to add it to the "PATH environment variable" during installation. CMake will be used to build several packages needed to run RawtoAces.
+
+[[File:CMake PATH Environment Variable.png|360x360px]]
+
+=== [https://visualstudio.microsoft.com/ Visual Studio] ===
+Make sure to add the "Desktop development with C++" workload during installation. Visual Studio will be used to compile some libraries to the machine we are using to build RawtoAces.
+
+[[File:VisualStudio C++ Workload.png|912x912px]]
+
+=== [https://desktop.github.com/download/ Github Desktop] ===
+Will be used to easily download other libraries and dependencies directly from github.
+
+=== [https://github.com/microsoft/vcpkg vcpkg] ===
+Clone the vcpkg git page (https://github.com/microsoft/vcpkg.git) using Github Desktop.
+
+[[File:GitHub dskt AddRepo2.png|586x586px]][[File:Github dskt vcpkg settings.png]]
+
+After it has been cloned, click "Show in Explorer" and from the opened folder hold Shift and Right-Click anywhere inside the folder and select "Open PowerShell windows here".
+
+[[File:Github dskt Open In explorer.png|436x436px]][[File:OpenPowerShell.png|355x355px]][[File:PowerShell shell2.png|475x475px]]
+
+On the PowerShell that opens up, type the following command:<pre>
+.\bootstrap-vcpkg.bat
+</pre>After it finishes, run this other command to make sure libraries are linked automatically and new libraries will be immediately available.
+ .\vcpkg integrate install
+
+=== [https://github.com/AcademySoftwareFoundation/Imath ilmbase/imath] ===
+With the previous PowerShell still open, type this command to download and integrate the imath library<pre>
+.\vcpkg install imath
+</pre>
+
+=== [https://github.com/ampas/aces_container ACES Container] ===
+Open Gihub Desktop and clone the ACES Container repository (https://github.com/ampas/aces_container.git). After it has been cloned, follow the same steps as you did for vcpkg and click "Show in Explorer" from Github desktop.
+
+On the opened folder, hold Shift and Right-Click anywhere on the folder and select "Open PowerShell windows here".
+
+On PowerShell, type the following command to create a new folder named "build":<pre>
+mkdir build
+</pre>Then access the new folder:
+ cd build
+Inside the new folder, type the following command to use CMake to build our ACES Container. If you have installed another version of Visual Studio, adapt the code to reflect your current installation.
+ cmake .. -G "Visual Studio 17 2022"
+Go back to Explorer, and check the aces_container/build folder for a file named "AcesContainer.sln". Double-Click this file to open it on Visual Studio.
+
+On Visual Studio go to Build->Build Solution
+
+[[File:VS BuildSolution.png|834x834px]]
+
+After the build is done, navigate to the aces_container/build folder and make sure there's a new folder in it called "Debug" and it contains a file called "AcesContainer.dll"
+
+[[File:ACES DLL.png]]
+
+=== [https://www.boost.org/ Boost] ===
+Download and extract the Boost library from the link (https://www.boost.org/). Open the extracted folder and Double-Click on the "Bootstrap.bat" file.
+
+[[File:Boost BootStrap.png|448x448px]]
+
+After it executes, hold Shift and Right-Click anywhere inside the Boost folder and select "Open PowerShell windows here".
+
+On PowerShell type:<pre>
+.\b2
+</pre>
+
+=== [http://ceres-solver.org/ Ceres Solver] ===
+Navigate to the folder where you have your vcpkg install, hold Shift and Right-Click anywhere on the folder and select "Open PowerShell windows here".
+
+Type the following command to download and integrate Ceres Solver:<pre>
+.\vcpkg install ceres:x64-windows
+</pre>
+
+=== [https://www.libraw.org/about libraw] ===
+With the previous PowerShell still open (from the folder of vcpkg), we will download and integrate the libraw library
+
+Type in this command in PowerShell:<pre>
+.\vcpkg install libraw
+</pre>Make sure to also execute this command after libraw as downloaded:
+ .\vcpkg integrate install
+
+=== [https://www.docker.com/ Docker Desktop] ===
+Go to docker website, download and run the Docker Desktop installer leaving all settings as default. Make sure to have checked "Use WSL2 instead of Hyper-V (recommended)" for better performance.
+
+[[File:DockerInstall.png]]
+
+After it installs you need to restart your machine (sometimes you have to restart twice to have WSL properly working). Leave all the on screen configurations as default.
+
+To check if docker and WSL are working properly, open a new PowerShell (does not matter the location) and type:<pre>
+wsl
+</pre>If Docker is running properly, it should return "docker-desktop" and the location it is running from.
+
+=== [https://github.com/AcademySoftwareFoundation/rawtoaces rawtoaces] ===
+Open Github Desktop and clone the rawtoaces repository (https://github.com/AcademySoftwareFoundation/rawtoaces.git).
+
+After it has been cloned, click "Show in Explorer" from Github desktop.
+
+On the opened folder, hold Shift and Right-Click anywhere on the folder and select "Open PowerShell windows here".
+
+Type the following command to build the rawtoaces application on Docker:<pre>
+docker build -f "Dockerfile" -t rawtoaces:latest "."
+</pre>
+
+= Running rawtoaces =
+After the application is built, you can navigate to a folder where you have raw files (like CR2 or CR3) hold Shift and Right-Click anywhere on the folder and select "Open PowerShell windows here".
+
+On the new PowerShell, type:<pre>
+docker run -it --rm -v ${PWD}:/tmp -w /tmp rawtoaces:latest rawtoaces IMG_1234.CR2
+</pre>Change IMG_1234.CR2 to the actual image you have inside this folder. If the file lacks metadata to properly identify the camera and the WB, it might be necessary to adjust the code to account for that. On [https://github.com/AcademySoftwareFoundation/rawtoaces?tab=readme-ov-file#usage rawtoaces git page] you have a guideline on how to use several options to account for the particularities of your file. For example, if you run this code, it will calculate an average of the whole image to set the white balance and will use adobe's coefficients included in libraw as IDT ([http://ismini.tvlogic.tv/en/wlp/cameraprofileidt.html Input Device Transform]) matrix
+ docker run -it --rm -v ${PWD}:/tmp -w /tmp rawtoaces:latest rawtoaces --wb-method 2 --mat-method 2 IMG_1234.CR2
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=RawtoAces

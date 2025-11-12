@@ -1,0 +1,42 @@
+= Link Constrainer =
+
+== Overview ==
+[[File:LinkConstrainer UI.png|189x189px]]
+
+Link Constrainer is a tool from the MakeToolbox toolset designed to streamline the process of using 3ds Max's native Link Constraint. It allows a user to quickly apply a Link Constraint controller to one or more objects and generates a user-friendly Custom Attribute interface in the Modify panel.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "Link Constrainer" from the scripts dropdown menu.
+# '''Apply the Constrainer:''' You have two options for applying the tool:
+#* '''On existing objects:''' In the viewport, select one or more objects you want to control. Click the '''"Create on Selection"''' button.
+#* '''On a new helper:''' Click the '''"Create on new Helper"''' button. This will create a new Point Helper at the origin and automatically apply the Link Constrainer to it.
+# '''Access Controls:''' With the object selected, go to the '''Modify Panel'''. You will see a new "Link Constraint" rollout added by the tool.
+# '''Manage Links:''' Use the controls in the "Link Constraint" rollout to manage the object's parents.
+#* '''Add a Target:''' Click the '''"+ Node"''' button and then pick a parent object in the scene. The object will now be linked to that target starting at the current frame on the timeline.
+#* '''Add a World Link:''' Move the time slider to the desired frame and click the '''"World"''' button to link the object to the world space (effectively un-parenting it).
+#* '''Remove a Target:''' Select a target from the list and click the '''"- Node"''' button.
+
+== User Interface ==
+The tool is split into two parts: the initial creation panel and the persistent controls in the Modify Panel.
+
+'''Creation Rollout'''
+
+This is the main tool window that appears when you run the script.
+
+* '''Create on Selection:''' Applies the Link Constraint controller and custom attribute UI to all currently selected objects.
+* '''Create on new Helper:''' Creates a new Point Helper object and applies the Link Constraint and UI to it.
+
+'''Modify Panel Rollout ("Link Constraint")'''
+
+[[File:LinkConstrainer CA.png|219x219px]]
+
+This rollout appears in the Modify Panel for any object that has had the Link Constrainer applied to it.
+
+* '''Linked Nodes (List Box):''' Displays all the parent targets for the object. Each entry shows the frame number where the link becomes active, followed by the name of the parent object.
+* '''+ Node:''' A pickbutton used to add a new parent object to the list. The link becomes active at the current frame.
+* '''- Node:''' Removes the currently selected parent object from the list.
+* '''World:''' Adds the "World" as a parent at the current frame, allowing the object to follow the world coordinate system instead of another object.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Link_Constrainer

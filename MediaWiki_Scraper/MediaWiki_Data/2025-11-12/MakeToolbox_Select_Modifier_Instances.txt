@@ -1,0 +1,24 @@
+= Select Modifier Instances =
+
+== Overview ==
+[[File:SelectModifierInstances UI.png|381x381px]]
+
+'''Select Modifier Instances'''is a tool from the MakeToolbox toolset designed to select all objects in a scene that share a specific instanced modifier. This is useful for managing and editing modifiers across multiple objects at once, ensuring that changes to one instance propagate to all others.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "SelectModifierInstances" from the scripts dropdown menu.
+# '''Pick an object:''' Click the '''"Select Object"''' button and then choose an object in the viewport that has one or more instanced modifiers.
+# '''View instanced modifiers:''' The listbox below the button will populate with the names of all modifiers on the picked object that are instanced on at least one other object.
+# '''Choose a modifier:''' Click on the name of the modifier you are interested in from the list.
+# '''Select the objects:''' Click the '''"Select Instanced Modifiers"''' button. The tool will then select every object in the scene that shares that specific instance of the chosen modifier.
+
+== User Interface ==
+The tool's interface is organized to guide the user through the selection process.
+
+* '''Select Object:''' A pickbutton that allows you to select a source object from the scene to scan for instanced modifiers.
+* '''Instanced Modifier List:''' A listbox that displays the names of the instanced modifiers found on the object you selected.
+* '''Select Instanced Modifiers:''' The main action button that performs the final selection, selecting all objects that use the modifier instance highlighted in the list.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Select_Modifier_Instances

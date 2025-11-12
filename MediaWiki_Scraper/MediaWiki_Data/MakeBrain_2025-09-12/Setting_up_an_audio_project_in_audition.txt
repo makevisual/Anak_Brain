@@ -1,0 +1,86 @@
+== Quick Start ==
+
+=== Step 01 ===
+If you are starting an audio edit and you need to do detailed audio design that has music, voice over and sound effects, then you should start from this template.
+ U:\resources\Presets\Audio_Temeplate_Audition_edit\TEMPLATE_ProjectName_SpotName_Duration_Audiomix_v00.sesx'
+Note: The first time you open this template, you will need to save it as template on your machine. Go to File>Export >Session as Template. This will make the template accessible from the drop down menu when you create a new multitrack edit in Adobe Audition.
+
+===Step 02===
+Open this template and save it right away into an audio location within the project you are working on. See where to save your audio mix here, [[Audio standards and best practices#Where to Place Audio Files, Edits and Renders|Where to Save Audio Files and Assets]]  
+
+Follow this naming convention. 
+
+ ProjectName_SpotName_Duration(Seconds)_Audiomix_v001
+
+'''Project Name''' - Refers to the project or the client name.
+
+'''Spot Name''' - Refers to the specific name of the Spot. There might be several.
+
+'''Duration''' - Refers to the edit length of the spot. 60s, 45s, 30s, 20s, 15s, 10s, 06s are most common. There might be multiple lengths of the same spot. 
+
+'''Audiomix''' - This is what we call a file that houses all aspects of a mix. 
+
+'''v001''' - this is the version number. Version up often, these files rarely take up more than a few MB.
+
+''Note: This naming convention is important when you need to easily and quickly produce a mix and stems for delivery. (Insert article Link here)''</blockquote>
+
+===Step 03===
+Drag your video reference and any audio files directly into your mix. You are ready to start working on your mix. 
+
+==Audio Template Overview==
+When opening audition, go to File > New Multi-Track Session. This will pop open a menu that asks you to name and save the file and gives you an opportunity to change any settings. 
+
+'''I can't change my audio settings, they are greyed out?'''  Chances are you opened the template where these settings are baked in and greyed out. Go to the template tab and select > none. This will open up the settings for you to set them how you like. 
+
+===The Settings===
+In a new multitrack session, make sure you have the correct settings. These should be baked in to the template given at in the quick start section. Lets go through them quick for a better understanding. Audio programs like audition are unusual in that you can't change these core settings once the project file has been made. So we keep the settings higher than we need so that we are able to work with audio files of all settings and export our work at professional quality.<blockquote>'''Sample Rate: 48k Hz''' - This will effect the resolution of the sample.  There are higher sample rates but this setting is the sweet spot for quality vs economy. 44.1k is also acceptable. Keep in mind you won't be able to import audio samples of a higher sample rate but you can import files of a lower sample rate. Sometimes when audition is importing a file, it will throw up a warning and ask to conform the lower sample rate to the higher one set in your project. This is fine and doesn't change the quality of file nor does it overwrite it. Audition will keep its sample conformed files in folder with the project automatically. 
+
+'''Bit Depth: 32bit''' - This is the dynamic range of the audio file and can store more information. In simple terms, this multiplies the amount of amplitude values that can be recorded. Enabling the audio file to closely resemble the original source. This gives more fidelity to the sound. Working at 24 or 16 bits won't break anything but again—you can't import or work with files of a higher bit depth. So we keep this setting high for that reason alone.  
+
+'''Mix: Stereo''' - This refers to the number of audio channels being used. We want stereo which contains a right and a left channel. Never work in Mono, you can always mix down to mono from stereo. Working in 5.1 surround is cumbersome and all that extra channel information will not be utilized on most devices. There might be a scenario where you want to mix for theatrical or home theatre environments in which you would use surround sound. </blockquote>
+
+===Multi-Track Bus System===
+When you open up Make's Audio Template it should look something like this; 
+[[File:Makes Audition Template- Bus System.jpg|This is a view of our bus layer system. This layout gives us a way to control aspects of our mix like Music, Voice Over and SFX.|thumb|983x983px|none]]
+
+
+
+An '''Audio Track''' is a single layer of audio. A '''Bus Track''' or send track connects a group of layers together. This is useful for applying effects to groups of layers. We use Bus layers to help organize the file into categories of our audio mix, called Stems:<blockquote>'''STEM_MUSIC_v00''' - This is the bus track for music. Everything associated with the music is sent through this bus. 
+
+'''STEM_VOICE_v00''' - This all layers pertaining to voice. Everything associated with the Voices are sent through this bus. 
+
+'''STEM_SFX_v00''' - This is the bus track for all sound effects. Everything associated with the Sound Effects are sent through this bus. 
+
+'''MasterAudio_v00''' - The previous three Stems all feed into the MasterAudio Bus - This produces a file with all these layers mixed together. 
+
+Note: Do not change the names of the buses, but you can change the names of the individual layers.  </blockquote>It is best to keep your types of audio separated so that you can control them independently. If the music, sound effects or voice layer need to be louder or quieter, you can turn them down from the bus layer controls. This keeps you from having to make those changes on every layer individually. 
+
+'''Connecting More Layers to a Bus'''
+
+If you need more layers connected to a particular bus you can send that layer to a bus by going to its send controls and selecting the bus from the dropdown menu. If you are unfamiliar with audio programs, simply copy a layer that is already connected to that bus and the layer will inherit the connection. 
+
+'''Creating a New Bus Layer'''
+
+If you need a new bus layer for further stem breakdowns, go to Multitrack>Tracks>New Stereo Bus Track.Create a new audio track. Clearly name the New Bus track with "STEM_(description)_v00.  In order for the bus to work, you need an audio track connected to it. Create a new Audio Track by going to Multitrack>Tracks>New Stereo Track. Go to that layer and tumble open the options for that layer. Go to the sends drop down menu and select the new bus layer you have just created. 
+
+'''Advantages of this Bus System'''
+
+The main advantage to this layout is that you can export all of you stems at the same time. The names of the buses in your edit are placed as an extension on your file name for easy organization. For more on this go to [[Creating audio stems and mixdowns|Creating Audio Stems and Mixdowns]] 
+
+==Add Audio Elements to Your Mix==
+You can take any external audio file and place it directly into your edit by dragging and dropping the file into the edit. Don't bother with the asset management window called files. You may get a warning about sample rate when you drag a new file into your edit. This warning means it will make a copy of the file at the sample rate that matches the project and store it in a folder with your edit.
+
+'''I can't import an audio file. What do I do?''' This often means the sample rate or bit rate of the edit is lower than the audio file you want to import. This will often block you from importing the file. As you can't change these edit settings, you need to start a new edit with higher settings, and copy your other work into the new edit. This problem is often avoided by using the Make Audio Template. 
+
+===Video Reference===
+At the top, there is a layer for Video Reference. Drag your video into this layer; it will automatically populate the ref track below it with the video's native audio. You can only have one video at a time and audition views the file in milliseconds ( not Frames). Mute the native audio with the M button on the Ref Track tab. It works best if you import a compressed mp4 of a reasonable size, this will make previewing quicker. Increased video sizes will cause lag and audio playback artifacts that are hard to work with.  
+
+=== Music/Voice/Sound Effects===
+You can drag and drop a file of any audio format, but the best ones to use are .wav .aiff .flac as these are uncompressed formats. Once you place the relevant files in the layers for Music, Voice or SFX you may begin adjusting levels and adding effects to them.
+
+Go here for mixing suggestions and best practices. [[Audio Mixing Best Practices]]
+
+Go here to learn how to export your work. [[Creating audio stems and mixdowns|Creating Audio Stems and Mixdowns]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Setting_up_an_audio_project_in_audition

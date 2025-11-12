@@ -1,0 +1,55 @@
+Here is are the steps that will help you to create and share the calendar on Wrike.
+
+==To Create a calendar:==
+
+1. Log in to your Wrike account and navigate to the project folder that you want to share the calendar for.
+
+2. Under the project folder, you will see the folder called ''Schedule''.
+
+3. In the ''Gantt chart'' view create tasks and phases that you want to be shown in the calendar. NOTE: don’t forget to set up start and end date for each item. And change the status of the task. You can group the tasks and phases by dragging the item and placing it over another.
+
+4. After the Gantt chart view of the calendar is completed you can now hover over the ''icon with 9 dots'' in the upper right corner of the page (next to the question mark item). Click the 9 dots icon, and select ''calendar''.
+
+[[File:Navigation to Calendar view.png|center|thumb|315x315px|To navigate to calendar view, click 9 dots at the upper right corner and select "Calendar"]]
+5. You will now see all the calendars that you have previously created or that other people have shared with you. On the left side Calendars bar make sure you unclick all the calendars so you calendar view is completely empty. 
+
+6. To transfer Gantt chat to a calendar view you need to click ''“New Calendar”'' (highlighted in blue) at the left upper corner.
+[[File:New Calendar.png|center|thumb|334x334px|Create a new calendar by clicking "New Calendar" highlighted in blue]]
+
+7. Name your calendar (use the same name as the project folder you’re creating the calendar for). Then click ''CREATE''. You will see the name of the calendar appearing under Calendars bar.
+
+8. Click plus sight next to the projects name. That will ask you to place a layer under the calendar. To do so, you first need to create a name of the layer (name accordingly: ex Name of the project - Calendar). Then select ''task source'', this will source your Gantt chart from the folder and insert in into this layer of the calendar. NOTE: if you don’t see the sourcing folder, try tying the word schedule or the name of the project). Select the correct source. Make sure to also select the correct ''task duration'' to display (Full duration). When you are done click save.
+[[File:Calendar Layers Instructions.png|center|thumb|Select task source, this will source your Gantt chart from the folder and insert in into this layer of the calendar.]]
+
+9. Voilà, the calendar is created! But only you can see you…
+
+
+Now the following steps will describe how to share it.
+
+==To share the calendar with MAKE team:==
+
+1. Hover over three dots next to the project name under the calendars and select ''Share''.
+[[File:Share Calendar with internal team.png|center|thumb|206x206px|Share Calendar with internal team]]
+
+2. Include selected people who you want to share this calendar with or type and select MAKE to share with the whole team.
+
+
+==To share the calendar with external team:==
+
+1. Make sure that only the calendar you want to share is selected under Calendars on the left side. Note: Collapsing the side bar on the left (Calendars) is recommended to provide a cleaner view for external teams. 
+
+2. Then click ''three dots'' in the upper right corder and check the ''Item colors'' to make sure that the appropriate colors are selected to display the calendar. If all good with the colors, click ''Public links''.
+[[File:Share Calendar with External team.png|center|thumb|Share Calendar with external team by clicking "Public Links"]]
+
+3. Create the link name and press enter. The link to your calendar is created! Before you share it with external team make sure that the link works and that the calendar naming is correct. You can now copy the link and share with the external team.
+
+
+
+'''PLEASE NOTE:'''
+Calendar links are live and reflect the changes in the calendar. If you want to share only a part of the calendar make sure to create a separate layer and share only that layer by unblocking all the other layers.
+
+
+CONGRATULATIONS, you are now a calendar master :)
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_create_a_public_calendar_and_share_it_in_Wrike

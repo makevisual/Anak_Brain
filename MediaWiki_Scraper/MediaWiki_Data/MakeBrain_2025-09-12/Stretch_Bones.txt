@@ -1,0 +1,66 @@
+= Back to Hub =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+= Stretch Bones =
+
+== Muscles With Stretch Bones ==
+On bulky characters, you may need some additional deformation to simulate the compression of muscles or other tissues in the body. We can do this with the use of stretch bones. You can also use stretch bones to preserve volume in areas that collapse while deforming.
+
+[[File:01 StretchBones CoverImage.png|frameless|529x529px]]
+
+Let’s make some biceps for our buff character. 
+
+[[File:02 StretchBones BicepAnatomy.png|frameless]] 
+
+On a real human body, the bicep muscle attaches to the shoulder and extends down to connect with the forearm bones. When the muscle contracts, it bulges as it shrinks in length, and it pulls up on the forearm bones.
+
+[[File:03 StretchBones Bicep3dSetup.png|frameless]]
+
+We can simulate this effect with our IK arm. The first thing we’ll need to do is create a new bone to become the bicep. In my demo image, I’ve colored the bone pink to indicate that it is a muscle. I’ve positioned one end of the bone at the shoulder. The other end of the bone is positioned down underneath the elbow, next to the forearm bone. This is meant to closely match how the muscle attaches to the bones in real life. Name these bones and mirror them to the other side of the rig.
+
+[[File:04 StretchBones StretchBoneSetup.png|frameless]]
+
+[[File:05 StretchBones RiggingToolbar.png|frameless]]
+
+[[File:06 StretchBones StretchBoneCreation.png|frameless]]
+
+The next thing we’ll need to do is make these bones stretch bones. Select the endBone on one of the muscles. Go to (MAKE Toolbar > Rigging tab > Basic Rigs v1.2) and select the “Stretch Point” button. Two point helpers will be generated. Name them, then repeat the process for the other bicep.
+
+On both sides, parent the helper near the shoulder to the arm parent, then parent the lower helper to the lower arm bone.
+
+[[File:07 StretchBones BoneCompression.png|frameless]]
+
+Now when you lift your IK arm, you should see the bone compress as the elbow bends. 
+
+[[File:08 StretchBones Trapezius.png|frameless]]
+
+You can use this process to create numerous muscle structures. Here it is being used to create the Trapezius muscle.
+
+[[File:09 StretchBones TrapeziusCompression.png|frameless]]
+
+Now when the clavicle is lifted, the trapezius muscle compresses.
+
+In some situations, you may want a bone that changes length but does not compress. In this instance, you can select your stretch bone, and in “Bone Tools > Object Properties > Stretch,” select the “Scale” bubble instead of the “Stretch” bubble.
+
+[[File:10 StretchBones ScaleBone.png|frameless]]
+
+Now your bone will only change length when the stretch helpers are transformed.
+
+== Correcting Deformation With Stretch Bones ==
+[[File:11 StretchBones DeformationCorrectionDemo.png|frameless]]
+
+Stretch bones can also be used to correct deformation in a character. Here, the character has a really unusual chin shape. Before adding a stretch bone, the character’s chin would collapse and form a huge crease when the jaw was opened. After adding a stretch bone, the character’s chin shape maintains its original volume.
+
+[[File:12 StretchBones DeformationCorrectionBones.png|frameless]]
+
+One end of the stretch bone is parented to the top neck ctrl, the other to the end of the jaw.
+
+== Weighting Stretch Bones ==
+When weighting these bones in the skin, it’s best to weight all the other bones first and save these for last. They are basically corrective bones, and the best way to incorporate them into the skin is to add only a little bit of influence from them as needed.
+
+[[File:13 StretchBones WeightingStretchBones.png|frameless|442x442px]]
+
+In order to get the best deformation possible with muscle bones, weight them sparingly, and make sure you only weight vertices within the bounds of the bone, or else you may see your geometry squish out in a weird direction.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Stretch_Bones

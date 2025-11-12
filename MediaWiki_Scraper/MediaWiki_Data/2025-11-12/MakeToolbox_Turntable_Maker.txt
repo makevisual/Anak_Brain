@@ -1,0 +1,40 @@
+= TurntableMaker =
+
+== Overview ==
+[[File:TurntableMaker UI.png|320x320px]]
+
+'''TurntableMaker''' is a tool from the MakeToolbox toolset that generates a 360-degree turntable animation. The tool can either create a camera that rotates around the scene's origin or rotate the user's selected objects. It also provides options to set the scene's duration, frame rate, and render resolution.
+
+== How to Use ==
+
+# '''Open the tool:''' From MakeToolbox, select "TurntableMaker" from the scripts dropdown menu.
+# '''Choose the Operation Mode:'''
+#* Check '''"Create Camera"''' to generate a standard camera that will orbit the center of the scene.
+#* Check '''"Selection Mode"''' to make the currently selected object(s) rotate. You must select objects in the viewport before using this mode.
+#* Both modes can be used simultaneously.
+# '''Configure Scene Options (Optional):'''
+#* Enable and set the '''Duration''' to define the length of the animation in frames.
+#* Enable and set the '''Frame Rate''' to adjust the scene's playback speed.
+#* Enable and set the '''Resolution''' to define the render output dimensions.
+# '''Execute:''' Click the '''"Create"''' button to generate the turntable controller and apply the selected options.
+
+== User Interface ==
+The interface is divided into sections for tool and scene options.
+
+=== Tools Options ===
+
+* '''Create Camera:''' A checkbox that, when enabled, creates a new camera and parents it to the turntable controller.
+* '''Selection Mode:''' A checkbox that, when enabled, parents the currently selected object or objects to the turntable controller.
+
+=== Scene Options ===
+
+* '''Set Duration:''' A checkbox and spinner that control the length of the 360-degree rotation in frames.
+* '''Set Frame Rate:''' A checkbox and spinner that set the scene's frame rate (frames per second).
+* '''Set Resolution:''' A checkbox and two spinners that define the width and height of the render output in pixels.
+
+=== Create ===
+
+* '''Create:''' The main button that executes the turntable creation based on the selected settings.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Turntable_Maker

@@ -1,0 +1,34 @@
+
+= What is a .MOGRT =
+A MOGRT is a Motion Graphics File Format created in After Effects or Premiere that allows you to edit a variety of parameters while preserving a complex animation.
+
+= What is a .MOGRT used for? =
+We often need to create multiple versions of the same animation and create minor variations in appearance or information. A lower third, subtitle or logo animation are all common areas where variations might be needed. Instead of rendering out new sequences and updating animation individually, you can create a .mogrt that has complex text animation, but preserve the editability of the text or another property like color or texture. This allows you to be more nimble in your edit and create the versions you need without having to slow down, jump to after effects and render out changes. The benefit is to be able to handle changes, updates and variations quickly.
+
+= How do you create  a .MOGRT =
+
+# You can turn any After Effects Comp into a mogrt - The process of creating a mogrt starts with understanding the Essential Graphics panel.
+# Open the essential graphics panel. It will be empty. Identify the comp you would like to make into a mogrt via the drop down menu in the essential graphics panel. 
+## Tip: If you have lots of comps, try naming the comps you intend to be mogrts and clearly mark them as a Mogrt in the comp name. This will make them easier to find in the essential graphics panel drop down menu.
+# Any property that you can animate via the stopwatch icon is a property you can drag into the essential graphics panel. You must toggle down to the property you want in the layers panel to drag the property onto essential graphics.
+# Once you drag the all the properties you want to be able to edit in the mogrt, take a minute to name and organize these properties in the Essential Graphics Panel. You can use folders, and rename properties with something more didactic and instructional. Ex. If you have a piece of text as a legal line, call it "legal line" or "URL", as long it is something that clearly labels it as property that other people can find. What ever you do, don't leave the property name as "Text 3".
+# In the Essential Graphics Panel, there is export button at the bottom of the panel. Clicking this will prompt you to save the mogrt file in a folder.
+# Once you have your mogrt file, you can import it via the essential graphics panel in Premiere.
+# Each time you drag the mogrt onto your timeline it creates an editable instance of the mogrt.
+## ( if you need to update the mogrt, you must do so from the same comp and name with a different version number and name the file the same name in order for it to work. )
+## alt drag onto one of the mogrts in your timeline - it will prompt you to replace all instances of the mogrt in your premiere project. You can choose to ripple the replacement through all or just one of the instances across your edits.
+## If you need to change a Mogrt file and don't have the source comp handy , any mogrt file can be opened in after effects changed and exported again. You can even save the AE comp and keep it as back up should the need arise.
+
+= Step by Step Tutorial =
+Here are 2 videos that give a more thorough explanation of how to create and utilize mogrts as well as clearly showing how the essential graphics panel operates.
+
+'''How to Create Responsive Mogrts for Premiere Pro'''
+
+https://www.youtube.com/watch?v=TObl3Lu0pP4
+
+'''Intro to Essential Graphics - The BASICS (After Effects)'''
+
+https://www.youtube.com/watch?v=Ku9LCNAV2pg
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Graphics_Templates_in_Adobe_CC

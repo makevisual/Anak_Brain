@@ -1,0 +1,28 @@
+= Distribute Objects =
+
+== Overview ==
+[[File:DistributeObjects UI.png|204x204px]]
+
+'''Distribute Objects''' is a tool from the MakeToolbox toolset that quickly arranges selected objects along a specified axis with uniform spacing. This tool is a significant time-saver for layout tasks, such as placing a series of objects in a straight line for architectural visualizations, motion graphics, or environment design.
+
+The script features real-time feedback, allowing you to interactively adjust the spacing and see the results immediately.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "DistributeObjects" from the scripts dropdown menu.
+# '''Select Objects''': In your 3ds Max scene, select the object or group of objects whose animation you want to distribute.
+# '''Choose the Axis''': Along which you want to distribute the objects.
+# '''Set the spacing distance''': Using the '''Offset''' spinner.
+# '''Press the Distribute Objects button''': To distribute your objects and apply your settings, press the "Distribute Objects" button.
+# '''RT button (Real-Time, Optional)''': If your scene is not very heavy, enabling this option allows you to see the result of changing the distribution axis or the Offset value in Real-Time. Turn this option OFF if you are distributing a large quantity of objects to avoid slowdowns.
+
+== User Interface ==
+The script's interface is designed for quick and easy object arrangement.
+
+* '''Distribute Objects''': Applies the current axis and offset settings to the selected objects. This is only necessary if Real-Time mode is disabled.
+* '''Axis (X, Y, Z)''': Allows you to select the world axis (X, Y, or Z) along which the objects will be distributed.
+* '''RT''' (Optional): Toggles the '''Real-Time''' feedback mode. When checked, any change to the Axis or Offset will instantly update the position of the selected objects.
+* '''Offset''': Controls the distance between the pivot point of each object in the distribution.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Distribute_Objects

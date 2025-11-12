@@ -1,0 +1,30 @@
+=What to expect=
+We have several collections of stock footage elements that can include effects, light leaks, lens flares, dust, fog, and various items that can be integrated into a shot or edit.
+
+=Where to find stock footage=
+You can find many stock footages in
+
+ <nowiki>
+U:\resources\footage</nowiki>
+
+ <nowiki>
+U:\resources\-Stock_Elements</nowiki>
+
+ <nowiki>
+U:\resources\-Stock Elements 2</nowiki>
+
+
+We also have account in Shutterstock so if you need stock footage from the site, ask producer, director of the spot
+
+https://www.shutterstock.com
+
+=Where to save stock footage=
+
+'''Always''' copy over your footage to project you are working on. Do not link to files in U drive. This is because a project will be archived, and all the assets that are a part of it should go along with it.
+
+They can either go into project's footage folder (ex/ W:\Projects\BraveHurts\Assets\Footage)
+
+or "footage" folder of Specific shot you are working on. (ex/ W:\Projects\BraveHurts\SPOT__Catapult_20s\S_BH-CAT_010\Footage)
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Resources_-_Stock_Footage

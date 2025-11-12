@@ -1,0 +1,39 @@
+== Step-by-step workflow to create a project in FrameIO ==
+
+This is written assuming that you have a FrameIO account and have had it added to the MAKE workspace with Danny.
+
+# Log in to FrameIO
+# In the left navigation panel at the top there will be a "My Projects" section with a "+" icon. Click the "+" to add a new project.
+# Standard selections are fine and just fill out the project name with the Wrike Project name so there is no confusion.
+# To create a folder, right-click and select new folder. Create 2 folders "For Approval" and "Internal"
+   Note: The "For Approval" folder is where all approvals that go to the client are for and the "Internal" folder is were all pieces for internal review are stored.
+[[File:Creating FrameIO Projects MainPage.png|thumb]]
+[[File:Creating FrameIO Projects ProjectCreationTab.png|thumb]]
+
+
+== FrameIO Project Folder Structure ==
+
+In the "For Approval" folder, have it broken down with the follow main folders for organization purposes.
+* 01 Animatic
+* 02 Pre-Production
+* 03 Edits
+* zMisc
+
+In the "Internal" folder, have it broken down with the follow main folders for organization purposes.
+* 01 Animatic
+* 02 Dailies
+* 03 Edits
+* zMisc
+
+"zMisc" will be where you place any pieces that do not fall into the previously listed categories.
+
+== FrameIO Version Stacking ==
+In the "Internal" folder, we do not delete old versions of the spot but instead we stack them so they can be shown in the side-by-side view that the player has. To do this stacking, you just need to upload the new file then drag and drop it on the older file.
+
+  Things to note is that you cannot drop a stacked file on-top of another stacked file. You will need to unstack on of the stack's to place then place them on the other.
+
+To Un-stack files, you just right-click on the stack and select "Manage version stack" and this will let you click the "x" to remove them from stack and make them loose files again.
+[[File:Creating FrameIO Projects VersionStackMenu.png|thumb]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Create_FrameIo_project

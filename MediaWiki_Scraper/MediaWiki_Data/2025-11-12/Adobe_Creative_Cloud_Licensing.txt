@@ -1,0 +1,65 @@
+=Overview=
+
+In this article you will learn the following:
+* how to find and use your license for adobe creative cloud
+* what the different types of licenses are, and what they are used for
+* how to reassign and swap licenses as needed, for those with appropriate privilege
+
+==Finding your License==
+Each individual that receives an Adobe login credential, will be able to find it in their named user folder in Wrike.
+To locate yours, go to your -NAME folder, in the "Shared with me" section of Wrike.
+You will find a folder inside, labeled "your name" - IT info
+
+[[File:Adobe_Creative_Cloud_Licensing_01.png|350px]]
+
+In this folder you may see a variety of items, including your credentials, and some information about your workstation or computer setup.
+
+[[File:Adobe_Creative_Cloud_Licensing_02.png|950px]]
+
+Select your Adobe CC License task ( noted by the license status ) and you will see your login information.
+
+==License Usage Message==
+
+Each account can sign in, in two locations simultaneously, before you switch to a new computer, please sign out of adobe creative cloud, to minimize these issues.
+
+If too many computers are signed in simultaneously, you will receive an error, and be requested to sign a computer out. It will look like this:
+
+[[File:Adobe_Creative_Cloud_Licensing_03.png|550px]]
+
+If this is the case, speak with a producer or IT person to be able to tell you which machine to 'boot' out.
+
+This is why it is important for everyone to use their assigned licenses, and to stay consistent with updating Wrike with the status of who is using what.
+
+==Types of licenses==
+
+We have two tiers of creative cloud licenses, which are listed in your license task in Wrike, and they offer different access to applications
+
+*Adobe CC License - 
+**This is the full standard suite of Adobe applications ( photoshop, premiere, after effects, etc... )
+
+*Adobe CC License + Substance Applications - 
+**This is the full standard suite of Adobe applications ( photoshop, premiere, after effects, etc... ) Plus the addition of the Substance suite of 3D tools. These are fewer in count and should be used by 3D team members.
+
+==Assigning / swapping licenses==
+
+If you find yourself without a license, or needing to swap, please speak to a ''producer'' who will have access to the space on Wrike to be able to find availability, and re-assign licenses to appropriate individuals.
+
+===How to Assign / swap licenses===
+
+If you have access to 'The Team' space in Wrike, you will be able to re-assign licenses.
+
+Go to 'The Team' space in wrike, and select the 'Adobe License Tasks' folder.
+From there you will be able to see the list of available licenses, and who has them assigned to them.
+
+[[File:Adobe_Creative_Cloud_Licensing_04.png|750px]]
+
+To assign / re-assign a license, select one that does not have more than 1 person assigned ( two is the maximum ).
+Assign the users IT folder as a parent folder in Wrike.
+Ensure no task is assigned to more than 2 people at once.
+
+[[File:Adobe_Creative_Cloud_Licensing_05.png|750px]]
+
+It is good practice to message the individuals effected on the task so they are aware of what has changed as well.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Adobe_Creative_Cloud_Licensing

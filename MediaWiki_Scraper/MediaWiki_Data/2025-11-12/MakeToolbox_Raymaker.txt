@@ -1,0 +1,22 @@
+= Raymaker =
+[[File:Raymaker UI.png|177x177px]]
+
+== Overview ==
+'''Raymaker''' is a tool from the MakeToolbox toolset designed to create a dynamic spline between two selected objects. The tool generates a line and binds its endpoints to the objects using a Skin modifier.
+
+== How to Use ==
+The tool requires exactly two objects to be selected to create the bound ray.
+
+# '''Open the Tool:''' From MakeToolbox, select "Raymaker Tool" from the scripts dropdown menu.
+# '''Select Two Objects:''' In the viewport, select the two objects you want to connect with a spline (e.g., a joint and its pole vector control).
+# '''Create the Ray:''' Click the '''"Make Bound Ray"''' button.
+
+A new spline object will be created, stretching between the pivot points of the two selected objects. The spline is automatically parented to the first object and skinned to both, ensuring it moves and stretches correctly as the objects are transformed.
+
+== User Interface ==
+
+=== Make Bound Ray Button ===
+This is the only button in the tool. Clicking it executes the entire process of creating and binding the spline based on the current selection. If you do not have exactly two objects selected, an error message will be displayed.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Raymaker

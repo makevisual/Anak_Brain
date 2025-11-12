@@ -1,0 +1,121 @@
+=What is the test page=
+This page contains various examples of the most common formatting use cases. 
+Click the Edit Source link, and copy whatever you are looking for.
+
+Here are some links to more information if needed
+
+[[https://www.mediawiki.org/wiki/Cheatsheet|Mediawiki formatting cheatsheet]]
+
+= Text Formatting =
+
+==Links==
+
+'''You can link to a page:'''
+
+[[Main Page]]
+
+
+'''You can link to a part of a page:'''
+
+[[TestPage#Special_Text_Blocks]]
+
+
+'''You can link to an external site:'''
+
+[http://www.google.com]
+
+or
+
+http://www.google.com
+
+
+'''You can override the text for a link by using a pipe trick:'''
+
+[http://www.google.com|This is my custom text for a link]
+
+==Special Text Blocks==
+
+These are useful for drawing specific attention to pieces of text, as well as being able to use characters that are used in the formatting of the wiki.
+
+Most common use cases for this is for any computer command, file path, or specific text used for a computer
+
+Here is a path to the MAKE Brain content.
+ <nowiki>
+U:\MAKE_SITE\MakeBrain\Pages_and_Content</nowiki>
+
+Also you can use the aforementioned special characters.
+
+ <nowiki>
+==[[ this would normally break mediawiki ]]==</nowiki>
+
+
+----
+You can also draw a horizontal line
+----
+
+==Bold and Italics==
+
+''You can make something italic''
+
+'''You can make something Bold'''
+
+'''''You can make something Bold and Italic'''''
+
+== Header1 ==
+Each time you add an additional indent, the style changes slightly.
+=== Header2 ===
+you can keep doing this for quite a while.
+==== Header3 ====
+Each header has its own link in the navigation panel at the top of the article.
+===== Header4 =====
+Eventually the headers become difficult to tell apart, and you may be better off just using bullet points, or sub-items
+
+=Sub-Items=
+Sub-Items work the same way as Headers, however their formatting stays the same.
+*You can keep adding sub-items just as you would with headers.
+**But unlike with headers, each item should be the content.
+***So that the formatting looks clean, you would want to follow this structure.
+****And you can go for quite a while.
+
+=Media=
+
+What good is a media wiki without the media? It is pretty simple to imbed pictures and video into your page.
+
+First you will need to upload some media. You can do so by finding the "upload file" link under the "tools" headder on the left hand side toolbar of most pages on this mediawiki.
+
+Below you will see some examples of inline content, and the same content displayed as a thumbnail.
+
+==Inline Media==
+
+This is inline media, and can have its width set by the number after the pipe character in the link. Look at the source code to see how to add an image.
+
+[[File:HankHillHotdog.jpg|250px]]
+
+And here is how to add a video.
+
+[[File:Hotdogvideo.mp4|250px]]
+
+As you can see, as long as the file is uploaded into the mediawiki, it should be very easy to work with.
+
+==Thumbnail Content==
+
+[[File:Hotdogvideo.mp4|thumb]]
+
+Additionally content can be shown as a thumbnail, that is off to the right of the page, staying out of way of the main content you wish to provide. Here you can see the text 'thumb' is used after the pipe, to define the media as a thumbnail. Both of these instances refer to the same file, and if replaced, or updated, would update all instances across all pages. This can be done for images and video.
+
+You can control the media much much more, with captions, borders, and other placement and size controls. If you look at this link it will show you [https://www.mediawiki.org/wiki/Help:Images#Syntax|all available syntax.]
+
+Here I am going to add some more text, so the formatting of the thumbnails looks good, and does not overlap with the following section.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi nullam vehicula ipsum a arcu cursus vitae. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Sagittis eu volutpat odio facilisis mauris sit amet massa. Rutrum tellus pellentesque eu tincidunt tortor. Massa eget egestas purus viverra accumsan. Feugiat vivamus at augue eget arcu dictum varius duis at. Purus in mollis nunc sed id semper risus. Semper viverra nam libero justo laoreet sit amet. Fusce ut placerat orci nulla pellentesque. In eu mi bibendum neque egestas congue. Maecenas pharetra convallis posuere morbi. Sed viverra tellus in hac. Faucibus interdum posuere lorem ipsum. At imperdiet dui accumsan sit amet nulla. Cras tincidunt lobortis feugiat vivamus at augue eget arcu.
+
+Egestas sed tempus urna et pharetra. Enim tortor at auctor urna nunc id cursus. Volutpat diam ut venenatis tellus in metus vulputate. Id leo in vitae turpis massa sed elementum. Pharetra massa massa ultricies mi quis. Tincidunt ornare massa eget egestas purus viverra. Non blandit massa enim nec dui. Sit amet luctus venenatis lectus magna. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Tellus in hac habitasse platea dictumst vestibulum rhoncus est. Porttitor rhoncus dolor purus non enim praesent.
+
+= Navigation =
+
+At the bottom of a page, place the appropriate category, and this is how.
+
+[[Category:Documentation]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=TestPage

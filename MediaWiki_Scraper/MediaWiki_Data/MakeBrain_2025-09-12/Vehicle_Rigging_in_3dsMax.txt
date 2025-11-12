@@ -1,0 +1,134 @@
+=Intro=
+MAKE follows a standardized vehicle rigging process because we do it so often. We typically start from CAD geo we receive and parent all of the pieces to a pre-existing vehicle rig. This rigging process is basically just parenting and setting pivots, as nothing is deforming with skin modifiers because the geo pieces are all solid/hard. 
+
+= Resources Before You Start =
+== Pre-Existing Assets ==
+
+[[File:Vehicle Rigging in 3dsMax HotWheelsDatabase.PNG|500px]]
+
+There is a MAKE spreadsheet that contains an organized list of Hot Wheels vehicles we previously have created assets for. Check to see if the asset you have to create may already exist: '''[[HotWheels 3D Assets Directory]]'''
+
+[[File:Vehicle Rigging in 3dsMax MasterCarFile.PNG|500px]]
+
+Additionally, there is a Max scene that contains many Hot Wheels cars with proper materials and rigs, all in one file for easy access. If your CAD is missing certain parts, they can be pulled from here.
+
+If you're using texture files/deco from these assets, make sure to copy the files over to your new asset's surfaces folder. '''Merge the assets you need from this file into your scene, don't work in/save over this file.'''
+
+ <nowiki>
+U:\resources\Rigs\StandardVehicleRig\CAR_Cars\Build\Model\CAR_Cars_Model_v001.max</nowiki>
+
+== Example File ==
+
+[[File:Vehicle Rigging in 3dsMax ExampleVehicle.PNG|500px]]
+
+Most of the time, these vehicles are being rigged and set up for use in a 3D animatic. They will later be finalized with better materials and deco further along in the production, but it's important everything is set up properly in the beginning so there's no future issues. 
+
+Check out this max file for an example of what we're aiming for at animatic-quality level, with no final materials yet:
+
+ <nowiki>
+U:\resources\Rigs\StandardVehicleRig\ExampleFile\HTC08_GTScorcher_Model_v001.max</nowiki>
+
+You'll notice that the standard vehicle rig contains controllers (green splines) and drivers (pink splines). The controllers are the splines that animators will set keys on. The drivers are splines in between the geometry and the controllers in the parenting hierarchy. They are useful in the event that if geo needs to be swapped, there is a barrier between the controllers and the geometry that is being replaced. This allows adjustments to the controllers to be made more easily too, as there is a constant that can still be baked down.
+
+== CAD ==
+
+[[File:Vehicle Rigging in 3dsMax WrikeCADLocation.PNG|600px]]
+
+It's important to make sure you're properly importing CAD into your max scene. The location of your CAD should be in the Wrike task you were assigned.
+
+'''For more information on getting CAD production ready before rigging, read this:''' [[Converting CAD for production]]
+
+= Rigging Steps =
+
+== Starting the Rig ==
+
+ <nowiki>
+1. Import CAD for your vehicle. The CAD you're importing should match the reference images and deco art provided.
+
+2. Create an asset using MAKE's asset switch plugin, under MAKE Tools>AssetSwitch>Setup>Create new Asset. Path the asset to the proper project location, select Characters for the category, and enter the Handle (usually a five digit label of letters and numbers) and the vehicle name provided in the Wrike task you were assigned. Creating an asset gives you a global control in your scene, makes an asset folder in the proper project, and saves your max file here: (PROJECT_NAME)>Assets>Characters>(Your asset folder)>Build>Model with proper naming (Example: HTC07_BoneShaker_Model_001.max).
+
+3. Make the vehicle face forward in 3D space, have the tires rest on the floor grid, and the vehicle roughly centered at the origin from top view.
+
+4. Ensure the CAD is at the correct scale by merging in a scale reference. Delete the scale reference after checking. File>Import>Merge this file into your scene: U:\resources\Rigs\StandardVehicleRig\ScaleRef\V_ScaleRef_v001.max
+
+5. The two front wheels should be their own independent geos, and the rear wheels one connected geo.
+
+6. Reset XForm on all geo.
+
+7. Center pivots on all geo.
+
+8. Assign some basic materials to each part of the vehicle while looking at the reference provided. </nowiki>
+
+== Rigging ==
+
+ <nowiki>
+9. File>Import>Merge in the standard vehicle rig: U:\resources\Rigs\StandardVehicleRig\VehicleRig\Build\Rig\V_00000_StandardVehicleRig_v001.max
+
+10. Rename all geometry, drivers, controllers, and their layers so the five digit handle matches the one in your Wrike task. (Ex. V_00000_Name should be renamed to V_HTC08_GTScorcher)
+
+11. Translate geo and controls slightly if needed so the rig fits and align wheel geometry to wheel drivers. Do not scale or rotate the rig controllers or drivers.
+
+12. Select all geometry, drivers, and controllers and Alt+Right Click and select Freeze Transform and Freeze Rotation.
+
+13. Parent the geometry to the drivers and controllers according to this visual below:</nowiki>
+
+[[File:Vehicle Rigging in 3dsMax Standard Vehicle Rig Parenting Hierarchy.png|600px]]
+
+== Finalizing the Rig==
+
+ <nowiki>
+14. Check if everything is parented correctly by rotating and translating wheel controllers, body controller, and drift controller. Translate/rotate the local and global too.
+
+15. Change the global and local radius to better fit your model (if needed) by selecting them and changing the Radius value in the modifier panel. Typically the local radius is 2.0 and the global is 2.5
+
+16. Assign the asset's multi material to the global.
+
+17. Select all your geo, go to the MAKE Toolbox>Scene Utilities, under Save and Fetch Name select "Save Name on Selected". This ensures the geo names are saved and can be fetched using "Fetch Name On Selected" if they are changed accidently or broken in the future.
+
+18. Publish the asset by selecting the asset's global, then MAKE Tools>AssetSwitch. Your asset needs to be pathed to the correct location. Under "Asset", your created asset's name should be shown and the location of where your asset folder is. If it is correct, select Publish, and make sure only Material and 3dsMax File are checked on then select Publish (2) Assets.
+
+19. Open a new max scene. Go to MAKE Tools>AssetSwitch and select No Object(s) Selected, locate your .asset file to bring in your asset and double check that everything looks correct. Then you're done!</nowiki>
+
+= V-Ray Proxies =
+
+You may also choose in some scenarios to publish your asset with the geometry converted into V-Ray proxy meshes. For publishing vehicle assets, this can be helpful especially if you are bringing these rigs into an already dense scene, and will allow for animation files to run smoother when animating. These can also be easily updated at a later date.
+
+== V-Ray Proxy Creation Process ==
+
+ <nowiki>
+1. Save a copy of your current rig file into the Build>Layout folder of your asset, and rename your file accordingly. (Ex. HTC07_BoneShaker_Layout_001.max)
+
+2. Select your geo then right click, and select V-Ray mesh export. For folder location, select the Cache folder located in your asset folder. Make sure "Export each selected object in separate file" is selected, uncheck "Export animation", and check "Automatically create proxies". Hit OK.</nowiki>
+
+[[File:Vehicle Rigging in 3dsMax VrayProxyExportSettings.PNG|350px]]
+
+ <nowiki>
+3. Once this exports, your geo will look a little different. The mesh has visibly deteriorated in the viewport, but it should appear as normal when rendered. You can double check if you want by creating a light in the scene and rendering using the V-Ray Viewport IPR plugin.
+
+4. Select all your geometry that you created proxies for, and navigate to MAKE Toolbox>Scene Utilities and under Save and Fetch Name, select Fetch Name on Selected to remove the VRayProxy_ tag that was added onto your geo's names.
+
+5. Publish the asset as normal, selecting 3dsMax file and Material.</nowiki>
+
+= Complex Vehicle Rigs =
+
+The standard vehicle rig works for most vehicles but there are special cases where more specialized rigs need to be used, like for the Hess truck or larger Hot Wheels vehicles like monster trucks. These rigs differ from standardized rigs as they may have more drivers and controllers for specific pieces, or controls more automated for certain types of animation.
+
+[[File:Vehicle Rigging in 3dsMax HessTruck.PNG|500px]]
+
+Here's an example of a rigged Hess truck:
+ <nowiki>
+U:\resources\Rigs\StandardVehicleRig\ExampleComplexRigs\HTK_HTruck_Model_058.max</nowiki>
+
+[[File:Vehicle Rigging in 3dsMax RaceAceRig.PNG|500px]]
+
+And a Hot Wheels monster truck:
+
+ <nowiki>
+U:\resources\Rigs\StandardVehicleRig\ExampleComplexRigs\ACE_RaceAce_Model_007.max</nowiki>
+
+For more information on creating complex rigs, check out the rigging hub located here: [[Rigging a character in 3dsMax]]
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Vehicle_Rigging_in_3dsMax

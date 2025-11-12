@@ -1,0 +1,238 @@
+= Introduction =
+
+This document is MAKE's definitive guide to color spaces: what they are, why they matter, and how we use them across departments. Whether you're compositing in Nuke, lighting in Max, editing in Heiro, or grading in Resolve, this guide will help you understand '''how light becomes pixels''' and how to keep those pixels looking consistent across the entire pipeline.
+
+Color is complicated, but it doesn’t have to be mysterious. We’re using the ACES color management system (with OCIO) to modernize our workflow and standardize how color is handled from camera to delivery. That means everyone ( artists, editors, supervisors, producers ) should understand a few core ideas:
+
+* We work in '''scene-linear color (ACEScg)''' to simulate realistic light and composite accurately
+* We grade in '''log space (ACEScct)''' to make intuitive, creative adjustments
+* We view everything through a calibrated lens: '''Rec.709 output transforms (ODTs)'''
+* And we deliver consistently to '''broadcast and web''' with color that matches client expectations
+
+This guide is concept-focused. It defines the key terms, explains the ideas, and shows you why we work this way. If you need practical instructions for how to work inside ACES on a shot, check out the sister article:
+
+[[Studio Color Pipeline: How to Use ACES at MAKE]]
+
+---
+
+[[File:Common_incorrect_colorspace_transforms.JPG|thumb|center|1200px|Series of images showing the most common incorrect colorspace applications to help identify issues]]
+
+By the end, you’ll be able to:
+* Identify what color space your footage or render is in
+* Convert between spaces safely using OCIO
+* Trust your viewer - and know when it’s lying to you
+* Understand why VFX are done in linear and grading is done in log
+* Speak the language of color with clients and collaborators
+
+This isn’t ( quite ) a class in color science. It’s the essential, practical knowledge you need to keep your pixels healthy at MAKE.
+
+
+
+==  Core Terminology ==
+
+;'''Color Space''' :A set of rules that define how color values correspond to actual colors. Think of it as the map that tells us what "red 0.5" really looks like.
+
+;'''LUT (Look-Up Table)''' :A file that remaps color values from one look to another. Often used to simulate the look of a specific display device or creative intent. Think “Instagram filter” for professionals.
+
+;'''Gamut''' :The total range of colors a color space can represent. Wide gamut = more colors. Narrow gamut = less. Gamuts are usually visualized as triangles on a horseshoe-shaped CIE diagram. 
+
+;'''Color Primary'''
+:A specific red, green, or blue reference point (wavelength) used to define the gamut of a color space. Primaries form the corners of the gamut triangle and determine how much of the visible spectrum the space can represent.
+
+[[File:Aces full.jpg|thumb|center|900px| Each gamut ( triangle ) is able to represent the values within its color primaries ( corners of the triangle ) ]]
+
+
+;'''Gamma''' :The curve that adjusts how the values are distributed. Human vision is non-linear, so gamma lets us store image data efficiently. Rec.709 and sRGB use gamma ~2.2. ACEScg is linear (gamma 1.0), which is ideal for math.
+
+[[File:Bpc linear 061.jpg|thumb|center|320px| The values between black and white are divided differently between linear and log ]]
+
+[[File:Gamma_curves.JPG|thumb|center|600px| This curve represents where the the color values are biased to and against ]]
+
+;'''Linear'''
+:This is where you should be doing work, Images are stored or processed in [[Studio_Color_Pipeline: ACES Overview & Best Practices#Light, Perception & Why We Do Color Math in Linear|linear light space]], where brightness values directly correlate with the amount of light in the scene. Perfect for rendering, compositing, and all light-based math. At MAKE, CG renders and .exr footage plates are stored in linear (ACEScg) for this reason.
+
+;'''Log'''
+:Images are encoded logarithmically to compress high dynamic range into a narrower data footprint. Log encoding mimics the way human vision perceives light, which makes it excellent for grading. Log images are not suitable for compositing or lighting math without first converting them to linear,
+
+;'''Bit Depth''' :The number of values you get per color channel. More bits = more precision, fewer artifacts, or banding, and can be manipulated more without errors.
+
+     '''8-bit''': 256 values per channel (e.g., JPG, delivery files) – avoid for working.
+
+     '''10-bit''': 1024 values – standard for video, better for grading.
+
+     '''16-bit float''': Massive range + precision – best for VFX, compositing, and grading.
+
+;'''OCIO (OpenColorIO)''' : OCIO defines how colors transform between spaces across apps like Nuke, Max, Resolve, and more. It ensures “that orange” looks the same everywhere  on your screen, on mine, and on the client’s iPad in full sunlight.
+
+;'''Working Space vs Display Space''' :Working space is where color math happens (e.g., ACEScg). Display space is what we preview on monitors (e.g., Rec.709 or sRGB). They’re different, and that’s okay.
+
+;'''RRT/ODT (Reference Rendering Transform / Output Device Transform)''' :ACES’s way of translating scene-referred color ( working space / in your project ) into screen-referred output ( display space / on your monitor ). Think of it like an intelligent translator who ensures linear light gets turned into something nice-looking on your monitor.
+
+= Color Theory and Applications =
+
+Lets discuss the key color spaces used throughout MAKE’s pipeline, what they are, and when we use them. These definitions are critical for understanding how footage, CG, and grading all fit into the ACES-based workflow.
+
+== Light, Perception & Why We Do Color Math in Linear ==
+
+The human eye doesn't see light linearly. We’re more sensitive to changes in dark tones than bright ones. Cameras and display systems take advantage of this by encoding light values using log or gamma curves. These curves allow us to store high dynamic range images using fewer bits, which is great for grading, but not so great for math.
+
+In contrast, computers are very literal. When simulating light, like adding glows, shadows, or blurs, so we need pixel values to behave like real-world light. This is why compositing, rendering, and lighting are always done in scene-linear space, like ACEScg. Some of you may have experienced glows changing or looking better when changing settings, this is why,
+
+== Color Spaces Defined==
+
+=== What is a color space more accurately? ===
+
+A color space is typically defined by three key components:
+*'''Color primaries''' – which specify the red, green, and blue chromaticities (defining the gamut)
+*'''Transfer function''' – also called a gamma curve, which maps scene or display values to encoded values ('''logarithmic, linear, or power-based''')
+*'''White point''' – usually D65 or DCI (defines what “neutral white” is)
+
+=== What color spaces might I encounter, and what are they used for? ===
+
+
+;*'''Log3G10 / RedWideGamut'''
+:A logarithmic encoding used by RED cameras. It captures a wide dynamic range in a compact format, ideal for grading and transforms. At MAKE, it's used as the intermediate state of RED footage before converting to ACEScg.
+
+;*'''Rec.709'''
+:A display color space used for HD broadcast delivery. Narrower gamut, gamma ~2.4. Used at the tail-end of our pipeline for mastering broadcast files.
+
+;*'''sRGB'''
+:The standard display space for web and general screen-based delivery. Similar to Rec.709, but gamma ~2.2 and different white point behavior. All marketing and online material is delivered in this format.
+
+;*'''ACEScg'''
+:The studio’s primary working space for VFX and rendering. Scene-linear with a very wide gamut, suitable for rendering high dynamic range CG. It uses a different RGB primaries set than sRGB, which is why we always convert assets into it before working. In ACEScg pixel values behave like real-world light. This is essential for physically accurate light simulation, blending, and rendering.
+
+;*'''ACEScct'''
+:A log-encoded variant of ACES, designed for grading. ACEScct is perceptually similar to Log-C and makes grading intuitive, while preserving color science compatibility with ACES. It's used in Resolve and for any color grading stage where creative intent is applied. The gamma is complicated, and is not good for compositing, it looks like this:
+     If x ≤ 0.0078125: y = 10.5402377416545 * x + 0.0729055341958355 | If x > 0.0078125: y = (log10(x) + 2.61499323372029) / 17.5207091755153
+
+;*'''ACES2065-1'''
+:The archival master color space of the ACES system. It uses the widest possible gamut (AP0 primaries) and is encoded in scene-linear float values. ACES2065-1 is the official interchange and long-term storage format — ideal for handing off projects between studios or archiving a project’s final plates. However, it is '''not recommended''' for daily VFX or grading work, as its extreme gamut can introduce negative values and artifacts when performing color operations. At MAKE, we do not composite or render in ACES2065-1. Instead, we convert it to ACEScg for any active production work, then return to ACES2065-1 only for final archival if required.
+
+= Usage =
+
+== Usage Summary ==
+
+*RED Camera footage starts in '''Log3G10/RedWideGamut''' → Transformed into '''ACEScg''' for compositing.
+
+*CG assets are rendered directly in '''ACEScg'''.
+
+*Purchased / Downloaded / Acquired CG assets need to be converted to '''ACEScg''', with '''diligence and scrutiny'''.
+
+*Grading is done in '''ACEScct''' for artistic control.
+
+*Final color is output through ODTs into '''Rec.709''' (broadcast) or '''sRGB''' (web) for viewing or delivery.
+
+[[File:Simple_Color_Pipeline.png|thumb|center|500px|Simple diagram showing ACES-managed flow from RED camera through compositing, grading, and delivery]]
+
+== Viewing & Output Display Transforms (ODTs) ==
+
+When we work in ACEScg or any linear or log color space, the images we’re manipulating are not meant to be seen directly. These values represent '''scene-referred''' light, which are raw numbers that simulate real-world brightness and color, but don’t yet correspond to how our eyes or screens interpret them.
+
+To actually '''view''' this data, we apply a display transform, specifically, an '''Output Device Transform (ODT)'''. The ODT is part of the ACES color pipeline and converts scene-linear data into '''display-referred''' imagery. In other words, it takes our high dynamic range, wide gamut work and compresses it into something usable for screens.
+
+This means that '''every time you look at an image in Nuke, Resolve, After Effects ( not you premiere ) or any OCIO-compliant viewer, you're not seeing the raw values, you're seeing the result of a viewing transform.''' Without it, your image would look flat, washed out, or completely wrong.
+
+==== Why This Matters ====
+
+- The viewer transform '''does not affect your render or export''' (unless baked intentionally).
+
+- You must '''match your ODT to your target display environment''' to make accurate creative decisions.
+
+- Doing VFX without the correct viewing transform leads to incorrect exposure, lighting mismatches, and creative confusion.
+
+- Almost everyone here has made this error, noticing it or not.
+
+==== MAKE Studio Viewing Standards ====
+
+At MAKE, all our review and display environments are standardized to '''Rec.709'''.
+
+- Our monitors are calibrated to '''Rec.709 gamma 2.4''', the broadcast reference standard.
+- Our artists use '''Nuke’s OCIO viewer''' with `ACEScg → Rec.709` as the active viewing transform.
+- Our conform and editorial tool, '''Heiro''', also previews and exports using Rec.709 transforms.
+
+This ensures that whether you’re doing VFX, grading, or final exports, you’re always seeing images the way our clients and end-users will.
+
+If you're working in ACEScg (for VFX), or ACEScct (for grading), the Rec.709 ODT maps your working colors into monitor-ready values — compressing highlights, rolling off color extremes, and simulating final output.
+
+==== Summary ====
+
+* You’re always looking through a lens, '''the ODT''', when viewing ACES-managed content.
+* At MAKE, that lens is Rec.709.
+* Consistent ODT = consistent creative intent from artist to artist, and shot to shot.
+
+Do not apply additional display LUTs on top of your ODT unless explicitly instructed. The OCIO config takes care of everything needed for accurate visual output.
+
+== Working and Reference Rendering Transforms ( RRTs ) ==
+
+Just like how we rely on an ODT to *view* our work correctly, we also rely on choosing the right '''working space''' to '''do''' the work correctly.
+
+Whenever we are ' doing work ' we want to be in an ACES managed workspace, working in either ACEScg & ACEScct.
+
+At MAKE, we transform all incoming footage or assets ( whether it starts as RED Log3G10, Log-C, sRGB, or 'jims weird ass curve' ) into '''ACEScg''' before we begin any visual effects, compositing, or image manipulation. ACEScg is a scene-linear color space, meaning pixel values behave like real-world light. This is essential for physically accurate light simulation, blending, and rendering.
+
+If you are using a camera other then the red, you must include the complete colorspace ( gamut / curve / white-point ) and encoding information in the VFX documentation, and provide it to the editor / vfx editor / lead artist. Take a photo of the settings on the camera to make it easy to rebuild the color pipeline after the shoot. '''This is essential to a smooth post-production.'''
+
+[[File:Raw_conversion_with_vectorscope.JPG|thumb|center|1000px|Raw camera footage transformed to into ACEScg using various transforms, with vectorscope display ]]
+
+
+== Use Case Breakdown ==
+
+=== Why We Use ACEScg for VFX & Animation ===
+
+ACEScg gives us:
+*'''Linear light math''': [[Studio_Color_Pipeline: ACES Overview & Best Practices#Light, Perception & Why We Do Color Math in Linear|Lighting behaves predictably.]] Doubling a value doubles the perceived brightness.
+*'''Wide color gamut''': Supports bright highlights, saturated CG, and camera colors without clipping.
+*'''Easier keying and mattes''': Clean separations are easier when data isn’t compressed into a log curve.
+*'''More predictable layering''': Glows, fog, motion blur, and lens flares all rely on physically plausible color interactions.
+*'''One unified space''' for CG, plates, and renders — no guessing which transform is applied where.
+
+All footage is converted to ACEScg using the appropriate Input Device Transform (IDT), and from that point on, VFX work happens in a physically accurate, consistent environment.
+
+=== Why We Convert RED Footage from Log3G10 to ACEScg ===
+
+RED cameras capture a wide range of light, much more than standard displays can show, so they record in a log format like Log3G10. This compresses the highlights and shadows into a more manageable curve, allowing footage to retain detail across extreme lighting conditions. It's great for preserving image integrity, but not suitable for VFX math. 
+
+By converting Log3G10 to ACEScg early, we restore the linear light relationships that existed in the scene. At MAKE, this transform is always the first step when bringing RED footage into the VFX pipeline.
+
+=== Why We Use ACEScct for Color Grading ===
+
+ACEScct is a log-style working space designed for artistic color correction. It’s perceptually uniform (like Log-C), which means:
+
+- Exposure and contrast controls feel natural
+- Small color tweaks yield visible, intuitive changes
+- It maintains compatibility with the broader ACES framework
+
+Once VFX work is done in ACEScg, we convert the result to ACEScct for final look passes, grading, and delivery preparation — where creative decisions take precedence over physical ones.
+
+This separation — **math in ACEScg, creative intent in ACEScct** — keeps our work clean, predictable, and scalable across projects.
+
+=== Why We Deliver in Rec.709 and sRGB ===
+
+These are the most common display color spaces: Rec.709 for broadcast, sRGB for web. They're narrower in gamut and designed for actual monitors / devices.
+
+At MAKE, we use OCIO output transforms (ODTs) to map our wide-gamut work into these spaces, ensuring consistency between what we create and what audiences see.
+
+= See Also =
+== Easy Reading and Watching ==
+[https://ciechanow.ski/color-spaces/ Color Spaces intro - with sliders and pictures]
+
+[https://acescolorspace.com/ Why and when to use ACES]
+
+[https://learn.foundry.com/course/5708/view/colorspace-in-mari-preserving-your-colors-from-brush-to-screen Actually working with ACES]
+
+[https://www.youtube.com/watch?v=Hlj5ep-85ys Exhaustive and Complete video presentation]
+
+[https://www.youtube.com/watch?v=99v96TL-tuY A shorter but still complete explanation of what a colorspace is]
+
+== Official Sources ==
+[https://acescentral.com ACES Central – Community and documentation]
+
+[https://opencolorio.org OpenColorIO Documentation]
+
+[https://www.red.com RED Camera Technical Resources]
+
+[https://learn.foundry.com/nuke Nuke Color Management Guide]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Studio_Color_Pipeline:_ACES_Overview_&_Best_Practices

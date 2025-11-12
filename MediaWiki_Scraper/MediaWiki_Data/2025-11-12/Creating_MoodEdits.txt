@@ -1,0 +1,92 @@
+{{DISPLAYTITLE:How to create Mood Edits}}
+
+A mood edit is a video version of mood boards; a mood edit is an edit of video examples that showcase the visual styles and overall impressions of a spot/spots. It is one of the major components in the pitch making process. The more video examples we have, the more image reference we can have as well, which helps to create mood boards in a pitch presentation. Following is the overall process of mood edit making.
+
+== Set up Premier Pro ==
+* Before you start looking for videos, set up Premier file to be ready to make a collection of clips.
+
+* Set up your Premier
+
+ [ProjectRootFolder]/Reference/_Moodedit/Comp
+
+* Make bins in your Premier for sequences, reference, audio, and additional assets.
+* Make a sequence, named 'Clips' (1920/1080, Square pixels (1.0), 24 fps), import the videos and bring them into Clips. Start making clips out of the videos.
+
+* Save your video references:
+
+ [ProjectRootFolder]/Reference/Vid OR [Project]/Reference/Vid/[subject: usually name of a particular component. ex) Text_Animation_Style, Playground_Setup, etc ]
+
+* As you keep searching for and saving videos, import them into Premier every so often to make clips.
+** Making clips of the shots/scenes that are fit for a mood edit in advance can speed up the overall process.
+
+== Finding right reference ==
+
+* There is no hard rule on searching for reference but followings are a few tips that can be helpful for the overall process.
+
+* Pay attention to the direction of the project/pitch during the kick off briefing; taking memos is helpful to stay on the subjects and to target proper references. Ask questions to double check on your understanding.
+* When looking for video references, keep it in mind that screen shots of those videos can be also used for mood boards. So find, download high quality videos if possible.
+* Make sure your findings cover all the aspects we want to emphasize in our pitch and showcase possible variations of each component.
+
+* Downloading videos
+** There are many resource to download/rip off/screenshot videos from YouTube, Vimeo, and so on. The following are some software you can use to do so.
+*** OBS Studio ( https://obsproject.com/ )
+*** ShareX ( https://getsharex.com/ )
+*** 4K Downloader: this is NOT FREE but honestly it is cheap enough ($15 for Personal plan) so that you can buy for yourself ONLY IF you don't mind. (  https://www.4kdownload.com/products/videodownloader-27 )
+
+== Sequence spec ==
+
+* Although the length of the edit depends on the type of a project we pitch for, the edit usually doesn't go longer than 1 min. Total 35~50 sec, including 5 sec of the tile card, is considered appropriate length.
+* Regarding the sequence setting for a mood edit, you can start from Sequence Setting/Editing mode preset called 'HDV 1080p', then switch to Custom, change frame rates to 24 fps/Square Pixels (1.0), and modify the dimension to 1920*1080.
+* Make two more sequences.
+** one named 'MAKE_[ProjectName]__MoodEdit_v001': this is for rendering. Edit sequence and title card will be placed in this.
+** one named 'Edit': this is where you actually make the mood edit. Place a black video on the first 5 seconds of the sequence for the title card. Your mood edit should start at 5 second point.
+[[File:Moodedit spec.png|alt=ref|thumb|693x693px|Mood Edit Sequence spec|center]]
+
+== Finding audio/music ==
+
+* The direction of audio/music is always subject to change as the project goes on. However, with mood edits, we can suggest a general direction for music early on the process.
+* Music can be from any source since the mood edit is only for internal communication with us and agencies/clients. Download them if you can or rip them off using Audacity (https://www.audacityteam.org/) .
+** Although it's very rare to occur, some times clients like the music used in a mood edit right away and want to use the same track for the actual project. So be mindful.
+** For some occasions, we often customize/edit music just for the mood edit if we'd like to impress a client to win a gig or the project requires extra attention on sound/music itself.
+
+== Editing a mood edit ==
+
+* There is no hard rule in editing a mood edit but at the end, the goal of the edit is to showcase how the final spot can feel. There are a couple of approaches to make the edit more appealing.
+
+* Try to project a narrative flow throughout the edit; reflect stories of scripts/storyboards that clients provide in the edit. In other word, treat the edit just like a short film with the beginning and the end. This can make the edit more than just carousel of visual reference.
+* Do color correction on clips if necessary; the color correction helps to unify the clips from different sources.
+* Match cut points to the beats; when the visual works with the music well, it just feels great :) 
+[[File:Moodedit tracks edit.png|alt=Edit|thumb|979x979px|Example of Edit sequence: Edit sequence is where you do actual editing.|center]]
+
+== Title Card/Essential Graphics ==
+
+* Once you have a mood edit ready, it's time to add the title card using '''''[[Essential Graphics]]''''' 
+** Title card features client and agency logos OR just client logo if no agency is involved, name of the project, version of the edit, and date.
+** Check out the Make Brain page 'Essential Graphics' to learn how to import MAKE custom essential graphics and how to edit them.
+* Once you have the title card ready, place 'Edit' sequence under the card. Unlink the audio track from Edit by right clicking it, then selecting Unlink.
+* Make a cut on the first 5 second point of Edit, where the black video ends, and slip through the 5 second clip to find the proper moment for the title card by using Slip tool (Y).
+[[File:Moodedit tracks.png|alt=Mood edit track|thumb|941x941px|Example of a mood edit sequence: this is the sequence you send to Media Encoder. Here you place the title card on the first 5 seconds of the edit.|center]]
+
+== Rendering ==
+
+* Once you have all the components of the mood edit-title card with proper client & agency logos and info + edit with music-send it to Media Encoder by clicking Export on the top of Premier OR Ctrl+M
+* On Export window, change Location to the folder to save the edit
+
+ [ProjectRootFolder]/Renders/Other/MoodEdit
+
+* Click 'Send to Media Encoder' on the right bottom of the window; Media Encoder should open automatically.
+* On Present Browser, find the preset called 'Vimeo 1080p Full HD'; it's under Web Video/Social Media tab. Click and drag it to apply on the edit in Queue.
+* Make sure if the output path is correct. Start the queue by clicking the green play button on the top OR hit Enter.
+* Check if the render is in the correct folder and if it is rendered correctly-are visual and audio working? anything is missing?
+* THERE! you have the mood edit :)
+
+== Examples ==
+Following are some examples of mood edits.
+
+* [https://makevisual.com/MAKE_Brain/Moodedit_examples/HUDL_Moodedit_v001.mp4 Example #1: HUDL]  
+* [https://makevisual.com/MAKE_Brain/Moodedit_examples/MAKE_AC_ChangingEverything_Moodedit_2022_v001.mp4 Example #2: Arctic Cat] 
+* [https://makevisual.com/MAKE_Brain/Moodedit_examples/MAKE_HVMTL__Moodedit_v003.mp4 Example #3: HV-MTL] 
+* [https://makevisual.com/MAKE_Brain/Moodedit_examples/MAKE_Walls__Moodedit_v001.mp4 Example #4: Walls]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_MoodEdits

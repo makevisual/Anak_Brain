@@ -1,0 +1,24 @@
+=Installing 3DS Max 2021 & Related Plugins=
+As of 2/28/2024 the standard version of 3DSMax in use is 3DSMax2021. This is installed during initial Workstation & Render Node setup but in the event a user needs to reinstall 3DSMax2021 for some reason, instructions follow.
+
+===Navigate to the Installation Folder===
+Open File Explorer from your Start Menu or Taskbar and navigate to <code>U:\3dsMax2021\3dsmax2021_x64_deployment\MAKE_03</code>. You can copy this file path and paste into the address bar within file explorer for easy access.
+
+[[File:Install3DSMax2021-ClickAddressBar.png]]
+
+
+[[File:Install3DSMax2021-PasteFilePath.png]]
+===Run the 3DS Max Installation Batch File===
+From within the 3DSMax Deployment folder, double click <code>Install Make_03.bat</code>. The 3DSMax 2021 installer will launch and install the Autodesk Desktop App followed by 3DSMax 2021. The installation will take approximately 10-15 minutes to complete. Upon completion, you will be prompted to either restart, or close the installer. You do not need to restart your computer to proceed to next steps.
+
+[[File:Install3DSMax2021-RunInstallBatch.png]]
+===Run the Plugin Installation Batch File===
+From within the 3DSMax Deployment Folder, double click <code>install_Plugins_multiBat.bat</code>. A command prompt window will appear and run many file copy processes that will install plugins for use on your local machine. Once the command prompt window closes, all 3DSMax Plugins are installed and you may now open and use 3DSMax2021 by launching the app from your start menu.
+
+[[File:Install3DSMax2021-RunInstallBatch-Plugins.png]]
+
+[[Category:3dsMax]]
+[[category:IT]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=3dsmax_2021_installation

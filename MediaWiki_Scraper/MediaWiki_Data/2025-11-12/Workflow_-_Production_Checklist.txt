@@ -1,0 +1,97 @@
+==Production Checklist - Project Start==
+*[[Create Project Working Environment]]
+*[[Create Wrike project]]
+*[[Create project communication channels]]
+*[[Collect project basic information]]
+*[[Align on project scope strategy and agenda]]
+*[[Create project schedule in Wrike]]
+*[[Create project internal treatment]]
+*[[Collect shoot details]]
+
+==Production Checklist - Ideation / Scripting==
+*[[Collect client references and assets]]
+*[[Create client delivery tasks]]
+*[[Create presentation Deck]]
+**[[Creating MoodBoards]]
+**[[Creating MoodEdits]]
+**[[Creating Styleframes]]
+**[[Create unique presentation items]]
+*[[Scriptwriting for a commercial]]
+
+==Production Checklist - Pre-Vis==
+*[[Collect animatic assets]]
+*[[Brief Pre-Vis Team for Pre-Production]]
+*[[CAD Asset requirements and standards]]
+*[[Storyboard procedures and best practices]]
+*[[Animatic procedures and best practices]]
+*[[Create a notation edit in Heiro, Premiere, or After Effects|Create a notation edit of the animatic]]
+
+==Production Checklist - Audio==
+*[[Setting up an audio project in audition]]
+*[[Audio standards and best practices]]
+*[[Creating audio stems and mixdowns]]
+*[[Creating an audio package]]
+
+==Production Checklist - Pre-Pro CG==
+*[[Digital Asset List Templates|Create Digital Asset List]]
+*[[Creating_an_asset_in_3dsMax|Create Assets]]
+*[[Main Page#3D Rendering Techniques|Look Dev lighting and Shading]]
+
+==Production Checklist - Pre-Pro Live Action==
+*[[Client product standards and best practices]]
+*[[Location standards and best practices]]
+*[[Casting standards and best practices]]
+*[[Wardrobe standards and best practices]]
+*[[Art Department standards and best practices]]
+*[[Workflow_-_Create_Production_Book|Create Production Book]]
+**[[Creating a shooting diagram|Creating Shooting Diagrams]]
+*[[Create Shooting Schedule]]
+*[[Determine equipment list]]
+*[[Call Sheets|Create and send Call Sheets]]
+
+==Production Checklist - Shoot==
+*[[VFX Shooting Document|Verify VFX Document is being recorded]]
+*[[Shooting Schedule|Prepare shooting schedule]]
+*[[Workflow_-_Check_out_or_using_film_equipment|Verify all equipment is packed and sent back]]
+*[[How to call out "That's a wrap!" to end a shoot]]
+
+==Production Checklist - Editorial==
+*[[Collect project basic information|Re-Verify Deliverables details and list]]
+*[[Offload and Transcode footage from a film shoot]]
+*[[VFX Shooting Document|Share VFX Documents]]
+*[[Logging and Weeding offline footage to prepare an edit]]
+*[[Creating audio stems and mixdowns]]
+*[[Reduce offline editorial project file]]
+*[[Export EDL, XML, OTIO for use in online edit]]
+*[[Conforming an online edit in Heiro]]
+*[[Export and share a daily]]
+
+==Production Checklist - Animation / VFX==
+*[[Conforming an online edit in Heiro]]
+*[[Building a shot structure in Heiro]]
+*[[Export and share a daily]]
+
+==Production Checklist - Finishing / Delivery==
+*[[Collect Deliverable specifications from client]]
+*[[Audio standards and best practices]]
+*[[Review an edit for QC]]
+*[[Workflow - Deliverables standards and best practices#Primary Content|Create Deliverables]]
+**[[Slating a project for broadcast TV]]
+**[[Creating an audio package]]
+**[[Creating a graphics package]]
+*[[Delivering files to client via FTP, Frame IO, Dropbox or Extreme Reach]]
+
+==Production Checklist - Project Close==
+*[[Retire Project Working Environment]]
+*[[Collect all cloud documents into project folder]]
+*[[Archive project and footage]]
+*[[Creating social media content]]
+*[[Creating a BTS or VFX breakdown of a project]]
+*[[Update the MAKE website]]
+*[[How to update Vimeo]]
+*[[How to update Social Media platforms]]
+
+[[Category:Workflow]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Workflow_-_Production_Checklist

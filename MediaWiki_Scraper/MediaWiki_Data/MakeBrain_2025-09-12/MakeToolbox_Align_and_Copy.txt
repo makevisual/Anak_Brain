@@ -1,0 +1,43 @@
+=Align and Copy=
+==Overview==
+Align and Copy is a tool from the MakeToolbox toolset that allows the quick distribution of a collection of objects over another set of selected objects, while giving options as parenting the distributed objects, distribute them randomly or change the reference from which the objects will be distributed from.
+
+This is an ideal tool to populate a layout scene made of non-renderable placeholder nodes with final asset objects like trees, benches, houses, poles,etc.
+
+[[File:AlignAndCopyUI.png|link=https://www.makevisual.com/brain/mediawiki/index.php?title=File:AlignAndCopyUI.png]]
+==How to Use==
+#'''Select objects''': In your 3ds Max scene, select the object or group of objects that you want to distribute on your scene.
+#'''Add objects to list ("+" button)''': Click the "+" (plus) button to add the selected objects to the list of objects to be distributed. If you want to remove any object(s), select the object(s) from the list and press the "-" (minus) button. Press the "Clear list" button to remove all objects at once.
+#'''Select a distribution method''': Choose between '''"All"''', '''"Cycle"''' or '''"Random"'''
+#'''Select a copy method''': Choose between '''"Copy"''' or '''"Instance"'''
+#'''Set the desired options''': Select '''"Copy Children"''' if you want to also copy the children of the nodes inside the "Objects to copy" list and '''"Parent to target"''' if you want the distributed objects to be automatically parented to the target nodes.
+#'''Set a reference object (optional)''': Set a reference node from which to derive the transforms to use on the objects to be distributed.
+#'''Select the objects to distribute over''': Select on your 3dsMax scene the target nodes where the objects inside the "Objects to copy" list will be copied and aligned to.
+#'''Press the Copy Objects to Targets button''': Press this button to start the process.
+==User Interface breakdown==
+===Objects to copy===
+This list shows the currently collected objects to be copied/instanced over the selected objects. To add more objects, select them on the viewport and click the "+" (plus) button. To remove objects from the list, selected the objects you wish to remove and click the "-" (minus) button. To clear the list click the "Clear list" button.
+
+If you select an object from the list, it will sync the selection on the viewport, i.e. if you were to click the "Cylnder001" on the "Objects to Copy" list, this object would also be selected on Max's viewport.
+===Distribution method===
+Determines the way the objects on the list will be distributed over the selected objects.
+*'''All''': Every object on the list will be distributed over the selected objects, i.e. in the example above, all 3 objects (Cylinder001, Sphere001, Box002) would be placed over the selected objects (in the image below, a point helper).
+[[File:AlignAndCopy ALL.png|link=https://www.makevisual.com/brain/mediawiki/index.php?title=File:AlignAndCopy_ALL.png]]
+*'''Cycle''': The objects inside the Objects to copy list will be distributed in a sequential way, from the topmost to the lowest of the list, based on the selection order of the objects to be distributed on.
+[[File:AlignAndCopy Cycle.png|link=https://www.makevisual.com/brain/mediawiki/index.php?title=File:AlignAndCopy_Cycle.png]]
+*'''Random''': The objects inside the Objects to copy list will be distributed in a random way, independent from the order of selection of the objects to be distributed on.
+[[File:AlignAndCopy Random.png|link=https://www.makevisual.com/brain/mediawiki/index.php?title=File:AlignAndCopy_Random.png]]
+===Copy method===
+Sets the distributed objects to be '''copies''' or '''instances''' of their original objects.
+===Options===
+*'''Copy Children''': If the object inside the "Objects to copy" list has any children, those children will also be copied/instanced with their parent over the objects to be distributed on.
+
+*'''Parent to target''': Parents the distributed objects to the objects they are being distributed over.
+===Pick reference===
+*'''Reference node''': Allows for the selection of a reference node which transforms' will be used to distribute the objects inside the "Objects to copy" over the objects to be distribute on.
+[[File:AlignAndCopy Reference.png|link=https://www.makevisual.com/brain/mediawiki/index.php?title=File:AlignAndCopy_Reference.png]]
+==See also==
+[[MakeToolbox]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Align_and_Copy

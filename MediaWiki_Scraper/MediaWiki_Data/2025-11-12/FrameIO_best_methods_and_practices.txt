@@ -1,0 +1,75 @@
+
+== FrameIO Project Folder Structure ==
+
+In the "For Approval" folder, have it broken down with the follow main folders for organization purposes.
+
+# Animatic
+# Pre-Production
+# Edits
+# zMisc
+
+In the "Internal" folder, have it broken down with the follow main folders for organization purposes.
+
+# Animatic
+# Dailies
+# Edits
+# zMisc
+
+"zMisc" will be where you place any pieces that do not fall into the previously listed categories.
+
+== Creating a Sharable Link ==
+To create a link to send to a client or use for internal review. Do the following:
+
+[[File:FrameIO best methods and practices FrameIO ReviewLinkWindow Main.png|thumb]]
+[[File:FrameIO best methods and practices FrameIO ReviewLinkWindow Settings.png|thumb]]
+# Right-click on the folder with your files you wish to share
+# Select "Share for Review"
+# Click the "Settings" tab at the top of the popped up window.
+# For Clients Make sure the following are turned on: Allow Downloads, Allow comments, Allow approvals
+# Click the "Sharing" tab at the top of the window.
+# Click the link icon to copy the shareable link.
+# Paste the link to sending service you are using, probably email.
+
+===Setting a link template in a project===
+Everytime you click a link in FrameIO it will have the settings revert back to the project default, which means downloadable is clicked off. To save yourself the headache of having to turn that on each time. Go into the "Share for Review" for a project and click the button at the bottom on the "Sharing" window. This will let you have the share options you make there saved for that project. 
+  This is on a per project setting and this can be changed by other users so please make sure to check that your download link option is set correctly.
+
+===Updating and Turning Off Review Links===
+Incase you need to update a review link that went out and didn't have the right settings, mainly will be that downloadable is not turned on, you can update them after the fact.  You need to go into the project and select the "Review Links" tab on the main project page. This will then show you every review link made for the project. On the far right will be 3 vertical dots will let you get into the links settings and update it.
+
+In the Review Links section you can also turn off links by changing the "Active" slider to off. This is suggested to do for old approvals just to reduce confusion and the chance that someone selects an old link and makes notes off that link. Remember you can always turn a link back on as well there if requested.
+
+=== FrameIO Version Stacking ===
+
+In the "Internal" folder, we do not delete old versions of the spot but instead we stack them so they can be shown in the side-by-side view that the player has. To do this stacking, you just need to upload the new file then drag and drop it on the older file.
+
+ Things to note is that you cannot drop a stacked file on-top of another stacked file. You will need to unstack on of the stack's to place then place them on the other.
+
+To Un-stack files, you just right-click on the stack and select "Manage version stack" and this will let you click the "x" to remove them from stack and make them loose files again.
+
+== Notes with FrameIO ==
+Version stacking and commenting is a very handy feature but many clients do not know how to use it and generally wont interact with it. If they do, you need to make sure the clients give you a notification when all the notes are good to apply. This is necessary so you know at what point to transition the communication from the clients to the artist.
+
+Internally we use it for giving notes with frame accuracy and compare the previous edits as the project goes forward. The internal folder is to be placed in the parent tasks for everyone to be able to find and used internally.
+
+===To pull notes out of FrameIO===
+[[File:Creating FrameIO best methods and practices FrameIO Download Window.png|thumb]]
+'''Option 1 - Text Check boxes'''
+# Select the video with notes.
+# Review all notes and see if any have screen drawings
+# Selected the download icon on the right side of the screen next to the magnify glass
+# Hover over "Download as File..." and select "Plain Text"
+# Open Text file that was downloaded to your computer and remove all lines that are not the timecode and notes lines
+# Paste the notes into Wrike and make them selectable check boxes
+# Paste the review link in wrike as well (This should not be the client but the internal link)
+
+'''Option 2 - PDF print out'''
+# Select the video with notes.
+# Review all notes and see if any have screen drawings
+# Selected the download icon on the right side of the screen next to the magnify glass.
+# Select "Print" and a printable version with screen grabs and timecode will show up in a new browser tab.
+# Print this as a pdf document.
+# Place the notes document in the wrike task for your artist to review
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=FrameIO_best_methods_and_practices

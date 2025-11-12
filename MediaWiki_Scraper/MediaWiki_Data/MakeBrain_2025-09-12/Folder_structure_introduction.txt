@@ -1,0 +1,30 @@
+All projects across the network share a folder structure and file convention. This makes it easy for anybody to find things in any project, regardless of who made it and when, because things are always stored in consistent places. The structure follows this basic template:
+
+[[File:Folder structure.png|frameless|527x527px]]
+
+
+
+'''[animatic] -''' Template folder for Animatic Spots, containing scene and asset subfolders specific to the Animatic. Duplicate and rename to create Animatic Spots.
+
+'''[spot] -''' Template folder structure for 'Online' or ''"Real"'' Spots. Contains scene and asset subfolders for storing things specific to the Spot. Spot folders are typically created automatically during the [[Conforming an online edit in Hiero|Conform]] process, but can be manually duplicated and renamed if needed.
+
+'''Assets -''' Contains subfolders for assets used in the project. Most assets and their working files should be stored here, except in rare, very spot or shot-specific circumstances.
+
+'''Design -''' Storage and working files for concept art, character designs, storyboards, and related Pre-Production materials or assets.
+
+'''Domains -''' Location for storing Unreal projects, which have their own self-contained file structure unique to Unreal
+
+'''Reference -''' Various internally sourced reference pictures, videos, sounds that relate to the project. Reference from the Lead, Director, or Artists working on the spot should be stored here.
+
+'''Renders -''' High-resolution final outputs for digital files. Deliverables to client and all Daily Renders and outputs of the spots go here. Shot-specific renders or working files are '''''NOT''''' stored here.
+
+'''Shortcuts -''' Easily accessible shortcuts to things like the project's Wrike page, Dropbox Folder, or Raw Footage location.
+
+'''Source -''' This folder is for anything generated externally that is used in the Project. Assets/Notes from client, Stock Footage, Purchased 3D Models, etc are all stored here. Reference files provided by the client are stored in this location as well.
+
+'''SPOT_... -''' The active folder for a Spot. A Project can have any number of Spots within it, and each Spot will get it's own unique SPOT folder and subfolders, to keep working files organized and accessible for all artists.
+
+'''Tests -''' A playground space for artists to use for Project-related R&D. Artists should make a subfolder for themselves and store any test assets or scenes there.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Folder_structure_introduction

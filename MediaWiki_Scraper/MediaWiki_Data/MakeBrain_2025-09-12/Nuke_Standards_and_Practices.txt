@@ -1,0 +1,159 @@
+
+=Introduction=
+It is best to follow a set of expected behaviors, so when other artists need to go into your comps, they are easily able to parse what is happening. No one wants to spend an hour or more dissecting a comp just to figure out what is happening where. Almost all comps made here at MAKE should be very similar in structure. Look at the images below to see how a typical VFX comp will be set up.
+
+'''Overall VFX comp Structure'''
+</br>
+[[File:NukeStandardsAndPractices_StandardCompSetup_001_v001.jpg|1200px]]
+</br>
+</br>
+
+'''3D camera setup for a spherical dome and card elements'''
+</br>
+[[File:NukeStandardsAndPractices_StandardCompSetup_002_v001.jpg|1200px]]
+</br>
+</br>
+
+=Nuke licenses=
+	There are many different types of nuke licenses, and we have a limitted number of seats for each type. we have more seats for lower level licenses, such as Nuke Assist and fewer seats for higher level liscenses such as NukeX. When working in Nuke you should always use the lowest level license you can, as to not take away a more valuable seat when you dont need it. You can [https://learn.foundry.com/nuke/content/getting_started/meet_nuke/nuke_product_family.html read more about the Nuke family of licenses here.] It is also best to close you nuke scripts when you are done editing them, and when you leave at the end of the day, so you are not taking away a potential software license from another artist.
+
+	<ul>
+
+		<li>
+			Nuke Assist - Provides basic tools including Roto, RotoPaint, Merge, Transform, and so on. The Nuke Assist mode is intended for use as a workstation for artists performing painting, rotoscoping, and tracking.
+		</li>
+		<li>
+			Nuke - The standard liscense,  includes all of the essential compositing tools
+		</li>
+		<li>
+			NukeX - Provides the most tools and features, for tracking, clean up, refining 3D, and AI
+		</li>
+	</ul>
+
+
+=Nuke Best Practices=
+
+
+<ul>
+	<li>Before you open a comp check when it was last modified, if it was recently, someone is probably still working in that comp
+	</li>
+	<li>Always version any comp you open before you start working
+	</li>
+	<li>Version often. avoid loss of work when your file get corrupted, you need to go back to an old version
+	</li>
+	<li>Keep your comps clean and organized, delete or disconnect nodes that are not being used, do not just leave them disabled. It can be confusing when another team member goes into your comp, they wont know if they are supposed to be disabled or not.
+	</li>
+	<li>There should generally be a flow of left to right for the B pipe, and a flow of Top to bottom for any A pipes being merged on. With the Write node for the shot being the last thing in the bottom right.
+	</li>
+
+	
+	<li>Nodes that are a "cheat" or used to bring things inline with the neighboring shots should be set as a different node color, we usually use a bright pink or red.
+	</li>
+	<li>Reformat your CG to be at the working comp resolution, usually 3840x2160, this way you can render lower resolution 3D renders before the final but still comp screen space effects that are dependent on resolution.
+	</li>
+	<li>Check your bounding box, you generaly should not have pixels outside the working resolution, Add a reformat and remove unnecessary pixels, this will also speed up your comp.
+	</li>
+	<li>you should not be carrying forward and merging many channels you do not need, your comp will run faster with them removed. Use the remove node to keep or remove channels until you are only carrying forward the channels you need. This node should be placed as deep into the comp as possible for the best efficiency.
+	</li>
+
+	<li>ZDefocus nodes should usually be instanced, as you generally want them to be effecting the comp uniformly, So a change made in one node will also be made automatically in the others.
+	</li>
+	<li>Cryptomats selections should be made before 3D renders are up scaled to avoid artifacts. If your 3D is being up scaled with reformat nodes, it should be build like the image below to avoid artifacts.
+		</br>
+		[[File:NukeStandardsAndPractices_Cryptomatte_001_v001.jpg|200px]]
+		</br>
+	</li>
+	<li>Write nodes, both at the end of the comp and in pre-renders should only render the necessary channels, usually, RGB or RGBA, this can be changed in the top left of the write node properties. Specific channels can also be removed from the pipe with the remove node.
+	</li>
+	<li>
+	</li>
+	<li>
+	</li>
+	<li>
+	</li>
+
+</ul>
+
+=Naming=
+	Labels can be added to nodes by switching to the Node tab in the properties panel. This is useful for differentiating what each node is doing in a stack of similar nodes. Grades are a good example of where you should be doing this. 
+		</br>
+		[[File:NukeStandardsAndPractices_Naming_001_v001.jpg|200px]]
+		</br>
+		</br>
+	Labels can also be added to Dots in the same way, this can often be helpful when you have a many pipes coming in from a long ways away.
+		</br>
+		[[File:NukeStandardsAndPractices_Naming_002_v001.jpg|200px]]
+		</br>
+		</br>
+	Backdrop nodes can be used to visual separate a section of the comp from everything else. These should also generaly have a label added to them.
+		</br>
+		[[File:NukeStandardsAndPractices_Naming_003_v001.jpg|200px]]
+		</br>
+		</br>
+	Stick Notes can be used to additional description to a comp
+		</br>
+		[[File:NukeStandardsAndPractices_Naming_004_v001.jpg|200px]]
+		</br>
+		</br>
+
+
+=Versioning=
+	Nuke can easily cycle up or down through versions of any file path within one of its nodes, Nuke does this by searching the file path for the string "v###" and incrementing or de-incrementing the number portion of the string. 
+	<br>
+	This can be done very quickly with the hotkey ''ALT+Up Arrow'' or ''ALT+Down Arrow''
+	<br>
+		<ul>
+		<li>https://learn.foundry.com/nuke/content/timeline_environment/versioning/using_versions.html
+		</li>
+		</ul>
+	
+	<br>
+	All versioning of read nodes should happen this way. Do not drag in a versioned sequence if read node for the last iteration of that sequence already exists. The reason not to bring in a new read node each time is any properties set on the read node will be lost and return to default.
+	<br>
+	<br>
+	For comps generated from a Hiero conform the write nodes file version will be paired to the nuke scripts file version. You do not want to manually increment these. they should should always stay paired the with script version
+	<br>
+		<ul>
+		<li>If a Write nodes versioning becomes unpaired with the script version, it can be repaired through the toolbar ''Make Tools > Version Write Nodes on Save''
+		</li>
+		</ul>
+
+
+
+=Troubleshooting a Slow Comp=
+Keep your comps running fast, no one should ever be waiting multiple minutes for their viewer to update when they make a change in the comp. Some common sources and fixes to slow comps.
+
+	<ul>
+		<li>The profiler node can scan your comp and tell you what is the slowest to calculate
+		</li>
+		<li>ZDefocus nodes with high values, or uncapped maximums, grade your ZDepth pass
+		</li>
+		<li>Vray Denoiser is slow, add a render switch
+		</li>
+		<li>Are you using a median with high values, roto it down to just the necessary area, or find an alternate method of blurring
+		</li>
+		<li>Add Pre-Renders to things such as background elements or keys
+		</li>
+		<li>Scanline renders are slow, use as few as necessary, remove motion blur
+		</li>
+	
+		<li>You can disable effects in the viewport, but still have them render using [https://www.nukepedia.com/reference/Tcl/ TCL expressions.] The expression below will set viewport value to 0, but the render value to 12. this can be useful for situations like motion blur samples.
+		</ul>
+ <nowiki>( $gui ? 0:12 )</nowiki>		
+			
+		</li>
+		<li>
+		</li>
+		<li>
+		</li>
+		
+	</ul>
+
+
+
+
+
+[[category:Nuke]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Nuke_Standards_and_Practices

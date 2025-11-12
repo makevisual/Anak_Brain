@@ -1,0 +1,63 @@
+=Screenwriting for MAKE Originals=
+
+We write all our original scripts in Google docs so we can take advantage of collaborative tools and accessibility remotely. 
+
+I'll explain best formatting practices, file naming, and workflow for the many, many versions you'll have to write as others provide feedback.
+==Formatting in Google Docs==
+
+Standard screenwriting format applies. If you have no clue about that, here's a page to explain.
+[[File:Screenwriting format.jpg|thumb|159x159px|none]]
+
+
+'''To replicate this formatting in Google Docs:'''
+
+Use Courier New, 12 pt font.
+
+Create a Title page with a show logo, episode title, version number, date, and who wrote it. [[File:Examplecoverpagescreenplay.jpg|thumb|155x155px|none]]Here's an example cover page from Sunny Side Down.
+
+Indent text using the rulers at the top of the page, selecting a block of text, and then moving the rulers in on both sides. We aren't strict about the margins on your formatting, just make sure dialogue is clearly different from scene descriptions and actions.
+== Organizing your files==
+
+When you create a new google doc for your script, make it in the scripts folder. If one doesn't exist for the property you're working on, then make one.   
+
+'''Title it with the show abbreviation, episode number, script title, your name, and a version number.'''  
+
+Example: SSD_Ep1_Pilot_Natalia_v00  
+
+'''When should you version up?'''
+
+Often, people will be making notes and important comments on your scripts you don't want to lose by versioning up. When you want to make a major rewrite, one that's not addressing minor comments or rewording things, but actually adjusting the structure of the script and the story, version up by going to FILE and MAKE A COPY. It will give you the option to keep comments in the new copy. Hit yes, unless the comments have lost relevance for some reason. But probably best to hit yes.
+
+IF you have lots and lots of scripts and lots of versions, it can be helpful to make an Archive folder and then keep only the latest version of each script out in the open in the scripts folder, with all old versions in the Archive.
+
+== How to Write Good ==
+
+I don't know how to do that either. 
+
+But general pointers:
+
+1. Don't use language that you could use in a novel. Scripts are a blueprint for what will go on screen. So don't talk about what the character is thinking, or use frilly language. Describe what you would see from the outside. Think like a director or board artist and picture it in your head.
+
+2. Read it out loud to yourself. It'll help trim and also get a sense of length on screen.
+
+3. Don't let scene descriptions go past 5 lines.
+== Collaborating ==
+
+USE THE COMMENTS. If you highlight the text you want to make a note on, right click, and the menu will give you the option to leave a comment. You should see all comments pop up in the right hand side of the page. You can also reply to other's comments, and they will see it next time they open the doc. Write down all your thoughts in the comments so we can document people's feedback and track changes. 
+
+Here's an example of what a script with comments looks like.
+
+[[File:Comments examples.jpg|250px]]
+
+'''Note: Don't get discouraged if scripts get thrown out and you have to start again.''' 
+
+Writing is like working with a lot of raw clay to make a great pot, it's gonna have a lot of flops and also you have to satisfy not just your own taste, but everyone you're working with. 
+
+The joy of it is getting to bounce ideas off each other and getting excited when something sticks. Have faith that even if the last version was a dud, you'll get another crack at it and you can always talk to others about what your stuck point is in the story, what's not satisfying, etc. 
+
+Also, don't be shy about having as many people read a draft as possible! Writing can be very subjective so getting multiple viewpoints is key. 
+
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_write_a_script_for_a_MAKE_Original

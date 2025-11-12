@@ -1,0 +1,60 @@
+ 
+= Overview =
+Beginning in August 2024, we will migrate all Make workstation computers from using a generic local account over to using individual user accounts. This means that once your workstation is migrated over, you will begin signing into your computer with your own individual login ID and password. Your user ID will be provided to you during the week of your workstation's migration onto the Active Directory Corporate Domain. Each user will be provided with an initial generic password to use for their first time logging in with the new user ID. Each user will be prompted to change their password to something unique that only they know upon logging into their migrated workstation for the first time.
+
+= Accounts = 
+
+=== Generic account ===
+The generic user account "MAKE" will still exist in the migrated environment, however it should only be used in the following scenarios:
+* Render Nodes
+* Computers that run displays such as in the big kitchen, the conference room, and the TV near the entrance to the 17th floor. 
+* Workstations that will be used by Freelancers, Interns, or other non-internal employees.
+
+=== Specific user accounts ===
+Each user will have their own user account. The typical format will be FirstnameLastname. '''The login ID is not case sensitive so you do not need to include capital letters for the login ID. Passwords ''are'' case sensitive.'''
+* Employees have their own account
+* Each user's login will be stored in their IT Folder within Wrike.
+* During the week that each user is migrated they will receive their login ID on a small sheet of paper which will be left at their desk.
+
+= How to log on =
+=== Windows log on ===
+As part of migrating your device to the domain your account will be logged into your workstation. This means that when you log in the morning after the migration, you should see your username on the login screen already. If for some reason you don't see your username, follow the steps below to log into your user account: 
+
+# Select your username from the bottom left corner of the screen if it is listed, then enter your password and press enter.
+# If your username is not listed in the bottom left corner, select "Other user". <Br> [[File:1-DomainLogin.png|862x862px]] <br>
+# Enter your username and password in the applicable box and press enter. <br> [[File:2-DomainLogin.png|639x639px]] <br>
+
+=== Troubleshooting ===
+Certain devices such as the server "Blue" will not be migrated to Active Directory at this time. If you attempt to connect to a device that is ''not'' joined to the Active Directory remotely via VPN or Remote Desktop Connection, you may need to change the format of the user name in order to log in.
+
+'''Example:''' You need to connect to Blue via Remote Desktop or VPN from your computer which has been migrated to the domain. When you attempt to connect you will likely see an error indicating that the password you entered is incorrect. This happens because your computer is attempting to pass the domain login ID through to the remote device, instead of the local machine's login ID. 
+
+'''Solution:''' When entering the Username to connect to a device that is '''not''' on the domain, you need to enter the username in one of the following formats:
+
+* computername\loginID - example: blue\administrator ''or''
+* .\Administrator
+** Entering .\ before the login ID tells the computer to use the ''<u>'''local'''</u>'' account instead of the domain account. By default, any computer joined to the domain attempts to pass "corp\" as the first part of the login ID. Entering either computername\loginID or .\loginID overrides that and will log you into a local computer account instead of your user/domain account.
+
+= Accessing Backup Drives / Servers =
+As all of the workstations are now migrated to the corporate domain, users that attempt to log into the Backup Servers using the normal backup server credentials may receive an error indicating their username or password is incorrect. This is because (as of 9/12/2024) the Backup Servers are not yet part of the corporate domain. In order to log into the Backup Servers you need to use a local account which you can do by appending the Backup Server's Computer Name and a backslash before the login ID as in the screenshot below. <br>
+[[File:Credentials1.png|alt=How to log into backup servers that are not joined to the corporate domain]] <br>
+The <computername> before the backslash is simply the same name as the backup server you are trying to access. After the computer name, enter the normal login credential you use to access the Backup server.
+
+'''Login IDs are not case sensitive including the computer name, passwords are case sensitive.''' 
+
+Examples:
+
+* backup1\Administrator -> Login to Backup1
+* backup2\Administrator -> Log into Backup2
+* backup3\Administrator -> Log into Backup3
+* Blue\Administrator -> Log into Blue (less likely needed as items stored on Blue are mapped to your computer by default)
+
+= Permissions =
+=== Drive access ===
+*  Rather than using a batch file to provision drives which runs at startup and can be unreliable, we are using drive mapping through Windows Group Policy / Active Directory. This means that immediately when you log in, before anything else happens you should already be connected to all relevant network drives.
+*  There are no changes to the drive letters or processes RE: saving files on the network so please continue to use the network share drives as normal.
+=== Different Drives per Job Role ===
+* Drives are now provisioned by job role meaning that a user in Marketing will see a Marketing network share whereas an artist or producer will not see the marketing drive or be able to access it.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Active_Directory_-_Accounts,_Logging_On,_and_Permissions

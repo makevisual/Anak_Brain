@@ -1,0 +1,171 @@
+== '''Article Summary''' ==
+In the competitive world of entertainment, commercial advertising, and original content creation, [https://videocityinc.com/commercial-video/bts/ Behind-the-Scenes (BTS)] and [https://library.fiveable.me/key-terms/advanced-visual-storytelling/vfx-breakdown Visual Effects (VFX)] breakdowns have become essential storytelling tools, allowing brands and creators (like us) to showcase the intricate processes behind the final piece. From highlighting the technical aspects of production to fostering a deeper connection with our followers by inviting them to be part of the "making of" our creative journey, these breakdowns reveal the magic behind the scenes and build trust through transparency. Whether it’s our MAKE commercial advertising work or MAKE Originals content, our goal is to capture these moments and engage all viewers on a deeper level.
+
+This article will be your guide to explore the various formats used in BTS and VFX breakdowns, ranging from in-depth long-form content that dives deep into the details, to short, snappy clips designed for quick consumption on social media. We’ll also examine how each format can be strategically leveraged to engage different types of audiences, extend the lifecycle of content, and contribute to a brand’s identity by showcasing not just the final product, but the craftsmanship and creativity that went into making it. By utilizing both long-form and short-form formats, brands can offer value to viewers, whether through educational insights, inspirational storytelling, or simply entertainment, while also boosting audience engagement and strengthening their presence across platforms.
+
+=== '''What is a BTS Breakdown?''' ===
+Behind The Scenes (BTS) Breakdowns highlight various broad stages of production, such as roughs, animatics, character design, and animation tests. BTS Breakdowns aim to give viewers an inside look at how the project came to life.
+
+=== '''What is a VFX Breakdown?''' ===
+Visual Effects (VFX) Breakdowns concentrate specifically on the visual effects used in a project. They showcase detailed elements like simulations, compositing techniques, and specific VFX tools used. They provide a deeper understanding of the technical side of animation, demonstrating how VFX enhance the storytelling.
+
+== '''Making a Client Project BTS/VFX Breakdown''' ==
+'''Overview''': Once a client project is completed, it's reviewed to determine if it contains compelling content suitable for a BTS or VFX breakdown. A '''Long Form Breakdown (Case Study)''' and a '''Mini Breakdown''' are both types of content that showcase a creative project, often used in marketing, advertising, or animation to explain the behind-the-scenes process. However, they differ significantly in scope and detail:
+
+=== '''What is a Long Form Breakdown ''(Case Study)'' VS Mini Breakdown?''' ===
+
+==== '''Long Form Breakdown (Case Study)''' ====
+* Deep dive into the entire project, more formal, longer content, great for portfolio and client engagement.
+
+==== '''Mini Breakdown''' ====
+* A more compact, focused look at specific moments or processes, suitable for quick consumption on social media or promotional materials.
+
+=== <u>'''Long Form Breakdown ''(Case Study)'' Project Examples'''</u> ===
+''To see ALL Case Study Examples look here:'' U:\pub\Case Studies
+
+==== '''2D Animation Breakdown - Blistex Kanka''' ====
+* ''Y:\Projects\Blistex Kanka - Cranky Canker Sore\Renders\Edits\BTS_Offline\1x1\BlistexKanka_BTS_Edit_1x1__v002.mp4''
+[[File:BlistexKanka BTS Edit 16x9 Thumbnail.png|frameless|415x415px]]
+
+==== '''3D Animation Breakdown - RBFF''' ====
+* ''Y:\Projects\RBFF - Re-Vite\Renders\Edits\BTS\16x9\RBFF_ReVite_BTS_Edit_16x9_v008.mp4''
+[[File:RBFF BTS Edit 16x9 Thumbnail.png|frameless|418x418px]]
+
+=== <u>'''Technical Specifications'''</u> ===
+
+==== '''Dimensions:''' ====
+* 1920x1920 ''(1:1 square)''
+* 1920x1080 ''(16:9 widescreen)''
+
+==== '''Duration:''' ====
+* About 60 seconds ''(unless otherwise specified.)'' 
+
+==== '''MAKE Title Card:''' ====
+* Start with an engaging title card introducing the project, incorporating graphics aligned with the project branding.
+[[File:MAKE Title Card.png|frameless|432x432px]]
+
+==== '''MAKE End Card:''' ====
+* All Client Breakdowns end with the MAKE 'M' Motion Design Graphic ''(graphic may change annually.)''
+
+[[File:MAKE End Card.png|frameless|433x433px]]
+
+=== <u>'''Content Structure'''</u> ===
+1.) Begin with a captivating clip from the finished project to hook the audience.
+
+2.) Follow with the title card for context before diving into the breakdown.
+
+3.) Divide the breakdown into 5-6 segments, each lasting 6-10 seconds.
+
+* For video: 1-2 brief clips per segment.
+* For images: 2-3 image slideshow per segment.
+
+4.) Maintain viewer interest through engaging cuts, dynamic transitions (push-ins, pans, zooms), and avoid lingering on any segment for too long.
+
+5.) End with another piece of finished content to bookend the breakdown.
+
+6.) Conclude with the MAKE logo animation at the end of the video.
+
+===<u>'''Editing Process'''</u>===
+==== '''1. Coordination''' ====
+
+* Touch base with the project's director, producer, and/or lead artists to collect an assortment of usable footage from the production process. 
+* Sometimes this will be as simple as gathering JPEGs of character designs, or as complex as making from-scratch turntables or exploded views of 3D assets - usually a combination across the spectrum. 
+[[File:RBFF-ContentExamples.jpg|766x766px]]
+
+===== <u>'''Visual Elements to Include'''</u> =====
+
+* '''Models''': Showcase character models, environments, and props.
+* '''Turntables''': Display 3D models from multiple angles to highlight details.
+* '''Animation Sequences''': Include in-progress animation clips to show the workflow.
+* '''Compositing Shots''': Demonstrate how individual elements combine in the final output.
+* '''Design Sheets''': Show character design sheets, environment concepts, and storyboards.
+* '''Lower Thirds & Descriptions''': Provide context and details such as character names and animation techniques.
+* '''Transition Elements''': Use smooth transitions between segments to keep the viewer engaged. Consider animations or graphic transitions.
+
+==== '''2. File Creation and Asset Import''' ====
+* Create a new project file in Premiere Pro, or begin from a template. Set the main sequence to a 1920x1920 ''(square)'' and the frame rate to 24fps.
+* Import all the necessary footage, and request complex shots (exploded views, rendered turntables, etc.) from other artists if needed for efficiency.
+[[File:PremiereProjectSetup.png|641x641px]]
+
+==== '''3. Assembling the Edit''' ====
+Start by using past example videos as a reference to guide your editing process. Begin the edit by arranging the collected footage into a sequence, organizing it into sections by category.
+
+Be sure to include the appropriate MAKE brand collateral, which consists of all required graphic elements: section headers, end tags, and any other essential graphics (like split-screen dividers or arrows) that help convey information and style.
+
+Please note that the MAKE Brand collateral package is currently being updated. In the meantime, use a previous BTS Premiere file and pull the needed assets from the latest BTS example, located here: \\backup1\O\Projects7\Blistex Kanka - Cranky Canker Sore\Y\SPOT__Kanka-BTS
+
+Aim to have roughly 5-6 sections total, each with a descriptive caption in the lower third of the screen, beneath the section header (see previous examples for reference.)
+
+==== '''4. Music Selection''' ====
+* Choose a piece of music from our company library or PremiumBeat.com that conveys an energetic, positive tone. ''(If using PremiumBeat music, tag Danny in Wrike with a link to the song's webpage for purchasing.)''
+** U:\resources\Audio
+[[File:PremiumBeats.png|601x601px]]
+
+==== '''5. Approval''' ====
+* Once the footage, text, and music are combined for an aesthetically pleasing edit, post a render of it to Wrike for approval.
+[[File:WrikeApproval.png|535x535px]]
+
+=== <u>'''Social Channels'''</u> ===
+Once Breakdown is completed it will be handed over to the marketing team to post on the following platforms:
+
+<u>Social Channels: [https://www.linkedin.com/company/make-- Linkedin], [https://www.facebook.com/makevisual/ Facebook], [https://x.com/MAKEVISUAL X (Formally Twitter)]</u>
+== '''Making a MAKE Original (Internal Project) BTS/VFX Breakdown''' ==
+''Overview'': The Marketing team frequently requests various types of breakdown videos to post on our MAKE Originals social media channels. The content of these videos and stills depends on whether the series features 2D or 3D animation.
+
+=== <u>'''Long Form Content'''</u> ===
+BTS 1-2 min, Posted on Youtube / private website, Interviews, Case Studies............
+
+
+=== <u>'''Short Form Content'''</u> ===
+'''Social Channels: [https://www.instagram.com/makeoriginalseries/ Instagram] , [https://www.facebook.com/MAKEOriginals Facebook], [https://twitter.com/makeoriginals X (Formally Twitter)] , [https://www.tiktok.com/@makeoriginals TikTok], [https://www.youtube.com/@makeoriginals/shorts YouTube Shorts]'''
+
+
+==== <u>'''Technical''' '''Specs'''</u> ====
+
+===== '''Length''' =====
+* 8-15 seconds
+===== '''Dimensions''' =====
+* 1x1 (1080 x 1080px)
+* 9x16 (1080 x 1920px)
+===== '''Thumbnail''' =====
+
+* The first frame of the clip (which serves as the thumbnail) must be eye-catching, not blurry, and character-focused.
+[[File:Capture.png|frameless|345x345px]]
+
+===== '''Loop''' =====
+
+* Ideally, the clip should loop seamlessly - [https://www.adobe.com/creativecloud/video/discover/loop-video.html Why and How to Loop a Video]
+
+===== '''Music Options''' =====
+* Original music from our series
+* Trending music that matches the vibe of the clip
+* Meme sounds that fit the clip’s context
+
+
+==== <u>'''Reference: Content Categories & Structure'''</u> ====
+BTS/VFX Breakdown video is behind-the-scenes video that "breaks down" the process of creating a particular scene or effect. It shows each step or layer of the process to help viewers understand how complex scenes, visual effects, animations, or other elements are built up to form the final product. To create these posts, regularly check the project folder on the MAKE network, Google Drive, and Wrike to stay updated on what the Artists are working on. Be sure to check with the Director and Producer of the specific series to get approval before revealing or posting anything
+====='''Compositing Breakdowns'''=====
+For 2D Compositing Breakdown videos, we can start with the rough sketch or animatic version, then gradually assemble the different layers and assets to create the final scene or frame, then we can let the scene play out and ensure the video loops smoothly back to the beginning. Or we can start the video with the final render. In this approach, we would showcase a scene, then freeze at a specific frame, and break down that frame by assembling the various layers, lines, and assets that make up the final picture!
+
+For 3D Compositing Breakdown videos, we will start with the final render, then freeze at a frame, and rotate the entire shot 60 degrees to the side to showcase the different layers used to build that particular frame.
+
+''Example:'' [https://www.instagram.com/reel/C9vE_gqyrq3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA== House on the Outlands - Ep 6 Comp Breakdown], [https://www.instagram.com/p/DAJ1dLuyipl/ Siames MV 'Alone in the Darkness - S250 Comp Breakdown], [https://www.instagram.com/reel/CyeIUmCyWDq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA== BraveHurts - Catapult Comp Breakdown]
+
+[[File:HOTO EP06 S210 Comp Breakdown 1x1 v001.png|frameless|247x247px]][[File:HOTO EP06 S210 Comp Breakdown 1 1x1 v001.png|frameless|247x247px]][[File:HOTO EP06 S210 Comp Breakdown 2 1x1 v001.png|frameless|247x247px]][[File:HOTO EP06 S210 Comp Breakdown 3 1x1 v001.png|frameless|247x247px]][[File:HOTO EP06 S210 Comp Breakdown 4 1x1 v001.png|frameless|247x247px]]
+
+====='''Animation Process Breakdowns'''=====
+The Animation Process Breakdown video will begin with the final render to ensure the first frame (which will serve as the thumbnail) looks appealing. It will then progress through the rough animatic, clean line version, and colored version. The video should automatically loop back to the final render or completed shot on various social media platforms, creating a seamless loop that emphasizes the transformation from start to finish. These videos aim to showcase the different stages of development involved in creating an animated shot or movement.
+
+''Example:'' [https://www.instagram.com/p/DAt3_Q-y0m1/ Dead Moon Walking - Animation Process Breakdown - Bogey Blunders], [https://www.instagram.com/reel/C_lMGA0ygaK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA== Sunny Side Down - Nat Walk Cycle - Animation Process Breakdown]
+
+[[File:Nat Walking Cycle Process Breakdown 1x1 v003.png|frameless|247x247px]][[File:Nat Walking Cycle Process Breakdown 2 1x1 v003.png|frameless|247x247px]][[File:Nat Walking Cycle Process Breakdown 3 1x1 v003.png|frameless|247x247px]][[File:Nat Walking Cycle Process Breakdown 4 1x1 v003.png|frameless|247x247px]][[File:Nat Walking Cycle Process Breakdown 5 1x1 v003.png|frameless|247x247px]] 
+====='''VFX Simulations Breakdowns'''=====
+A Simulation Breakdown videos will showcases realistic simulations of environments or VFX in 3D.
+
+''Example:'' [https://www.instagram.com/p/Cx6Bki5yFj0/ BraveHurts - Simulations - Water Sim]'','' [https://www.instagram.com/p/CyLz7OfS9JJ/ BraveHurts - Simulations - Snow Sim]
+
+[[File:Dauntless Water Simulation VFX Breakdown 1x1 v003.png|frameless|247x247px]][[File:Dauntless Water Simulation VFX Breakdown 2 1x1 v003.png|frameless|247x247px]][[File:Dauntless Water Simulation VFX Breakdown 3 1x1 v003.png|frameless|247x247px]][[File:Dauntless Water Simulation VFX Breakdown 4 1x1 v003.png|frameless|247x247px]]
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_a_BTS_or_VFX_breakdown_of_a_project

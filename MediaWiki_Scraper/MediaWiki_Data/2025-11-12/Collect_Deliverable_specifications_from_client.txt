@@ -1,0 +1,35 @@
+*[[Deliverables worksheet]]
+
+
+'''Define the deliverables.'''
+* The first step is to define the deliverables that you need from the client. This will depend on the scope of the project and the client's specific requirements. Once you have a list of deliverables, you can start collecting them from the client.
+
+'''Create a list of questions.'''
+* Once you know what deliverables you need, you can create a list of questions that you need to ask the client. This will help you get the information you need to collect the deliverables.
+
+'''Schedule a meeting with the client.'''
+* Once you have your list of questions, you can schedule a meeting with the client to discuss the deliverables. This will give you a chance to ask the client any questions you have and to make sure that you are both on the same page.
+
+'''Collect the deliverables.'''
+* Once you have discussed the deliverables with the client, you can start collecting them. If you have TVC deliverables, make sure to get the ISCI codes.
+
+'''Organize the deliverables.'''
+* Once you have collected the deliverables, you need to organize them. This will help you find them easily when you need them. You can organize them by file type, by project, or by client.
+
+'''Store the deliverables.'''
+* Once you have organized the deliverables, you need to store them in a safe place. This should be on the server and in Wrike.
+
+'''Update the deliverables.'''
+* As the project progresses, you may need to update the deliverables. This could involve adding new files, removing old files, or updating the information in the files.
+
+'''Provide the deliverables to the client.'''
+* Once the project is complete, you can provide the deliverables to the client. This can be done by email, by uploading them to a file sharing service, or by sending them on a physical storage device.
+
+'''Get feedback from the client.'''
+* Once the client has received the deliverables, you should ask them for feedback. This will help you improve the deliverables in the future.
+
+'''Use the feedback to improve the deliverables.'''
+* Once you have received feedback from the client, you can use it to improve the deliverables. This could involve making changes to the files, creating new files, or removing old files.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Collect_Deliverable_specifications_from_client

@@ -1,0 +1,36 @@
+=Overview=
+
+In this article you will learn the following:
+* How to create a google chat space that allows external users
+* Best practices and settings for security and usability
+* How to manage permissions and invite users
+
+==Creating an external google space==
+
+In google chat, click the "New Chat" button, and slect "Create a space".
+For external and internal email accounts to access the same chat, it needs to be a 'space'.
+
+[[File:ChatSetup_01.jpg|700px]]
+
+In the settings, create a name for the new space, and set the Access Settings to "Private".
+This allows you to check " Allow external members to join "
+Once these settings are chosen, you can create the space.
+
+[[File:ChatSetup_02.jpg|700px]]
+
+In your new space, click the dropdown next to the name and click "Manage Members"
+
+[[File:ChatSetup_03.jpg|700px]]
+
+In this popup window, you can add individuals or groups that you would like to add to the space.
+To add the entire studio, add the "all_staff" group, this will include everyone dynamically.
+Note: because these are private spaces, they are not discoverable. This means anyone has to be added manually.
+
+[[File:ChatSetup_04.jpg|700px]]
+
+To manage permissions, for more people to be able to add / remove members for non "all_staff" groups, click manage members, click the 3 dots next to their name, and make them a space manager, then they can add and remove others as well.
+
+[[File:ChatSetup_05.jpg|700px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Google_chat_space_setup

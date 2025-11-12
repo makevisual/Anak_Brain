@@ -1,0 +1,26 @@
+''In a Studios pipeline and network, Workstation/Render Farm software discrepancies are considered especially heinous. At MAKE, the dedicated administrators who investigate these vicious felonies are members of an elite squad following rules know as the Workstation Software Policy. These are their stories...''
+
+== General Guidelines: ==
+'''Installing/Updating software:''' Unless you have been specifically told to install or update any piece of software/driver/Operating System, DO NOT do so. Version numbers and systems are carefully controlled so all parts of the pipeline work together and nothing conflicts with other tools/versions.
+
+IT is permitted to use windows store applications, like OBS, Spotify, or a PPTX Reader etc. These can be installed on your local machine, without Administrator Privilege's in many cases.
+
+'''Special Cases:''' Occasionally a project will call for a certain tool or software that is not part of the standard deployment. If you need a non-standard tool, contact the Network Administrator to ensure the tool is safe to install and gets installed in a way that fits within the current operating pipeline.
+
+If you are attempting to install software, you will encounter a window asking for an administrator to allow the software installation. It will look something like this:
+
+[[File:Admin_Prompt.PNG|250px]]
+
+If it has ' ...enter an admin user name... ' you will need a network administrator to help you out. These are typically your producer, IT professional, or Danny. Ask the one with the most familiarity with your situation, and they will be able to have the software installed for you.
+
+'''Fonts:''' By default Fonts installed locally on your PC are not available on the render farm, and will cause errors and failures if the farm doesn't have access to the font. For things rendered locally on your PC, this is not an issue, if you need to render on the farm, contact the Network Administrator to get it installed safely. 
+
+If you need additional fonts, stick to adobe type-kit fonts unless a specific client requirement dictates otherwise.
+
+'''C: Drive/Desktop:''' When working, sometimes you want to copy a file or make an edit and store things in a temporary place, like Premiere preview files. It's okay to store these things locally on your desktop or a similar place, but these files should be cleaned up afterward, and should never be used or sent to anyone or anything that's not your local PC. All assets used in spots should be stored in a networked location.
+
+
+'''Other Considerations:''' Remember that your local PC is a small part of a large network of computers all working together in many different ways. Anything you do on your PC can have knock-on effects on the entire network, and to avoid delays and wasted time everyone should take care to avoid doing or installing anything that will cause issues. Additionally you may be required to move to a different computer if hardware issues arise, so it is strongly recommended to keep all files on the network.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Workstation_Software_Policy

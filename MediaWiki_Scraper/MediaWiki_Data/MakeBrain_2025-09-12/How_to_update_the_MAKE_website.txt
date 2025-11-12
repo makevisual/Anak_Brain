@@ -1,0 +1,202 @@
+== Items you need before updating MAKE website ==
+* Check the Wrike task. It informs you what should be on the breakdown based on the type of a project.
+* Amazon Cloud Front access
+** Ask a supervisor for the credential
+* Semplice access
+** Ask a supervisor for the credential
+* Final deliveries of spots (Pro-res MOVs ideally) + BTS edit if there is any.
+* Various stills extracted from Edits and BTS
+* Thumbnail video and its still for a project thumbnail for WORK page
+* Import these presets to your Media Encoder
+ U:\MAKE_SITE\MAKE SITE 10\Assets\MediaEncoder_setting
+* Import or make a custom preset for Save For Web in your Photoshop
+ U:\MAKE_SITE\MAKE SITE 10\Assets\MediaEncoder_setting\
+* Semplice: Semplice is a web design program using within Word Press
+* Word Press log-in info: Ask a supervisor for the credential
+* Access to Semplice: once you login to WP, launch Semplice (yellow tab on the top of WP dashboard)
+[[File:Semplice in WP.png|frame|Semplice in Word Press|none]]
+== Procedure ==
+
+=== ''Before making contents...'' ===
+* Set up a project folder by copying the following folder
+ U:\MAKE_SITE\MAKE SITE 10\_projects\[Template]
+* Rename the copied [Template] as the project, following the name convention as Client-Project title
+ ex) Easton[Client]-B5Pro[Project title]
+* Collect source materials and save them in [Client-Project]/Src/img OR vid, depending on the format of the source
+* Src vs. Content
+** Src refers original, raw files; Content refer compressed/trimmed versions of Src files. You place Contents on your Semplice project.
+* You DO NOT use Src materials as they are since they are usually huge in size, which make the overall page loading VERY SLOW.
+* BTS edit is often made alongside with a project breakdown webpage by artists. Communication with others, especially those who worked on the project, is very important to gather BTS assets.
+* BTS contents may not be available right away since it takes times for the artists to extract the assets/elements for the breakdown. You may start with layouts and stills while waiting for the assets being gathered.
+* Ask the artists that worked on the project if you don't know where to find them. Make a subtask(s) under the project breakdown Wrike task featuring a list of items/assets you need. Assign it to the project lead/artists, so he/she can forward it to the right person.
+
+=== ''Making contents'' ===
+
+==== Images ====
+* Bring videos to Photoshop and extract stills out of them
+* Using Export As... under Layer menu can speed up exporting process. The function will automatically add suffix as layers/stills are exported.[[File:Image-2023-04-26 09 22 31.png|none|frame|Export As in Photoshop]]﻿  
+* Renaming the stills/layers in advance helps shortening the time spending on organizing files later in the process.  ﻿  ﻿[[File:Layer naming convention.png|none|thumb|249x249px|Layer naming convention]]
+* Save images 
+ [Client-Project]\Src\images
+* After enough stills are saved, select the first batch of images you want to feature and compress them using Save For Web (ctrl+alt+shift+S)[[File:PS SaveForWeb Setting.png|none|frame|PS SaveForWeb Setting]]
+* Crop images if necessary: all images are in 16:9 ratio by default. However if you want to place the images in somewhat more interesting ways, you can crop images as doing some math around it. Keep it in mind that the website is 12 columns wide
+* Follow the export spec here.
+ U:\MAKE_SITE\MAKE SITE 10\Assets\MediaEncoder_setting
+* Save compressed images here.
+  [Client-Project]\Content\Stills
+* Key images that must be featured by default per project
+** Header: 1920x540 px
+** Edit/Spot Thumbnail(s): 1920x1080
+** Project Thumbnail for WORK page:1280x720
+
+==== Video ====
+
+===== Making a project video thumbnail and clips =====
+* Set up a Premier comp here to trim videos 
+ [Client-Project]\WorkingFiles
+* Bring the video src, including Edit MOV, BTS, EXR sequences, that you desire to feature into Premier comp.
+* Make a thumbnail video: 5~6 sec, 24 fps, 1280x720 px
+* Make a clip/clips of BTS that goes with images: 24 fps, 16:9 or 1:1 or custom ratio if you design a specific layout. Just make sure they align properly at the end :)
+* Export them through Media Encoder using the custom compression setting for the web:  
+ U:\MAKE_SITE\MAKE SITE 10\Assets\MediaEncoder_setting
+* Web_VidCompression_v003: for Edits and BTS clips
+* Web_ThumbVidCompressionv003: for Thumbnails
+* Web_SocialVidCompression_v003: for Socials
+* Updating Social will be explained in a separate article
+* Export and save the videos 
+ [Client-Project]\Content\Videos
+* Compress Edit(s) and BTS clips
+** Make sure you have the CORRECT version of final edit(s)
+** If there is any BTS edit, feature it on a project.
+** Export and save the videos 
+ [Client-Project]\Content\Videos
+
+==== Label the videos: Naming convention ====
+* Edits:  [TAG]__SPOT_[original file name OR recognizable file name]
+* BTS: [TAG]__BTS_[recognizable file name]
+* Thumbnails: [TAG]__THUMB_[client-project]
+
+* MAKE Originals
+** Edits: ORIGN_[TAG]__SPOT_[original file name OR recognizable file name]
+** BTS: ORIGN_[TAG]__BTS_[recognizable file name]
+* Thumbnails: ORIG_[TAG]__THUMB_[project_title]
+* Coming up with recognizable tag is important since you cannot make too many separate folders in Amazon Cloud Front -- it only makes URLs on the files way too long. This means you will have to actively use Search function.
+* Once you complete the compressions and labeling, move MP4s to the related folders here. Collect the compressed videos, including edits, BTS, and thumbnails and save them here for more efficient cataloguing.
+
+ U:\MAKE_SITE\MAKE SITE 10\__Amazon_Upload
+
+=== ''Upload videos on Amazon Cloud Front'' ===
+* Ask a supervisor for the credential to log in
+* Click 'S3' ﻿  ﻿[[File:Amazon Cloud Front.png|none|frame|Amazon Cloud Front]]
+* Click 'makesite10' ﻿  ﻿[[File:Amazon Cloud Front 02.png|none|frame|Amazon Cloud Front]]
+* It will lead you to the list of folders. You can upload contents by selecting and dragging multiple files
+* As you drop the file(s) in a folder, it will prompt Upload window like the following. Make sure you drop open Permission and check on Grant public-read access AND check box next to the acknowledgement warning. Click Upload.[[File:ACF 003.png|none|thumb|955x955px|Uploading contents on Cloud Front]]﻿  ﻿
+
+==== Folders and Public URL combination ====
+* Upload edits in __proj_spot/
+* Upload BTS in __proj_bts/
+* Upload Thumbnails in __proj_thumbs/
+* Upload MAKE originals contents in __orig_bts/ , __orig_spot/ , and __orig_thumbs/[[File:ACF Folders.png|none|frame|Folder structure]]﻿  ﻿
+* You have your files on Amazon Cloud Front finally. Now you need to make public URLs of your videos.
+* Copy and paste the following address on the new browser tab
+ <nowiki>https://dh27vlatj4m6x.cloudfront.net/</nowiki>
+* Open the file you want to make URL out of, and click little squares under 'KEY'. It will copy the key to the clipboard automatically.[[File:URL Key.png|none|thumb|613x613px|Key]]
+* Paste the key after the Cloudfront.net address like the following[[File:Full URL.png|none|thumb|Full URL]]﻿  ﻿
+* Now you have the full public URL of the video! yes, the whole thing is the URL. Repeat the process for each video
+
+=== ''Using Semplice; start placing contents'' ===
+* Watch the following record to learn the basic control of Semplice. Although many things changed and got modified over the time, it is still good to watch to understand how it works in general.
+ U:\MAKE_SITE\MAKE SITE 10\Meetings\video1626173067.mp4
+* Following is the workflow demo video. It demonstrates general workflow from the setup to the finish.
+ U:\MAKE_SITE\MAKE SITE 10\WebsiteUpdateTutorialDemoVid\Render\MAKE_WebUpdate_DemoVid_v001.mp4
+* Log in to Word Press and launch Semplice
+* Under Projects tab, copy a page template whichever you need and rename it following the naming convention.[[File:Semplice.png|none|thumb|885x885px|Semplice Projects Tab]]
+* Reorder the duplicate if necessary. Simply click and drag the duplicate. The order in Projects reflects one in Work page.
+* In the case of adding additional videos for a playlist, you copy SINGLE VIDEO template[[File:Single Video Template.png|none|thumb|884x884px|Single Video Template]]﻿  ﻿
+
+==== Update the project setting ====
+* ﻿  ﻿The following is Settings window[[File:Project Setting.png|none|thumb|799x799px|Project Setting]]
+* Update URL: client-project name in short
+* If you are adding a new project to MAKE website Work page, make sure you mark Categories including Work and others depending on the type of a project.
+* Make sure NO CATEGORIES is checked if it is supposed to be hidden from MAKE website
+* Update the thumbnail image and video: you need both project thumbnail image and thumbnail video link to make the thumbnail to behave properly.[[File:Thumbnails.png|none|thumb|790x790px|Thumbnails]]
+
+==== Update SEO setting ====
+* [[File:SEO settings.png|none|thumb|793x793px|SEO settings]]﻿  ﻿
+* SEO provides the link thumbnail and brief info about the project when we share the webpage link with clients or agencies.
+* Click the texts/titles and type the project title
+* You need a link thumbnail: thumbnail shown when you copy/paste the link to share
+** Web pitch/playlist thumbnail includes client, agency, and MAKE logos.
+** For regular project pages, the same project thumbnail can be used.
+* Thumbnail size: 1280 x 720
+* Update the link thumbnail image
+** Use the template folder and work on it in the duplicated folder here, if you work on a web pitch or playlist. 
+ U:\MAKE_SITE\MAKE SITE 10\_playlist_linkthumb\[Template]
+
+==== Update contents ====
+[[File:Contents update.png|none|thumb|789x789px|Contents update]]﻿  ﻿
+* Duplicate the template project
+** Project breakdown: duplicate "BOOKMARK-[Template] Client_PROJ" in Semplice [[File:Project Template.png|none|frame|Project breakdown template]]
+**Web pitch deck: duplicate "BOOKMARK-[Template] Pitch Deck"[[File:Pitch temp.png|none|Pitch deck template|frame]]
+**Single Video Archive: duplicate "BOOKMARK-[Template] Archive Project"[[File:Archieve.png|alt=Single Video Archive Template|none|frame|Single Video Archive Template]]
+
+* '''What are the 'Bookmarks' by the way?'''
+** Bookmarks are empty projects simply to indicate what are the project breakdown or pitches or whatsoever. Semplice doesn't have intuitive organization system for projects, so we had to invent our way to sort things out.
+** Bookmarks in RED vs. YELLOW
+*** Yellow means the bookmark itself IS a template of following subjects like pitch, projects (work), and project (archive). You may duplicate this bookmark to start a new project.
+*** Red means it's completely empty and it is created purely to sort out projects. Do not use it.
+*** Once a new project(s) are complete, place them right after the relative bookmark.
+
+* Update header image and headline
+** Header image: 1920 x 540
+** Big header text in white: project/spot title
+** Small header text in gray: Client name
+* Update Main edit thumbnail and video link. Video links through Amazon Cloud and edit thumbnails should be ready by this point.
+* Main edit will be ALWAY the first to be seen.[[File:Video update.png|none|thumb|839x839px|Video update]]
+
+==== Placing contents ====
+* When it comes to the stage to handle stylings, please remember the following elements
+* images, texts, and videos: contents we want to present
+* Size of images and videos can be modified by controlling column width
+* When you make a new text using a module besides ones in MAKE custom blocks, use FLUID TEXT module
+* Fluid text allows you to make your text fluid without accessing each viewport
+* Column: MAKE website is based on 12 column width, Fluid format by default. With columns, you can control positions of your elements. Simply click and drag the handles on each end of the box to modify.[[File:Column.png|none|thumb|916x916px|Column]]
+* Section: a bigger container that includes column/spacers, images, texts, and other visual elements. Sectioning elements by subject is very important to move around big chunks of contents together.
+
+* Add Image/Self Hosted Video and Text modules are the most frequently used ones[[File:Modules.png|none|frame|[[File:More useful modules.png|frameless|956x956px]]Basic Modules]]
+
+==== Blocks ====
+* ﻿Block: custom section that already has its own layout and elements including modules.
+** Key Blocks
+*** Project - MainVid 10 col: Main edit video with 10 column wide
+*** ﻿PROJ_FluidText_DescriptionSide_v002: image with fluid text box on a side. The layout can be modified as needed.[[File:PROJ FluidText DescriptionSide Block.png|none|thumb|1222x1222px|PROJ_FluidText_DescriptionSide Block]]
+*** PROJ_FluidText__Center Description 8col: Fluid text box aligned center with 8 column wide.[[File:PROJ FluidText Center Description 8col.png|none|thumb|1221x1221px|PROJ_FluidText__Center Description 8col]]
+
+==== Offsetting and Stack Order ====
+
+* By using Offset and Stack Order in Styling tab, contents can be 'out of the box'! It can make the overall layout more dynamic and interesting.
+* Stack Order: Stack order indicates the priority of a content. In other words, it's the order of "layers" (=contents), and the larger the number is, the higher it is in the stack. Between 10 to 15 is usually enough to put the material on the top of the stac[[File:Stack Order.png|none|thumb|613x613px|Stack Order: put larger number if you want to have it on the top of other contents.]]
+
+=== ''Responsive Design'' ===
+[[File:Responsive Design.png|none|thumb|1000x1000px|Responsive Design mode]]
+
+* Once all the contents are laid out, make sure the page looks good in various screen modes.
+* This process requires going back and forth between preview and editing mode several times. Preview the responsive design by resizing the web browser window.
+* Sometimes it's necessary to duplicate a section(s) and edit them to be shown only in mobile versions (usually Tablet Portrait and Mobile) for better readability and flow of info.[[File:Section duplicate.png|none|thumb|1280x1280px|Duplicating sections for different screen mode.]]
+* Column mode - Single vs. Multi
+** Column mode is only available Tablet Portrait and Mobile responsive modes. You can find this setting in Section menu.
+** Some sections may have lots of imageries or contents and it can become really long in mobile mode. Depending on the amount of text and visual contents, you can set the column mode to multi.[[File:Single or multi.png|none|thumb|1184x1184px|Single vs. Multi in Column mode (only in Mobile and Tablet Portrait mode)]]
+
+=== ''Draft to Published'' ===
+* Draft: it's draft. Literally. It is not accessible in public
+* Published: the project becomes live, accessible in public[[File:Draft and Publish.png|none|frame|Draft and Publish]]
+* Even if it's work in progress stage, sometimes you need to publish the project for a writer's reference. When you do so, make sure to publish the project '''with password'''﻿.﻿[[File:Password.png|none|thumb|518x518px|Type in the password before clicking Publish Changes]]
+** '''''For the web pitches, you must set up the password since they often have the info of unannounced products or projects. Consider all the pitch decks are confidential.''''' 
+* On Projects or Pages, pages/projects can be toggled between Draft and Published by clicking the text itself (red in the image)'[[File:Toggle between Draft and Published.png|none|frame|Toggle between Draft and Published]]
+* ﻿ Make sure you save the project before publishing or previewing (eye icon)
+* Everything looks good and awesome?
+** Save the project, then publish, and make sure everything behaves correctly.
+** If everything works in order, you've done it! Yayyy!
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_update_the_MAKE_website

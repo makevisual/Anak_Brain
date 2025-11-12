@@ -1,0 +1,23 @@
+=== What's the 'Days' project? ===
+The 'Days' project involves creating a short animation clip related to a national or international holiday or celebration. You will be added by Amy to the 'Claim a Day' task (including a list of available days to choose from) & a 'Days Project Template' task (which is the task you'll work out of for this project). This project will span your entire internship, with no fixed deadline. However, it's crucial to complete it sooner rather than later to allow enough time for Danny's feedback and approval at each step, as well as collaboration with Alec for any audio needs.  
+
+=== Step-by-step guideline for the 'Days' project: ===
+'''Step 1:''' Day Selection & Ideation/Rough Storyboard. Remember to include your name or initials next to your selected day in the Wrike task to prevent duplicate selections. Schedule a meeting or a quick check-in with Danny to go through your ideas/day selection. It's essential to share your ideas, storyboard, or animatic with Danny early on to avoid potential issues, such as working on an idea that may not align with your chosen day.
+
+'''Step 2:''' Detailed Storyboarding & Animatic. 
+
+* Since the 'Days' project is intended for social media posts on MAKE's Instagram and LinkedIn accounts, it needs to be compatible in different aspect ratios: 1x1 and 9x16
+
+'''Step 3:''' Rendering & Finalizing Your Day - This is the most time-consuming part. You need to submit your work to Danny for feedback and final approval. Continuously seek his feedback throughout the project to avoid later disagreements or disapprovals.
+
+'''Final Step:''' Obtain Danny's approval for the final render. If you need someone to help with the audio, reach out to Alec or tag @Alec Mueller in your personal 'Days' project on Wrike.
+
+=== Work Folder: ===
+Copy [ Project ] Folder: X:\Projects\Days\[Project]
+
+Rename with your Approved 'DAY Project Name'
+ X:\Projects\Days 
+You can view our previous 'Days' projects on @makegallery at https://www.instagram.com/makegallery/
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_a_days_project

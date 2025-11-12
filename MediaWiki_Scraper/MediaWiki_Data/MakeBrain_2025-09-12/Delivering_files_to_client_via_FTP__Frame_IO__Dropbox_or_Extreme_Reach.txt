@@ -1,0 +1,72 @@
+This article is to cover just a few of the most common ways that we handle delivering files to client.
+For more complete instructions please visit [[Delivering files to client]] for additional information
+
+=== '''FTP''' ===
+[[File:FTP_Delivery_Menu.png|frameless]]
+
+This is the least common now but we do have the ability to deliver with our FTP to clients.
+
+To make a delivery you need to connect to our FTP and got to /makevisual.com directory.
+
+Make a folder for the client/project
+
+Then make a description folder with a date. i.e. 051223 - Audio Deliverables
+
+Right click on the folder and select "Copy URL(s) to clipboard"
+
+Paste this URL into a document as it will need editing. Example of a direct copy and paste - <nowiki>ftp://makevisual@www.makevisual.com/makevisual.com/HotWheels2024/Cars_PistonCup/PPB</nowiki>
+
+You will need to take off the intro pieces to have it read like this - <nowiki>http://makevisual.com/HotWheels2024/Cars_PistonCup/PPB</nowiki>
+
+Now you can send this link or embed it as needed for the client.
+
+=== '''FrameIO''' ===
+[[File:FrameIO Delivery MenuAndFolders.png|borderless|296x296px]]
+
+
+You can deliver more than just approvals through Frame IO and the best practice would be to make a separate folder for delivery and inside that folder it would be to do a Date and description of the contents. You can see that in the image attached. 
+
+Simply place your deliverables in the folder and then right click on the folder and select share function to make a link.
+
+In the link creation menu menu click the top "Settings" menu and just turn on downloads. Here is a picture of the menu selection that it advised to use.
+
+
+[[File:FrameIO Delivery ShareSetting.png|FrameIO Delivery Share Settings|307x307px]]
+
+=== '''Dropbox''' ===
+
+We send final deliverables often through Dropbox as well as mix stems. The folders for Dropbox can be found  on the V drive and below is the path for all MAKE deliverables to be placed. 
+
+V:\Dropbox\Dropbox (MAKE)\MAKE Team Folder\MAKE Projects Delivery
+
+Once the files have been placed there, you need to remote into the server computer that owns the folder to make the share link. This is done through VNC Viewer program. In the program, under '''VNC Server''' type or select "blue," and under '''Encryption''' select "Let VNC Server choose". Click '''Connect''' and then log in with the following credentials:
+
+Once logged in you can navigate to your folder path.
+
+[[File:Dropbox VNCViewerWindow.png|frameless|650x650px]]
+
+Right clicking on the folder you will pull up a special selection where you can make the Share link.
+
+[[File:Dropbox VNCViewerWindow Dropdown.png|frameless|530x530px]]
+
+Then you click the copy link button and it will let you paste the share link on your desktop.
+
+[[File:Dropbox VNCViewerWindow ShareMenu.png|frameless|553x553px]]
+
+=== '''Extreme Reach''' ===
+[[File:ExtremeReach DeliveryDashboard.png|frameless|500x500px]]
+
+This is a common delivery platform for TV deliverables and we have to do it occasionally for the bigger clients like, Spinmaster, Hasbro, or Mattel.
+
+When handling an Extreme Reach (ER) delivery there are certain specs that the files must be in that you can find on their website but the basics are:
+
+* Filename: [ISCI only]
+* Slated file
+* File head format is 5sec slate>2sec black>program start
+* Audio Stereo 48khz at TV Broadcast levels (each client has a small difference but standard is -23LFKS)
+
+
+Commonly, a Superless file will be requested and we have intro supers, so if the superless is requested and the head is black, it is good to alert your client contact of this fact as it will probably get flagged and need a manual push through of the system
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Delivering_files_to_client_via_FTP,_Frame_IO,_Dropbox_or_Extreme_Reach

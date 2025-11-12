@@ -1,0 +1,80 @@
+
+= Hair/Fur=
+
+Some assets have hair or fur. There exists two methods of applying hair/fur to your object in 3dsMax, the Hair and Fur Modifier (WSM), and for more complex hair setups, the Hair Farm plug-in. 
+
+==Hair and Fur Modifier==
+
+The Hair and Fur modifier is a feature within 3dsMax that allows you to grow hair from a mesh or a spline object. It will grow from the entire surface area of the object unless you make a sub-object selection. 
+
+[[File:Creating an asset Hair HairAndFurWSM.PNG|500px]]
+
+The Hair and Fur modifier works best for simpler hair setups, such as eyebrows and shorthair fur. 
+
+[[File:Creating an asset Hair HairAndFurWSM Parameters.PNG|200px|left]]
+
+When you add a Hair and Fur WSM modifier, hair will grow out from the normals of the surface. 
+
+[[File:Creating an asset Hair HairAndFurWSM Base.PNG|300px]]
+
+You can adjust hair settings, such as length, thickness, and density, in the "General Parameters" tab. You can also add noise and texture variety to your hair interpolation using the "Flyaway", "Frizz", "Kink", "Multi Strand", and "Clumping" parameters.
+
+You can also adjust hair material settings, like color and glossiness, under the "Material Parameters" tab.
+
+To change the behavior and appearance of the hair, you can use the tools in the "Styling" tab. When you hit the "Style Hair" button, you can see orange guide hairs come out the corners of each polygon on your object. You can manipulate these guides with your styling tools to change how the hair looks/behaves.
+
+For an in depth guide on how each styling tool works, you can check out this [https://help.autodesk.com/view/3DSMAX/2022/ENU/?guid=GUID-E7442225-7A7F-46AF-B4CC-D326F6755E16 page] for more information.
+
+==Hair Farm==
+
+For more complex hairstyles, it may be more beneficial to utilize Hair Farm. 
+
+Hair Farm is a plug-in for 3dsMax that allows you to sculpt hair styles using hair mesh modeling, as well as simulation and rendering. Hair Farm requires a license and installation, so please check in with the director about available Hair Farm licenses if you need to use this plug-in.
+
+When setting up your Hair Farm for render, be sure to have "Use Hair Farm Renderer" checked '''off''' in your parameters of your Hair Display modifier. Turn it off in your Environment/Effects settings as well (press 8 on your keyboard)
+
+''This setting resets whenever any asset is merged in, so please remember to turn it back off whenever you bring an asset with Hair Farm in.''
+
+[[File:HairFarm Parameters.PNG]]
+[[File:HairFarm Render.PNG|220px]]
+
+===Hair Mesh Modeling===
+[[File:HairFarm HairMesh.PNG|thumb|Hair Mesh|300px]] [[File:HairFarm HairGenerate.PNG|thumb|Hair Generate|300px]] [[File:HairFarm HairRender.PNG|thumb|Hair Render|301px]]
+
+The main method for building complex hairstyles will be through hair mesh modeling. You can find a quick start tutorial on hair mesh modeling [http://www.hair-farm.com/tutorials/?f=quick_start1 here].
+
+You will be able to model hair mesh using the HairMesh Edit modifier. Apply the modifier to the geometry you want the hair to be on. This will add a Hair Display WSM modifier too, which is used for viewport display purposes.
+
+[[File:HairFarm HairModifiers.PNG|300px]]
+
+To see a hair preview in the viewport, you can add a Hair Generate modifier. You can change the look of the hair in this modifier as well, such as thickness, length variation, hair count, and materials.
+
+In order to render the hair in Vray, you will need to add a VrayHairFarmMod modifier.
+
+In the HairMesh Edit modifier, you can start modeling by extruding faces from your starting geometry. 
+
+You can smooth your hair mesh with the HairMesh Smooth modifier.
+
+[[File:HairFarm EditParameters.PNG|250px]]
+
+From here, hair mesh modeling is very similar to regular mesh modeling, with the hair following the mesh you make to generate the custom hairstyle you want. In the example to the right, you can see how the mesh can be modeled differently to create different types of hairstyles, such as waves or ringlets.
+
+===HairStyle Modifiers===
+
+Once your hair has been generated, you will notice they are straight and pretty stiff. You will need to style this hair in order to get a more natural look. This is done with HairStyle modifiers. 
+
+HairStyle modifiers will go above the Hair Generate modifier, but below any display or render modifiers (Hair Display WSM and VrayHairFarmMod).
+
+You can find a more in depth look at what each HairStyle modifier does in the Hair Farm manual [http://www.hair-farm.com/manual/?v=2&m=Hair_Generation_and_Styling here].
+
+[[File:HairFarm BeforeHairStyling.jpg|thumb|Before hairstyling.|300px]] [[File:HairFarm AfterHairStyling.jpg|thumb|After hairstyling.|300px]]
+
+A Hair Farm modifier stack may look something like this:
+
+[[File:HairFarm ModifierStack.PNG|200px]]
+
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Using_hair_and_fur_on_an_asset_in_3dsMax

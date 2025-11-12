@@ -1,0 +1,130 @@
+==Introduction==
+We use a lot of computers and technology that all needs to work together. To keep everything running smoothly there are a few overall rules and themes to keep in mind while working with the computers, software, and how to troubleshoot issues easily.
+
+==Support Ticket==
+
+If you are having an issue with your computer, you can submit an [[IT Support Ticket]], and your issue will be addressed appropriately.
+
+==Credentials and Logins==
+
+===Windows===
+Here is how to log on in windows
+[[Active Directory - Accounts, Logging On, and Permissions]]
+
+If you are a full time employee, you will receive a user for Windows
+
+If you are a freelancer or intern, you can use these credentials
+ <nowiki>
+user:make
+pass:mine</nowiki>
+
+Your Credentials for individual softwres will either be provided via email, or can be found in your IT User Folder, in WRIKE.
+
+===Email===
+You will be provided with a MAKE email address on your first day, and you will also be provided with your credentials ( password ). This is how you will access your multiple different types of accounts, like Autodesk or wrike for example. You can access your email at http://webmail.makevisual.com/ .
+
+Additionally you can connect your make email to Gmail or any other service. the info needed to do so is as follows:
+
+==== Gmail (pop3) ====
+
+- User: firstname.lastname@makevisual.com
+
+- Password: Provided
+
+- Mail server: mail.dreamhost.com
+
+- SMTP server: smtp.dreamhost.com
+
+==== Outlook (IMAP) ====
+
+- IMAP Server:	imap.dreamhost.com
+
+- IMAP port:	993
+
+- IMAP security:	SSL
+
+- IMAP username	your-email@makevisual.com
+
+- IMAP password	Your makevisual.com password
+
+===Wrike===
+When you begin, you should receive a Wrike invitation from Danny, to setup and complete making a profile. This will grant you access to the wrike workspace that we use as an internal communication and timekeeping platform. If you need to reset or change your password, you can do so using your make email account, and the prompts on the login page for wrike.
+
+===Adobe Creative Cloud===
+You will be assigned a username and password to sign in to adobe creative cloud on your workstation. Each account can login on 2 separate workstations simultaneously, and are shared among the artists. You will receive a wrike task with your login credentials, and that is what you should use. If you forget your adobe password you can access on your credentials task in wrike.
+
+This is an article how to find and use that information to access your Adobe License
+[[ Adobe Creative Cloud Licensing ]]
+
+===Autodesk===
+IF you require access to Autodesk products, you can request them from Aaron. He will connect your MAKE email account to the MAKE account to provide you with a license for any needed Autodesk products. You will receive an email invitation to setup an Autodesk account through your MAKE email, and you will setup your own password.  If you need to reset or change your password, you can do so using your make email account, and the prompts on the login page for Autodesk.
+
+===GSuite===
+We are in the process of migrating into a google Workspace, however in the meantime to access google drive, calendar and other GSuite features, please use a personal Gmail account.
+
+===FrameIO===
+We will often post and receive feedback on the collaborative sharing platform FrameIO. You may be provided feedback via a FrameIO link, in which case you would need to create a free account to view and access the notes. Please use your MAKE email address to create the account, and you will have access to be able to interreact with the shared items.
+
+==Your Workstation==
+You will get assigned a workstation computer to work at. It should have access to the network storage and the renderfarm. Each of the workstations and render nodes currently have the same user login, however you should be logged in automatically at restart time. The credentials for windows are:
+
+ <nowiki>
+user: MAKE
+pass: mine</nowiki>
+
+===Where to save files===
+All of your working files should be stored on the network, there is a location for anything that you should need. Saving files onto your local computer is dangerous because computers may get swapped, interchanged, have hardware failures, or require maintenance at any time. Being able to switch to a different workstation and continue work is only possible if everything was saved safely on the appropriate network location. The network is redundant, and backed up frequently, so there is a significantly lower chance of data loss.
+
+====Software Policy====
+Primarily, don't install things. You can read more in our [[Workstation Software Policy]]
+
+====Basic Troubleshooting====
+
+If you are having an issue connecting to the internet, the network or obtaining a software license, you should always follow these steps, before asking someone for help.
+
+ <nowiki>
+restart software, sign out and back in, restart computer</nowiki>
+
+If something in your DCC (Digital content creation) software is not working not working, you should always follow these steps, before asking someone for help.
+
+ <nowiki>
+restart software, sign out and back in, restart computer</nowiki>
+
+If you are having issues with audio or video for Google Chat or zoom calls, , you should always follow these steps, before asking someone for help.
+
+ <nowiki>
+restart software, sign out and back in, restart computer</nowiki>
+
+If you computers local hard drive is filling up, please let someone know if the problem persists after following these steps.
+
+ <nowiki>
+restart computer</nowiki>
+
+If you have a problem, don't wait until the last min before something is due to request a fix, or help. If you have been having issues with your microphone or speakers, attempt to fix, or request help immediately after you experience the problem, do not wait until right before the next meeting or call you have. If you computers local hard drive is filling up, please let someone know and they will be able to help you at their next availability.
+
+If there is an emergency and you need to work and are unable, most of the computers here are roughly equivalent, and if your project is properly stored on the network, you can switch to another workstation to continue work until a solution is available.
+
+==The Network==
+
+====Network Locations====
+[[Network Orientation|There are several locations]] that can be used, and each has its purpose. 
+====Days Project====
+If you are a new artist, you will typically begin by [[creating a days project|working on a "Days" Project]]. 
+You can navigate to the days project by using the [[Network_Orientation|Projects shortcut link]] on your computer.
+
+====Network Connections====
+If you are having trouble connecting to the network, please restart your computer.
+
+====Renderfarm====
+We have a render farm, things need to be on the network to see each other.
+We use a software called AWS Thinkbox Deadline to manage the render farm, and you can read more about it here [[Introduction to Deadline]]
+
+==The Cloud==
+MAKE has a shared google drive folder where items that need to be worked on collaboratively are shared. Currently our MAKE email accounts are not connected to a gsuite account, so you will need to use a personal gmail account in the meantime.
+
+
+
+[[Category:IT]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=IT_Orientation_Introduction

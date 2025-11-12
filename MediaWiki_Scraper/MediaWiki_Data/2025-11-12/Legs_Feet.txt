@@ -1,0 +1,253 @@
+== Previous Article: ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous Article: [[Beginning The Rig|Beginning the Rig]]
+
+== Legs and Feet: ==
+[[File:Legs Feet Leg Parent Gimbal Node.png|frameless|450x450px]]
+
+Before we add our IK, we need to create a parent for each leg. Select the top bone of the left leg and create a gimbal node (MAKE toolbar > Rigging Tools > Edit Pivots v.1.1 > Gimbal Node). Name this node according to the conventions of your rig. See the image above for an example. Do this again for the right leg. Now Parent each top leg bone to their respective helper.
+
+<gallery mode="nolines">
+File:Legs Feet Create IK.png
+File:Legs Feet IK Goal.png
+</gallery>Next create the IK. Select the endBone of the left leg. Go to Animation > IK Solvers > HI Solver.
+
+Drag the connector to the top bone of the leg. This will create an IK goal at the ankle. Do the same for the right leg, and name them.
+
+[[File:Legs Feet Stretchy IK Location.png|frameless]]
+
+[[File:Legs Feet Stretchy IK Smoothing.png|frameless]]
+
+If you want your IK legs to be stretchy, select your Ik goal and navigate to the MAKE toolbar > rigging > Basic Rigs v1.2. Select “Stretchy.” You may notice that your knee pops forward. To fix this, Go to the modifier panel for your IK goal and under “Extra Stretch Parameters,” lower the Smoothness value until your knee returns to its original position.
+
+== Feet: ==
+[[File:Legs Feet Heel Pivot Helper.png|frameless]]
+
+Turn the turbosmooth on to your model. This will help us see where to place the helpers for the heel and toe. Create two point helpers, and position them at the tip of the toe and heel. Make sure their Z position is at 0.
+
+[[File:Legs Feet Feet Point Helpers.png|frameless]]
+
+Create 3 more helpers. Snap one to the top of the foot bone, and snap the other two to the top of the toe bone. Refer to the image above for an idea of placement and helper name. These helpers will help us set up the foot ctrls. Do this for both sides. You can use the MAKE Toolbar mirror tool to make this easier.
+
+[[File:Legs Feet Create Foot Ctrl.png|frameless]]
+
+Let’s begin creating the foot ctrls. Create a rectangle with the dimensions of your geo foot. Change the pivot point to match the endbone of the leg.
+
+[[File:Legs Feet Ctrl naming.png|frameless]]
+
+Create a series of ctrls for your foot, referring to the image above. To edit Ctrls, it’s best to add an “Edit Spline” modifier and edit them in sub-object mode. The Foot Roll and Toe Bend’s pivots are at the point helpers on the toe bone. Make sure your Ctrls are added to the Ctrl layer.
+[[File:Legs Feet foot hierarchy diagram.png|frameless|577x577px]]
+This next bit is a little complicated.
+
+We are going to begin parenting the bones, ctrls, and helpers together to create the foot rig. I’ll write them as a list below to make things easier. You can also refer to the image above for an idea of what to parent to what.
+
+* First, Let’s parent the heel ctrl to the foot ctrl.
+
+* Parent the heel helper to the heel control.
+
+* Parent the toe control (NOT the toe bend ctrl) to the heel helper.
+
+* Parent the toe helper to the toe ctrl.
+
+* Parent the foot helper to the foot bone.
+
+* Parent the foot bone to the foot roll helper.
+
+* Parent the foot roll helper to the foot roll ctrl.
+
+* Parent the foot roll ctrl to the toe helper.
+
+* Parent the toe bone to the toe bend helper.
+
+* Parent the toe bend helper to the toe bend ctrl.
+
+* Parent the toe bend ctrl to the toe helper.
+
+Now the foot rig has been created. To attach the foot rig to the leg, select the IK goal for the leg and parent it to the foot helper. Do the same for the other side.
+
+
+[[File:Legs Feet Heel Lift demo 01.png|frameless|369x369px]][[File:Legs Feet Heel Lift Demo 02.png|frameless]]
+
+The Heel and toe ctrls can be rotated to lift the whole foot from pivot points at the front and back of the foot.
+
+[[File:Legs Feet Toe Bend Demo.png|frameless|336x336px]][[File:Legs Feet Foot Roll Demo.png|frameless]]
+
+The Toe Bend and Foot Roll ctrls can be rotated to help lift the foot at the ball.
+
+Make sure everything is named properly and is moving properly, then freeze transforms. You can color your controls using the “Color Thinger v.1.2” In the MAKE Toolbar > Common Tools.
+
+= Optional Features: =
+These Leg features are optional but can enhance the rig.
+
+== Knee Bones: ==
+Knee bones are useful during skinning to help maintain the shape of the knee. Here’s how to do it.
+
+[[File:Legs Feet Knee Bone Create.png|frameless|298x298px]][[File:Legs Feet Knee Bone Parent.png|frameless|313x313px]]
+
+Create a bone. Make sure it’s straight. Best way to do it is create it at (0,0,0,). Delete the endBone. Create a point helper to be its parent. Snap it to the bone, then parent the bone to the point helper. You can name the knee parent and knee bone according to the conventions of your rig.
+
+[[File:Legs Feet Knee Bone Placement.png|frameless]]
+
+Snap the knee parent to the lower leg bone. Mirror it to the other side as well. Parent the knee parent to the lower leg bone.
+
+[[File:Legs Feet Knee Bone Orientation Constraint.png|frameless|347x347px]][[File:Legs Feet Orientation Constraint menu.png|frameless|347x347px]]
+
+Now we will create an orientation constraint. This constraint will make sure the knee bone is always pointing out in the exact midpoint of the upper and lower leg bones. To do this, select your knee parent and go to animation > Constraints > Orientation constraint. Drag the connector to one of the leg bones. In the motion panel, under Orientation Constraint, make sure “Keep Initial Offset” is checked. Select “Add Orientation Target” and select the other bone. Do this for the other leg as well.
+
+[[File:Legs Feet Knee Interpolation.png|frameless]]
+
+Now when you move the leg, you will see that the knee will point out. When skinning, you can tap in (ie. add a tiny bit of) influence from this bone to maintain the knee shape.
+
+== Leg Swivel Attribute: ==
+The leg swivel attribute is highly recommended and is used to control the direction the knee is pointing in your rig. It works the same as a pole vector, except the swivel angle is controlled by a channel box instead of a ctrl. This makes life easier because then you aren’t chasing down a pole vector in your viewport. However, it’s not possible to set a skin pose on a parameter. A potential solution to this problem is to save an animation key for the swivel angle that can be loaded in when returning to skin pose, but this is not ideal. When creating rigs, it’s best to create custom parameters sparingly for this reason.
+
+Let’s get started.
+
+[[File:Legs Feet Attribute Holder Modifier.png|frameless]]
+
+First we’ll need to set up our channel box. To do this, let’s create an “Attribute Holder” modifier. Right now the modifier parameters are blank. We’ll need to add a parameter using the “Parameter Editor.”
+
+[[File:Legs Feet Parameter Editor Settings.png|frameless]][[File:Legs Feet Attribute Knee Swivel.png|frameless|686x686px]]
+
+Open the Parameter Editor (Animation > Parameter Editor…). A Dialogue box will pop up. The fields we need to pay attention to are Parameter Type, UI Type, Name, Range, and Default value.
+
+Make sure the Parameter Type is Float and the UI Type is Spinner. Name the Parameter “Knee_Swivel_L.” Make the range -10 to 10. Make the default value 0. When you are done, click the “add” button. You will see now that a new custom attribute has been created with a default value of zero. If you adjust the spinner, you’ll see it has a min value of -10 and a max value of 10.
+
+We’ve made our parameter, now it’s time to hook it up to the swivel angle value. To do this, we’ll open up the “Reaction Manager” (Animation > Reaction Manager).
+
+A new window will pop up. With the Reaction Manager, we can make one object drive another.
+
+
+[[File:Legs Feet Reaction Manager 01.png|frameless]][[File:Legs Feet Reaction Manager 02.png|frameless]]
+
+[[File:Legs Feet Add Master.png|frameless]][[File:Legs Feet Add Selected.png|frameless]]
+To select a driver, click the (Add Master) button and select your foot Ctrl, navigating to the Knee Swivel L attribute. Click on it and it will be added to your Reactions list. Now we must select something to be driven. Select your IK goal and press the (Add Selected) button. Navigate to the Swivel Angle. Now the Swivel Angle will be added to your list.
+
+
+[[File:Legs Feet Reaction Manager 03.png|frameless]]
+
+Now we will need to create states that define what the driven object will do when the driver value changes.
+
+
+[[File:Legs Feet Reaction Manager 04.png|frameless|432x432px]]
+
+State001 is the default value of 0, so the swivel angle will need to be 0.
+
+State002 is the max value of 10, so the swivel angle will be 90 degrees out (in this case -90).
+
+State003 is the min value of -10, so the swivel angle will be 90 degrees in (in this case 90).
+
+[[File:Legs Feet Knee Swivel demo.png|frameless]]
+
+Now if we adjust the value on our swivel angle parameter, we can see the knee will swivel in and out. Do the same for the other leg.
+
+== Pole Vector Leg Swivel: ==
+If you don’t want to create a swivel angle attribute, creating a pole vector for an IK setup is very simple. The most basic version of this setup only needs a ctrl for the swivel to look at.
+
+[[File:Legs Feet Pole Vector Leg Swivel.png|frameless]]
+
+Here is an example IK leg. We’re looking at it from the side. I’ve created a control object that will become our pole vector in front of the knee.
+
+[[File:Legs Feet IK Solver Pick Lookat Target.png|frameless]]
+
+Select the IK goal. In the motion tab, under “IK Solver Properties,” you can pick your ctrl object as the target object. Make sure “Use” is checked on.
+
+[[File:Legs Feet Knee Swivel Pole Vector Test 01.png|frameless]]
+
+Now when we move our pole vector we can see the knee swivel to follow it. However, in this state, it would be easy to lose track of the pole vector since it’s just kind of floating in space. Let's add something to make it more visible.
+
+[[File:Legs Feet Pole Vector Line Create.png|frameless]]
+
+With pivot snapping turned on, create a line object from the lower leg bone to the pole vector ctrl. Add a skin modifier to this line object.
+
+[[File:Legs Feet Pole Vector Line Bones.png|frameless]]
+
+Add the lower leg bone and the pole vector ctrl to the skin as “Bones.” Weight the ends of the line to these objects.
+
+[[File:Legs Feet Knee Swivel Pole Vector Test 02.png|frameless]]
+
+Now when the pole vector ctrl is transformed, we can see the line following it. In order to avoid selecting and keying this line, freeze it in the layer explorer so it cannot be selected.
+
+== Chain Tools Leg (Bend and Twist): ==
+An extra step you can take to enhance your leg rig is to use Chain Tools to make it bendy. You can also use chain tools to help with twisting on a limb. Chain Tools can be used all throughout your rig to create a squishy, bendy character. [[Chain Tools|There is also an individual article for Chain Tools available to view with a more general overview of the tools.]]
+
+[[File:Legs Feet Chain Tools Leg Line.png|frameless]]
+
+Before we use Chain Tools, we’ll need to create a spline line for it to use. Create a new layer and name it “Leg_L_Ch.” You always want to create a new layer for each bone chain you make with chain tools in order to keep track of everything Chain Tools creates. These layers should live in your rig folder. In this layer, create a line, and use the “Snap to Endpoint” toggle to snap its endpoints to the top and bottom of the lower leg bone.
+
+
+[[File:Legs Feet Chain Tools Location.png|frameless]]
+
+In the External Tools tab in your Max window, open up the drop down and navigate to “Chain Tools.”
+
+
+[[File:Legs Feet Chain Tools Settings.png|frameless]]
+
+Make sure your line is selected, then take a look at the Chain Tools pop-up window. For the lower leg we’ll use 3 bones, and make them about 0.5 units in width. These numbers may change depending on what your rig is like. Next we’ll make sure squash is turned on so that the bones will stretch. Make sure the LookAt is set to “Quaternion Aim.” Make sure that “First and Last controls” and “Orientation Constraint” are set in the “Chain Points Settings.” Under “Spline Control Settings,” select “Skin.” If you want to create bend controls, check on “Tangents.” Hit OK.
+
+
+[[File:Legs Feet Chain Tools Leg Structure.png|frameless]]
+
+You’ll now see that a bone chain has been created. If your bone chain is twisted or incorrect, it may be best to build your initial spline on the viewport grid, build the bone chain, and then move your bone chain into place afterwards. You will have to reset bone stretch with the Bone Tools.
+
+
+[[File:Legs Feet Chain Tools Structure Diagram.png|frameless]]
+
+Here’s a quick overview of the anatomy of a bone chain. The big blue helper is the chain parent. If you move this helper, it will move the whole chain. If you want to delete your chain, double click this helper to select the whole chain, then delete.
+
+The big red helpers are chain knots. They basically control each endpoint of the bone chain. A chain knot is created wherever there is a vertex on your spline, so if you made a spline with more than two vertices, you would see additional chain knots.
+
+The small red helpers are the spline handles. If you move them you will see the bones in your chain begin to deform and bend.
+
+The small blue helpers are necessary for the structure of the chain. It’s important to leave them alone. Do not mess with them at all, or else your chain will break.
+
+
+[[File:Legs Feet Chain Tools Create Helpers.png|frameless]]
+
+The first thing we want to do with our new bone chain is to create some helpers for the chain knots (big red helpers). The chain knots will inherit the orientation of whatever they are parented to. This can create problems if they are parented to parts of the rig as they are. In order to prevent issues, we create these new point helpers to act as a buffer between the chain knot and whatever we are parenting/constraining it to.
+
+Create a helper for each chain knot, and snap them to the chain knots. Then parent each chain knot to its respective point helper. Make sure you name them.
+
+
+[[File:Legs Feet Chain Tools Move Handles.png|frameless]]
+
+Next we’ll begin creating our bendy controls. Select one of the chain handles (small red helper). Turn on local transforms. Move the handle down the chain until it is right inside the chain knot. We move the handle down the chain so that we don’t get any weird bending when the leg is moved. Do the same for the other handle.
+
+
+[[File:Legs Feet Chain Tools Handle Ctrl.png|frameless]]
+
+Next create a control and snap it to your handle. Parent your handle to your control. Then parent the control to the chain knot’s parent (green helper). Do this for both handles. Then parent the upper chain knot parent to the lower leg. Parent the lower chain knot parent to the foot parent.
+
+
+[[File:Legs Feet Chain Tools Test Parenting.png|frameless]]
+
+Now if you move your foot the chain should follow.
+
+You’ll need to follow the same steps to create the chain for the other leg. '''You ''cannot'' mirror a bone chain'''. In order to keep things symmetrical, you can match the position of the spline handles by snapping some temporary helpers to the handles on the left leg, then mirroring them. Make sure you change their scale to 100 before snapping the right-side handles to them.
+
+
+[[File:Legs Feet Chain Tools Completed.png|frameless]]
+
+Now your bone chains are complete. Make sure everything is named properly. To name everything created by chain tools, you can select all the objects and give them the prefix for your character and specify the limb. Don’t change the original names of the chain too much.
+
+For example, on my rig, “'''Bone_Chain_3'''” will become “'''C_FOR_Leg_L_Bone_Chain_3.'''”
+
+Test your rig and make sure everything is moving properly.
+
+
+[[File:Legs Feet Chain Tools Bend Demo.png|frameless]]
+
+Now if you move your spline ctrls, you will see the leg bend. If you rotate your feet in Z, the chain should twist.
+
+When skinning your character, in any place that has Chain Tools Bones, those bones will be the skin bones. So for this character’s leg, the chain bones will be added to the skin modifier instead of the lower leg bone.
+
+== Next Article: ==
+Next Article: [[Arms/Clav]]
+
+
+
+__FORCETOC__
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Legs/Feet

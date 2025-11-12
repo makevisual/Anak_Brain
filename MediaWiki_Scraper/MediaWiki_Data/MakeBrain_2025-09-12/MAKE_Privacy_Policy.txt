@@ -1,0 +1,42 @@
+=Introduction=
+
+This is a new formalization of an older policy. Regardless of how long you have been at MAKE, please read carefully, and follow the link below to sign the confirmation form at the bottom of the page.
+
+This page explains MAKE's privacy policy in regards to conversations about current work as well as posting projects you've worked on. 
+
+MAKE signs quite extensive NDAs (non disclosure agreements) that bind ALL MAKE Staff/Artists/Freelancers in regards to what we are allowed to discuss and/or post online.
+
+No one is to discuss products, services or any NEW proprietary tech.
+
+=Examples=
+
+*'''We work with several toy companies (Mattel/Hasbro/Spinmaster) and it's crucial they each trust us with their products. Most of the time the projects we work on are unreleased NEW products that have code names and additional contractual secrecy.'''
+
+*'''Some clients are skittish and worry about any of their tech/software/IP being "leaked". We've seen it happen by other companies and it's a legal nightmare.''' 
+
+=Rules regarding conversations about current work=
+
+
+During an ongoing project (this includes the pitch phase) you are not allowed to discuss the project name, the product/service or casually talk about it with anyone outside of MAKE's personnel. 
+
+=Rules regarding posting projects online=
+
+There is only one rule regarding posting work: 
+
+'''NO WORK can be posted online/Social media (Facebook/Discord/Youtube/Linkedin) or sent by email. Work cannot be shared with non MAKE staff personnel until we received client approval. If work was posted on MAKE social channels Linkedin/Instagram/Facebook/TikTok then it is safe to share.'''
+
+*'''If you are unsure, talk to Oren'''
+
+In order to post work on your personal Reel/Portfolio/Site please check in with Oren for approval.
+
+=Confirmation=
+'''If you have not signed the privacy policy'''
+Please follow this link, and fill out the form to confirm you have read the privacy policy.
+
+https://makevisual.com/Privacy-Policy-Consent-Form
+
+The form is password protected, below is the password.
+ <nowiki>password: mine</nowiki>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MAKE_Privacy_Policy

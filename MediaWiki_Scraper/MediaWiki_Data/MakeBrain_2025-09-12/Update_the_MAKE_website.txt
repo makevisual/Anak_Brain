@@ -1,0 +1,8 @@
+This article has been broken up into two sections
+
+[[How_to_update_the_MAKE_website]]
+
+[[How_to_update_the_MAKE_website_-_Social_page]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Update_the_MAKE_website

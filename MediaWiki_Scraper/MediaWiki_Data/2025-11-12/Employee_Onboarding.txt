@@ -1,0 +1,38 @@
+Welcome to MAKE! Here's a collection of must-read links before you're able to hit the ground running.
+
+==Office Information==
+
+* [[Office Information|MAKE Office Information]]
+* [[MAKE Studio role descriptions]]
+
+==WRIKE Onboarding==
+
+* [[How to Enter Time]]
+* [[Wrike standard task usage]]
+* [[Wrike task best methods and practices]]
+* [[How To Navigate Wrike]]
+* [[How to make Tasks and Communicate]]
+
+==Studio Policies==
+* [[MAKE Communication Guidelines]]
+* [[MAKE Privacy Policy]]
+* [[MAKE AI Policy]]
+
+==IT Orientation==
+
+* [[IT Orientation Introduction]]
+* [[Network Orientation]]
+* [[Folder structure introduction]]
+* [[Workstation Software Policy]]
+
+==Human Resources==
+
+* [[Human Resources FAQ]]
+* [[Employee Benefits and How to Set Them Up]]
+* [[New Employee Forms and Accounts]]
+
+==First Steps / Projects==
+* [[Creating a days project]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Employee_Onboarding

@@ -1,0 +1,22 @@
+[[Category: Stable Diffusion]]
+== Accessing Stable Diffusion ==
+Stable Diffusion can be accessed while onsite at MAKE or connected to MAKE VPN by navigating to http://R201/ in a web browser.
+
+=== Using Stable Diffusion ===
+# Navigate to HTTP://R201/ in a web browser.
+# Enter a prompt in the top box.
+# Click "Generate".
+# View results, or save results to your computer by right clicking the image and selecting "Save image as" then selecting your personal folder or a location on your computer.
+[[File:1-Access&UseStableDiffusion.png|alt=To access stable diffusion navigate to http://r201/ in a web browser.|none|thumb|1182x1182px]]
+
+=== How to generate different results ===
+To generate different results in Stable Diffusion if you are unhappy with your output there are several things you can try.
+# Change your prompt to include more description. Sometimes adding additional detail in a second sentence will produce more interesting or detailed results. Example: "A cat wearing a sombrero playing the trumpet" might generate different results than, "A cat wearing a sombrero. The cat is also playing a trumpet."
+# Select a different Stable Diffusion Checkpoint.
+# Wait for the page to finish loading (indicated in the upper left corner with a spinning logo and the text "processing".
+# Enter a new prompt, or click "Generate" to use the same prompt again.
+There are a number of different Stable Diffusion Checkpoints installed on the server. If you are unhappy with the results of your output, change the Stable Diffusion Checkpoint in the dropdown box near the top left corner of the web interface, select a different checkpoint from the list, wait until the page finishes loading/refreshing, and click "generate" again to get new results.
+[[File:2-StableDiffusion-SelectACheckpoint.gif|frame|left|alt=To select a different checkpoint use the dropdown box in the top left and pick a new checkpoint.]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_To_Access_&_Use_Stable_Diffusion

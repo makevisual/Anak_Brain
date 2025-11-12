@@ -1,0 +1,34 @@
+Always check your delivery specs as resolutions and aspect ratios can be unique per project. Some of the most common aspect ratios are listed below.
+
+{| class="wikitable" style="margin:auto; display:inline-block;"
+! Name !! Aspect Ratio !! Resolution
+|- style="height:50px; width:200px;"
+| HD || 16x9 || 1920x1080
+|- style="height:50px; width:200px;"
+| 4K HD || 16x9 || 3840x2160
+|- style="height:50px; width:200px;"
+| 1x1 Square || 1x1 || 1080x1080
+|- style="height:50px; width:200px;"
+| 4x5 Square || 4x5 || 1080x1350
+|- style="height:50px; width:200px;"
+| 9x16 Vertical || 9x16 || 1080x1920
+|- style="height:50px; width:200px;"
+|}
+
+<br>
+=Templates=
+Safe Frame templates will be copied into all new project folders when they are created, you can find them in the Assets\Images folder.
+	<ul>
+	<li>''Projects\[Project}\Assets\Images\SafeFrames\''
+	</li>
+	</ul>
+
+These should be brought in and overlayed on your edit at the start of the project. Title Safes are particularly important in broadcast edits.
+
+For more information read [[Working with, and understanding action, title, and island safe]]
+
+
+[[Category:Documentation]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Resolutions_and_aspect_ratios

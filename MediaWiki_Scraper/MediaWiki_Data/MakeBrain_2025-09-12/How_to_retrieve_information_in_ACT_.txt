@@ -1,0 +1,372 @@
+This guideline provides basic instructions on how to retrieve information in ACT!. It can be hard to understand, but the easiest way to learn is by practice and constantly using ACT! to either update our contacts' info, create weekly customer email lists, look up history, new opportunities, and AOR info on ACT! for research and outreach initiatives, and referring to this document for any questions. Familiarize yourself with each tab, including Contacts, Groups, Companies, and practice performing searches on keywords, advanced queries, etc. The more you use ACT!, the more comfortable you will become with its features and functions!
+
+=== '''Contacts''' ===
+
+==== '''How to Look Up a Contact?''' ====
+Go to the search bar in the bottom left corner of the screen. You can use this bar to search for contacts in various ways by adjusting the contact field. When you open the drop-down menu for the 'Contact Field,' you'll see options to search by city, state, zip code, specific tags, ID/Status, birth dates, email addresses, and even personal website links. Essentially, you can search for any contacts whose information matches what you enter into the search bar!
+
+'''Contact Field:''' Contact
+
+'''Contains:''' [Contact's Name]
+
+[[File:How to look up a contact.png|frameless]]
+
+'''OR''' select 'More Options' located right below the 'Lookup' button, then choose (from the drop-down menu):
+
+* '''Field:''' Contact
+* '''Equal To (=):''' [Contact's Name] '''OR'''
+
+* '''Starts With:''' [Contact's Name]  
+
+[[File:How to look up a contact 2.png|frameless]]
+
+'''OR''' go to 'Lookup' in the menu bar at the top left corner and select the category you wish to search for, such as Contact, Company, First Name, Last Name, etc.
+
+[[File:How to look up a contact 3.png|frameless]]<br />
+
+'''OR''' you can simply type the contact's name into the search bar located at the top of the page.
+
+[[File:How to look up a contact?.png|frameless]]
+
+
+==== '''How to Look Up All Contacts in a State / City / Country?''' ====
+Again, go to the search bar in the bottom left corner of the screen. Change the 'Contact Field' to either 'State,' 'City,' or 'Country.' This will allow you to easily look up contacts in different cities, states, and countries!
+
+This is the method we use to clean up ACT! (which means updating the contact info in ACT!). We will do this weekly by state. You can go to the 'ACT! Cleanup' task inside the 'ACT!' folder under 'Client Relationship Management' in the Marketing space on Wrike to view the list of states our contacts are located in, the number of contacts in each state, and the last date we cleaned up or updated the contact info.
+
+To clean up contacts by state, you will need to search for contacts in a specific state. Similarly, to prepare for a screening or business trip for Oren, you will need to search for contacts in the city he will be visiting! Here's how to do it:
+
+'''Contact Field:''' State / City / Country
+
+'''Contains or Equal To (=):''' [State's name in 2 letter abbreviations] / [City's name] / [Country's name]
+
+
+==== '''How to Look Up All Contacts in a Group?''' ====
+Navigate to the 'Groups' tab in the left-hand column to view the alphabetically ordered list of groups created in ACT. 
+
+In the 'Detail View' of each group, you can see the group description (explaining why the group was created and its purpose), any subgroups under this group, and below that, a list of contacts included in the group. You’ll also find history records, opportunities, and activities linked to the contacts in the group.
+
+[[File:How to look up all contacts in a group.png|frameless]]
+
+
+==== '''How to Look Up All Contacts?''' ====
+Go to 'Lookup' in the menu bar at the top left corner and click 'All Contacts.'
+
+[[File:How to look up all contact?.png|frameless]]
+
+
+
+=== '''Companies''' ===
+
+==== '''How to Look Up a Company?''' ====
+Again, go to the search bar in the bottom left corner of the screen.
+
+'''Contact Field:''' Company
+
+'''Contains:''' [Company's Name]
+
+[[File:How to Look Up a Company?.png|frameless]]
+
+'''OR''' select 'More Options' located right below the 'Lookup' button, then choose (from the drop-down menu):
+
+* '''Field:''' Company
+* '''Equal To (=):''' [Company's Name] '''OR'''
+
+* '''Starts With:''' [Company's Name]  
+
+[[File:How to Look Up a Company? 1.png|frameless]]
+
+'''OR''' go to 'Lookup' in the menu bar at the top left corner and choose the category you want to search, such as Contact, Company, First Name, or Last Name.
+
+[[File:How to look up a contact 3.png|frameless]]
+
+'''OR''' you can simply type the company's name into the search bar located at the top of the page.
+
+[[File:How to look up a contact?.png|frameless]]
+
+
+
+==== '''How to View All Company Profiles Created on ACT?''' ====
+
+Navigate to or click on the 'Companies' section in the left-hand column. This will display a list of all the company profiles we have on ACT, arranged in alphabetical order. Select the company you want to view to access their profile. In the 'Detail View' section, you will find basic information about the company, their history, contacts we have there, and the work opportunities we previously had or are currently pursuing with them.
+
+[[File:How to view all company profiles (that we have created on ACT)?.png|frameless]]
+
+
+
+=== '''ACT Cleanup''' ===
+The advertising industry is fast-paced, and many people frequently change jobs. To ensure we maintain accurate contact information and stay up-to-date with their job changes, titles, and locations, we aim to update all our contacts a couple of times a year.
+
+
+As of January 2025, we have 6,664 contacts. Dividing this by approximately 260 working days per year means we should aim to update or clean up at least 25 contacts per day to meet our goal of reviewing and updating all contacts on ACT at least once a year.
+
+
+You will clean contacts based on states. There is a Wrike task dedicated to this cleanup process titled '''<nowiki/>'ACT! Cleanup.'''' It includes the state names, the number of contacts per state, the size of the state (based on the number of contacts we have in that state), and the date the state was last cleaned.
+==== '''How to Clean Up ACT Contacts by State?''' ====
+Say you're working on Colorado. Open ACT and, in the search bar at the bottom left-hand corner, search:
+* '''Contact Field''': State
+* '''Contains''': CO
+[[File:How to Clean Up ACT Contacts by State?.png|frameless]]
+
+This will pull up all the contacts we have in Colorado.
+
+When the list appears, click '<nowiki/>'''Company'<nowiki/>''' in the top banner to alphabetize the contacts by company name. (You can customize the columns displayed in the '''<nowiki/>'List View'<nowiki/>''' by clicking '''<nowiki/>'Customize Columns'<nowiki/>'''. Add any available fields you want to see as columns to the '''<nowiki/>'Show as columns in this order'<nowiki/>''' list on the right. To reorder the fields, select a field and click '''<nowiki/>'Move Up'<nowiki/>''' or '''<nowiki/>'Move Down.'<nowiki/>''' The columns in the '''<nowiki/>'List View'''' will appear in the same order as this list.) Once sorted, select the first contact to view their details. Then, begin searching the contact's name on LinkedIn to view their current information.
+
+[[File:How to Clean Up ACT Contacts by State? 1.png|frameless]]
+
+'''Tip''': With LinkedIn Premium, you can perform private searches. Go to your LinkedIn > '''Me tab''' > '''Settings & Privacy''' > '''Visibility''' > '''Profile Viewing Options''' > '''Private Mode'''. You will now be in complete private mode.
+
+Check if the contact's information on LinkedIn matches what we have on ACT:
+
+# Verify if they are still at the company listed in ACT.
+# If they are, check if they hold the same title as listed.
+
+
+
+If their information does not match, follow these steps:
+
+===== '''Step 1: Go to the History tab in ACT for this contact and create a new history.''' =====
+
+* '''Type''': Update
+* '''Result''': 'Title Change' or 'Left Agency'
+* '''Date''': Use the date they left their previous company or changed their title, based on LinkedIn.
+** '''Note''': Since LinkedIn only shows months, set the day to the 1st of the month. For example, if they changed their title in March 2022, set the ACT history record date as 3/1/2022.
+* '''Details''': Include the company name, titles, and dates.
+
+
+Here’s an example of how the history record should look:
+
+* '''Subject line''': Changed title from 'ACD' to 'CD'
+* '''Details''':
+** @BBDO / New York
+** Creative Director (Mar 2022 - Present)
+** Associate Creative Director (Jan 2020 - Mar 2022)
+
+
+===== '''Step 2: Update the contact's information in all fields on their profile’s main page.''' =====
+Always click '''<nowiki/>'Save'''' before moving on to the next contact.
+
+
+===== '''Special Cases:''' =====
+
+* '''Freelancers:''' Enter "Freelance" in the ''''Company'''' field.
+* '''Retired Contacts:''' Mark as "RETIRED" in the ''''Company'''' field.
+* '''Unknown Contacts:'''
+** If you cannot find a profile or the information is outdated, mark the company field as '''"UNKNOWN."'''
+** Add a note in the history section:
+*** '''Type''': Update
+*** '''Result''': Other
+*** '''Details''': "Can't find profile or current information."
+
+
+===== '''Tagging:''' =====
+
+* Ensure contacts connected to Danny and/or Oren on LinkedIn have a ''''LinkedIn'''' tag on their profile.
+
+
+===== '''Other Additional Information:''' =====
+
+* Check the '''<nowiki/>'Contact Info'''' section on their LinkedIn profile for personal email addresses, phone numbers, birthdays, or websites. Add this information to ACT where appropriate.
+* If a personal email address isn’t listed, check their personal website. Many people list their email and social media accounts there.
+* For contacts missing an email, leave the '''<nowiki/>'Email'''' field blank and make a note to revisit it later. If Oren is connected to the contact on LinkedIn, he may be able to see their personal email. Add these contacts to the '''Daily Research''' task with a note: "Emails needed (from LinkedIn)." Oren can then review these contacts' LinkedIn profiles when he does the daily research.
+
+
+===== '''Location Updates:''' =====
+
+* Due to the rise of remote work, a contact's current city may not match their office location. In such cases, enter the city where they are currently residing in the '''<nowiki/>'Address'''' field.
+
+
+===== '''Multiple Office Locations:''' =====
+For agencies with multiple offices you would want to make sure you separate them by city or office location. For example: 
+
+* BBDO / New York 
+* BBDO / Minneapolis 
+
+When making companies, they will be made separately based on location.
+
+
+===== '''Technical Tips''': =====
+
+====== '''Tip 1: Avoid ACT Lagging''' ======
+ACT can easily lag if you open two tabs using the same account. Both tabs will automatically sync, disrupting your current search, booting you out, and leaving you unsure of which contacts you've already reviewed or cleaned up.
+
+If you’ve updated a contact’s company and they’ve moved to a company like BBDO (where we know and have the email formula on ACT: '''@bbdo.com'''), but you can’t remember the formula and need to double-check or search for it on ACT, follow these steps:
+
+# Leave the '''<nowiki/>'Email'''' field for that contact blank for now.
+# Finish cleaning up contacts on the current tab.
+# Once you’re done cleaning up, exit the search and look for contacts at BBDO.
+# Identify the contact you just updated (the one who moved to BBDO and has a blank '''<nowiki/>'Email'''' field).
+# Copy the email formula from other BBDO contacts and paste it into this contact’s '''<nowiki/>'Email'''' field.
+
+====== '''Tip 2: Tracking Progress''' ======
+When updating contacts, people may move around in the list or even relocate to a different state. This can result in them no longer appearing in your next search, making it tricky to track where you left off.
+
+To stay organized:
+
+# Stop cleaning at a contact who is still in the state you’re working on, so they will reappear in the next search.
+# Keep a note of the contact's '''name''', their '''current company''', and their '''position in the search''' (e.g., 35/164).
+# When you resume, search by '''company''' > '''contact''' and verify that it aligns with the same approximate position in the list. (The exact position may vary slightly depending on how many contacts have moved.)
+
+
+=== '''How to Create a Customer Email List?''' ===
+
+==== '''Create a list of Customer contacts:''' ====
+* '''Step 1:''' Open ACT. Then, in the top banner tabs, go to '''Lookup > Advanced > Advanced Query'''.
+[[File:How to create customer email list?.png|frameless]]
+
+In the ''Advanced Query'' tab, set the following criteria:
+* '''Search for:''' Contact
+* '''Type:''' Contact
+* '''Field name:''' ID/Status
+* '''Operator:''' Contains (It needs to be contains because sometimes contacts will be listed as "Customer Friendly" and not just "Customer")
+* '''Value:''' "Customer"
+* Click '''Add to List'''
+
+
+
+Keep the same '''Search for, Type''', and '''Field Name''', but adjust:
+* '''Operator:''' Does Not Contain
+* '''Value:''' "Established"
+* Click '''Add to List'''
+
+
+
+Repeat the '''Search for, Type, Field name.'''
+* '''Operator:''' Does Not Contain
+* '''Value:''' "-NC"
+* Click '''Add to List'''
+
+
+
+You need one more search criteria. Repeat the '''Search for, Type, Field name.'''
+
+*'''Operator:''' Does Not Contain
+* '''Value:''' "Retired"
+* Click '''Add to List'''
+
+ACT will most likely ask you if you want to save the current query, select '''No'''. Then, ACT will pull a list of all the '''Customer''' contacts (excluding the ones marked as established, retired, or no contacted).
+
+
+
+'''Step 2:''' In the top banner, click the '''Last E-mail''' tab to sort contacts by the most recent email sent.
+
+* Consider other fields:
+** '''Last Meeting''': Date of the last meeting.
+** '''Last Reach''': Date of the last phone call or interaction.
+
+If their last meeting or reach was recently, we don't need to email them quite yet.
+
+* If they have retired from the advertising industry or have not responded for an extended period, update their ID/Status to '''"Customer LP"''' (low-priority customer) and contact them only once a year.
+* If they have retired in general, update their ID/Status to '''"Customer-Retired."'''
+* If Oren no longer wants to reach out to them, update their ID/Status to '''"Customer-NC."'''
+
+
+
+'''Step 3:''' Create your list of regular customers (they should not have been emailed in the past '''3–6 months'''). Aim to email about '''20 customer contacts per week'''. As of January 2025, we have 544 Customer contacts. To reach out to them approximately twice a year, with 52 working weeks in a year, we would need to email about 20 Customer contacts each week.
+
+
+Creating these lists can be tricky, so I recommend referencing previous Customer Email lists to ensure no contacts are accidentally skipped, etc.
+
+
+Once your regular customer list is created, perform another advanced query search for the Customer Established contacts.
+
+
+==== '''Create a list of Customer Established contacts:''' ====
+'''Step 1:''' Go to '''Lookup > Advanced > Advanced Query''' in the top banner tabs.
+
+In the ''Advanced Query'' tab, set the following criteria:
+
+*'''Search for:''' Contact
+* '''Type:''' Contact
+* '''Field name:''' ID/Status
+
+* '''Operator:''' Contains (It needs to be contains because sometimes contacts will be listed as "Customer Established Friendly" and not just "Customer Established")
+* '''Value:''' Customer Established
+* Click '''Add to List'''
+
+
+Keep the same '''Search for, Type''', and '''Field Name''', but adjust:
+* '''Operator:''' Does Not Contain
+* '''Value:''' "-NC"
+* Click '''Add to List'''
+
+
+
+You need one more search criteria. Repeat the '''Search for, Type, Field name.'''
+* '''Operator:''' Does Not Contain
+* '''Value:''' "Retired"
+* Click '''Add to List'''
+ACT will most likely ask you if you want to save the current query, select '''No'''. Then, ACT will also most likely ask you for your Lookup options. Click '''Replace the current lookup.''' ACT will then pull a list of all Customer Established contacts.
+
+
+
+'''Step 2:''' In the top banner, click the '''Last E-mail''' tab to sort contacts by the most recent email sent.
+
+* Consider other fields:
+** '''Last Meeting''': Date of the last meeting.
+** '''Last Reach''': Date of the last phone call or interaction.
+
+If their last meeting or reach was recently, we don't need to email them quite yet.
+
+* If they have retired in general, update their ID/Status to '''"Customer Established-Retired."'''
+* If Oren no longer wants to reach out to them, update their ID/Status to '''"Customer Established-NC."'''
+
+
+
+'''Step 3:''' Create your list of customer established contacts (they should not have been emailed in the past '''2-3 months'''). Aim to email about '''6-8 customer established contacts per week'''. As of January 2025, we have 111 Customer Established contacts. To reach out to them approximately 3-4 times a year, with 52 working weeks in a year, we would need to email about 6-8 Customer Established contacts each week.
+
+
+
+Additional information about the Advanced Query search on ACT:
+
+You can use this tool to create almost any kinds of list of contacts you want! Besides all of the fields I mentioned above, you can also use the 'And/Or' field (as shown in the picture below) to either look for contacts that have all of the requirement you put in using 'And' or for contacts that just have one out of all of the requirement you put in using 'Or.' For the Advanced Query search we do to create our weekly customer email list, we will put 'And' for all of the requirement we enter since the contacts in the list need to meet all of the requirements: they have to have ID/Status contain 'Customer' / 'Customer Established', their ID/Status could not contain '-NC' and 'Retired.'
+
+
+
+'''Additional Information About the Advanced Query Search on ACT:'''
+
+The Advanced Query tool on ACT can be used to create almost any type of contact list you need. In addition to the fields mentioned earlier, you can utilize the 'And/Or' field (as shown in the picture below) to refine your search criteria.
+
+[[File:Advanced Query Search on ACT - Additional Info.png|frameless]]
+
+* Use '''<nowiki/>'And'''' to find contacts that meet all the requirements you specify.
+* Use '''<nowiki/>'Or'''' to find contacts that meet at least one of the specified requirements.
+
+
+
+For the Advanced Query search used to create our weekly customer email list, we select '''<nowiki/>'And'''' for all criteria because the contacts in the list must meet every condition:
+
+* Their ID/Status must contain 'Customer' or 'Customer Established.'
+* Their ID/Status must not contain '-NC' or 'Retired.'
+
+=== '''History List Search''' ===
+
+==== The easiest way to perform mass searches for any logged activity, such as '''Total Meetings held, AOR, or Opportunities''' ====
+
+===== Note: circled in blue where and how to set a custom date range. =====
+[[File:ACT HistoryList IMG 01.jpg|left|thumb]]
+
+
+
+
+
+
+
+
+
+
+[[File:ACT HistoryList IMG 02.jpg|left|thumb]]
+
+
+
+
+
+
+
+
+
+
+[[File:ACT HistoryList IMG 03.jpg|left|thumb]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_retrieve_information_in_ACT!

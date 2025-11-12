@@ -1,0 +1,60 @@
+=Introduction=
+You've been tasked with making a 3D animatic. Before you can jump in and start making shots, lets talk about what you need to get started.
+
+==ASSETS==
+====SCRIPT====
+The director or producer will provide you with a script that describes the actions within each shot as well as rough shot duration, callouts for on screen graphics and VO lines for each shot.
+Here's our example script:
+[https://docs.google.com/document/d/1BWKV5rrOkx8ITMqXnGwly-NBbD5k2rZ8/edit|EXAMPLE SCRIPT]
+
+====TOY MODELS AND RIGS====
+
+====ANIMATC CHARACTERS====
+
+====SETS AND PROPS====
+
+====AUDIO====
+
+==SHOT CREATION==
+Describe the general practice of making shots
+
+====SHOT SETUP====
+
+====ANIMATION====
+
+====CAMERAS====
+
+====VISUAL EFFECTS====
+
+====VIEWPORT RENDERING====
+*Lighting
+*Shading
+*Depth of Field and Motion Blur
+
+====PLAYBLASTS====
+
+====WORKING WITH OTHERS ON THE SAME ANIAMTIC====
+
+==EDITING==
+====Sequences====
+
+====Screenspace Graphics====
+
+====Cut Downs and Alts====
+
+====Output====
+
+==DELIVERY==
+
+====Posting Updates to Wrike====
+
+====Approval====
+
+==CHANGES AND REVISIONS==
+
+====Versioning Up====
+
+====Final Approval====
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Animatic_procedures_and_best_practices

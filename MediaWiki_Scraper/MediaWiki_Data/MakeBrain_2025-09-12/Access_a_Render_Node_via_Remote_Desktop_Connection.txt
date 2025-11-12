@@ -1,0 +1,29 @@
+[[Category: IT]]
+As of early 2024 all Render Nodes are joined to our Active Directory and render nodes can now be accessed via Remote Desktop Connection from a Windows computer. VNC may still be used to connect to certain render nodes but Remote Desktop Connection provides a better user experience and greater security and is the preferred method going forward.
+
+== Locating Remote Desktop Connection ==
+Remote Desktop Connection is available on all Windows 10, 11, and Windows Server based devices. To access Remote Desktop Connection from your computer in Windows 10, click the Start Button, scroll down until you find the folder "Windows Accessories", click the folder to expand it, then scroll down to Remote Desktop Connection and click its icon to launch it, or you can click the start button and start typing "remote" and select the icon once it populates in the search. <br>[[File:Remote_Desktop_Connection_Windows_10_Start_Menu.png|alt=Remote Desktop Connection Windows 10 Start Menu|553x553px]]<br>
+
+For Windows 11, click the start button, start typing the word "remote" and select the Remote Desktop Icon when it appears. <br>[[File:1a.RenderNodeRDC.png|alt=To locate Remote Desktop Connection, click start then start typing "remote", then select "Remote Desktop Connection"|593x593px]]<br>
+
+== Connecting to a Render Node - Determine the IP Address ==
+As of the creation of this article (6/21/2024) we are in the process of migrating all computers into our Active Directory managed environment so we will use the render node's IP address instead of its computer name. To determine the IP address of the render node you want to connect to use the following logic: All render node IP addresses are in the format: 192.168.0.x where x equals the numbers in the render node's name (exclude the letter R). For render nodes R02 - R09 you will also omit the leading 0.
+ Examples IPs for reference:
+* R02 = 192.168.0.2 
+* R09 = 192.168.0.9
+* R30 = 192.168.0.30
+* R198 = 192.168.0.198
+
+== Using Remote Desktop Connection ==
+Now that you've determined the correct IP address to use, launch Remote Desktop Connection and perform the following steps:
+
+# Enter the IP address for the render node in the "Computer" box, then click "Show Options" in the bottom left corner of the window. This will make entering login credentials easier and will also allow you to save the credentials for faster access in the future. <br>[[File:RemoteDesktopConnection - IP.png|567x567px]]<br>
+# For User name enter: corp\MAKE then click the checkbox for "Allow me to save credentials." Then click Connect. <br>[[File:2.RenderNodeRDC.png|558x558px]]<br>
+# Enter the current password for the user corp\MAKE when prompted and click OK. <br>[[File:3.RenderNodeRDC-Password.png|390x390px]]<br>
+# The first time you connect to a specific render node, you will see a certificate warning - this is expected behavior. On the certificate warning pop-up you can visually confirm you are connecting to the correct render node. Click the checkbox "Do not ask me again for connections to this computer" and you will not see the certificate warning next time you connect. <br>[[File:4.RenderNodeRDC-Certificate.png]]<br>
+
+
+You should now be connected to the render node and can perform tasks such as restarting the computer, installing software, restarting Deadline Worker, or any other administrative tasks you need to complete. Once you've completed your task(s), please close the connection so that others can connect to the render node if needed. An active connection from another user may prevent someone else from accessing the device <br>[[File:RemoteDesktopConnection - CloseConnection.png|1279x1279px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Access_a_Render_Node_via_Remote_Desktop_Connection

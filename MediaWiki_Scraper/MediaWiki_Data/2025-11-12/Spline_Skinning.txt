@@ -1,0 +1,55 @@
+= Back to Hub =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+= Spline Skinning =
+Good for toony mouths. Works better than spline IK modifier because ctrls can be scaled, unless you use a sweep modifier on the spline instead of skinned geo. '''This method has a disadvantage, see below.'''
+
+[[File:1 SplineSkin CoverImage.png|frameless|402x402px]]
+
+=== ADVANTAGES: ===
+- stretchy
+
+- big range of motion
+
+- can be point cached
+
+=== DISADVANTAGES: ===
+- Cannot be rotated along the spline vertex axis that follows the curve! So if you wanted to curl out the lips on a character model it wouldn't be an option with this method.
+
+== Setting Up The Rig ==
+We will create a test rig using a torus and a circle spline.
+
+Create a circle spline and a torus with the same diameter, then make sure they are centered at the world origin.
+
+[[File:2 SplineSkin TorusAndSpline.png|frameless|405x405px]]
+
+Then, add a skin modifier to the torus and add the spline as a "bone."
+
+We want to create some controls for the spline so that we don't have to animate it in "edit spline" mode.
+
+To do this, we can create point helpers that will control each vertex on the spline.
+
+[[File:3 SplineSkin SnapToVertex.png|frameless]]
+
+Create a point helper for each spline vertex, then snap the point helpers to the vertices with the "snap to vertex" toggle.
+
+[[File:3 SplineSkin Undeformed.png|frameless|371x371px]]
+
+Now we need to make the vertices follow the point helpers. To do this, we will add a skin modifier to our spline, and add all of our point helpers as "bones."
+
+[[File:4 SplineSkinDeformed.png|frameless|370x370px]]
+
+Now, you should be able to move your point helpers and control the spline vertices with the point helpers.
+
+From here, we can add spline Ctrls for animation.
+
+Create some small spline circles. Snap each one to a point helper, then parent the point helper to the spline Ctrl. Make sure to freeze transforms and set skin pose when you are done adjusting your controls.
+
+For the final rig, it will be best to make sure the point helpers and spline are hidden so nothing gets broken.
+
+[[File:1 SplineSkin CoverImage.png|frameless]]
+
+That’s it! Have Fun!
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Spline_Skinning

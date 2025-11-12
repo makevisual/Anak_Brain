@@ -1,0 +1,113 @@
+= Previous Article =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous article: [[Character Cloth]]
+
+= Finishing the Rig: =
+Many of these finishing techniques can be aided with the use of the [[Rig Buddy|Rig Buddy tool]], located in the MAKE tools menu. ("MAKE Tools > Rig Buddy")
+
+[[File:9 Finishing RigbuddyLocation.jpg|frameless]]
+
+== Rig Hierarchy ==
+The first thing we should do is make sure our hierarchy is all correct.
+
+[[File:1 Finishing RigHierarchyOutliner.jpg|frameless|472x472px]]
+
+Open your Scene Explorer and look at it in Hierarchy mode. Make sure all your rig objects are underneath your Global. If anything exists outside of that hierarchy, parent it into the rig now. '''This includes geometry, so make sure your geometry is parented to the Global.''' 
+
+You can use Rig Buddy in Rigging Mode (select "Mode" and choose "Rigging.") to reparent selected objects to the global.
+
+== Point Cache and Render Time Modifiers ==
+[[File:6 Finishing ModifierStackCleanup.jpg|frameless|375x375px]]
+
+Make sure all your character's skinned geo has a point cache modifier above any deformation modifiers (eg. edit poly, flex, skin, etc) but below any render time modifiers (eg. displacement, Turbosmooth, etc). '''Do not use the world space point cache modifier.''' We use Point Cache to transfer character animation from the animation scene to the render scene. Point cache records the vertex positions of the deforming geometry, and that data can be loaded onto the character's geometry in the render scene. This keeps things light, as the only part of the character that exists in the render scene is the character's geometry and global. Once you have put Point Cache modifiers on an object, turn it off. We only want it on when we are caching or loading animation. 
+
+You can check for Point Caches on selected geo using Rig Buddy in "Baking" Mode. You can also add Point Cache modifiers above the skin on selected geo.
+
+
+For any render-time modifiers, such as displacement, shell, or Turbosmooth, you can turn them off in the viewport. RMB on one of these modifiers and select "Turn off in viewport" from the dropdown. This will disable the modifiers in the viewport, but enable them at render time.
+
+
+One more thing we can do is check for "unsafe" modifiers under Skin modifiers using Rig Buddy. In "Skinning" mode, which will flag any modifier that might interfere with your deformation/publishing. You can move or delete this if needed.
+
+== Naming and Save Names on Selected ==
+
+===== Naming and Asset Prefixes: =====
+We want our published rig to have consistent naming. There should be no duplicate names for any object in our rig, and every object should have the prefix for our asset. I hope you didn't wait until the end to name everything. If you waited until the end, use the "Interactive Renamer" to set up the names for all your objects. Please see [[Beginning The Rig]] for a guide on correct asset naming conventions.  
+
+If you are confident that everything is named properly, you can check it with the Rig Buddy tool. Under "MAKE Tools > Rig Buddy," you can pull up the dialogue box for the Rig Buddy tool.  
+
+==== Rig Buddy Naming Mode: ====
+[[File:10 Finishing RigbuddyNamingMode.jpg|frameless|673x673px]]
+
+To check our naming with Rig Buddy, select "Mode" and choose "Naming." The Naming Tools will pop up. With your entire rig selected, you can hit "Check Selection for Duplicate Names" to look for duplicated names. Any duplicates will populate the table on the right. You can click "select" to select them, and you can also use the tool to auto generate names on objects. You can preview these new names by clicking "Preview Auto Generated Unique name on selection," and apply it if it's to your liking.
+
+We can also check for prefixes by selecting "Check Hierarchy Prefix Tags Against Global." any objects without a prefix will populate the table, and you can select them and automatically apply a prefix.
+
+==== Save Name on Selected: ====
+[[File:3 Finishing SaveNameOnSelected.jpg|frameless]][[File:8 Finishing SavedNameObjectProperties.jpg|frameless|365x365px]]
+
+Select everything in your rig. in the MAKE toolbar, pull up the Scene Utilities and select the "Save Name on Selected" button. Now if you select an object and bring up it's object properties, you can see its saved name under "User Defined." This is useful because if the names get changed on a character rig, they can be retrieved cleanly with "Fetch Name on Selected," which is useful for restoring names when we need to do things like save and load animation. 
+
+With Rig Buddy, we can select all our rig objects and hit "Check for Stored Name" to check if we saved names as well. You can also save and retrieve names with this tool if needed. 
+
+== Optimizing Ctrls ==
+[[File:4 Finishing SplineInterpolationOne.jpg|frameless]] 
+
+If you have not already, lower the interpolation on your ctrls to 1. This will reduce lag in your animation scene, even if it isn't as visually appealing to look at. You would be surprised how significantly this can speed up your scene. 
+
+== Remove Animation ==
+Select all the objects in your rig (including geo) and remove any stray keys that may be left over from skinning or testing. You don't want a published rig moving on its own! 
+
+== Freeze Transforms and Skin Pose ==
+[[File:1 Finishing FreezeTransforms.jpg|frameless]]
+
+Before we publish our rig, we need to freeze transforms on our ctrls. Select all your controls (which is easily done by double clicking your Ctrl folder in the scene explorer) and hit ALT+RMB to bring up "Freeze Transforms." select "Freeze Transforms" and hit "Yes" when it prompts if you want to continue. 
+
+Next we want to set the skin pose. hit ALT+RMB again, and this time select "Set Skin Pose." Hit yes if it prompts if you want to continue. Now if you adjust your pose and want to return to the bind pose, you can hit ALT+RMB to bring up the menu and select "Transforms to Zero" or "Assume to Skin Pose" to return to the bind pose.
+
+== Apply Multi-Material to Global ==
+[[File:5 Finishing OneMultimatOnGlobal.jpg|frameless]]
+
+you will want to apply your character's material to all the ctrls and the global especially. This will make it possible for your material to be published and loaded properly through asset switch. You should have made sure that your character has a multi-material before you began rigging, but in case you did not, please check now and make sure there is only one multi-material applied to your character. If there is not, you will need to have one created in order to properly publish out the material on your character rig.
+
+== Publishing Character Rigs ==
+We often publish three different rigs:
+
+* '''Full Character Rig (Full)'''
+** this rig contains your full, finished rig. This includes all bones, ctrls, helpers, geo, hair, cloth, etc.
+* '''Animation Rig (Anim)'''
+** this rig contains only what is needed for animation, so no need for hair or cloth drivers. This may also include proxy versions of denser meshes or hair.
+* '''Render Rig (Render)'''
+** this rig has the character geometry and global only. Animation is point cached from the animation scene and loaded on to the geometry of this rig in the render scene.
+<br />'''Before publishing, save a version of your finished rig to the layout folder in your asset's Build folder.''' You should always save a layout file to publish from. you can make a layout version of each of your rig versions.
+
+[[File:7 Finishing PublishWindow.jpg|frameless]]
+
+To publish your rig, select your global and open up Asset Switch (MAKE Tools > Asset Switch). Click on the "Publish" button, and make sure "Material" and "3ds Max file" are checked on. you won't need to export a vrmesh version.
+
+You don't need to publish a new material slot for each version of the rig, but you will need to export the three rig versions. You can call them Full, Anim, and Render in the publish settings. Then just hit publish and let it do its thing.
+
+
+For a more in depth look at asset publishing and Asset Switch, [[Publishing an asset in 3dsMax|please take a look at the Publishing an Asset article.]]
+
+== Checking the Publish ==
+This is perhaps the most crucial step in the finishing process, and it's also the most overlooked. Before you move onto something else or consider the rig truly finished, open up a new max file and load in your character rig through Asset Switch. When it loads in, make sure everything looks correct. Are the textures correct? Did the geo import properly? Are my weights still working? Is everything neatly organized in a folder structure in the Scene Explorer? Is my rig free of animation and stray keys? Are the ctrls transforming as expected in Gimbal mode? These are all questions you should be asking yourself as you give your rig a final check over. Chances are, your initial publish will have mistakes. Just go back and fix them in your layout file, and either publish a new version or overwrite the broken one.
+
+
+'''Two common issues with published rigs and how to fix:'''
+
+* '''My Geo is missing when I load the rig in Asset Switch.'''
+** Your Geometry might not be parented to the Global. Double check that it's parented to the Global.
+* '''My Textures are messed up when I load the rig in Asset Switch/There are no textures on my rig.'''
+** Make sure your textures are applied to the global.
+** Make sure all your textures live under one Multi-Material that is applied to your rig and Global.
+
+
+And that is it, good luck!
+
+= Back To Hub =
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Finishing_The_Rig

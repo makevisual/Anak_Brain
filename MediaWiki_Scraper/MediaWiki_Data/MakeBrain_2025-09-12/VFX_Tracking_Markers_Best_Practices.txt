@@ -1,0 +1,104 @@
+=What is 3D tracking=
+3D tracking is the process of locating a camera or objects position in 3d space over time. Most commonly here at MAKE we use 3D tracking to create 3D cameras that mirror the real cameras motion that was used on set during a shoot. 3D tracking is a foundational step in replacing the green screen in a shot with a CG world. 3D tracking can also be used to replace screen images, replace stand in props with full cg props, add aditional details to a moving shot, and even create masks instead of using roto.  
+
+
+
+=Requirements for a successful 3D track=
+    <ul>
+    <li> Clear, defined, and in focus tracking points (usually tracking markers)</li>
+    <li> Parallax between tracking points </li>
+    <li> A known Camera lens focal length </li>
+    <li> A known Cameras Backplate size </li>
+    <li> A visible ground plane or flat surface to orient off of </li>
+    <li> A set frame range </li>
+    </ul>
+
+
+
+=Tracking markers=
+One of the fundamental components of a successful 3d Track is clear tracking markers, Most often these come in the form of stickers placed on set as directed by the VFX supervisor. They can also come in the form of an Image displayed up on the screen of a phone, tablet, or TV, Green tape, or pencil marks. additionally in many cases, simply having high contrast in focus areas on static objects in the shot will work just as well as placed tracking markers. Be careful not to rely on this though, as what appears high contrast and in focus to your eyes can easily be blurred away through a camera lens due to depth of field and motion blur and become unusable in the tracking process. If tracking markers are getting blurred through the camera lens, use larger tracking markers, they will retain more data and contrast after being blurred by the camera lens.
+
+You can find printable and screen tracking markers here, the printable sheets should generally be printed on sticker paper
+     <nowiki>
+    U:\resources\VFX\Markers</nowiki>
+
+    [https://drive.google.com/drive/folders/1JeTPPG4aOyOd5f7YJEGQw1-jUpHaabZH Google drive location]
+
+
+
+=Where and how should tracking markers be placed=
+In general, try to avoid placing tracking markers anywhere where an actor or object will pass in front of a tracking marker. The reason to avoid this is because when the actor or object is chromakeyed so will the tracking marker, try and keep tracking markers in places where they can be easily be removed with a garbage matte instead of a precise roto. This can't be always be achieved, and often it is necessary to add tracking markers in locations that fall behind an actor or object being keyed. In cases like this bias towards using green or blue tape similar to the screen color instead of a high contrast black and white tracking markers, it will be more forgiving and cause less disruption to the edge pixels when it comes time to chromakey the shot.
+
+If possible always avoid placing tracking markers directly on any element of the shot that is going to make it into the final image. For example, products, playsets, shadows, furniture, ect. If the pixels where the tracking markers are placed are going to make it through the key and onto the final image, so will the tracking marker, and it will then need to be painted out on every frame, resulting in a significant amount of additional time and work required for the shot.
+
+When tracking markers are getting heavily motion blurred or defocused please consider using higher contrast tracking markers in those areas, green on green does not work well when it gets defocused or motion blurred. Additionally when tracking markers are getting heavily motion blurred or defocused consider using a larger tracking marker instead of a smaller one. Using a higher contrast and/or larger tracking markers in these situations will result in more usable data in the plate for tracking, and a better solve with less manual work. 
+
+
+
+=Best and worst practices with examples=
+'''Lack of tracking markers 01'''
+
+This shot has literally zero tracking markers. Tracking markers should always be placed in places where the action does not overlap the green screen. additionally this shot has a really aggressive camera move and shallow depth of field resulting a lot of defocus and motion blur. There is not enough data in the majority of frames for the auto tracker to pull tracking data from the table or toys. This shot failed to meet requirements for a successful track and resulted in a significant amount of work needed to be done on a supervised track. This could likely be avoided by just placing a few tracking markers in the shot, left of the playset, infront of the playset, and on the back wall. One to two minutes on set placing these tracking markers could have saved 4+ hours of work later.
+
+[[File:VFXTrackingMarkersBestPractices_HWS-CerealBowl_VFX-120_001.JPG|800px]] [[File:VFXTrackingMarkersBestPractices_HWS-CerealBowl_VFX-120_002.JPG|800px]]
+
+
+
+
+'''Lack of tracking Markers 02'''
+
+At the start of this shot, there are literally zero tracking markers as well as throughout multiple other portions of the shot, tracking points need to be present during all frames of a shot in order to successfully solve. The Hot Wheels track does not create any additional tracking points that the auto tracker can detect because it is so so low contrast. And even worse, the supervised tracking points that can be pulled from the blue dots are all at the same depth, resulting in very little parallax data, and become low value tracking points as a result. Please watch out for situations like this and remedy them on set by placing additional tracking markers. These issues in combination resulted in this shot failing to meet requirements for a successful track and resulted in a significant amount of work needed to be done on a supervised track. Some c-stands and stickers could be placed behind the set in just a minute or two which would have cut the 12+ hours it took to manually track this shot down to a fraction of that. 
+
+[[File:VFXTrackingMarkersBestPractices_S_HWRS_SP24_VFX-130_003.JPG|800px]] [[File:VFXTrackingMarkersBestPractices_S_HWRS_SP24_VFX-130_004.JPG|800px]]
+
+
+
+    
+'''Vibrations'''
+
+In this shot the playset vibrates and shakes when the actor interacts with it. This causes all tracking point data on the playset to become unusable for about 12 frames right in the middle of the shot. This can be alleviated by gluing the playset down better, but it may never be fully static, in which case, additional tracking markers are need to compensate the loss of data points from the vibrations. It is also important to have tracking markers at a variety of depths, in front of the playset, and behind. there are zero tracking markers on the table behind the playset, and there should be more than their currently are on the back wall, as well as In front of the playset. These issues in combination resulted in this shot failing to meet requirements for a successful track and resulted in a significant amount of work needed to be done on a supervised track. Less than 60 seconds on set could have saved 4+ hours of work later.
+
+[[File:VFXTrackingMarkersBestPractices_HWS-CerealBowl_VFX-115_001.JPG|800px]]
+
+
+
+
+'''Tracking markers placed in shadows'''
+
+This shot was acceptable to track due to the significant number of high contrast in focus areas. The lack of tracking markers did not end up being a major issue because the focus was good, but with a more aggressive camera move that caused more motion blur, or slightly more depth of field blur it very easily could have been an issue, and more tracking marks should have been placed to be safe. The actual problem areas of this shot are where the tracking markers were placed. This shot contains exactly three tracking markers, as green tape, and they were placed in nearly the worst place they could be, under a shadow. Because the table is going to be replaced with a CG table, the shadows are going to need to be keyed and re-applied in comp. Because these tracking markers lay in the shadow, they will need to be painted out on every frame in order to not be visible in the re-applied shadow. If they were repositioned a few inches forward, farther back, or on the right hand side of the table, they would not need to be painted out at all. Please avoid placing tracking markers in the shadows, as it they will need to be painted out, creating more work required for the shot.
+
+[[File:VFXTrackingMarkersBestPractices_HWS-CerealBowl_VFX-075_001.png|800px]] [[File:VFXTrackingMarkersBestPractices_HWS-CerealBowl_VFX-075_002.png|800px]]
+
+
+
+
+'''Tracking markers at varying depths'''
+
+Do not do this. 3D tracking only works if your tracking markers are at a variety of depths, as listed above in the requirements for a successful track, parallax between tracking points is a key element of getting a successful camera solve. Putting all of the tracking markers at a single depth is useless, doing so results in no parallax between points, thus no speed or depth calculations can be achieved on the camera solve and will result in an un-trackable shot. This shot also needs significantly more tracking markers, both on the floor and on C-stands in the background. These issues in combination resulted in this shot failing to meet requirements for a successful track. This shot ended up taking over 12 hours of doing manual supervised tracks to get a bad but functional camera solve. Had tracking markers been placed appropriately, it could have taken a fraction of the time, and resulted in a much more accurate camera solve. 
+
+[[File:VFXTrackingMarkersBestPractices_S_HWRS_SP24_VFX-130_001.JPG|800px]] [[File:VFXTrackingMarkersBestPractices_S_HWRS_SP24_VFX-130_002.JPG|800px]]
+
+
+
+
+'''Conforms and speed ramps'''
+
+3D tracking software does not like high movement per frame, you will always get a better track when objects move less in screen space between frames than when they move more. Because of this it is usually better to track shots that playback at a slower speed. When conforming a shot, in cases where a shot was set to a linear speed increase, for example it plays back at a flat 500% speed increase. Just because you can conform a shot at that speed and bake that speed into the plate doesn't mean you should. when speed ramps over 200-300% get baked into plates it becomes harder to track the shot, because the everything moves a greater distance from one frame to the next, and the tracking software has a harder time keeping accuracy the greater distance tracking points are moving. It can be smarter to drop the speed down during the conform process to make tracking easier and more precise, especially if there is high motion blur or Depth of Field blur in the shot, and instead time warping it in comp to match the original speed in the rough cut.
+
+If you notice this on a shot you are working on, feel free to ask whoever conformed the shot to provide a different speed version of the shot for tracking, that can be reconformed to the shot at a later date if needed.
+
+
+
+
+=Tracking Screens=
+
+Screens can be tracked and replaced through a variety of methods, typically the corner pin method is the fastest and easiest in most situation, especially if the device is moving, like a phone in someones hand. Screens can also be replaced using a 3d track and card, this method works best on screens that are completely static, like a laptop on a table. 
+
+When on set and shooting a shot that will need a VFX screen replacement it is critically important to consider the color of the image on the screen, and how many tracking points are present in it. Should you use a green/blue screen or a black screen on the device? Using a Black screen with minimial tracking markers is best in most situations and should be the default because it will pick up reflections which can be added back on later, while green/blue will not. Screen images should also have very minimal track markers, you really only need a trackin point on each of the four corners to perform a corner pin track, having fewer tracking markers also requeres less cleanup and paintouts on your reflections. You should only use a green or blue screen if fine hair is going to pass infront of a screen replacement and need to be added back over the top of the CG screen, it is not necessary to use green if something solid like an arm or hand is going to pass over the screen, roto will be fine, and the reflections you get from black are more valuable.
+
+In the images below you can see how nice of a reflection we get with the black screen, that will be added back over the screen replacement. And we lose all reflections in the green screen. But when the kids hair passes infront of the screen, it is able to be keyed, and placed back over the screen replacement.
+
+[[File:VFXTrackingMarkersBestPractices_ScreenReplacement_Black_001.JPG|800px]] [[File:VFXTrackingMarkersBestPractices_ScreenReplacement_Green_001.JPG|800px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=VFX_Tracking_Markers_Best_Practices

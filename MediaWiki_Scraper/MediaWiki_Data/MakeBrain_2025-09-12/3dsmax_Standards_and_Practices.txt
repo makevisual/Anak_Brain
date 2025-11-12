@@ -1,0 +1,253 @@
+[[Category:3dsMax]]
+
+In this article you'll find a list of standard things to adhere to when using 3dsMax.
+
+Following these instructions ensures that files created by MAKE are consistent, logically structured, and easy to use. No one likes trying to figure out what's going on with a scene because someone went rogue. 
+
+=Quick Tips=
+* Version often (and make sure auto-backup is on)
+* Keep your scenes clean and organized, not just for yourself but for anyone who may need to work with your scene. 
+* Keep all files related to the scene within the project folder
+* If you can't find an answer online ask questions! 
+
+=Common Settings=
+===Scale & Units===
+* US Standard: Decimal Inches
+* System Unit Setup: 1 unit = 1 inch
+Scene Scale is an extremely important setting that needs to be consistent across the entire company. MAKE uses inches.
+
+If you open a fresh scene this should be correct, but if you open a scene made somewhere else (''say a client'') it may open with incompatible settings. 
+To set System Units OR make sure it's already set correctly go to your 3dsMax Toolbar and select '''Customize > Units Setup > System Unit Setup ''' and enter '''1 Unit = 1.0 Inches'''  and make sure "Respect System Units In Files" is checked
+
+[[File:3dsMax_SnP_Scale_step1.jpg|250px]][[File:3dsMax_SnP_Scale_step2.jpg|250px]][[File:3dsMax_SnP_Scale_step3.jpg|250px]]
+
+===Framerate / Time settings===
+This may change depending on the project, however these are the default values.
+* Framerate: 24fps
+* Time Display: Frames
+* Start you scene files at frame 1000
+
+MAKE starts animations at frame 1000. You'll see this in 3dsMax, Nuke, Premier, and anything else you work on. 
+Why you ask? Starting at frame 1000 allows you to avoid going into negative timeline numbers and do things like start a simulation before the start of the animation, start animations before the rendered timeline which helps motion blur, and defaults rendered files to a nice 4-digit #.<sub>(Also 1000 looks cool)<sub>
+
+To change your time settings look at the bottom right of the 3dsMax window and find the little clock with the gear. This opens the '''Time Configuration''' Panel where you can change FPS, Time Display, Playback Speed, and Timeline settings. 
+
+[[File:3dsMax SnP Time.jpg]]
+ 
+===Gamma/LUT===
+We work in a linear work space, so you need to use the following settings:
+* 'Enable Gamma / LUT Correction' should be checked
+* The 'Gamma' should be set to 2.2
+* 'Affect Color Selectors' should be checked
+* 'Affect Material Editor' should be checked
+* The 'Input Gamma' Should be 2.2
+* The 'Output Gamma' Should be 1.0
+
+These settings are found by going  to your 3dsMax Toolbar and select '''Customize > Preferences > Gamma And LUT'''
+
+=Scene Organization=
+==Naming==
+Naming scene objects is a simple way of making your scene decipherable. You'll have an easier time sorting through your scene explorer if things are named properly, for example: 
+
+[[File:3dsMax SnP NamingExample good.jpg|300px]]<br>
+'''vs.''' <br>
+[[File:3dsMax SnP NamingExample bad.jpg|300px]]
+
+Look at that second one! YUCK. 
+
+This also makes things much simpler to Merge into other scenes since you can clearly see what you're looking for and search for names much quicker. 
+
+Keeping things named may seem tedious at times but your future self will thank you when you have to open the scene again some day, or when someone else needs to open the file or extract an object from that file. 
+
+If you wanted to rename multiple objects at once you can use the [[Creating an asset in 3dsMax#Interactive Renamer|Interactive Renamer]] 
+
+===Naming Specifics===
+When naming an object be consistent and follow this structure:
+
+ <nowiki>
+[Class]_[TAG]_[Type]_[Name]_[Side*]_[Number*]</nowiki>
+
+' * ' Fields only entered if needed.
+
+Take note as to the capitalization and formatting, because this is important to organization.
+
+Below is a list breaking down the [Class]_[TAG]_[Type]_[Name]_[Side*]_[Number*] naming convention:
+
+* [Class] - Classes are the overall type of asset you have, and can be sorted into the following categories.
+** "C" - Use this for character
+** "O" - Use this for objects
+** "S" - Use this for sets
+
+* [TAG] - This is the predefined 3 letter tag that every asset has. The TAG is set during [[Creating an asset in 3dsMax|Asset Creation]] and is usually a descriptive 3-Symbol name. The example used in this article is FOY, the TAG for a Foyer set. Another could be CSL for Castle. It doesn't have to be perfect, just unique among the other assets in the project.
+:::''Fun Fact: The standard TAG is 3 letters, but it can technically be more! It's recommended you use 3, but say you have several similar assets and want them all to be called CAR you can use CAR1, CAR2, CAR3, etc to differentiate the assets''
+
+* [Type] - This is the type of object you are making
+** Geo - This should be used for anything that will be rendered.
+** Ctrl - You'll put controls for objects here and it's one of the only places you'll likely be keying anything. For example during [[Creating an asset in 3dsMax|Asset Creation]] assets are created parented to a "Global" spline circle that will appear here and is used to set the position of the asset. Other sub controls for objects or characters should also be added here.
+** Rig - This should be used for objects used to drive animation like bones, points, & IKs. For a more detailed character breakdown read the [[Rigging a character in 3dsMax]] article.
+** Driver - This should be used for anything that will be used as an object to drive, or be driven by simulation, or other types of procedural animation. This geometry is not meant to be rendered.
+** [****] - Feel free to make new types, just be consistent within the project.
+
+* [Name] - This is a descriptive name of what the object is, like 'Body' or 'PalmTree' etc...
+
+* [Side] - This field is for if the object is on the left or right sides. If there is not a symmetric pair, you can leave out this field. The left and right denotations are only as follows:
+** "L" - for Left
+** "R" - for Right
+
+* [Number] - Number them up if there is more than one, this field is not required if there is only one. Make sure that symmetrical objects are enumerated with the same number!
+
+In the example image of the column pictured in the section above one of the column sections was called:
+
+ <nowiki>
+S_FOY_Geo_FancyColumn-StoneUpper_001</nowiki>
+
+Once modeling is further set this object will likely be combined into a single object and mirrored on both sides of the Foyer Set it's being placed in. In that case the duplicate objects names will likely change to:
+ <nowiki>
+S_FOY_Geo_FancyColumn_R_001 and S_FOY_Geo_FancyColumn_L_001</nowiki>
+
+For a more detailed explanation on how to name characters, read [[Rigging a character in 3dsMax]]
+
+
+==Layers==
+Layers are the most important part of good scene organization. Layers not only keep scenes organized but also are an extremely integral part of creating render layers with [[How to use LPM 3dsMax for rendering|LPM]]. 
+Many of these layers will be auto-generated during [[Creating an asset in 3dsMax|asset creation]], though it's good to keep them in mind if you're building a scene without that OR need to add new layers that fit within this structure.
+
+===Default Layers===
+Default layers within your 3ds Max file should have these layers ( if needed )
+
+* +Cameras - The layer for your cameras, and any camera rigging
+* +Lights - A layer for your default lights
+* +Lights_[TAG] - A format for naming additional light layers
+* +Reflectors - A layer for any reflector objects
+* +Reflectors_[TAG] - A format for naming additional reflector layers
+* -FX_[EffectName] - A format for naming layers with an effect on them, like fume FX, or krakatoa
+* 0 (default) - The default layer, nothing complete should be kept here
+* C_[TAG]_[NAME] - The format for a character layer
+* O_[TAG]_[NAME] - The format for an object layer
+* S_[TAG]_[NAME] - The format for a set layer
+* zz-BANK - The layer to place un-needed items, that you do not want to delete yet
+* zz-LPM - The layer where LPM++ Stores its structure and Data
+
+
+===Layer Breakdown===
+=====Scene Layers=====
+These layers usually consist of +Cameras, +Lights, +Reflectors. The names are self-explanatory: Cameras go in +Cameras, Lights go in +Lights. The + symbol keeps these layers at the top of the Scene Explorer for ease of navigation. 
+
+=====Object Layers=====
+Defined by C, O, S and the 0_default layers. This is where the bulk of your scene objects will go. These are the layers that will be rendered and could include everything from characters, sets, objects, and geometry scatters. Keep these layers divided by what passes you want them to render to, though it's not a bad idea to sub-layer here as well if the number of objects on a layer is getting hard to sort through. For example if you have a lovely landscape environment with grass and rocks scattered across it you can divide those into ENV_01_GEO and ENV_01_SCATTER layers.
+
+When rendering Object layers can be used to render normally, create mattes, reflectors, shadow passes, etc. These passes are created within [[How to use LPM 3dsMax for rendering|LPM]] but utilize your created layers. 
+
+=====FX Layers=====
+This is where anything like fire, smoke, or fog go. These are often unique elements that may exist in the scene or were pre-cached and should be rendered separately from the rest of the geometry. 
+
+=====Helper Layers=====
+These are optional sub layers within object and FX layers that contain things that you don't want to render that control things in other layers. For example if you had a tree with scattered branches and leaves you would have the scatter in say Forest_SCATTER, while the things that controlled the scatter (like it's original geometry assets or actors) are kept in the Forest_HELPERS layer to keep them from rendering. <br>
+''You can also store things like wind, gravity, etc. here though those will never render to begin with.'' 
+
+=====Control Layers=====
+Controls for objects and rigs should be kept here, and these are usually they only things you should be keying for animation. 
+
+=====Junk Layers=====
+When the Asset generator creates a scene it creates it with a zzBANK layer. This is a great layer to toss things like test objects, size references, or objects you no longer need but don't want to necessarily delete yet.
+
+=====LPM Layers=====
+Don't touch this. Don't even look at it. These are used to control settings within LPM and LPM can break if you're messing around in here. 
+:::''Fun Fact: you can actually import this layer's content into other scenes to copy or overwrite LPM settings from one scene to the next. That's very helpful if you do a whoopsie and break your scene or if you want to copy the same LPM structure to your new scene. For the most part though don't touch. This is hot. Ouch.
+
+===Sub-Layers===
+You can break layers into sub layers, which can helpful for rendering. For example:
+
+[[File:3dsMax SnP SubLayersExample.jpg]]
+
+In this example the +Lights layer is broken into +Lights_Castle, +Lights_Environment, and +Lights_Street. Within  [[How to use LPM 3dsMax for rendering|LPM]] you can toggle these layers on and off for each Pass and only those lights will render. As always, be descriptive. 
+
+''Cameras are chosen for renders using other methods, so creating sub-layers for them is unnecessary.''
+
+'''BEWARE:''' Sub-Layers can sometimes cause problems when merging between scenes and result in duplicate layers with .001 after the name. 
+ 
+
+==Texture & Material Practices==
+===Texture Naming===
+
+All of your assets texture files should start with its 3 letter asset tag, to avoid duplicate texture names in a project. For example:
+ 
+ <nowiki>
+GUY_Skin_Diffuse.jpg</nowiki>
+
+If you have one shader, with multiple maps, it is advisable to name them hierarchically, for ease of use, like so:
+
+ <nowiki>
+GUY_Skin_Diffuse.jpg
+GUY_Skin_Reflection.jpg
+GUY_Skin_Normal.jpg</nowiki>
+
+===Material Naming===
+
+Any material that is part of an [[Creating an asset in 3dsMax|asset]] needs to be built within a multi-sub material. This is for asset management reasons. All top level multi-sub materials should be labeled the following way:
+
+ <nowiki>
+[TAG]_Multi </nowiki>
+
+The [TAG] corresponds with the assets 3 letter asset tag.
+There is only one material per asset, and should have as many channels as needed to properly shade your object.
+The constituent child materials should be named as follow:
+
+ <nowiki>
+[TAG]_[Name] </nowiki>
+
+The [TAG] corresponds with the assets 3 letter asset tag.
+
+[NAME] Come up with a short descriptive name for your sub-material.
+
+==Referenced File Locations==
+Make sure to keep any files used by the scene within the project folder structure. This makes them simpler to find for you and the render farm, and keeps things together if the file is ever un-archived in the future. This will mean some duplicates of files happen, that's fine. 
+
+'''Exceptions'''<br>
+* Caches are saved in a separate location on the V drive because their size can become massive and can be re-simmed after a file is unarchived. 
+* Raw Footage (''though rarely if ever used directly with Max without going through the [[Conforming an online edit in Heiro|conform]] process'') is saved on the T drive.
+
+==Texture Locations==
+Most textures used on assets should likely be stored within the assets '''Surfaces''' folder (''for example Assets/Sets/FOY_Foyer/Surfaces'')
+
+Certain texture files like HDRIs are used across multiple assets you could also save them within Assets/Images
+
+Substances are stored in Assets/Substances
+
+MAKE has a good repository of texture files that can be found in U:\resources\__Textures, though when using these texture make sure to copy them into the project folder instead of referencing them directly from the Resources Folder in case those file locations change in the future.
+
+=Scene Types=
+You'll encounter and work with several different scene types with advancing stages of completeness and complexity when working in the 2 main structures: '''Assets''' & '''Shots'''
+
+==Assets==
+'''Assets''' are where you'll build and find things like Objects, Characters, and Sets or Effects.
+
+Assets are broken into several scenes and folders that are generated during Asset Creation:
+*'''Model''' - usually the first thing you'll make during asset creation. It's THE .max file generated when creating an Asset. This is where you'll create the Asset's model, UV map, and ''usually'' where people will add materials.
+*'''Sculpt''' - where sculpts from zBrush or other sculpting programs reside
+*'''Shade''' -  this has mostly been combined into the '''Model''' files. Ideally this is where you would bring an model with no materials and begin adding them and seeing how they look with lighting
+*'''Rig''' - The near-complete model is rigged here. This is usually only done once the model is complete, though rigs can be started with semi-complete models and skinned when modelling is complete. For more check out [[Rigging a character in 3dsMax]]
+*'''Layout''' - This is where the most-complete version of the Asset should be found. Someone looking for the Asset to use in a shot should only have to look here. 
+
+Depending on the Asset you may use all of these scenes types, or just Model & Layout. You may even need to add folders for unique things related to an object or character.
+
+==Shots==
+'''Shots''' are within SPOTS and where you'll build things like Animations and Layouts. This is where you combine assets to create the various shots for the final Spot. 
+
+Shots located within [Project]/[SPOT]_[SpotName]/S_[SPOT TAG]_[Shot###]/Scenes/ and are broken into these scenes:
+*'''Animation''' - Shots with animations are built here. This is where you'll block scenes and animate characters objects and cameras. 
+*'''Effects''' - Smoke, Fire, Dust, Fog, etc. are generated and cached here (''[[3dsmax Standards and Practices#Referenced File Locations|caches saved elsewhere]]'')
+*'''Layout''' - The final scene of the shot. This is where you'll combine all Assets (''sets, characters, etc.''), light, set up render passes, and eventually render. The files in here rely on all of the files listed above and it's the last 3dsMax step before moving onto [[Nuke Standards and Practices|Compositing]].
+
+=Scene Size=
+==Keeping it Light==
+Though you'll occasionally hear that MAKE has "more storage space than God" that doesn't mean you want to let your file sizes get out of hand. Keeping files light saves space but also means they take less time to open which is nice for you and the render farm. If you're not keeping an eye on your file size LPM will warn or prevent you from submitting job that's too large.
+
+==Proxies==
+If your scene has a bunch of high-poly objects that will increase file size it's a good idea to start creating Proxy Objects. Proxy objects store the geometry elsewhere while substituting a much lower-poly version in it's place. The scene no longer contains the object, saving file size, but the high-poly object will load and appear during renders. 
+To create a Vray Proxy simple right click on an object within the Viewer, select "Vray Mesh Export", choose settings that fit your export, and finally save that object to a Cache folder within your asset folder.
+
+[[File:3dsMax SnP Proxying step1.jpg|400px]][[File:3dsMax SnP Proxying step2.jpg|400px]][[File:3dsMax SnP Proxying step3.jpg|400px]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=3dsmax_Standards_and_Practices

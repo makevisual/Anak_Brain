@@ -1,0 +1,4 @@
+'''[https://docs.google.com/spreadsheets/d/1KZ9yW0HXXkmM4Tm5Iz-GKeMRI6DnF0P2Toy0TkVRDwA/edit#gid=0 MAKE Gear Package]'''
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MAKE_Gear_Package

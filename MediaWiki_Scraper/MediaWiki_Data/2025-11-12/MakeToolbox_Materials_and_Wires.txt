@@ -1,0 +1,29 @@
+= Materials and Wires =
+
+== Overview ==
+[[File:MaterialsAndWiresUI.png|227x227px]]
+
+'''Materials and Wires''' is a tool from the MakeToolbox toolset that provides a ways for quickly managing the appearance of objects in the viewport. It's designed to speed up common tasks like applying placeholder materials, organizing a scene with wirecolors, and randomizing looks for development.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "MaterialsAndWires" from the scripts dropdown menu.
+# '''Select Objects''': Select the object(s) you wish to modify.
+# Click the button corresponding to the action you want to perform.
+#* '''For quick looks''': Use "Grey-It" or "Rand-Wires".
+#* '''To randomly distribute materials''': Set the number of materials to use in the spinner, then click the "Distribute..." button. The materials used are the ones present on the '''COMPACT''' Material Editor
+#* '''To color by type''': Choose "class" or "similarity" from the dropdown, then click the "Set wirecolor by" button.
+
+== User Interface ==
+The script's interface provides several tools for managing object materials and wirecolors.
+
+* '''Grey-It''': Applies a default grey "Standardmaterial" and sets the object's wirecolor to black.
+* '''Rand-Wires''': Assigns a random wirecolor to each object in the current selection.
+* '''Remove materials''': Removes any assigned material from the selected object(s).
+* '''Distribute first X mats.''': Randomly assigns materials to the selected objects, pulling from the first "X" slots of the '''COMPACT''' Material Editor. The number "X" is set by the spinner to the left of the button.
+* '''Set wirecolor by''': This button works with the dropdown list next to it to color-code your selection based on the selected criteria.
+** '''class''': Sets the wirecolor based on the object's superclass (e.g., all Geometry becomes black, all Lights become yellow, all Shapes become blue).
+** '''similarity''': Uses the 3ds Max "Select Similar" function to group and assign a random color to each group of similar objects.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Materials_and_Wires

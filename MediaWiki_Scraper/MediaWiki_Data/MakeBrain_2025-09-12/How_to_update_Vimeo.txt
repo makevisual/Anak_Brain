@@ -1,0 +1,51 @@
+=Introduction=
+
+This page contains step by step instructions on how to upload MAKE's content to the MAKE Vimeo Page.
+
+=Process=
+'''Step By Step'''
+<ol>
+	<li>Log into Vimeo
+	</li>
+[[File:How_to_update_Vimeo_Login.JPG|450px]]
+*If you have access to MAKE’s Vimeo make sure to select the MAKE user
+[[File:How_to_update_Vimeo_Select_User.JPG|450px]]
+	<li>Expand Library Tab 
+	</li>
+[[File:How_to_update_Vimeo_Select_Library.JPG|450px]]
+	<li>Drag the video you want to upload to the correct tab.
+	</li>
+*'''MAKE Hidden''' for sharing (Remains hidden on the MAKE site)
+*'''MAKE Originals''' for Hosting Original work
+*'''MAKE Commercials''' for projects that will be live on the site.
+
+	<li>Once uploaded – click the video and select settings and hit Advanced Settings.
+	</li>
+[[File:How_to_update_Vimeo_Advanced_Settings.JPG|317x317px]]
+    <li>Rename the Video 
+	</li>
+*Rename the Video - Client - name of spot
+</ol>
+ <nowiki>
+Example name: Nebraska Lottery - Bored Snowman </nowiki>
+
+<ol>
+    <li>Add Description
+	</li>
+
+    <li>Select a thumbnail form the actual video. Make sure it’s a well composed and interesting image. Not the generic first second.
+	</li>
+
+    <li>Hit Save and you are done.
+	</li>
+
+    <li>Making a video public.
+	</li>
+*Select the hide from Vimeo Tag 
+[[File:How_to_update_Vimeo_Publishing_Tab.JPG|450px]]
+*Select Public
+[[File:How_to_update_Vimeo_Publishing_Public.JPG|376x376px]]
+</ol>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_update_Vimeo

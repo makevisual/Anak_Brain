@@ -1,0 +1,83 @@
+== Definition of 'Styleframe' ==
+
+* Styleframes are crucial materials acting as proof of concept in production. They provide both clients and artists overall visual, creative directions of a project and demonstrate the design, mood, style, etc
+* Following is a short article about the definition of styleframe(s), which seems to be a good, simple explanation.
+** [https://schwittek.com/teaching/resources/what-is-a-styleframe What is a styleframe?] 
+
+== Technical approaches to make styleframes ==
+
+* At MAKE, depending on the amount of time to spend on, subjects of designs, design components, or an artist's preference, there are two major software to use to create styleframes.
+
+=== Photoshop ===
+
+* Using Photoshop involves lots of photocollage, which means searching for good source images is important.
+* With Photoshop, we may create multiple 'frames' of styleframes to demonstrate the overall idea of a motion, like a small section of storyboards.
+* We often make a full 'styleboard' (storyboard that is made with styleframes) if we pitch simple designs such as minimal motion graphics or minor graphic components.
+
+=== After Effect ===
+
+* After Effect can be used to catch two birds with one stone; both motion tests and styleframes.
+* If we pitch simple designs like motion graphics or graphic components, sometimes motion tests are considered more effective than static styleframes. Either way, it is a way to generate styleframes and more :)
+* We also work with 3D artists to make styleframes as well. They can provide designers 3D renders of products or main objects for styleframes.
+
+== Few items to consider ==
+
+==== 1. Consider the safe zone: you can overlay the following images on the top of your comp ====
+ <nowiki>
+[Project]\Assets\Resources\AspectRatios</nowiki>
+
+==== 2. HD vs. Social ====
+
+* Many projects nowadays goes live not only on TV, but also on social media. Naturally clients ask for final deliveries in many different ratios, including..
+** HD/16x9 for TV or Youtube/Hulu/other streaming platforms
+** 1x1, 4x5, 9x16 for general SNS platforms such as Instagram, Facebook, TikTok, Twitter, etc
+* Designing styleframes that work in different ratios makes the overall production more efficient as it allows artists to plan ahead of the production.
+
+==== 3. Take some time to brainstorm and sketch out your idea before jumping into making styleframes right away. ====
+
+==== 4. Pay attention to the creative brief: staying on the directions and creative needs is very important. Taking notes is one way to remind yourself of those. ====
+
+== Styleframe Spec ==
+
+==== 1. It depends on a final delivery specification. Clients often ask for social versions of spots, so be mindful when you set up a comp for styleframes. ====
+
+* If final deliveries only require HD 16x9, we do in HD/16x9 ratio - JPEG or PNG, 1920x1080, 8 bit RGB, 72 dpi
+* If final deliveries require HD 16x9 AND SNS formats, we work on 1x1 ratio - JPEG or PNG, 1920x1920 or 3840 x 3840, 8 bit RGB, 72 dpi
+** This can be cropped in different ratios if necessary.
+
+==== 2. Naming convention ====
+
+* Default
+
+ [Project Initial]_Styleframe__[Spot title]_S010__F010_v001
+
+* Multiple variations
+
+ [Project Initial]_Styleframe__[Spot title]__[Variation ex: A,B,C..]_S010__F010_v001
+
+* Multiple artists and variations
+
+ [Project Initial]_Styleframe__[Spot title]__[Artist's name]_[Variation ex: A,B,C...]_S010__F010_v001
+
+== Folder structure ==
+
+==== Save your comp/working files ====
+ [Project root folder]/design/styleframe/comp/[artist's name] OR [spot title, if there are multiple spots under one campaign]
+
+==== Save your styleframe renders ====
+
+* Defualt
+
+ [Project root folder]/design/styleframe/render
+
+* When multiple artists working on OR multiple spots
+
+ [Project root folder]/design/styleframe/render/[artist's name] OR [Spot title]
+
+== Useful resource ==
+
+* [https://sketchfab.com/ Sketchfab]: 3d objects that you can screen shot in whatever angle you want and use for your styleframes
+* [https://www.pexels.com/ Pexels]: High quality royalty free photos
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=How_to_make_styleframes

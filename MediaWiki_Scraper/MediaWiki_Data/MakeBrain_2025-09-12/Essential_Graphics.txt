@@ -1,0 +1,70 @@
+=Setup=
+All of the MAKE graphics use the Gotham font. Make sure it is installed on your machine or enabled in Typekit in order for these graphics to work properly.
+ <nowiki>
+ U:\MAKE_Reel\MAKE_Reel10\font</nowiki>
+
+<br />1. Begin first by enabling the Essential Graphics window in Premiere. Go to Window > Essential Graphics.
+
+<br />2. Once you open Essential Graphics, click on the import button in the lower righthand corner of the panel.
+
+<br>The location of all of the MAKE mogrt files is located here: 
+ <nowiki>
+ U:\MAKE_Reel\MAKE_Reel10\MAKE_Reel10__Templates\MAKE_R10_MotionGraphicsTemplates </nowiki>
+<br>The location of transition image sequence files is here: 
+ <nowiki>
+ U:\MAKE_Reel\MAKE_Reel10\MAKE_Reel10__Social_Assets_Library\renders\transitions </nowiki> 
+Once you have imported a mogrt, it will remain in your templates library every time you open Premiere. Make sure to import the corresponding MATTE graphics as well.
+
+<br />3. (OPTIONAL) Once imported, for ease of use, "favorite" the new graphics (hover over the graphic thumbnail, and then click the star icon in the lower righthand corner). Then, select the "favorite"/star icon on the right side of the search field. This will make it so that only the MAKE templates show up in your essential graphics window. 
+
+<br />4. Drag desired template into the timeline.  
+
+=Social Titles=
+The following describes the specifics of Social Media titles. Note that the same principles apply when adding other graphic templates into your timeline.
+
+==Controls==
+
+MAKE title graphics allow you to modify:
+*main title text, text size, and Y position
+*secondary title text, text size, and Y position
+*colors of the font, waves, and lines.
+*colors of the M logo (fill, M, and stroke)
+*opacity and color of the BG solid. (Same controls on the matte templates)
+
+<br /> There are more controls than you may even find necessary. For general rule of thumb, primary color should always be either WHITE or in some instances BLACK. The 2 secondary colors will depend on the colors in the footage and can be changed to taste, but generally, you want to leave them as is (the brand colors - magenta and blue).
+
+<br /> Whenever possible, leave the fonts at the size that they are at (40 and 25). If you need to increase the sizes, be mindful and that the font leading does NOT change. If you need to remove the secondary title, simply delete the text in the text box.
+
+<br /> The BG solid color and opacity may be adjusted to taste.
+
+<br /> It is not advised to use sliders (ESPECIALLY if you're adjusting the text Y position), instead, either type in the desired value, or drag the value itself to make adjustments.
+
+<br /> In general, all of the template properties CANNOT be keyframed. Anything that is keyframed and animated, can only be changed in After Effects (and will require re-exporting). So changing any of the customizable properties will not break the animation that is already there.
+
+==Adding Background Blurs==
+The MATTE graphics exist in order to create a blur over the footage as there is no simple fix for this with a mogrt template.
+
+<br />To add a blur behind the BG solid you need to:
+#Duplicate the footage and place it above on the timeline.
+#Apply the "gaussian blur" effect on the footage, and check the "repeat edge pixels" box.
+#Change blur value to 33.3%
+#Place the corresponding MATTE template over the footage.
+#Apply the "track matte key" effect over the footage, and use the MATTE template as the matte.
+
+=Mood Edit Titles=
+The new Mood Edit titles make it so you no longer have to ever open After Effects in order to make title tweaks! The process for setting these up is essentially the same as the other graphics, with an additional feature of changing the client/agency logos within Premiere.
+
+==Changing Logos==
+Before changing the logos, you MUST have a version of the logo that is transparent on the outside. The file is set up to automatically apply a black and white tint to the image, however, I recommend making the desired greyscale/B&W tweaks in photoshop before bringing it into Premiere.
+
+<br />Once you are ready to import, expand the logo thumbnail you want to change and follow these steps:
+#Select the option button (upper right corner of the thumbnail) > Replace from Explorer...
+#Select the new thumbnail. It MUST be transparent on the outside.
+#Once you import it, adjust the scale and the position of the thumbnail using the scale/position controls found under the thumbnail.
+
+<br />All of the logos will be affected by the color controls, which eliminates the need to have two versions of the same graphic template. Simply change the BG color to white, and the primary color to BLACK and you will have a light version of the template.
+
+<br />The logos also include an X Position control, and an Opacity control. Like the other templates, drag or type in the values instead of using the sliders directly (especially on the position slider). These settings are included in case there is ever a need to reposition wide logos, or if you wish to remove one or more of the logos. The opacity slider is meant to be toggled between 0 or 100.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Essential_Graphics

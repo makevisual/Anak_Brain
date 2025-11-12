@@ -1,0 +1,80 @@
+A shooting schedule helps us keep track of every shot in a shoot. The shooting schedule dictates what order we shoot shots and how much time we can spend getting each shot. It includes shot stills, descriptions, and any information we need for a specific shot (product info, lighting diagrams, talent info, etc). The format and columns of our shooting schedules vary slightly depending on the complexity of the shoot and the kind of spot (eg. 2D vs 3D).
+
+[[File:Hasbro Transformers EarthSpark RollOut ShootingSchedule.png|thumb|600px|A Hasbro shooting schedule.]]
+
+'''Start with the [[Shooting Schedule]] Template.''' https://docs.google.com/spreadsheets/d/1VMcNWh6ysOYX8NBf9IdC772sZiKxx_lP14lV9nJVXow/edit?usp=sharing
+
+Here is an example of a shooting schedule for a multi-day multi-location shoot: <code>https://docs.google.com/spreadsheets/d/1Aw-EkbwOEI1yB9-EAGUfu7Ged3y_RKhIe3ZQVBpu5NY/edit?usp=sharing</code>
+
+'''Where to save shooting schedule'''
+
+Save the shooting schedule as a Google sheet directly in the MAKE Docs Project folder. For example, the Disney Cars Piston Cup shooting schedule should be saved in MAKE Docs > Hot Wheels FA23 > Disney Cars - Piston Cup Speedway
+</br>
+
+'''Sharing the Shooting Schedule'''
+
+Make sure to edit the Share setting to create a shareable link so that anyone with the link has viewing access. '''This is the link that you will paste in hyperlinks when making the Pre Pro Book!!!'''
+
+==Create a shooting schedule: First steps==
+
+===Adjusting Start Time===
+To change the start time, go to the Data tab and type in a new start time.
+<br/>
+
+===Update Header===
+
+Format: <code>Client_Project_Spot_SpotTitle / WEEKDAY MM/DD/YYYY PRELIGHT/SHOOT</code> <br />
+Example: <code>Hasbro_Transformers_EarthSpark_RollOut / FRIDAY 11/18/2022 SHOOT</code>
+
+===Update sheet names===
+The names of each sheet (at the bottom) should include the date, shoot location, and whether it's a prelight or shoot day. <br />
+Example sheet name: <code>5/4 Shoot Day 2 @ Cinequipt</code>
+
+==Add shot info==
+===Add animatic stills (Boards)===
+In the Boards column, add animatic stills to visually identify each shot. There may be two columns, called "Start of shot" and "End of shot," where you would upload two stills to better show the motion in the shot.
+====How to capture stills in Premiere====
+# Import the mp4 render of the animatic and make a sequence from it
+# In the Program Monitor window, click the Export Frame button (looks like camera)
+# Choose the folder to save the frames in
+# Rename the file (optional)
+# Press enter
+<br />
+Once the animatic stills have been exported, add them to the Boards column. Select a cell and use the shortcut '''Alt+I''' '''G''' '''A''' to add images to the cell.
+
+===Add shot names===
+Verify shot names with the animatic-maker and Director. If an animatic is not annotated (meaning it doesn't have shot names labeled), '''ask the Director to get an annotated animatic made!'''
+
+===Write shot descriptions and add product/talent info to respective columns===
+Write a description of the action of the shot and the shot framing. Make note of on-camera talent and product, shot distance/angle, camera movement, the lighting scheme, etc.
+
+'''Add lighting schemes to shot descriptions (if necessary).'''
+
+===Adding shot duration info===
+Use Premiere to count the length of each shot in frames and add frame count to the "Duration" column.
+
+===Adding shooting diagrams===
+# Add shooting diagram images to the "Shooting Diagrams" column.
+# Write the same information in the shooting diagram in the "Notes" column.
+
+==Insert animatic and PPB links==
+Always link the animatic and PPB to the shooting schedule (just as the PPB should always have a shooting schedule hyperlink).
+* In FileZilla, create two directories in the Project directory, one named <i>Animatics</i> and one named <i>PPB</i>. If you can't find the correct Project directory, check with the Producer to see if it needs to be created.
+If you've never used FileZilla before, get the server login credentials from the Producer. Projects will be under the <i>makevisual.com</i> directory.
+* Upload the annotated animatics to the Animatics directory.
+* Upload the PPB to the PPB directory.</br>
+'''Use underscores (_) instead of spaces in all names to make the URL look cleaner.'''
+* Select uploaded files, right-click, and click "Copy URL(s) to clipboard." '''This will not be a useable link.'''
+* Paste links copied from FileZilla into a text editor/notepad and replace "ftp://makevisual@ftp.makevisual.com/makevisual.com/" with "https://makevisual.com/" Now the links are useable.
+* Create hyperlinks underneath the header for all annotated animatics (30/15/etc) and the PPB. Paste these hyperlinks on every sheet of the schedule for multi-day shoots.
+</br>
+'''Adding zipped shooting diagrams for download'''</br>
+Zip all of the shooting diagram images into one file. Upload to the website with FileZilla. Place the hyperlink to download diagrams in the cell above the shooting diagrams column. Don't forget to paste this hyperlink on other sheets too.
+
+==Tips for organizing shots==
+*Look for similar lighting schemes
+*Schedule shots with talent's face early on
+*Be mindful of talent out times
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_a_shooting_schedule

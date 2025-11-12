@@ -1,0 +1,48 @@
+= Rivet Maker =
+[[File:RivetObjects NewUI.png|360x360px]]
+
+== Overview ==
+'''Rivet Maker''' is a tool from the MakeToolbox toolset designed to attach objects to a deforming surface, such as a character's skin. It works by creating "rivets" - points that stick to the surface geometry - which other objects can then be parented to.
+
+== How to Use ==
+
+=== Creating a Single Rivet Point ===
+
+# '''Open the Tool:''' From MakeToolbox, select "Rivet Objects" from the scripts dropdown menu.
+# '''Pick a Surface:''' In the "Surface" group, click the '''"Select Rivet Surface"''' button and pick the deforming mesh in the viewport.
+# '''Configure Options:''' In the "Rivet" group, set your desired options:
+#* '''Convert To Skin:''' This option will only be available if the surface you picked has a valid Skin modifier with bones. If enabled, checking it will use a standard Skin modifier instead of a Skin Wrap for the connection.
+#* '''Make Control Point:''' Check this to create an extra parent object for easier control.
+#* Adjust the '''"Rivet Size"''' to control the size of the created helper objects.
+# '''Create the Rivet:''' Click the '''"Create Rivet Point"''' button, then click directly on the surface in the viewport where you want to place the rivet. A new point helper will be created at that location, ready to be used as a parent.
+
+=== Riveting Existing Objects ===
+This method is for attaching one or more objects that are already in your scene to the deforming surface.
+
+# '''Open the Tool:''' From MakeToolbox, select "Rivet Objects" from the scripts dropdown menu.
+# '''Pick a Surface:''' Click the '''"Select Rivet Surface"''' button and pick the deforming mesh.
+# '''Select Objects:''' In the viewport, select all the objects you wish to attach to the surface.
+# '''Configure Options:''' In the "Group Rivet to Skin" group, set your options for creating a control point and the helper size.
+# '''Rivet the Selection:''' Click the '''"Rivet Selection"''' button. The tool will create a new rivet for each selected object and parent the object to it, causing it to follow the surface.
+
+== User Interface ==
+
+=== Surface ===
+
+* '''Select Rivet Surface:''' This pickbutton is used to select the main deforming mesh that objects will be attached to.
+
+=== Rivet (Single Point Creation) ===
+
+* '''Create Rivet Point:''' Starts the creation process, allowing you to click on the selected surface to place a new rivet.
+* '''Convert To Skin:''' If checked, converts the rivet's attachment method from Skin Wrap to a standard Skin modifier. This option is only enabled if the picked surface has a functional Skin modifier with at least one bone.
+* '''Make Control Point:''' If checked, an additional point helper is created, linked to the rivet, providing an extra layer of control.
+* '''Rivet Size:''' A spinner to control the display size of the generated point helpers and internal geometry.
+
+=== Group Rivet to Skin ===
+
+* '''Rivet Selection:''' Attaches each currently selected object to the designated surface by creating a unique rivet for each one.
+* '''Make Control Point:''' Same function as the one above, but applies to each object in the group being riveted.
+* '''Rivet Size:''' A spinner to control the helper size for the group operation.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Rivet_Objects

@@ -1,0 +1,72 @@
+=What are the plugins in Nuke?=
+
+In Nuke, there are a set of helpful tools added to make compositing easier and more convenient. These include a set of gizmos used for a variety of effects. This article will focus on the miscellaneous plugins that we have in Nuke 14. If you're looking for information about the MAKE-specific tools (the ones under the "MAKE Tools" and "MAKE Gizmos" menu), see [[Nuke 14 MAKE Tools]].
+
+=Where are the miscellaneous plugins located?=
+
+You can access these plugins from a few different places. The first is the horizontal toolbar at the top of the Nuke UI, under the tab "Misc Gizmos." The second is the vertical toolbar on the left side by clicking on the button that features the MAKE logo with the symbol in the corner. These tools can also be found by hitting tab in the node graph and typing in the name.
+
+[[File:Nuke_Toolbar.JPG|800px]] [[File:Nuke_Sidebar.JPG|50px]]
+
+=Misc Gizmos=
+
+[[File:Nuke_MiscGizmos.jpg|200px]]
+
+
+Below is a list of all the miscellaneous plugins we have and their functions.
+
+'''bm_EdgeMatte:''' A node for working with edges, similar to Erode or Laplacian. It has controls for both inner and outer edges.
+
+[[File:Nuke_bm_EdgeMatte_01.jpg|150px]] [[File:Nuke_bm_EdgeMatte_02.jpg|350px]]
+
+
+'''bm_Lightwrap:''' A node which helps blend the edges of a foreground layer into a background layer. This is done by "wrapping" the edges of the foreground layer with data from the background layer, creating a blended, bloom-like appearance. 
+ 
+[[File:Nuke_bm_Lightwrap_01.jpg|200px]] [[File:Nuke_bm_Lightwrap_02.jpg|450px]]
+
+
+'''bm_OpticalGlow:''' A node that adds glow to an image. This node is built to be a more technically accurate and natural glow than the default Glow node in Nuke.
+
+[[File:Nuke_bm_OpticalGlow_01.jpg|150px]] [[File:Nuke_bm_OpticalGlow_02.jpg|400px]]
+
+
+'''DespillMadness:''' A node for despilling footage shot on green or blue screen. We use this in the process of keying live-action footage for use with CG backgrounds. Works similar to the green suppression on a HueCorrect node.
+
+[[File:Nuke_DespillMadness_01.jpg|350px]] [[File:Nuke_DespillMadness_02.jpg|250px]]
+
+
+'''FireflyKiller:''' A node that helps remove specular noise or "fireflies" in an image.
+
+[[File:Nuke_FireflyKiller_01.jpg|100px]] [[File:Nuke_FireflyKiller_02.jpg|500px]]
+
+
+'''fxT_chromaticAberration:''' A node that adds chromatic aberration to an image. By default, the red and blue scales (see below) are uneven, but they should be kept mostly uniform and opposite of each other to get a natural look. It is important to not overuse the effect.
+
+[[File:Nuke_fxT_chromaticAberration_01.jpg|150px]] [[File:Nuke_fxT_chromaticAberration_02.jpg|450px]]
+
+
+'''HighPassSharpen:''' A node that helps with sharpening an image while also adding more contrast. It focuses more on larger-scale shapes and is less prone to artifacts than a default Nuke Sharpen node.
+
+[[File:Nuke_HighPassSharpen_01.jpg|150px]] [[File:Nuke_HighPassSharpen_02.jpg|450px]]
+
+
+'''TurbulentDisplace:''' A node that takes a noise field and distorts an image. This node is a simplified version of a setup using an IDistort and Noise node (see below). While it is easier to setup a TurbulentDisplace node, you have less precise control than if you used the IDistort setup. See below for a comparison between a TurbulentDisplace and an IDistort setup as well as a before and after example of what the distortion can look like.
+
+[[File:Nuke_TurbulentDisplace_01.jpg|300px]] [[File:Nuke_TurbulentDisplace_02.jpg|250px]]
+
+
+'''Defocus_Aberrations:''' A node that is similar to a ZDefocus node. It can defocus along with adding different effects such as bokeh shapes or chromatic aberration. The ZDefocus node can also create bokeh shapes if an image is plugged into the filter, but it doesn't have the post processing effects that Defocus_Aberrations has. Defocus_Aberrations also has a lens distortion/cateye effect. See below for an example of using the Defocus_Aberrations node (left) vs the ZDefocus node (right).
+
+[[File:Nuke_Defocus_Aberrations_01.jpg|800px]] [[File:Nuke_Defocus_Aberrations_02.jpg|250px]]
+
+
+To find images that can be used as a filter for these nodes, look in your projects resources folder, or check this location:
+
+ <nowiki>
+U:\resources\VFX\Optical Flares Textures</nowiki>
+
+
+[[Category:Documentation]] [[Category:Nuke]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Nuke_14_Plugins

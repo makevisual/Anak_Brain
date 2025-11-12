@@ -1,0 +1,99 @@
+=Introduction=
+When filming live footage on set, the best way to accurately recreate the compositions and camera moves from the 3D animatic is to use shooting diagrams. These are simple, top-down images taken directly from the animatic shots in 3DS Max,  overlaid with text noting important measurements, and organized so they can be efficiently viewed by the shooting team. These instructions will guide you through the process of creating them.
+
+===Which Shots?===
+To create shooting diagrams, you must first determine which shots require them. Using the latest animatic or shooting schedule as reference, take note of each shot that will be filmed in live-action.  Each of these shots will need one diagram.
+
+=Photoshop Template=
+Each project should already include a template Photoshop file for creating shooting diagrams, located here:
+ <nowiki>
+[Main Project Folder]/Assets/Resources/ShootingDiagrams </nowiki>
+
+The diagram template includes several elements: 
+
+'''1.''' A plain black background. Above this, you'll place a screenshot containing the subject, actor (if present), start and end positions of the camera, and a 12" grid for estimating scale.
+
+'''2.''' Two text labels ('''''A''''' and '''''B''''') denoting the camera's start and end positions.
+
+'''3.''' Two '''''+''''' icons representing the focal point on the subject at the start and end of the shot (denoted by a key in the top-left corner.)
+
+'''4.''' A pre-formatted text box with entries for all relevant numerical information. The entries are listed as follows:
+
+*'''Shot:''' ''The specific shot that the image depicts. (Sometimes the official shot number from the shooting schedule will not match the shot's scene number in 3DS Max. Check with a producer if this is the case, and if so, notate both accordingly as shown in the template- first the official shot number, and then the 3DS Max scene number.)''
+*'''Focal Length:''' ''The focal length of the virtual camera in 3DS Max, to be replicated with the real camera.''
+*'''Start H:''' ''The starting height from the camera to the subject's base. (Typically the camera's "Z" translate value on the first frame.)''
+*'''End H:''' ''The ending height from the camera to the subject's base. (Typically the camera's "Z" translate value on the final frame.)''
+*'''Move Length:''' ''The horizontal distance from the camera's starting position to its ending position.''
+*'''Start Dist to Subject:''' ''The horizontal distance from the camera to the subject on the first frame.''
+*'''End Dist to Subject:''' ''The horizontal distance from the camera to the subject on the final frame.''
+
+
+''Below is an example of a completed shooting diagram, using the provided template:''
+
+[[File:ExampleShootingDiagram.jpg|500px]]
+
+
+After opening the template Photoshop file for your current project, save a new version with the file name 
+'''[''Brand'']_[''ProductName'']_ShootingDiagram_v001.psd'''. For example: '''MBX_ConstructionSet_ShootingDiagram_v001'''. This can be versioned-up as needed.
+
+Next, in the '''Layers''' window, locate the example group, which is a folder containing all the diagram components in individual layers. Duplicate this group as many times as needed, so there is one group per diagram.
+
+[[File:ExampleLayersWindow.jpeg|300px]]
+
+=Measurements and Image Capture=
+Using the Photoshop template as a guide, you will need to open the latest 3DS Max scene file for each shot in the animatic, one by one, obtaining the necessary screenshot and measurements for each diagram. The 3DS Max files can be found here:
+ <nowiki>
+[Main Project Folder]/[AnimaticFolder]/[ShotNumber]/Scenes/Animation </nowiki>
+
+When opening each file, begin by immediately saving it as a separate file using the same location and name, but with the suffix "_Diagram". This will allow you the freedom to work as needed within each scene without disrupting the saved work of the animatic artist. It will also allow you return to your version of each scene if any diagram tweaks are needed later.
+
+===Scene Cleanup===
+
+To make the scene easier to work with, all its unessential elements must be hidden or deleted. The only visible objects should be the camera, the subject geo, and the actor model geo (if present). If the subject is very large- for example, a sprawling Hot Wheels track- only the portion focused on in the shot needs to be seen.
+
+===Units and Grid Setup===
+
+In order to take accurate measurements, ensure that the scene units are set to decimal inches: '''Menu Bar > Customize > Units Setup...''' Select '''US Standard > Decimal Inches''' and click '''OK'''.
+
+Next, ensure the grid is properly adjusted. Press '''T''' in the viewport to enter the Top view, and use '''G''' to toggle the grid's visibility on if needed. Verify the correct grid line spacing by right clicking the '''Snaps''' icon in the Main Toolbar (White number 3 with a yellow magnet). Click the '''Home Grid''' tab and set '''Grid Spacing''' to 12.0".
+
+===Camera Setup===
+
+A few settings will need to be checked in order to get an accurate Focal Length reading for the virtual camera. If using a Free Camera, open '''Render Settings''', and in the '''Common''' tab, set the '''Aperture Width(mm):''' to 28.03, to match the sensor of our real camera. If using a Physical Camera, select it and navigate to the '''Command Panel > Modify tab'''; under the '''Physical Camera''' section, check the '''Specify FOV''' box. Above that, in the '''Film/Sensor''' section, set the '''Width''' to 28.03mm. Now, regardless of camera type, the focal length will be accurate.
+
+For the image capture, as well as some necessary measurements, the camera must be viewable at its start and end positions simultaneously. To achieve this, begin by moving the timeline playhead to the start of the shot ''(Note: Refer to the animatic to ensure that the 3DS Max timeline matches the duration of the animatic shot closely, adjusting as needed, to avoid capturing non-essential movement.)'' Select the camera and press '''Ctrl+V''' to clone it. In the '''Clone Options''' pop-up window, select '''Copy''' and click '''OK'''. Now, to prevent the new camera from moving with its clone, set a key ('''K''') on the first frame, and delete any other keys. Next, in the '''Main Toolbar''', click the '''Unlink Selection''' icon (White chain link with teal slash) to disconnect it from any parent controllers. Move the timeline playhead to the end of the shot, ensuring that the cloned camera stays stationary, while the original camera moves to its end point.
+
+===Taking Measurements===
+
+Begin taking the necessary measurements in 3DS Max, typing them into the corresponding shot's text box in Photoshop as you go. All measurements (except focal length) should be rounded to the nearest half-inch.
+
+'''''Shot Number''''', naturally, should match that of the 3DS Max scene file being used, along with the official number from the Shooting Schedule, if applicable.
+
+'''''Focal Length''''' can be found in two ways, depending on camera type. For a Free Camera, begin by selecting it and navigating to the '''Command Panel'''; in the '''Modify''' tab, under '''Parameters''', the first entry ("'''Lens'''") denotes the focal length in millimeters. For a Physical Camera, select it and navigate to the '''Command Panel'''; in the '''Physical Camera''' section, under '''Lens''', there is a grayed-out value labeled '''Focal Length'''. Regardless of camera type, the focal length should always match one of the actual lenses we have available for our real life camera. The lenses we have are as follows: <blockquote>14mm, 20mm, 24mm, 35mm, 50mm, 85mm, 135mm.</blockquote>'''''Start Height''''' and '''''End Height''''' are determined by measuring the height difference between the camera and the surface the subject rests on, at the first and last frames of the shot. Usually, the animatic will be created with this surface at a Z height of 0.0, in which case the Z height of the camera will be the correct value. If not, be sure to account for the surface offset.
+
+'''''Move Length''''' requires the Top view ('''T''') to measure. Move the playhead to the end of the timeline so the full range of the camera move is visible, then navigate to '''Menu Bar > Tools > Measure Distance...''' The cursor will become a crosshair. Use it to measure the move distance by clicking once on each camera icon; be sure to click on the same part of the icon each time, ideally where the lens meets the body. The distance in inches will be displayed in the '''Prompt Line''' on the bottom left corner of the screen. (Note: This distance is a straight line between the two points, even if the move itself is a curve.)
+
+'''''Start/End Distance to Subject''''' will also require the Top view ('''T''') and '''Measure Distance''' tool. Since the subject may move throughout the shot, first set the playhead to the beginning of the shot. Reference the animatic to determine the focal point of the subject, and measure the distance from the camera to that point in 3DS Max. Set the playhead to the end of the shot, and repeat (again, be sure to measure from the same point on the camera.)
+
+===Image Capturing===
+
+To finish preparing the scene for a screenshot, begin by ensuring the viewport is in Top view ('''T''') and the grid is visible ('''G'''). Keep the timeline playhead at the end of the shot. Select the original camera, navigate to the '''Command Panel > Motion Tab''' and click '''Motion Paths'''. This will generate a line that shows the full path traveled by the camera- a useful tool for the shooting team, especially when the path is a curve. Press '''Q''' for the least obtrusive selection widget, since the camera must remain selected. Zoom and pan the viewport until all important elements fill the frame, and use your preferred screenshot method to capture an image of it. Copy the image to your clipboard.
+
+=Diagram Completion=
+
+Now that all the necessary components have been gathered, the diagram can be completed. Back in Photoshop, navigate to the shot diagram group for the current shot. Paste the screenshot image into the group, ensuring it sits beneath the text and icon layers. Scale the image to fit the frame, and reposition the text box so it does not overlap any important parts of the image.
+
+Drag the '''A''' and '''B''' icons beside the start and end positions of the camera, respectively. If the camera did not move during the shot, edit one label to say '''A/B''' and delete the other, indicating that the start and end positions are the same.
+
+Drag the '''+''' symbols to the starting and ending focal points, as indicated by the key.
+
+Repeat this process for the remaining shots, until each one has a diagram in Photoshop.
+
+=Export Process=
+
+Once the shooting diagrams have been completed, they must be exported as .JPG images. Although this can be done using the standard method of '''File > Export > Export As...''', it is more convenient to use '''Layer Comps''' for exports of this quantity. In the '''Layers''' window, turn off visibility for every shot's layer group except the first one (at the bottom). Ensure the full diagram is visible, and click the '''Layer Comps''' tab. Delete the default comp ('''Right Click > Delete Layer Comp''' and click the '''Create New Layer Comp''' icon near the bottom right. Name this comp [Brand]_[Product]_ShotDiagram_[ShotNumber] in the pop-up window, and click '''OK''' (e.g. HW_EpicCrashDash_ShotDiagram_s010.)
+
+This will save the viewport's current state within Photoshop's memory. Then, enable visibility on the next layer group, and repeat this process until each shot diagram has its own layer comp. Once this is complete, click '''File > Export > Layer Comps to Files...''' Browse to the folder containing the Photoshop project, create a sub-folder called "'''Images'''," and select it as the export location. Ensure '''Selected Layer Comps Only''' is unchecked, and under '''File Type:''', select '''JPEG'''. Finally, click '''Run''' to export the diagrams.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_a_shooting_diagram

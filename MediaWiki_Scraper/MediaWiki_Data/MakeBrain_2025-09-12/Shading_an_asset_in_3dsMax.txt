@@ -1,0 +1,84 @@
+=Shading=
+Shading involves making materials and lights to render the desired textures on an asset. 
+
+Shading in 3dsMax at MAKE revolves around the V-Ray rendering engine, so most assets should be almost exclusively used with V-Ray materials. They should also always be assigned to a multi/sub-object node, which will be further explained down below.
+==Material Editor==
+To set up and apply shaders, you will need to use the Material Editor. You can find the button to open the Material Editor on the upper bar.
+
+[[File:MaterialEditorLocation.PNG]]
+
+There are two ways you can use the material editor. One mode is the slate material editor. 
+
+[[File:SlateMaterialEditor.PNG|500px]]
+
+The slate material editor utilizes nodes and wires to structurally design a material. This is where you will link maps together into a material to shade an asset. The slate editor contains a browser on the left side of materials and maps that can be dragged into the active view to generate a material/map. When a material or map is selected, the parameter editor on the right will display corresponding settings that you can adjust.
+
+To pick a material off of an object, you select the picker on the top left and then select the object you want to grab the material off of.
+
+To apply a material to an object, you select the material you want to apply, then select the object you want to apply it to, and then select the "Assign Material to Selection" button.
+
+[[File:ApplyMaterialButton.PNG]]
+
+[[File:CompactMaterialEditor.PNG|left|200px]]
+
+The other mode is the compact material editor.
+
+The compact material editor is a smaller dialog than the slate material editor. For the most part, the compact material editor is used to apply already designed materials to your desired objects. Because it is a smaller dialog, it operates faster and can be more efficient for smaller shader changes than the slate material editor. While the slate material editor allows you to see all nodes and materials in one area, sometimes it is overwhelming and crowded when materials in your scene begin to pile up, and it may only necessary to just look at one material at a time. 
+
+You can traverse around the Compact Material editor by selecting different nodes and maps. To go back to a parent node, you can select the "Go to Parent" button on the command toolbar of the editor.
+
+[[File:CompactMaterialEditor GotoParent.PNG]]
+
+If you bring in a texture bitmap to use in your material, please make sure that they are on the correct gamma. Diffuse and Reflection bitmaps do not need a Gamma override, however, bitmaps like glossiness, IOR, and bump maps will require a gamma override. 
+
+[[File:ShadingAnAsset Override.PNG|550px]]
+
+===Multi/Sub Objects===
+Multi/Sub Objects are an important node when shading an asset. It is a group that you put all shaders relevant to your asset in. This is essential to organizing your asset shaders for export and keeping all important shaders of each asset together. ''Each individual asset needs to have its own multi/sub-object node.'' The Multi/Sub-Object node can be found in the Materials tab under the General sub-tab. 
+
+[[File:SlateMaterialEditor MultiSub.PNG|left]]
+
+This is what typical multi/sub-object tree might look like.
+
+[[File:SlateMaterialEditor MultiSubTree.PNG|625px]]
+
+Each shader will be assigned to a number in your multi/sub-object. It may be prudent to label each material in your multi/sub-object node as you accumulate more, as it will help to identify which shader is which.
+
+[[File:SlateMaterialEditor MultiSubParameters.PNG]]
+
+By selecting the multi/sub-object, you will open up its parameters. Here is where you can add or delete, name, and organize your sub-materials.
+
+Once your multi/sub-object is set up, you will apply it to your asset. Select all the geometry of your asset, and then select your multisub node, and hit "Apply material to selection". ''Do not apply the individual shaders to each object, your entire asset should be assigned to the multisub node only.'' You will apply each corresponding material per piece of geometry by adding a "Material" modifier to each object, and assigning the correct number based on your multisub object node. 
+
+Remember to assign the multisub object to your asset Global as well. This will allow you to publish your material correctly.
+
+==V-ray Material Library Browser==
+[[File:ShadingAnAsset VrayMaterialLibrary.PNG|left|50px]]
+You have a large inventory of shader presets provided by V-Ray called the V-Ray Material Library Browser. These are a great way to start making a shader, and have a wide variety of different types of shaders you can use. It is located in the V-Ray tab. 
+
+[[File:ShadingAnAsset VrayMaterialLibraryWindow.PNG|600px]]
+
+If you do not have this toolbar visible, you can open up this toolbar by right clicking the toolbar just below the command rollouts, and checking on "V-Ray Toolbar".
+
+[[File:ShadingAnAsset VrayToolbarLocation.PNG|900px]]
+
+The provided materials are organized by the types of textures, from fabrics to liquids to metals. To use one of these materials, just drag your selected material into the material editor. This will open a prompt whether to import an instance or a copy of the V-Ray material. Select "copy", as you are working off of this material as a base and do not want to affect any other instances of this preset. You can now apply, edit, or use this material however you like. 
+
+If the selected material preset you're using has any VrayBitmaps, you will need to relink these bitmaps to be within your project. Texture files can be found and copied from this folder to be placed in your Surfaces folder to be relinked.
+ <nowiki>
+U:\3dsMax2021\repository\V-Ray Material Library</nowiki>
+
+==V-Ray Viewport IPR==
+
+To view renders within your viewport live, you can use V-Ray viewport IPR. This is located in the viewport settings, under the "Standard" rollout.
+
+[[File:ShadingAnAsset VrayViewportIPR.PNG]]
+
+With lights provided in your scene, you should be able to see your viewport rendered, with free camera movement. This is good for checking shaders to see if they are working without having to boot up your V-Ray Frame Buffer. 
+
+''Do not run V-Ray Viewport IPR and LPM Render previews at the same time, this will cause your scene to crash. Be sure to turn off V-Ray Viewport IPR whenever it is not needed, as it is a production that is constantly rendering in live time, takes up a significant chunk of memory and can slow  your computer down.''
+
+[[Category:Technique]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Shading_an_asset_in_3dsMax

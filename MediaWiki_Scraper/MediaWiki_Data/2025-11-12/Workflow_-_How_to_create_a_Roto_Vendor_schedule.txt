@@ -1,0 +1,30 @@
+=What is this page for?=
+=Process=
+'''Step By Step'''
+
+On the left side of Wrike, find the three dots that say '''"More"''' and click '''"Calendars."'''
+
+[[File:How to make a schedule for Roto vendor 1.mp4|frameless]]
+
+In the calendar page click on '''"+ New Calendar."''' Name the calendar Sancio followed by whatever the current season we working for and year.
+
+[[File:How to make a schedule for Roto vendor 2.mp4|frameless]]
+
+After the calendar is created click the three dots and select '''"Create Layer"''' and name the layer '''"Sending/Receiving."'''
+
+[[File:How to make a schedule for Roto vendor 3.mp4|frameless]] 
+
+Click '''"+Select"''' and Type '''"Schedule -"''' and search the name of the project(s). '''*Typing "Schedule -" will help you find your proj folder easier*'''
+
+[[File:How to make a schedule for Roto vendor 4.mp4|frameless]]
+
+Click on the '''"Status"''' drop arrow and select '''"Workflow"''' then '''"Scheduling."''' Scroll up and select '''"Send Vendor"''' and '''"Receive Vendor."'''
+
+[[File:How to make a schedule for Roto vendor 5.mp4|frameless]]
+
+After, click on the three dots for '''"Sending/Receiving"''' hit share and type '''"MAKE."'''
+
+[[File:How to create a Roto Vendor schedule pic 1.png|frameless]]  [[File:How to create a Roto Vendor schedule pic 2.png|frameless]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Workflow_-_How_to_create_a_Roto_Vendor_schedule

@@ -1,0 +1,99 @@
+In this article you'll learn how to use CopyCat to semi-automate complex roto work. Extra articles about other possibilities will come in the future.
+
+=Copycat=
+Copycat is a machine learning model in Nuke that allows you to train a model off of a few images and duplicate that effect  on every frame of a larger sequence, and into other footage sequences as well. You can train it to do several things like upscaling, clean-up, object removal, and more. In this article we'll focus on creating masks to semi-automate otherwise tedious roto work. The later part of the article will talk about pre-trained models, which are ever expanding [https://community.foundry.com/cattery On  The Foundry's Cattery page.] With CopyCat there are many PAWsibilites!
+
+There are several examples of in-house training on the network here: '''U:\resources\Workflow_Meetings\Breakouts\2025-08-12__WFWWorkshop - CopyCat Training in Nuke\Comps'''
+
+The "single shot training" example contains an simple setup with labeled nodes to help new users.
+<br>
+<br>
+''NOTE: Before starting be aware that results can vary depending on scene complexity and training time. You may get something surprisingly perfect, something useable as a core matte, or in some rare cases a complete mess, but as of this writing results have been quick and useful.''
+
+<br clear=all>
+
+==Setup==
+[[File:CopyCat_TrainingSet-Spongebob.jpg|thumb|IMG-01 - A simple setup for training.]]
+[[File:CopyCat_SpongebobInputs.jpg|thumb|IMG-02 - Stills and Alphas for Ghostbob.]]
+[[File:CopyCat HelloKittyInputs.jpg|thumb|IMG-03 - Multiple actors in costumes.]]
+[[File:CopyCat_Nodes-CopyCatInputs.jpg|thumb|IMG-04 - CopyCat Connecctions.]]
+To the right in IMG-01 you can see a full, simple setup for a character. 6 frames are held, a rotoscope alpha is created for each frame, they are time clipped and appended, then piped into Copycat. This series of steps will walk you through the steps to create a setup like this.
+<ul>
+1. Create a copycat node. The node will have 2 inputs: Groundtruth & Input. 
+<ul>
+<li> The '''GROUNDTRUTH''' is where you connect the footage with your effect applied. In this case we're training for Masking, so we'll link the ALPHA images we create. ''if you were training another effect like face touch-up you would put that example into GroundTruth''
+<li> The '''INPUT''' should be connected to the unedited RGB footage. This is the footage that CopyCat will compare against the Groundtruth to learn where and how to apply the effect. 
+</ul>
+2. Select a group of frames that show a range of what CopyCat might encounter in your footage. For example if your subject is dancing around a greenscreen you could just select a series of images of them in diverse poses; however if your subject is in a forest with with objects passing in front or behind them you should select images that cover several examples of the subject in different locations and with multiple things in front of and behind them. The simplest way to select frames is using a series of frame holds like in IMG-01.
+
+3. From those selected frames create alphas that you want CopyCat to learn from. You can do this in a number of ways like simple roto to complex keying, as long as the output is a good representation of what you want your eventual output to look like. ''To the right in IMG-02 and IMG-03 you can see examples of selected frames and the alphas created from them. For the Ghostbob image only the body was wanted to fill in an impossible Key and to provide a Color Correction mask. For the Hello Kitty example several actors were trained to cover multiple scenes and scenarios with them in it.''
+
+4. Time clip your frames to a single frame.
+
+5. Link your Time Clipped frames to an Append node, which will combine them into a sequence. ''If you don't time clip the frames the append node will combine your full footage length into a sequence, causing your CopyCat node to look at a bunch of useless frames and have you questioning "why does this say it's going to take 67 hours?" ''
+
+6. Make sure to separate your RGB and ALPHA data. Remember: you only want ALPHA going into GroundTruth, and you only want RGB going into Input. To the right in Image ## is an example of one way to do this by using a Shuffle node to filter only Alpha data, and using a Remove node to keep RGB data but remove Alpha data. 
+
+7. Connect your Alpha and RGB data into the Copycat node, like in IMG-04. 
+
+8. Double click on the Copycat node to open it's properties and then do the following things:
+<ul>
+<li> Set a folder for your training data to save to. ''Annoyingly unlike other nuke outputs this one cannot create a folder by simply filling out a path like a Write node can. It also will not automatically version folders since it cannot create them.''
+<li> set your Epochs. This is the number of times CopyCat will train on each frame you gave it. The default is 10000 and works well. You can get good results from lower numbers but higher numbers will almost always return better and cleaner training. 
+<li>Starting out, do not set any initial weights. Those are used to continue training if you started and wanted to train it further on the same data.
+<li>Checkpoint interval set to 1000 is usually fine. This creates a "checkpoint" file every 1000 epochs, allowing you to continue training if you didn't get results you wanted or if your systems crashes for some reason during training.
+</ul>
+9. Start training! Click the button and wait. Depending on your data set, footage size, and other factors this could take 10 minutes or several hours. You can watch along in your viewer or in the Progress tab of the CopyCat node. ''Personally I've only ever had to wait for 30 minutes to get good results, but I know others have said they waited 3 hours to get something good, so it might be a good idea to let this cook when you leave work''.
+
+</ul>
+
+<span style="color: white">            ≽^•⩊•^≼</span>
+
+<br clear=all>
+
+==Checking results and further training==
+[[File:CopyCat_Nodes-Inference-Output.jpg|thumb|IMG-05 - an Inference node applied after training.]]
+After your training finishes click "Create Inference" in the CopyCat Node and pipe the node it creates into your footage. You now have a trained node that will quickly process your footage. You can apply this to the footage you used to create it, and other footage with the same subject and scenario. To the right is an image showing the results of successful training (IMG-05). 
+
+Your trained node will do it's best to find your subject in whatever footage you apply it to, but it's only as successful as the data you give it. For example in Image ## you can see the node successfully grabbing the Inflatable Spongebob's body, but also trying to work on Lil' Spongebob and Patrick. The training has no context for the other two characters, so it isn't sure what to do with them and creates messy results. 
+
+If you get back low quality results like blurry mattes, mattes with holes, or extra objects being matted, you can continue training or adjust the training.
+<ul>
+<li>Increase your epochs.
+<li>Continue from a checkpoint. The folder your training data is in will contain checkpoint files that you can keep training from (unless you changed checkpoints to 0 for some reason, you absolute Mad Lad).
+<li>Simply start training again, which will automatically create a new training session along with your old one that you can see in the Progress tab of the node.
+<li>Add more to your data set. More information is good! 
+</ul>
+<br>
+After each training session delete your old Inference nodes and just create a new one from the CopyCat node. It's simpler than trying to connect new training to the inference node.
+
+=Pre-Trained Nodes=
+[https://community.foundry.com/cattery "The Cattery".] is an expanding list of pre-trained nodes from The Foundry that you can apply to your scenes (''but have no editable functions, they come as they are''.) These nodes can do things like:
+<ul>
+<li>Matte generation
+<li>Cryptomattes for footage
+<li>Motion vectors
+<li>Inpainting
+<li>Depth Estimation
+<li>Denoising
+<li>Upscaling
+<li>Facial feature masking
+<li>and more!
+</ul>
+
+Below are some examples of some pre-trained nodes being used on a Fantastic 4 project. These show some strengths and limitations of the nodes. 
+For example:
+<li> With a simple clean plate the Background Matting node was able to create good mattes from our footage. 
+<li> The Depth Estimation's results work okay, but are blobby and not truly accurate.
+<li> ModNet human matting works great on recognizably human shapes, but falls apart when applied to shapes that deviate from standard humans.
+
+<gallery mode=packed>
+File:CopyCat_Pretrained-BackgroundMatting.jpg|Background Matting
+File:CopyCat_Pretrained-MidasDepthEstimation.jpg|Depth Estimation
+File:CopyCat_Pretrained-ModNet.jpg|Human Matting
+File:CopyCat_Pretrained-RealEsrgan.jpg|Detail Enhancement
+File:CopyCat_Pretrained-SegmentAnything.jpg|Segmentation
+</gallery>
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Using_CopyCat_in_Nuke

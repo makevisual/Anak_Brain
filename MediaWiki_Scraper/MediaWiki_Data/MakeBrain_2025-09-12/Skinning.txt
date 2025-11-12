@@ -1,0 +1,173 @@
+== Previous Article: ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous article: [[Rigging Hair]]
+
+== Skinning: ==
+Now that our rig is built and our ctrl’s transforms are frozen, we can begin skinning our character’s geo to their bones. 
+
+[[File:1 Skinning SkinModifier.png|frameless]]
+
+First we’ll select a piece of geo and create a “Skin” modifier. This modifier will sit above any edit poly modifiers but underneath things you may want to be able to turn off, like turbosmooth, shell, material, displacement, etc. In the parameters next to “Bones:” click “Add.”
+
+[[File:2 Skinning AddBonesWindow.png|frameless]]
+
+A window will pop open with a list of everything in your scene that is currently visible. At the top of this window, you can see I have toggled only joints to be visible. If your rig layer is turned off in the viewport, you won’t see it in this window and you won't be able to select anything in it, so make sure all your bones are visible in the viewport before adding any. You don’t have to add all your bones to the skin (unless the situation calls for it, like using an unreal metahuman rig), just what is needed for the piece of geo you have. Make sure to only add skin bones (Marked “BoneS” if you named everything properly) to your skin!
+
+[[File:3 Skinning DefaultWeights.png|frameless]]
+
+Now you can test and see that your skin is working by moving your character ctrls. The weights won’t be great, but this is at least the starting point.
+
+[[File:4 Skinning EditEnvelopes.png|frameless]]
+
+Since we want to further improve our weights, let's begin the painting process. First we’ll have to click “Edit Envelopes” in the Skin Parameters to enable editing. Make sure “Vertices” is checked on. This will ensure we can select vertices to assign weight to. If you hit “select element” you can select all the vertices on a piece of geo, which can be helpful to weight everything to one bone, but for now we’ll leave this off.
+
+=== Weight Solvers: ===
+[[File:5 Skinning WeightSolvers1.png|frameless]][[File:6 Skinning WeightSolvers2.png|frameless]]
+
+We can get some pretty alright initial weights using the weight solver first. Under “Weight Properties,” you can choose a weight solver, which will basically set some auto-weights on your character. This is good to get something initial that you can improve further manually, but be aware it works best with less-complicated rigs. If you have a lot of muscle bones or floating corrective bones, it might be better to skip this step since the weight solver will try to weight everything in your bone list, and things can get mushy if there’s too much influence on corrective bones.
+
+There are two weight solvers to choose from, geodesic voxel and heatmap. Each one is slightly different but both work quite well, play with each one and see which gives you a better result for your rig. I tend to use heatmap, but heatmap can sometimes be picky about your geometry and bug out. If one doesn’t work so well, the other one should work ok. [https://help.autodesk.com/view/3DSMAX/2021/ENU/?guid=GUID-97016957-BCD6-469B-8AC6-776B2C1334B7 For a more in-depth overview of each solver, take a look at the 3ds Max documentation on weight solvers.]
+
+[[File:7 Skinning HeatmapParameters.png|frameless]]
+
+When you select a solver, a window will pop up with some options. Falloff is the amount of blending that happens between joints, and the Max Influence is the amount of bones that the weight can be spread across on a vertex. You want to keep this at 2 for the weight solver. When weight painting in general, you should still try to limit the amount of weight being spread across multiple bones so things don’t get too mushy. I also usually check on “Turn off Envelope Gizmos,” since we don’t really use them. [https://help.autodesk.com/view/3DSMAX/2019/ENU/?guid=GUID-18FC400C-2618-4BC0-831E-5F3045E7EDD8 For more info on Envelopes see the 3ds Max page.]
+
+=== Posing for Weight Painting: ===
+[[File:8 Skinning HeroSmileSkinpose.png|frameless]]
+
+Before you get too far into weighting, it will first be helpful to create many poses for your character to get an idea of how your character is deforming. You’ll want to key extreme poses, but also poses your character is likely to hit. In the image above, I keyed a smile pose that is important for my character to be able to make, which informed how I weighed the bones around his mouth. Make sure you key your character in the rest/bind pose first.<gallery caption="Example poses for skin weights.">
+File:9 Skinning SkinPose1.png
+File:10 Skinning SkinPose2.png
+File:11 Skinning SkinPose3.png
+File:12 Skinning SkinPose4.png
+File:13 Skinning SkinPose5.png
+File:14 Skinning SkinPose6.png
+</gallery>Here are only a few examples of the many poses from the weighting process of my character. Don’t be afraid to set keys for everything. Try to get the best examples of your character’s range of motion.
+
+While weighting, make sure you turn off modifiers like turbosmooth, shell, etc. But while you are working, turn them on occasionally just to see how your character’s deformation will look in the final render, and catch any weirdness that might not be visible with the modifiers turned off, like geo poking through clothes or geometry collapsing.
+
+== Weight Painting Tools: ==
+There are two ways to manually set weights with the skin modifier.
+
+==== Weight Tool: ====
+[[File:15 Skinning WeightToolIcon.png|frameless]]
+
+The first is the Weight Tool. This little pop-up window can be accessed by pressing the wrench icon in the “Weight Properties” section in the Skin modifier parameters. Using this tool, you can select vertices and assign weight to them. This is the tool I use the most out of personal preference. 
+
+[[File:16 Skinning WeightToolWindowOverview.png|frameless|587x587px]]
+
+This is the Weight Tool window. The top row of buttons changes the selection of vertices to help you select loops of vertices or expand your selection. The second row allows you to set an exact value of weight to the selected vertices. Similarly, the (+) and (-) buttons can be used to tap in (ie. “add a little bit of”) influence or gradually take influence away. The “Blend” button will blend weight across the selected vertices. The bones listed in the box are the bones that are influencing the selection, and how much influence they have. You can select bones from this box to adjust their influence.
+
+==== Weight Paint Tool: ====
+[[File:17 Skinning WeightPaintIcon.png|frameless]]
+
+The weight paint tool is enabled by clicking the “Paint Weights” button in the “weight Properties” section. It will appear as a brush tooltip that you can use to paint weights in 3D space onto your geo, like how you would in texture painting. By default, the “Paint Blend Weights” option is toggled ON. This will make your brush behave as a blender only. If you want to use the brush to actually paint on influence, toggle this OFF.
+
+[[File:18 Skinning WeightPaintOptionsIcon.png|frameless]]
+
+Click the three-dot menu button to open up the Painter Options window. From here, you can adjust the strength and size of your brush tip, as well as the falloff curve. You can also adjust brush size in the viewport with “Ctrl + SHIFT + LMB Drag.” You may be tempted to use the Mirror tools in the Painter Options, but DO NOT touch them. The Skin modifier has a weight mirror tool that we’ll talk about down below.
+
+[[File:19 Skinning PainterOptions.png|frameless]]
+
+== Pain Free Skinning: ==
+
+==== Try To Add Weight Only: ====
+When skinning it may be tempting to remove weight from a vertex by using the (-) button or hitting a smaller percentage button. This can be messy because you don’t get to choose where the subtracted weight is going, so you might end up with vertices that are weighted to weird bones or messy influences. If you want to reduce the amount of weight on a bone, it’s better to select the bone you would want to transfer the weight to and add weight onto that bone instead.
+
+==== Lazy Skinning: ====
+For a quick overview of a really effective skinning method, you can take a look at this [https://youtu.be/QSzWg7aF5Zw?si=JG9_jL-z8HjbFFBc video.]
+
+
+Viewport Texture Issues:
+
+[[File:20 Skinning SkinWeightsViewportBug.png|frameless]]
+
+When you begin to add weight to an object, the geo will usually turn shadeless so that you can see the vertex colors better. However, there is sometimes an issue where your geo will still show the diffuse texture, which can make it harder to see the vertex colors while weight painting.
+
+
+[[File:21 Skinning ViewportBugFix.png|frameless]]
+
+This problem can be solved by temporarily changing the shader on the object so that it’s easier to see the weights. What I like to do is add a temporary material modifier (which I will delete when I’m done weight painting) and then temporarily add a blank material to my multimaterial. I’ll assign the ID of this temporary material with my material modifier. 
+
+[[File:22 Skinning BugFixResult.png|frameless]]
+
+Now we can see the weights more clearly. Make sure that when you’re done you delete the temporary material modifier and material!
+
+==== Mirroring Weights: ====
+Weights can be mirrored using the “Mirror Parameters” in the Skin modifier.
+
+[[File:23 Skinning MirrorWeightsOptions.png|frameless]]
+
+Hit “Mirror Mode” to turn it on in the modifier. There is a row of green and blue icons underneath it, these will tell 3DS Max what to Mirror. The “Mirror Threshold” is good for a model that is slightly asymmetrical.
+
+[[File:24 Skinning MirrorWeightsColors.png|frameless]]
+
+Take a look at your character. You should see that all the bones and verts on one side of the body are green, and on the other side they are blue. This is an indication that your model and rig are symmetrical. 
+
+[[File:25 Skinning MirrorWeightsCenterColor.png|frameless]]
+
+If you see red bones/verts, that either means those bones aren’t mirrored bones, or are asymmetrical. If you see red bones and verts along the very center of your character, this is ok. But if you see red bones/verts anywhere else, that’s an indication that your character is not symmetrical and you’ll need to fix that. Take a look at the “Repositioning Bones After Skinning” section for more info.
+
+[[File:26 Skinning MirrorWeightsTools.png|frameless]]
+
+Next we’ll mirror the weights. The two buttons on the right are “Paste Green to Blue Verts” and “Paste Blue to Green Verts.” You can hover over them to check their names. These buttons will mirror the weights from the vertices on one side to the other. Once you’ve hit one of these, the weights will be mirrored.
+
+The other two buttons, “Paste Green to Blue Bones” and “Paste Blue to Green Bones” Will paste the influence of the envelopes for each bone. Since we don’t usually adjust weight using envelopes, we don’t really use these buttons. [https://help.autodesk.com/view/3DSMAX/2019/ENU/?guid=GUID-18FC400C-2618-4BC0-831E-5F3045E7EDD8 Once again, for more info on Envelopes see this article.]
+
+== Repositioning Bones After Skinning: ==
+Sometimes we’ve started skinning when we realize that there’s something wrong with the position of our bones.
+
+[[File:27 Skinning RepositionBonesDemo1.png|frameless|341x341px]][[File:28 Skinning RepositionBonesDemo2.png|frameless|341x341px]]
+
+Here on my demo tube, I’ve skinned it to the bones but I’ve now realized that I want it to bend in the middle instead! I’ll have to adjust my bone placement, but I don’t want to lose all the skin weights I worked so hard on.
+
+Before you begin fixing this, make sure you increment save! Just in case things still get goofy.
+
+[[File:29 Skinning AlwaysDeform.png|frameless]]
+
+Lets navigate to the “Advanced Parameters” section in our Skin modifier. “Always Deform” Will be checked ON- so let’s check it OFF. '''Be sure to go to your bind pose before doing this!'''
+
+[[File:30 Skinning RepositionBonesDemo3.png|frameless|360x360px]][[File:31 Skinning RepositionBonesDemo4.png|frameless|360x360px]]
+
+In my bind pose, I’ll go into “Bone Edit Mode” (Animation > Bone Tools > Bone Edit Mode) and adjust my bones so that the joint is in the middle. Exit Bone Edit mode. Go back to your skin modifier and turn “Always Deform” back ON.
+
+Now our bones are in the correct place, and our weights have been preserved! You may need to further adjust your weights to get the desired deformation.
+
+== Skin Wrapping: ==
+The Skin Wrap modifier is by far one of the most useful rigging tools 3ds Max has to offer. It can be used to weight a high poly model with a low poly model and transfer weights to a character’s clothing and hair.
+
+Basically, the Skin Wrap modifier allows you to transfer the weights from one model to another model. [https://help.autodesk.com/view/3DSMAX/2022/ENU/?guid=GUID-1B3C4662-8C42-4F02-BD1B-204CD491166B For a more in-depth look at all of the parameters of Skin Wrap, take a look at this article.]
+
+[[File:32 Skinning SkinWrapDemo1.png|frameless]][[File:33 Skinning SkinWrapDemo2.png|frameless|429x429px]]
+
+For this demo, I’ve got a tube that is skinned to a single stretch bone. I want to transfer the weights from my tube to my favorite Utah teapot.
+[[File:34 Skinning SkinWrapModifier.png|none|thumb]]To do this, I’ll add a “Skin Wrap” modifier to my teapot. This modifier should sit above any edit poly modifiers, but below any turbosmooth, shell, displacement, etc. modifiers. Make sure also that those upper modifiers are turned off in the viewport on your skinned geo and your skin wrap geo. This will prevent errors when converting the skin wrap modifier to a skin modifier.
+
+Next we’ll click “Add” and add our tube (better known by her stage name, “Cylinder001”) to the Skin Wrap. Make sure to check on “Weight All Points” so no vertex gets left behind.
+
+[[File:35 Skinning SkinWrapDemo3.png|frameless|431x431px]]
+
+Let’s test our skin wrap. I’ll grab one of my stretch bone helpers and give it a squash. We can see that our teapot is squashing with the tube. This looks pretty good to me, so I’m going to convert my Skin Wrap modifier to a Skin modifier. 
+
+Return to the bind pose and hit “Convert to Skin.” This will generate a Skin modifier above your Skin Wrap in the modifier stack, and turn off visibility for your Skin Wrap.
+
+[[File:36 Skinning SkinWrapDemo4.png|frameless|431x431px]]
+
+I’ll test my skin again by squashing the teapot. We can now see the teapot squashes just like our tube. This is what I want, so I’ll delete my Skin Wrap modifier.
+
+'''You should always delete your Skin Wrap modifier once you are done and happy with your skin weights.'''
+
+[[File:37 Skinning SkinWrapDemo DrWorm.png|alt=Dr. worm demonstrating the deformation of his new clothes, thanks to Skin Wrap!|frameless|374x374px]]
+
+Here is an example of how Skin Wrap can be used to copy a character’s weights to their clothes. The worm’s little shirt has been skin wrapped to his body, then the skin wrap was converted to skin and the skin wrap modifier was discarded.
+
+Skin Wrap can also be used to skin hair!
+
+[[Rigging Hair|For more info on skinning hair, please see the hair article.]] 
+
+== Next Article: ==
+Next article: [[Character Cloth]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Skinning

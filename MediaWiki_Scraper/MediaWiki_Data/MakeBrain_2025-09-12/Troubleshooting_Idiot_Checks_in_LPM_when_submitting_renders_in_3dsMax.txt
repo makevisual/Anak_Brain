@@ -1,0 +1,174 @@
+= Overview =
+The Idiot checks not only help prevent renders that cause errors, but also prevent issues that can consume extra resources, leave scenes in improper states, break pipeline standard practices, and are wasteful. Just because a job is able to render while ignoring these checks, does not mean they should be ignored. 
+
+If you have some errors, here are common ways to correct those issues.
+
+= Checks that are performed =
+
+==File size==
+Checks file size. A file more than 1gb is not submittable, and anything above 500mb will give an error.
+
+'''Reason:'''
+
+Scene files should be kept to a manageable file size. This impacts save and load times, can make errors when saving more likely, and is largly inefficient. Nearly any situation other than an active CAD conversion or model baking scene should be below these file sizes.
+
+'''Solution:'''
+
+Reference as many objects into the scene as possible using proxy files. These can be vray meshes, tycaches, or other types of external data being saved.
+
+The asset switch can help you create some of these proxies, please read up more in [[Creating an asset in 3dsMax using the asset switch]]
+
+If you are not working with an asset, you can export objects as vraymeshes as well by right clicking and exporting your selection.
+
+[[File:Troubleshooting_Idiot_Checks__vRayMeshExport.PNG]]
+
+You can also [[https://www.docs.tyflow.com/tyflow_objects/tyCache/ | learn how to tycache]] your objects as well.
+
+==No cameras==
+Checks for renderable cameras in the scene.
+
+'''Reason:'''
+
+If there is no camera in your scene, the render is not re-producible.
+
+'''Solution:'''
+
+Add a camera into your scene, and use it in LPM
+
+==Camera multipass==
+
+Checks for camera multipass effects.
+
+'''Reason:'''
+
+IF a camera has multipass on, it will force the image to render as many times as the multisample settings are set to. This can not only take exponentially longer, but also results in exponential memory usage which can damage the render farm.
+
+'''Solution:'''
+
+Preferably you should be using a Physical Camera, and not a standard camera. If you need to use a standard camera you can disable the multipass settings on the camera.
+
+[[File:Troubleshooting_Idiot_Checks__CameraMultipass.PNG]]
+
+
+==Frame rate==
+
+Checks for a 24 fps framerate.
+
+'''Reason:'''
+
+All of our projects default to 24 FPS across the studio, if we do need to change it for a given project that is perfectly fine, however everything should default to 24 fps, so as assets, scenes, and other content is shared around, merged, or otherwise used, something small like a framerate setting does not get set incorrectly.
+
+'''Solution:'''
+
+Set your scene framerate to 24 fps
+
+==Autoback==
+
+Checks to make sure you are not submitting from an autoback file.
+
+'''Reason:'''
+
+Autoback directories are deleted after a short period of time, and are always cleared out before a project is archived. Rendering from an autoback folder is a way to guarantee your render scene will be deleted. This is a bad thing.
+
+'''Solution:'''
+
+Save your scene back into the folder that it originated from.
+
+==Hairfarm==
+
+Checks that hairfarm is not rendering as an environment effect.
+
+'''Reason:'''
+
+This can cause significant render time and memory usage. 
+
+'''Solution:'''
+
+Disable the hairfarm render effect in the environment and effects window ( 8 on the keyboard ). This setting is often re-enabled when merging in objects with hair farm, and can come as a surprise
+
+[[File:Troubleshooting_Idiot_Checks_hairFarm.PNG]]
+
+==Plugins==
+
+Checks for missing or broken plugins.
+
+'''Reason:'''
+
+If you are missing a plugin, the farm probably is too, and it can cause errors. Our scenes that are submitted to the renderfarm should be nice and error free. You can delete the objects multiple ways.
+
+- Delete missing plugins button in the scene utilities
+- use the scene converter utility
+- manually remove the offending scene nodes
+
+'''Solution:'''
+
+disable the multipass effect from the offending camera
+switch to using a physical camera as well
+
+==Normals==
+
+Checks for bad normals in your scene.
+
+'''Reason:'''
+
+in Vray you will have better performance and results if you use the vray bitmap and vray normal bump maps. 
+
+'''Solution:'''
+
+You can manually convert them in the material editor, and [[https://docs.chaos.com/display/VMAX/VRayNormalMap ! use the vraynormalmap when you create your material to begin with]]
+
+[[File:Troubleshooting_Idiot_Checks_vRayNormalMap.png]]
+
+
+or via the right click menu, you can convert all offending scene maps to the correct version
+
+[[File:Troubleshooting_Idiot_Checks_vRayBitmap.PNG]]
+
+==Hidden lights==
+
+Checks if rendering hidden lights is disabled.
+
+'''Reason:'''
+
+This will cause unexpected results when using LPM. It uses hidden / visible properties to control which lights are enabled at rendertime.
+
+'''Solution:'''
+
+Disable this setting in the render dialog ( f10 )
+
+==Assets in project==
+
+Checks to make sure all external references are in the project.
+
+'''Reason:'''
+
+All assets used to render a scene should be in the project folder that they originated from. This ensures that when a project is archived, all the assets are carried along with it, and will be available in the future.
+
+This can also be a catch to ensure that your assets are all on a valid network directory as well.
+
+'''Solution:'''
+
+Re-path the references to be within the 'project' level folder of the scene that you are working with
+
+Open the asset tracker ( shift + t ) to open the asset tracker, and find any assets that are not in the proper folder.
+
+[[File:Troubleshooting_Idiot_Checks_repath_01.png]]
+
+Right click on the asset "reveal in explorer" - this will show you where 3dsmax is getting the file from, if it is a relative path, and not a complete path.
+
+[[File:Troubleshooting_Idiot_Checks_repath_02.png]]
+
+You can then copy those assets into the correct location in the assets folder of your current project.
+Once everything is in place, you can then 'set the path' to that new folder. 
+Right click on the asset ( or multiple assets in the same directory ) and click "Set Path".
+
+[[File:Troubleshooting_Idiot_Checks_repath_03.png]]
+
+You can now choose the directory to locate the assets in.
+
+[[File:Troubleshooting_Idiot_Checks_repath_04.png]]
+
+Additionally if you have copied all the assets into the project already, you can use the "relink bitmaps" utility in the main menu under "External Tools" to search and replace any missing assets if they are already in the project directory, but 3dsMax is not using them.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Troubleshooting_Idiot_Checks_in_LPM_when_submitting_renders_in_3dsMax

@@ -1,0 +1,57 @@
+=What is a Graphics Package=
+A Graphics package is a collection of all the fonts, logos, supers, legal, and other graphical elements used in a commercial spot. This can sometimes include working files as well. We are often asked to provide a graphics pack along side the delivery of the final slated spot. The graphics package is most often used in combination with a superless version of the edit to create regionalized versions of the edits.
+
+=Situational Requirements=
+Some edits require a more involved localization package, where an additional version of the edit may need to be rebuilt and simplified down in a software package the client can open, usually Adobe After Effects.  And in the most extreme situations, corner pinning of logos and text integrated into shots may need to be rebuilt in a program like After Effects so they can be properly localized for different languages by the client. When this is needed for the graphics package, another ''SPOT'' folder will usually be made for the entire graphics package edit. And related files and renders will be saved/copied over to the new ''SPOT'' folder.
+<br>
+<br>
+Some projects have different requirements for the superless edit, for example some clients may want movie trailer footage included or excluded from the superless version of the edits. Or only to exclude the title sequence of the trailer, ect... Ask your projects producer for clarification if needed.
+
+
+=Collecting a Graphics Package=
+All of the components that make up a graphics package should be collected together in one unified place, this is usually located here:
+<br>
+ <nowiki>
+//Projects/{Project}/Renders/Deliveries/{DatedFolder}/Graphics/</nowiki>
+<br>
+If you need to make an alternate version of any file to while generating the graphics package, never save over the original, always save as a copy with a clear name that distinguishes it as part of the graphics package.
+
+'''Create subfolders''' 
+<br>
+Create subfolders for each component being sent to keep things organized, common subfolders include the following, but you may not need all of them
+<ul>
+	<li> Fonts
+	</li>
+	<li> GraphicsAsEdit
+	</li>
+	<li> GraphicsSequences
+	</li>
+	<li> Legal
+	</li>
+	<li> Logos
+	</li>
+	<li> Plates
+	</li>
+</ul>	
+	
+'''Collect the files '''
+<ul>
+	<li>Copy any fonts used in the project to the fonts folder. This includes fonts used in the supers and legal, even if it is a default Windows font, such as Arial.
+	</li>
+	<li>Render a supers only version of the edits, as a ProRes 444 with alpha, and copy them to the GraphicsAsEdit folder.
+	</li>
+	<li>Copy any Graphical image sequences to the GraphicsSequences folder if necessary. This is usually animated supers, 2D transition elements, or overlays. And the working files used to create them, if applicable.
+	</li>
+	<li>Copy any legal used to the legal folder. And the working files used to create them, if applicable.
+	</li>
+	<li>Copy any logos used to the logos folder. And the working files used to create them, if applicable.
+	</li>
+	<li>Sometimes we are asked to provide a clean plate of specific shots, most often this is the endtag on toy spots. This would be copied to the plates folder if asked for.
+	</li>
+</ul>
+
+
+[[Category:Process]]
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Creating_a_graphics_package

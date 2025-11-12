@@ -1,0 +1,22 @@
+= Remove Winged Vertices =
+[[File:RemoveWingedVerts UI.png|179x179px]]
+
+== Overview ==
+'''Remove Winged Vertices''' is a tool from the MakeToolbox toolset designed to find and delete "winged" or "two-edged" vertices from a mesh - these are isolated vertices connected to only two edges.
+
+== How to Use ==
+
+# '''Open the Tool:''' From MakeToolbox, select "Remove Winged Vertices" from the scripts dropdown menu.
+# '''Pick an Object:''' Click the '''"Pick Object"''' button, then select the mesh you wish to clean in the viewport. The button's text will update to show the name of the selected object.
+# '''Remove Vertices:''' Click the '''"Remove Vertices"''' button. The script will automatically find and delete all vertices on the object that have exactly two connected edges.
+
+== User Interface ==
+
+=== Pick Object Button ===
+This button is used to select the target Editable Poly object for the operation. You must pick an object before you can remove its winged vertices.
+
+=== Remove Vertices Button ===
+After an object has been picked, clicking this button will execute the tool.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Remove_Winged_Verts

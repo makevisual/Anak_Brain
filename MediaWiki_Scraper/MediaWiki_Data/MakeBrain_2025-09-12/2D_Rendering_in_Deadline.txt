@@ -1,0 +1,54 @@
+Rendering After Effects projects through Deadline is essential for optimizing workflow efficiency and meeting production deadlines in collaborative environments. Deadline, a powerful render management tool, allows for distributed rendering across multiple machines, significantly reducing render times. This not only ensures consistent output quality but also frees up workstations for other tasks, improving overall productivity. By automating the rendering process and offering features like error logging and priority management, Deadline minimizes human error and ensures a seamless pipeline, making it an invaluable asset for motion design and animation professionals.
+
+
+Before we begin, please read [[Introduction to Deadline]].
+
+= MAKE Priority Basics =
+2D / Compositing Job Defaults are automatically set to 95. They're fast frames and they take priority over everything else due to how fast they will be finished. No other renders on the farm should pass 95, and probably never pass 90.
+
+= Preparing After Effects Sequences for Deadline =
+# Select the comp within the After Effects file you wish to render, and slide it into the 'Render Queue'.
+# Select the blue highlighted portion of the 'Output Module'. The 'Output Module Settings' window should appear.
+# Set the 'Output Module Settings' to your liking. Once the settings are to your liking, select the 'OK' button. (An example is provided. View Example A image.)
+# Select the blue highlighted portion of the 'Output To' labeled as 'Not Yet Specified'. The 'Output Movie To' window should appear.
+# Copy and paste the path of the folder you wish to render to into the 'Output Movie To' window. And make sure that the naming convention is correct. (An example is provided. View Example B image.)
+
+[[File:Output Module Settings Deadline Window IMG.png|thumb|311x311px|Ex. A: 'Output Module Settings' Window]]
+
+[[File:Output Movie To Deadline Window IMG.png|thumb|Ex. B: 'Output Movie To' Window]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+= Submitting After Effects Sequences to Deadline =
+
+# Click 'File'
+# Scroll down to 'Scripts'
+# Select "DeadlineAfterEffectsClient.jsx". The 'Submit After Effects to Deadline' window should appear. (An example is provided. View Example C image.)
+# Once the settings are to your liking, select the 'Submit' button.
+# A 'Script Alert' window will pop up. Select the 'Yes' button.
+# You can now open Deadline and view your job.[[File:Submit Affter Effects To Deadline Window IMG.png|thumb|Ex. C: 'Submit After Effects To Deadline' Window]] 
+
+= Watch Your Jobs for Problems =
+Once you've submitted a job check in on it. Watch for errors, make sure things aren't taking longer than they should, and check frames to see if something is wrong. Basically: try not to waste farm time with broken renders. If you see something wrong, pause or remove the job from the farm and check it so other renders can make it through.
+
+= Clean Up =
+Occasionally open up all of the filters on deadline and check if you have a bunch of completed or failed jobs on the farm and delete them. It's up to all of us to keep deadline tidy!
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=2D_Rendering_in_Deadline

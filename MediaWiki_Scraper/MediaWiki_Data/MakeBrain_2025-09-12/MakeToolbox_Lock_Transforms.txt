@@ -1,0 +1,37 @@
+= Lock Transforms =
+
+== Overview ==
+[[File:Lock Transforms UI.png|335x335px]]
+
+'''Lock Transforms''' is a tool from the MakeToolbox toolset that provides a fast, interactive, and non-destructive way to lock and unlock the movement, rotation, and scale of objects.
+
+== How to Use ==
+
+# '''Open the tool''': From MakeToolbox, select the "Lock_Transforms" from the scripts dropdown menu.
+# '''Select Objects''': Select the objects to lock/unlock transforms and, in the user interface Lock / Unlock group, use the '''"Lock Cams"''' or '''"Lock Objects"''' buttons toogle. If '''"Selection only"''' is checked, this action will only take effect on the selected objects. If it is unchecked, it will take effect on ALL objects on the current scene.
+# '''For custom, per-axis locking''':
+#* Click the '''"more"''' button to expand the "Custom Locks" panel.
+#* The checkboxes will automatically update to show you the current lock status of your selection.
+#* Click any '''X, Y, or Z''' checkbox to toggle that specific lock on the selected object(s).
+
+== User Interface ==
+The script's interface is divided into a simpler top-level panel and an advanced, expandable section for custom control.
+
+=== Lock / Unlock ===
+This section provides quick, global controls.
+
+* '''Lock Cams / Lock Objects''': These are toggles. Clicking them once locks all objects of that type (or the selection). Clicking again unlocks them. When locked, the object wirecolors turn red. The original wirecolors are restored upon unlocking.
+* '''Selection only''' (Optional): Limits the scope of the "Lock Cams" and "Lock Objects" buttons to the current selection.
+* '''more / less''' '''button''': Expands or collapses the "Custom Locks" panel for advanced control.
+
+=== Custom Locks ===
+This panel is interactive and provides detailed feedback on the current lock status of the selected objects.
+
+* '''Checkboxes (X, Y, Z)''': These checkboxes have '''three states''' to give you clear feedback on your selection:
+** '''Unchecked''': The transform is '''unlocked''' on all selected objects.
+** '''Checked (Solid Color)''': The transform is '''locked''' on all selected objects.
+** '''Checked (Dimmed Color)''': The selection has a '''mixed state''' (i.e., the transform is locked on some objects but not others).
+* '''toggle''': A button within each group (Move, Rotate, Scale) to quickly check or uncheck all three axis at once.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=MakeToolbox_Lock_Transforms

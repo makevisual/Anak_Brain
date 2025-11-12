@@ -1,0 +1,19 @@
+Once we are closing on a project, we need to get it ready for archiving. To clean the Google Drive space, we back up all of the files from there and store them on our server so the server folder will then archive with the google drive.
+
+
+To download the folder from Google Drive, you select the 3 folder you want and the three dots and hit download. This will zip the project and download it to your computer.
+[[File:CollectAllCloudDocumentsIntoProjectFolderDuringProjectClose DriveDots.png|center|frame|Google Drives Download button location]]
+
+
+From there, you will make a folder in the project folder called "_MAKEDocs" 
+
+[Project]>Source>"_MAKEDocs"
+
+This is where zip will go.
+[[File:CollectAllCloudDocumentsIntoProjectFolderDuringProjectClose Source-MAKEDocs.png|center|frame|Folder Location]]
+
+
+Then move the project on Google Drive to the zOld folder, which indicates it is ready to be cleaned off the google drive when we need to later.
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Collect_all_cloud_documents_into_project_folder_during_project_close

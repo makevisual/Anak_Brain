@@ -1,0 +1,51 @@
+The steps in this article can be used to join a MAKE Workstation or Render Node to the Corporate Domain. This document currently covers the process to join a Windows 10 Pro machine to the domain. Steps for Windows 11 Pro are very similar but the screenshots will not represent the Windows 11 experience fully.
+
+== Prerequisites to Join Domain ==
+
+=== Prerequisite 1: Update IPV4 DNS settings to point to the Domain Controller ===
+Pre-requisite to join a Workstation/Render Node/etc. to the Domain: The Primary DNS server in the IP V4 settings in Windows should be set to 192.168.1.198 (Current IP of the VM-ADS Active Directory Server) and the Secondary DNS server should be set to 192.168.1.126 (IP address of the secondary AD Server).  See Screenshot below for settings:
+
+[[File:1-AddPCtoDomain-IPSettings.png|672x672px]]
+
+=== Render Node Only! Prerequisite 2: Update DefaultUserName Registry Key to Domain User Account ===
+Prerequisite to re-enable automatic login after reboot for Domain Joined Render Nodes and Workstations:
+
+In order to retain the desired Automatic Login after reboot behavior typical of the render nodes we will need to open Regedit and update one entry. Steps to update that are shown below.
+
+# Click Start and type Regedit. Click Regedit in the start menu to launch Registry Editor. 
+[[File:1B-AddRenderNodetoDomain-RegistryEdit1.png|576x576px]]
+
+# Navigate to the following registry key (you can copy and paste this into the navigation bar in Regedit): <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon</code> 
+[[File:1C-AddRenderNodetoDomain-RegistryEdit.png|610x610px]]
+
+# Again referencing screenshot above, we need to update the DefaultUserName value. Once in the Winlogon section, find “DefaultUserName” in the righthand pane and double click the entry to change the Default Username from “MAKE” to “corp\MAKE” (without quotation marks). Click OK to save the change, then close registry editor.
+
+=== Joining the Domain ===
+
+# Click start or press windows key and start typing the word "join" (no quotes). Alternatively you can search for “Access work or school”
+# Click "Access work or school"
+
+[[File:2-AddDevicetoDomain-JoinDomain1.png|569x569px]]
+
+3. Click Connect
+
+[[File:3-AddDevicetoDomain-JoinDomain2.png|551x551px]]
+
+4. Click "Join this device to a local Active Directory domain"
+
+[[File:4-AddDevicetoDomain-JoinDomain3.png|608x608px|frameless]]
+
+
+5. Enter "corp" (with no quotation marks) for domain name and click next.
+
+[[File:5-AddDevicetoDomain-JoinDomain4.png|568x568px|frameless]]
+
+
+6. If adding a workstation to the domain, enter '''your''' Active Directory Username and Password. If adding a Render Node to the domain, use the generic "MAKE" user account and password to add the device to the domain. In either case, the username for adding a device to active directory '''should start with corp\''' so to add a render node you will enter "corp\MAKE" for username. For a workstation you will use "corp\MyUserID".
+
+[[File:6-AddDevicetoDomain-JoinDomain5.png|frameless|514x514px]]
+
+7. The computer will prompt you to reboot. Click "Reboot Now". Once you are back to the login screen you may log in with your active directory username and password if this is a workstation. If this is a render node and you completed the steps in Prerequisite 2 above the device will auto login to the "corp\MAKE" account after reboot instead of the "localmachine\corp" account. '''You will need to log into applications such as 3DSMax and Adobe CC with your normal credentials for those applications upon first login.'''
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Add_a_Device_to_the_Domain

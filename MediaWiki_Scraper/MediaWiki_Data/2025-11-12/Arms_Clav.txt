@@ -1,0 +1,127 @@
+== Previous Article: ==
+[[Rigging a character in 3dsMax|Character Rigging Hub]]
+
+Previous Article: [[Legs/Feet]]
+
+= Arms and Clavicle: =
+
+== IK Arms: ==
+Creating arms is pretty much the same process as creating legs.
+
+[[File:Arms Clav Gimbal Node.png|frameless|351x351px]][[File:Arms Clav IK Solver.png|frameless]]
+
+Create a gimbal node (MAKE toolbar > rigging tab > Edit Pivots v.1.1) at the top of the arm. Select the arm endBone and create an IK solver (Animation > IK Solvers > HI solvers).
+
+You can also make this IK arm stretchy if you wish with (MAKE toolbar > Rigging tab > Basic Rigs v1.2 > Stretchy IK).
+
+Easy peasy, same as the legs. :)
+
+==  Hands: ==
+Let’s begin working on the hands.
+
+[[File:Arms Clav Hand Gimbal Node.png|frameless]]
+
+Let’s create some gimbal nodes at the top of each finger. Make sure you name them! Eg. the index finger gimbal node is named “C_FOR_Parent_L_Index.”
+
+
+[[File:Arms Clav Hand Finger Ctrls.png|frameless]]
+
+We’ll create ctrls for the fingers and arm. For the inner-hand bones, we’ll have to move them out of the hand so that they are easy to select. Make sure they are named properly before mirroring!
+
+
+[[File:Arms Clav Finger Ctrl Hierarchy.png|frameless]]
+
+Let’s parent stuff into the hierarchy. Working from the end of each finger up to the palm, parent each ctrl to the one above it. At the top of the finger, parent the ctrl to the gimbal node. Then parent each bone to its respective ctrl. Do this for each finger. Create a point helper. This will be the Hand Parent. Parent the hand bone and all the finger gimbal nodes to the hand parent helper.
+
+Make sure you freeze transforms on the ctrls and test their rotation. In gimbal mode, your hand should be able to curl into a fist with all the ctrls selected.
+
+Parent the hand bone, the hand parent, and the IKgoal to the Hand IK ctrl. 
+
+Do this process for the other side as well.
+
+
+[[File:Arms Clav Test IK Arm.png|frameless]]
+
+If you move the IK arm ctrl, the hand should move properly with it.
+
+
+[[File:Arms Clav Incorrect rotation.png|frameless]]
+
+When you parent the ctrls for the mirrored side, you may notice the ctrls will rotate in an unexpected way in gimbal mode after freezing transforms. To fix this, unparent the bones and ctrls. You’ll most likely need to rotate each finger ctrl (not including the ones in the palm) 180 degrees in local X. Then re-parent everything and freeze transforms, checking the rotation again in gimbal mode.
+
+
+[[File:Arms Clav Correct Rotation.png|frameless]]
+
+Now your finger ctrls should rotate properly.
+
+If this happens in the future with your rig ctrls, there is a way to check and see which axis you need to rotate in order to fix it.
+
+First, select your ctrls, and rotate them in each gimbal axis. Find the axis where they are behaving correctly. This is the axis that you will rotate your ctrls 180 degrees in.
+
+For example, on these fingers, the ctrls were rotating incorrectly in the Z and Y axis, but they rotated correctly in the X axis. Therefore I would need to rotate the ctrls in the X axis in order to fix my rotation problem.
+
+Always make sure to freeze transforms after adjusting your ctrls to see an accurate representation of the rotation you are getting.
+
+
+[[File:Arms Clav Gimbal Nodes Clavicle.png|frameless]]
+
+Let’s create some gimbal nodes for the ends of each clavicle bone.
+
+
+[[File:Arms Clav Clavicle Ctrl 01.png|frameless]]
+
+We’ll also create the Ctrl. Create an arc. This will sit on the shoulder of the character.
+
+
+[[File:Arms Clav Clavicle Ctrl 02.png|frameless]]
+
+Create an edit spline mode. Select the spline in sub-object mode. Shift-drag up to duplicate the spline. To connect the edges, press the “Connect” button in the Edit Spline parameters and click-drag from each vertex. 
+
+
+[[File:Arms Clav Position Clavicle Ctrl.png|frameless]]
+
+Position the ctrl on the shoulder. In the Hierarchy panel, select the Pivot menu and select “Affect Pivot Only” and snap the pivot to the clavicle parent.
+
+
+[[File:Arms Clav Clavicle Ctrl Parenting.png|frameless]]
+
+Parent the clavicle parent and the arm parent to the clavicle ctrl. Do the same steps for the other side.
+
+If your character is muscular like mine, you may want to create some biceps and/or triceps for your character. Take a look at the documentation for stretch bones for info on this.
+
+The arms are now complete.
+
+= Optional Features: =
+Much like the legs, the same features can be applied here.
+
+'''Please refer to the legs tutorial for info on:'''
+
+[[Legs/Feet#Knee Bones:|Elbow Bones]]
+
+[[Legs/Feet#Leg Swivel Attribute:|Swivel Angle]]
+
+[[Chain Tools]]
+
+* If you’re doing chain tools for the arm, you can parent it to the lower arm and the IK Ctrl.
+
+== Twisting Arms: ==
+You may notice that when you twist your hand, the chain bones do not twist. To fix this we can create a wire parameter.
+
+[[File:Arms Clav Wire Parameters Location.png|none|thumb|The Wire Parameters dialogue is located in the Animation menu.]]
+[[File:Arms Clav Choose chain knot.png|frameless]][[File:Arms Clav Choose Wrist Ctrl.png|frameless|531x531px]]
+
+On the left arm, select the red chain knot at the wrist. Go to (Animation > Wire Parameters > Wire Parameters…). Select the X rotation, and drag the connector to the IK wrist ctrl. Select X Rotation on the wrist ctrl.
+
+
+[[File:Arms Clav Wire Parameters Dialogue Box.png|frameless|457x457px]]
+
+In the Parameter wiring pop-up, set the control direction to point from the arm ctrl to the chain knot. In the expression box, type '''1*X_Rotation'''. Click “Connect,” and test the wrist rotation.
+
+Do the same for the other side. If you notice that the bones are rotating in the opposite direction as the hand, type '''-1*X_Rotation''' into the expression box instead and click “Update.”
+
+== Next Article: ==
+Next Article: [[Pelvis, Spine, and Neck]]
+__FORCETOC__
+
+
+When referencing information from this file or document, link back to this URL: https://makevisual.com/brain/mediawiki/index.php?title=Arms/Clav
